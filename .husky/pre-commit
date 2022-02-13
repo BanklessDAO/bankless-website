@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "pre-commit"
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged --allow-empty
