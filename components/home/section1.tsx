@@ -1,31 +1,43 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Flex, Text, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Button,
+} from '@chakra-ui/react'
 
-import Card from './card';
+import Card from './card'
 
-const CARDS = [{
+const CARDS = [
+  {
     img: '/images/media.jpg',
     title: 'Media',
     text: 'Producing cutting-edge written, visual, and audio content',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/consulting.jpg',
     title: 'Consulting',
     text: 'Providing consulting services for other DAOs and Web3-native companies.',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/dao-tooling.jpg',
     title: 'DAO Tooling',
     text: 'Shipping products and services that are changing the future of work.',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/coming-home.jpg',
     title: 'Coming Home',
     text: 'Creating a social homebase for artists, thought-leaders, builders, scholars, and innovators in Web3.',
-    href: '#'
-}]
+    href: '#',
+  },
+]
 
 class Section1 extends React.Component {
   render() {
@@ -72,48 +84,70 @@ class Section1 extends React.Component {
           alt='bankless-gif'
         />
 
-
         <Text fontSize='4xl' className='banner-text'>
-            {'We take a decentralized approach to:'.toUpperCase()}
+          {'We take a decentralized approach to:'.toUpperCase()}
         </Text>
 
         <div className='banner-underline'>&nbsp;</div>
 
         <div className='card-container'>
-            {CARDS.map((_card,idx) => {
-                return (
-                    <Card 
-                        key={`card-${idx}`}
-                        img={_card.img} 
-                        title={_card.title} 
-                        text={_card.text} 
-                        href={_card.href} 
-                        />
-                )
-            })}
+          {CARDS.map((_card, idx) => {
+            return (
+              <Card
+                key={`card-${idx}`}
+                img={_card.img}
+                title={_card.title}
+                text={_card.text}
+                href={_card.href}
+              />
+            )
+          })}
         </div>
 
         <Text fontSize='4xl' className='banner-text'>
-            {'Community-owned and operated through the:'.toUpperCase()}
+          {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
 
         <div className='banner-underline'>&nbsp;</div>
 
         <div className='buy-bank'>
           <div className='buy-bank-section'>
-            <div><Image src='/icons/bankless-coin.png' alt='bankless-coin' layout='fill' objectFit='contain'/></div>
-            <div><Text size='xl'>BANK Token </Text></div>
+            <div>
+              <Image
+                src='/icons/bankless-coin.png'
+                alt='bankless-coin'
+                layout='fill'
+                objectFit='contain'
+              />
+            </div>
+            <div>
+              <Text mb='-60px' fontSize='4xl' fontWeight={700}>
+                BANK Token
+              </Text>
+            </div>
           </div>
           <div className='buy-bank-section'>
-            <div><Image src='/icons/ethereum-icon.png' alt='ethereum-icon' layout='fill' objectFit='contain'/></div>
-            <Text size='xl'>Ethereum Blockchain</Text>
+            <div>
+              <Image
+                src='/icons/ethereum-icon.png'
+                alt='ethereum-icon'
+                layout='fill'
+                objectFit='contain'
+              />
+            </div>
+            <Text mb='-60px' fontSize='4xl' fontWeight={700}>
+              Ethereum Blockchain
+            </Text>
           </div>
         </div>
 
-        <Text fontSize='4xl' color='rgba(255, 255, 255, 0.09)' className='spaced-text'>the most widely-held social token</Text>
-      
+        <Text
+          fontSize='4xl'
+          color='rgba(255, 255, 255, 0.09)'
+          className='spaced-text'>
+          the most widely-held social token
+        </Text>
       </Flex>
-
     )
   }
 }
