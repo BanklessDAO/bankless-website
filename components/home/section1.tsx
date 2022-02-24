@@ -116,12 +116,13 @@ class Section1 extends React.Component {
               <Image
                 src='/icons/bankless-coin.png'
                 alt='bankless-coin'
-                layout='fill'
+                height={200}
+                width={200}
                 objectFit='contain'
               />
             </div>
             <div>
-              <Text mb='-60px' fontSize='4xl' fontWeight={700}>
+              <Text fontSize='4xl' fontWeight={700}>
                 BANK Token
               </Text>
             </div>
@@ -131,11 +132,12 @@ class Section1 extends React.Component {
               <Image
                 src='/icons/ethereum-icon.png'
                 alt='ethereum-icon'
-                layout='fill'
+                height={200}
+                width={200}
                 objectFit='contain'
               />
             </div>
-            <Text mb='-60px' fontSize='4xl' fontWeight={700}>
+            <Text fontSize='4xl' fontWeight={700}>
               Ethereum Blockchain
             </Text>
           </div>
