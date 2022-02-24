@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import {
-  Stack,
+  Flex,
   Text,
   Input,
   InputGroup,
@@ -43,10 +43,9 @@ const CARDS = [
 class Section1 extends React.Component {
   render() {
     return (
-      <Stack
+      <Flex
         className='section-container'
         flexDir='column'
-        spacing={40}
         justifyContent='center'
         alignItems='center'>
         <Image
@@ -59,7 +58,7 @@ class Section1 extends React.Component {
           Media and Social DAO Onboarding 1 billion people to crypto
         </Text>
 
-        <Box className='banner-underline'>&nbsp;</Box>
+        <div className='banner-underline'>&nbsp;</div>
 
         <InputGroup width='20%' className='join-us-group'>
           <Input
@@ -90,7 +89,7 @@ class Section1 extends React.Component {
           {'We take a decentralized approach to:'.toUpperCase()}
         </Text>
 
-        <Box className='banner-underline'>&nbsp;</Box>
+        <div className='banner-underline'>&nbsp;</div>
 
         <Box className='card-container'>
           {CARDS.map((_card, idx) => {
@@ -110,7 +109,7 @@ class Section1 extends React.Component {
           {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
 
-        <Box className='banner-underline'>&nbsp;</Box>
+        <div className='banner-underline'>&nbsp;</div>
 
         <Box className='buy-bank'>
           <Box className='buy-bank-section'>
@@ -150,13 +149,28 @@ class Section1 extends React.Component {
               Onboarding 1 billion people, Minting 1 billion BANK tokens
             </Text>
           </div>
-          <div>
-            <Text fontSize='4xl' color={'black'} fontWeight={700}>
+          <Box display={'flex'}>
+            <Button
+              size='lg'
+              width='30%'
+              margin='8px'
+              bg='#FF1A1A'
+              onClick={() => null}>
               Buy Bank
-            </Text>
-          </div>
+            </Button>
+            <Button
+              size='lg'
+              width='70%'
+              margin='8px'
+              bg='#FFFFFF'
+              border='1px solid #FF1A1A'
+              color='#FF1A1A'
+              onClick={() => null}>
+              BANK TOKEN LEGAL ASSESSMENT
+            </Button>
+          </Box>
         </Box>
-      </Stack>
+      </Flex>
     )
   }
 }
