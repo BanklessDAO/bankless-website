@@ -139,3 +139,15 @@ body {
   margin-top: 5vh;
   letter-spacing: 0.5rem;
 }
+
+.bank-banner {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border-radius: 22px;
+  width: 90%;
+  height: 10vh;
+}

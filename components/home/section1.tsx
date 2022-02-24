@@ -2,12 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 
 import {
-  Flex,
+  Stack,
   Text,
   Input,
   InputGroup,
   InputRightElement,
   Button,
+  Box,
 } from '@chakra-ui/react'
 
 import Card from './card'
@@ -42,9 +43,10 @@ const CARDS = [
 class Section1 extends React.Component {
   render() {
     return (
-      <Flex
+      <Stack
         className='section-container'
         flexDir='column'
+        spacing={40}
         justifyContent='center'
         alignItems='center'>
         <Image
@@ -57,7 +59,7 @@ class Section1 extends React.Component {
           Media and Social DAO Onboarding 1 billion people to crypto
         </Text>
 
-        <div className='banner-underline'>&nbsp;</div>
+        <Box className='banner-underline'>&nbsp;</Box>
 
         <InputGroup width='20%' className='join-us-group'>
           <Input
@@ -88,9 +90,9 @@ class Section1 extends React.Component {
           {'We take a decentralized approach to:'.toUpperCase()}
         </Text>
 
-        <div className='banner-underline'>&nbsp;</div>
+        <Box className='banner-underline'>&nbsp;</Box>
 
-        <div className='card-container'>
+        <Box className='card-container'>
           {CARDS.map((_card, idx) => {
             return (
               <Card
@@ -102,17 +104,17 @@ class Section1 extends React.Component {
               />
             )
           })}
-        </div>
+        </Box>
 
         <Text fontSize='4xl' className='banner-text'>
           {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
 
-        <div className='banner-underline'>&nbsp;</div>
+        <Box className='banner-underline'>&nbsp;</Box>
 
-        <div className='buy-bank'>
-          <div className='buy-bank-section'>
-            <div>
+        <Box className='buy-bank'>
+          <Box className='buy-bank-section'>
+            <Box>
               <Image
                 src='/icons/bankless-coin.png'
                 alt='bankless-coin'
@@ -120,15 +122,15 @@ class Section1 extends React.Component {
                 width={200}
                 objectFit='contain'
               />
-            </div>
-            <div>
+            </Box>
+            <Box>
               <Text fontSize='4xl' fontWeight={700}>
                 BANK Token
               </Text>
-            </div>
-          </div>
-          <div className='buy-bank-section'>
-            <div>
+            </Box>
+          </Box>
+          <Box className='buy-bank-section'>
+            <Box>
               <Image
                 src='/icons/ethereum-icon.png'
                 alt='ethereum-icon'
@@ -136,20 +138,25 @@ class Section1 extends React.Component {
                 width={200}
                 objectFit='contain'
               />
-            </div>
+            </Box>
             <Text fontSize='4xl' fontWeight={700}>
               Ethereum Blockchain
             </Text>
+          </Box>
+        </Box>
+        <Box className='bank-banner'>
+          <div>
+            <Text fontSize='4xl' color={'black'} fontWeight={700}>
+              Onboarding 1 billion people, Minting 1 billion BANK tokens
+            </Text>
           </div>
-        </div>
-
-        <Text
-          fontSize='4xl'
-          color='rgba(255, 255, 255, 0.09)'
-          className='spaced-text'>
-          the most widely-held social token
-        </Text>
-      </Flex>
+          <div>
+            <Text fontSize='4xl' color={'black'} fontWeight={700}>
+              Buy Bank
+            </Text>
+          </div>
+        </Box>
+      </Stack>
     )
   }
 }
