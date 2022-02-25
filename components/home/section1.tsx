@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 
 import Card from './card'
-import { m } from 'framer-motion'
 
 const CARDS = [
   {

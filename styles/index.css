@@ -103,9 +103,6 @@ body {
   margin-top: 5vh;
 }
 
-.join-us-group {
-}
-
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

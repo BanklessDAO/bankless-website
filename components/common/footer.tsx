@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
-import { Grid, Box, Flex, Text, Link, Spacer } from '@chakra-ui/react'
+import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
 const SOCIALS = [
     {
