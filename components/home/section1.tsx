@@ -1,31 +1,44 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Flex, Text, Input, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Button,
+  Box,
+} from '@chakra-ui/react'
 
-import Card from './card';
+import Card from './card'
 
-const CARDS = [{
+const CARDS = [
+  {
     img: '/images/media.jpg',
     title: 'Media',
     text: 'Producing cutting-edge written, visual, and audio content',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/consulting.jpg',
     title: 'Consulting',
     text: 'Providing consulting services for other DAOs and Web3-native companies.',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/dao-tooling.jpg',
     title: 'DAO Tooling',
     text: 'Shipping products and services that are changing the future of work.',
-    href: '#'
-},{
+    href: '#',
+  },
+  {
     img: '/images/coming-home.jpg',
     title: 'Coming Home',
     text: 'Creating a social homebase for artists, thought-leaders, builders, scholars, and innovators in Web3.',
-    href: '#'
-}]
+    href: '#',
+  },
+]
 
 class Section1 extends React.Component {
   render() {
@@ -72,48 +85,92 @@ class Section1 extends React.Component {
           alt='bankless-gif'
         />
 
-
         <Text fontSize='4xl' className='banner-text'>
-            {'We take a decentralized approach to:'.toUpperCase()}
+          {'We take a decentralized approach to:'.toUpperCase()}
         </Text>
 
         <div className='banner-underline'>&nbsp;</div>
 
-        <div className='card-container'>
-            {CARDS.map((_card,idx) => {
-                return (
-                    <Card 
-                        key={`card-${idx}`}
-                        img={_card.img} 
-                        title={_card.title} 
-                        text={_card.text} 
-                        href={_card.href} 
-                        />
-                )
-            })}
-        </div>
+        <Box className='card-container'>
+          {CARDS.map((_card, idx) => {
+            return (
+              <Card
+                key={`card-${idx}`}
+                img={_card.img}
+                title={_card.title}
+                text={_card.text}
+                href={_card.href}
+              />
+            )
+          })}
+        </Box>
 
         <Text fontSize='4xl' className='banner-text'>
-            {'Community-owned and operated through the:'.toUpperCase()}
+          {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
 
         <div className='banner-underline'>&nbsp;</div>
 
-        <div className='buy-bank'>
-          <div className='buy-bank-section'>
-            <div><Image src='/icons/bankless-coin.png' alt='bankless-coin' layout='fill' objectFit='contain'/></div>
-            <div><Text size='xl'>BANK Token </Text></div>
+        <Box className='buy-bank'>
+          <Box className='buy-bank-section'>
+            <Box>
+              <Image
+                src='/icons/bankless-coin.png'
+                alt='bankless-coin'
+                height={200}
+                width={200}
+                objectFit='contain'
+              />
+            </Box>
+            <Box>
+              <Text fontSize='4xl' fontWeight={700}>
+                BANK Token
+              </Text>
+            </Box>
+          </Box>
+          <Box className='buy-bank-section'>
+            <Box>
+              <Image
+                src='/icons/ethereum-icon.png'
+                alt='ethereum-icon'
+                height={200}
+                width={200}
+                objectFit='contain'
+              />
+            </Box>
+            <Text fontSize='4xl' fontWeight={700}>
+              Ethereum Blockchain
+            </Text>
+          </Box>
+        </Box>
+        <Box className='bank-banner'>
+          <div>
+            <Text fontSize='4xl' color={'black'} fontWeight={700}>
+              Onboarding 1 billion people, Minting 1 billion BANK tokens
+            </Text>
           </div>
-          <div className='buy-bank-section'>
-            <div><Image src='/icons/ethereum-icon.png' alt='ethereum-icon' layout='fill' objectFit='contain'/></div>
-            <Text size='xl'>Ethereum Blockchain</Text>
-          </div>
-        </div>
-
-        <Text fontSize='4xl' color='rgba(255, 255, 255, 0.09)' className='spaced-text'>the most widely-held social token</Text>
-      
+          <Box display={'flex'}>
+            <Button
+              size='lg'
+              width='30%'
+              margin='8px'
+              bg='#FF1A1A'
+              onClick={() => null}>
+              Buy Bank
+            </Button>
+            <Button
+              size='lg'
+              width='70%'
+              margin='8px'
+              bg='#FFFFFF'
+              border='1px solid #FF1A1A'
+              color='#FF1A1A'
+              onClick={() => null}>
+              BANK TOKEN LEGAL ASSESSMENT
+            </Button>
+          </Box>
+        </Box>
       </Flex>
-
     )
   }
 }
