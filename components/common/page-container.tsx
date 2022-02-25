@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavBar from './nav-bar';
+import Footer from './footer';
 
 
 class PageContainer extends React.Component {
@@ -11,6 +12,7 @@ class PageContainer extends React.Component {
             <div className='page-container'>
                 <NavBar />
                 {this.props.children}
+                <Footer />
             </div>
         )
     }

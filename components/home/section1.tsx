@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 
 import Card from './card'
+import { m } from 'framer-motion'
 
 const CARDS = [
   {
@@ -40,6 +41,62 @@ const CARDS = [
   },
 ]
 
+const MULTI_SIG_OWNERS = [
+  {
+    img: '/profile-pics/livethelifetv.png',
+    name: 'LiveTheLifeTV',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/kouros.png',
+    name: 'Kouros',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/0xlucas.png',
+    name: '0xLucas',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/eagle.eth.png',
+    name: 'Eagle.eth',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/tommyoloffson.png',
+    name: 'tommyoloffson',
+    twitter: '#'
+  },
+]
+
+const GRANT_COMMITTEE_MEMBERS = [
+  {
+    img: '/profile-pics/livethelifetv.png',
+    name: 'LiveTheLifeTV',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/kouros.png',
+    name: 'Kouros',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/0xlucas.png',
+    name: '0xLucas',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/eagle.eth.png',
+    name: 'Eagle.eth',
+    twitter: '#'
+  },
+  {
+    img: '/profile-pics/tommyoloffson.png',
+    name: 'tommyoloffson',
+    twitter: '#'
+  },
+]
+
 class Section1 extends React.Component {
   render() {
     return (
@@ -60,13 +117,13 @@ class Section1 extends React.Component {
 
         <div className='banner-underline'>&nbsp;</div>
 
-        <InputGroup width='20%' className='join-us-group'>
+        <InputGroup width={400} className='join-us-group'>
           <Input
             // pr='4.5rem'
             type='text'
             placeholder={`We're Headed West`}
           />
-          <InputRightElement width='40%'>
+          <InputRightElement width={150}>
             <Button
               size='sm'
               width='100%'
@@ -143,12 +200,13 @@ class Section1 extends React.Component {
             </Text>
           </Box>
         </Box>
+
         <Box className='bank-banner'>
-          <div>
-            <Text fontSize='4xl' color={'black'} fontWeight={700}>
+          <Box>
+            <Text fontSize='3xl' color={'black'} fontWeight={700}>
               Onboarding 1 billion people, Minting 1 billion BANK tokens
             </Text>
-          </div>
+          </Box>
           <Box display={'flex'}>
             <Button
               size='lg'
@@ -170,6 +228,173 @@ class Section1 extends React.Component {
             </Button>
           </Box>
         </Box>
+
+        <Box className='founders'>
+          <Flex
+            flexDir='row'
+            justifyContent='center'
+            alignItems='space-between'>
+            <Box width='20%'>
+              <Box className='shadow-left'>
+                <Image
+                  src='/profile-pics/david-hoffman.png'
+                  height={150}
+                  width={150}
+                  alt='david-hoffman'
+                />
+              </Box>
+            </Box>
+            <Box width='20%'>
+              <Box className='shadow-right'>
+                <Image
+                  src='/profile-pics/ryan-sean-adams.png'
+                  height={150}
+                  width={150}
+                  alt='ryan-sean-adams'
+                />
+              </Box>
+            </Box>
+            <Box width='60%'>
+              <Text fontSize='3xl' color='rgba(255, 255, 255, 0.61)'>
+                BanklessDAO was founded by{' '}
+                <b style={{ color: 'white' }}>David Hoffman</b> and{' '}
+                <b style={{ color: 'white' }}>Ryan Sean Adams</b> on May 4th,
+                2021, when they airdropped 35,000 BANK tokens to each Bankless
+                premium subscriber
+              </Text>
+            </Box>
+          </Flex>
+          <Box className='spacer'></Box>
+          <Flex
+            flexDir='row'
+            justifyContent='center'
+            alignItems='space-between'>
+            <Text fontSize='xl' color='rgba(255, 255, 255, 0.61)'>
+              Following the true ethos of decentralization, they stepped back
+              and let the DAO take shape. While their media company, Bankless
+              LLC, continues to operate as its own media node, the Bankless
+              brand is propagated through the DAO and its sub-DAOs. Now, the
+              Bankless ecosystem as a whole creates user-friendly onramps for
+              people to discover decentralized financial technologies through
+              education, media and culture.
+            </Text>
+          </Flex>
+        </Box>
+
+        <Text fontSize='4xl' className='banner-text'>
+          {'Treasury multi-sig owners'.toUpperCase()}
+        </Text>
+        <div className='banner-underline'>&nbsp;</div>
+
+        <Flex
+          flexWrap='wrap'
+          flexDir='row'
+          justifyContent='center'
+          alignItems='space-between'
+          rowGap='2vh'>
+          {MULTI_SIG_OWNERS.map(_multiSigOwner => {
+            return (
+              <Flex
+                flexDir='column'
+                justifyContent='center'
+                alignItems='center'
+                width='30%'
+                key={_multiSigOwner.name}
+                rowGap='1.5vh'>
+                <Box className='shadow'>
+                  <Image
+                    src={_multiSigOwner.img}
+                    alt={_multiSigOwner.name}
+                    width={200}
+                    height={200}
+                  />
+                </Box>
+
+                <Flex
+                  flexDir='row'
+                  justifyContent='space-between'
+                  alignItems='center'
+                  >
+                  <Text fontSize='2xl' style={{marginRight: 8}}>{_multiSigOwner.name}</Text>
+                  <Flex
+                    flexDir='row'
+                    justifyContent='center'
+                    alignItems='center'
+                    className='twitter-circle'
+                    href={_multiSigOwner.twitter}
+                    >
+                    <Image
+                      src='/icons/twitter.png'
+                      alt='twitter'
+                      width={10}
+                      height={10}
+                    />
+                  </Flex>
+                </Flex>
+
+              </Flex>
+            )
+          })}
+        </Flex>
+
+        <Text fontSize='4xl' className='banner-text'>
+          {'Grants committee members'.toUpperCase()}
+        </Text>
+        <div className='banner-underline'>&nbsp;</div>
+
+        <Flex
+          flexWrap='wrap'
+          flexDir='row'
+          justifyContent='center'
+          alignItems='space-between'
+          rowGap='2vh'>
+          {GRANT_COMMITTEE_MEMBERS.map(_multiSigOwner => {
+            return (
+              <Flex
+                flexDir='column'
+                justifyContent='center'
+                alignItems='center'
+                width='30%'
+                key={_multiSigOwner.name}
+                rowGap='1.5vh'>
+                <Box className='shadow'>
+                  <Image
+                    src={_multiSigOwner.img}
+                    alt={_multiSigOwner.name}
+                    width={200}
+                    height={200}
+                  />
+                </Box>
+
+                <Flex
+                  flexDir='row'
+                  justifyContent='space-between'
+                  alignItems='center'
+                  >
+                  <Text fontSize='2xl' style={{marginRight: 8}}>{_multiSigOwner.name}</Text>
+                  <Flex
+                    flexDir='row'
+                    justifyContent='center'
+                    alignItems='center'
+                    className='twitter-circle'
+                    href={_multiSigOwner.twitter}
+                    >
+                    <Image
+                      src='/icons/twitter.png'
+                      alt='twitter'
+                      width={10}
+                      height={10}
+                    />
+                  </Flex>
+                </Flex>
+
+              </Flex>
+            )
+          })}
+        </Flex>
+
+
+
       </Flex>
     )
   }

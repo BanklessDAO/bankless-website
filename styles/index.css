@@ -55,6 +55,21 @@ body {
 }
 
 /**
+* Footer
+*/
+.footer-container {
+  width: 80%;
+  border-top: 1px solid red;
+  margin-top: 10vh;
+  padding: 8vh 0vh; 
+}
+
+.footer-right {
+  padding-left: 20%;
+  padding-top: 20%;
+}
+
+/**
   Section
   */
 .section-container {
@@ -84,6 +99,10 @@ body {
   margin-bottom: 10vh;
 }
 
+.spacer {
+  margin-top: 5vh;
+}
+
 .join-us-group {
 }
 
@@ -99,7 +118,7 @@ body {
   flex-direction: column;
   border-radius: 10px;
   background: #101010;
-  height: 45vh;
+  height: fit-content;
   overflow: hidden;
   max-width: 400px;
 }
@@ -128,8 +147,7 @@ body {
 }
 
 .buy-bank-section {
-  position: relative;
-  height: 20vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,14 +159,47 @@ body {
 }
 
 .bank-banner {
+  height: fit-content;
+  margin-top: 5vh;
   display: flex;
-  position: relative;
   justify-content: center;
   flex-direction: column;
   background-color: white;
   align-items: center;
   border-radius: 22px;
   width: 90%;
-  height: 10vh;
-  padding: 5% 8%;
+  padding: 1% 8%;
+  margin-top: 5vh;
 }
+
+.founders {
+  margin-top: 10vh;
+  width: 80%;
+}
+
+.shadow-left {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: -18px 8px 35px red;
+}
+
+.shadow-right {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: 18px 8px 35px red;
+}
+
+.shadow {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: -4px 6px 20px red;;
+}
+
+.twitter-circle {
+  background: #1DA1F2;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
