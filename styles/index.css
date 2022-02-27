@@ -1,0 +1,202 @@
+/*
+@File: Bankless Template Styles
+
+* This file contains the styling that are bankless specific
+
+*/
+
+/**
+Global
+*/
+body {
+  color: white !important;
+}
+
+/**
+  Page Container
+  */
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+
+/**
+  Nav bar
+  */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background-color: black;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.51);
+  width: 100%;
+}
+
+.nav-contents {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-icon {
+  margin-left: 8px;
+}
+
+/**
+* Footer
+*/
+.footer-container {
+  width: 80%;
+  border-top: 1px solid red;
+  margin-top: 10vh;
+  padding: 8vh 0vh; 
+}
+
+.footer-right {
+  padding-left: 20%;
+  padding-top: 20%;
+}
+
+/**
+  Section
+  */
+.section-container {
+  width: 80%;
+}
+
+/**
+  Home Page
+  */
+.banner-text {
+  width: 50%;
+  word-wrap: break-word;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 5vh;
+}
+
+.banner-underline {
+  background: linear-gradient(
+    91.88deg,
+    #ff1013 44.79%,
+    rgba(140, 29, 207, 0) 101.77%
+  );
+  filter: blur(5px);
+  font-size: 8px;
+  width: 30%;
+  margin-bottom: 10vh;
+}
+
+.spacer {
+  margin-top: 5vh;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
+  grid-row-gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #101010;
+  height: fit-content;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.card-top {
+  height: 50%;
+}
+
+.card-bottom {
+  height: 50%;
+  padding: 5% 8%;
+}
+
+.card-text {
+  color: rgba(255, 255, 255, 0.57);
+}
+
+.card-divider {
+  margin: 1rem 0px;
+}
+
+.buy-bank {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.buy-bank-section {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spaced-text {
+  margin-top: 5vh;
+  letter-spacing: 0.5rem;
+}
+
+.bank-banner {
+  height: fit-content;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border-radius: 22px;
+  width: 90%;
+  padding: 1% 8%;
+  margin-top: 5vh;
+}
+
+.founders {
+  margin-top: 10vh;
+  width: 80%;
+}
+
+.shadow-left {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: -18px 8px 35px red;
+}
+
+.shadow-right {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: 18px 8px 35px red;
+}
+
+.shadow {
+  border-radius: 100%;
+  width: fit-content;
+  box-shadow: -4px 6px 20px red;;
+}
+
+.twitter-circle {
+  background: #1DA1F2;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
