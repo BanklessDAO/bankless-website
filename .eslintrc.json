@@ -1,0 +1,36 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "tsx": true
+      },
+      "sourceType": "module",
+      "experimentalObjectRestSpread": true
+  },
+  "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+  },
+  "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "next",
+      "prettier"
+  ],
+  "plugins": [
+      "@typescript-eslint",
+      "prettier"
+  ],
+  "settings": {
+      "react": {
+          "version": "detect"
+      }
+  },
+  "rules": {
+      "react/prop-types": "off",
+      "react/jsx-key": [1, { "checkFragmentShorthand": true }]
+  },
+  "ignorePatterns": [
+      "dist"
+  ]
+}
