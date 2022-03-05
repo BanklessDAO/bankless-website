@@ -207,21 +207,14 @@ class Section1 extends React.Component {
             </Text>
           </Box>
           <Box display={'flex'}>
-            <Button
-              size='lg'
-              width='30%'
-              margin='8px'
-              bg='#FF1A1A'
-              onClick={() => null}>
+            <Button size='lg' width='30%' margin='8px' onClick={() => null}>
               Buy Bank
             </Button>
             <Button
               size='lg'
               width='70%'
               margin='8px'
-              bg='#FFFFFF'
-              border='1px solid #FF1A1A'
-              color='#FF1A1A'
+              variant='bankless-white'
               onClick={() => null}>
               BANK TOKEN LEGAL ASSESSMENT
             </Button>
@@ -268,7 +261,7 @@ class Section1 extends React.Component {
             flexDir='row'
             justifyContent='center'
             alignItems='space-between'>
-            <Text fontSize='xl' color='rgba(255, 255, 255, 0.61)'>
+            <Text fontSize='xl' color='rgba(255, 255, 255, 0.35)'>
               Following the true ethos of decentralization, they stepped back
               and let the DAO take shape. While their media company, Bankless
               LLC, continues to operate as its own media node, the Bankless
@@ -312,16 +305,16 @@ class Section1 extends React.Component {
                 <Flex
                   flexDir='row'
                   justifyContent='space-between'
-                  alignItems='center'
-                  >
-                  <Text fontSize='2xl' style={{marginRight: 8}}>{_multiSigOwner.name}</Text>
+                  alignItems='center'>
+                  <Text fontSize='2xl' style={{ marginRight: 8 }}>
+                    {_multiSigOwner.name}
+                  </Text>
                   <Flex
                     flexDir='row'
                     justifyContent='center'
                     alignItems='center'
                     className='twitter-circle'
-                    href={_multiSigOwner.twitter}
-                    >
+                    href={_multiSigOwner.twitter}>
                     <Image
                       src='/icons/twitter.png'
                       alt='twitter'
@@ -330,7 +323,6 @@ class Section1 extends React.Component {
                     />
                   </Flex>
                 </Flex>
-
               </Flex>
             )
           })}
@@ -368,16 +360,16 @@ class Section1 extends React.Component {
                 <Flex
                   flexDir='row'
                   justifyContent='space-between'
-                  alignItems='center'
-                  >
-                  <Text fontSize='2xl' style={{marginRight: 8}}>{_multiSigOwner.name}</Text>
+                  alignItems='center'>
+                  <Text fontSize='2xl' style={{ marginRight: 8 }}>
+                    {_multiSigOwner.name}
+                  </Text>
                   <Flex
                     flexDir='row'
                     justifyContent='center'
                     alignItems='center'
                     className='twitter-circle'
-                    href={_multiSigOwner.twitter}
-                    >
+                    href={_multiSigOwner.twitter}>
                     <Image
                       src='/icons/twitter.png'
                       alt='twitter'
@@ -386,14 +378,50 @@ class Section1 extends React.Component {
                     />
                   </Flex>
                 </Flex>
-
               </Flex>
             )
           })}
         </Flex>
 
+        <Flex
+          className='doughnut-row'
+          flexWrap='wrap'
+          flexDir='row'
+          justifyContent='center'
+          alignItems='center'
+          rowGap='110px'>
+          <Box className='doughnut-small'></Box>
+          <Box className='doughnut-big'></Box>
+          <Box className='doughnut-small'></Box>
+        </Flex>
 
-
+        <Flex
+          className='start-your-journey'
+          flexWrap='nowrap'
+          flexDir='row'
+          justifyContent='center'
+          alignItems='center'>
+          <Text fontSize='4xl' fontWeight={700} whiteSpace='nowrap' marginRight={100}>
+            Start Your Journey
+          </Text>
+          <InputGroup>
+            <Input
+              // pr='4.5rem'
+              height='65px'
+              type='text'
+              placeholder={`Your email address`}
+            />
+            <InputRightElement width={170} height='100%'>
+              <Button
+                height='100%'
+                width='100%'
+                // margin='8px'
+                onClick={() => null}>
+                Subscribe
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </Flex>
       </Flex>
     )
   }
