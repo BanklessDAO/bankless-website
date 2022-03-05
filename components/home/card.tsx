@@ -1,38 +1,51 @@
-import React from 'react';
+import React from 'react'
 import Image from 'next/image'
 
-import { Text, Link, Divider, Box } from '@chakra-ui/react';
+import { Text, Link, Divider, Box, Flex } from '@chakra-ui/react'
 
 interface I_Props {
-    img: string,
-    title: string,
-    text: string,
-    href: string
+  img: string
+  title: string
+  text: string
+  href: string
 }
 
 class Card extends React.PureComponent<I_Props> {
+  render() {
+    return (
+      <Box className='card'>
 
-    render() { 
-        return (
-            <div className='card'>
-                {/* <div className='card-top' style={{position: 'relative', backgroundImage: `url(${this.props.img})`, backgroundSize:'cover'}}>
-                </div> */}
-                <Box>
-                    <Image src={this.props.img} alt='image' width={600} height={400}/>
-                </Box>
-                <div className='card-bottom'>
-                    <Text fontSize='4xl' fontWeight={700}>{this.props.title.toUpperCase()}</Text>
-                    <Text fontSize='m' className='card-text'>{this.props.text}</Text>
+        <Box>
+          <Image src={this.props.img} alt='image' width={600} height={400} />
+        </Box>
 
-                    <Divider className='card-divider'/>
+        <Flex flexDir='column' className='card-bottom'>
 
-                    <Link fontSize='m' href={this.props.href}>Start</Link>
+          <Text className='card-title' fontSize='3xl' fontWeight={700}>
+            {this.props.title.toUpperCase()}
+          </Text>
+          <Text className='card-text'>{this.props.text}</Text>
 
-                </div>
-            </div>
-        )
-    }
+          <Divider className='card-divider' />
 
+          <Link
+            className='card-link'
+            href={this.props.href}>
+            <Text fontSize='sm' marginRight={2}>Start</Text>
+            <Box>
+              <Image
+                src='/icons/arrow.png'
+                alt='arrow'
+                height={10}
+                width={10}
+              />
+            </Box>
+          </Link>
+          
+        </Flex>
+      </Box>
+    )
+  }
 }
 
-export default Card;
+export default Card

@@ -1,13 +1,32 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, withDefaultVariant } from '@chakra-ui/react'
 
 const theme = extendTheme({
   colors: {
-    'dark-1': '#1A1C20',
-    'dark-2': '#2B2D33',
-    'dark-3': '#33363D',
-  },
-  fonts: {
-    body: "'Inter', sans-serif",
+    /* Bankless styles */
+    'white': {
+      100: '#FFFFFF',
+      200: '#EAEAEA',
+      300: '#D5D5D5',
+      400: '#C0C0C0',
+      500: '#ABABAB',
+      600: '#969696',
+      700: '#818181',
+      800: '#6C6C6C',
+      900: '#565656',
+    },
+    'black': '#101010',
+    /* Color Scale generated using https://color-scheme-builder.vercel.app/ */
+    'red': {
+      100: '#FF1013',
+      200: '#EA0F11',
+      300: '#D50E0F',
+      400: '#C00D0E',
+      500: '#AB0C0C',
+      600: '#960B0B',
+      700: '#810909',
+      800: '#6C0808',
+      900: '#560606',
+    },
   },
   fontSizes: {
     xs: '0.75rem', // 12px
@@ -21,9 +40,59 @@ const theme = extendTheme({
     '5xl': '3rem', // 48px
     '6xl': '3.75rem', // 60px
   },
-  styles: {
-    global: {},
+  components: {
+    Button: {
+      variants: {
+        // Make a variant, we'll call it `base` here and leave it empty
+        base: {},
+        bankless: {
+          bg: 'red.100',
+          color: 'white.100',
+          fontSize: 14,
+          _hover: {
+            bg: "red.500",
+          },
+        },
+        'bankless-white': {
+          bg: 'white.100',
+          border: '1px solid #FF1A1A',
+          color: '#FF1A1A',
+          _hover: {
+            bg: 'white.500'
+          }
+        }
+      },
+    },
+    Text: {
+      baseStyle: {
+        color: 'white',
+        fontSize: 21
+      },
+      variants: {
+        base: {},
+      }
+    },
+    Input: {
+      variants: {
+        bankless: {
+          bg: 'white.100'
+        }
+      }
+    },
+    Link: {
+      variants: {
+        bankless: {
+          color: 'white.100'
+        }
+      }
+    }
   },
-})
+
+},
+  withDefaultVariant({
+    variant: 'bankless',
+    components: ['Button', 'Text', 'Input', 'Link']
+  })
+)
 
 export default theme

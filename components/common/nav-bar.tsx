@@ -72,7 +72,7 @@ class NavBar extends React.Component {
             })}
           </div>
 
-          <Button bg='#FF1A1A'>Connect Wallet</Button>
+          <Button>Connect Wallet</Button>
         </div>
       </div>
     )
