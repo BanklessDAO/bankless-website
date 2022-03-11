@@ -50,7 +50,9 @@ function Invest() {
             </Container>
             <Text>
               Current market cap and price is{' '}
-              <span style={{ color: '#D02128' }}>Available Here</span>
+              <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                Available Here
+              </span>
             </Text>
           </VStack>
         </Flex>
@@ -136,17 +138,14 @@ function Invest() {
               </Text>
             </Container>
           </VStack>
-          <VStack p={10} spacing={10}>
-            <Container
-              flexDirection='column'
-              gap={'10px'}
-              display='flex'
-              justifyContent={'space-between'}>
+          <VStack
+            flexDirection={'column-reverse'}
+            display='flex'
+            p={10}
+            spacing={10}>
+            <Container>
               <Button onClick={() => null}>
-                <Container
-                  display={'flex'}
-                  justifyContent='space-evenly'
-                  paddingRight={2}>
+                <Container display={'flex'} alignItems='center'>
                   <Image
                     src='/images/bed-token.png'
                     alt='bed-token'
@@ -156,6 +155,41 @@ function Invest() {
                   Invest in GMI Index
                 </Container>
               </Button>
+            </Container>
+          </VStack>
+        </Flex>
+      </Container>
+      <Container maxW='container.xl' p={0}>
+        <Flex py={20}>
+          <VStack p={10} spacing={10} alignItems='flex-start'>
+            <Image
+              src='/images/DAO-Punk-Invest.png'
+              alt='bankToken'
+              height={533}
+              width={525}
+            />
+          </VStack>
+          <VStack spacing={10}>
+            <Container>
+              <Text fontWeight={700} fontSize='72px'>
+                DAO Punks
+              </Text>
+              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
+                DAOpunks launched in 2021 with the mission of helping to free
+                all humans from the soul-sucking drudgery of default world work.
+                They do that work through providing grants to those who seek to
+                leave the CORPrat life for the meaningful work found in DAOs.
+                Holders of a DAOpunk NFT enjoy access to gated channels, but the
+                community is open to anyone with an interest in DAOs. In
+                addition to grants, the DAOpunks have a newsletter, podcast, and
+                merch arm, and are always spinning new ideas into actionable
+                content. DAOpunks is at the edge of DAO governance, and is
+                pushing the boundaries of where technology meets on-chain voting
+                and automatic treasury triggers.
+              </Text>
+            </Container>
+            <Container>
+              <Button onClick={() => null}>Invest in DAO Punks</Button>
             </Container>
           </VStack>
         </Flex>
