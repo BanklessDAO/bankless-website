@@ -87,12 +87,14 @@ function Invest() {
             </Container>
             <Container display='flex' justifyContent='space-evenly'>
               <Button onClick={() => null}>
-                <Image
-                  src='/images/bed-token.png'
-                  alt='bed-token'
-                  height={23}
-                  width={23}
-                />
+                <Container padding={0} paddingRight={2}>
+                  <Image
+                    src='/images/bed-token.png'
+                    alt='bed-token'
+                    height={23}
+                    width={23}
+                  />
+                </Container>
                 Invest in BED index
               </Button>
               <Button onClick={() => null}>Learn more about Bed Index </Button>
