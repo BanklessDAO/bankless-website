@@ -110,6 +110,56 @@ function Invest() {
           </VStack>
         </Flex>
       </Container>
+      <Container maxW='container.lg' p={0}>
+        <Flex py={20}>
+          <VStack spacing={10}>
+            <Container maxW='container.xl'>
+              <Text fontWeight={700} fontSize='5xl'>
+                GMI INDEX
+              </Text>
+              <Text
+                color={'#D02128'}
+                lineHeight='43px'
+                fontSize='36px'
+                fontWeight={700}>
+                Are you GMI?
+              </Text>
+            </Container>
+            <Container maxW='container.xl'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
+                The Bankless DeFi Innovation Index, called the GMI Index for the
+                rally cry “we’re all gonna make it” is another investment
+                vehicle springing from the Index Coop/BanklessDAO partnership.
+                Like the BED Index, GMI captures a broad swath of DeFi exposure
+                while also tapping into gains from sophisticated products such
+                as yield-bearing tokens.
+              </Text>
+            </Container>
+          </VStack>
+          <VStack p={10} spacing={10}>
+            <Container
+              flexDirection='column'
+              gap={'10px'}
+              display='flex'
+              justifyContent={'space-between'}>
+              <Button onClick={() => null}>
+                <Container
+                  display={'flex'}
+                  justifyContent='space-evenly'
+                  paddingRight={2}>
+                  <Image
+                    src='/images/bed-token.png'
+                    alt='bed-token'
+                    height={23}
+                    width={23}
+                  />
+                  Invest in GMI Index
+                </Container>
+              </Button>
+            </Container>
+          </VStack>
+        </Flex>
+      </Container>
     </>
   )
 }
