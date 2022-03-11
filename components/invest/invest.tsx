@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Gradient from 'rgt'
 
-import { Flex, Text, Container, VStack } from '@chakra-ui/react'
+import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
 
 function Invest() {
   return (
@@ -57,19 +57,21 @@ function Invest() {
       </Container>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack spacing={5} alignItems='flex-start'>
-            <Text fontWeight={700} fontSize='5xl'>
-              BED Index
-            </Text>
-            <Gradient
-              dir='top-to-bottom'
-              from='#FF1013'
-              to='#000000
-'>
-              <Text lineHeight='22px' fontSize='lg' fontWeight={700}>
-                The only index that can get ETH and BTC maxis in BED together
+          <VStack spacing={10} alignItems='flex-start'>
+            <Container maxW='container.xl'>
+              <Text fontWeight={700} fontSize='5xl'>
+                BED Index
               </Text>
-            </Gradient>
+              <Text lineHeight='22px' fontSize='lg' fontWeight={700}>
+                <Gradient
+                  dir='top-to-bottom'
+                  from='#FF1013'
+                  to='#000000
+'>
+                  The only index that can get ETH and BTC maxis in BED together
+                </Gradient>
+              </Text>
+            </Container>
             <Container maxW='container.xl'>
               <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
                 The only index that can get ETH and BTC maxis in BED together
@@ -82,6 +84,10 @@ function Invest() {
                 The fund is a cooperation between BanklessDAO and Index Coop, a
                 provider of DeFi investment products
               </Text>
+            </Container>
+            <Container display='flex' justifyContent='space-evenly'>
+              <Button onClick={() => null}>Invest in BED index</Button>
+              <Button onClick={() => null}>Learn more about Bed Index </Button>
             </Container>
           </VStack>
           <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-end'>
