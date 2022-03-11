@@ -16,7 +16,7 @@ function Invest() {
             width={402}
           />
         </VStack>
-        <VStack spacing={10} alignItems='flex-start'>
+        <VStack spacing={5} alignItems='flex-start'>
           <Text fontWeight={700} fontSize='72px'>
             BANK
           </Text>
