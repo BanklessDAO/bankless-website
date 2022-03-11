@@ -86,14 +86,22 @@ function Invest() {
               </Text>
             </Container>
             <Container display='flex' justifyContent='space-evenly'>
-              <Button onClick={() => null}>Invest in BED index</Button>
+              <Button onClick={() => null}>
+                <Image
+                  src='/images/bed-token.png'
+                  alt='bed-token'
+                  height={23}
+                  width={23}
+                />
+                Invest in BED index
+              </Button>
               <Button onClick={() => null}>Learn more about Bed Index </Button>
             </Container>
           </VStack>
           <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-end'>
             <Image
               src='/images/bed-token.png'
-              alt='bankToken'
+              alt='bed-token'
               height={454}
               width={454}
             />
