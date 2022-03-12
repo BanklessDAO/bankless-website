@@ -57,17 +57,6 @@ Global
 /**
 * Footer
 */
-.footer-container {
-  width: 80%;
-  border-top: 1px solid red;
-  margin-top: 10vh;
-  padding: 8vh 0vh; 
-}
-
-.footer-right {
-  padding-left: 20%;
-  padding-top: 20%;
-}
 
 /**
   Section
@@ -104,13 +93,6 @@ Global
   margin-top: 5vh;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5rem;
-  grid-row-gap: 2rem;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -125,42 +107,8 @@ Global
   height: 50%;
 }
 
-.card-bottom {
-  height: 50%;
-  padding: 5% 8%;
-}
-
-.card-title {
-  margin-bottom: 28px;
-}
-
-.card-text {
-  color: rgba(255, 255, 255, 0.57);
-  margin-bottom: 20px;
-}
-
 .card-divider {
   margin-top: auto;
-}
-
-.card-link {
-  display: flex;
-  align-items: center;
-  margin-right: 2px;
-  margin-top: 8px;
-}
-
-.buy-bank {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.buy-bank-section {
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .spaced-text {
@@ -182,10 +130,7 @@ Global
   margin-top: 5vh;
 }
 
-.founders {
-  margin-top: 10vh;
-  width: 80%;
-}
+
 
 .shadow-left {
   border-radius: 100%;
@@ -230,9 +175,4 @@ Global
   height:80px;
   width:80px;
   background: radial-gradient(circle, transparent 40%, rgba(255, 16, 19, 0.21) 40%);
-}
-
-.start-your-journey {
-  width: 80%;
-  margin-top: 130px;
 }
