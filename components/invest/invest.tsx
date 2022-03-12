@@ -43,9 +43,16 @@ function Invest() {
                 fontWeight={400}
                 lineHeight='22px'
                 fontSize='18px'>
-                BANK is available on both Uniswap and Sushiswap and can be
-                earned by working in the DAO. Many guest pass holders earn their
-                35,000 BANK rather than buy it outright.
+                BANK is available on both
+                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                  Uniswap
+                </span>{' '}
+                and{' '}
+                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                  Sushiswap
+                </span>{' '}
+                and can be earned by working in the DAO. Many guest pass holders
+                earn their 35,000 BANK rather than buy it outright.
               </Text>
             </Container>
             <Text>
@@ -194,40 +201,48 @@ function Invest() {
       <Container maxW='container.xl' p={0}>
         <Flex py={10}>
           <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-start'>
-            <Text fontWeight={700} fontSize='36px'>
+            <Text fontWeight={700} fontSize='36px' lineHeight='43px'>
               Chippi
             </Text>
-            <Container className='border-box' width='458px' height='131px'>
-              <Text
-                paddingTop={5}
-                fontWeight={400}
-                lineHeight='22px'
-                fontSize='18px'>
+            <Container
+              display={'flex'}
+              justifyContent={'center'}
+              flexDirection='column'
+              className='border-box'
+              width='458px'
+              height='250px'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
                 Chippi are hand-drawn 1-of-1s from BanklessDAO contributor
                 Perchy. These profile pictures (PFPs) are members of the
                 Chippiverse, playing a role in “The Future is DAO” storyline.
                 Chippi inhabit the Bankless Nation, a series of art pieces
                 available as NFTs.
               </Text>
-              <Button onClick={() => null}>Invest in Chippi</Button>
+              <Container display={'flex'} justifyContent='center'>
+                <Button onClick={() => null}>Invest in Chippi</Button>
+              </Container>
             </Container>
           </VStack>
-          <VStack p={10} spacing={10} alignItems='flex-start'>
+          <VStack p={10} spacing={10}>
             <Text fontWeight={700} fontSize='36px' lineHeight='43px'>
               BanklessDAO Weekly NFT
             </Text>
-            <Container className='border-box' width='458px' height='131px'>
-              <Text
-                paddingTop={5}
-                fontWeight={400}
-                lineHeight='22px'
-                fontSize='18px'>
+            <Container
+              display={'flex'}
+              justifyContent={'center'}
+              flexDirection='column'
+              className='border-box'
+              width='458px'
+              height='250px'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
                 BanklessDAO is embedded in the creative space of NFTs and a
                 champion for artists paving the way in digital art forms. Weekly
                 features can be found on BanklessDAO’s Rarible page or the
                 Weekly Rollup newsletter.
               </Text>
-              <Button onClick={() => null}>Invest in NFT's</Button>
+              <Container display={'flex'} justifyContent='center'>
+                <Button onClick={() => null}>Invest in NFT's</Button>
+              </Container>
             </Container>
           </VStack>
         </Flex>
