@@ -6,7 +6,7 @@ import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
 
 function Invest() {
   return (
-    <>
+    <Container maxW='container.xl'>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
           <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-start'>
@@ -43,7 +43,7 @@ function Invest() {
                 fontWeight={400}
                 lineHeight='22px'
                 fontSize='18px'>
-                BANK is available on both
+                BANK is available on both{' '}
                 <span style={{ color: '#D02128', cursor: 'pointer' }}>
                   Uniswap
                 </span>{' '}
@@ -145,7 +145,11 @@ function Invest() {
               </Text>
             </Container>
           </VStack>
-          <VStack display='flex' p={10} spacing={10}>
+          <VStack
+            justifyContent={'flex-end'}
+            display='flex'
+            p={10}
+            spacing={10}>
             <Container>
               <Button onClick={() => null}>
                 <Container display={'flex'} alignItems='center'>
@@ -257,7 +261,7 @@ function Invest() {
           </VStack>
         </Flex>
       </Container>
-    </>
+    </Container>
   )
 }
 
