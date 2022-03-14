@@ -12,6 +12,10 @@ Global
   color: white !important;
 } */
 
+[data-reactroot] { 
+  display: flex;
+}
+
 /**
   Page Container
   */
