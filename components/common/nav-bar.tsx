@@ -7,16 +7,6 @@ const NAV_LINKS = [
   {
     name: 'About Us',
     href: '/about-us',
-    children: [
-      {
-        name: 'About 1',
-        href: '#',
-      },
-      {
-        name: 'About 2',
-        href: '#',
-      },
-    ],
   },
   {
     name: 'Invest',
@@ -55,7 +45,7 @@ class NavBar extends React.Component {
               return (
                 <div key={`link-${idx}`}>
                   <span>
-                    {_navLink.name}
+                    {hasChildren ? _navLink.name : <a href={_navLink.href}>{_navLink.name}</a>}
                     {hasChildren && (
                       <span className='nav-icon'>
                         <Image
