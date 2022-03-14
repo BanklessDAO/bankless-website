@@ -61,7 +61,7 @@ Global
   width: 80%;
   border-top: 1px solid red;
   margin-top: 10vh;
-  padding: 8vh 0vh; 
+  padding: 8vh 0vh;
 }
 
 .footer-right {
@@ -202,11 +202,11 @@ Global
 .shadow {
   border-radius: 100%;
   width: fit-content;
-  box-shadow: -4px 6px 20px red;;
+  box-shadow: -4px 6px 20px red;
 }
 
 .twitter-circle {
-  background: #1DA1F2;
+  background: #1da1f2;
   border-radius: 100%;
   width: 20px;
   height: 20px;
@@ -219,17 +219,21 @@ Global
 
 .doughnut-big {
   border-radius: 100%;
-  height:140px;
-  width:140px;
+  height: 140px;
+  width: 140px;
   background: radial-gradient(circle, transparent 40%, red 40%);
   margin: 0px 110px;
 }
 
 .doughnut-small {
   border-radius: 100%;
-  height:80px;
-  width:80px;
-  background: radial-gradient(circle, transparent 40%, rgba(255, 16, 19, 0.21) 40%);
+  height: 80px;
+  width: 80px;
+  background: radial-gradient(
+    circle,
+    transparent 40%,
+    rgba(255, 16, 19, 0.21) 40%
+  );
 }
 
 .start-your-journey {
@@ -381,3 +385,22 @@ Global
   top: 30%;
   left: 30%;
 }
+
+.border-box {
+  --b: 5px; /* thickness of the border */
+  --c: #d02128; /* color of the border */
+  --w: 15px; /* width of border */
+
+  border: var(--b) solid transparent; /* space for the border */
+  --g: #0000 90deg, var(--c) 0;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g))
+      0 0,
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--g)) 100% 0,
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--g)) 0 100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100%
+      100%;
+  background-size: var(--w) var(--w);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+
