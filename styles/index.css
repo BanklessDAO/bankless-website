@@ -241,6 +241,151 @@ Global
   margin-top: 130px;
 }
 
+/**
+  About Us Page
+  */
+.about-section .banner-text {
+  width: 75%;
+  word-wrap: break-word;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 120px;
+}
+.about-section .banner-underline {
+  background-image: linear-gradient(to right, #FF1013 44.79%, rgba(140, 29, 207, 0) 101.77%, rgba(255,0,0,0));
+  filter: blur(5px);
+  height: 11px;
+}
+.about-section .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 43px;
+  color: #FFFFFF;
+}
+.about-section p.light-grey {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27.9613px;
+  line-height: 38px;
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+.about-section .mission-section {
+  width: 50%;
+}
+.about-section .vision-section {
+  width: 50%;
+}
+.main-image .img-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 800px;
+}
+.main-image .background {
+  position: relative;
+  left: 40%;
+}
+.main-image .instructor-img {
+  position: absolute;
+  top: 8%;
+  left: -5%;
+}
+.main-image .floating-bitcoin {
+  position: absolute;
+  top: 65%;
+  left: 35%;
+}
+.main-image .floating-bankless {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.main-image .floating-tezos{
+  position: absolute;
+  top: 38%;
+  left: 7%;
+}
+.main-image .floating-aragon{
+  position: absolute;
+  top: 55%;
+  left: 58%;
+}
+.main-image .floating-ethereum{
+  position: absolute;
+  top: 20%;
+  left: 67%;
+}
+.main-image .text-bubble {
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  height: 800px;
+}
+.main-image .heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 135px;
+}
+.main-image .subheading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 130px;
+}
+.banner-text.left-align {
+  text-align: left;
+}
+
+.image-orbit {
+  height: 680px;
+  min-width: 900px;
+  margin: 200px 0;
+}
+.image-orbit .outer-ellipse {
+  border: 43px solid #131313;
+  border-radius: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 40px 40px #131313; /* WebKit */
+  -moz-box-shadow: 0px 0px 40px 40px #131313; /* Firefox */
+  box-shadow: 0 0 40px 40px #131313, inset 0px 0px 40px 40px #000; /* Standard */
+  height:860px;
+  width:860px;
+}
+.image-orbit .main-ellipse {
+  border: 63px solid #131313;
+  border-radius: 100%;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0px 0px 40px 40px #131313; /* WebKit */
+  -moz-box-shadow: inset 0px 0px 40px 40px #131313; /* Firefox */
+  box-shadow: inset 0 0 40px 40px #131313; /* Standard  0 0 40px 40px #131313,  */
+  height:760px;
+  width:760px;
+  position: relative;
+  top: 1%;
+  left: 1%;
+}
+
+.image-orbit .inner-ellipse {
+  border: 6px solid rgba(255, 16, 19, 0.15);
+  border-radius: 100%;
+  box-sizing: border-box;
+  height:300px;
+  width:300px;
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+
+.image-orbit .orbit-center {
+  position: relative;
+  top: 30%;
+  left: 30%;
+}
+
 .border-box {
   --b: 5px; /* thickness of the border */
   --c: #d02128; /* color of the border */
@@ -258,3 +403,4 @@ Global
   background-origin: border-box;
   background-repeat: no-repeat;
 }
+
