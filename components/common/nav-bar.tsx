@@ -6,7 +6,7 @@ import { Button } from '@chakra-ui/react'
 const NAV_LINKS = [
   {
     name: 'About Us',
-    href: '#',
+    href: '/about-us',
     children: [
       {
         name: 'About 1',
