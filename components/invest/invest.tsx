@@ -255,7 +255,7 @@ function Invest() {
                 bottom={0}
                 display={'flex'}
                 justifyContent='center'>
-                <Button onClick={() => null}>Invest in NFT's</Button>
+                <Button onClick={() => null}>{`Invest in NFT's`}</Button>
               </Container>
             </Container>
           </VStack>
