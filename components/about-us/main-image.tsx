@@ -4,10 +4,10 @@ import Image from 'next/image'
 import { Text, Box, Flex } from '@chakra-ui/react'
 
 interface I_Props {
-  img: string
-  title: string
-  text: string
-  href: string
+  img?: string
+  title?: string
+  text?: string
+  href?: string
 }
 
 class MainImage extends React.PureComponent<I_Props> {
