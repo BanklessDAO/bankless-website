@@ -25,19 +25,19 @@ class MainImage extends React.PureComponent<I_Props> {
           </Box>
           <Image src="/images/red-ellipse-gradient.svg" alt="Red Gradient Background" className="background" width={1150} height={900} />
           <Box className="floating-bitcoin">
-          <Image src="/images/tiny-circle-bitcoin.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='bitcoin' src="/images/tiny-circle-bitcoin.svg" objectFit="none" width={50} height={50}/>
           </Box>
           <Box className="floating-bankless">
-          <Image src="/images/tiny-circle-bankless.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='bankless' src="/images/tiny-circle-bankless.svg" objectFit="none" width={50} height={50}/>
           </Box>
           <Box className="floating-tezos">
-          <Image src="/images/tiny-circle-tezos.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='tezos' src="/images/tiny-circle-tezos.svg" objectFit="none" width={50} height={50}/>
           </Box>
           <Box className="floating-aragon">
-          <Image src="/images/tiny-circle-aragon.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='aragon' src="/images/tiny-circle-aragon.svg" objectFit="none" width={50} height={50}/>
           </Box>
           <Box className="floating-ethereum">
-          <Image src="/images/tiny-circle-ethereum.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='ethereum' src="/images/tiny-circle-ethereum.svg" objectFit="none" width={50} height={50}/>
           </Box>
         </Box>
         <Box className="text-bubble">

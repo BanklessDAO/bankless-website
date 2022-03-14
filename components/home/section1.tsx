@@ -8,7 +8,6 @@ import {
   InputGroup,
   InputRightElement,
   Button,
-  Box,
 } from '@chakra-ui/react'
 
 class Section1 extends React.Component {

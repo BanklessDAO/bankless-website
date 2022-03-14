@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Flex, Text, Box, Button } from '@chakra-ui/react'
+import { Flex, Text, Box } from '@chakra-ui/react'
 
 const MULTI_SIG_OWNERS = [
     {
