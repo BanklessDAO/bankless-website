@@ -1,5 +1,5 @@
 import React from 'react'
-import Video from 'react-native-video'
+// import Video from 'react-native-video'
 
 import { Text, Link, Divider, Box, Flex } from '@chakra-ui/react'
 
