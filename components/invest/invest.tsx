@@ -17,7 +17,7 @@ function Invest() {
     <Container maxW='container.xl'>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-start'>
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
@@ -25,7 +25,7 @@ function Invest() {
               width={402}
             />
           </VStack>
-          <VStack spacing={5} alignItems='flex-start'>
+          <VStack spacing={5} align='flex-start'>
             <Text fontWeight={700} fontSize='7xl'>
               BANK
             </Text>
@@ -85,7 +85,7 @@ function Invest() {
       </Container>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack spacing={10} alignItems='flex-start'>
+          <VStack spacing={10} align='flex-start'>
             <Container maxW='container.xl'>
               <Text fontWeight={700} fontSize='5xl'>
                 BED Index
@@ -139,7 +139,7 @@ function Invest() {
               </Button>
             </Container>
           </VStack>
-          <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-end'>
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-end'>
             <Image
               src='/images/bed-token.png'
               alt='bed-token'
@@ -185,7 +185,7 @@ function Invest() {
                 onClick={() =>
                   window.open('https://app.indexcoop.com/gmi', '_blank')
                 }>
-                <Container display={'flex'} alignItems='center'>
+                <Container display={'flex'} align='center'>
                   <Image
                     src='/images/bed-token.png'
                     alt='bed-token'
@@ -201,7 +201,7 @@ function Invest() {
       </Container>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack p={10} spacing={10} alignItems='flex-start'>
+          <VStack p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/DAO-Punk-Invest.png'
               alt='bankToken'
@@ -245,7 +245,7 @@ function Invest() {
 
       <Container maxW='container.xl' p={0}>
         <Flex justifyContent='space-between' py={10}>
-          <VStack h='full' w='30%' p={10} spacing={10} alignItems='flex-start'>
+          <VStack h='full' w='30%' p={10} spacing={10} align='flex-start'>
             <Text fontWeight={700} fontSize='4xl' lineHeight='43px'>
               Chippi
             </Text>
