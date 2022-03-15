@@ -20,7 +20,7 @@ class ImageOrbit extends React.Component {
             <Box className={"main-ellipse"}>
               <Box className={"inner-ellipse"}>
                 <Box className={"orbit-center"}>
-                  <Image alt='image-orbit' src={"/images/about-image-orbit-center.png"} width={120} height={120}/>
+                  <Image src={"/images/about-image-orbit-center.png"} width={120} height={120}/>
                 </Box>
               </Box>
             </Box>
