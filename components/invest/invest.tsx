@@ -2,7 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import Gradient from 'rgt'
 
-import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Container,
+  VStack,
+  Button,
+  Box,
+  Link,
+} from '@chakra-ui/react'
 
 function Invest() {
   return (
@@ -44,22 +52,31 @@ function Invest() {
                 lineHeight='22px'
                 fontSize='18px'>
                 BANK is available on both{' '}
-                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                <Link
+                  color='#D02128'
+                  href='https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
+                  isExternal>
                   Uniswap
-                </span>{' '}
+                </Link>{' '}
                 and{' '}
-                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                <Link
+                  color='#D02128'
+                  href='https://app.sushi.com/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH'
+                  isExternal>
                   Sushiswap
-                </span>{' '}
+                </Link>{' '}
                 and can be earned by working in the DAO. Many guest pass holders
                 earn their 35,000 BANK rather than buy it outright.
               </Text>
             </Container>
             <Text>
               Current market cap and price is{' '}
-              <span style={{ color: '#D02128', cursor: 'pointer' }}>
+              <Link
+                color='#D02128'
+                href='https://www.coingecko.com/en/coins/bankless-dao'
+                isExternal>
                 Available Here
-              </span>
+              </Link>
             </Text>
           </VStack>
         </Flex>
