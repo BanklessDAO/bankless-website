@@ -112,7 +112,10 @@ function Invest() {
               </Text>
             </Container>
             <Container display='flex' justifyContent='space-evenly'>
-              <Button onClick={() => null}>
+              <Button
+                onClick={() =>
+                  window.open('https://app.indexcoop.com/bed', '_blank')
+                }>
                 <Container padding={0} paddingRight={2}>
                   <Image
                     src='/images/bed-token.png'
@@ -123,7 +126,15 @@ function Invest() {
                 </Container>
                 Invest in BED index
               </Button>
-              <Button onClick={() => null}>Learn more about Bed Index </Button>
+              <Button
+                onClick={() =>
+                  window.open(
+                    'https://www.bankless.community/bed-index',
+                    '_blank'
+                  )
+                }>
+                Learn more about Bed Index{' '}
+              </Button>
             </Container>
           </VStack>
           <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-end'>
