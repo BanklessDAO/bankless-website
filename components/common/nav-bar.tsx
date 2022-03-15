@@ -45,10 +45,7 @@ class NavBar extends React.Component {
               return (
                 <div key={`link-${idx}`}>
                   <span>
-                   {hasChildren
-                      ? _navLink.name
-                      : <a href={_navLink.href}>{_navLink.name}</a>
-                    }
+                    {hasChildren ? _navLink.name : <a href={_navLink.href}>{_navLink.name}</a>}
                     {hasChildren && (
                       <span className='nav-icon'>
                         <Image

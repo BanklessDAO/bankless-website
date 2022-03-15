@@ -1,13 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-
 import {
   Flex,
   Text,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Button,
   Box,
 } from '@chakra-ui/react'
 

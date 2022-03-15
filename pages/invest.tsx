@@ -1,12 +1,12 @@
 
 import PageContainer from 'components/common/page-container'
 
-import Home from 'components/home'
+import Invest from 'components/invest/invest'
 
-export default function HomePage() {
+export default function InvestPage() {
     return (
         <PageContainer>
-            <Home />
+            <Invest />
         </PageContainer>
     )
 }

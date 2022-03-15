@@ -19,17 +19,31 @@ class Card extends React.PureComponent<I_Props> {
           <Image src={this.props.img} alt='image' width={600} height={400} />
         </Box>
 
-        <Flex flexDir='column' className='card-bottom'>
+        <Flex 
+          flexDir='column'
+          height='50%'
+          padding={{ base: 6, lg: 6 }}
+          >
 
-          <Text className='card-title' fontSize='3xl' fontWeight={700}>
+          <Text 
+            fontSize={{base: 'xl', lg:'3xl'}}
+            fontWeight={700}
+            marginBottom={{base: 6, lg: 18}}>
             {this.props.title.toUpperCase()}
           </Text>
-          <Text className='card-text'>{this.props.text}</Text>
+          <Text 
+            fontSize={{base: 'md', lg:'xl'}}
+            color='rgba(255,255,255,0.57)'
+            marginBottom={{ base: 12, lg: 30 }}
+          >{this.props.text}</Text>
 
           <Divider className='card-divider' />
 
           <Link
-            className='card-link'
+            display='flex'
+            alignItems='center'
+            marginRight='2'
+            marginTop='8'
             href={this.props.href}>
             <Text fontSize='sm' marginRight={2}>Start</Text>
             <Box>
