@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Text, Box, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
+import { Flex, Text, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
 import ThreeRings from 'components/common/three-rings';
 
 class Section5 extends React.Component {

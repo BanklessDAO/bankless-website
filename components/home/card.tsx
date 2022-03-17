@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Text, Link, Divider, Box, Flex, background } from '@chakra-ui/react'
+import { Text, Link, Divider, Box, Flex } from '@chakra-ui/react'
 
 interface I_Props {
   img: string
