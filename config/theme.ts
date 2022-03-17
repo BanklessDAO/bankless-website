@@ -82,7 +82,10 @@ const theme = extendTheme({
     Link: {
       variants: {
         bankless: {
-          color: 'white.100'
+          color: 'white.500'
+        },
+        inactive: {
+          color: 'grey.400'
         }
       }
     }
