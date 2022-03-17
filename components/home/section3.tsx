@@ -2,14 +2,16 @@ import React from 'react';
 import Image from 'next/image';
 
 import { Flex, Text, Box, Button } from '@chakra-ui/react';
+import Underline from 'components/common/underline';
 
 class Section3 extends React.Component {
   render() {
     return (
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
+
         <Text
           fontSize='4xl'
-          wordWrap='break-word'
+          wordwrap='break-word'
           textAlign='center'
           fontWeight={700}
           marginTop={{ base: 39, lg: 25 }}
@@ -17,7 +19,7 @@ class Section3 extends React.Component {
           {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
 
-        <div className='banner-underline'>&nbsp;</div>
+        <Underline />
 
         <Flex
           flexDirection={{ base: 'column', lg: 'row' }}
@@ -63,9 +65,19 @@ class Section3 extends React.Component {
           </Flex>
         </Flex>
 
-        <Box className='bank-banner'>
+        <Flex
+          height='fit-content'
+          mt={8}
+          flexDir='column'
+          justifyContent='center'
+          alignItems='center'
+          backgroundColor='white'
+          width='90%'
+          borderRadius='22px'
+          p={4}
+        >
           <Box>
-            <Text fontSize='3xl' color={'black'} fontWeight={700}>
+            <Text fontSize='3xl' color={'black'} fontWeight={700} textAlign='center'>
               Onboarding 1 billion people, Minting 1 billion BANK tokens
             </Text>
           </Box>
@@ -86,16 +98,20 @@ class Section3 extends React.Component {
               BANK TOKEN LEGAL ASSESSMENT
             </Button>
           </Flex>
-        </Box>
+
+        </Flex>
 
         <Flex
           flexDir={{ base: 'column', lg: 'row' }}
           justifyContent='center'
           alignItems='center'
-          marginTop={{ base: 10, lg: 15 }}>
-          <Flex flexDirection='row' marginRight={4}>
+          marginTop={{ base: 10, lg: 20 }}>
+          <Flex flexDirection='row' marginRight={8}>
             <Box margin={5}>
-              <Box className='shadow-left'>
+              <Box 
+                borderRadius='100%'
+                width='fit-content'
+                boxShadow='-18px 8px 35px red'>
                 <Image
                   src='/profile-pics/david-hoffman.png'
                   height={150}
@@ -105,7 +121,10 @@ class Section3 extends React.Component {
               </Box>
             </Box>
             <Box margin={5}>
-              <Box className='shadow-right'>
+              <Box     
+                borderRadius='100%'
+                width='fit-content'
+                boxShadow='18px 8px 35px red'>
                 <Image
                   src='/profile-pics/ryan-sean-adams.png'
                   height={150}
@@ -116,7 +135,9 @@ class Section3 extends React.Component {
             </Box>
           </Flex>
 
-          <Box width={{ base: '100%', lg: '60%' }}>
+          <Box 
+            width={{ base: '100%', lg: '60%' }} 
+            textAlign={{ base: 'center', lg: 'left'}}>
             <Text fontSize='3xl' color='rgba(255, 255, 255, 0.61)'>
               BanklessDAO was founded by{' '}
               <b style={{ color: 'white' }}>David Hoffman</b> and{' '}
@@ -127,9 +148,7 @@ class Section3 extends React.Component {
           </Box>
         </Flex>
 
-        <Box className='spacer'></Box>
-
-        <Flex flexDir='row' justifyContent='center' alignItems='space-between'>
+        <Box mt={16} maxW={{base: 600, lg: 1000}}>
           <Text fontSize={{base: 'md', lg:'xl'}} color='rgba(255, 255, 255, 0.35)'>
             Following the true ethos of decentralization, they stepped back and
             let the DAO take shape. While their media company, Bankless LLC,
@@ -139,7 +158,7 @@ class Section3 extends React.Component {
             discover decentralized financial technologies through education,
             media and culture.
           </Text>
-        </Flex>
+        </Box>
       </Flex>
     )
   }

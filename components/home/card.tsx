@@ -13,7 +13,14 @@ interface I_Props {
 class Card extends React.PureComponent<I_Props> {
   render() {
     return (
-      <Box className='card'>
+
+      <Flex
+        flexDirection='column'
+        borderRadius='10px'
+        background='#101010'
+        height='100%'
+        overflow='hidden'
+        maxW='400px'>
 
         <Box>
           <Image src={this.props.img} alt='image' width={600} height={400} />
@@ -37,7 +44,7 @@ class Card extends React.PureComponent<I_Props> {
             marginBottom={{ base: 12, lg: 30 }}
           >{this.props.text}</Text>
 
-          <Divider className='card-divider' />
+          <Divider marginTop='auto' />
 
           <Link
             display='flex'
@@ -57,7 +64,7 @@ class Card extends React.PureComponent<I_Props> {
           </Link>
           
         </Flex>
-      </Box>
+      </Flex>
     )
   }
 }

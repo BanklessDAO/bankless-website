@@ -2,14 +2,22 @@ import React from 'react'
 import Image from 'next/image'
 import Gradient from 'rgt'
 
-import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Container,
+  VStack,
+  Button,
+  Box,
+  Link,
+} from '@chakra-ui/react'
 
 function Invest() {
   return (
     <Container maxW='container.xl'>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-start'>
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
@@ -17,8 +25,8 @@ function Invest() {
               width={402}
             />
           </VStack>
-          <VStack spacing={5} alignItems='flex-start'>
-            <Text fontWeight={700} fontSize='72px'>
+          <VStack spacing={5} align='flex-start'>
+            <Text fontWeight={700} fontSize='7xl'>
               BANK
             </Text>
             <Gradient
@@ -30,7 +38,7 @@ function Invest() {
                 The Most widely-held Token{' '}
               </Text>
             </Gradient>
-            <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
+            <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
               BANK is the native token of BanklessDAO. As a tool for the
               Bankless community, it determines membership level and voting
               power in on-chain votes. To be a Level 1 member, which means you
@@ -42,31 +50,42 @@ function Invest() {
                 paddingTop={5}
                 fontWeight={400}
                 lineHeight='22px'
-                fontSize='18px'>
+                fontSize='lg'>
                 BANK is available on both{' '}
-                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                <Link
+                  color='#D02128'
+                  href='https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
+                  isExternal>
                   Uniswap
-                </span>{' '}
+                </Link>{' '}
                 and{' '}
-                <span style={{ color: '#D02128', cursor: 'pointer' }}>
+                <Link
+                  color='#D02128'
+                  href='https://app.sushi.com/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH'
+                  isExternal>
                   Sushiswap
-                </span>{' '}
+                </Link>{' '}
                 and can be earned by working in the DAO. Many guest pass holders
                 earn their 35,000 BANK rather than buy it outright.
               </Text>
             </Container>
-            <Text>
-              Current market cap and price is{' '}
-              <span style={{ color: '#D02128', cursor: 'pointer' }}>
-                Available Here
-              </span>
-            </Text>
+            <Box>
+              <Text>
+                Current market cap and price is{' '}
+                <Link
+                  color='#D02128'
+                  href='https://www.coingecko.com/en/coins/bankless-dao'
+                  isExternal>
+                  Available Here
+                </Link>
+              </Text>
+            </Box>
           </VStack>
         </Flex>
       </Container>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack spacing={10} alignItems='flex-start'>
+          <VStack spacing={10} align='flex-start'>
             <Container maxW='container.xl'>
               <Text fontWeight={700} fontSize='5xl'>
                 BED Index
@@ -95,7 +114,10 @@ function Invest() {
               </Text>
             </Container>
             <Container display='flex' justifyContent='space-evenly'>
-              <Button onClick={() => null}>
+              <Button
+                onClick={() =>
+                  window.open('https://app.indexcoop.com/bed', '_blank')
+                }>
                 <Container padding={0} paddingRight={2}>
                   <Image
                     src='/images/bed-token.png'
@@ -106,10 +128,18 @@ function Invest() {
                 </Container>
                 Invest in BED index
               </Button>
-              <Button onClick={() => null}>Learn more about Bed Index </Button>
+              <Button
+                onClick={() =>
+                  window.open(
+                    'https://www.bankless.community/bed-index',
+                    '_blank'
+                  )
+                }>
+                Learn more about Bed Index{' '}
+              </Button>
             </Container>
           </VStack>
-          <VStack h='full' w='full' p={10} spacing={10} alignItems='flex-end'>
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-end'>
             <Image
               src='/images/bed-token.png'
               alt='bed-token'
@@ -151,8 +181,11 @@ function Invest() {
             p={10}
             spacing={10}>
             <Container>
-              <Button onClick={() => null}>
-                <Container display={'flex'} alignItems='center'>
+              <Button
+                onClick={() =>
+                  window.open('https://app.indexcoop.com/gmi', '_blank')
+                }>
+                <Container display={'flex'} align='center'>
                   <Image
                     src='/images/bed-token.png'
                     alt='bed-token'
@@ -168,7 +201,7 @@ function Invest() {
       </Container>
       <Container maxW='container.xl' p={0}>
         <Flex py={20}>
-          <VStack p={10} spacing={10} alignItems='flex-start'>
+          <VStack p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/DAO-Punk-Invest.png'
               alt='bankToken'
@@ -178,10 +211,10 @@ function Invest() {
           </VStack>
           <VStack spacing={10}>
             <Container>
-              <Text fontWeight={700} fontSize='48px' lineHeight={'58px'}>
+              <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>
                 DAO Punks
               </Text>
-              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
                 DAOpunks launched in 2021 with the mission of helping to free
                 all humans from the soul-sucking drudgery of default world work.
                 They do that work through providing grants to those who seek to
@@ -196,7 +229,15 @@ function Invest() {
               </Text>
             </Container>
             <Container>
-              <Button onClick={() => null}>Invest in DAO Punks</Button>
+              <Button
+                onClick={() =>
+                  window.open(
+                    'https://opensea.io/collection/daopunksnft',
+                    '_blank'
+                  )
+                }>
+                Invest in DAO Punks
+              </Button>
             </Container>
           </VStack>
         </Flex>
@@ -204,19 +245,19 @@ function Invest() {
 
       <Container maxW='container.xl' p={0}>
         <Flex justifyContent='space-between' py={10}>
-          <VStack h='full' w='30%' p={10} spacing={10} alignItems='flex-start'>
-            <Text fontWeight={700} fontSize='36px' lineHeight='43px'>
+          <VStack h='full' w='30%' p={10} spacing={10} align='flex-start'>
+            <Text fontWeight={700} fontSize='4xl' lineHeight='43px'>
               Chippi
             </Text>
             <Container
-              position={'relative'}
-              display={'flex'}
-              justifyContent={'center'}
+              position='relative'
+              display='flex'
+              justifyContent='center'
               flexDirection='column'
               className='border-box'
               width='458px'
               height='250px'>
-              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
                 Chippi are hand-drawn 1-of-1s from BanklessDAO contributor
                 Perchy. These profile pictures (PFPs) are members of the
                 Chippiverse, playing a role in “The Future is DAO” storyline.
@@ -224,38 +265,44 @@ function Invest() {
                 available as NFTs.
               </Text>
               <Container
-                position={'absolute'}
+                position='absolute'
                 bottom={0}
-                display={'flex'}
+                display='flex'
                 justifyContent='center'>
                 <Button onClick={() => null}>Invest in Chippi</Button>
               </Container>
             </Container>
           </VStack>
           <VStack p={10} spacing={10}>
-            <Text fontWeight={700} fontSize='36px' lineHeight='43px'>
+            <Text fontWeight={700} fontSize='4xl' lineHeight='43px'>
               BanklessDAO Weekly NFT Showcase
             </Text>
             <Container
-              position={'relative'}
-              display={'flex'}
-              justifyContent={'center'}
+              position='relative'
+              display='flex'
+              justifyContent='center'
               flexDirection='column'
               className='border-box'
               width='458px'
               height='250px'>
-              <Text fontWeight={400} lineHeight='22px' fontSize='18px'>
+              <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
                 BanklessDAO is embedded in the creative space of NFTs and a
                 champion for artists paving the way in digital art forms. Weekly
                 features can be found on BanklessDAO’s Rarible page or the
                 Weekly Rollup newsletter.
               </Text>
               <Container
-                position={'absolute'}
+                display='flex'
+                position='absolute'
                 bottom={0}
-                display={'flex'}
                 justifyContent='center'>
-                <Button onClick={() => null}>{`Invest in NFT's`}</Button>
+                <Button
+                  onClick={() =>
+                    window.open(
+                      'https://rarible.com/banklessdao/sale',
+                      '_blank'
+                    )
+                  }>{`Invest in NFT's`}</Button>
               </Container>
             </Container>
           </VStack>
