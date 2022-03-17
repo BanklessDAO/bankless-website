@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo from "./Logo";
 
 import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
 
