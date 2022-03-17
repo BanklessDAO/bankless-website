@@ -3,6 +3,7 @@ import React from 'react'
 import { Flex, Text, Grid } from '@chakra-ui/react'
 
 import Card from './card'
+import Underline from 'components/common/underline'
 
 const CARDS = [
     {
@@ -35,11 +36,12 @@ class Section2 extends React.Component {
   render() {
     return (
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
-        <Text fontSize='4xl' className='banner-text'>
+
+        <Text fontWeight={700} fontSize='4xl' textAlign='center'>
           {'We take a decentralized approach to:'.toUpperCase()}
         </Text>
 
-        <div className='banner-underline'>&nbsp;</div>
+        <Underline />
 
         <Grid 
           templateColumns={{base: '1fr', lg: '1fr 1fr'}}
