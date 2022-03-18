@@ -10,20 +10,34 @@ import {
   Button,
   Box,
   Link,
+  useMediaQuery,
 } from '@chakra-ui/react'
 
 function Invest() {
+  const [isMobile] = useMediaQuery('(max-width: 768px)')
+
   return (
-    <Container maxW='container.xl'>
-      <Container maxW='container.xl' p={0}>
-        <Flex py={20}>
+    <Container maxW={{ base: 'container.md', md: 'container.xl' }} p={0}>
+      <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
+        <Flex
+          direction={{ base: 'column-reverse', md: 'row' }}
+          py={[0, 10, 20]}>
           <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
-            <Image
-              src='/images/bank-token.png'
-              alt='bankToken'
-              height={422}
-              width={402}
-            />
+            {!isMobile ? (
+              <Image
+                src='/images/bank-token.png'
+                alt='bankToken'
+                height={422}
+                width={402}
+              />
+            ) : (
+              <Image
+                src='/images/bank-token-mobile.png'
+                alt='bankToken'
+                height={113}
+                width={180}
+              />
+            )}
           </VStack>
           <VStack spacing={5} align='flex-start'>
             <Text fontWeight={700} fontSize='7xl'>
