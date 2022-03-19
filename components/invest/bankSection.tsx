@@ -26,14 +26,7 @@ function BankSection() {
               height={422}
               width={402}
             />
-          ) : (
-            <Image
-              src='/images/bank-token-mobile.png'
-              alt='bankToken'
-              height={113}
-              width={180}
-            />
-          )}
+          ) : null}
         </VStack>
         <VStack spacing={5} align='flex-start'>
           <Text fontWeight={700} fontSize='7xl'>
@@ -55,7 +48,10 @@ function BankSection() {
             the Discord server without needing a guest pass, you must hold
             35,000 BANK.
           </Text>
-          <Container className='border-box' width='458px' height='131px'>
+          <Container
+            className='border-box'
+            width={{ base: 'container.xl', md: '458px' }}
+            height='131px'>
             <Text
               paddingTop={5}
               fontWeight={400}
@@ -79,7 +75,16 @@ function BankSection() {
               earn their 35,000 BANK rather than buy it outright.
             </Text>
           </Container>
-          <Box>
+          <Box display={'flex'}>
+            {isMobile ? (
+              <Image
+                src='/images/bank-token-mobile.png'
+                alt='bankToken'
+                height={113}
+                width={180}
+              />
+            ) : null}
+
             <Text>
               Current market cap and price is{' '}
               <Link
