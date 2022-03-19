@@ -1,17 +1,36 @@
 import React from 'react'
 import Image from 'next/image'
 import Gradient from 'rgt'
-import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Container,
+  VStack,
+  Button,
+  useMediaQuery,
+} from '@chakra-ui/react'
 
 function BedIndex() {
+  const [isMobile] = useMediaQuery('(max-width: 768px)')
+
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
       <Flex py={20}>
         <VStack spacing={10} align='flex-start'>
-          <Container maxW='container.xl'>
-            <Text fontWeight={700} fontSize='5xl'>
-              BED Index
-            </Text>
+          <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+            <Flex justify={'space-evenly'}>
+              {isMobile ? (
+                <Image
+                  src='/images/bed-mobile.png'
+                  alt='bed-token'
+                  height={45}
+                  width={45}
+                />
+              ) : null}
+              <Text fontWeight={700} fontSize='5xl'>
+                BED Index
+              </Text>
+            </Flex>
             <Text lineHeight='22px' fontSize='lg' fontWeight={700}>
               <Gradient
                 dir='top-to-bottom'
@@ -67,12 +86,14 @@ function BedIndex() {
           </Container>
         </VStack>
         <VStack h='full' w='full' p={10} spacing={10} align='flex-end'>
-          <Image
-            src='/images/bed-token.png'
-            alt='bed-token'
-            height={454}
-            width={454}
-          />
+          {!isMobile ? (
+            <Image
+              src='/images/bed-token.png'
+              alt='bed-token'
+              height={454}
+              width={454}
+            />
+          ) : null}
         </VStack>
       </Flex>
     </Container>
