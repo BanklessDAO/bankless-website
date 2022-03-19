@@ -21,7 +21,7 @@ function BedIndex() {
             <Flex justify={'space-evenly'}>
               {isMobile ? (
                 <Image
-                  src='/images/bed-mobile.png'
+                  src='/images/bed-token.png'
                   alt='bed-token'
                   height={45}
                   width={45}
