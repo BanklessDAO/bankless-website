@@ -9,6 +9,7 @@ import {
   Button,
   Box,
 } from '@chakra-ui/react'
+import ThreeRings from './three-rings'
 
 
 class NewsletterSection extends React.Component {
@@ -19,28 +20,7 @@ class NewsletterSection extends React.Component {
         flexDir="column"
         justifyContent="center"
         alignItems="center">
-
-        <Flex
-          flexWrap="wrap"
-          flexDir="row"
-          justifyContent="center"
-          alignItems="center"
-          rowGap="110px"
-          mt={"100px"}>
-          <Box className='doughnut-small'></Box>
-          <Box
-              borderRadius={"100%"}
-              height={"140px"}
-              width={"140px"}
-              background={"radial-gradient(circle, transparent 40%, red 40%)"}
-              mt={0}
-              mb={0}
-              ml={"110px"}
-              mr={"110px"}
-          ></Box>
-          <Box className='doughnut-small'></Box>
-        </Flex>
-
+        <ThreeRings />
         <Flex
           className='start-your-journey'
           flexWrap='nowrap'
