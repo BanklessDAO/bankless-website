@@ -1,22 +1,13 @@
 import React from 'react'
 
-import { Flex, Text, Box, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
+import { Flex, Text, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
+import ThreeRings from 'components/common/three-rings';
 
 class Section5 extends React.Component {
   render() {
     return (
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
-        <Flex
-          className='doughnut-row'
-          flexWrap='wrap'
-          flexDir='row'
-          justifyContent='center'
-          alignItems='center'>
-          <Box className='doughnut-small'></Box>
-          <Box className='doughnut-big'
-            margin={{base: '0px 40px', md:'0px 80px', lg: '0px 110px' }}></Box>
-          <Box className='doughnut-small'></Box>
-        </Flex>
+        <ThreeRings />
 
         <Flex
           flexWrap='nowrap'

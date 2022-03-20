@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import { Flex, Text, Box } from '@chakra-ui/react'
+import Underline from 'components/common/underline'
 
 const MULTI_SIG_OWNERS = [
     {
@@ -65,21 +66,21 @@ class Section4 extends React.Component {
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
         <Text 
           fontSize='4xl'
-          wordWrap='break-word'
+          worwrap='break-word'
           textAlign='center'
           fontWeight={700}
           marginTop={{ base: 39, lg: 25 }}
           width={{ base: '80%', lg: '60%' }}>
           {'Treasury multi-sig owners'.toUpperCase()}
         </Text>
-        <div className='banner-underline'>&nbsp;</div>
+        <Underline />
 
         <Flex
           flexWrap='wrap'
           flexDir='row'
           justifyContent='center'
           alignItems='space-between'
-          rowGap='2vh'>
+          rowGap={8}>
           {MULTI_SIG_OWNERS.map(_multiSigOwner => {
             return (
               <Flex
@@ -89,7 +90,10 @@ class Section4 extends React.Component {
                 width={{ base: '50%', lg: '30%'}}
                 key={_multiSigOwner.name}
                 rowGap='1.5vh'>
-                <Box className='shadow'>
+                <Box 
+                    borderRadius='100%'
+                    width='fit-content'
+                    boxShadow='-4px 6px 20px red'>
                   <Image
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
@@ -101,7 +105,8 @@ class Section4 extends React.Component {
                 <Flex
                   flexDir='row'
                   justifyContent='space-between'
-                  alignItems='center'>
+                  alignItems='center'
+                  pt={4}>
                   <Text fontSize='2xl' style={{ marginRight: 8 }}>
                     {_multiSigOwner.name}
                   </Text>
@@ -109,7 +114,11 @@ class Section4 extends React.Component {
                     flexDir='row'
                     justifyContent='center'
                     alignItems='center'
-                    className='twitter-circle'
+                    backgroundColor='#1da1f2'
+                    borderRadius='100%'
+                    w='20px'
+                    h='20px'
+                    cursor='pointer'
                     href={_multiSigOwner.twitter}>
                     <Image
                       src='/icons/twitter.png'
@@ -124,17 +133,23 @@ class Section4 extends React.Component {
           })}
         </Flex>
 
-        <Text fontSize='4xl' className='banner-text'>
+        <Text 
+          fontSize='4xl'
+          worwrap='break-word'
+          textAlign='center'
+          fontWeight={700}
+          marginTop={{ base: 32, lg: 24 }}
+          width={{ base: '80%', lg: '60%' }}>
           {'Grants committee members'.toUpperCase()}
         </Text>
-        <div className='banner-underline'>&nbsp;</div>
+        <Underline />
 
         <Flex
           flexWrap='wrap'
           flexDir='row'
           justifyContent='center'
           alignItems='space-between'
-          rowGap='2vh'>
+          rowGap={8}>
           {GRANT_COMMITTEE_MEMBERS.map(_multiSigOwner => {
             return (
               <Flex
@@ -144,7 +159,10 @@ class Section4 extends React.Component {
                 width={{ base: '50%', lg: '30%'}}
                 key={_multiSigOwner.name}
                 rowGap='1.5vh'>
-                <Box className='shadow'>
+                <Box 
+                    borderRadius='100%'
+                    width='fit-content'
+                    boxShadow='-4px 6px 20px red'>
                   <Image
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
@@ -156,7 +174,8 @@ class Section4 extends React.Component {
                 <Flex
                   flexDir='row'
                   justifyContent='space-between'
-                  alignItems='center'>
+                  alignItems='center'
+                  pt={4}>
                   <Text fontSize='2xl' style={{ marginRight: 8 }}>
                     {_multiSigOwner.name}
                   </Text>
@@ -164,7 +183,11 @@ class Section4 extends React.Component {
                     flexDir='row'
                     justifyContent='center'
                     alignItems='center'
-                    className='twitter-circle'
+                    backgroundColor='#1da1f2'
+                    borderRadius='100%'
+                    w='20px'
+                    h='20px'
+                    cursor='pointer'
                     href={_multiSigOwner.twitter}>
                     <Image
                       src='/icons/twitter.png'
