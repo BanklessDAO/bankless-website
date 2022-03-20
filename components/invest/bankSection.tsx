@@ -16,18 +16,18 @@ function BankSection() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
-      <Flex direction={{ base: 'column-reverse', md: 'row' }}>
-          {!isMobile ? (
-        <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
+    <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+      <Flex direction={{ base: 'column-reverse', md: 'row' }} py={20}>
+        {!isMobile ? (
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
               height={422}
               width={402}
             />
-        </VStack>
-          ) : null}
+          </VStack>
+        ) : null}
         <VStack spacing={5} align='flex-start'>
           <Text fontWeight={700} fontSize='7xl'>
             BANK
@@ -48,10 +48,7 @@ function BankSection() {
             the Discord server without needing a guest pass, you must hold
             35,000 BANK.
           </Text>
-          <Container
-            className='border-box'
-            width={{ base: 'container.xl', md: '458px' }}
-            height='131px'>
+          <Container className='border-box' height='131px'>
             <Text
               paddingTop={5}
               fontWeight={400}
