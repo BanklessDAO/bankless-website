@@ -18,16 +18,16 @@ function BankSection() {
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
       <Flex direction={{ base: 'column-reverse', md: 'row' }}>
-        <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
           {!isMobile ? (
+        <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
               height={422}
               width={402}
             />
-          ) : null}
         </VStack>
+          ) : null}
         <VStack spacing={5} align='flex-start'>
           <Text fontWeight={700} fontSize='7xl'>
             BANK
