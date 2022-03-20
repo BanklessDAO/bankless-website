@@ -11,10 +11,10 @@ import {
 function GmiIndex() {
 
   return (
-    <Container maxW='container.lg' p={0}>
+    <Container maxW={{ base: 'container.sm', md: 'container.lg' }} p={0}>
     <Flex flexDirection={{base: 'column', md: 'row'}}  py={10}>
       <VStack spacing={10}>
-        <Container maxW='container.xl'>
+        <Container>
           <Text textAlign={{base: 'center', md: 'left'}} fontWeight={700} fontSize='5xl'>
             GMI INDEX
           </Text>
@@ -27,7 +27,7 @@ function GmiIndex() {
             Are you GMI?
           </Text>
         </Container>
-        <Container maxW='container.xl'>
+        <Container>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
             The Bankless DeFi Innovation Index, called the GMI Index for the
             rally cry “we’re all gonna make it” is another investment
@@ -43,22 +43,27 @@ function GmiIndex() {
         display='flex'
         p={10}
         spacing={10}>
-        <Container>
-          <Button
-            onClick={() =>
-              window.open('https://app.indexcoop.com/gmi', '_blank')
-            }>
-            <Container display={'flex'} align='center'>
-              <Image
-                src='/images/bed-token.png'
-                alt='bed-token'
-                height={23}
-                width={23}
-              />
-              Invest in GMI Index
+          <Container
+            display='flex'
+            justifyContent='space-evenly'
+            alignItems={'center'}
+            flexDirection={{ base: 'column', md: 'row' }}>
+            <Button
+              margin='10px 0px;'
+              onClick={() =>
+                window.open('https://app.indexcoop.com/gmi', '_blank')
+              }>
+              <Container padding={0} paddingRight={2}>
+                <Image
+                  src='/images/bed-token.png'
+                  alt='bed-token'
+                  height={23}
+                  width={23}
+                />
+              </Container>
+              Invest in GMI index
+            </Button>
             </Container>
-          </Button>
-        </Container>
       </VStack>
     </Flex>
   </Container>
