@@ -16,19 +16,28 @@ function BedIndex() {
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
       <Flex py={20}>
-        <VStack  maxW={{ base: 'container.sm', md: 'container.xl' }}  spacing={10} >
+        <VStack
+          maxW={{ base: 'container.sm', md: 'container.xl' }}
+          spacing={10}>
           <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
-              {isMobile ? (
+            {isMobile ? (
+              <Flex mb={5}>
                 <Image
                   src='/images/bed-token.png'
                   alt='bed-token'
                   height={45}
                   width={45}
                 />
-              ) : null}
+                <Text ml={3} fontWeight={700} fontSize='4xl'>
+                  BED Index
+                </Text>
+              </Flex>
+            ) : (
               <Text fontWeight={700} fontSize='5xl'>
                 BED Index
               </Text>
+            )}
+
             <Text lineHeight='22px' fontSize='lg' fontWeight={700}>
               <Gradient
                 dir='top-to-bottom'
@@ -83,16 +92,16 @@ function BedIndex() {
             </Button>
           </Container>
         </VStack>
-          {!isMobile ? (
-        <VStack h='full' w='full' p={10} spacing={10} align='flex-end'>
+        {!isMobile ? (
+          <VStack h='full' w='full' p={10} spacing={10} align='flex-end'>
             <Image
               src='/images/bed-token.png'
               alt='bed-token'
               height={454}
               width={454}
             />
-        </VStack>
-          ) : null}
+          </VStack>
+        ) : null}
       </Flex>
     </Container>
   )
