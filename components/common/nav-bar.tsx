@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Button } from '@chakra-ui/react'
+import { Box, Button } from '@chakra-ui/react'
 
 const NAV_LINKS = [
   {
@@ -35,15 +35,15 @@ const NAV_LINKS = [
 class NavBar extends React.Component {
   render() {
     return (
-      <div className='nav-bar'>
-        <div className='nav-contents'>
-          <div className='nav-links'>
+      <Box className='nav-bar'>
+        <Box className='nav-contents'>
+          <Box className='nav-links'>
             {NAV_LINKS.map((_navLink, idx) => {
               const hasChildren =
                 _navLink.children && _navLink.children.length > 0
 
               return (
-                <div key={`link-${idx}`}>
+                <Box key={`link-${idx}`}>
                   <span>
                     {hasChildren ? _navLink.name : <a href={_navLink.href}>{_navLink.name}</a>}
                     {hasChildren && (
@@ -57,14 +57,14 @@ class NavBar extends React.Component {
                       </span>
                     )}
                   </span>
-                </div>
+                </Box>
               )
             })}
-          </div>
+          </Box>
 
           <Button>Connect Wallet</Button>
-        </div>
-      </div>
+        </Box>
+      </Box>
     )
   }
 }

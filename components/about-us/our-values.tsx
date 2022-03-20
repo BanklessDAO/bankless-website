@@ -16,7 +16,7 @@ class OurValuesSection extends React.Component {
         justifyContent='left'
         alignItems='left'>
         <Box className='section'>
-            <Text fontSize='4xl' className='banner-text left-align'>
+            <Text fontSize={["2xl", "4xl"]} fontWeight={700} alignItems={["center", "left"]} width={"75%"} mt={120}>
               {'Our Values'.toUpperCase()}
             </Text>
 

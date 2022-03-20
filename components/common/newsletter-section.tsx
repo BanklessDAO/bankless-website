@@ -15,20 +15,29 @@ class NewsletterSection extends React.Component {
   render() {
     return (
       <Flex
-        className='section-container about-section'
-        flexDir='column'
-        justifyContent='center'
-        alignItems='center'>
+        className="section-container about-section"
+        flexDir="column"
+        justifyContent="center"
+        alignItems="center">
 
         <Flex
-          className='doughnut-row'
-          flexWrap='wrap'
-          flexDir='row'
-          justifyContent='center'
-          alignItems='center'
-          rowGap='110px'>
+          flexWrap="wrap"
+          flexDir="row"
+          justifyContent="center"
+          alignItems="center"
+          rowGap="110px"
+          mt={"100px"}>
           <Box className='doughnut-small'></Box>
-          <Box className='doughnut-big'></Box>
+          <Box
+              borderRadius={"100%"}
+              height={"140px"}
+              width={"140px"}
+              background={"radial-gradient(circle, transparent 40%, red 40%)"}
+              mt={0}
+              mb={0}
+              ml={"110px"}
+              mr={"110px"}
+          ></Box>
           <Box className='doughnut-small'></Box>
         </Flex>
 
