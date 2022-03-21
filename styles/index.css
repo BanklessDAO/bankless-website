@@ -8,24 +8,8 @@
 /**
 Global
 */
-/* body {
-  color: white !important;
-} */
-
 [data-reactroot] { 
   display: flex;
-}
-
-/**
-  Page Container
-  */
-
-.page-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: black;
 }
 
 .border-box {
