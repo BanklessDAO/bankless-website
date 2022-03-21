@@ -5,7 +5,6 @@ import {
   Container,
   VStack,
   Button,
-  useMediaQuery,
 } from '@chakra-ui/react'
 
 function NftInvest() {
