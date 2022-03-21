@@ -7,6 +7,7 @@ import {
   VStack,
   Button,
   useMediaQuery,
+  Box,
 } from '@chakra-ui/react'
 
 function DaoPunkSection() {
@@ -35,18 +36,21 @@ function DaoPunkSection() {
                 DAO Punks
               </Text>
             ) : null}
-            <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
-              DAOpunks launched in 2021 with the mission of helping to free all
-              humans from the soul-sucking drudgery of default world work. They
-              do that work through providing grants to those who seek to leave
-              the CORPrat life for the meaningful work found in DAOs. Holders of
-              a DAOpunk NFT enjoy access to gated channels, but the community is
-              open to anyone with an interest in DAOs. In addition to grants,
-              the DAOpunks have a newsletter, podcast, and merch arm, and are
-              always spinning new ideas into actionable content. DAOpunks is at
-              the edge of DAO governance, and is pushing the boundaries of where
-              technology meets on-chain voting and automatic treasury triggers.
-            </Text>
+            <Box>
+              <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
+                DAOpunks launched in 2021 with the mission of helping to free
+                all humans from the soul-sucking drudgery of default world work.
+                They do that work through providing grants to those who seek to
+                leave the CORPrat life for the meaningful work found in DAOs.
+                Holders of a DAOpunk NFT enjoy access to gated channels, but the
+                community is open to anyone with an interest in DAOs. In
+                addition to grants, the DAOpunks have a newsletter, podcast, and
+                merch arm, and are always spinning new ideas into actionable
+                content. DAOpunks is at the edge of DAO governance, and is
+                pushing the boundaries of where technology meets on-chain voting
+                and automatic treasury triggers.
+              </Text>
+            </Box>
           </Container>
           <Container
             display='flex'

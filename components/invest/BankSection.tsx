@@ -19,7 +19,7 @@ function BankSection() {
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
       <Flex direction={{ base: 'column-reverse', md: 'row' }} py={20}>
         {!isMobile ? (
-          <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
+          <VStack h='full' w='full' spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
@@ -32,15 +32,15 @@ function BankSection() {
           <Text fontWeight={700} fontSize='7xl'>
             BANK
           </Text>
-          <Gradient
-            dir='top-to-bottom'
-            from='#FF1013'
-            to='#000000
+          <Text fontSize='4xl' fontWeight={700}>
+            <Gradient
+              dir='top-to-bottom'
+              from='#FF1013'
+              to='#000000
 '>
-            <Text fontSize='4xl' fontWeight={700}>
               The Most widely-held Token{' '}
-            </Text>
-          </Gradient>
+            </Gradient>
+          </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
             BANK is the native token of BanklessDAO. As a tool for the Bankless
             community, it determines membership level and voting power in
