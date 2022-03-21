@@ -4,8 +4,6 @@ import theme from 'config/theme'
 
 import '../styles/index.css'
 
-console.log({theme})
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
