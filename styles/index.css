@@ -28,21 +28,6 @@ Global
   background: black;
 }
 
-/**
-  Section
-  */
-.section-container {
-  width: 80%;
-}
-
-/**
-  Home Page
-  */
-.start-your-journey {
-  width: 80%;
-  margin-top: 130px;
-}
-
 .border-box {
   --b: 5px; /* thickness of the border */
   --c: #d02128; /* color of the border */

@@ -16,13 +16,14 @@ class NewsletterSection extends React.Component {
   render() {
     return (
       <Flex
-        className="section-container about-section"
         flexDir="column"
         justifyContent="center"
         alignItems="center">
         <ThreeRings />
         <Flex
           className='start-your-journey'
+          width={"80%"}
+          mt={"130px"}
           flexWrap='nowrap'
           flexDir='row'
           justifyContent='center'

@@ -7,7 +7,7 @@ class Section1 extends React.Component {
   render() {
     return (
       <Flex
-        className='section-container'
+        width={"80%"}
         flexDir='column'
         justifyContent='center'
         alignItems='center'>

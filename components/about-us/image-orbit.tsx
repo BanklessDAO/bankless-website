@@ -11,7 +11,7 @@ class ImageOrbit extends React.Component {
   render() {
     return (
       <Flex
-        className="section-container"
+        width={"100%"}
         flexDir="column"
         justifyContent="center"
         alignItems="center">

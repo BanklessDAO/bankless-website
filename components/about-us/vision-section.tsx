@@ -10,7 +10,6 @@ class VisionSection extends React.Component {
   render() {
     return (
       <Flex
-        className='section-container'
         flexDir='column'
         justifyContent='center'
         alignItems='center'

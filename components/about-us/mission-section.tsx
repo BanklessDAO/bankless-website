@@ -10,11 +10,10 @@ class MissionSection extends React.Component {
   render() {
     return (
       <Flex
-        className="section-container about-section"
         flexDir="column"
         justifyContent="center"
         alignItems="center">
-        <Box align={"center"} className="section">
+        <Box align={"center"}>
         <Text fontSize={["3xl", "4xl"]} fontWeight={700} alignItems={"center"} width={["95%","85%"]}>
           {'Our mission is to onboard 1 billion people to crypto'.toUpperCase()}
         </Text>

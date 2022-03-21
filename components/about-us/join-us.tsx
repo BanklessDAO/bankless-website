@@ -11,6 +11,7 @@ class JoinUsSection extends React.Component {
   render() {
     return (
       <Flex
+        width={"100%"}
         flexDir='column'
         justifyContent='center'
         alignItems='center'>

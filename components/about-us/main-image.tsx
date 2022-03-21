@@ -14,11 +14,11 @@ class MainImage extends React.PureComponent<I_Props> {
   render() {
     return (
     <Flex
-    className="section-container"
+    width={"100%"}
     flexDir="row"
     justifyContent="left"
     alignItems="left">
-      <Box className="main-image">
+      <Box>
         <Box
             flexDir='column'
             display={"block"}
