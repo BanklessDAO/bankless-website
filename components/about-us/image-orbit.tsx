@@ -15,6 +15,7 @@ class ImageOrbit extends React.Component {
         flexDir="column"
         justifyContent="center"
         alignItems="center">
+        
         <Box
             display={["none", "block"]}
             height={"680px"}
@@ -59,6 +60,7 @@ class ImageOrbit extends React.Component {
                     left={"30%"}
                 >
                   <Image src={"/images/about-image-orbit-center.png"} width={120} height={120} alt='image-orbit-center'/>
+
                 </Box>
               </Box>
             </Box>
