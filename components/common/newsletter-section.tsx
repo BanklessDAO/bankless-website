@@ -7,33 +7,22 @@ import {
   InputGroup,
   InputRightElement,
   Button,
-  Box,
 } from '@chakra-ui/react'
+import ThreeRings from './three-rings'
 
 
 class NewsletterSection extends React.Component {
   render() {
     return (
       <Flex
-        className='section-container about-section'
-        flexDir='column'
-        justifyContent='center'
-        alignItems='center'>
-
-        <Flex
-          className='doughnut-row'
-          flexWrap='wrap'
-          flexDir='row'
-          justifyContent='center'
-          alignItems='center'
-          rowGap='110px'>
-          <Box className='doughnut-small'></Box>
-          <Box className='doughnut-big'></Box>
-          <Box className='doughnut-small'></Box>
-        </Flex>
-
+        flexDir="column"
+        justifyContent="center"
+        alignItems="center">
+        <ThreeRings />
         <Flex
           className='start-your-journey'
+          width={"80%"}
+          mt={"130px"}
           flexWrap='nowrap'
           flexDir='row'
           justifyContent='center'
