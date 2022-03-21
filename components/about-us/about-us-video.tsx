@@ -13,7 +13,7 @@ interface I_Props {
 class AboutUsVideo extends React.PureComponent<I_Props> {
   render() {
     return (
-      <Box className="video">
+      <Box>
 
         <Box>
         </Box>
