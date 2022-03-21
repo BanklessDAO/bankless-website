@@ -58,7 +58,7 @@ class ImageOrbit extends React.Component {
                     top={"30%"}
                     left={"30%"}
                 >
-                  <Image src={"/images/about-image-orbit-center.png"} width={120} height={120}/>
+                  <Image src={"/images/about-image-orbit-center.png"} width={120} height={120} alt='image-orbit-center'/>
                 </Box>
               </Box>
             </Box>

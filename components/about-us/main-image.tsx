@@ -111,8 +111,10 @@ class MainImage extends React.PureComponent<I_Props> {
               lineHeight={["80px", "80px", "130px"]}>
             Join BanklessDAO
           </Text>
-          <Text className="link">
-            RAS
+          <Text
+          textDecoration={"underline"}
+          >
+            RAS <Image alt='diagonal arrow' src="/images/diagonal-arrow-up-right.png" objectFit="none" width={15} height={15}/>
           </Text>
         </Box>
       </Box>

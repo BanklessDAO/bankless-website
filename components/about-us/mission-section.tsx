@@ -10,6 +10,7 @@ class MissionSection extends React.Component {
   render() {
     return (
       <Flex
+        width={["90%", "100%"]}  
         flexDir="column"
         justifyContent="center"
         alignItems="center">
