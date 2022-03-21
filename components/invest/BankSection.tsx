@@ -17,7 +17,7 @@ function BankSection() {
 
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
-      <Flex direction={{ base: 'column-reverse', md: 'row' }} py={20}>
+      <Flex direction={{ base: 'column-reverse', md: 'row' }} py={10}>
         {!isMobile ? (
           <VStack h='full' w='full' spacing={10} align='flex-start'>
             <Image
