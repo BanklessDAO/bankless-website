@@ -82,7 +82,7 @@ function BankSection() {
               />
             ) : null}
             <Flex alignItems={{ base: 'flex-end', md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} >
-              <Text >
+              <Text mr={[0, 3]}>
                 Current market cap and price is
               </Text>
               <Box>
