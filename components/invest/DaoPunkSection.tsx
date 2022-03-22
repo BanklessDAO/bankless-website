@@ -15,7 +15,7 @@ function DaoPunkSection() {
 
   return (
     <Container maxW='container.xl' p={0}>
-      <Flex direction={{ base: 'column', md: 'row' }} py={20}>
+      <Flex direction={{ base: 'column', md: 'row' }} py={10}>
         <VStack p={10} spacing={10} align='center'>
           {isMobile ? (
             <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>

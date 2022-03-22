@@ -15,10 +15,10 @@ function BedIndex() {
 
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
-      <Flex py={20}>
+      <Flex py={10}>
         <VStack
           maxW={{ base: 'container.sm', md: 'container.xl' }}
-          spacing={10}>
+          spacing={5}>
           <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
             {isMobile ? (
               <Flex mb={5}>
@@ -37,7 +37,8 @@ function BedIndex() {
                 BED Index
               </Text>
             )}
-
+          </Container>
+          <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
             <Text lineHeight='22px' fontSize='lg' fontWeight={700}>
               <Gradient
                 dir='top-to-bottom'
