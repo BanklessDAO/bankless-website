@@ -10,6 +10,7 @@ import {
 function NftInvest() {
   return (
     <Container maxW='container.xl' p={0}>
+      {console.log("test")}
       <Flex
         justifyContent='space-between'
         flexDirection={{ base: 'column', md: 'row' }}
