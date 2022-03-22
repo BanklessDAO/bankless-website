@@ -77,12 +77,12 @@ function BankSection() {
               <Image
                 src='/images/bank-token-mobile.png'
                 alt='bankToken'
-                height={'113px'}
-                width={'180px'}
+                height={113}
+                width={180}
               />
             ) : null}
             <Flex alignItems={{ base: 'flex-end', md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} >
-              <Text mr={3}>
+              <Text >
                 Current market cap and price is
               </Text>
               <Box>
