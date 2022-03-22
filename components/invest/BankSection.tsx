@@ -77,26 +77,29 @@ function BankSection() {
               <Image
                 src='/images/bank-token-mobile.png'
                 alt='bankToken'
-                height={113}
-                width={180}
+                height={'113px'}
+                width={'180px'}
               />
             ) : null}
-
-            <Text>
-              Current market cap and price is{' '}
-              <Flex justifyContent={'center'} border={'0.5px solid #D02128'}>
-                <Link
-                  fontWeight={700}
-                  color='#D02128'
-                  href='https://www.coingecko.com/en/coins/bankless-dao'
-                  isExternal>
-                  Available Here
-                </Link>
-              </Flex>
-            </Text>
+            <Flex alignItems={{ base: 'flex-end', md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} >
+              <Text mr={3}>
+                Current market cap and price is
+              </Text>
+              <Box>
+                <Flex justify={'center'} w={[170, 200]} alignItems={'center'} pl={5} pr={5} border={'0.5px solid #D02128'}>
+                  <Link
+                    fontWeight={700}
+                    color='#D02128'
+                    href='https://www.coingecko.com/en/coins/bankless-dao'
+                    isExternal>
+                    Available Here
+                  </Link>
+                </Flex>
+              </Box>
+            </Flex>
           </Box>
         </VStack>
-      </Flex>
+      </Flex >
     </Container >
   )
 }
