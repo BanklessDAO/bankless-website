@@ -72,7 +72,7 @@ function BankSection() {
               earn their 35,000 BANK rather than buy it outright.
             </Text>
           </Container>
-          <Box display={'flex'}>
+          <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
               <Image
                 src='/images/bank-token-mobile.png'
@@ -84,17 +84,20 @@ function BankSection() {
 
             <Text>
               Current market cap and price is{' '}
-              <Link
-                color='#D02128'
-                href='https://www.coingecko.com/en/coins/bankless-dao'
-                isExternal>
-                Available Here
-              </Link>
+              <Flex justifyContent={'center'} border={'0.5px solid #D02128'}>
+                <Link
+                  fontWeight={700}
+                  color='#D02128'
+                  href='https://www.coingecko.com/en/coins/bankless-dao'
+                  isExternal>
+                  Available Here
+                </Link>
+              </Flex>
             </Text>
           </Box>
         </VStack>
       </Flex>
-    </Container>
+    </Container >
   )
 }
 
