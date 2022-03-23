@@ -57,12 +57,12 @@ const NavBar = (props) => {
     <NavBarContainer {...props}>
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <Logo
-        display={{ base: "none", md: "block" }} 
+        display={{ base: "none", md: "block" }}
         w="100px"
         color={["white", "white", "primary.500", "primary.500"]}
       />
       <MenuLinks isOpen={isOpen} />
-      {!isOpen && <Button 
+      {!isOpen && <Button
         display={{ base: "block", md: "none" }} >
         Connect Wallet
       </Button>}
@@ -123,7 +123,7 @@ const MenuLinks = ({ isOpen }) => {
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
       >
-        {NAV_LINKS.map((_navLink,idx) => {
+        {NAV_LINKS.map((_navLink, idx) => {
           return (
             <MenuItem key={`link-${idx}`} to={_navLink.href}>{_navLink.name}</MenuItem>
           )
@@ -170,12 +170,12 @@ const NavBarContainer = ({ children, ...props }) => {
 //         borderBottom='2px solid rgba(255, 255, 255, 0.51)'
 //         width='100%'
 //       >
-        // <Image
-        //   src='/icons/bankless-logo.png'
-        //   height={56}
-        //   width={56}
-        //   alt='dao-logo'
-        // />
+// <Image
+//   src='/icons/bankless-logo.png'
+//   height={56}
+//   width={56}
+//   alt='dao-logo'
+// />
 //         <HStack
 //           marginLeft='auto'
 //           alignItems='center'
