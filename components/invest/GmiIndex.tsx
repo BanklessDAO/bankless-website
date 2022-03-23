@@ -15,7 +15,6 @@ function GmiIndex() {
               GMI INDEX
             </Text>
             <Flex justify={{ base: 'center', md: 'flex-start' }}>
-
               <Box ml={0} width={75} height={'12px'} background={'red'} />
               <Box ml={2} width={75} height={'12px'} background={'red'} />
               <Box ml={2} width={75} height={'12px'} background={'red'} />
