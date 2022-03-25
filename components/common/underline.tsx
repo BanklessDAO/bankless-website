@@ -1,8 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Container
-} from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react'
 
 class Underline extends React.Component {
   render() {
@@ -10,7 +8,7 @@ class Underline extends React.Component {
       <Container
         filter='blur(5px)'
         mt={8}
-        mb={16}
+        mb={4}
         fontSize='16px'
         lineHeight='8px'
         background='linear-gradient(
@@ -18,7 +16,9 @@ class Underline extends React.Component {
           #ff1013 44.79%,
           rgba(140, 29, 207, 0) 101.77%
         )'
-        >&nbsp;</Container>
+      >
+        &nbsp;
+      </Container>
     )
   }
 }
