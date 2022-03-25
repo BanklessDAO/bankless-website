@@ -17,9 +17,9 @@ function BankSection() {
 
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
-      <Flex direction={{ base: 'column-reverse', md: 'row' }} py={20}>
+      <Flex direction={{ base: 'column-reverse', md: 'row' }} py={10}>
         {!isMobile ? (
-          <VStack h='full' w='full' p={10} spacing={10} align='flex-start'>
+          <VStack h='full' w='full' spacing={10} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
@@ -32,15 +32,15 @@ function BankSection() {
           <Text fontWeight={700} fontSize='7xl'>
             BANK
           </Text>
-          <Gradient
-            dir='top-to-bottom'
-            from='#FF1013'
-            to='#000000
+          <Text fontSize='4xl' fontWeight={700}>
+            <Gradient
+              dir='top-to-bottom'
+              from='#FF1013'
+              to='#000000
 '>
-            <Text fontSize='4xl' fontWeight={700}>
               The Most widely-held Token{' '}
-            </Text>
-          </Gradient>
+            </Gradient>
+          </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
             BANK is the native token of BanklessDAO. As a tool for the Bankless
             community, it determines membership level and voting power in
@@ -72,7 +72,7 @@ function BankSection() {
               earn their 35,000 BANK rather than buy it outright.
             </Text>
           </Container>
-          <Box display={'flex'}>
+          <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
               <Image
                 src='/images/bank-token-mobile.png'
@@ -81,20 +81,26 @@ function BankSection() {
                 width={180}
               />
             ) : null}
-
-            <Text>
-              Current market cap and price is{' '}
-              <Link
-                color='#D02128'
-                href='https://www.coingecko.com/en/coins/bankless-dao'
-                isExternal>
-                Available Here
-              </Link>
-            </Text>
+            <Flex alignItems={{ base: 'flex-end', md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} >
+              <Text mr={[0, 3]}>
+                Current market cap and price is
+              </Text>
+              <Box>
+                <Flex justify={'center'} w={[170, 200]} alignItems={'center'} pl={5} pr={5} border={'0.5px solid #D02128'}>
+                  <Link
+                    fontWeight={700}
+                    color='#D02128'
+                    href='https://www.coingecko.com/en/coins/bankless-dao'
+                    isExternal>
+                    Available Here
+                  </Link>
+                </Flex>
+              </Box>
+            </Flex>
           </Box>
         </VStack>
-      </Flex>
-    </Container>
+      </Flex >
+    </Container >
   )
 }
 

@@ -29,3 +29,8 @@ Global
   background-origin: border-box;
   background-repeat: no-repeat;
 }
+
+button::focus { 
+  outline: none;
+  box-shadow: none;
+}
