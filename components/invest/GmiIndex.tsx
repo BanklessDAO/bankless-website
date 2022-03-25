@@ -1,20 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
-import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
+import { Flex, Text, Container, VStack, Button, Box } from '@chakra-ui/react'
 
 function GmiIndex() {
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.lg' }} p={0}>
       <Flex flexDirection={{ base: 'column', md: 'row' }} py={10}>
         <VStack spacing={10}>
-          <Container>
+          <Container display={'flex'} flexDirection={'column'} ml={['auto', 0]} width={['80%', '100%']}>
             <Text
               textAlign={{ base: 'center', md: 'left' }}
               fontWeight={700}
               fontSize='5xl'>
               GMI INDEX
             </Text>
-            <Text
+            <Flex justify={{ base: 'center', md: 'flex-start' }}>
+              <Box ml={0} width={75} height={'12px'} background={'red'} />
+              <Box ml={2} width={75} height={'12px'} background={'red'} />
+              <Box ml={2} width={75} height={'12px'} background={'red'} />
+            </Flex>
+            < Text
               textAlign={{ base: 'center', md: 'left' }}
               color={'#D02128'}
               lineHeight='43px'
@@ -58,7 +63,7 @@ function GmiIndex() {
           </Container>
         </VStack>
       </Flex>
-    </Container>
+    </Container >
   )
 }
 
