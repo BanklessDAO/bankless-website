@@ -93,9 +93,13 @@ const theme = extendTheme(
           color: 'white',
           fontSize: 21,
         },
+      },
+      ListItem: {
         variants: {
-          base: {},
-        },
+          bankless: {
+            color: 'white.500'
+          }
+        }
       },
       Input: {
         variants: {
@@ -123,7 +127,7 @@ const theme = extendTheme(
   },
   withDefaultVariant({
     variant: 'bankless',
-    components: ['Button', 'Text', 'Input', 'Link'],
+    components: ['Button', 'Text', 'Input', 'Link','ListItem']
   })
 )
 
