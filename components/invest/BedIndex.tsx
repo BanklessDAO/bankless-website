@@ -15,7 +15,7 @@ function BedIndex() {
 
   return (
     <Container maxW={{ base: 'container.sm', md: 'container.xl' }} p={0}>
-      <Flex py={10}>
+      <Flex>
         <VStack
           maxW={{ base: 'container.sm', md: 'container.xl' }}
           spacing={5}>
