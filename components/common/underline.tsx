@@ -18,7 +18,7 @@ class Underline extends React.Component {
           #ff1013 44.79%,
           rgba(140, 29, 207, 0) 101.77%
         )'
-        >&nbsp;</Container>
+      >&nbsp;</Container>
     )
   }
 }
