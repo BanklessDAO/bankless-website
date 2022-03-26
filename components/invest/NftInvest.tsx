@@ -36,6 +36,7 @@ function NftInvest() {
               position='absolute'
               bottom={0}
               display='flex'
+              width={'90%'}
               justifyContent='center'>
               <Button onClick={() => null}>Invest in Chippi</Button>
             </Container>
@@ -63,6 +64,8 @@ function NftInvest() {
               display='flex'
               position='absolute'
               bottom={0}
+              width={'90%'}
+              margin={'auto'}
               justifyContent='center'>
               <Button
                 onClick={() =>
