@@ -18,20 +18,22 @@ class MainImage extends React.PureComponent<I_Props> {
     flexDir="row"
     justifyContent="left"
     alignItems="left">
-      <Box>
+      <Flex
+          flexDir={['column', 'row']}
+          display={"block"}
+      >
         <Box
-            flexDir='column'
             display={"block"}
             alignItems='left'
             position={"relative"}
             t={0}
             l={0}
-            height={"800px"}
+            height={"100%"}
         >
           <Box
             position={"absolute"}
-            top={["5%","8%"]}
-            left={["-20%","-5%"]}
+            top={["0%","8%"]}
+            left={["0%","-5%"]}
             width={["100%"]}
             height={["100%"]}
             zIndex={"5"}
@@ -42,7 +44,7 @@ class MainImage extends React.PureComponent<I_Props> {
           <Box
             position={"relative"}
             top={["5%","-10%"]}
-            left={["0%","3%"]}
+            left={["4%","3%"]}
             width={["80%", "100%"]}
             height={["80%", "100%"]}
             zIndex={"1"}
@@ -52,42 +54,42 @@ class MainImage extends React.PureComponent<I_Props> {
 
           <Box
               position={"absolute"}
-              top={["40%", "65%"]}
-              left={["40%", "35%"]}
+              top={["25%", "65%"]}
+              right={["12%", "55%"]}
           >
-          <Image alt='bitcoin' src="/images/tiny-circle-bitcoin.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='bitcoin' src="/images/tiny-circle-bitcoin.svg" objectFit="scale-down" width={50} height={50}/>
           </Box>
 
           <Box
               position={"absolute"}
-              top={["10%","30%"]}
-              left={["40%", "46%"]}
+              top={["5%","30%"]}
+              right={["18%", "46%"]}
           >
-          <Image alt='bankless' src="/images/tiny-circle-bankless.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='bankless' src="/images/tiny-circle-bankless.svg" objectFit="scale-down" width={50} height={50}/>
           </Box>
 
           <Box
               position={"absolute"}
-              top={["9%", "38%"]}
-              left={["-2%", "7%"]}
+              top={["7%", "38%"]}
+              left={["18%", "7%"]}
           >
-          <Image alt='tezos' src="/images/tiny-circle-tezos.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='tezos' src="/images/tiny-circle-tezos.svg" objectFit="scale-down" width={50} height={50}/>
           </Box>
 
           <Box
               position={"absolute"}
-              top={["29%", "53%"]}
-              left={["-2%","54%"]}
+              top={["20%", "53%"]}
+              left={["12%","54%"]}
           >
-          <Image alt='aragon' src="/images/tiny-circle-aragon.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='aragon' src="/images/tiny-circle-aragon.svg" objectFit="scale-down" width={50} height={50}/>
           </Box>
 
           <Box
               position={"absolute"}
-              top={["26%","20%"]}
-              left={["34%", "61%"]}
+              top={["16%","20%"]}
+              right={["21%", "38%"]}
           >
-          <Image alt='ethereum' src="/images/tiny-circle-ethereum.svg" objectFit="none" width={50} height={50}/>
+          <Image alt='ethereum' src="/images/tiny-circle-ethereum.svg" objectFit="scale-down" width={50} height={50}/>
           </Box>
         </Box>
         <Box
@@ -95,7 +97,7 @@ class MainImage extends React.PureComponent<I_Props> {
           display={"inline-block"}
           top={["8%", "28%", "6%"]}
           right={["8%"]}
-          height={"800px"}
+          height={"100%"}
         >
           <Text
               fontStyle={"normal"}
@@ -117,7 +119,7 @@ class MainImage extends React.PureComponent<I_Props> {
             RAS <Image alt='diagonal arrow' src="/images/diagonal-arrow-up-right.png" objectFit="none" width={15} height={15}/>
           </Text>
         </Box>
-      </Box>
+      </Flex>
     </Flex>
     )
   }
