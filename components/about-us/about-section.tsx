@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Flex, Text, Box, Container, Stack, VStack } from '@chakra-ui/react'
+import { Flex, Text, Container, Stack, VStack } from '@chakra-ui/react'
 
 
 class AboutSection extends React.Component {

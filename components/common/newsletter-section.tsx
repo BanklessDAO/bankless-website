@@ -7,7 +7,6 @@ import {
   InputGroup,
   InputRightElement,
   Button,
-  Box,
 } from '@chakra-ui/react'
 import ThreeRings from './three-rings'
 
