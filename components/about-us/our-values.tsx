@@ -1,12 +1,10 @@
 import React from 'react'
-import Image from 'next/image'
 
 import {
   Container,
   Flex,
   Text,
   Box,
-  VStack
 } from '@chakra-ui/react'
 import ImageCarousel from "../common/image-carousel";
 
