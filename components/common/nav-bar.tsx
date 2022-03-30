@@ -30,7 +30,7 @@ const NAV_LINKS = [
   },
   {
     name: 'New Members Start',
-    href: '#',
+    href: '/new-members',
   },
 ]
 
