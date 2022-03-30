@@ -1,11 +1,11 @@
 import PageContainer from 'components/common/page-container'
 
-import Guild from 'components/guild/guild'
+import Invest from 'components/invest/Invest'
 
 export default function InvestPage() {
   return (
     <PageContainer>
-      <Guild />
+      <Invest />
     </PageContainer>
   )
 }
