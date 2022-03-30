@@ -96,6 +96,7 @@ export default function NewMemberJoinMethodComponent() {
                     borderRadius='10px'
                     background='#222020'
                     maxWidth={'330px'}
+                    minHeight={{ base: '450px', md: '500px' }}
                     padding='1.5rem'
                     display={'flex'}
                     flexDirection={'column'}
