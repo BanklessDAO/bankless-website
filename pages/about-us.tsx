@@ -1,4 +1,3 @@
-
 import PageContainer from "components/common/page-container";
 import NewsletterSection from "components/common/newsletter-section";
 import MainImage from "components/about-us/main-image";

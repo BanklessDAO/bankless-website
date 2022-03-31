@@ -1,23 +1,16 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Image from 'next/image'
 
 import { Text, Box, Flex } from '@chakra-ui/react'
 
-interface I_Props {
-  img?: string
-  title?: string
-  text?: string
-  href?: string
-}
-
-class MainImage extends React.PureComponent<I_Props> {
+class MainImage extends Component {
   render() {
     return (
       <Flex
         width={'100%'}
         flexDir='row'
-        justifyContent='left'
-        alignItems='left'
+        justifyContent='center'
+        alignItems='center'
       >
         <Box>
           <Box
@@ -31,10 +24,10 @@ class MainImage extends React.PureComponent<I_Props> {
           >
             <Box
               position={'absolute'}
-              top={['5%', '8%']}
-              left={['-20%', '-5%']}
-              width={['100%']}
-              height={['100%']}
+              top={{base:'5%', md:'8%'}}
+              left={{base:'-20%', md:'-5%'}}
+              width={{base:'100%'}}
+              height={{base:'100%'}}
               zIndex={'5'}
             >
               <Image
@@ -48,10 +41,10 @@ class MainImage extends React.PureComponent<I_Props> {
 
             <Box
               position={'relative'}
-              top={['5%', '-10%']}
-              left={['0%', '3%']}
-              width={['80%', '100%']}
-              height={['80%', '100%']}
+              top={{base:'5%', md:'-10%'}}
+              left={{base:'0%', md:'3%'}}
+              width={{base:'80%', md:'100%'}}
+              height={{base:'80%', md:'100%'}}
               zIndex={'1'}
             >
               <Image
@@ -66,8 +59,8 @@ class MainImage extends React.PureComponent<I_Props> {
 
             <Box
               position={'absolute'}
-              top={['40%', '65%']}
-              left={['40%', '35%']}
+              top={{base:'40%', md:'65%'}}
+              left={{base:'55%', md:'35%'}}
             >
               <Image
                 alt='bitcoin'
@@ -80,8 +73,8 @@ class MainImage extends React.PureComponent<I_Props> {
 
             <Box
               position={'absolute'}
-              top={['10%', '30%']}
-              left={['40%', '46%']}
+              top={{base:'10%', md:'30%'}}
+              left={{base:'53%', md:'46%'}}
             >
               <Image
                 alt='bankless'
@@ -92,7 +85,7 @@ class MainImage extends React.PureComponent<I_Props> {
               />
             </Box>
 
-            <Box position={'absolute'} top={['9%', '38%']} left={['-2%', '7%']}>
+            <Box position={'absolute'} top={{base:'9%', md:'38%'}} left={{base:'2%', md:'7%'}}>
               <Image
                 alt='tezos'
                 src='/images/tiny-circle-tezos.svg'
@@ -104,8 +97,8 @@ class MainImage extends React.PureComponent<I_Props> {
 
             <Box
               position={'absolute'}
-              top={['29%', '53%']}
-              left={['-2%', '54%']}
+              top={{base:'33%', md:'53%'}}
+              left={{base:'2%', md:'50%'}}
             >
               <Image
                 alt='aragon'
@@ -118,8 +111,8 @@ class MainImage extends React.PureComponent<I_Props> {
 
             <Box
               position={'absolute'}
-              top={['26%', '20%']}
-              left={['34%', '61%']}
+              top={{base:'26%', md:'20%'}}
+              left={{base:'48%', md:'58%'}}
             >
               <Image
                 alt='ethereum'
@@ -133,23 +126,23 @@ class MainImage extends React.PureComponent<I_Props> {
           <Box
             position={'absolute'}
             display={'inline-block'}
-            top={['8%', '28%', '6%']}
-            right={['8%']}
+            top={{base:'10%', md:'6%'}}
+            right={{base:'8%'}}
             height={'800px'}
           >
             <Text
               fontStyle={'normal'}
               fontWeight={700}
-              fontSize={['50px', '50px', '90px']}
-              lineHeight={['80px', '80px', '135px']}
+              fontSize={{base:'50px', sm:'50px', md:'90px'}}
+              lineHeight={{base:'80px', sm:'80px', md:'135px'}}
             >
               {'Want Alpha?'.toUpperCase()}
             </Text>
             <Text
               fontStyle={'normal'}
               fontWeight={400}
-              fontSize={['30px', '30px', '76px']}
-              lineHeight={['80px', '80px', '130px']}
+              fontSize={{base:'30px', sm:'30px', md:'76px'}}
+              lineHeight={{base:'80px', sm:'80px', md:'130px'}}
             >
               Join BanklessDAO
             </Text>

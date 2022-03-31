@@ -1,16 +1,9 @@
-import React from 'react'
+import React, {Component} from 'react'
 // import Video from 'react-native-video'
 
 import { Box } from '@chakra-ui/react'
 
-interface I_Props {
-  img: string
-  title: string
-  text: string
-  href: string
-}
-
-class AboutUsVideo extends React.PureComponent<I_Props> {
+class AboutUsVideo extends Component {
   render() {
     return (
       <Box>

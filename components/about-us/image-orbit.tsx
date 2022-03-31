@@ -17,7 +17,7 @@ class ImageOrbit extends React.Component {
         alignItems="center">
         
         <Box
-            display={["none", "block"]}
+            display={{base:"none", md:"block"}}
             height={"680px"}
             min-width={"900px"}
             mt={"200px"}
@@ -44,22 +44,73 @@ class ImageOrbit extends React.Component {
                 left={"1%"}
                 boxShadow={"inset 0 0 40px 40px #131313"}
             >
+                <Box
+                  position={'absolute'}
+                  top={{md:'3%'}}
+                  right={{md:'2%'}}
+                >
+                  <Image src={"/images/about-image-orbit-outer-1.png"} width={75} height={75} alt='image-orbit-outer-1'/>
+                </Box>
+
+                <Box
+                  position={'absolute'}
+                  top={{md:'88%'}}
+                  right={{md:'24%'}}
+                >
+                  <Image src={"/images/about-image-orbit-outer-2.png"} width={75} height={75} alt='image-orbit-outer-2'/>
+                </Box>
+                <Box
+                  position={'absolute'}
+                  top={{md:'43%'}}
+                  left={{md:'-6%'}}
+                >
+                  <Image src={"/images/about-image-orbit-outer-3.png"} width={75} height={75} alt='image-orbit-outer-3'/>
+                </Box>
               <Box
                   border={"6px solid rgba(255, 16, 19, 0.15)"}
                   borderRadius={"100%"}
                   boxSizing={"border-box"}
-                  height={"300px"}
-                  width={"300px"}
+                  height={"500px"}
+                  width={"500px"}
                   position={"relative"}
-                  top={"25%"}
-                  left={"25%"}
+                  top={"11%"}
+                  left={"11%"}
               >
+                <Box
+                  position={'absolute'}
+                  top={{md:'3%'}}
+                  left={{md:'7%'}}
+                >
+                  <Image src={"/images/about-image-orbit-mid-1.png"} width={75} height={75} alt='image-orbit-mid-1'/>
+                </Box>
+
+                <Box
+                  position={'absolute'}
+                  top={{md:'33%'}}
+                  right={{md:'-5%'}}
+                >
+                  <Image src={"/images/about-image-orbit-mid-2.png"} width={75} height={75} alt='image-orbit-mid-2'/>
+                </Box>
+
+                <Box
+                  position={'absolute'}
+                  top={{md:'73%'}}
+                  left={{md:'3%'}}
+                >
+                  <Image src={"/images/about-image-orbit-mid-3.png"} width={75} height={75} alt='image-orbit-mid-3'/>
+                </Box>
                 <Box
                     position={"relative"}
                     top={"30%"}
                     left={"30%"}
                 >
-                  <Image src={"/images/about-image-orbit-center.png"} width={120} height={120} alt='image-orbit-center'/>
+                <Box
+                  position={'absolute'}
+                  top={{md:'-9%'}}
+                  left={{md:'1%'}}
+                >
+                  <Image src={"/images/about-image-orbit-center.png"} width={200} height={200} alt='image-orbit-center'/>
+                </Box>
 
                 </Box>
               </Box>

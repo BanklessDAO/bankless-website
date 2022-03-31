@@ -11,19 +11,19 @@ class AboutSection extends React.Component {
         flexDir='column'
         justifyContent='center'
         alignItems='center'>
-        <Container maxW='container.xl' p={0}>
-            <Flex py={5} direction={['column', 'row-reverse']}>
-              <VStack spacing={10} alignItems={["center", "right"]}>
+        <Container maxW='container.l' p={0}>
+            <Flex py={5} direction={{base: 'column', md:'row-reverse'}}>
+              <VStack spacing={10} alignItems={{base: "center", md:"right"}}>
                   <Image
-                  src='/images/about-us-img1.png'
+                  src='/images/about-crypto-img.png'
                   height={350}
                   width={350}
                   alt='crypto currency'
                 />
               </VStack>
-              <VStack p={10} spacing={5} alignItems={["center","left"]}>
+              <VStack p={10} spacing={5} alignItems={{base: "center", md:"left"}}>
                 <Container>
-                <Text fontWeight={700} lineHeight={['30px','58px']} fontSize='2xl'>
+                <Text fontWeight={700} lineHeight={{base: '30px', md:'58px'}} fontSize='2xl'>
                   Bankless is a movement for Web3 pioneers
                 </Text>
                 <Text fontWeight={400} lineHeight='22px' fontSize='18px' color="white.900">We seek new ways to build wealth, solve human coordination problems, create culture, and develop cutting-edge thought leadership in the crypto space.
@@ -35,16 +35,16 @@ class AboutSection extends React.Component {
         </Container>
 
         <Container maxW='container.xl' p={0}>
-            <Stack py={5} direction={['column', 'row']}>
-              <VStack spacing={10} alignItems={['center','left']}>
+            <Stack py={5} direction={{base: 'column', md:'row'}}>
+              <VStack spacing={10} alignItems={{base: "center", md:"left"}}>
                 <Image
-                  src='/images/dao-flag.png'
+                  src='/images/about-dao-flag.png'
                   height={350}
                   width={350}
                   alt='DAO Flag'
                 />
               </VStack>
-              <VStack p={10} spacing={5} alignItems={["center","right"]}>
+              <VStack p={10} spacing={5} alignItems={{base: "center", md:"right"}}>
                 <Container>
                 <Text fontWeight={700} lineHeight={'58px'} fontSize='2xl'>
                 BanklessDAO is the homebase
