@@ -128,11 +128,13 @@ const MenuLinks = ({ isOpen }) => {
             </MenuItem>
           )
         })}
-        <MenuItem>
+
+        {/* This can be used later */}
+        {/* <MenuItem>
           <Button display={{ base: 'none', md: 'block' }}>
             Connect Wallet
           </Button>
-        </MenuItem>
+        </MenuItem> */}
       </Stack>
     </Box>
   )
