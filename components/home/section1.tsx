@@ -14,9 +14,15 @@ import Underline from 'components/common/underline'
 class Section1 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center' padding={24}>
+      <Flex 
+        flexDir='column' 
+        justifyContent='center' 
+        alignItems='center' 
+        paddingX={{ base: 8, md: 16}}
+        rowGap={{ base: 4, md: 8 }}
+        >
 
-        <Text fontWeight={700} fontSize='6xl' textAlign='center' maxW={750}>
+        <Text fontWeight={700} fontSize={{base: '4xl', md: '6xl' }} textAlign='center' maxW={750}>
           Media and Social DAO Onboarding 1 billion people to crypto
         </Text>
 
@@ -24,11 +30,11 @@ class Section1 extends React.Component {
 
         <Text><chakra.span fontSize='xl' color='gray.500' background='none'>We’re Headed West...</chakra.span> Join Us</Text>      
 
-        <HStack spacing='58px' width='100%' justifyContent='center' my={8}>
+        <HStack spacing='58px' width='100%' justifyContent='center' display={{ base: 'none', sm: 'flex'}}>
           <Link fontSize='2xl' href='#'>Whitepaper</Link>
           <Link fontSize='2xl' href='https://discord.gg/bjPz2w9Zts'>Discord</Link>
           <Link fontSize='2xl' href='https://twitter.com/banklessDAO'>Twitter</Link>
-          <Link fontSize='2xl' href='#'>New Members Start</Link>
+          <Link fontSize='2xl' href='/new-members'>New Members Start</Link>
         </HStack>  
         
         <Image

@@ -26,7 +26,7 @@ class ThreeRings extends React.Component {
           borderRadius='100%'
           height='140px'
           width='140px'
-          margin={{ base: '0px 40px', md: '0px 80px', lg: '0px 110px' }}
+          margin={{ base: '0px 30px', sm: '0px 40px', md: '0px 80px', lg: '0px 110px' }}
           background='radial-gradient(circle, transparent 40%, red 40%)'
         ></Box>
         <Box
