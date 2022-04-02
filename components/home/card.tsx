@@ -17,7 +17,7 @@ class Card extends React.PureComponent<I_Props> {
       <Flex
         flexDirection='column'
         borderRadius='10px'
-        background='#101010'
+        background='#222222'
         height='100%'
         overflow='hidden'
         maxW='400px'>

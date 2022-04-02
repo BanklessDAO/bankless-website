@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 
-import { Flex, Text, Box } from '@chakra-ui/react'
+import { Flex, Text, Box, Image } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 import Link from 'next/link'
 
@@ -102,8 +101,8 @@ class Section4 extends React.Component {
                   <Image
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
-                    width={200}
-                    height={200}
+                    width={{ base: '150px', md: '200px' }}
+                    height={{ base: '150px', md: '200px' }}
                   />
                 </Box>
 
@@ -113,7 +112,7 @@ class Section4 extends React.Component {
                   alignItems='center'
                   pt={4}
                 >
-                  <Text fontSize='2xl' style={{ marginRight: 8 }}>
+                  <Text fontSize={{ base: 'xl', md: '2xl' }} style={{ marginRight: 8 }}>
                     {_multiSigOwner.name}
                   </Text>
                   <Flex
@@ -130,8 +129,8 @@ class Section4 extends React.Component {
                       <Image
                         src='/icons/twitter.png'
                         alt='twitter'
-                        width={10}
-                        height={10}
+                        width='10px'
+                        height='10px'
                       />
                     </Link>
                   </Flex>
@@ -178,8 +177,8 @@ class Section4 extends React.Component {
                   <Image
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
-                    width={200}
-                    height={200}
+                    width={{ base: '150px', md: '200px' }}
+                    height={{ base: '150px', md: '200px' }}
                   />
                 </Box>
 
@@ -206,8 +205,8 @@ class Section4 extends React.Component {
                       <Image
                         src='/icons/twitter.png'
                         alt='twitter'
-                        width={10}
-                        height={10}
+                        width='10px'
+                        height='10px'
                       />
                     </Link>
                   </Flex>
