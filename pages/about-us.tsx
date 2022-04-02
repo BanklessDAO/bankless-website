@@ -1,25 +1,21 @@
-
-import PageContainer from "components/common/page-container";
-import NewsletterSection from "components/common/newsletter-section";
-import MainImage from "components/about-us/main-image";
-import AboutSection from "components/about-us/about-section";
-import OurValuesSection from "components/about-us/our-values";
-import JoinUsSection from "components/about-us/join-us";
-import MissionSection from "components/about-us/mission-section";
-import VisionSection from "components/about-us/vision-section";
-import ImageOrbit from "components/about-us/image-orbit";
+import PageContainer from 'components/common/page-container'
+import { Container } from '@chakra-ui/react'
+import IntroductionAboutUsComponent from 'components/about-us/introduction'
+import OurMissionAboutUsComponent from 'components/about-us/our-mission'
+import OurVisionAboutUsComponent from 'components/about-us/our-vision'
+import JoinUsAboutUsComponent from 'components/about-us/join-us'
+import NewsLetterAboutUsComponent from 'components/common/newsletter-section'
 
 export default function AboutUsPage() {
-    return (
-        <PageContainer>
-            <MainImage />
-            <AboutSection />
-            <MissionSection/>
-            <ImageOrbit/>
-            <VisionSection/>
-            <OurValuesSection />
-            <JoinUsSection/>
-            <NewsletterSection />
-        </PageContainer>
-    )
+  return (
+    <PageContainer>
+      <Container maxW={'5xl'}>
+        <IntroductionAboutUsComponent />
+        <OurMissionAboutUsComponent />
+        <OurVisionAboutUsComponent />
+        <JoinUsAboutUsComponent />
+        <NewsLetterAboutUsComponent />
+      </Container>
+    </PageContainer>
+  )
 }
