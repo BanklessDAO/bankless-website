@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Container, Box, Heading, Wrap, WrapItem } from '@chakra-ui/react'
+import { Container, Box, Heading, Wrap, WrapItem, Text } from '@chakra-ui/react'
 
 class Section1 extends React.Component {
   render() {
@@ -10,12 +10,12 @@ class Section1 extends React.Component {
         <Heading as='h2' size='xl' color='white' textTransform='uppercase'>
           International Media Nodes
         </Heading>
-        <Box color='white'>
+          <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>
           International Media Nodes (IMN) are Bankless channels that spread the
           message of the Bankless movement beyond North America.They translate
           BanklessDAO content, publish original pieces, run Twitter pages and
           ship newsletters. Find their home pages below.
-        </Box>
+          </Text>
 
         <Wrap>
           <WrapItem>
