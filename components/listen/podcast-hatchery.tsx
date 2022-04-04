@@ -22,7 +22,7 @@ class PodcastHatchery extends React.Component {
           alignItems='start'
           rowGap={6}>
           <Text fontWeight={700} fontSize='4xl'>
-            The Podcase Hatchery
+            The Podcast Hatchery
           </Text>
           <Text>
             incubates audio storytelling projects. The team helps new podcasters find their audience,
