@@ -13,7 +13,7 @@ const MULTI_SIG_OWNERS = [
   {
     img: '/profile-pics/kouros.png',
     name: 'Kouros',
-    twitter: '#',
+    twitter: 'https://twitter.com/DavidColeto',
   },
   {
     img: '/profile-pics/0xlucas.png',
@@ -41,7 +41,7 @@ const GRANT_COMMITTEE_MEMBERS = [
   {
     img: '/profile-pics/kouros.png',
     name: 'Kouros',
-    twitter: '#',
+    twitter: 'https://twitter.com/DavidColeto',
   },
   {
     img: '/profile-pics/0xlucas.png',
