@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 const menus = [
-  'GOVERNANCE',
-  'GUILDS',
-  'PROJECTS',
-  'COORDINATION',
-  'COMMUNITY CALLS',
-  'PORTAL NODES',
-  'MEDIA KIT',
+  { title: 'GOVERNANCE', href: '/about-us/governance' },
+  { title: 'GUILDS', href: '/about-us/guilds' },
+  { title: 'PROJECTS', href: '/about-us/projects' },
+  { title: 'COORDINATION', href: '#' },
+  { title: 'COMMUNITY CALLS', href: '/about-us/community-calls' },
+  { title: 'PORTAL NODES', href: '/about-us/nodes' },
+  { title: 'MEDIA KIT', href: '#' },
 ]
 
 export default function IntroductionAboutUsComponent() {
@@ -128,14 +128,14 @@ export default function IntroductionAboutUsComponent() {
                 key={index}
                 padding={{ base: '0.25rem', md: '0.5rem' }}
               >
-                <Link href={'/#'} passHref={true}>
+                <Link href={menu.href} passHref={true}>
                   <Text
                     mr={'0.25rem'}
                     fontSize={{ base: '1xl', md: '2xl' }}
                     fontWeight={'bold'}
                     cursor='pointer'
                   >
-                    {menu}
+                    {menu.title}
                   </Text>
                 </Link>
               </Flex>
