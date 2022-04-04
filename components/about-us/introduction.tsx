@@ -8,7 +8,7 @@ const menus = [
   { title: 'PROJECTS', href: '/about-us/projects' },
   { title: 'COORDINATION', href: '#' },
   { title: 'COMMUNITY CALLS', href: '/about-us/community-calls' },
-  { title: 'PORTAL NODES', href: '#' },
+  { title: 'PORTAL NODES', href: '/about-us/nodes' },
   { title: 'MEDIA KIT', href: '#' },
 ]
 
