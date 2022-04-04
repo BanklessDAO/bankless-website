@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import { Link, Box, Flex, Text, Button, Stack } from '@chakra-ui/react'
+import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 
 const NAV_LINKS = [
   {
@@ -61,9 +61,9 @@ const NavBar = props => {
         color={['white', 'white', 'primary.500', 'primary.500']}
       />
       <MenuLinks isOpen={isOpen} />
-      {!isOpen && (
+      {/* {!isOpen && (
         <Button display={{ base: 'block', md: 'none' }}>Connect Wallet</Button>
-      )}
+      )} */}
     </NavBarContainer>
   )
 }
@@ -158,41 +158,5 @@ const NavBarContainer = ({ children, ...props }) => {
     </Flex>
   )
 }
-
-// class NavBar extends React.Component {
-//   render() {
-//     return (
-//       <Flex
-//         justifyContent='start'
-//         alignItems='center'
-//         px={16}
-//         py={4}
-//         backgroundColor='black'
-//         borderBottom='2px solid rgba(255, 255, 255, 0.51)'
-//         width='100%'
-//       >
-// <Image
-//   src='/icons/bankless-logo.png'
-//   height={56}
-//   width={56}
-//   alt='dao-logo'
-// />
-//         <HStack
-//           marginLeft='auto'
-//           alignItems='center'
-//           pr={16}
-//           spacing={8}>
-//           {NAV_LINKS.map((_navLink, idx) => {
-//             return (
-//               <Link key={`link-${idx}`} variants='inactive' href={_navLink.href}>{_navLink.name}</Link>
-//             )
-//           })}
-//         </HStack>
-
-//         <Button>Connect Wallet</Button>
-//       </Flex>
-//     )
-//   }
-// }
 
 export default NavBar
