@@ -107,7 +107,8 @@ class Footer extends React.Component {
           <Flex
             flexDirection='column'
             justifyContent='center'
-            alignItems='center'>
+            alignItems='center'
+            rowGap={4}>
             <Image
               src='/icons/bankless-square.jpg'
               objectFit='contain'
@@ -125,14 +126,14 @@ class Footer extends React.Component {
             <Flex justifyContent='space-between' marginTop={{ base: 0, lg: 4}}>
               {SOCIALS.map((_social, idx) => {
                 return (
-                  <Box key={`social-${idx}`} margin={2}>
+                  <Link href={_social.href} key={`social-${idx}`} margin={2}>
                     <Image
                       src={_social.img}
                       alt={_social.alt}
                       width={20}
                       height={20}
                     />
-                  </Box>
+                  </Link>
                 )
               })}
             </Flex>
@@ -149,7 +150,7 @@ class Footer extends React.Component {
               {LINKS.map((_link, idx) => {
                 return (
                   <NextLink href={_link.href} key={`link-${idx}`}>
-                    <Link fontSize='2xl'>{_link.text}</Link>
+                    <Link fontSize={{ base: 'md', md: '2xl' }}>{_link.text}</Link>
                   </NextLink>
                 )
               })}
