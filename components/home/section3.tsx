@@ -62,7 +62,7 @@ class Section3 extends React.Component {
                 objectFit='contain'
               />
             </Box>
-            <Text fontSize='4xl' fontWeight={700}>
+            <Text fontSize='4xl' fontWeight={700} textAlign='center'>
               Ethereum Blockchain
             </Text>
           </Flex>
@@ -92,7 +92,7 @@ class Section3 extends React.Component {
           <Flex flexDirection={{ base: 'column', lg: 'row' }}>
             <Button
               size='lg'
-              width={{ base: '100%', lg: '30%' }}
+              // width={{ base: '100%', md: '30%' }}
               margin='8px'
               onClick={() => null}
             >
@@ -100,7 +100,7 @@ class Section3 extends React.Component {
             </Button>
             <Button
               size='lg'
-              width={{ base: '100%', lg: '70%' }}
+              // width={{ base: '100%', md: '70%' }}
               margin='8px'
               variant='bankless-white'
               onClick={() => null}

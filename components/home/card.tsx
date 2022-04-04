@@ -20,7 +20,7 @@ class Card extends React.PureComponent<I_Props> {
         background='#222222'
         height='100%'
         overflow='hidden'
-        maxW='400px'>
+        maxW={{ base: '300px', md: '400px' }}>
 
         <Box>
           <Image src={this.props.img} alt='image' width={600} height={400} />
