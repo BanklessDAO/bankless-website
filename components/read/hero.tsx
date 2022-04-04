@@ -6,8 +6,7 @@ import { Box, Flex, Text, HStack, VStack, Link } from '@chakra-ui/react'
 class Section1 extends React.Component {
   render() {
     return (
-      <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-        <Box>
+      <Flex flexDirection='column' justifyContent='center' alignItems='center' rowGap={8}>
 
           <HStack>
 
@@ -39,9 +38,18 @@ class Section1 extends React.Component {
 
           <Flex
             flexDirection={{ base: 'column', md: 'row' }}
-            columnGap={8}>
+            columnGap={8}
+            rowGap={8}>
 
             <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
+              <Flex justify='center' alignItems='center' background='#222222' borderRadius='8px' padding='10px'>
+                <Image
+                  src='/icons/medium.png'
+                  alt='medium'
+                  height={30}
+                  width={45}
+                />
+              </Flex> 
               <HStack justifyContent='center' alignItems='baseline'>
                 <Text fontSize={{ base: '4xl', md: '4xl' }} fontWeight={700}>Medium Article</Text>
                 <Link href='#'>
@@ -58,6 +66,14 @@ class Section1 extends React.Component {
             </VStack>
 
             <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
+              <Flex justify='center' alignItems='center' background='#222222' borderRadius='8px' padding='10px'>
+                <Image
+                  src='/icons/mirror.png'
+                  alt='mirror'
+                  height={30}
+                  width={25}
+                />
+              </Flex> 
               <HStack justifyContent='center' alignItems='baseline'>
                 <Text fontSize={{ base: '4xl', md: '4xl' }} fontWeight={700}>Mirror Article</Text>
                 <Link href='#'>
@@ -75,7 +91,6 @@ class Section1 extends React.Component {
 
           </Flex>
 
-        </Box>
       </Flex>
     )
   }
