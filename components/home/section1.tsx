@@ -37,7 +37,7 @@ class Section1 extends React.Component {
           <Link fontSize='2xl' href='/new-members'>New Members Start</Link>
         </HStack>  
 
-        <video width="800" height="600" autoPlay loop>
+        <video width="800" height="600" autoPlay loop muted playsInline>
           <source src="/videos/DAOhandLogo.mp4" type="video/mp4" />
         </video>
 
