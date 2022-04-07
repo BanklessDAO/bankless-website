@@ -41,9 +41,7 @@ export default function CommunityCallsCCFormatComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://s3-alpha-sig.figma.com/img/7184/3ce5/f8bf1a0426de9f3a3e2743e4ec238372?Expires=1649030400&Signature=D6Q3DEQ76bHuzM2i-Kq54c2GyPXiPMB5Sck5Q-oswmDsh00RI~b2vm2AAL~Tu0IIt1YiTNAqNJjJBTtKmLoKVlL1HAbBuQQeV1kTg7O05jiDG5cCK1G8H4WP9ZYfLwg1daZa7FIOHlwFUpE4VD4Oqy1FDj48gjtuGniX8WSXkoi3emTPFui6vpaBeVR5LvHjVFJmd3v~I0F7HK0wtGUGX1kuozUbDNOINhHwmh903XqJKiATe9M1C7i602UXLazgeCjmXmzeUob36YsRRqK8uk283LxqwPOLeYEolQB3u7igDauovU0RjvE9BqIQghhuwv0lWxSa2MHX8gVaYZq~~A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-              }
+              src={'/images/about-us/community-calls/Dev-Guild-banner.png'}
             />
           </Box>
         </Flex>
