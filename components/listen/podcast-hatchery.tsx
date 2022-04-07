@@ -29,7 +29,7 @@ class PodcastHatchery extends React.Component {
             build their unique storytelling identity, and explore Web3 through interviews with
             thought-leaders in the space.
           </Text>
-          <Button>
+          <Button onClick={() => window.open('https://open.spotify.com/show/1jLNOoJv77K733rZzL4c6b')}>
             Podcast Hatchery
           </Button>
           <Text maxWidth='350px' fontSize='lg' color='grey'>

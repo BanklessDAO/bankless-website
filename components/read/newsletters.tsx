@@ -51,35 +51,35 @@ const newsletters = [
   { 
     title: 'The Weekly Rollup',
     text: 'Weekly summary of everything that happens in bDAO. It’s the place to stay updated with the DAO.',
-    href: '#',
+    href: 'https://banklessdao.substack.com/s/weekly-rollup',
     rowSpan: 2,
     colSpan: 1
   },
   { 
     title: 'Decentralized Art',
     text: 'Weekly Crypto Art and NFT newsletter.',
-    href: '#',
+    href: 'https://banklessdao.substack.com/s/decentralized-art',
     rowSpan: 1,
     colSpan: 1
   },
   { 
     title: 'Decentralized Law',
     text: 'The premier legal newsletter in the crypto space, publishing cutting-edge legal scholarship twice a month.',
-    href: '#',
+    href: 'https://banklessdao.substack.com/s/decentralized-law',
     rowSpan: 3,
     colSpan: 1
   },
   { 
     title: 'State of the DAOs',
     text: 'The high-signal-low-noise DAO ecosystem newsletter.',
-    href: '#',
+    href: 'https://banklessdao.substack.com/s/state-of-the-daos',
     rowSpan: 1,
     colSpan: 1
   },
   { 
     title: 'Gearing Up',
     text: 'Weekly bDAO project and guild highlights newsletter to help members stay up to speed on all internal bDAO updates.',
-    href: '#',
+    href: 'https://banklessdao.substack.com/s/gearing-up?utm_source=substack&utm_medium=menu',
     rowSpan: 2,
     colSpan: 2
   },

@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import NextLink from 'next/link'
 
 import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
@@ -8,12 +7,12 @@ const SOCIALS = [
   {
     img: '/icons/medium.png',
     alt: 'medium',
-    href: '#',
+    href: 'https://medium.com/bankless-dao',
   },
   {
     img: '/icons/mirror.png',
     alt: 'mirror',
-    href: '#',
+    href: 'https://banklessdao.mirror.xyz/',
   },
   {
     img: '/icons/union.png',
@@ -23,35 +22,35 @@ const SOCIALS = [
   {
     img: '/icons/twitter.png',
     alt: 'twitter',
-    href: '#',
+    href: 'https://twitter.com/banklessDAO',
   },
   {
     img: '/icons/discord.png',
     alt: 'discord',
-    href: '#',
+    href: 'https://discord.com/invite/bankless',
   },
   {
     img: '/icons/notion.png',
     alt: 'notion',
-    href: '#',
+    href: 'https://bankless.notion.site/bankless/BanklessDAO-82ba81e7da1c42adb7c4ab67a4f22e8f',
   },
   {
     img: '/icons/icon-7.png',
-    alt: 'alt',
-    href: '#',
-  },
-  {
-    img: '/icons/path.png',
     alt: 'path',
     href: '#',
   },
   {
-    img: '/icons/instagram.png',
-    alt: 'instagram',
-    href: '#',
+    img: '/icons/etherscan-logo.png',
+    alt: 'etherscan',
+    href: 'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198',
   },
   {
-    img: '/icons/icon-10.png',
+    img: '/icons/instagram.png',
+    alt: 'instagram',
+    href: 'https://www.instagram.com/banklessdao/?hl=en',
+  },
+  {
+    img: '/icons/group-15.png',
     alt: 'alt',
     href: '#',
   },
@@ -60,35 +59,35 @@ const SOCIALS = [
 const LINKS = [
   {
     text: 'Join Olympus Pro',
-    href: '#',
+    href: 'https://pro.olympusdao.finance/#/bond',
   },
   {
     text: 'BANK',
-    href: '#',
+    href: 'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198',
   },
   {
     text: 'Wiki',
-    href: '#',
+    href: 'https://dyor-crypto.fandom.com/wiki/Bankless_DAO_(BANK)',
   },
   {
     text: 'Privacy',
-    href: '#',
+    href: 'https://forum.bankless.community/privacy',
   },
   {
     text: 'Forum',
-    href: '#',
+    href: 'https://forum.bankless.community/',
   },
   {
     text: 'Github',
-    href: '#',
+    href: 'https://github.com/BanklessDAO',
   },
   {
     text: 'Vote',
-    href: '#',
+    href: 'https://snapshot.org/#/banklessvault.eth',
   },
   {
     text: 'TwitchTV',
-    href: '#',
+    href: 'https://www.twitch.tv/banklessdao',
   },
 ]
 
@@ -98,16 +97,17 @@ class Footer extends React.Component {
       <Flex flexDirection='column' justifyContent='center' alignItems='center'>
         <Grid
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
-          gap={6}
+          gap={{ base: 2, md: 6 }}
           width='80%'
           borderTop='1px solid red'
           marginTop={{ base: 8, lg: 16 }}
-          padding={{ base: 4, lg: 8 }}>
+          paddingY={{ base: 8, lg: 8 }}
+          paddingX={{ base: 4, lg: 8 }}>
             
           <Flex
             flexDirection='column'
             justifyContent='center'
-            alignItems='center'
+            alignItems={{base: 'center', md: 'start'}}
             rowGap={4}>
             <Image
               src='/icons/bankless-square.jpg'
@@ -149,9 +149,7 @@ class Footer extends React.Component {
               textAlign={{ base: 'center', lg: 'left' }}>
               {LINKS.map((_link, idx) => {
                 return (
-                  <NextLink href={_link.href} key={`link-${idx}`}>
-                    <Link fontSize={{ base: 'md', md: '2xl' }}>{_link.text}</Link>
-                  </NextLink>
+                  <Link href={_link.href} key={`link-${idx}`} fontSize={{ base: 'md', md: '2xl' }}>{_link.text}</Link>
                 )
               })}
             </Grid>
@@ -161,7 +159,8 @@ class Footer extends React.Component {
         <Text
           fontSize='m'
           color='rgba(255, 255, 255, 0.56);'
-          style={{ marginTop: '8vh' }}>
+          marginY={2}
+          >
           GoBankless © 2022. All Rights Reserved.
         </Text>
       </Flex>
