@@ -8,27 +8,28 @@ import Underline from 'components/common/underline'
 const CARDS = [
     {
       img: '/images/media.jpg',
-      title: 'Media',
-      text: 'Producing cutting-edge written, visual, and audio content',
-      href: '#',
+      title: 'Projects',
+      text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
+      href: '/about-us/projects',
     },
     {
       img: '/images/consulting.jpg',
-      title: 'Consulting',
-      text: 'Providing consulting services for other DAOs and Web3-native companies.',
-      href: '#',
+      title: 'Guilds',
+      text: 'Guilds are the way we organize our contributors. There are 13 guilds within bDAO.',
+      href: '/about-us/guilds',
     },
     {
       img: '/images/dao-tooling.jpg',
-      title: 'DAO Tooling',
-      text: 'Shipping products and services that are changing the future of work.',
-      href: '#',
+      title: 'Governace',
+      text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
+      href: '/about-us/governance',
     },
     {
       img: '/images/coming-home.jpg',
       title: 'Coming Home',
       text: 'Creating a social homebase for artists, thought-leaders, builders, scholars, and innovators in Web3.',
       href: '#',
+      pending: true
     },
   ]
 
@@ -55,6 +56,7 @@ class Section2 extends React.Component {
                 title={_card.title}
                 text={_card.text}
                 href={_card.href}
+                pending={_card.pending}
               />
             )
           })}
