@@ -38,7 +38,7 @@ function NftInvest() {
               display='flex'
               width={'90%'}
               justifyContent='center'>
-              <Button onClick={() => null}>Invest in Chippi</Button>
+              <Button onClick={() => window.open('https://opensea.io/collection/chippi', '_blank')}>Invest in Chippi</Button>
             </Container>
           </Container>
         </VStack>
