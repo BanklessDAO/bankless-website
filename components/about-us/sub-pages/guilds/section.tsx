@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Flex, Text, Image, VStack } from '@chakra-ui/react';
+import React from 'react'
+import { Box, Flex, Text, Image, VStack } from '@chakra-ui/react'
 
 interface I_SectionProps {
   alt: string
@@ -10,14 +10,16 @@ interface I_SectionProps {
 }
 
 class Section extends React.Component<I_SectionProps> {
-
   render() {
     return (
-      <Flex 
-        flexDirection={{ base: 'column', md: this.props.reverse ? 'row-reverse' : 'row' }}
+      <Flex
+        flexDirection={{
+          base: 'column',
+          md: this.props.reverse ? 'row-reverse' : 'row',
+        }}
         columnGap={16}
-        >
-        <Box width={{ base: '100%', md: '50%'}}>
+      >
+        <Box width={{ base: '100%', md: '50%' }}>
           <Image
             alt={this.props.alt}
             fit={'cover'}
@@ -28,13 +30,17 @@ class Section extends React.Component<I_SectionProps> {
           />
         </Box>
 
-        <VStack 
-          width={{ base: '100%', md: '50%'}}
+        <VStack
+          width={{ base: '100%', md: '50%' }}
           rowGap={{ base: 8, md: 16 }}
+          mt={{ base: '32px', md: '0px' }}
           textAlign='start'
           justifyContent='center'
-          alignItems='start'>
-          <Text fontSize={{base: '2xl'}} fontWeight={700}>{this.props.title.toUpperCase()}</Text>
+          alignItems='start'
+        >
+          <Text fontSize={{ base: '2xl' }} fontWeight={700}>
+            {this.props.title.toUpperCase()}
+          </Text>
           <Text fontSize='md'>{this.props.text}</Text>
         </VStack>
       </Flex>
