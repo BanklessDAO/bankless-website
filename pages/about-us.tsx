@@ -9,7 +9,7 @@ import NewsLetterAboutUsComponent from 'components/common/newsletter-section'
 export default function AboutUsPage() {
   return (
     <PageContainer>
-      <Container maxW={'5xl'}>
+      <Container maxW={{ base: 'container.md', md: 'container.xl' }}>
         <IntroductionAboutUsComponent />
         <OurMissionAboutUsComponent />
         <OurVisionAboutUsComponent />
