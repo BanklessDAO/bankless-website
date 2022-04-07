@@ -67,19 +67,19 @@ class ComingSoon extends React.Component {
             </Text>
             <Text fontWeight={700} fontSize='xl'>
               Hosted By{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none'>
+              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/brandoncnolte'>
                 Brandon Nolte
               </Link>
             </Text>
             <Text fontSize='md' color='grey'>
               Bounty Hunter is a show about how to find engaging and rewarding
               work in the new Web3 economy. Join serial entrepreneur{' '}
-              <Link color='red.600' textDecoration='none'>
+              <Link color='red.600' textDecoration='none' href='https://twitter.com/brandoncnolte'>
                 Brandon Nolte{' '}
               </Link>
               as he interviews community builders, DAO contributors, and the
-              best innovators in Web3. Follow Bounty Hunter on
-              <Link color='red.600' textDecoration='none'>
+              best innovators in Web3. Follow Bounty Hunter on &nbsp;
+              <Link color='red.600' textDecoration='none' href='https://twitter.com/BountyxHunterx'>
                 Twitter.
               </Link>
             </Text>
