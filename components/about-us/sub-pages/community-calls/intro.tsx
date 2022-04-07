@@ -22,13 +22,17 @@ export default function CommunityCallsIntroComponent() {
 
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
+          fontSize={{ base: 'md', md: 'lg' }}
           textTransform={'uppercase'}
         >
           Join the entire Bankless community on Fridays at 4pm UTC
         </Text>
 
-        <Text color={'white.200'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ base: 'md', md: 'lg' }}
+          lineHeight={{ base: '1.5rem', md: '2rem' }}
+        >
           Community Calls are the anchor of the BanklessDAO community. Every
           Friday at 4pm UTC we gather for one hour on the Community Call Voice
           Stage to hear key governance updates, share hype news, and have
@@ -46,55 +50,92 @@ export default function CommunityCallsIntroComponent() {
       </Stack>
 
       <Stack
-        align={'center'}
+        align='center'
         spacing={{ base: 8, md: 10 }}
-        pt={{ base: 10, md: 14 }}
+        mt={{ base: 10, md: 15 }}
         direction={{ base: 'column', md: 'row' }}
-        justifyContent={'center'}
       >
-        <Flex justify={'center'} align={'center'} position={'relative'}>
+        <Flex
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          flex={1}
+        >
           <Box
             position={'relative'}
-            height={'300px'}
             rounded={'2xl'}
-            boxShadow={'2xl'}
             overflow={'hidden'}
+            width='100%'
+            sx={{ height: { base: '300px', md: '450px' } }}
           >
             <Image
-              alt={'Hero Image'}
+              position={'absolute'}
+              alt={'Cryptocurrency Image'}
+              left='0'
+              top='40%'
+              width={'3rem'}
+              src={'/images/about-us/Cryptocurrency.png'}
+            />
+            <Image
+              position={'absolute'}
+              alt={'Bnakless Image'}
+              right='10%'
+              top='30%'
+              width={'3rem'}
+              src={'/images/about-us/Bnakless.png'}
+            />
+            <Image
+              position={'absolute'}
+              alt={'Aragon Image'}
+              right='0'
+              bottom='25%'
+              width={'3rem'}
+              src={'/images/about-us/Aragon.png'}
+            />
+            <Image
+              position={'absolute'}
+              alt={'Cryptocurrency Image'}
+              right='30%'
+              bottom='5%'
+              width={'3rem'}
+              src={'/images/about-us/Cryptocurrency1.png'}
+            />
+            <Image
+              alt={'Instructor Image'}
               fit={'cover'}
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://s3-alpha-sig.figma.com/img/570b/505c/0dd9573cd6dfe2037d239f2de0a5bed4?Expires=1649030400&Signature=Jw-~EDU~bGiHZSpr7yfnSDaeote8wjBucIUKbR94x9STjVAsjnZtaIoAmCwAy5GY89-EjcFOovOCECyKUxaTS4FNSpi0OYA2koZwfEcYQZAKrS4LEIHu5WfXUvvI1Q-UzoPIX~XndUSYTqDxq6f9tx1rA17fB1TrzuubfhZ66cXclQEx1BxXjpB2zKRBAmMq2dCZ98jZrM0HwIwMwmAyWukTa7iNx-TY1kPsqU~Cx3quw6A8eJPunnTcpE9EqZoDCCPwb9eBQH59QptMlcyer-SqpOs8YuSY5LovUUE8mco-gRwQ6cF-6ffq0j6R8SAheBmRSLS9RBROC~kt5w8g0w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-              }
+              src={'/images/about-us/Instructor.png'}
             />
           </Box>
         </Flex>
 
-        <Stack
-          spacing={{ base: 5, md: 10 }}
-          width={{ base: '100%', md: 'inherit' }}
-        >
-          <Heading
-            color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            textAlign='center'
-            textTransform={'uppercase'}
-            fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+        <Box flex={1}>
+          <Stack
+            flex={1}
+            spacing={{ base: 5, md: 10 }}
+            width={{ base: '100%', md: 'inherit' }}
           >
-            Want Alpha?
-          </Heading>
-          <Text
-            color={'gray.100'}
-            textAlign='center'
-            fontSize={{ sm: 'sm', md: 'md' }}
-          >
-            Join the weekly CCs!
-          </Text>
-        </Stack>
+            <Heading
+              color={'gray.100'}
+              lineHeight={1.1}
+              fontWeight={600}
+              textAlign='center'
+              textTransform={'uppercase'}
+              fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+            >
+              Want Alpha?
+            </Heading>
+            <Text
+              color={'gray.100'}
+              textAlign='center'
+              fontSize={{ sm: 'sm', md: 'md' }}
+            >
+              Join the weekly CCs!
+            </Text>
+          </Stack>
+        </Box>
       </Stack>
     </>
   )
