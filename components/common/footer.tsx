@@ -32,7 +32,7 @@ const SOCIALS = [
   {
     img: '/icons/notion.png',
     alt: 'notion',
-    href: '#',
+    href: 'https://bankless.notion.site/bankless/BanklessDAO-82ba81e7da1c42adb7c4ab67a4f22e8f',
   },
   {
     img: '/icons/icon-7.png',
