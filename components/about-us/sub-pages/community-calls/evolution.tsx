@@ -10,6 +10,7 @@ import {
   FormControl,
   Button,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 
 export default function CommunityCallsEvolutionComponent() {
   return (
@@ -112,9 +113,7 @@ export default function CommunityCallsEvolutionComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://s3-alpha-sig.figma.com/img/1035/7e0b/d712d594a0ebecfc47d3d6b3e8259635?Expires=1649030400&Signature=UZqYHkWNVU8fAqpb-lF3JibpJ0yS7N~yupAA7aGPMYQCnzurwnLvbeT38FL3t62VdMQ5wOda-BxTnca91EfHv~Jd70ohqGmeA-Ict67bmgmMiJEs9fc3Tgw5kIrT1FPrE37fNEgF-840-9gys56SDF8HxhdAtDzt1~UHjuSo0CudXMoHMJBV3FXbNl-RmEUWEiCJqPqTvHQt7x2zMRtUOc-fd7Vn6tmQYPO8ptiUKzRDjkFz4vYVPIG9gCx34387QdoMZWxViEenz4aRiCPLRCDKhEHYujHGaIDOEWIHaJwT~-W0n1WLrT1nmGRSdtNEWGFJynwhueI00Y-djyU2fA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-              }
+              src={'/images/about-us/community-calls/bell-01.png'}
             />
           </Box>
           <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -125,14 +124,19 @@ export default function CommunityCallsEvolutionComponent() {
             marginInlineStart='unset!important'
             mt={'1rem'}
           >
-            <Button
-              colorScheme='red'
-              w='100%'
-              type='submit'
-              borderRadius={'none'}
+            <Link
+              href={'http://www.google.com/calendar/event?action=TEMPLATE'}
+              passHref
             >
-              Add to Calendar
-            </Button>
+              <Button
+                colorScheme='red'
+                w='100%'
+                type='submit'
+                borderRadius={'none'}
+              >
+                Add to Calendar
+              </Button>
+            </Link>
           </FormControl>
         </Flex>
       </Stack>
