@@ -13,7 +13,7 @@ export default function JoinUsIntroComponent() {
       >
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontSize={{ base: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
           px={{ base: 18, md: 32 }}
@@ -38,8 +38,8 @@ export default function JoinUsIntroComponent() {
         </Heading>
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
           px={{ base: 18, md: 32 }}
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           This open and liberal financial system is just getting started. We’re
           building new economies, new ways to work, new thought leadership and
@@ -48,16 +48,17 @@ export default function JoinUsIntroComponent() {
 
         <Text
           color={'white.100'}
-          fontSize={{ sm: 'sm', md: 'md' }}
           px={{ base: 18, md: 32 }}
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           Join us and embark on our mission :
         </Text>
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
+          lineHeight={'36px'}
           px={{ base: 18, md: 32 }}
           marginTop='5px !important'
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           To educate the masses in this new decentralized money system that
           anyone can use to build wealth and climb the economic ladder. <br />
@@ -72,10 +73,6 @@ export default function JoinUsIntroComponent() {
           <source src='/images/about-us/join-us.webm' type='video/webm' />
           Join Us
         </video>
-        {/* <video
-                    src='' 
-                    width='80%'
-                /> */}
       </Stack>
     </>
   )

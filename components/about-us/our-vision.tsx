@@ -110,10 +110,11 @@ export default function OurVisionIntroComponent() {
           href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
         />
         <Heading
-          fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontWeight={{ base: 600, md: 800 }}
+          fontSize={{ base: '3xl', sm: '3xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
+          textTransform={'uppercase'}
         >
           Our Vision is to make financial independence, decentralized work, and
           creative freedom accessible to all
@@ -122,8 +123,8 @@ export default function OurVisionIntroComponent() {
 
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
           px={{ base: 18, md: 32 }}
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           We work to build a world where anyone with an internet connection has
           access to the tools needed to achieve financial independence. We want
@@ -137,7 +138,7 @@ export default function OurVisionIntroComponent() {
           color={'white.100'}
           lineHeight={1.5}
           fontWeight={600}
-          fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
+          fontSize={{ base: '2xl', md: '3xl' }}
         >
           OUR VALUES
         </Heading>
