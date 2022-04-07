@@ -13,7 +13,7 @@ export default function OurMissionIntroComponent() {
       >
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontSize={{ base: '6xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
         >
@@ -23,8 +23,7 @@ export default function OurMissionIntroComponent() {
 
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
-          px={{ base: 18, md: 32 }}
+          fontSize='lg'
         >
           The nodes in our growing ecosystem collaborate to create user-friendly
           onramps for people to discover, use, learn, and enjoy the benefits of

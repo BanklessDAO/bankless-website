@@ -15,7 +15,7 @@ class PodcastIdea extends React.Component {
           </Text>
           <Text fontSize='2xl'>
             Join{' '}
-            <Link color='red.600' textDecoration='none'>
+            <Link color='red.600' textDecoration='none' href='https://discord.com/invite/bankless'>
               BanklessDAO
             </Link>{' '}
             and get in contact with the Podcast Hatchery.
