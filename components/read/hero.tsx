@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Box, Flex, Text, HStack, VStack, Link } from '@chakra-ui/react'
 
-class Section1 extends React.Component {
+class Hero extends React.Component {
   render() {
     return (
       <Flex flexDirection='column' justifyContent='center' alignItems='center' rowGap={8}>
@@ -52,7 +52,7 @@ class Section1 extends React.Component {
               </Flex> 
               <HStack justifyContent='center' alignItems='baseline'>
                 <Text fontSize={{ base: '4xl', md: '4xl' }} fontWeight={700}>Medium Article</Text>
-                <Link href='#'>
+                <Link href='https://medium.com/bankless-dao'>
                   <Image
                     src='/icons/arrow.png'
                     alt='arrow'
@@ -76,7 +76,7 @@ class Section1 extends React.Component {
               </Flex> 
               <HStack justifyContent='center' alignItems='baseline'>
                 <Text fontSize={{ base: '4xl', md: '4xl' }} fontWeight={700}>Mirror Article</Text>
-                <Link href='#'>
+                <Link href='https://banklessdao.mirror.xyz/'>
                   <Image
                     src='/icons/arrow.png'
                     alt='arrow'
@@ -86,7 +86,7 @@ class Section1 extends React.Component {
                 </Link>
               </HStack>
 
-              <Text fontSize='xl'>BanklessDAO history andseason recaps posted publicly.</Text>
+              <Text fontSize='xl'>BanklessDAO history and season recaps posted publicly.</Text>
             </VStack>
 
           </Flex>
@@ -96,4 +96,4 @@ class Section1 extends React.Component {
   }
 }
 
-export default Section1
+export default Hero
