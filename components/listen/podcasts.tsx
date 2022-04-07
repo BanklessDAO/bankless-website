@@ -38,7 +38,7 @@ class Podcasts extends React.Component {
             </Text>
             <Text fontWeight={700} fontSize='xl'>
               Hosted By{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none'>
+              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/humptycalderon'>
                 Humpty
               </Link>
             </Text>
@@ -52,26 +52,26 @@ class Podcasts extends React.Component {
             <UnorderedList width='95%' color='white' textAlign='start'>
               <ListItem>
                 Listen on{' '}
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://open.spotify.com/show/3yS1Y61r0XkogChx12JQ2q'>
                   Spotify
                 </Link>{' '}
                 and{' '}
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://podcasts.apple.com/us/podcast/crypto-sapiens/id1588346317'>
                   Apple Podcasts
                 </Link>
               </ListItem>
               <ListItem>
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://gitcoin.co/grants/5187/crypto-sapiens-podcast-gitcoin-grants-proposal'>
                   Sponsor the Show
                 </Link>
               </ListItem>
               <ListItem>
                 Follow on{' '}
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://mobile.twitter.com/cryptosapiens_'>
                   Twitter
                 </Link>{' '}
                 and{' '}
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://www.instagram.com/cryptosapiensofficial/'>
                   Instagram
                 </Link>
               </ListItem>
@@ -115,7 +115,7 @@ class Podcasts extends React.Component {
             </Text>
             <Text fontWeight={700} fontSize='xl'>
               Organized by{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none'>
+              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/crypto_soundman'>
                 Soundman
               </Link>{' '}
               and hosted by members of the BanklessDAO community
@@ -129,7 +129,7 @@ class Podcasts extends React.Component {
             <UnorderedList width='95%' color='white' textAlign='start'>
               <ListItem>
                 Listen on{' '}
-                <Link color='red.600' textDecoration='none'>
+                <Link color='red.600' textDecoration='none' href='https://www.podbean.com/podcast-detail/pnwdu-202cc2/Making-%24BANK-Podcast'>
                   BanklessDAO’s Podbean
                 </Link>
               </ListItem>

@@ -6,17 +6,21 @@ const menus = [
   { title: 'GOVERNANCE', href: '/about-us/governance' },
   { title: 'GUILDS', href: '/about-us/guilds' },
   { title: 'PROJECTS', href: '/about-us/projects' },
-  { title: 'COORDINATION', href: '#' },
+  // { title: 'COORDINATION', href: '#' },
   { title: 'COMMUNITY CALLS', href: '/about-us/community-calls' },
   { title: 'PORTAL NODES', href: '/about-us/nodes' },
-  { title: 'MEDIA KIT', href: '#' },
+  // { title: 'MEDIA KIT', href: '#' },
 ]
 
 export default function IntroductionAboutUsComponent() {
   return (
-    <>
+    <Flex 
+      paddingX={16}
+      flexDirection='column'
+      rowGap={8}>
       <Stack
-        align={{ base: 'flex-start', md: 'center' }}
+        align='center'
+        justifyContent='center'
         spacing={{ base: 8, md: 10 }}
         mt={{ base: 5, md: 10 }}
         direction={{ base: 'column', md: 'row' }}
@@ -79,25 +83,27 @@ export default function IntroductionAboutUsComponent() {
         </Flex>
 
         <Box flex={1}>
-          <Stack spacing={{ base: 3, md: 4 }}>
-            <Heading
+          <Stack 
+            spacing={{ base: 3, md: 4 }}
+            >
+            <Text
               color={'white.100'}
               lineHeight={1.1}
               fontWeight={800}
-              fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}
+              fontSize={{ base: '6xl', md: '5xl' }}
               textTransform={'uppercase'}
             >
-              Want alpha?
-            </Heading>
-            <Heading
+              What is Bankless DAO?
+            </Text>
+            {/* <Heading
               color={'white.100'}
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
             >
               Join the BanklessDAO
-            </Heading>
-            <Link href={'/#'} passHref={true}>
+            </Heading> */}
+            <Link href={'https://discord.com/invite/bankless'} passHref={true}>
               <Flex
                 align={'center'}
                 color={'white.100'}
@@ -105,20 +111,20 @@ export default function IntroductionAboutUsComponent() {
                 fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
                 cursor='pointer'
               >
-                RSA <FiArrowUpRight />
+                Join Us <FiArrowUpRight />
               </Flex>
             </Link>
           </Stack>
         </Box>
       </Stack>
 
-      <Stack>
+      <Stack mt={6}>
         <Flex
           flex={1}
           justify={{ base: 'center', md: 'space-around' }}
           align={'center'}
-          direction={{ md: 'row' }}
-          wrap={'wrap'}
+          wrap='wrap'
+          columnGap={{base: 12, md: 12 }}
         >
           {menus.map((menu, index) => {
             return (
@@ -127,11 +133,12 @@ export default function IntroductionAboutUsComponent() {
                 color={'white.100'}
                 key={index}
                 padding={{ base: '0.25rem', md: '0.5rem' }}
+                
               >
                 <Link href={menu.href} passHref={true}>
                   <Text
                     mr={'0.25rem'}
-                    fontSize={{ base: '1xl', md: '2xl' }}
+                    fontSize={{ base: '4xl', md: '2xl' }}
                     fontWeight={'bold'}
                     cursor='pointer'
                   >
@@ -150,49 +157,37 @@ export default function IntroductionAboutUsComponent() {
         backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
       ></Box>
 
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        pt={{ base: 10, md: 14 }}
-        direction={{ base: 'column', md: 'row-reverse' }}
-      >
-        <Flex
-          flex={1}
-          justify={'right'}
-          align={'right'}
-          position={'relative'}
-          w={'full'}
+      <Flex
+        flexDirection={{ base: 'column', md: 'row-reverse'}}
+        justifyContent='center'
+        alignItems='center'
+        columnGap={16}
+        rowGap={8}
         >
-          <Box
-            position={'relative'}
-            height={'300px'}
-            maxWidth={{ base: '100%', md: '400px' }}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}
-          >
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={'/images/about-us/bankless-movement.png'}
-            />
-          </Box>
-        </Flex>
-
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
+        <Box
+          position={'relative'}
+          height={'auto'}
+          maxHeight={{ base: '800px', md: '300px' }}
+        >
+          <Image
+            alt={'Hero Image'}
+            fit={'contain'}
+            align={'center'}
+            w={'100%'}
+            h={'100%'}
+            src={'/images/about-us/bankless-movement.png'}
+          />
+        </Box>
+        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
+          <Text
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '1xl', md: '2xl' }}
+            fontSize={{ base: '4xl', md: '2xl' }}
           >
             Bankless is a movement for Web3 pioneers
-          </Heading>
-          <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+          </Text>
+          <Text color='grey'>
             We seek new ways to build wealth, solve human coordination problems,
             create culture, and develop cutting-edge thought leadership in the
             crypto space. Going Bankless means taking control of your financial
@@ -200,51 +195,40 @@ export default function IntroductionAboutUsComponent() {
             Bankless is the movement educating the world on how to do it.
           </Text>
         </Stack>
-      </Stack>
+        
+      </Flex>
 
-      <Stack
-        align={'center'}
-        spacing={{ base: 8, md: 10 }}
-        pt={{ base: 10, md: 14 }}
-        direction={{ base: 'column', md: 'row' }}
-      >
-        <Flex
-          flex={1}
-          justify={'left'}
-          align={'left'}
-          position={'relative'}
-          w={'full'}
+      <Flex
+        flexDirection={{ base: 'column', md: 'row'}}
+        justifyContent='center'
+        alignItems='center'
+        columnGap={16}
+        rowGap={8}
         >
-          <Box
-            position={'relative'}
-            height={'300px'}
-            maxWidth={{ base: '100%', md: '400px' }}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}
-          >
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={'/images/about-us/bankless-dao.png'}
-            />
-          </Box>
-        </Flex>
-
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Box
+          position={'relative'}
+          height={'auto'}
+          maxHeight={{ base: '500px', md: '300px' }}
+        >
+          <Image
+            alt={'Hero Image'}
+            fit={'contain'}
+            align={'center'}
+            w={'100%'}
+            h={'100%'}
+            src={'/images/about-us/bankless-dao.png'}
+          />
+        </Box>
+        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
           <Heading
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '1xl', md: '2xl' }}
+            fontSize={{ base: '4xl', md: '2xl' }}
           >
             BanklessDAO is the homebase
           </Heading>
-          <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+          <Text color={'gray'}>
             BanklessDAO is a community of passionate Web3 thought-leaders who
             aim to educate new users, produce written and audio media, build DAO
             tooling, provide consulting services, develop Web3 scholarship, and
@@ -253,7 +237,9 @@ export default function IntroductionAboutUsComponent() {
             innovating DAO.
           </Text>
         </Stack>
-      </Stack>
-    </>
+        
+      </Flex>
+    
+    </Flex>
   )
 }
