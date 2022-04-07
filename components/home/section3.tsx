@@ -94,7 +94,7 @@ class Section3 extends React.Component {
               size='lg'
               // width={{ base: '100%', md: '30%' }}
               margin='8px'
-              onClick={() => null}
+              onClick={() => window.open('https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet')}
             >
               Buy Bank
             </Button>
