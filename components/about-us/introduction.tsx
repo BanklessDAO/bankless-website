@@ -86,18 +86,10 @@ export default function IntroductionAboutUsComponent() {
               lineHeight={1.1}
               fontWeight={800}
               fontSize={{ base: '6xl', md: '5xl' }}
-              textTransform={'uppercase'}
+              // textTransform={'uppercase'}
             >
-              Want alpha?
+              What is BanklessDAO?
             </Text>
-            <Heading
-              color={'white.100'}
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl', md: '4xl' }}
-            >
-              Join the BanklessDAO
-            </Heading>
             <Link href={'https://discord.com/invite/bankless'} passHref={true}>
               <Flex
                 align={'center'}
@@ -106,7 +98,7 @@ export default function IntroductionAboutUsComponent() {
                 fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
                 cursor='pointer'
               >
-                RSA <FiArrowUpRight />
+                Join us <FiArrowUpRight />
               </Flex>
             </Link>
           </Stack>
