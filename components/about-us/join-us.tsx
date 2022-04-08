@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 
 export default function JoinUsIntroComponent() {
@@ -68,12 +68,14 @@ export default function JoinUsIntroComponent() {
           To provide alpha every day and every hour of the year.
         </Text>
       </Stack>
-      <Stack mt='20' width='100%' align='center'>
-        <video controls width='80%'>
-          <source src='/images/about-us/join-us.webm' type='video/webm' />
+      <Flex mt={8} align='center' justify='center'>
+        <Box width={{ base: '100%', md: '60%'}}>
+        <video controls autoPlay loop  muted playsInline>
+          <source src='https://openseauserdata.com/files/6eca99dd059a027eeac7125656ddca9c.mp4#t=0.001' type='video/webm'/>
           Join Us
         </video>
-      </Stack>
+        </Box>
+      </Flex>
     </>
   )
 }
