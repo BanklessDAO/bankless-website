@@ -14,10 +14,7 @@ const menus = [
 
 export default function IntroductionAboutUsComponent() {
   return (
-    <Flex 
-      paddingX={16}
-      flexDirection='column'
-      rowGap={8}>
+    <Flex paddingX={16} flexDirection='column' rowGap={8}>
       <Stack
         align='center'
         justifyContent='center'
@@ -83,26 +80,16 @@ export default function IntroductionAboutUsComponent() {
         </Flex>
 
         <Box flex={1}>
-          <Stack 
-            spacing={{ base: 3, md: 4 }}
-            >
+          <Stack spacing={{ base: 3, md: 4 }}>
             <Text
               color={'white.100'}
               lineHeight={1.1}
               fontWeight={800}
               fontSize={{ base: '6xl', md: '5xl' }}
-              textTransform={'uppercase'}
+              // textTransform={'uppercase'}
             >
-              What is Bankless DAO?
+              What is BanklessDAO?
             </Text>
-            {/* <Heading
-              color={'white.100'}
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-            >
-              Join the BanklessDAO
-            </Heading> */}
             <Link href={'https://discord.com/invite/bankless'} passHref={true}>
               <Flex
                 align={'center'}
@@ -111,7 +98,7 @@ export default function IntroductionAboutUsComponent() {
                 fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
                 cursor='pointer'
               >
-                Join Us <FiArrowUpRight />
+                Join us <FiArrowUpRight />
               </Flex>
             </Link>
           </Stack>
@@ -124,7 +111,7 @@ export default function IntroductionAboutUsComponent() {
           justify={{ base: 'center', md: 'space-around' }}
           align={'center'}
           wrap='wrap'
-          columnGap={{base: 12, md: 12 }}
+          columnGap={{ base: 12, md: 12 }}
         >
           {menus.map((menu, index) => {
             return (
@@ -133,7 +120,6 @@ export default function IntroductionAboutUsComponent() {
                 color={'white.100'}
                 key={index}
                 padding={{ base: '0.25rem', md: '0.5rem' }}
-                
               >
                 <Link href={menu.href} passHref={true}>
                   <Text
@@ -158,12 +144,12 @@ export default function IntroductionAboutUsComponent() {
       ></Box>
 
       <Flex
-        flexDirection={{ base: 'column', md: 'row-reverse'}}
+        flexDirection={{ base: 'column', md: 'row-reverse' }}
         justifyContent='center'
         alignItems='center'
         columnGap={16}
         rowGap={8}
-        >
+      >
         <Box
           position={'relative'}
           height={'auto'}
@@ -183,11 +169,11 @@ export default function IntroductionAboutUsComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '4xl', md: '2xl' }}
+            fontSize={{ base: '2xl', md: '3xl' }}
           >
             Bankless is a movement for Web3 pioneers
           </Text>
-          <Text color='grey'>
+          <Text color='grey' fontSize={{ base: 'xl', md: '2xl' }}>
             We seek new ways to build wealth, solve human coordination problems,
             create culture, and develop cutting-edge thought leadership in the
             crypto space. Going Bankless means taking control of your financial
@@ -195,16 +181,16 @@ export default function IntroductionAboutUsComponent() {
             Bankless is the movement educating the world on how to do it.
           </Text>
         </Stack>
-        
       </Flex>
 
       <Flex
-        flexDirection={{ base: 'column', md: 'row'}}
+        flexDirection={{ base: 'column', md: 'row' }}
         justifyContent='center'
         alignItems='center'
         columnGap={16}
         rowGap={8}
-        >
+        mt={8}
+      >
         <Box
           position={'relative'}
           height={'auto'}
@@ -224,11 +210,11 @@ export default function IntroductionAboutUsComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '4xl', md: '2xl' }}
+            fontSize={{ base: '2xl', md: '3xl' }}
           >
             BanklessDAO is the homebase
           </Heading>
-          <Text color={'gray'}>
+          <Text color={'gray'} fontSize={{ base: 'xl', md: '2xl' }}>
             BanklessDAO is a community of passionate Web3 thought-leaders who
             aim to educate new users, produce written and audio media, build DAO
             tooling, provide consulting services, develop Web3 scholarship, and
@@ -237,9 +223,7 @@ export default function IntroductionAboutUsComponent() {
             innovating DAO.
           </Text>
         </Stack>
-        
       </Flex>
-    
     </Flex>
   )
 }

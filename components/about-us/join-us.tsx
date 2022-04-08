@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 
 export default function JoinUsIntroComponent() {
@@ -13,7 +13,7 @@ export default function JoinUsIntroComponent() {
       >
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
+          fontSize={{ base: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
           px={{ base: 18, md: 32 }}
@@ -38,8 +38,8 @@ export default function JoinUsIntroComponent() {
         </Heading>
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
           px={{ base: 18, md: 32 }}
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           This open and liberal financial system is just getting started. We’re
           building new economies, new ways to work, new thought leadership and
@@ -48,16 +48,17 @@ export default function JoinUsIntroComponent() {
 
         <Text
           color={'white.100'}
-          fontSize={{ sm: 'sm', md: 'md' }}
           px={{ base: 18, md: 32 }}
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           Join us and embark on our mission :
         </Text>
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
+          lineHeight={'36px'}
           px={{ base: 18, md: 32 }}
           marginTop='5px !important'
+          fontSize={{ base: 'xl', md: '2xl' }}
         >
           To educate the masses in this new decentralized money system that
           anyone can use to build wealth and climb the economic ladder. <br />
@@ -67,16 +68,14 @@ export default function JoinUsIntroComponent() {
           To provide alpha every day and every hour of the year.
         </Text>
       </Stack>
-      <Stack mt='20' width='100%' align='center'>
-        <video controls width='80%'>
-          <source src='/images/about-us/join-us.webm' type='video/webm' />
+      <Flex mt={8} align='center' justify='center'>
+        <Box width={{ base: '100%', md: '60%'}}>
+        <video controls autoPlay loop  muted playsInline>
+          <source src='https://openseauserdata.com/files/6eca99dd059a027eeac7125656ddca9c.mp4#t=0.001' type='video/webm'/>
           Join Us
         </video>
-        {/* <video
-                    src='' 
-                    width='80%'
-                /> */}
-      </Stack>
+        </Box>
+      </Flex>
     </>
   )
 }
