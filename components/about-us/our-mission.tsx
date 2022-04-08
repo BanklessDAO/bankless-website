@@ -12,19 +12,17 @@ export default function OurMissionIntroComponent() {
         mt='20'
       >
         <Heading
-          fontWeight={600}
-          fontSize={{ base: '6xl', md: '4xl' }}
+          fontWeight={{ base: 600, md: 800 }}
+          fontSize={{ base: '3xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
+          textTransform={'uppercase'}
         >
           Our mission is to onboard 1 billion people to crypto
           <Underline />
         </Heading>
 
-        <Text
-          color={'grey'}
-          fontSize='lg'
-        >
+        <Text color={'grey'} fontSize={{ base: 'xl', md: '2xl' }}>
           The nodes in our growing ecosystem collaborate to create user-friendly
           onramps for people to discover, use, learn, and enjoy the benefits of
           Web3. Everyone falls down the rabbithole a different way—we provide
