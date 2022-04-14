@@ -29,7 +29,7 @@ class Card extends React.PureComponent<I_Props> {
 
         <Flex
           flexDir='column'
-          height='50%'
+          height='100%'
           padding={{ base: 6, lg: 6 }}
         >
 
