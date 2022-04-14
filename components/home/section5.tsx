@@ -2,14 +2,15 @@ import React from 'react'
 
 import { Flex, Text, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
 import ThreeRings from 'components/common/three-rings';
+import SubscribeWidget  from 'components/common/subscribe-widget';
 
 class Section5 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center'>
+      <Flex flexDir='column' justifyContent='center' alignItems='center' rowGap={{ base: 8, md: 16 }}>
         <ThreeRings />
 
-        <Flex
+        {/* <Flex
           flexWrap='nowrap'
           flexDir={{ base: 'column', lg: 'row'}}
           justifyContent='center'
@@ -40,7 +41,9 @@ class Section5 extends React.Component {
               </Button>
             </InputRightElement>
           </InputGroup>
-        </Flex>
+        </Flex> */}
+
+        <SubscribeWidget />
       </Flex>
     )
   }

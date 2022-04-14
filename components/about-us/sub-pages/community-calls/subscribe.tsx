@@ -1,19 +1,23 @@
 import {
-  Grid,
-  GridItem,
-  VStack,
-  Heading,
-  Stack,
-  Input,
-  FormControl,
-  Button,
-  useColorModeValue,
+  Flex,
+  // Grid,
+  // GridItem,
+  // VStack,
+  // Heading,
+  // Stack,
+  // Input,
+  // FormControl,
+  // Button,
+  // useColorModeValue,
 } from '@chakra-ui/react'
+
+import SubscribeWidget from 'components/common/subscribe-widget'
 
 export default function CommunityCallsSubscribeComponent() {
   return (
-    <>
-      <Grid
+    <Flex flexDir='column' justifyContent='center' alignItems='center' margin={8}>
+      <SubscribeWidget />
+      {/* <Grid
         templateColumns={{
           base: 'repeat(1, 1fr)',
           sm: 'repeat(2, 1fr)',
@@ -69,7 +73,7 @@ export default function CommunityCallsSubscribeComponent() {
             </FormControl>
           </Stack>
         </GridItem>
-      </Grid>
-    </>
+      </Grid> */}
+    </Flex>
   )
 }
