@@ -42,7 +42,7 @@ class ComingSoon extends React.Component {
                 ComeBackKid
               </Link>{' '}
               and
-              <Link fontSize='2xl' color='red.600' textDecoration='none'>
+              <Link fontSize='2xl' color='red.600' textDecoration='none' href={'https://twitter.com/lion917_eth'}>
                 {' '}
                 Lion917
               </Link>

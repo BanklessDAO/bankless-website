@@ -15,7 +15,8 @@ class Satire extends React.Component {
             Satire
           </Text>
           <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>A satire publication that takes money, seriously. 
-          Read and collect NFTs of their editions on <Link color='white' href='#'>Mirror</Link> and follow along on <Link color='white' href='#'>Twitter.</Link></Text>
+          Read and collect NFTs of their editions on <Link color='white' href='https://therug.mirror.xyz/'>Mirror</Link> and follow
+           along on <Link color='white' href='https://twitter.com/TheRugNews'>Twitter.</Link></Text>
         </Flex>
 
         
@@ -25,7 +26,7 @@ class Satire extends React.Component {
             alignItems='baseline'
             marginRight='2'
             marginTop='8'
-            href='#'>
+            href='https://therug.mirror.xyz/'>
             <HStack gap={2}>
               <Image
                 src='/icons/mirror.png'
@@ -53,7 +54,7 @@ class Satire extends React.Component {
             alignItems='baseline'
             marginRight='2'
             marginTop='8'
-            href='#'>
+            href='https://twitter.com/TheRugNews'>
             <HStack gap={2}>
               <Image
                 src='/icons/twitter.png'
