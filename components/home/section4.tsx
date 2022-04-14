@@ -6,58 +6,78 @@ import Link from 'next/link'
 
 const MULTI_SIG_OWNERS = [
   {
-    img: '/profile-pics/livethelifetv.png',
-    name: 'LiveTheLifeTV',
-    twitter: '#',
-  },
-  {
-    img: '/profile-pics/kouros.png',
+    img: '/profile-pics/kouros.jpg',
     name: 'Kouros',
-    twitter: 'https://twitter.com/DavidColeto',
+    twitter: 'https://twitter.com/davidcoleto',
   },
   {
-    img: '/profile-pics/0xlucas.png',
-    name: '0xLucas',
-    twitter: '#',
+    img: '/profile-pics/grendel.jpg',
+    name: 'Grendel',
+    twitter: 'https://twitter.com/GrendelMarco',
   },
   {
-    img: '/profile-pics/eagle.eth.png',
-    name: 'Eagle.eth',
-    twitter: '#',
+    img: '/profile-pics/icedcool.jpg',
+    name: 'IcedCool',
+    twitter: 'https://twitter.com/icedcool_eth',
   },
   {
-    img: '/profile-pics/tommyoloffson.png',
-    name: 'tommyoloffson',
-    twitter: '#',
+    img: '/profile-pics/chuck.jpg',
+    name: 'Chuck',
+    twitter: 'https://twitter.com/mr_cgc',
   },
+  {
+    img: '/profile-pics/montgomery.jpg',
+    name: 'Montgomery',
+    twitter: 'https://twitter.com/WPMonty',
+  },
+  {
+    img: '/profile-pics/lion917.jpg',
+    name: 'Lion917',
+    twitter: 'https://twitter.com/lion917_eth',
+  },
+  {
+    img: '/profile-pics/links.jpg',
+    name: 'Links',
+    twitter: 'https://twitter.com/almithani',
+  }
 ]
 
 const GRANT_COMMITTEE_MEMBERS = [
   {
-    img: '/profile-pics/livethelifetv.png',
-    name: 'LiveTheLifeTV',
-    twitter: '#',
-  },
-  {
-    img: '/profile-pics/kouros.png',
+    img: '/profile-pics/kouros.jpg',
     name: 'Kouros',
-    twitter: 'https://twitter.com/DavidColeto',
+    twitter: 'https://twitter.com/davidcoleto',
   },
   {
-    img: '/profile-pics/0xlucas.png',
+    img: '/profile-pics/0xlucas.jpg',
     name: '0xLucas',
-    twitter: '#',
+    twitter: 'https://twitter.com/0x_Lucas',
   },
   {
-    img: '/profile-pics/eagle.eth.png',
-    name: 'Eagle.eth',
-    twitter: '#',
+    img: '/profile-pics/aboveaveragejoe.jpg',
+    name: 'AboveAverageJoe',
+    twitter: 'https://twitter.com/Abv_Avg_Joe',
   },
   {
-    img: '/profile-pics/tommyoloffson.png',
-    name: 'tommyoloffson',
-    twitter: '#',
+    img: '/profile-pics/grendel.jpg',
+    name: 'Grendel',
+    twitter: 'https://twitter.com/GrendelMarco',
   },
+  {
+    img: '/profile-pics/frogmonkee.jpg',
+    name: 'FrogMonkee',
+    twitter: 'https://twitter.com/frogmonkee',
+  },
+  {
+    img: '/profile-pics/icedcool.jpg',
+    name: 'IcedCool',
+    twitter: 'https://twitter.com/icedcool_eth',
+  },
+  {
+    img: '/profile-pics/redvan.jpg',
+    name: 'RedVan',
+    twitter: 'https://mobile.twitter.com/0xredvan',
+  }
 ]
 
 class Section4 extends React.Component {
@@ -99,6 +119,7 @@ class Section4 extends React.Component {
                   boxShadow='-4px 6px 20px red'
                 >
                   <Image
+                    borderRadius='100%'
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
                     width={{ base: '150px', md: '200px' }}
@@ -175,6 +196,7 @@ class Section4 extends React.Component {
                   boxShadow='-4px 6px 20px red'
                 >
                   <Image
+                    borderRadius='100%'
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
                     width={{ base: '150px', md: '200px' }}

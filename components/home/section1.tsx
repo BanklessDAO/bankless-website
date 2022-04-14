@@ -31,7 +31,7 @@ class Section1 extends React.Component {
         <Text><chakra.span fontSize='xl' color='gray.500' background='none'>We’re Headed West...</chakra.span> Join Us</Text>      
 
         <HStack spacing='58px' width='100%' justifyContent='center' display={{ base: 'none', sm: 'flex'}}>
-          <Link fontSize='2xl' href='#'>Whitepaper</Link>
+          <Link fontSize='2xl' href='https://forum.bankless.community/t/banklessdao-white-paper/3130'>Whitepaper</Link>
           <Link fontSize='2xl' href='https://discord.gg/bjPz2w9Zts'>Discord</Link>
           <Link fontSize='2xl' href='https://twitter.com/banklessDAO'>Twitter</Link>
           <Link fontSize='2xl' href='/new-members'>New Members Start</Link>

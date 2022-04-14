@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 
-import { Flex, Text, Box, Button } from '@chakra-ui/react'
+import { Flex, Text, Box, Button, Image } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 
 class Section3 extends React.Component {
@@ -103,7 +102,7 @@ class Section3 extends React.Component {
               // width={{ base: '100%', md: '70%' }}
               margin='8px'
               variant='bankless-white'
-              onClick={() => null}
+              onClick={() => window.open('https://drive.google.com/file/d/1WomKnCAaQTcNGh-VhPHKe-yUiyzXgSih/view')}
             >
               BANK TOKEN LEGAL ASSESSMENT
             </Button>
@@ -124,9 +123,10 @@ class Section3 extends React.Component {
                 boxShadow='-18px 8px 35px red'
               >
                 <Image
-                  src='/profile-pics/david-hoffman.png'
+                  src='/profile-pics/david-hoffman.jpg'
                   height={150}
                   width={150}
+                  borderRadius="100%"
                   alt='david-hoffman'
                 />
               </Box>
@@ -138,9 +138,10 @@ class Section3 extends React.Component {
                 boxShadow='18px 8px 35px red'
               >
                 <Image
-                  src='/profile-pics/ryan-sean-adams.png'
+                  src='/profile-pics/ryan-sean-adams.jpg'
                   height={150}
                   width={150}
+                  borderRadius="100%"
                   alt='ryan-sean-adams'
                 />
               </Box>
