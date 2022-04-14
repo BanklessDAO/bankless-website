@@ -35,9 +35,9 @@ const SOCIALS = [
     href: 'https://bankless.notion.site/bankless/BanklessDAO-82ba81e7da1c42adb7c4ab67a4f22e8f',
   },
   {
-    img: '/icons/icon-7.png',
-    alt: 'path',
-    href: '#',
+    img: '/icons/snapshot.png',
+    alt: 'snapshot',
+    href: 'https://snapshot.org/#/banklessvault.eth',
   },
   {
     img: '/icons/etherscan-logo.png',
@@ -50,9 +50,9 @@ const SOCIALS = [
     href: 'https://www.instagram.com/banklessdao/?hl=en',
   },
   {
-    img: '/icons/group-15.png',
+    img: '/icons/dune.png',
     alt: 'alt',
-    href: '#',
+    href: 'https://dune.xyz/paulapivat/Bankless-DAO-Tipping-Economy',
   },
 ]
 
