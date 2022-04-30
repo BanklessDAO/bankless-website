@@ -1,4 +1,5 @@
 import { Text, Stack, Flex } from '@chakra-ui/react'
+import BanklessLoansComponent from 'components/about-us/sub-pages/projects/content/bankless-loans'
 import { ConsultImage } from '../ConsultImage'
 import { CTA } from '../CTA'
 
@@ -36,7 +37,7 @@ export default function ConsultTabContentComponent() {
           Bankless Consultancy also helps traditional organizations take the
           first step into Web3.
         </Text>
-        <CTA />
+        <CTA url='https://www.banklessconsulting.com/' text='Bankless Consulting'/>
       </Stack>
     </Stack>
   )
