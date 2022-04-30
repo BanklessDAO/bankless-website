@@ -18,7 +18,7 @@ export default function ConsultTabContentComponent() {
         w={'full'}>
         <ConsultImage
           src={'/images/work-with-us/work-with-us-2.jpg'}
-          alt={'Hero Image'}
+          alt={'Consulting generic image'}
         />
       </Flex>
 
