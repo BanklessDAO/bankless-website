@@ -19,7 +19,7 @@ export default function SoftwareTabContentComponent() {
           such as distributing POAP links. Inquire about integrating DEGEN into
           your Discord server by filling out
         </Text>
-        <CTA />
+        <CTA url='https://docs.bankless.community/degen/introduction/welcome' text='Bankless DEGEN'/>
       </Stack>
 
       <Flex

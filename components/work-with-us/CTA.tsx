@@ -1,14 +1,23 @@
 import React from 'react'
 import {
-  Stack,
-  FormControl,
+  //   Stack,
+  //   FormControl,
   Button,
-  Input,
-  useColorModeValue,
+  //   Input,
+  //   useColorModeValue,
 } from '@chakra-ui/react'
-export const CTA = () => (
-  <Stack direction={{ base: 'row', md: 'row' }} as={'form'} spacing={'12px'}>
-    <FormControl>
+import Link from 'next/link'
+import { string } from 'yup'
+
+type CTAProps = {
+    text: string
+    url: string
+}
+
+export const CTA = ({text, url}: CTAProps) => (
+  <>
+    {/* <Stack direction={{ base: 'row', md: 'row' }} as={'form'} spacing={'12px'}>
+      <FormControl>
       <Input
         variant={'solid'}
         borderWidth={1}
@@ -29,5 +38,11 @@ export const CTA = () => (
         Fill the Form
       </Button>
     </FormControl>
-  </Stack>
+    </Stack> */}
+    <Button colorScheme='red' w='fit-content'>
+      <Link href={url}>
+        <a>Visit {text}</a>
+      </Link>
+    </Button>
+  </>
 )

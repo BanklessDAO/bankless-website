@@ -34,7 +34,7 @@ export default function ServiceTabContentComponent() {
           your organization’s audio and visual assets. Commission an AV expert
           by filling out this form.
         </Text>
-        <CTA />
+        <CTA url='https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9' text='Bankless AV Guild'/>
       </Stack>
     </Stack>
   )

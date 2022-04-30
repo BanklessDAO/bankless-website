@@ -20,7 +20,7 @@ export default function MarketTabContentComponent() {
           variety of languages, to reach your perfect audience. Inquire about
           sponsoring a newsletter by filling out this form.
         </Text>
-        <CTA />
+        <CTA url='https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d' text='Bankless Newsletters'/>
       </Stack>
 
       <Flex
