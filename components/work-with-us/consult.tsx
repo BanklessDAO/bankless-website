@@ -54,7 +54,7 @@ export default function ConsultComponent(props: ConsultComponentProps) {
             _focus={{ boxShadow: 'none' }}
             fontSize={{ base: '0.6rem', sm: 'xs', md: 'sm' }}
           >
-            BANKLESS ACADEMY
+            BANKLESS CONSULTING
           </Tab>
           <Tab
             color={'white.100'}
@@ -62,7 +62,7 @@ export default function ConsultComponent(props: ConsultComponentProps) {
             _focus={{ boxShadow: 'none' }}
             fontSize={{ base: '0.6rem', sm: 'xs', md: 'sm' }}
           >
-            BANKLESS CONSULTING
+            BANKLESS ACADEMY
           </Tab>
           <Tab
             color={'white.100'}
