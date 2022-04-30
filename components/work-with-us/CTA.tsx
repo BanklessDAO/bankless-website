@@ -10,11 +10,11 @@ import Link from 'next/link'
 import { string } from 'yup'
 
 type CTAProps = {
-    text: string
-    url: string
+  text: string
+  url: string
 }
 
-export const CTA = ({text, url}: CTAProps) => (
+export const CTA = ({ text, url }: CTAProps) => (
   <>
     {/* <Stack direction={{ base: 'row', md: 'row' }} as={'form'} spacing={'12px'}>
       <FormControl>
@@ -39,10 +39,10 @@ export const CTA = ({text, url}: CTAProps) => (
       </Button>
     </FormControl>
     </Stack> */}
-    <Button colorScheme='red' w='fit-content'>
-      <Link href={url}>
+    <Link href={url}>
+      <Button colorScheme='red' w='fit-content'>
         <a>Visit {text}</a>
-      </Link>
-    </Button>
+      </Button>
+    </Link>
   </>
 )
