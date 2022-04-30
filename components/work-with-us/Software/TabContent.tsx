@@ -19,7 +19,7 @@ export default function SoftwareTabContentComponent() {
       direction={{ base: 'column', md: 'row' }}
     >
       <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'xl' }} textAlign="left">
           Enter the next generation of DAO tooling with DEGEN. This powerhouse
           bot integrates with Discord to seamlessly perform administrative tasks
           such as distributing POAP links. Inquire about integrating DEGEN into

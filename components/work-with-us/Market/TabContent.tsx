@@ -20,7 +20,7 @@ export default function MarketTabContentComponent() {
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: 'row' }}>
       <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'xl' }} textAlign="left">
           Sponsor any of our newsletters and reach tens of thousands of readers
           every week. Choose from Weekly Rollup, State of the DAOs,
           Decentralized Art, Decentralized Law, and Gearing up, as well as a
