@@ -33,7 +33,7 @@ export default function ServiceTabContentComponent() {
       </Flex>
 
       <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'xl' }} textAlign="left">
           Our AV Guild provides top-notch audio and visual services for
           Web3-native organizations. From audio production to voice-over talent
           to custom photography, bDAO’s AV experts offer a service to level-up
