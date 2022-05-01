@@ -8,7 +8,7 @@ class Underline extends React.Component {
       <Container
         filter='blur(5px)'
         mt={4}
-        mb={12}
+        mb={{ base: 4, md: 12 }}
         fontSize='16px'
         lineHeight='8px'
         background='linear-gradient(
