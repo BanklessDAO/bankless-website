@@ -4,7 +4,7 @@ import { Box, Text, VStack, Link } from '@chakra-ui/react'
 class PodcastIdea extends React.Component {
   render() {
     return (
-      <Box mt={'3rem !important'}>
+      <Box>
         <VStack maxW={700} alignItems='start'>
           <Text
             fontWeight={700}

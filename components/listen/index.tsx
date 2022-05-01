@@ -10,7 +10,7 @@ class Listen extends React.Component {
   render() {
     return (
       <Container maxW='container.lg'>
-        <VStack rowGap={4}>
+        <VStack rowGap={{ base: 2, md: 4 }}>
           <PodcastHatchery />
           <Podcasts />
           <ComingSoon />

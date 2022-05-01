@@ -11,7 +11,6 @@ class ComingSoon extends React.Component {
         flexDirection='column'
         justifyContent='center'
         alignItems='center'
-        mt={'4rem !important'}
       >
         <Box mb={'2.5rem'}>
           <Text fontWeight={700} fontSize='5xl' textAlign='center' maxW={750}>
