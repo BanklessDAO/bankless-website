@@ -15,7 +15,21 @@ type CarouselProps = {
   width: number
   title: string
   description: string
-  slides: Array<CarouselSlideProps>
+  slides: Array<CarouselSlide>
+  carouselIndex: number
+}
+
+type CarouselSlide = {
+  title: string
+  paras: Array<string>
+  cta: {
+    text: string
+    link: string
+  }
+  image: {
+    src: string
+    alt: string
+  }
 }
 
 export default function Carousel({
@@ -23,6 +37,7 @@ export default function Carousel({
   title,
   description,
   slides,
+  carouselIndex,
 }: CarouselProps) {
   return (
     <>
@@ -52,7 +67,7 @@ export default function Carousel({
         orientation={width < 576 ? 'vertical' : 'horizontal'}
         flexDirection='column'>
         <TabList>
-          {slides.map(({ title }: CarouselSlideProps) => (
+          {slides.map(({ title }: CarouselSlide) => (
             <Tab
               color={'white.100'}
               _selected={{ borderBottom: '2px solid red' }}
@@ -63,9 +78,12 @@ export default function Carousel({
           ))}
         </TabList>
         <TabPanels>
-          {slides.map(slide => (
+          {slides.map((slide) => (
             <TabPanel>
-              <CarouselSlide {...slide} />
+              <CarouselSlide
+                {...slide}
+                carouselIndex={carouselIndex}
+              />
             </TabPanel>
           ))}
         </TabPanels>
