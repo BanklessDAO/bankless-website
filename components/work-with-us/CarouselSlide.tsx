@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Stack, VStack, Flex } from '@chakra-ui/react'
+import { Text, Stack, Flex } from '@chakra-ui/react'
 import { ConsultImage } from './ConsultImage'
 import { CTA } from './CTA'
 
@@ -30,7 +30,7 @@ export function CarouselSlide({
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: rowOrder }}>
-      <VStack flex={1} spacing={{ base: 5, md: 10 }}>
+      <Stack flex={1} spacing={{ base: 5, md: 6 }} alignContent='flex-start'>
         {paras.map(para => (
           <Text
             color={'gray.100'}
@@ -40,7 +40,7 @@ export function CarouselSlide({
           </Text>
         ))}
         <CTA url={cta.link} text={cta.text} />
-      </VStack>
+      </Stack>
 
       <Flex
         flex={1}
