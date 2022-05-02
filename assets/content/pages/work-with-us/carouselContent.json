@@ -172,14 +172,16 @@
       },
       {
         "title": "Podcast Sponsorships",
-        "paras": ["CHANGE ME"],
+        "paras": [
+          "CHANGE ME"
+        ],
         "cta": {
-          "text": "CHANGE ME",
-          "link": "/"
+          "text": "Bankless AV Guild",
+          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-4.jpg",
+          "alt": "Photo by Matthew Kwong on Unsplash"
         }
       },
       {
