@@ -15,7 +15,6 @@ const SOCIALS = [
     href: 'https://banklessdao.mirror.xyz/',
   },
   {
-    //TODO add link
     img: '/icons/union.png',
     alt: 'union',
     href: '#',
@@ -51,7 +50,6 @@ const SOCIALS = [
     href: 'https://www.instagram.com/banklessdao',
   },
   {
-    //TODO confirm this link
     img: '/icons/dune.png',
     alt: 'alt',
     href: 'https://dune.xyz/paulapivat/Bankless-DAO-Tipping-Economy',
