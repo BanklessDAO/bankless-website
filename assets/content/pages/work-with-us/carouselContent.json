@@ -186,14 +186,14 @@
       },
       {
         "title": "Marketing Services",
-        "paras": ["CHANGE ME"],
+        "paras": ["Bankless Consulting is the world's first web3-native consulting firm. Whether you're a DAO or a traditional enterprise, we'll help you capture the potential of the rapidly expanding decentralized economy."],
         "cta": {
-          "text": "CHANGE ME",
-          "link": "/"
+          "text": "Bankless Consulting",
+          "link": "https://www.banklessconsulting.com/"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-12.jpg",
+          "alt": "Photo by Jason Goodman on Unsplash"
         }
       }
     ]
