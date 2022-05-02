@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Gradient from 'rgt'
 
 import {
   Flex,
@@ -16,30 +15,24 @@ function BankSection() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+    <Container maxW={'6xl'} p={0}>
       <Flex direction={{ base: 'column-reverse', md: 'row' }}>
         {!isMobile ? (
-          <VStack h='full' w='full' spacing={10} align='flex-start'>
+          <VStack h='full' w='full' mt={20} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
-              height={422}
-              width={402}
+              height={290}
+              width={290}
             />
           </VStack>
         ) : null}
-        <VStack spacing={5} align='flex-start'>
+        <VStack spacing={4} align='flex-start'>
           <Text fontWeight={700} fontSize='7xl'>
             BANK
           </Text>
-          <Text fontSize='4xl' fontWeight={700}>
-            <Gradient
-              dir='top-to-bottom'
-              from='#FF1013'
-              to='#000000
-'>
-              The Most widely-held Token{' '}
-            </Gradient>
+          <Text fontSize='3xl' fontWeight={700} color={'red.400'}>
+            The Most widely-held Token{' '}
           </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
             BANK is the native token of BanklessDAO. As a tool for the Bankless
@@ -81,14 +74,19 @@ function BankSection() {
                 width={180}
               />
             ) : null}
-            <Flex alignItems={{ base: 'flex-end', md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} >
-              <Text mr={[0, 3]}>
-                Current market cap and price is
-              </Text>
+            <Flex
+              alignItems={{ base: 'center', md: 'center' }}
+              flexDirection={{ base: 'column', md: 'row' }}>
+              <Text mr={[0, 3]}>Current market cap and price is</Text>
               <Box>
-                <Flex justify={'center'} w={[170, 200]} alignItems={'center'} pl={5} pr={5} border={'0.5px solid #D02128'}>
+                <Flex
+                  mt={1.5}
+                  justify={'center'}
+                  align={'center'}
+                  w={[160, 180]}
+                  border={'0.5px solid #D02128'}>
                   <Link
-                    fontWeight={700}
+                    fontWeight={800}
                     color='#D02128'
                     href='https://www.coingecko.com/en/coins/bankless-dao'
                     isExternal>
@@ -99,8 +97,8 @@ function BankSection() {
             </Flex>
           </Box>
         </VStack>
-      </Flex >
-    </Container >
+      </Flex>
+    </Container>
   )
 }
 
