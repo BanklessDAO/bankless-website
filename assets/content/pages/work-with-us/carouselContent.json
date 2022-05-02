@@ -21,25 +21,24 @@
       {
         "title": "Bankless Academy",
         "paras": [
-          "CHANGE ME"
+          "The Bankless Academy is on a mission to introduce 1 billion people to the exciting possibilities of cryptocurrency, DeFi, and beyond.",
+          "Whether you're curious about crypto, intrigued by NFTs, or want to get started the latest DeFi protocols, we're here to help guide and accelerate your journey to Web3 proficiency."
         ],
         "cta": {
           "text": "Bankless Academy",
-          "link": "/"
+          "link": "https://app.banklessacademy.com/"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-6.jpg",
+          "alt": "Photo by Headway on Unsplash"
         }
       },
       {
         "title": "Global Tax Consultancy",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
-          "link": "/"
+          "link": ""
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-2.jpg",
@@ -68,9 +67,7 @@
       },
       {
         "title": "Bounty Board",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "Bounty Board",
           "link": "/"
@@ -82,9 +79,7 @@
       },
       {
         "title": "DAO Dash",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "DAO Dash",
           "link": "/"
@@ -116,9 +111,7 @@
       },
       {
         "title": "Custom Articles",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
           "link": "/"
@@ -130,9 +123,7 @@
       },
       {
         "title": "State of the DAOS Newsletter Feature",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
           "link": "/"
@@ -144,9 +135,7 @@
       },
       {
         "title": "Custom Designs",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
           "link": "/"
@@ -178,9 +167,7 @@
       },
       {
         "title": "Podcast Sponsorships",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
           "link": "/"
@@ -192,9 +179,7 @@
       },
       {
         "title": "Marketing Services",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "CHANGE ME",
           "link": "/"
