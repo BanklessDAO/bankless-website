@@ -1,38 +1,41 @@
 import React from 'react'
 import Image from 'next/image'
 import {
-  Flex,
   Text,
   Container,
   VStack,
   Button,
   useMediaQuery,
   Box,
+  Stack,
 } from '@chakra-ui/react'
 
 function DaoPunkSection() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW='container.xl' p={0}>
-      <Flex direction={{ base: 'column', md: 'row' }}>
-        <VStack p={10} spacing={10} align='center'>
-          {isMobile ? (
-            <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>
-              DAO Punks
-            </Text>
-          ) : null}
-          <Image
-            src='/images/DAO-Punk-Invest.png'
-            alt='bankToken'
-            height={533}
-            width={525}
-          />
-        </VStack>
-        <VStack>
-          <Container>
+    <Container maxW={'6xl'} p={0}>
+      <Stack
+        align={'right'}
+        spacing={10}
+        py={{ base: 20, md: 28 }}
+        direction={{ base: 'column', md: 'row' }}>
+        {isMobile ? (
+          <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>
+            DAO Punks
+          </Text>
+        ) : null}
+        <Image
+          src='/images/DAO-Punk-Invest.png'
+          alt='bankToken'
+          height={413}
+          width={405}
+        />
+
+        <VStack justifyContent={'flex-end'} display='flex'>
+          <Container flexDirection={{ base: 'column', md: 'row' }}>
             {!isMobile ? (
-              <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>
+              <Text fontWeight={700} fontSize='5xl' lineHeight='58px' mb={7}>
                 DAO Punks
               </Text>
             ) : null}
@@ -50,24 +53,22 @@ function DaoPunkSection() {
                 pushing the boundaries of where technology meets on-chain voting
                 and automatic treasury triggers.
               </Text>
+              <Container mt={8}>
+                <Button
+                  fontWeight={800}
+                  onClick={() =>
+                    window.open(
+                      'https://opensea.io/collection/daopunksnft',
+                      '_blank'
+                    )
+                  }>
+                  Invest in DAO Punks
+                </Button>
+              </Container>
             </Box>
           </Container>
-          <Container
-            display='flex'
-            bottom={0}
-            justifyContent={{ base: 'center', md: 'flex-start' }}>
-            <Button
-              onClick={() =>
-                window.open(
-                  'https://opensea.io/collection/daopunksnft',
-                  '_blank'
-                )
-              }>
-              Invest in DAO Punks
-            </Button>
-          </Container>
         </VStack>
-      </Flex>
+      </Stack>
     </Container>
   )
 }
