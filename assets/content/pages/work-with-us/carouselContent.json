@@ -37,12 +37,12 @@
         "title": "Global Tax Consultancy",
         "paras": ["CHANGE ME"],
         "cta": {
-          "text": "CHANGE ME",
-          "link": ""
+          "text": "the Ultimate Crypto Tax Guide",
+          "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-13.jpg",
+          "alt": "Photo by Towfiqu barbhuiya on Unsplash"
         }
       }
     ]
