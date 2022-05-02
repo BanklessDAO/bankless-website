@@ -19,7 +19,7 @@ export default function WorkWithUsPage() {
 
   return (
     <PageContainer>
-      <Container maxW={'5xl'}>
+      <Container maxW={'1232px'} p={0}>
         <IntroductionComponent />
         {carouselsData.map((carousel, index) => (
           <Carousel width={width} carouselIndex={index} {...carousel}/>
