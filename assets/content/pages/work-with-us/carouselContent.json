@@ -113,12 +113,12 @@
         "title": "Custom Articles",
         "paras": ["CHANGE ME"],
         "cta": {
-          "text": "CHANGE ME",
-          "link": "/"
+          "text": "Writers Guild",
+          "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-9.jpg",
+          "alt": "Photo by Etienne Girardet on Unsplash"
         }
       },
       {
