@@ -79,7 +79,10 @@
       },
       {
         "title": "DAO Dash",
-        "paras": ["DAO Dash will be the Analytics Guild's data ecosystem that will enable collaboration between its members in order to support Bankless DAO's mission.", "DAO Dash will establish patterns for ingesting data pipelines from off-chain and on-chain data sources, establishing a collaborative query and analysis environment, and a front end dashboard to distribute visually appealing insights."],
+        "paras": [
+          "DAO Dash will be the Analytics Guild's data ecosystem that will enable collaboration between its members in order to support Bankless DAO's mission.",
+          "DAO Dash will establish patterns for ingesting data pipelines from off-chain and on-chain data sources, establishing a collaborative query and analysis environment, and a front end dashboard to distribute visually appealing insights."
+        ],
         "cta": {
           "text": "DAO Dash",
           "link": "https://bankless.notion.site/DAO-Dash-41a151ce8ef74fcd893cba3b47223828"
@@ -123,14 +126,16 @@
       },
       {
         "title": "State of the DAOS Newsletter Feature",
-        "paras": ["CHANGE ME"],
+        "paras": [
+          "State of the DAOs, the high-signal low-noise newsletter to understanding DAOs."
+        ],
         "cta": {
-          "text": "CHANGE ME",
-          "link": "/"
+          "text": "State of the DAOs",
+          "link": "https://banklessdao.substack.com/s/state-of-the-daos?utm_source=substack&utm_medium=menu"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-10.jpg",
+          "alt": "Photo by Duy Pham on Unsplash"
         }
       },
       {
