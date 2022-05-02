@@ -116,7 +116,7 @@
         "title": "Custom Articles",
         "paras": ["CHANGE ME"],
         "cta": {
-          "text": "Writers Guild",
+          "text": "the Writers Guild",
           "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
         },
         "image": {
@@ -142,12 +142,12 @@
         "title": "Custom Designs",
         "paras": ["CHANGE ME"],
         "cta": {
-          "text": "CHANGE ME",
-          "link": "/"
+          "text": "the Design Guild",
+          "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-11.jpg",
+          "alt": "Photo by Hal Gatewood on Unsplash"
         }
       }
     ]
