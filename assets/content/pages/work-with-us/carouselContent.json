@@ -70,11 +70,11 @@
         "paras": ["CHANGE ME"],
         "cta": {
           "text": "Bounty Board",
-          "link": "/"
+          "link": "https://bountyboard.bankless.community"
         },
         "image": {
-          "src": "/images/work-with-us/work-with-us-2.jpg",
-          "alt": "CHANGE ME"
+          "src": "/images/work-with-us/work-with-us-7.jpg",
+          "alt": "Photo by Jeswin Thomas on Unsplash"
         }
       },
       {
