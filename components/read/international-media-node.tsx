@@ -8,7 +8,11 @@ class Section1 extends React.Component {
   render() {
     return (
       <Container maxW='3xl' centerContent>
-        <Flex flexDir='column' gap={4} justifyContent='center' alignItems='center'>
+        <Flex
+          flexDir='column'
+          gap={4}
+          justifyContent='center'
+          alignItems='center'>
           <Box>
             <Heading as='h2' size='xl' color='white' textTransform='uppercase'>
               International Media Nodes
@@ -16,10 +20,10 @@ class Section1 extends React.Component {
             <Underline />
           </Box>
           <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>
-            International Media Nodes (IMN) are Bankless channels that spread the
-            message of the Bankless movement beyond North America.They translate
-            BanklessDAO content, publish original pieces, run Twitter pages and
-            ship newsletters. Find their home pages below.
+            International Media Nodes (IMN) are Bankless channels that spread
+            the message of the Bankless movement beyond North America.They
+            translate BanklessDAO content, publish original pieces, run Twitter
+            pages and ship newsletters. Find their home pages below.
           </Text>
 
           <Grid
