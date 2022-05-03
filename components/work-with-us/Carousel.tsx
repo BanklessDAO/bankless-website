@@ -45,16 +45,20 @@ export default function Carousel({
         as={Box}
         textAlign={'center'}
         spacing={{ base: 3, md: 5 }}
-        py={{ base: 10, md: 18 }}
-        mt={{ base: 10, md: 16 }}>
+        py={{ sm: 10, md: 18 }}
+        mt={{ base: 10, sm: 10, md: 16 }}>
         <Heading
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
           lineHeight={'110%'}
-          color={'white.100'}>
+          color={'white.100'}
+          fontFamily='Clear Sans'>
           {title}
         </Heading>
-        <Text color={'white.200'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ sm: 'sm', md: 'md' }}
+          fontFamily='Clear Sans'>
           {description}
         </Text>
       </Stack>
@@ -63,27 +67,27 @@ export default function Carousel({
         align='center'
         variant='unstyled'
         colorScheme='green'
-        py={{ base: 10, md: 14 }}
+        py={{ base: 8, sm: 10, md: 14 }}
         orientation={width < 576 ? 'vertical' : 'horizontal'}
         flexDirection='column'>
         <TabList>
           {slides.map(({ title }: CarouselSlide) => (
             <Tab
               color={'white.100'}
+              fontSize={{ base: '2xl', sm: 'sm', md: 'md' }}
+              fontFamily='Clear Sans'
+              textTransform='uppercase'
+              p={{ base: 2, sm: 4 }}
               _selected={{ borderBottom: '2px solid red' }}
-              _focus={{ boxShadow: 'none' }}
-              fontSize={{ base: 'xs', sm: 'sm', md: 'md' }}>
+              _focus={{ boxShadow: 'none' }}>
               {title}
             </Tab>
           ))}
         </TabList>
         <TabPanels>
-          {slides.map((slide) => (
-            <TabPanel>
-              <CarouselSlide
-                {...slide}
-                carouselIndex={carouselIndex}
-              />
+          {slides.map(slide => (
+            <TabPanel p={0}>
+              <CarouselSlide {...slide} carouselIndex={carouselIndex} />
             </TabPanel>
           ))}
         </TabPanels>

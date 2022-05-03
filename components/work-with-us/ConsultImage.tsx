@@ -9,7 +9,7 @@ type ConsultImageProps = {
 export const ConsultImage = ({alt, src}: ConsultImageProps) => (
   <Box
     position={'relative'}
-    height={'440px'}
+    height={{base: '350px', lg: '440px', 'xl': '600px'}}
     rounded={'2xl'}
     boxShadow={'2xl'}
     width={'full'}

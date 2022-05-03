@@ -28,14 +28,18 @@ export function CarouselSlide({
     <Stack
       align={'center'}
       spacing={{ base: 8, md: 10 }}
-      pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: rowOrder }}>
+      p={0}
+      pt={{ base: 8, md: 14 }}
+      direction={{ base: 'column-reverse', md: rowOrder }}>
       <Stack flex={1} spacing={{ base: 5, md: 6 }} alignContent='flex-start'>
         {paras.map(para => (
           <Text
             color={'gray.100'}
-            fontSize={{ sm: 'sm', md: 'xl' }}
-            textAlign='left'>
+            fontSize={{ base: 'lg', md: 'xl', 'lg': '2xl' }}
+            textAlign='left'
+            fontFamily='Clear Sans'
+            lineHeight={1.5}
+            width={{base: '100%', lg: '80%'}}>
             {para}
           </Text>
         ))}
