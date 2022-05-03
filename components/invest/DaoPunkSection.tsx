@@ -7,7 +7,8 @@ import {
   Button,
   useMediaQuery,
   Box,
-  Stack,
+  Stack, 
+  Link
 } from '@chakra-ui/react'
 
 function DaoPunkSection() {
@@ -31,7 +32,6 @@ function DaoPunkSection() {
           height={413}
           width={405}
         />
-
         <VStack justifyContent={'flex-end'} display='flex'>
           <Container flexDirection={{ base: 'column', md: 'row' }}>
             {!isMobile ? (
@@ -54,16 +54,13 @@ function DaoPunkSection() {
                 and automatic treasury triggers.
               </Text>
               <Container mt={8}>
-                <Button
-                  fontWeight={800}
-                  onClick={() =>
-                    window.open(
-                      'https://opensea.io/collection/daopunksnft',
-                      '_blank'
-                    )
-                  }>
-                  Invest in DAO Punks
-                </Button>
+                <Link
+                  href='https://opensea.io/collection/daopunksnft'
+                  isExternal>
+                  <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                    Invest in DAO Punks
+                  </Button>
+                </Link>
               </Container>
             </Box>
           </Container>
