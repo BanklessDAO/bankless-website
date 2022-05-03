@@ -47,7 +47,7 @@ const SOCIALS = [
   {
     img: '/icons/instagram.png',
     alt: 'instagram',
-    href: 'https://www.instagram.com/banklessdao/?hl=en',
+    href: 'https://www.instagram.com/banklessdao',
   },
   {
     img: '/icons/dune.png',
@@ -103,11 +103,10 @@ class Footer extends React.Component {
           marginTop={{ base: 8, lg: 16 }}
           paddingY={{ base: 8, lg: 8 }}
           paddingX={{ base: 4, lg: 8 }}>
-            
           <Flex
             flexDirection='column'
             justifyContent='center'
-            alignItems={{base: 'center', md: 'start'}}
+            alignItems={{ base: 'center', md: 'start' }}
             rowGap={4}>
             <Image
               src='/icons/bankless-square.jpg'
@@ -123,10 +122,14 @@ class Footer extends React.Component {
               greater freedom.
             </Text>
 
-            <Flex justifyContent='space-between' marginTop={{ base: 0, lg: 4}}>
+            <Flex justifyContent='space-between' marginTop={{ base: 0, lg: 4 }}>
               {SOCIALS.map((_social, idx) => {
                 return (
-                  <Link href={_social.href} key={`social-${idx}`} margin={2}>
+                  <Link
+                    href={_social.href}
+                    target='_blank'
+                    key={`social-${idx}`}
+                    margin={2}>
                     <Image
                       src={_social.img}
                       alt={_social.alt}
@@ -149,18 +152,19 @@ class Footer extends React.Component {
               textAlign={{ base: 'center', lg: 'left' }}>
               {LINKS.map((_link, idx) => {
                 return (
-                  <Link href={_link.href} key={`link-${idx}`} fontSize={{ base: 'md', md: '2xl' }}>{_link.text}</Link>
+                  <Link
+                    href={_link.href}
+                    target='_blank'
+                    key={`link-${idx}`}
+                    fontSize={{ base: 'md', md: '2xl' }}>
+                    {_link.text}
+                  </Link>
                 )
               })}
             </Grid>
           </Box>
         </Grid>
-
-        <Text
-          fontSize='m'
-          color='rgba(255, 255, 255, 0.56);'
-          marginY={2}
-          >
+        <Text fontSize='m' color='rgba(255, 255, 255, 0.56);' marginY={2}>
           GoBankless © 2022. All Rights Reserved.
         </Text>
       </Flex>

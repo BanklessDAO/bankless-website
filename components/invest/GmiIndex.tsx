@@ -4,10 +4,14 @@ import { Flex, Text, Container, VStack, Button, Box } from '@chakra-ui/react'
 
 function GmiIndex() {
   return (
-    <Container maxW={{ base: 'container.sm', md: 'container.lg' }} p={0}>
+    <Container maxW={'6xl'} p={0}>
       <Flex flexDirection={{ base: 'column', md: 'row' }} py={10}>
         <VStack spacing={10}>
-          <Container display={'flex'} flexDirection={'column'} ml={['auto', 0]} width={['80%', '100%']}>
+          <Container
+            display={'flex'}
+            flexDirection={'column'}
+            ml={['auto', 0]}
+            width={['80%', '100%']}>
             <Text
               textAlign={{ base: 'center', md: 'left' }}
               fontWeight={700}
@@ -19,12 +23,13 @@ function GmiIndex() {
               <Box ml={2} width={75} height={'12px'} background={'red'} />
               <Box ml={2} width={75} height={'12px'} background={'red'} />
             </Flex>
-            < Text
+            <Text
               textAlign={{ base: 'center', md: 'left' }}
               color={'#D02128'}
               lineHeight='43px'
               fontSize='36px'
-              fontWeight={700}>
+              fontWeight={700}
+              mt={2}>
               Are you GMI?
             </Text>
           </Container>
@@ -46,6 +51,7 @@ function GmiIndex() {
             alignItems={'center'}
             flexDirection={{ base: 'column', md: 'row' }}>
             <Button
+              fontWeight={800}
               margin='10px 0px;'
               onClick={() =>
                 window.open('https://app.indexcoop.com/gmi', '_blank')
@@ -63,7 +69,7 @@ function GmiIndex() {
           </Container>
         </VStack>
       </Flex>
-    </Container >
+    </Container>
   )
 }
 
