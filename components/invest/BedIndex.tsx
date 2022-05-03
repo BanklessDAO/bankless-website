@@ -9,6 +9,7 @@ import {
   Stack,
   Box,
   Heading,
+  Link
 } from '@chakra-ui/react'
 
 function BedIndex() {
@@ -67,32 +68,25 @@ function BedIndex() {
               justifyContent='space-evenly'
               alignItems={'center'}
               flexDirection={{ base: 'column', md: 'row' }}>
-              <Button
-                fontWeight={800}
-                onClick={() =>
-                  window.open('https://app.indexcoop.com/bed', '_blank')
-                }>
-                <Container padding={0} paddingRight={2}>
-                  <Image
-                    src='/images/bed-token.png'
-                    alt='bed-token'
-                    height={23}
-                    width={23}
-                  />
-                </Container>
-                Invest in BED index
-              </Button>
-              <Button
-                fontWeight={800}
-                margin='10px 0px;'
-                onClick={() =>
-                  window.open(
-                    'https://www.bankless.community/bed-index',
-                    '_blank'
-                  )
-                }>
-                Learn more about Bed Index
-              </Button>
+              <Link href='https://app.indexcoop.com/bed' isExternal>
+                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                  <Container padding={0} paddingRight={2}>
+                    <Image
+                      src='/images/bed-token.png'
+                      alt='bed-token'
+                      height={23}
+                      width={23}
+                    />
+                  </Container>
+                  Invest in BED index
+                </Button>
+              </Link>
+              <Link href='https://www.bankless.community/bed-index' isExternal>
+                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                  <Container padding={0} paddingRight={2}></Container>
+                  Learn more about Bed Index
+                </Button>
+              </Link>
             </Container>
           </VStack>
         </Stack>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, Container, VStack, Button } from '@chakra-ui/react'
+import { Flex, Text, Container, VStack, Button, Link } from '@chakra-ui/react'
 
 function NftInvest() {
   return (
@@ -32,13 +32,11 @@ function NftInvest() {
               display='flex'
               width={'90%'}
               justifyContent='center'>
-              <Button
-                fontWeight={800}
-                onClick={() =>
-                  window.open('https://opensea.io/collection/chippi', '_blank')
-                }>
-                Invest in Chippi
-              </Button>
+              <Link href='https://opensea.io/collection/chippi' isExternal>
+                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                  Invest in Chippi
+                </Button>
+              </Link>
             </Container>
           </Container>
         </VStack>
@@ -67,11 +65,11 @@ function NftInvest() {
               width={'90%'}
               margin={'auto'}
               justifyContent='center'>
-              <Button
-                fontWeight={800}
-                onClick={() =>
-                  window.open('https://rarible.com/banklessdao/sale', '_blank')
-                }>{`Invest in NFT's`}</Button>
+              <Link href='https://rarible.com/banklessdao/sale' isExternal>
+                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                  Invest in NFT's
+                </Button>
+              </Link>
             </Container>
           </Container>
         </VStack>
