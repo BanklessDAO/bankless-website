@@ -1,5 +1,4 @@
-import { Box, Text, Stack, Flex, Image, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function DaoPunksComponent() {
@@ -9,33 +8,28 @@ export default function DaoPunksComponent() {
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: 'row' }}
-      mt={'4rem'}
-    >
+      mt={'4rem'}>
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
         w={'full'}
-        display={{ base: 'none', md: 'flex' }}
-      >
+        display={{ base: 'none', md: 'flex' }}>
         <Box
           position={'relative'}
           height={'300px'}
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}
-        >
+          overflow={'hidden'}>
           <Image
             alt={'Hero Image'}
             fit={'cover'}
             align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={
-              'https://s3-alpha-sig.figma.com/img/4774/d8b2/195826b329e8056306635c8dcf537224?Expires=1649030400&Signature=WVDyJstJNhBUccWHe24C7124lxg2x-yEL7Bl0Sq-BQANpqOGzJsneDYECifyejz6LVxzEy7KNje-04h9Z5DAPTW08UQXMNN7A7mYP6aKXJvSIMclGxdnUHNmC1KB7hRFBq-LmuvL0a-y1fyFAWXD1WvLcI3egAPpPeWrSmemvvZOmJrxkw~O7GsQ4wxt7unPriY2oUD~az3ANrwhgQMn0ToS3ut6S~z4G1MHjREqg-bLIfN5nqdkQfPNYG1tOXKILopv32HRk8RVj48REbKuKkamHbU40XNaVbXDhLgJj~r1zVZeK8X4iOFB4YnEjY6tQ5mKmpOH2lvyuiPzNxP2mA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-            }
+            w={'90%'}
+            h={'90%'}
+            src={'/images/DAO-Punk-Invest.png'}
           />
         </Box>
       </Flex>
@@ -46,8 +40,7 @@ export default function DaoPunksComponent() {
           lineHeight={1.1}
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-          textTransform={'uppercase'}
-        >
+          textTransform={'uppercase'}>
           dao punks
         </Heading>
         <Flex
@@ -56,25 +49,21 @@ export default function DaoPunksComponent() {
           align={'center'}
           position={'relative'}
           w={'full'}
-          display={{ base: 'flex', md: 'none' }}
-        >
+          display={{ base: 'flex', md: 'none' }}>
           <Box
             position={'relative'}
             height={'300px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
-            overflow={'hidden'}
-          >
+            overflow={'hidden'}>
             <Image
               alt={'Hero Image'}
               fit={'cover'}
               align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'https://s3-alpha-sig.figma.com/img/4774/d8b2/195826b329e8056306635c8dcf537224?Expires=1649030400&Signature=WVDyJstJNhBUccWHe24C7124lxg2x-yEL7Bl0Sq-BQANpqOGzJsneDYECifyejz6LVxzEy7KNje-04h9Z5DAPTW08UQXMNN7A7mYP6aKXJvSIMclGxdnUHNmC1KB7hRFBq-LmuvL0a-y1fyFAWXD1WvLcI3egAPpPeWrSmemvvZOmJrxkw~O7GsQ4wxt7unPriY2oUD~az3ANrwhgQMn0ToS3ut6S~z4G1MHjREqg-bLIfN5nqdkQfPNYG1tOXKILopv32HRk8RVj48REbKuKkamHbU40XNaVbXDhLgJj~r1zVZeK8X4iOFB4YnEjY6tQ5mKmpOH2lvyuiPzNxP2mA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-              }
+              w={'90%'}
+              h={'90%'}
+              src={'/images/DAO-Punk-Invest.png'}
             />
           </Box>
         </Flex>
@@ -87,9 +76,8 @@ export default function DaoPunksComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}
-        >
-          <Link href={'/#'} passHref={true}>
+          spacing={'12px'}>
+          <Link href='https://opensea.io/collection/daopunksnft' isExternal>
             <Flex align={'center'} color={'white.100'}>
               <Text mr={'0.5rem'} fontSize={{ sm: 'sm', md: 'md' }}>
                 Invest in a DAOPunk NFT
