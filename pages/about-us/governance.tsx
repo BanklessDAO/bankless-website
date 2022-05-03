@@ -1,5 +1,3 @@
-import { Container } from '@chakra-ui/react'
-import PageContainer from 'components/common/page-container'
 import GovernanceIntroComponent from 'components/about-us/sub-pages/Governance/intro'
 import GovernanceKickstartComponent from 'components/about-us/sub-pages/Governance/kickstart'
 import GovernanceRequirementComponent from 'components/about-us/sub-pages/Governance/requirements'
@@ -9,15 +7,13 @@ import GovernanceStartComponent from 'components/about-us/sub-pages/Governance/s
 
 export default function GovernancePage() {
   return (
-    <PageContainer>
-      <Container maxW={'5xl'}>
-        <GovernanceIntroComponent />
-        <GovernanceKickstartComponent />
-        <GovernanceRequirementComponent />
-        <GovernanceSeasonComponent />
-        <GovernanceContributorComponent />
-        <GovernanceStartComponent />
-      </Container>
-    </PageContainer>
+    <>
+      <GovernanceIntroComponent />
+      <GovernanceKickstartComponent />
+      <GovernanceRequirementComponent />
+      <GovernanceSeasonComponent />
+      <GovernanceContributorComponent />
+      <GovernanceStartComponent />
+    </>
   )
 }
