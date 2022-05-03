@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Image } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 
 export default function NodesIntroComponent() {
@@ -8,14 +8,12 @@ export default function NodesIntroComponent() {
         as={Box}
         textAlign={'center'}
         spacing={{ base: 4, md: 6 }}
-        py={{ base: 10, md: 18 }}
-      >
+        py={{ base: 10, md: 18 }}>
         <Heading
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
-          color={'white.100'}
-        >
+          color={'white.100'}>
           Portal to Nodes
           <Underline />
         </Heading>
@@ -24,18 +22,19 @@ export default function NodesIntroComponent() {
           <Text
             color={'red'}
             fontSize={{ sm: 'sm', md: 'md' }}
-            display={'inline'}
-          >
+            display={'inline'}>
             {' '}
             &nbsp;ecosystem of nodes&nbsp;
           </Text>
           that amplify the Bankless movement.
         </Text>
       </Stack>
-      <Box
-        background={'#C4C4C4'}
-        height={{ base: '20rem', sm: '25rem', lg: '29rem' }}
+      <Image
         width={'full'}
+        height={{ base: '13rem', sm: '17rem', lg: '24rem' }}
+        objectFit='cover'
+        src='/images/ecosystem-nodes.jpg'
+        alt='Photo by Go to Choong Deng Xiang on Unsplash'
       />
     </>
   )
