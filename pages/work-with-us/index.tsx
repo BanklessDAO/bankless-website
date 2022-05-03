@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Container } from '@chakra-ui/react'
-import PageContainer from 'components/common/page-container'
 import IntroductionComponent from 'components/work-with-us/introduction'
 import carouselsData from '../../assets/content/pages/work-with-us/carouselContent.json'
 import Carousel from 'components/work-with-us/Carousel'
@@ -18,13 +16,11 @@ export default function WorkWithUsPage() {
     })
 
   return (
-    <PageContainer>
-      <Container maxW={{ base: '100%', md: '700px', xl: '1232px' }} p={{base: '2rem', md:0}} pt={{base: 0}}>
-        <IntroductionComponent />
-        {carouselsData.map((carousel, index) => (
-          <Carousel width={width} carouselIndex={index} {...carousel} />
-        ))}
-      </Container>
-    </PageContainer>
+    <>
+      <IntroductionComponent />
+      {carouselsData.map((carousel, index) => (
+        <Carousel width={width} carouselIndex={index} {...carousel} />
+      ))}
+    </>
   )
 }
