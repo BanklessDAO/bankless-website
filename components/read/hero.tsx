@@ -2,16 +2,17 @@ import React from 'react'
 import Image from 'next/image'
 
 import { Box, Flex, Text, HStack, VStack, Link } from '@chakra-ui/react'
+import { ChakraNextImage } from 'components/common/ChakraNextImage'
 
 class Hero extends React.Component {
   render() {
     return (
       <Flex
         flexDirection='column'
-        justifyContent='center'
-        alignItems='center'
+        justifyContent='start'
+        alignItems='start'
         rowGap={8}>
-        <HStack>
+        <HStack position='relative'>
           <VStack
             alignItems='start'
             width={{ base: '100%', md: '60%' }}
@@ -27,12 +28,25 @@ class Hero extends React.Component {
             </Text>
           </VStack>
 
-          <Box display={{ base: 'none', md: 'flex' }}>
-            <Image
+          <Box
+            display={{ base: 'none', md: 'flex' }}
+            position='absolute'
+            right='8%'
+            top={0}>
+            <ChakraNextImage
               src='/read/pen-01.png'
-              height={250}
-              width={250}
+              height={446 * 0.75}
+              width={446 * 0.75}
               alt='Bhutan'
+              zIndex={1}
+            />
+            <Box
+              height={446}
+              width={446}
+              bg='linear-gradient(121.75deg, rgba(255, 16, 19, 0.5) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
+              position='absolute'
+              zIndex='0'
+              filter='blur(600px)'
             />
           </Box>
         </HStack>
@@ -40,8 +54,9 @@ class Hero extends React.Component {
         <Flex
           flexDirection={{ base: 'column', md: 'row' }}
           columnGap={8}
-          rowGap={8}>
-          <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
+          rowGap={8}
+          pt={'6rem'}>
+          <VStack alignItems='start' maxW={{ base: '100%', md: '40%' }}>
             <Flex
               justify='center'
               alignItems='center'
