@@ -1,41 +1,45 @@
-import { Box, Heading, Text, Stack, Image } from '@chakra-ui/react'
+import { Box, Heading, Text, VStack } from '@chakra-ui/react'
+import { ChakraNextImage } from 'components/common/ChakraNextImage'
 
 export default function IntroductionComponent() {
   return (
     <>
-      <Stack
+      <VStack
         as={Box}
         textAlign={'center'}
         spacing={{ base: 8, md: 14 }}
-        py={{ base: 10, md: 18 }}
-      >
+        pt={{ base: 0, md: 18 }}
+        pb={{ base: 10, md: 18 }}
+        mb={{base: 0, md:8}}>
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
+          fontSize={{ base: '4xl', sm: '3xl', md: '7xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-        >
-          Web3 products and services <br />
-          <Text
-            as={'span'}
-            fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
-            color={'white.100'}
-          >
-            from crypto-native contributors
-          </Text>
+          maxW={'94%'}
+          fontFamily='Clear Sans'>
+          {`Web3 products and services \n from crypto-native contributors`}
         </Heading>
-        <Text color={'white.200'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ base: 'md' }}
+          m={0}
+          marginTop={'2rem'}
+          w={{sm: '92%', md: '56%'}}
+          fontFamily='Clear Sans'>
           BanklessDAO has multiple consulting, media, and development arms
           within its arsenal.
           <br />
           Commission BanklessDAO’s talent now:
         </Text>
-      </Stack>
-      <Image
-        src='https://s3-alpha-sig.figma.com/img/0f18/3244/e837c8f46ec201516964fef09d67be10?Expires=1649030400&Signature=ci4FqcBv7OM7OU7FEjfQVyEITgrC7mel8HZWDf9hG~nGoR03MmFcfiFpKahD8wUd0-peecweyMdY9VblOZ3yAQIJLGRp6uc0pZnccK4LDdJh4Locpy08ErbRHVeu61nyW-USSFRmPc9Ymdgi7DKc~DkmzlZIty-bwGMaBKwaKskJfMCkpCxwYeH8RQibW4Kuyd9KDKBgnTVbeSYcAZ2BTjG3a~qTE3IyVTeFL4ZAOjQZnFcVYCro0pfxYw1JvfckD1D7Gv9JGWBanbYfip6VXNJAZGDckZj2OjiYWytC0wV8P0obP00bdhaDJnambeVRFDGplUPvzukuQNRj0-N0Vg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+      </VStack>
+      <ChakraNextImage
+        src='/images/work-with-us/work-with-us-1.jpg'
         alt='Web3 products and services'
-        height={{ sm: '27rem', lg: '31rem' }}
+        height={{ base:'224px', lg: '400px' }}
         width={'full'}
+        objectFit='cover'
+        borderRadius='104px'
       />
     </>
   )
