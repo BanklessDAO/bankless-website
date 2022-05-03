@@ -35,7 +35,9 @@
       },
       {
         "title": "Global Tax Consultancy",
-        "paras": ["CHANGE ME"],
+        "paras": [
+          "The Global Tax Guide will provide general introductory information regarding virtual-currency-related income tax laws from major jurisdictions throughout the world. Access to the Global Tax Guide will be granted by minting Form 69."
+        ],
         "cta": {
           "text": "the Ultimate Crypto Tax Guide",
           "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r"
@@ -71,7 +73,7 @@
         "paras": ["CHANGE ME"],
         "cta": {
           "text": "Bounty Board",
-          "link": "https://bountyboard.bankless.community"
+          "link": "https://www.bountyboard.xyz/"
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-7.jpg",
@@ -142,7 +144,9 @@
       },
       {
         "title": "Custom Designs",
-        "paras": ["CHANGE ME"],
+        "paras": [
+          "BanklessDAO Design Guild offers next-gen visual services for Web3-native organizations. We are a team of professional designers that offers website designs, mobile app designs, pitch deck designs, logo, and branding creation who are well equipped with theoretical knowledge and software materials and possess hands-on experience."
+        ],
         "cta": {
           "text": "the Design Guild",
           "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c"
