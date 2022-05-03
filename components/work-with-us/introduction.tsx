@@ -1,42 +1,45 @@
-import { Box, Heading, Text, Stack } from '@chakra-ui/react'
+import { Box, Heading, Text, VStack } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/common/ChakraNextImage'
 
 export default function IntroductionComponent() {
   return (
     <>
-      <Stack
+      <VStack
         as={Box}
         textAlign={'center'}
         spacing={{ base: 8, md: 14 }}
-        py={{ base: 10, md: 18 }}
-        mb={8}>
+        pt={{ base: 0, md: 18 }}
+        pb={{ base: 10, md: 18 }}
+        mb={{base: 0, md:8}}>
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
+          fontSize={{ base: '4xl', sm: '3xl', md: '7xl' }}
           lineHeight={'110%'}
-          color={'white.100'}>
-          Web3 products and services <br />
-          <Text
-            as={'span'}
-            fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
-            color={'white.100'}>
-            from crypto-native contributors
-          </Text>
+          color={'white.100'}
+          maxW={'94%'}
+          fontFamily='Clear Sans'>
+          {`Web3 products and services \n from crypto-native contributors`}
         </Heading>
-        <Text color={'white.200'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ base: 'md' }}
+          m={0}
+          marginTop={'2rem'}
+          w={{sm: '92%', md: '56%'}}
+          fontFamily='Clear Sans'>
           BanklessDAO has multiple consulting, media, and development arms
           within its arsenal.
           <br />
           Commission BanklessDAO’s talent now:
         </Text>
-      </Stack>
+      </VStack>
       <ChakraNextImage
         src='/images/work-with-us/work-with-us-1.jpg'
         alt='Web3 products and services'
-        height={{ sm: '27rem', lg: '400px' }}
+        height={{ base:'224px', lg: '400px' }}
         width={'full'}
         objectFit='cover'
-        borderRadius="104px"
+        borderRadius='104px'
       />
     </>
   )
