@@ -54,7 +54,8 @@
       {
         "title": "DEGEN",
         "paras": [
-          "Enter the next generation of DAO tooling with DEGEN. This powerhouse bot integrates with Discord to seamlessly perform administrative tasks such as distributing POAP links. Inquire about integrating DEGEN into your Discord server by filling out."
+          "Enter the next generation of DAO tooling with DEGEN.",
+          "This powerhouse bot integrates with Discord to seamlessly perform administrative tasks such as distributing POAP links. Inquire about integrating DEGEN into your Discord server by filling out."
         ],
         "cta": {
           "text": "Bankless DEGEN",
@@ -101,7 +102,8 @@
       {
         "title": "Audio/Visual Services",
         "paras": [
-          "Our AV Guild provides top-notch audio and visual services for Web3-native organizations. From audio production to voice-over talent to custom photography, bDAO's AV experts offer a service to level-up your organization's audio and visual assets. Commission an AV expert by filling out this form."
+          "Our AV Guild provides top-notch audio and visual services for Web3-native organizations.",
+          "From audio production to voice-over talent to custom photography, bDAO's AV experts offer a service to level-up your organization's audio and visual assets. Commission an AV expert by filling out this form."
         ],
         "cta": {
           "text": "Bankless AV Guild",
@@ -159,7 +161,8 @@
       {
         "title": "Newsletter Sponsorships",
         "paras": [
-          "Sponsor any of our newsletters and reach tens of thousands of readers every week. Choose from Weekly Rollup, State of the DAOs, Decentralized Art, Decentralized Law, and Gearing up, as well as a variety of languages, to reach your perfect audience. Inquire about sponsoring a newsletter by filling out this form."
+          "Sponsor any of our newsletters and reach tens of thousands of readers every week.",
+          "Choose from Weekly Rollup, State of the DAOs, Decentralized Art, Decentralized Law, and Gearing up, as well as a variety of languages, to reach your perfect audience. Inquire about sponsoring a newsletter by filling out this form."
         ],
         "cta": {
           "text": "Bankless Newsletters",
@@ -172,9 +175,7 @@
       },
       {
         "title": "Podcast Sponsorships",
-        "paras": [
-          "CHANGE ME"
-        ],
+        "paras": ["CHANGE ME"],
         "cta": {
           "text": "Bankless AV Guild",
           "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
@@ -186,7 +187,9 @@
       },
       {
         "title": "Marketing Services",
-        "paras": ["Bankless Consulting is the world's first web3-native consulting firm. Whether you're a DAO or a traditional enterprise, we'll help you capture the potential of the rapidly expanding decentralized economy."],
+        "paras": [
+          "Bankless Consulting is the world's first web3-native consulting firm. Whether you're a DAO or a traditional enterprise, we'll help you capture the potential of the rapidly expanding decentralized economy."
+        ],
         "cta": {
           "text": "Bankless Consulting",
           "link": "https://www.banklessconsulting.com/"
