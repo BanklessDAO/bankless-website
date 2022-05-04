@@ -1,5 +1,4 @@
-import { Box, Text, Stack, Flex, Image, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function WebsiteProjectComponent() {
@@ -8,32 +7,27 @@ export default function WebsiteProjectComponent() {
       align={'center'}
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row' }}
-    >
+      direction={{ base: 'column', md: 'row' }}>
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
-        w={'full'}
-      >
+        w={'full'}>
         <Box
           position={'relative'}
           height={'300px'}
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}
-        >
+          overflow={'hidden'}>
           <Image
-            alt={'Hero Image'}
+            alt={'Photo by Ben Kolde on Unsplash'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={
-              'https://s3-alpha-sig.figma.com/img/4b5f/b25a/30064034cda3f80e98d0cbdb50827535?Expires=1649030400&Signature=MnJZCG6zuAu2aEEhAIJ7kWUeUGegL83eZt9u1LPITYlXIkrGJV5-g996y5wji85JWEWQiI2DfBBCvGSw8Ha5jN63o4zycWu5s2WpXiMkEiu-ZThXwOW3Kq6HihuN1EvRk2nSJYT7gwb2Ac8fFGNk-6jMS4aib4N6OYc3TCiRq-c0yT21EokZvnZC74mckEu6wTrvp7Sg0EzbjBnHoWBRCzuigDwu-Zpw6yaokCPKfKWTSJABFvVs4JsYFJDMM4hukdyQDU6hiGGPp~afRkDcnvgw9Qf-vbGyhP30reGnTw7YEHpZhjzAIQ3wSAoxWIlWaPVmGJCIbdaHFrx4RxavUw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-            }
+            src={'/images/website.jpg'}
           />
         </Box>
       </Flex>
@@ -43,8 +37,7 @@ export default function WebsiteProjectComponent() {
           color={'gray.100'}
           lineHeight={1.1}
           fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
-        >
+          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
           WEBSITE PROJECT
         </Heading>
         <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -55,9 +48,10 @@ export default function WebsiteProjectComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}
-        >
-          <Link href={'/#'} passHref={true}>
+          spacing={'12px'}>
+          <Link
+            href='https://www.notion.so/bankless/bDAO-Website-1320df854ac54cb3a65018173b9e5445'
+            isExternal>
             <Flex align={'center'} color={'white.100'}>
               Learn More <FiArrowUpRight />
             </Flex>
