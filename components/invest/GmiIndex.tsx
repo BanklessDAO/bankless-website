@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import { Flex, Text, Container, VStack, Button, Box } from '@chakra-ui/react'
+import { Flex, Text, Container, VStack, Button, Box, Link } from '@chakra-ui/react'
 
 function GmiIndex() {
   return (
-    <Container maxW={'6xl'} p={0}>
+    <Container maxW={{ base: 'container.sm', md: 'container.lg' }} p={0}>
       <Flex flexDirection={{ base: 'column', md: 'row' }} py={10}>
         <VStack spacing={10}>
           <Container
@@ -28,8 +28,7 @@ function GmiIndex() {
               color={'#D02128'}
               lineHeight='43px'
               fontSize='36px'
-              fontWeight={700}
-              mt={2}>
+              fontWeight={700}>
               Are you GMI?
             </Text>
           </Container>
@@ -50,22 +49,19 @@ function GmiIndex() {
             justifyContent='space-evenly'
             alignItems={'center'}
             flexDirection={{ base: 'column', md: 'row' }}>
-            <Button
-              fontWeight={800}
-              margin='10px 0px;'
-              onClick={() =>
-                window.open('https://app.indexcoop.com/gmi', '_blank')
-              }>
-              <Container padding={0} paddingRight={2}>
-                <Image
-                  src='/images/bed-token.png'
-                  alt='bed-token'
-                  height={23}
-                  width={23}
-                />
-              </Container>
-              Invest in GMI index
-            </Button>
+            <Link href='https://app.indexcoop.com/gmi' isExternal>
+              <Button as='a' textDecorationLine={'none'}>
+                <Container padding={0} paddingRight={2}>
+                  <Image
+                    src='/images/bed-token.png'
+                    alt='bed-token'
+                    height={23}
+                    width={23}
+                  />
+                </Container>
+                Invest in GMI index
+              </Button>
+            </Link>
           </Container>
         </VStack>
       </Flex>
