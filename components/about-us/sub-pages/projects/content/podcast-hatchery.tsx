@@ -1,5 +1,4 @@
-import { Box, Text, Stack, Flex, Image, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function PodcastHatcheryComponent() {
@@ -8,32 +7,27 @@ export default function PodcastHatcheryComponent() {
       align={'center'}
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row-reverse' }}
-    >
+      direction={{ base: 'column', md: 'row-reverse' }}>
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
-        w={'full'}
-      >
+        w={'full'}>
         <Box
           position={'relative'}
           height={'300px'}
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}
-        >
+          overflow={'hidden'}>
           <Image
-            alt={'Hero Image'}
+            alt={'Photo by Jukka Aalho on Unsplash'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={
-              'https://s3-alpha-sig.figma.com/img/01fa/079b/ac123ea8d337e7c5488d6c5603e3b9b3?Expires=1649030400&Signature=Po2c-F8DQUy~q2Ns2SO5ChzS6sV8IVM4yyJ-IH-x~4oIChLHovP2j27L4KcnomCLE5QKnHw9s2KFhnA10WdJU41rSXeeKD8COidkTVLBCkuNucQaTrUEwgS21MIj71L67rirt4tiVaOoDLKr29GeOpFgxsdzq2XaZcvCoGxcqXhJRrd8Pyz28NJ1h9Dqf~~ZmbRTWv2DflmMgKZp~aIQgUEfDR7sZtXOhvyNVadgg8Kv0wsFJsJhYOoJuNStKAo8LFHWd-qLR6c6GYtuXSKV1KcTKpMZI69xsYBGBHkPHpQv-bEhSVPy0RIuob5waUNrCnuNoNuNfaMIlHMuJfGxAg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-            }
+            src={'/images/podcast.jpg'}
           />
         </Box>
       </Flex>
@@ -43,8 +37,7 @@ export default function PodcastHatcheryComponent() {
           color={'gray.100'}
           lineHeight={1.1}
           fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
-        >
+          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
           PODCAST HATCHERY
         </Heading>
         <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -56,9 +49,10 @@ export default function PodcastHatcheryComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}
-        >
-          <Link href={'/#'} passHref={true}>
+          spacing={'12px'}>
+          <Link
+            href='https://bankless.notion.site/Podcast-Hatchery-0c2676175267445180c8f5cb3d3f14bb'
+            isExternal>
             <Flex align={'center'} color={'white.100'}>
               Learn More <FiArrowUpRight />
             </Flex>
