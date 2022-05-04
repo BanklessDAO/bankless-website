@@ -57,8 +57,9 @@ class Hero extends React.Component {
           columnGap={8}
           rowGap={8}
           pt={'8rem'}
+          pl={'4rem'}
           position='relative'>
-          <VStack alignItems='start' maxW={{ base: '100%', md: '40%' }}>
+          <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
             <Flex
               justify='center'
               alignItems='center'
@@ -124,16 +125,16 @@ class Hero extends React.Component {
             </Text>
           </VStack>
           <Box
-              height={432}
-              width={432}
-              borderRadius='50%'
-              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
-              position='absolute'
-              zIndex='0'
-              filter='blur(282px)'
-              transition={''}
-              transform={'rotate(9.1deg)'}
-            />
+            height={432}
+            width={432}
+            borderRadius='50%'
+            bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
+            position='absolute'
+            zIndex='0'
+            filter='blur(282px)'
+            transition={''}
+            transform={'rotate(9.1deg)'}
+          />
         </Flex>
       </Flex>
     )
