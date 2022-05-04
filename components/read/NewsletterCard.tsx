@@ -1,12 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
 import { Text, Box, Link, GridItem } from '@chakra-ui/react'
+import { ChakraNextImage } from 'components/common/ChakraNextImage'
 type NewsletterCardProps = {
   title: string
   text: string
   href: string
   colSpan?: number
   rowSpan?: number
+  image?: NewsletterCardImage
+}
+
+type NewsletterCardImage = {
+  src: string
+  alt: string
 }
 
 export const NewsletterCard = ({
@@ -15,6 +22,7 @@ export const NewsletterCard = ({
   href,
   colSpan,
   rowSpan,
+  image,
 }: NewsletterCardProps) => {
   return (
     <GridItem
@@ -26,7 +34,8 @@ export const NewsletterCard = ({
       m={0}
       rowSpan={{ base: 1, md: rowSpan || 1 }}
       colSpan={{ base: 1, md: colSpan || 1 }}
-      listStyleType={'none'}>
+      listStyleType={'none'}
+      pos='relative'>
       <Text
         fontSize='5xl'
         fontWeight={900}
@@ -55,6 +64,18 @@ export const NewsletterCard = ({
           <Image src='/icons/arrow.png' alt='arrow' height={10} width={10} />
         </Box>
       </Link>
+      {image && (
+        <ChakraNextImage
+          src={image.src}
+          alt={image.alt}
+          pos='absolute'
+          width='30vw'
+          height="28vw"
+          zIndex={2}
+          bottom={-20}
+          right={10}
+        />
+      )}
     </GridItem>
   )
 }
