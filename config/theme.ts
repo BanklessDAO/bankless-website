@@ -1,4 +1,5 @@
 import { extendTheme, withDefaultVariant } from '@chakra-ui/react'
+import "@fontsource/clear-sans";
 
 const variantOutlined = () => ({
   field: {
