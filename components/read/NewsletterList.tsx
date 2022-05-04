@@ -1,65 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
 import { ulid } from 'ulid'
-import { HStack, Text, Grid, Box, Link, GridItem } from '@chakra-ui/react'
+import { HStack, Text, Grid, Box } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
+import { NewsletterCard } from './NewsletterCard'
 
-type NewsletterCardProps = {
-  title: string
-  text: string
-  href: string
-  colSpan?: number
-  rowSpan?: number
-}
 
-const NewsletterCard = ({
-  title,
-  text,
-  href,
-  colSpan,
-  rowSpan,
-}: NewsletterCardProps) => {
-  return (
-    <GridItem
-      alignItems='start'
-      bgColor={'#101010'}
-      padding={4}
-      borderRadius={8}
-      rowSpan={{ base: 1, md: rowSpan || 1 }}
-      colSpan={{ base: 1, md: colSpan || 1 }}>
-      <Text
-        fontSize='5xl'
-        fontWeight={900}
-        fontFamily='Clear Sans'
-        lineHeight={1.2}>
-        {title}
-      </Text>
-      <Text
-        fontSize='xl'
-        color='rgba(255, 255, 255, 0.57)'
-        fontFamily='Clear Sans'
-        lineHeight={1.5}
-        pt='1em'>
-        {text}
-      </Text>
-      <Link
-        display='flex'
-        alignItems='center'
-        marginRight='2'
-        marginTop={6}
-        href={href}>
-        <Text fontSize='xl' marginRight={2} fontFamily='Clear Sans'>
-          View
-        </Text>
-        <Box>
-          <Image src='/icons/arrow.png' alt='arrow' height={10} width={10} />
-        </Box>
-      </Link>
-    </GridItem>
-  )
-}
-
-const Newsletter: React.FC = () => {
+export const NewsletterList: React.FC = () => {
   const newsletters = [
     {
       title: 'The Weekly Rollup',
@@ -102,7 +48,7 @@ const Newsletter: React.FC = () => {
     <HStack
       flexDir='column'
       justifyContent='start'
-      alignItems='start'
+      alignItems='start'  
       rowGap={{ base: 2, md: 4 }}
       pt={'8rem'}
       pos='relative'>
@@ -119,12 +65,13 @@ const Newsletter: React.FC = () => {
       </Box>
 
       <Grid
-        as='section'
+        as='ul'
         gridTemplateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         templateRows={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         gap={4}
         zIndex={1}
-        margin={0}
+        m={0}
+        p={0}
         w='100%'
         h='100%'>
         {newsletters.map(newsletter => (
@@ -147,5 +94,3 @@ const Newsletter: React.FC = () => {
     </HStack>
   )
 }
-
-export default Newsletter
