@@ -27,6 +27,10 @@ export const NewsletterList: React.FC = () => {
       href: 'https://banklessdao.substack.com/s/decentralized-law',
       rowSpan: 3,
       colSpan: 1,
+      image: {
+        src: '/images/read/token.png',
+        alt: 'token 3d graphic'
+      }
     },
     {
       title: 'State of the DAOs',
