@@ -25,7 +25,7 @@ class PodcastHatchery extends React.Component {
             The Podcast Hatchery
           </Text>
           <Text>
-            incubates audio storytelling projects. The team helps new podcasters find their audience,
+            Incubates audio storytelling projects. The team helps new podcasters find their audience,
             build their unique storytelling identity, and explore Web3 through interviews with
             thought-leaders in the space.
           </Text>
