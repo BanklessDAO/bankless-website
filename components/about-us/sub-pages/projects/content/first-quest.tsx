@@ -1,5 +1,4 @@
-import { Box, Text, Stack, Flex, Image, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function FirstQuestComponent() {
@@ -8,32 +7,27 @@ export default function FirstQuestComponent() {
       align={'center'}
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row-reverse' }}
-    >
+      direction={{ base: 'column', md: 'row-reverse' }}>
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
-        w={'full'}
-      >
+        w={'full'}>
         <Box
           position={'relative'}
-          height={'300px'}
+          height={'350px'}
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}
-        >
+          overflow={'hidden'}>
           <Image
-            alt={'Hero Image'}
+            alt={'First Quest onboarding'}
             fit={'cover'}
             align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={
-              'https://s3-alpha-sig.figma.com/img/cfa6/0842/60b051a65673af8a0669fc3085bac763?Expires=1649030400&Signature=ckeFJ439nUjtOZPHNm8XU2lrwdV7Y0PVmISN0-QWd7UsQHrYbO2xQQb97owda-Ym4HQlfeh3LoBd2bBt4~Cf87DPqWvhXJHRJZYY7jwSR0pXRAdvhX9uA8MffR0UIjibiPku-t8dngsOudkEPqN4LfSezkA2iKI49H26H~QxxB3kZWq5YnJrnWxAw6ljHAWGizGGEBS38Py55bpbe7dTmrrwAk0TGxRhbx01x4GGE9dpHwwJj0FzvKIfSXoUeAapdxL9YoScC23FLoWCR~-CNucKTJVZELumUwnVcPBUpQVMP-LZCPhH1jxOxvlEXrm4vStj76fwHoD0zUvKgODwuQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-            }
+            w={'85%'}
+            h={'85%'}
+            src={'/images/first-quest.png'}
           />
         </Box>
       </Flex>
@@ -43,8 +37,7 @@ export default function FirstQuestComponent() {
           color={'gray.100'}
           lineHeight={1.1}
           fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
-        >
+          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
           FIRST QUEST
         </Heading>
         <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -55,9 +48,11 @@ export default function FirstQuestComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}
-        >
-          <Link href={'/#'} passHref={true}>
+          spacing={'12px'}>
+            {/* TODO confirm link */}
+          <Link
+            href='https://bankless.notion.site/First-Quest-Project-Page-abc1393b83ae47f5836004ae96f55072'
+            isExternal>
             <Flex align={'center'} color={'white.100'}>
               Learn More <FiArrowUpRight />
             </Flex>

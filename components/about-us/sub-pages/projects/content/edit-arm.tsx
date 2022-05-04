@@ -1,5 +1,4 @@
-import { Box, Text, Stack, Flex, Image, Heading } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function EditArmProjectComponent() {
@@ -8,32 +7,27 @@ export default function EditArmProjectComponent() {
       align={'center'}
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row' }}
-    >
+      direction={{ base: 'column', md: 'row' }}>
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
-        w={'full'}
-      >
+        w={'full'}>
         <Box
           position={'relative'}
           height={'300px'}
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}
-        >
+          overflow={'hidden'}>
           <Image
-            alt={'Hero Image'}
+            alt={'Photo by Matthew Kwong on Unsplash'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={
-              'https://s3-alpha-sig.figma.com/img/bb00/09e0/5c9af7754edea2751d3c304c26f4f248?Expires=1649030400&Signature=geQgCIaCGmwnOsEshWTJSb~DP6PPPjD2cqlsI31LrjD~QQfsv94rB-jQYw3bMvMbecUV6pozOLWgFF-hMSqu29JH4smUJMajZ0y97yIP97xmDflRYnqF8w-nqL6Reh59ba97fvSCos0J5fwNMrS8hrX7aatpUu8MqYeiQCyPHDTAR1UYiLrnFj~adf3UR99w7FIn9gpx6d~PXT7xm6hoG-6siMZ4KtKm6WMeG8quiEytCpWoP2p6zhXrCNuuHcBj4Xfkp9IrdCtMFSv4kE2Wv3VE8~U8QF92lLP6O7ANHzrLLbX84LoTjZqcbeyV02WS-p4abM7o9mvk0cJo1HJasQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-            }
+            src={'/images/editing-publishing.jpg'}
           />
         </Box>
       </Flex>
@@ -43,8 +37,7 @@ export default function EditArmProjectComponent() {
           color={'gray.100'}
           lineHeight={1.1}
           fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
-        >
+          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
           EDITING AND PUBLISHING ARM OF EPA
         </Heading>
         <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -56,9 +49,11 @@ export default function EditArmProjectComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}
-        >
-          <Link href={'/#'} passHref={true}>
+          spacing={'12px'}>
+            {/* TODO confirm this link */}
+          <Link
+            href='https://bankless.notion.site/The-Editorial-Publishing-Arm-EPA-5218f8cbb6214fb7803c2d76553d23fa'
+            isExternal>
             <Flex align={'center'} color={'white.100'}>
               Learn More <FiArrowUpRight />
             </Flex>
