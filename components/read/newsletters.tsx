@@ -22,24 +22,33 @@ const NewsletterCard = ({
   return (
     <GridItem
       alignItems='start'
-      background='#222222'
+      bgColor={'#101010'}
       padding={4}
       borderRadius={8}
       rowSpan={{ base: 1, md: rowSpan || 1 }}
       colSpan={{ base: 1, md: colSpan || 1 }}>
-      <Text fontSize='3xl' fontWeight={700}>
+      <Text
+        fontSize='5xl'
+        fontWeight={900}
+        fontFamily='Clear Sans'
+        lineHeight={1.2}>
         {title}
       </Text>
-      <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>
+      <Text
+        fontSize='xl'
+        color='rgba(255, 255, 255, 0.57)'
+        fontFamily='Clear Sans'
+        lineHeight={1.5}
+        pt='1em'>
         {text}
       </Text>
       <Link
         display='flex'
         alignItems='center'
         marginRight='2'
-        marginTop='8'
+        marginTop={6}
         href={href}>
-        <Text fontSize='sm' marginRight={2}>
+        <Text fontSize='xl' marginRight={2} fontFamily='Clear Sans'>
           View
         </Text>
         <Box>
@@ -84,7 +93,7 @@ const Newsletter: React.FC = () => {
       title: 'Gearing Up',
       text: 'Weekly bDAO project and guild highlights newsletter to help members stay up to speed on all internal bDAO updates.',
       href: 'https://banklessdao.substack.com/s/gearing-up?utm_source=substack&utm_medium=menu',
-      rowSpan: 2,
+      rowSpan: 1,
       colSpan: 2,
     },
   ]
@@ -94,22 +103,47 @@ const Newsletter: React.FC = () => {
       flexDir='column'
       justifyContent='start'
       alignItems='start'
-      rowGap={{ base: 2, md: 4 }}>
-      <Box>
-        <Text fontWeight={700} fontSize='6xl' textAlign='center' maxW={750}>
+      rowGap={{ base: 2, md: 4 }}
+      pt={'8rem'}
+      pos='relative'>
+      <Box zIndex={1}>
+        <Text
+          fontWeight={700}
+          fontSize='6xl'
+          textAlign='center'
+          maxW={750}
+          fontFamily='Clear Sans'>
           Newsletters
         </Text>
         <Underline />
       </Box>
 
       <Grid
+        as='section'
         gridTemplateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         templateRows={{ base: '1fr', md: 'repeat(3, 1fr)' }}
-        gap={4}>
+        gap={4}
+        zIndex={1}
+        margin={0}
+        w='100%'
+        h='100%'>
         {newsletters.map(newsletter => (
           <NewsletterCard {...newsletter} key={ulid()} />
         ))}
       </Grid>
+      <Box
+        w={'1294px'}
+        h={'1044px'}
+        pos='absolute'
+        top={0}
+        bgColor='magenta'
+        zIndex={0}
+        borderRadius='50%'
+        transform={'rotate(9.1deg)'}
+        bgGradient='linear-gradient(121.75deg, rgba(255,16,19) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
+        filter={'blur(281.004px)'}
+        opacity={0.2}
+      />
     </HStack>
   )
 }
