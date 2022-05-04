@@ -1,15 +1,5 @@
-import type { NextPage } from 'next'
+import Home from 'components/home'
 
-import PageContainer from 'components/common/page-container'
-
-import Section1 from 'components/home/section1'
-
-const HomePage: NextPage = () => {
-    return (
-        <PageContainer>
-            <Section1 />
-        </PageContainer>
-    )
+export default function HomePage() {
+  return <Home />
 }
-
-export default HomePage
