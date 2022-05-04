@@ -21,7 +21,7 @@ class Satire extends React.Component {
             fontFamily='Clear Sans'>
             Satire
           </Text>
-          <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>
+          <Text fontSize='lg' color='rgba(255, 255, 255, 0.57)'>
             A satire publication that takes money, seriously. Read and collect
             NFTs of their editions on{' '}
             <Link color='white' href='https://therug.mirror.xyz/'>

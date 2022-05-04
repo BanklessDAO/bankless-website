@@ -7,19 +7,19 @@ import Underline from 'components/common/underline'
 class Section1 extends React.Component {
   render() {
     return (
-      <Container maxW='3xl' centerContent>
+      <Container maxW='100%' centerContent pt={'6rem'}>
         <Flex
           flexDir='column'
           gap={4}
           justifyContent='center'
           alignItems='center'>
-          <Box>
+          <Box >
             <Heading as='h2' size='xl' color='white' textTransform='uppercase'>
               International Media Nodes
             </Heading>
             <Underline />
           </Box>
-          <Text fontSize='md' color='rgba(255, 255, 255, 0.57)'>
+          <Text fontSize='lg' color='rgba(255, 255, 255, 0.57)' px='6rem' textAlign='center'>
             International Media Nodes (IMN) are Bankless channels that spread
             the message of the Bankless movement beyond North America.They
             translate BanklessDAO content, publish original pieces, run Twitter
@@ -28,7 +28,8 @@ class Section1 extends React.Component {
 
           <Grid
             gridTemplateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
-            gap={8}>
+            gap={8}
+            mb='4rem'>
             <Box>
               <Image
                 src='/read/imn-assets/bhutan.png'
