@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^1.8.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fontsource/clear-sans": "^4.5.3",
     "@hookform/resolvers": "^2.8.8",
     "framer-motion": "^5.6.0",
     "lodash": "^4.17.21",
@@ -20,6 +21,9 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.25.3",
     "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "rgt": "^1.0.7",
+    "ulid": "^2.3.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
