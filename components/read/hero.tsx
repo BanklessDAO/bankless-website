@@ -35,18 +35,19 @@ class Hero extends React.Component {
             top={0}>
             <ChakraNextImage
               src='/read/pen-01.png'
-              height={446 * 0.75}
-              width={446 * 0.75}
+              height={385}
+              width={385}
               alt='Bhutan'
               zIndex={1}
             />
             <Box
-              height={446}
-              width={446}
-              bg='linear-gradient(121.75deg, rgba(255, 16, 19, 0.5) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
+              height={385}
+              width={385}
+              borderRadius='50%'
+              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
               position='absolute'
               zIndex='0'
-              filter='blur(600px)'
+              filter='blur(282px)'
             />
           </Box>
         </HStack>
@@ -55,7 +56,8 @@ class Hero extends React.Component {
           flexDirection={{ base: 'column', md: 'row' }}
           columnGap={8}
           rowGap={8}
-          pt={'6rem'}>
+          pt={'8rem'}
+          position='relative'>
           <VStack alignItems='start' maxW={{ base: '100%', md: '40%' }}>
             <Flex
               justify='center'
@@ -121,6 +123,17 @@ class Hero extends React.Component {
               BanklessDAO history and season recaps posted publicly.
             </Text>
           </VStack>
+          <Box
+              height={432}
+              width={432}
+              borderRadius='50%'
+              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
+              position='absolute'
+              zIndex='0'
+              filter='blur(282px)'
+              transition={''}
+              transform={'rotate(9.1deg)'}
+            />
         </Flex>
       </Flex>
     )
