@@ -44,7 +44,6 @@ export default function NodesBanklessHQComponent() {
               </Flex>
             </Link>
           </Flex>
-          {/* TODO add url */}
           <Flex align={'center'} color={'white.100'}>
             <Link href='/' isExternal>
               <Flex align={'center'} color={'white.100'}>
