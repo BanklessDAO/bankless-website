@@ -9,7 +9,8 @@ import {
   Tab,
   TabPanel,
 } from '@chakra-ui/react'
-import { CarouselSlideProps, CarouselSlide } from './CarouselSlide'
+import {  CarouselSlide } from './CarouselSlide'
+import { ulid } from 'ulid'
 
 type CarouselProps = {
   width: number
@@ -73,6 +74,7 @@ export default function Carousel({
         <TabList>
           {slides.map(({ title }: CarouselSlide) => (
             <Tab
+              key={ulid()}
               color={'white.100'}
               fontSize={{ base: '2xl', sm: 'sm', md: 'md' }}
               fontFamily='Clear Sans'
@@ -86,7 +88,7 @@ export default function Carousel({
         </TabList>
         <TabPanels>
           {slides.map(slide => (
-            <TabPanel p={0}>
+            <TabPanel p={0} key={ulid()}>
               <CarouselSlide {...slide} carouselIndex={carouselIndex} />
             </TabPanel>
           ))}

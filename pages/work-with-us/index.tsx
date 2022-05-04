@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import IntroductionComponent from 'components/work-with-us/introduction'
 import carouselsData from '../../assets/content/pages/work-with-us/carouselContent.json'
 import Carousel from 'components/work-with-us/Carousel'
+import { ulid } from 'ulid'
 
 export default function WorkWithUsPage() {
   // TODO : refactor this into a hook
@@ -19,7 +20,7 @@ export default function WorkWithUsPage() {
     <>
       <IntroductionComponent />
       {carouselsData.map((carousel, index) => (
-        <Carousel width={width} carouselIndex={index} {...carousel} />
+        <Carousel width={width} carouselIndex={index} {...carousel} key={ulid()} />
       ))}
     </>
   )

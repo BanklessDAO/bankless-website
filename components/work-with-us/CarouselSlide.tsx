@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, Stack, Flex } from '@chakra-ui/react'
 import { ConsultImage } from './ConsultImage'
 import { CTA } from './CTA'
+import { ulid } from 'ulid'
 
 export type CarouselSlideProps = {
   title: string
@@ -34,12 +35,13 @@ export function CarouselSlide({
       <Stack flex={1} spacing={{ base: 5, md: 6 }} alignContent='flex-start'>
         {paras.map(para => (
           <Text
+            key={ulid()}
             color={'gray.100'}
-            fontSize={{ base: 'lg', md: 'xl', 'lg': '2xl' }}
+            fontSize={{ base: 'lg', md: 'xl', lg: '2xl' }}
             textAlign='left'
             fontFamily='Clear Sans'
             lineHeight={1.5}
-            width={{base: '100%', lg: '80%'}}>
+            width={{ base: '100%', lg: '80%' }}>
             {para}
           </Text>
         ))}
