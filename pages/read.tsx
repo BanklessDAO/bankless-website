@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container, VStack, Flex } from '@chakra-ui/react'
 
 import Hero from '../components/read/hero'
 import { NewsletterList } from '../components/read/NewsletterList'

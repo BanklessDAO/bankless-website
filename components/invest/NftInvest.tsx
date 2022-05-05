@@ -21,10 +21,10 @@ function NftInvest() {
             width='458px'
             height='250px'>
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
-              Chippi are hand-drawn 1-of-1s from BanklessDAO contributor Perchy.
+              {`Chippi are hand-drawn 1-of-1s from BanklessDAO contributor Perchy.
               These profile pictures (PFPs) are members of the Chippiverse,
               playing a role in “The Future is DAO” storyline. Chippi inhabit
-              the Bankless Nation, a series of art pieces available as NFTs.
+              the Bankless Nation, a series of art pieces available as NFTs.`}
             </Text>
             <Container
               position='absolute'
@@ -53,10 +53,10 @@ function NftInvest() {
             width='458px'
             height='250px'>
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
-              BanklessDAO is embedded in the creative space of NFTs and a
+              {`BanklessDAO is embedded in the creative space of NFTs and a
               champion for artists paving the way in digital art forms. Weekly
-              features can be found on BanklessDAO’s Rarible page or the Weekly
-              Rollup newsletter.
+              features can be found on BanklessDAO\'s Rarible page or the Weekly
+              Rollup newsletter.`}
             </Text>
             <Container
               display='flex'
@@ -67,7 +67,7 @@ function NftInvest() {
               justifyContent='center'>
               <Link href='https://rarible.com/banklessdao/sale' isExternal>
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  Invest in NFT's
+                  {`Invest in NFT\'s`}
                 </Button>
               </Link>
             </Container>
