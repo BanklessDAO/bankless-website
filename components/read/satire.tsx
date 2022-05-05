@@ -7,15 +7,15 @@ class Satire extends React.Component {
   render() {
     return (
       <Grid
-        gridTemplateColumns={{ base: '1fr', md: '16vw 1fr' }}
+        gridTemplateColumns={{ base: '1fr', xl: '16vw 1fr' }}
         alignItems='center'
         gap={8}
         mt={20}
-        pl={'4rem'}>
+        pl={{base: 0, lg:'4rem'}}>
         <Flex flexDir='column' justifyContent='start' alignItems='start'>
           <Text
             fontWeight={700}
-            fontSize='6xl'
+            fontSize={{base: '4xl', md:'6xl'}}
             textAlign='center'
             maxW={750}
             fontFamily='Clear Sans'>
@@ -57,25 +57,32 @@ class Satire extends React.Component {
             </Box>
           </Link>
         </Flex>
-        <HStack justifyContent='flex-start' alignItems='flex-start' ml='4rem'>
+        <Grid
+          gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
+          justifyContent='flex-start'
+          alignItems='flex-start'
+          ml={{ base: 0, xl: '4rem' }}
+          mt={{base: '2rem', md: 0}}>
           <VStack alignItems='flex-start' justifyContent='flex-start' h='100%'>
             <Link
               display='flex'
               alignItems='baseline'
-              marginRight='2'
-              marginTop='8'
+              mr={{base: 0, md:'2'}}
+              ml={{base: '4px', md:0}}
+              mt={{base: 0, md:'8'}}
               href='https://therug.mirror.xyz/'>
               <HStack gap={2}>
                 <Image
                   src='/icons/mirror.png'
                   alt='mirror'
                   height={30}
-                  width={20}
+                  width={30}
+
                 />
                 <Text
                   fontWeight={700}
                   fontSize='2xl'
-                  marginRight='2'
+                  mr='2'
                   textAlign='center'>
                   Mirror
                 </Text>
@@ -92,8 +99,8 @@ class Satire extends React.Component {
             <Text
               fontSize='md'
               color='rgba(255, 255, 255, 0.57)'
-              pl={'36px'}
-              maxW='240px'>
+              pl={{base: '50px', md:'36px'}}
+              maxW={{ base: '80%', xl: '240px' }}>
               Collect NFTs of Satire edition on Mirror.
             </Text>
           </VStack>
@@ -133,11 +140,11 @@ class Satire extends React.Component {
               fontSize='md'
               color='rgba(255, 255, 255, 0.57)'
               pl={'52px'}
-              maxW='240px'>
+              maxW={{ base: '100%', xl: '240px' }}>
               Follow Satire on Twitter.
             </Text>
           </VStack>
-        </HStack>
+        </Grid>
       </Grid>
     )
   }
