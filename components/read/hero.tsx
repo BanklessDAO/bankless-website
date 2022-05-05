@@ -15,9 +15,9 @@ class Hero extends React.Component {
         <HStack position='relative'>
           <VStack
             alignItems='start'
-            width={{ base: '100%', md: '60%' }}
+            width={{ base: '100%', md: '64%', xl: '60%' }}
             rowGap={4}>
-            <Text fontSize={{ base: '4xl', md: '2xl' }} fontWeight={700}>
+            <Text fontSize={{ base: '4xl', xl: '2xl' }} fontWeight={700} lineHeight={1.2}>
               Decentralizing media one article at a time
             </Text>
             <Text color='grey'>
@@ -31,11 +31,11 @@ class Hero extends React.Component {
           <Box
             display={{ base: 'none', md: 'flex' }}
             position='absolute'
-            right='8%'
-            top={0}>
+            right={{ base: 0, xl: '8%' }}
+            top={{ base: 20, xl: 0 }}>
             <ChakraNextImage
               src='/read/pen-01.png'
-              height={385}
+              height={{ base: 385, xl: 385 }}
               width={385}
               alt='Bhutan'
               zIndex={1}
@@ -53,13 +53,13 @@ class Hero extends React.Component {
         </HStack>
 
         <Flex
-          flexDirection={{ base: 'column', md: 'row' }}
+          flexDirection={{ base: 'column', xl: 'row' }}
           columnGap={8}
           rowGap={8}
-          pt={'8rem'}
-          pl={'4rem'}
+          pt={{base: '3rem', md:'8rem'}}
+          pl={{ base: 0, xl: '4rem' }}
           position='relative'>
-          <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
+          <VStack alignItems='start' maxW={{ base: '100%', xl: '30%' }}>
             <Flex
               justify='center'
               alignItems='center'
@@ -74,7 +74,7 @@ class Hero extends React.Component {
               />
             </Flex>
             <HStack justifyContent='center' alignItems='baseline'>
-              <Text fontSize={{ base: '4xl', md: '4xl' }} fontWeight={700}>
+              <Text fontSize={{ base: '3xl', md: '4xl' }} fontWeight={700}>
                 Medium Article
               </Text>
               <Link href='https://medium.com/bankless-dao'>
@@ -92,7 +92,7 @@ class Hero extends React.Component {
             </Text>
           </VStack>
 
-          <VStack alignItems='start' maxW={{ base: '100%', md: '30%' }}>
+          <VStack alignItems='start' maxW={{ base: '100%', xl: '30%' }}>
             <Flex
               justify='center'
               alignItems='center'

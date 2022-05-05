@@ -14,7 +14,8 @@ const PageContainer: React.FC = ({ children }) => {
       justifyContent={'center'}
       alignItems={'center'}
       flexDirection={'column'}
-      background={'black'}>
+      background={'black'}
+      overflow='hidden'>
       <NavBar />
       <Container
         maxW={{ base: '100%', md: '700px', xl: '1232px' }}

@@ -1,9 +1,8 @@
 import React from 'react'
 import { ulid } from 'ulid'
-import { HStack, Text, Grid, Box } from '@chakra-ui/react'
+import { HStack, Text, Grid, Box, List } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 import { NewsletterCard } from './NewsletterCard'
-
 
 export const NewsletterList: React.FC = () => {
   const newsletters = [
@@ -29,8 +28,8 @@ export const NewsletterList: React.FC = () => {
       colSpan: 1,
       image: {
         src: '/images/read/token.png',
-        alt: 'token 3d graphic'
-      }
+        alt: 'token 3d graphic',
+      },
     },
     {
       title: 'State of the DAOs',
@@ -52,14 +51,19 @@ export const NewsletterList: React.FC = () => {
     <HStack
       flexDir='column'
       justifyContent='start'
-      alignItems='start'  
+      alignItems='start'
       rowGap={{ base: 2, md: 4 }}
-      pt={'8rem'}
-      pos='relative'>
-      <Box zIndex={1}>
+      pt={{base: '4rem', md:'8rem'}}
+      pos='relative'
+      sx={{
+        '& > ul': {
+          margin: '0 !important',
+        },
+      }}>
+      <Box zIndex={1} m={0}>
         <Text
           fontWeight={700}
-          fontSize='6xl'
+          fontSize={{base: '4xl', md:'6xl'}}
           textAlign='center'
           maxW={750}
           fontFamily='Clear Sans'>
@@ -70,23 +74,26 @@ export const NewsletterList: React.FC = () => {
 
       <Grid
         as='ul'
-        gridTemplateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+        gridTemplateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
         templateRows={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         gap={4}
         zIndex={1}
         m={0}
         p={0}
         w='100%'
-        h='100%'>
+        h='100%'
+        pt={{base: '3rem', md: 0}}
+        sx={{ margin: 0 }}>
         {newsletters.map(newsletter => (
           <NewsletterCard {...newsletter} key={ulid()} />
         ))}
       </Grid>
       <Box
-        w={'1294px'}
-        h={'1044px'}
+        // w={'1294px'}
+        w={{ base: '100vw', lg: '1294px' }}
+        h={{ base: '100vw', lg: '1044px' }}
         pos='absolute'
-        top={0}
+        top={{ base: '50%', lg: 0 }}
         bgColor='magenta'
         zIndex={0}
         borderRadius='50%'
