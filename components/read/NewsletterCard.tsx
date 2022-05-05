@@ -29,15 +29,15 @@ export const NewsletterCard = ({
       as='li'
       alignItems='start'
       bgColor={'#101010'}
-      padding={8}
+      padding={{base: 4 , md: 8}}
       borderRadius={6}
       m={0}
-      rowSpan={{ base: 1, md: rowSpan || 1 }}
-      colSpan={{ base: 1, md: colSpan || 1 }}
+      rowSpan={{ base: 1, xl: rowSpan || 1 }}
+      colSpan={{ base: 1, xl: colSpan || 1 }}
       listStyleType={'none'}
       pos='relative'>
       <Text
-        fontSize='5xl'
+        fontSize={{base: '3xl', md:'5xl'}}
         fontWeight={900}
         fontFamily='Clear Sans'
         lineHeight={1.2}>
@@ -66,14 +66,15 @@ export const NewsletterCard = ({
       </Link>
       {image && (
         <ChakraNextImage
+          d={{base: 'none', xl: 'block'}}
           src={image.src}
           alt={image.alt}
           pos='absolute'
           width='30rem'
-          height="28rem"
+          height='28rem'
           zIndex={2}
-          bottom={-20}
-          right={10}
+          bottom={{ base: -10, xl: -20 }}
+          right={{ base: -5, xl: 10 }}
         />
       )}
     </GridItem>
