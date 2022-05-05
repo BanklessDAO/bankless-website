@@ -55,7 +55,7 @@ function NftInvest() {
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
               BanklessDAO is embedded in the creative space of NFTs and a
               champion for artists paving the way in digital art forms. Weekly
-              features can be found on BanklessDAO’s Rarible page or the Weekly
+              features can be found on BanklessDAO's Rarible page or the Weekly
               Rollup newsletter.
             </Text>
             <Container
