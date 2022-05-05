@@ -70,7 +70,7 @@ export const NewsletterList: React.FC = () => {
 
       <Grid
         as='ul'
-        gridTemplateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+        gridTemplateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
         templateRows={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         gap={4}
         zIndex={1}
@@ -83,8 +83,9 @@ export const NewsletterList: React.FC = () => {
         ))}
       </Grid>
       <Box
-        w={'1294px'}
-        h={'1044px'}
+        // w={'1294px'}
+        w={{ base: '100vw', lg: '1294px' }}
+        h={{ base: '100vw', lg: '1044px' }}
         pos='absolute'
         top={0}
         bgColor='magenta'
