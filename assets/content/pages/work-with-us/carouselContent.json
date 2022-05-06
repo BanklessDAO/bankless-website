@@ -1,0 +1,208 @@
+[
+  {
+    "title": "Consulting and Education",
+    "description": "Learn from Web3 experts",
+    "slides": [
+      {
+        "title": "Bankless Consulting",
+        "paras": [
+          "Our Web3-native consulting service draws on the expertise of bDAO members to help DAOs launch and scale their presence.",
+          "Bankless Consultancy also helps traditional organizations take the first step into Web3."
+        ],
+        "cta": {
+          "text": "Bankless Consulting",
+          "link": "https://www.banklessconsulting.com/"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-2.jpg",
+          "alt": "Consulting generic image"
+        }
+      },
+      {
+        "title": "Bankless Academy",
+        "paras": [
+          "The Bankless Academy is on a mission to introduce 1 billion people to the exciting possibilities of cryptocurrency, DeFi, and beyond.",
+          "Whether you're curious about crypto, intrigued by NFTs, or want to get started the latest DeFi protocols, we're here to help guide and accelerate your journey to Web3 proficiency."
+        ],
+        "cta": {
+          "text": "Bankless Academy",
+          "link": "https://app.banklessacademy.com/"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-6.jpg",
+          "alt": "Photo by Headway on Unsplash"
+        }
+      },
+      {
+        "title": "Global Tax Consultancy",
+        "paras": [
+          "The Global Tax Guide will provide general introductory information regarding virtual-currency-related income tax laws from major jurisdictions throughout the world. Access to the Global Tax Guide will be granted by minting Form 69."
+        ],
+        "cta": {
+          "text": "the Ultimate Crypto Tax Guide",
+          "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-13.jpg",
+          "alt": "Photo by Towfiqu barbhuiya on Unsplash"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Software and DAO tooling",
+    "description": "Level-up your organization with cutting-edge tooling",
+    "slides": [
+      {
+        "title": "DEGEN",
+        "paras": [
+          "Enter the next generation of DAO tooling with DEGEN.",
+          "This powerhouse bot integrates with Discord to seamlessly perform administrative tasks such as distributing POAP links. Inquire about integrating DEGEN into your Discord server by filling out."
+        ],
+        "cta": {
+          "text": "Bankless DEGEN",
+          "link": "https://docs.bankless.community/degen/introduction/welcome"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-3.jpg",
+          "alt": "Photo by JESHOOTS.COM on Unsplash"
+        }
+      },
+      {
+        "title": "Bounty Board",
+        "paras": ["CHANGE ME"],
+        "cta": {
+          "text": "Bounty Board",
+          "link": "https://www.bountyboard.xyz/"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-7.jpg",
+          "alt": "Photo by Jeswin Thomas on Unsplash"
+        }
+      },
+      {
+        "title": "DAO Dash",
+        "paras": [
+          "DAO Dash will be the Analytics Guild's data ecosystem that will enable collaboration between its members in order to support Bankless DAO's mission.",
+          "DAO Dash will establish patterns for ingesting data pipelines from off-chain and on-chain data sources, establishing a collaborative query and analysis environment, and a front end dashboard to distribute visually appealing insights."
+        ],
+        "cta": {
+          "text": "DAO Dash",
+          "link": "https://bankless.notion.site/DAO-Dash-41a151ce8ef74fcd893cba3b47223828"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-8.jpg",
+          "alt": "Photo by Stephen Dawson on Unsplash"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Creative Services",
+    "description": "Tell your story and reach a new audience",
+    "slides": [
+      {
+        "title": "Audio/Visual Services",
+        "paras": [
+          "Our AV Guild provides top-notch audio and visual services for Web3-native organizations.",
+          "From audio production to voice-over talent to custom photography, bDAO's AV experts offer a service to level-up your organization's audio and visual assets. Commission an AV expert by filling out this form."
+        ],
+        "cta": {
+          "text": "Bankless AV Guild",
+          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-4.jpg",
+          "alt": "Photo by Matthew Kwong on Unsplash"
+        }
+      },
+      {
+        "title": "Custom Articles",
+        "paras": ["CHANGE ME"],
+        "cta": {
+          "text": "the Writers Guild",
+          "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-9.jpg",
+          "alt": "Photo by Etienne Girardet on Unsplash"
+        }
+      },
+      {
+        "title": "State of the DAOS Newsletter Feature",
+        "paras": [
+          "State of the DAOs, the high-signal low-noise newsletter to understanding DAOs."
+        ],
+        "cta": {
+          "text": "State of the DAOs",
+          "link": "https://banklessdao.substack.com/s/state-of-the-daos?utm_source=substack&utm_medium=menu"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-10.jpg",
+          "alt": "Photo by Duy Pham on Unsplash"
+        }
+      },
+      {
+        "title": "Custom Designs",
+        "paras": [
+          "BanklessDAO Design Guild offers next-gen visual services for Web3-native organizations. We are a team of professional designers that offers website designs, mobile app designs, pitch deck designs, logo, and branding creation who are well equipped with theoretical knowledge and software materials and possess hands-on experience."
+        ],
+        "cta": {
+          "text": "the Design Guild",
+          "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-11.jpg",
+          "alt": "Photo by Hal Gatewood on Unsplash"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Sponsorships and Marketing",
+    "description": "Scale your presence in Web3",
+    "slides": [
+      {
+        "title": "Newsletter Sponsorships",
+        "paras": [
+          "Sponsor any of our newsletters and reach tens of thousands of readers every week.",
+          "Choose from Weekly Rollup, State of the DAOs, Decentralized Art, Decentralized Law, and Gearing up, as well as a variety of languages, to reach your perfect audience. Inquire about sponsoring a newsletter by filling out this form."
+        ],
+        "cta": {
+          "text": "Bankless Newsletters",
+          "link": "https://www.notion.so/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-5.jpg",
+          "alt": "Photo by Jess Bailey on Unsplash"
+        }
+      },
+      {
+        "title": "Podcast Sponsorships",
+        "paras": ["CHANGE ME"],
+        "cta": {
+          "text": "Bankless AV Guild",
+          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-4.jpg",
+          "alt": "Photo by Matthew Kwong on Unsplash"
+        }
+      },
+      {
+        "title": "Marketing Services",
+        "paras": [
+          "Bankless Consulting is the world's first web3-native consulting firm. Whether you're a DAO or a traditional enterprise, we'll help you capture the potential of the rapidly expanding decentralized economy."
+        ],
+        "cta": {
+          "text": "Bankless Consulting",
+          "link": "https://www.banklessconsulting.com/"
+        },
+        "image": {
+          "src": "/images/work-with-us/work-with-us-12.jpg",
+          "alt": "Photo by Jason Goodman on Unsplash"
+        }
+      }
+    ]
+  }
+]
