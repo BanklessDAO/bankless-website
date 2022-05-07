@@ -17,7 +17,10 @@ class Hero extends React.Component {
             alignItems='start'
             width={{ base: '100%', md: '64%', xl: '60%' }}
             rowGap={4}>
-            <Text fontSize={{ base: '4xl', xl: '2xl' }} fontWeight={700} lineHeight={1.2}>
+            <Text
+              fontSize={{ base: '4xl', xl: '2xl' }}
+              fontWeight={700}
+              lineHeight={1.2}>
               Decentralizing media one article at a time
             </Text>
             <Text color='grey'>
@@ -35,20 +38,35 @@ class Hero extends React.Component {
             top={{ base: 20, xl: 0 }}>
             <ChakraNextImage
               src='/read/pen-01.png'
-              height={{ base: 385, xl: 385 }}
-              width={385}
+              height={{ base: '22rem', xl: '22rem' }}
+              width={'22rem'}
               alt='Bhutan'
               zIndex={1}
             />
-            <Box
-              height={385}
-              width={385}
-              borderRadius='50%'
+            {/* <Box
+              height={'12rem'}
+              width={'10rem'}
+              // borderRadius='50%'
               bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
               position='absolute'
               zIndex='0'
-              filter='blur(282px)'
+              filter='blur(9rem)'
+              left='50%'
+              bottom='20%'
+              mixBlendMode='color-burn'
+            /> */}
+            <Box
+              height={'11rem'}
+              width={'11rem'}
+              pos='absolute'
+              zIndex='0'
+              left={{base:'48%', lg:'40%'}}
+              bottom={{base:'45%', lg:'35%'}}
+              opacity='0.5'
+              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+              filter='blur(6rem)'
             />
+            
           </Box>
         </HStack>
 
@@ -56,7 +74,7 @@ class Hero extends React.Component {
           flexDirection={{ base: 'column', xl: 'row' }}
           columnGap={8}
           rowGap={8}
-          pt={{base: '3rem', md:'8rem'}}
+          pt={{ base: '3rem', md: '8rem' }}
           pl={{ base: 0, xl: '4rem' }}
           position='relative'>
           <VStack alignItems='start' maxW={{ base: '100%', xl: '30%' }}>
@@ -124,7 +142,7 @@ class Hero extends React.Component {
               BanklessDAO history and season recaps posted publicly.
             </Text>
           </VStack>
-          <Box
+          {/* <Box
             height={432}
             width={432}
             borderRadius='50%'
@@ -134,7 +152,7 @@ class Hero extends React.Component {
             filter='blur(282px)'
             transition={''}
             transform={'rotate(9.1deg)'}
-          />
+          /> */}
         </Flex>
       </Flex>
     )
