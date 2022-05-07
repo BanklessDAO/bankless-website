@@ -90,17 +90,18 @@ export const NewsletterList: React.FC = () => {
         ))}
       </Grid>
       <Box
-        w={{ base: '100vw', lg: '100%' }}
-        h={{ base: '150vw', lg: '100%' }}
+        w={{ base: '80%', lg: '60%' }}
+        h={{ base: '80%', lg: '60%' }}
         pos='absolute'
-        top={{ base: '16%', lg: 0 }}
+        top={{ base: '16%', lg: '32%' }}
+        left={{base: '0%', lg: '8%'}}
         bgColor='magenta'
         zIndex={0}
         borderRadius='50%'
         transform={'rotate(9.1deg)'}
         bgGradient='linear-gradient(121.75deg, rgba(255,16,19) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
         filter={'blur(281.004px)'}
-        opacity={0.2}
+        opacity={0.8}
       />
     </HStack>
   )
