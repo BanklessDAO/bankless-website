@@ -62,7 +62,7 @@ export const NewsletterCard = ({
             color='grey'
             lineHeight='1.2'
             m={0}
-            maxW='86%'>
+            maxW='80%'>
             {text}
           </Text>
           <Box display='flex' alignItems='center' marginRight='2' marginTop={6}>
