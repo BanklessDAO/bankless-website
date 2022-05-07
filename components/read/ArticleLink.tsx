@@ -18,29 +18,64 @@ type ArticleLinkProps = {
 
 type ArticleIconProps = {
   type: string
+  noOutline?: boolean
 }
 
-const ArticleIcon = ({ type }: ArticleIconProps) => (
+export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
   <>
     {type === 'medium' && (
-      <Flex
-        justify='center'
-        alignItems='center'
-        background='#222222'
-        borderRadius='8px'
-        padding='10px'>
-        <Image src='/icons/medium.png' alt='medium' height={30} width={45} />
-      </Flex>
+      <>
+        {noOutline ? (
+          <>{`No outline`}</>
+        ) : (
+          <Flex
+            justify='center'
+            alignItems='center'
+            background='#222222'
+            borderRadius='8px'
+            padding='10px'>
+            <Image
+              src='/icons/medium.png'
+              alt='medium'
+              height={30}
+              width={45}
+            />
+          </Flex>
+        )}
+      </>
     )}
     {type === 'mirror' && (
-      <Flex
-        justify='center'
-        alignItems='center'
-        background='#222222'
-        borderRadius='8px'
-        padding='10px'>
-        <Image src='/icons/mirror.png' alt='mirror' height={30} width={25} />
-      </Flex>
+      <>
+        {noOutline ? (
+          <Image src='/icons/mirror.png' alt='mirror' height={30} width={30} />
+        ) : (
+          <Flex
+            justify='center'
+            alignItems='center'
+            background='#222222'
+            borderRadius='8px'
+            padding='10px'>
+            <Image
+              src='/icons/mirror.png'
+              alt='mirror'
+              height={30}
+              width={25}
+            />
+          </Flex>
+        )}
+      </>
+    )}
+    {type === 'twitter' && (
+      <>
+        {
+          <Image
+            src='/icons/twitter.png'
+            alt='twitter'
+            height={30}
+            width={35}
+          />
+        }
+      </>
     )}
     {!type && <></>}
   </>
@@ -80,10 +115,7 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
         <ArticleIcon type={type} />
       </Flex>
       <HStack justifyContent='center' alignItems='baseline' pt='1rem'>
-        <Text
-          fontSize={'4xl'}
-          fontWeight={700}
-          fontFamily='Clear Sans'>
+        <Text fontSize={'4xl'} fontWeight={700} fontFamily='Clear Sans'>
           {setArticleType(type)}
         </Text>
         <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
