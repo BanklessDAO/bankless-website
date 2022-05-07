@@ -1,6 +1,7 @@
 import React from 'react'
 import { ulid } from 'ulid'
-import { HStack, Text, Grid, Box, List } from '@chakra-ui/react'
+import Link from 'next/link'
+import { HStack, Text, Grid, Box } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 import { NewsletterCard } from './NewsletterCard'
 
@@ -89,11 +90,10 @@ export const NewsletterList: React.FC = () => {
         ))}
       </Grid>
       <Box
-        // w={'1294px'}
-        w={{ base: '100vw', lg: '1294px' }}
-        h={{ base: '100vw', lg: '1044px' }}
+        w={{ base: '100vw', lg: '100%' }}
+        h={{ base: '150vw', lg: '100%' }}
         pos='absolute'
-        top={{ base: '50%', lg: 0 }}
+        top={{ base: '16%', lg: 0 }}
         bgColor='magenta'
         zIndex={0}
         borderRadius='50%'

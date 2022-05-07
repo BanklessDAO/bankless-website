@@ -80,12 +80,21 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
         <ArticleIcon type={type} />
       </Flex>
       <HStack justifyContent='center' alignItems='baseline' pt='1rem'>
-        <Text fontSize={{ base: '1xl', md: '4xl' }} fontWeight={700} fontFamily='Clear Sans'>
+        <Text
+          fontSize={'4xl'}
+          fontWeight={700}
+          fontFamily='Clear Sans'>
           {setArticleType(type)}
         </Text>
         <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
       </HStack>
-      <Text w={{ base: '100%', md:'90%', xl: '100%' }} fontSize='xl' textOverflow='wrap' fontFamily='Clear Sans' color="grey" lineHeight='1.2'>
+      <Text
+        w={{ base: '100%', md: '90%', xl: '100%' }}
+        fontSize='xl'
+        textOverflow='wrap'
+        fontFamily='Clear Sans'
+        color='grey'
+        lineHeight='1.2'>
         {desc}
       </Text>
     </WrapItem>
