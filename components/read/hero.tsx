@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 
-import { Box, Flex, Text, HStack, VStack, Link } from '@chakra-ui/react'
+import { Box, Flex, Text, HStack, VStack } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/common/ChakraNextImage'
 import { ArticleLink } from './ArticleLink'
 
@@ -19,12 +18,13 @@ class Hero extends React.Component {
             width={{ base: '100%', md: '64%', xl: '60%' }}
             rowGap={4}>
             <Text
-              fontSize={{ base: '4xl', xl: '2xl' }}
+              fontSize={'2xl'}
               fontWeight={700}
-              lineHeight={1.2}>
+              lineHeight={1.2}
+              w={{lg: '60%',xl: "100%"}}>
               Decentralizing media one article at a time
             </Text>
-            <Text color='grey'>
+            <Text color='grey' fontFamily='Clear Sans' fontSize='2xl' lineHeight={1.2}>
               BanklessDAO is building the first decentralized publishing house
               ever. Our newsletters and articles are translated into a variety
               of languages to reach a global audience. Find your crypto reading
@@ -65,7 +65,7 @@ class Hero extends React.Component {
           pt={{ base: '3rem', md: '8rem' }}
           pl={{ base: 0, xl: '4rem' }}
           position='relative'
-          w='100%'>
+          w={{base:'100%', lg:'70%'}}>
           <ArticleLink
             type='medium'
             url='https://medium.com/bankless-dao'
