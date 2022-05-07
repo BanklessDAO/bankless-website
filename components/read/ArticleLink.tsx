@@ -1,5 +1,13 @@
 import React from 'react'
-import { Button, HStack, Text, Stack, Flex, Image } from '@chakra-ui/react'
+import {
+  Button,
+  HStack,
+  Text,
+  Wrap,
+  Flex,
+  Image,
+  WrapItem,
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
 type ArticleLinkProps = {
@@ -51,7 +59,7 @@ function setArticleType(type: string): string | undefined {
 
 export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
   <Link href={url}>
-    <Button
+    <WrapItem
       as='a'
       d='flex'
       flexDirection='column'
@@ -62,7 +70,7 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
       height='100%'
       bg='transparent'
       zIndex={1}
-      _hover={{ backgroundColor: 'yellow', cursor: 'pointer' }}>
+      _hover={{ cursor: 'pointer' }}>
       <Flex
         justify='center'
         alignItems='center'
@@ -71,15 +79,15 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
         padding='10px'>
         <ArticleIcon type={type} />
       </Flex>
-      <HStack justifyContent='center' alignItems='baseline'>
-        <Text fontSize={{ base: '3xl', md: '4xl' }} fontWeight={700}>
+      <HStack justifyContent='center' alignItems='baseline' pt='1rem'>
+        <Text fontSize={{ base: '1xl', md: '4xl' }} fontWeight={700} fontFamily='Clear Sans'>
           {setArticleType(type)}
         </Text>
         <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
       </HStack>
-      <HStack w='30px'>
-        <Text fontSize='xl'>{desc}</Text>
-      </HStack>
-    </Button>
+      <Text w={{ base: '100%', md:'90%', xl: '100%' }} fontSize='xl' textOverflow='wrap' fontFamily='Clear Sans' color="grey" lineHeight='1.2'>
+        {desc}
+      </Text>
+    </WrapItem>
   </Link>
 )
