@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { boolean } from 'yup'
 
 const menus = [
   { title: 'GOVERNANCE', href: '/about-us/governance' },
@@ -35,6 +36,67 @@ const keyframeCircleMove = keyframes`
               rotate(-360deg);
   }
 `
+
+type TextRow = {
+  imageSrc: string
+  imageAlt: string
+  title: string
+  para: string
+  reversed?: boolean
+}
+
+const TextRow = ({
+  para,
+  title,
+  imageSrc,
+  imageAlt,
+  reversed = false,
+}: TextRow) => {
+  return (
+    <Flex
+      mt='10rem'
+      flexDirection={{ base: 'column', lg: reversed ? 'row-reverse' : 'row' }}
+      justifyContent='center'
+      alignItems='center'
+      pb='2rem'>
+      <Box
+        flex='0 0 40%'
+        pos={'relative'}
+        h={{base: '40vw', lg: '20vw'}}
+        w='100%'
+        pb={{ base: '2rem', lg: 0 }}
+        pr={{ base: 0, lg: !reversed ? '2rem' : 0 }}>
+        <Image
+          alt={imageAlt}
+          fit={'cover'}
+          align={'center'}
+          w={'100%'}
+          h={'100%'}
+          src={imageSrc}
+        />
+      </Box>
+      <Stack flex={1} pr={{ base: 0, lg: '1rem' }}>
+        <Text
+          color={'gray.100'}
+          lineHeight={1.2}
+          fontWeight={700}
+          fontFamily='Clear Sans'
+          fontSize='4xl'
+          pb='1rem'
+          w={{ base: '60%', lg: '' }}>
+          {title}
+        </Text>
+        <Text
+          color='grey'
+          fontSize='2xl'
+          fontFamily='Clear Sans'
+          lineHeight={1.2}>
+          {para}
+        </Text>
+      </Stack>
+    </Flex>
+  )
+}
 
 export default function IntroductionAboutUsComponent() {
   const animationTime = '5s'
@@ -132,7 +194,7 @@ export default function IntroductionAboutUsComponent() {
         </Box>
       </Stack>
 
-      <Stack mt={{base:'1rem !important', xl:'2rem !important'}}>
+      <Stack mt={{ base: '1rem !important', xl: '2rem !important' }}>
         <Flex
           flex={1}
           columnGap='2rem'
@@ -141,11 +203,7 @@ export default function IntroductionAboutUsComponent() {
           wrap='wrap'>
           {menus.map((menu, index) => {
             return (
-              <Flex
-                align={'center'}
-                color={'white.100'}
-                key={index}
-                >
+              <Flex align={'center'} color={'white.100'} key={index}>
                 <NextLink href={menu.href} passHref={true}>
                   <Text
                     mr={'0.25rem'}
@@ -169,83 +227,20 @@ export default function IntroductionAboutUsComponent() {
         mb='4rem !important'
         backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
       />
-
-      <Flex
-        mt='10rem'
-        flexDirection={{ base: 'column', md: 'row-reverse' }}
-        justifyContent='center'
-        alignItems='center'
-        columnGap={16}
-        rowGap={8}>
-        <Box
-          position={'relative'}
-          height={'auto'}
-          maxHeight={{ base: '800px', md: '300px' }}>
-          <Image
-            alt={'Hero Image'}
-            fit={'contain'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={'/images/about-us/bankless-movement.png'}
-          />
-        </Box>
-        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
-          <Text
-            color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}>
-            Bankless is a movement for Web3 pioneers
-          </Text>
-          <Text color='grey' fontSize={{ base: 'xl', md: '2xl' }}>
-            We seek new ways to build wealth, solve human coordination problems,
-            create culture, and develop cutting-edge thought leadership in the
-            crypto space. Going Bankless means taking control of your financial
-            health by adopting decentralized and permissionless money systems.
-            Bankless is the movement educating the world on how to do it.
-          </Text>
-        </Stack>
-      </Flex>
-
-      <Flex
-        flexDirection={{ base: 'column', md: 'row' }}
-        justifyContent='center'
-        alignItems='center'
-        columnGap={16}
-        rowGap={8}
-        mt={8}>
-        <Box
-          position={'relative'}
-          height={'auto'}
-          maxHeight={{ base: '500px', md: '300px' }}>
-          <Image
-            alt={'Hero Image'}
-            fit={'contain'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={'/images/about-us/bankless-dao.png'}
-          />
-        </Box>
-        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
-          <Heading
-            color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}>
-            BanklessDAO is the homebase
-          </Heading>
-          <Text color={'gray'} fontSize={{ base: 'xl', md: '2xl' }}>
-            BanklessDAO is a community of passionate Web3 thought-leaders who
-            aim to educate new users, produce written and audio media, build DAO
-            tooling, provide consulting services, develop Web3 scholarship, and
-            create a social and creative home base for anyone in Web3. We’re so
-            much more than a social DAO—we’re a shipping, building, and
-            innovating DAO.
-          </Text>
-        </Stack>
-      </Flex>
+      <TextRow
+        reversed={true}
+        imageSrc='/images/about-us/bankless-movement.png'
+        imageAlt='abstract image of ethereum'
+        title='Bankless is a movement for Web3 pioneers'
+        para='We seek new ways to build wealth, solve human coordination problems, create culture, and develop cutting-edge thought leadership in the crypto space. Going Bankless means taking control of your financial health by adopting decentralized and permissionless money systems. Bankless is the movement educating the world on how to do it.'
+      />
+      <TextRow
+        imageSrc='/images/about-us/bankless-dao.png'
+        imageAlt='abstract image of ethereum'
+        title='BanklessDAO is the homebase'
+        para="BanklessDAO is a community of passionate Web3 thought-leaders who aim to educate new users, produce written and audio media, build DAO tooling, provide consulting services, develop Web3 scholarship, and create a social and creative home base for anyone in Web3. We're so much more than a social DAO—we're a shipping, building, and
+      innovating DAO."
+      />
     </VStack>
   )
 }
