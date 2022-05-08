@@ -1,5 +1,15 @@
-import { Box, Heading, Text, Stack, Image, Flex } from '@chakra-ui/react'
-import Link from 'next/link'
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  HStack,
+  Image,
+  Flex,
+  VStack,
+  keyframes,
+} from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 const menus = [
@@ -12,37 +22,49 @@ const menus = [
   // { title: 'MEDIA KIT', href: '#' },
 ]
 
+const keyframeCircleMove = keyframes`
+  0%{
+    transform:rotate(0deg)
+              translate(-24px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-24px)
+              rotate(-360deg);
+  }
+`
+
 export default function IntroductionAboutUsComponent() {
+  const animationTime = '5s'
+  const animationCircleClock = `${keyframeCircleMove} ${animationTime} linear infinite`
+  const animationCircleAntiClock = `${keyframeCircleMove} ${animationTime} linear infinite reverse`
   return (
-    <Flex paddingX={16} flexDirection='column' rowGap={8}>
+    <VStack>
       <Stack
         align='center'
         justifyContent='center'
-        spacing={{ base: 8, md: 10 }}
-        mt={{ base: 5, md: 10 }}
-        direction={{ base: 'column', md: 'row' }}
-      >
+        direction={{ base: 'column', md: 'row' }}>
         <Flex
-          flex={1}
+          flex={{ base: '0 0 70%', xl: '0 0 60%' }}
           justify={'center'}
           align={'center'}
-          position={'relative'}
-          w={'full'}
-        >
+          position={'relative'}>
           <Box
             position={'relative'}
-            rounded={'2xl'}
             overflow={'hidden'}
             w={'100%'}
-            sx={{ height: { base: '400px', md: '450px' } }}
-          >
+            h='40rem'
+            m={0}>
             <Image
               position={'absolute'}
               alt={'Cryptocurrency Image'}
-              left='0'
+              left='2rem'
               top='40%'
               width={'3rem'}
               src={'/images/about-us/Cryptocurrency.png'}
+              animation={animationCircleAntiClock}
             />
             <Image
               position={'absolute'}
@@ -51,14 +73,16 @@ export default function IntroductionAboutUsComponent() {
               top='30%'
               width={'3rem'}
               src={'/images/about-us/Bnakless.png'}
+              animation={animationCircleClock}
             />
             <Image
               position={'absolute'}
               alt={'Aragon Image'}
-              right='0'
+              right='2rem'
               bottom='25%'
               width={'3rem'}
               src={'/images/about-us/Aragon.png'}
+              animation={animationCircleAntiClock}
             />
             <Image
               position={'absolute'}
@@ -67,6 +91,7 @@ export default function IntroductionAboutUsComponent() {
               bottom='5%'
               width={'3rem'}
               src={'/images/about-us/Cryptocurrency1.png'}
+              animation={`${keyframeCircleMove} 6s linear infinite`}
             />
             <Image
               alt={'Instructor Image'}
@@ -79,58 +104,58 @@ export default function IntroductionAboutUsComponent() {
           </Box>
         </Flex>
 
-        <Box flex={1}>
-          <Stack spacing={{ base: 3, md: 4 }}>
+        <Box flex={{ base: '0 0 30%', xl: '0 0 50%' }}>
+          <VStack alignItems='flex-start'>
             <Text
               color={'white.100'}
               lineHeight={1.1}
-              fontWeight={800}
-              fontSize={{ base: '6xl', md: '5xl' }}
-              // textTransform={'uppercase'}
-            >
+              fontWeight={700}
+              fontFamily='Clear Sans'
+              fontSize={{ base: '4xl', md: '6xl' }}>
               What is BanklessDAO?
             </Text>
-            <Link href={'https://discord.com/invite/bankless'} passHref={true}>
-              <Flex
+            <NextLink
+              href={'https://discord.com/invite/bankless'}
+              passHref={true}>
+              <HStack
                 align={'center'}
                 color={'white.100'}
                 fontWeight={700}
                 fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
-                cursor='pointer'
-              >
-                Join us <FiArrowUpRight />
-              </Flex>
-            </Link>
-          </Stack>
+                fontFamily='Clear Sans'
+                cursor='pointer'>
+                <Text>Join us</Text>
+                <FiArrowUpRight />
+              </HStack>
+            </NextLink>
+          </VStack>
         </Box>
       </Stack>
 
-      <Stack mt={6}>
+      <Stack mt={{base:'1rem !important', xl:'2rem !important'}}>
         <Flex
           flex={1}
+          columnGap='2rem'
           justify={{ base: 'center', md: 'space-around' }}
           align={'center'}
-          wrap='wrap'
-          columnGap={{ base: 12, md: 12 }}
-        >
+          wrap='wrap'>
           {menus.map((menu, index) => {
             return (
               <Flex
                 align={'center'}
                 color={'white.100'}
                 key={index}
-                padding={{ base: '0.25rem', md: '0.5rem' }}
-              >
-                <Link href={menu.href} passHref={true}>
+                >
+                <NextLink href={menu.href} passHref={true}>
                   <Text
                     mr={'0.25rem'}
                     fontSize={{ base: '4xl', md: '2xl' }}
-                    fontWeight={'bold'}
-                    cursor='pointer'
-                  >
+                    fontWeight={700}
+                    fontFamily='Clear Sans'
+                    cursor='pointer'>
                     {menu.title}
                   </Text>
-                </Link>
+                </NextLink>
               </Flex>
             )
           })}
@@ -140,21 +165,22 @@ export default function IntroductionAboutUsComponent() {
       <Box
         height='2px'
         width='100%'
+        mt='1rem !important'
+        mb='4rem !important'
         backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
-      ></Box>
+      />
 
       <Flex
+        mt='10rem'
         flexDirection={{ base: 'column', md: 'row-reverse' }}
         justifyContent='center'
         alignItems='center'
         columnGap={16}
-        rowGap={8}
-      >
+        rowGap={8}>
         <Box
           position={'relative'}
           height={'auto'}
-          maxHeight={{ base: '800px', md: '300px' }}
-        >
+          maxHeight={{ base: '800px', md: '300px' }}>
           <Image
             alt={'Hero Image'}
             fit={'contain'}
@@ -169,8 +195,7 @@ export default function IntroductionAboutUsComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}
-          >
+            fontSize={{ base: '2xl', md: '3xl' }}>
             Bankless is a movement for Web3 pioneers
           </Text>
           <Text color='grey' fontSize={{ base: 'xl', md: '2xl' }}>
@@ -189,13 +214,11 @@ export default function IntroductionAboutUsComponent() {
         alignItems='center'
         columnGap={16}
         rowGap={8}
-        mt={8}
-      >
+        mt={8}>
         <Box
           position={'relative'}
           height={'auto'}
-          maxHeight={{ base: '500px', md: '300px' }}
-        >
+          maxHeight={{ base: '500px', md: '300px' }}>
           <Image
             alt={'Hero Image'}
             fit={'contain'}
@@ -210,8 +233,7 @@ export default function IntroductionAboutUsComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}
-          >
+            fontSize={{ base: '2xl', md: '3xl' }}>
             BanklessDAO is the homebase
           </Heading>
           <Text color={'gray'} fontSize={{ base: 'xl', md: '2xl' }}>
@@ -224,6 +246,6 @@ export default function IntroductionAboutUsComponent() {
           </Text>
         </Stack>
       </Flex>
-    </Flex>
+    </VStack>
   )
 }
