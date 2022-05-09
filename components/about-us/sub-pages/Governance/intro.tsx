@@ -12,7 +12,7 @@ export default function GovernanceIntroComponent() {
       >
         <Heading
           fontWeight={700}
-          fontSize={{ base: '2xl', sm: '3xl', md: '5xl', lg: '7xl' }}
+          fontSize={{ base: '5xl', sm: '6xl', md: '7xl', lg: '7xl' }}
           lineHeight={'120%'}
           color={'white.100'}
         >
