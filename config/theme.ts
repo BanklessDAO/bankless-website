@@ -1,5 +1,5 @@
 import { extendTheme, withDefaultVariant } from '@chakra-ui/react'
-import "@fontsource/clear-sans";
+import '@fontsource/clear-sans'
 
 const variantOutlined = () => ({
   field: {
@@ -27,6 +27,10 @@ const variantFlushed = () => ({
 
 const theme = extendTheme(
   {
+    fonts: {
+      heading: 'clear-sans, sans-serif',
+      body: 'clear-sans, sans-serif',
+    },
     colors: {
       /* Bankless styles */
       white: {
@@ -98,9 +102,9 @@ const theme = extendTheme(
       ListItem: {
         variants: {
           bankless: {
-            color: 'white.500'
-          }
-        }
+            color: 'white.500',
+          },
+        },
       },
       Input: {
         variants: {
@@ -128,7 +132,7 @@ const theme = extendTheme(
   },
   withDefaultVariant({
     variant: 'bankless',
-    components: ['Button', 'Text', 'Input', 'Link','ListItem']
+    components: ['Button', 'Text', 'Input', 'Link', 'ListItem'],
   })
 )
 
