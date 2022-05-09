@@ -23,7 +23,7 @@ export default function GovernanceKickstartComponent() {
       >
         <Heading
           fontWeight={600}
-          fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
+          fontSize={{ base: '2xl', sm: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
           textAlign={'center'}
@@ -51,7 +51,7 @@ export default function GovernanceKickstartComponent() {
               </Text>
             </Flex>
 
-            <Text fontSize={'md'} color={'gray.400'}>
+            <Text fontSize={'md'} color={'gray.400'} maxW={{ lg: '30rem' }}>
               Pitch your idea to fellow contributors so you can find a group
               that aligns with your goals and wants to see your idea come to
               life. Typically, this involves hours spent on multiple Discord
@@ -79,7 +79,7 @@ export default function GovernanceKickstartComponent() {
               </Text>
             </Flex>
 
-            <Text fontSize={'md'} color={'gray.400'}>
+            <Text fontSize={'md'} color={'gray.400'} maxW={{ lg: '30rem' }}>
               Write a forum post following this template. The bDAO community
               will vote on your proposal and leave feedback on our forum. If
               your proposal is particularly complex or technical, share
@@ -106,7 +106,7 @@ export default function GovernanceKickstartComponent() {
               </Text>
             </Flex>
 
-            <Text fontSize={'md'} color={'gray.400'}>
+            <Text fontSize={'md'} color={'gray.400'} maxW={{ lg: '30rem' }}>
               The majority of proposals don’t pass muster in their original
               form. This is our iteration process in action. Keep an eye out for
               the comments and feedback from our contributors on your proposal:
@@ -133,7 +133,7 @@ export default function GovernanceKickstartComponent() {
               </Text>
             </Flex>
 
-            <Text fontSize={'md'} color={'gray.400'}>
+            <Text fontSize={'md'} color={'gray.400'} maxW={{ lg: '30rem' }}>
               If your proposal is up for at least seven days, receives at least
               30 votes, and has a majority in favor, you’re approved to begin
               work! If you don’t require funding from the Grants Committee you
@@ -159,7 +159,7 @@ export default function GovernanceKickstartComponent() {
               </Text>
             </Flex>
 
-            <Text fontSize={'md'} color={'gray.400'}>
+            <Text fontSize={'md'} color={'gray.400'} maxW='65rem'>
               If your proposal requires funding, you need to submit this form to
               go before the Grants Committee and request funding. Then, you can
               pitch your proposal to the Grants Committee in their weekly
