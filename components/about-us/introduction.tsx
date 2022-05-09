@@ -21,6 +21,8 @@ export default function IntroductionAboutUsComponent() {
         spacing={{ base: 8, md: 10 }}
         mt={{ base: 5, md: 10 }}
         direction={{ base: 'column', md: 'row' }}
+        position='relative'
+        zIndex='docked'
       >
         <Flex
           flex={1}
@@ -104,6 +106,18 @@ export default function IntroductionAboutUsComponent() {
           </Stack>
         </Box>
       </Stack>
+      <Box
+        position='absolute'
+        top='250px'
+        left='40%'
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.5) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
+        filter='auto'
+        blur='150px'
+        h='25rem'
+        w='25rem'
+        borderRadius='full'
+        zIndices='hide'
+      ></Box>
 
       <Stack mt={6}>
         <Flex
