@@ -8,7 +8,7 @@ import {
   Image,
   WrapItem,
 } from '@chakra-ui/react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 
 type ArticleLinkProps = {
   type: string
@@ -93,7 +93,7 @@ function setArticleType(type: string): string | undefined {
 }
 
 export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
-  <Link href={url}>
+  <NextLink href={url} passHref={true}>
     <WrapItem
       as='a'
       d='flex'
@@ -130,5 +130,5 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
         {desc}
       </Text>
     </WrapItem>
-  </Link>
+  </NextLink>
 )
