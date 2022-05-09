@@ -76,7 +76,7 @@ export const NewsletterList: React.FC = () => {
       <Grid
         as='ul'
         gridTemplateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
-        templateRows={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
+        templateRows={{ base: 'auto', lg: 'repeat(3, 1fr)' }}
         gap={4}
         zIndex={1}
         m={0}
