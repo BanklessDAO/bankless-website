@@ -20,6 +20,8 @@ export default function GovernanceKickstartComponent() {
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}
         mt={'4rem'}
+        position='relative'
+        zIndex='docked'
       >
         <Heading
           fontWeight={600}

@@ -9,6 +9,8 @@ export default function GovernanceIntroComponent() {
         textAlign={'center'}
         spacing={{ base: 2, md: 6 }}
         py={{ base: 10, md: 18 }}
+        position='relative'
+        zIndex='docked'
       >
         <Heading
           fontWeight={700}
