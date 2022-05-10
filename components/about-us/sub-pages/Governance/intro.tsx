@@ -77,6 +77,18 @@ export default function GovernanceIntroComponent() {
           </Box>
         </Flex>
       </Stack>
+      <Box
+        position='absolute'
+        top={{ sm: '0rem', md: '20rem' }}
+        left={{ sm: '0', md: '2%', lg: '5%', xl: '10%' }}
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
+        filter='auto'
+        blur='179px'
+        h='52rem'
+        w='44rem'
+        borderRadius='full'
+        zIndices='hide'
+      ></Box>
     </>
   )
 }
