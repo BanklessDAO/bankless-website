@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { Text, Box, Link, GridItem } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { Text, Box, GridItem, Link, keyframes, VStack } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/common/ChakraNextImage'
 type NewsletterCardProps = {
   title: string
@@ -16,6 +17,12 @@ type NewsletterCardImage = {
   alt: string
 }
 
+const keyframeSideToSide = keyframes`
+  0% {transform: translateX(0rem)}
+  50% {transform: translateX(2rem)}
+  100% {transform: translateX(0rem)}
+`
+
 export const NewsletterCard = ({
   title,
   text,
@@ -24,59 +31,91 @@ export const NewsletterCard = ({
   rowSpan,
   image,
 }: NewsletterCardProps) => {
+  const animationSideToSide = `${keyframeSideToSide} infinite 4s ease-in-out forwards`
   return (
     <GridItem
       as='li'
       alignItems='start'
       bgColor={'#101010'}
-      padding={{base: 4 , md: 8}}
       borderRadius={6}
+      h={{
+        base: image ? '160vw' : 'auto',
+        sm: image ? '32rem' : 'auto',
+        md: image ? '32rem' : 'auto',
+        lg: 'auto',
+      }}
       m={0}
-      rowSpan={{ base: 1, xl: rowSpan || 1 }}
+      rowSpan={{ base: image ? 6 : 1, xl: rowSpan || 1 }}
       colSpan={{ base: 1, xl: colSpan || 1 }}
       listStyleType={'none'}
-      pos='relative'>
-      <Text
-        fontSize={{base: '3xl', md:'5xl'}}
-        fontWeight={900}
-        fontFamily='Clear Sans'
-        lineHeight={1.2}>
-        {title}
-      </Text>
-      <Text
-        fontSize='xl'
-        color='rgba(255, 255, 255, 0.57)'
-        fontFamily='Clear Sans'
-        lineHeight={1.5}
-        pt='1em'>
-        {text}
-      </Text>
-      <Link
-        display='flex'
-        alignItems='center'
-        marginRight='2'
-        marginTop={6}
-        href={href}>
-        <Text fontSize='xl' marginRight={2} fontFamily='Clear Sans'>
-          View
-        </Text>
-        <Box>
-          <Image src='/icons/arrow.png' alt='arrow' height={10} width={10} />
-        </Box>
-      </Link>
-      {image && (
-        <ChakraNextImage
-          d={{base: 'none', xl: 'block'}}
-          src={image.src}
-          alt={image.alt}
-          pos='absolute'
-          width='30rem'
-          height='28rem'
-          zIndex={2}
-          bottom={{ base: -10, xl: -20 }}
-          right={{ base: -5, xl: 10 }}
-        />
-      )}
+      pos='relative'
+      border='1px solid rgba(255, 0, 0, 0)'
+      _hover={{
+        textDecoration: 'none',
+        backgroundColor: 'rgba(16, 16, 16, 0.6)',
+        transition: 'background-color 125ms ease-in-out',
+        border: '1px solid rgba(255, 0, 0, 0.5)',
+      }}>
+      <NextLink href={href} passHref={true}>
+        <Link
+          alt={`Visit ${title}`}
+          textDecoration='none'
+          _hover={{
+            textDecoration: 'none',
+            backgroundColor: 'rgba(16, 16, 16, 0.7)',
+          }}>
+          <VStack p={{ base: 4, md: 8 }} alignItems='start'>
+            <Text fontSize={'4xl'} fontWeight={700} fontFamily='Clear Sans'>
+              {title}
+            </Text>
+            <Text
+              fontSize={{base:'xl', md: 'xl'}}
+              textOverflow='wrap'
+              fontFamily='Clear Sans'
+              color='grey'
+              lineHeight='1.2'
+              m={0}
+              maxW={{ base: '100%', md: '80%' }}>
+              {text}
+            </Text>
+            <Box
+              display='flex'
+              alignItems='center'
+              marginRight='2'
+              marginTop={6}>
+              <Text fontSize='xl' marginRight={2} fontFamily='Clear Sans'>
+                View
+              </Text>
+              <Box>
+                <Image
+                  src='/icons/arrow.png'
+                  alt='arrow'
+                  height={10}
+                  width={10}
+                />
+              </Box>
+            </Box>
+            {image && (
+              <ChakraNextImage
+                d={'block'}
+                src={image.src}
+                alt={image.alt}
+                pos='absolute'
+                width={{ base: '80vw',sm:'30rem', md: '30rem' }}
+                height={{ base: '80vw',sm:'30rem', md: '28rem' }}
+                zIndex={2}
+                bottom={{ base: -10, xl: -20 }}
+                right={{ base: -5, xl: 10 }}
+                _hover={{
+                  // transform: 'translateX(6rem)',
+                  // transition: 'transform 250ms ease-in-out',
+                  animation: animationSideToSide,
+                }}
+              />
+            )}
+          </VStack>
+        </Link>
+      </NextLink>
     </GridItem>
   )
 }
