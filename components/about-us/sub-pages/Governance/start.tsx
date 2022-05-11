@@ -1,6 +1,6 @@
 import { Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
-
+import TokenImg from '../../../../assets/banklesscoin.png'
 export default function GovernanceStartComponent() {
   return (
     <>
@@ -58,20 +58,12 @@ export default function GovernanceStartComponent() {
             position={'relative'}
             height={'250px'}
             rounded={'2xl'}
-            boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}
+            display={'flex'}
+            justifyContent={'center'}
           >
-            <Image
-              alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
-              src={
-                'https://s3-alpha-sig.figma.com/img/798a/d025/0b0595ee8a595ebc99046de92bfc7933?Expires=1649030400&Signature=Ttf1xUvbrSqCAgjeEk7euyI7zGZYvNgbVRS7hgmbozg1p45-vj0YohbaQxmfx8eQ6yEvyadFSR8QmcyNxYDXNShuOmRa~A7Kr4p6XmUQT-0ZG5C9Z7v5mLxO~35HMEe1GxrHe~yUhmSPn3euiFUpJW8l4GwHu3MJkItJha4ql4mpw0Imk4hbshyxmPM9ltfKRgBL6Tm7bSIaJcJ2eXwi1tKdZ8R7geZCk9f0KoHjG1Qp0ZPrdg33u2HuOe2eDU-SxHMNHhX2zAyAy2nhJrYWmWX64tUDznjMi4-Rap1iody~6qclvOCxDzf3-lEYwbpzu8bpH~5RBPf9PSBkXmVapA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-              }
-            />
+            <Image alt={'Hero Image'} src={TokenImg.src} />
           </Box>
         </Flex>
       </Stack>
