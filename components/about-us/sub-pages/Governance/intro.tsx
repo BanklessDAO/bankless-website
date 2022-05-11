@@ -17,6 +17,7 @@ export default function GovernanceIntroComponent() {
           fontSize={{ base: '5xl', sm: '6xl', md: '7xl', lg: '7xl' }}
           lineHeight={'120%'}
           color={'white.100'}
+          // bgColor={{ base: 'pink', sm: 'red', md: 'blue', lg: 'green'}}
         >
           Governance
           <Underline />
@@ -81,13 +82,13 @@ export default function GovernanceIntroComponent() {
       </Stack>
       <Box
         position='absolute'
-        top={{ sm: '0rem', md: '20rem' }}
-        left={{ sm: '0', md: '2%', lg: '5%', xl: '10%' }}
+        top={{ base: '0rem', sm: '0rem', md: '20rem' }}
+        left={{ base: '0', sm: '0', md: '2%', lg: '5%', xl: '10%' }}
         bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
         filter='auto'
         blur='179px'
-        h='52rem'
-        w='44rem'
+        h='55rem'
+        w={{ base: '70%', md: '50rem' }}
         borderRadius='full'
         zIndices='hide'
       ></Box>
