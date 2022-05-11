@@ -47,6 +47,7 @@ export default function GovernanceRequirementComponent() {
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}
         mt={'4rem'}
+        zIndex='docked'
       >
         <Heading
           fontWeight={600}
@@ -70,6 +71,7 @@ export default function GovernanceRequirementComponent() {
             background={'#191919'}
             minWidth={{ base: '100%', md: '32rem' }}
             padding={'1rem'}
+            zIndex='docked'
           >
             <Stack direction={'row'} spacing={4}>
               <Button
@@ -139,6 +141,19 @@ export default function GovernanceRequirementComponent() {
           </Flex>
         </Center>
       </Stack>
+      <Box
+        position='absolute'
+        display={{ base: 'block', sm: 'none' }}
+        top={{ base: '160rem' }}
+        right='0'
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
+        filter='auto'
+        blur='179px'
+        h='45rem'
+        w={{ base: '70%', md: '50rem' }}
+        borderRadius='full'
+        zIndices='hide'
+      ></Box>
     </>
   )
 }
