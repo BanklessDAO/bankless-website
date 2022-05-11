@@ -14,7 +14,7 @@ export default function GovernanceStartComponent() {
             lineHeight={1.1}
             fontWeight={600}
             color={'white.100'}
-            fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}
+            fontSize={{ base: '5xl', lg: '5xl' }}
           >
             Get Started in
             <br />
@@ -26,7 +26,11 @@ export default function GovernanceStartComponent() {
               Governance Today
             </Text>
           </Heading>
-          <Text color={'white.100'} fontSize={{ sm: 'md', md: 'xl' }}>
+          <Text
+            color={'white.100'}
+            fontSize={{ base: '2xl', md: 'xl' }}
+            fontWeight='bold'
+          >
             Join the
             <Text
               fontSize={{ sm: 'md', md: 'xl' }}
@@ -39,8 +43,9 @@ export default function GovernanceStartComponent() {
           <Flex align={'center'} color={'white.100'}>
             <Text
               mr={'0.25rem'}
-              fontSize={{ base: '1xl', md: 'md' }}
+              fontSize={{ base: '3xl', md: 'md' }}
               fontWeight={'bold'}
+              as='u'
             >
               Buy Bank
             </Text>
@@ -63,15 +68,19 @@ export default function GovernanceStartComponent() {
             display={'flex'}
             justifyContent={'center'}
           >
-            <Image alt={'Hero Image'} src={TokenImg.src} />
+            <Image alt={'Hero Image'} src={TokenImg.src} minW='15rem' />
           </Box>
         </Flex>
       </Stack>
 
-      <Text textAlign={'center'} fontSize={{ sm: 'md', md: 'xl' }}>
+      <Text
+        mt='2rem'
+        textAlign={'center'}
+        fontSize={{ base: '1.5rem', md: 'xl' }}
+      >
         Join the
         <Text
-          fontSize={{ sm: 'md', md: 'xl' }}
+          fontSize={{ base: '1.5rem', md: 'xl' }}
           color={'red'}
           display={'inline'}
         >
