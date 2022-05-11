@@ -26,8 +26,23 @@ export default function GovernanceContributorComponent() {
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Box>
-            <Flex align={'center'} mb={3}>
-              <Text fontFamily={'heading'} fontSize={'xl'} color={'white'}>
+            <Flex align={'center'} mb={3} position='relative'>
+              <Box
+                h='3rem '
+                w='3rem'
+                borderRadius={'full'}
+                filter='auto'
+                blur='20px'
+                bgColor='red'
+                position={'absolute'}
+              ></Box>
+              <Text
+                fontFamily={'heading'}
+                fontSize={'2xl'}
+                color={'white'}
+                fontWeight={'bold'}
+                zIndex='docked'
+              >
                 Guest Pass:
               </Text>
             </Flex>
@@ -40,8 +55,23 @@ export default function GovernanceContributorComponent() {
           </Box>
 
           <Box>
-            <Flex align={'center'} mb={3}>
-              <Text fontFamily={'heading'} fontSize={'xl'} color={'white'}>
+            <Flex align={'center'} mb={3} position='relative'>
+              <Box
+                h='3rem '
+                w='3rem'
+                borderRadius={'full'}
+                filter='auto'
+                blur='20px'
+                bgColor='blue'
+                position={'absolute'}
+              ></Box>
+              <Text
+                fontFamily={'heading'}
+                fontSize={'2xl'}
+                color={'white'}
+                fontWeight={'bold'}
+                zIndex='docked'
+              >
                 MEMBER Level 1:
               </Text>
             </Flex>
@@ -53,8 +83,23 @@ export default function GovernanceContributorComponent() {
           </Box>
 
           <Box>
-            <Flex align={'center'} mb={3}>
-              <Text fontFamily={'heading'} fontSize={'xl'} color={'white'}>
+            <Flex align={'center'} mb={3} position='relative'>
+              <Box
+                h='3rem '
+                w='3rem'
+                borderRadius={'full'}
+                filter='auto'
+                blur='20px'
+                bgColor='#3bc4b3'
+                position={'absolute'}
+              ></Box>
+              <Text
+                fontFamily={'heading'}
+                fontSize={'2xl'}
+                color={'white'}
+                fontWeight={'bold'}
+                zIndex='docked'
+              >
                 CONTRIBUTOR level 2:
               </Text>
             </Flex>
@@ -67,8 +112,23 @@ export default function GovernanceContributorComponent() {
           </Box>
 
           <Box>
-            <Flex align={'center'} mb={3}>
-              <Text fontFamily={'heading'} fontSize={'xl'} color={'white'}>
+            <Flex align={'center'} mb={3} position='relative'>
+              <Box
+                h='3rem '
+                w='3rem'
+                borderRadius={'full'}
+                filter='auto'
+                blur='20px'
+                bgColor='#db24da'
+                position={'absolute'}
+              ></Box>
+              <Text
+                fontFamily={'heading'}
+                fontSize={'2xl'}
+                color={'white'}
+                fontWeight={'bold'}
+                zIndex='docked'
+              >
                 WHALE Level 3:
               </Text>
             </Flex>
