@@ -8,6 +8,8 @@ export default function GovernanceStartComponent() {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 10, md: 16 }}
         direction={{ base: 'column', md: 'row' }}
+        zIndex='docked'
+        mt={'5rem'}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
@@ -43,7 +45,7 @@ export default function GovernanceStartComponent() {
           <Flex align={'center'} color={'white.100'}>
             <Text
               mr={'0.25rem'}
-              fontSize={{ base: '3xl', md: 'md' }}
+              fontSize={{ base: '3xl', md: '4xl' }}
               fontWeight={'bold'}
               as='u'
             >
@@ -68,7 +70,12 @@ export default function GovernanceStartComponent() {
             display={'flex'}
             justifyContent={'center'}
           >
-            <Image alt={'Hero Image'} src={TokenImg.src} minW='15rem' />
+            <Image
+              alt={'Hero Image'}
+              src={TokenImg.src}
+              minW='15rem'
+              zIndex={'docked'}
+            />
           </Box>
         </Flex>
       </Stack>
@@ -76,11 +83,11 @@ export default function GovernanceStartComponent() {
       <Text
         mt='2rem'
         textAlign={'center'}
-        fontSize={{ base: '1.5rem', md: 'xl' }}
+        fontSize={{ base: '1.5rem', md: '3xl' }}
       >
         Join the
         <Text
-          fontSize={{ base: '1.5rem', md: 'xl' }}
+          fontSize={{ base: '1.5rem', md: '3xl' }}
           color={'red'}
           display={'inline'}
         >
