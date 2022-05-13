@@ -9,7 +9,7 @@ import {
   Box,
   Link,
   HStack,
-  VStack,
+  Stack,
 } from '@chakra-ui/react'
 import { RugLink } from './RugLink'
 
@@ -80,14 +80,20 @@ class Satire extends React.Component {
           </Flex>
         </GridItem>
         <GridItem>
-          <HStack alignItems='flex-start'>
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            alignItems='flex-start'>
             <RugLink
               href='https://therug.mirror.xyz/'
               type='mirror'
               desc='Collect NFTs of Satire edition on Mirror.'
             />
-            <RugLink href='https://twitter.com/TheRugNews' type='twitter' desc='Follow Satire on Twitter.' />
-          </HStack>
+            <RugLink
+              href='https://twitter.com/TheRugNews'
+              type='twitter'
+              desc='Follow Satire on Twitter.'
+            />
+          </Stack>
         </GridItem>
       </Grid>
     )
