@@ -19,7 +19,7 @@ export default function GovernanceKickstartComponent() {
         as={Box}
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}
-        mt={'4rem'}
+        mt={'2rem'}
         position='relative'
         zIndex='docked'
       >
