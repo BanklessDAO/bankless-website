@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Text, Grid } from '@chakra-ui/react'
 
 import Card from './card'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 const CARDS = [
     {

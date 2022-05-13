@@ -9,7 +9,7 @@ import {
   Link
 } from '@chakra-ui/react'
 
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
   render() {

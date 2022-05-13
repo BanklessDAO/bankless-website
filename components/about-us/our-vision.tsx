@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Heading, Text, Stack, Image, IconButton } from '@chakra-ui/react'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 import Slider from 'react-slick'
 
 export default function OurVisionIntroComponent() {
