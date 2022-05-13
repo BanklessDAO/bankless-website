@@ -46,6 +46,7 @@ export default function GovernanceKickstartComponent() {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                fontWeight={'700'}
                 color={'white'}
                 ml={3}
               >
@@ -74,6 +75,7 @@ export default function GovernanceKickstartComponent() {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                fontWeight={'700'}
                 color={'white'}
                 ml={3}
               >
@@ -101,6 +103,7 @@ export default function GovernanceKickstartComponent() {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                fontWeight={'700'}
                 color={'white'}
                 ml={3}
               >
@@ -128,6 +131,7 @@ export default function GovernanceKickstartComponent() {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                fontWeight={'700'}
                 color={'white'}
                 ml={3}
               >
@@ -154,6 +158,7 @@ export default function GovernanceKickstartComponent() {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                fontWeight={'700'}
                 color={'white'}
                 ml={3}
               >
