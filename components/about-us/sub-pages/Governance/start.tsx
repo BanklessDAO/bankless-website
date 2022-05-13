@@ -56,11 +56,12 @@ export default function GovernanceStartComponent() {
               <Text
                 color={'white.100'}
                 fontSize={{ base: '2xl', md: 'xl' }}
-                fontWeight='bold'
+                fontWeight={{ sm: '700', md: '400' }}
               >
                 Join the
                 <Text
-                  fontSize={{ sm: 'md', md: 'xl' }}
+                  fontSize={{ base: '2xl', md: 'xl' }}
+                  fontWeight={{ sm: '700', md: '400' }}
                   color={'red'}
                   display={'inline'}
                 >
@@ -90,10 +91,10 @@ export default function GovernanceStartComponent() {
           </Box>
           <Box>
             <Box
-              position={{ base: 'relative', sm: 'absolute', md: 'relative' }}
-              top={{ base: '2rem', sm: '17rem', md: '0' }}
-              left={{ base: '0rem', sm: '7rem', md: '0' }}
-              height={{ sm: '150px', md: '250px' }}
+              position={{ base: 'relative', sm: 'absolute', md: 'static' }}
+              top={{ base: '2rem', sm: '16rem' }}
+              left={{ base: '5rem', sm: '7rem' }}
+              height={{ sm: '150px', md: '150px' }}
               rounded={'2xl'}
               width={'full'}
               overflow={'hidden'}
@@ -103,7 +104,7 @@ export default function GovernanceStartComponent() {
               <Image
                 alt={'Hero Image'}
                 src={TokenImg.src}
-                minW='15rem'
+                minW='10rem'
                 zIndex={'docked'}
               />
             </Box>
