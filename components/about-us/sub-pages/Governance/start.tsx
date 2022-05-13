@@ -1,6 +1,7 @@
 import { Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import TokenImg from '../../../../assets/banklesscoin.png'
+import Link from 'next/link'
 
 export default function GovernanceStartComponent() {
   return (
@@ -34,7 +35,7 @@ export default function GovernanceStartComponent() {
           mt={'5rem'}
         >
           <Box>
-            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Stack flex={1} spacing={{ base: 5, md: 6 }}>
               <Heading
                 lineHeight={1.1}
                 fontWeight={600}
@@ -67,14 +68,22 @@ export default function GovernanceStartComponent() {
                 </Text>
               </Text>
               <Flex align={'center'} color={'white.100'}>
-                <Text
-                  mr={'0.25rem'}
-                  fontSize={{ base: '3xl', md: '4xl' }}
-                  fontWeight={'bold'}
-                  as='u'
+                <Link
+                  href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
+                  passHref
                 >
-                  Buy Bank
-                </Text>
+                  <Text
+                    mr={'0.25rem'}
+                    fontSize={{ base: '3xl', lg: 'md' }}
+                    fontWeight={'bold'}
+                    cursor='pointer'
+                    letterSpacing={'0px'}
+                    pb='1px'
+                    borderBottom={'2px solid white'}
+                  >
+                    Buy Bank
+                  </Text>
+                </Link>
                 <FiArrowUpRight size={20} />
               </Flex>
             </Stack>
