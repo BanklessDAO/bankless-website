@@ -17,7 +17,6 @@ export default function GovernanceIntroComponent() {
           fontSize={{ base: '5xl', sm: '6xl', md: '7xl', lg: '7xl' }}
           lineHeight={'120%'}
           color={'white.100'}
-          // bgColor={{ base: 'pink', sm: 'red', md: 'blue', lg: 'green'}}
         >
           Governance
           <Underline />
@@ -88,7 +87,7 @@ export default function GovernanceIntroComponent() {
         filter='auto'
         blur='179px'
         h='55rem'
-        w={{ base: '70%', md: '50rem' }}
+        w={{ base: '70%' }}
         borderRadius='full'
         zIndices='hide'
       ></Box>
