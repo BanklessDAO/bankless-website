@@ -1,39 +1,65 @@
-import { Text, Stack, Flex, Box } from '@chakra-ui/react'
+import { Text, Stack, Flex, Box, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
-const menus = [
-  { title: 'GOVERNANCE', href: '/about-us/governance' },
-  { title: 'GUILDS', href: '/about-us/guilds' },
-  { title: 'PROJECTS', href: '/about-us/projects' },
+const linksData = [
+  {
+    title: 'GOVERNANCE',
+    href: '/about-us/governance',
+    alt: 'Link to Governance page',
+  },
+  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  {
+    title: 'PROJECTS',
+    href: '/about-us/projects',
+    alt: 'Link to Projects page',
+  },
   // { title: 'COORDINATION', href: '#' },
-  { title: 'COMMUNITY CALLS', href: '/about-us/community-calls' },
-  { title: 'PORTAL NODES', href: '/about-us/nodes' },
+  {
+    title: 'COMMUNITY CALLS',
+    href: '/about-us/community-calls',
+    alt: 'Link to Community Calls page',
+  },
+  {
+    title: 'PORTAL NODES',
+    href: '/about-us/nodes',
+    alt: 'Link to Portal Nodes page',
+  },
   // { title: 'MEDIA KIT', href: '#' },
 ]
+
+type Link = {
+  title: string
+  href: string
+  alt: string
+}
 
 const Subnav = () => (
   <>
     <Stack mt={{ base: '1rem !important', xl: '2rem !important' }}>
       <Flex
         flex={1}
+        direction={{ base: 'column', md: 'row' }}
         columnGap='2rem'
         justify={{ base: 'center', md: 'space-around' }}
         align={'center'}
         wrap='wrap'>
-        {menus.map((menu, index) => {
+        {linksData.map(({ href, alt, title }: Link, index: number) => {
           return (
-            <Flex align={'center'} color={'white.100'} key={index}>
-              <NextLink href={menu.href} passHref={true}>
-                <Text
-                  mr={'0.25rem'}
-                  fontSize={{ base: '4xl', md: '2xl' }}
-                  fontWeight={700}
-                  fontFamily='Clear Sans'
-                  cursor='pointer'>
-                  {menu.title}
-                </Text>
-              </NextLink>
-            </Flex>
+            <NextLink href={href} passHref={true}>
+              <Link alt={alt}>
+                <Flex p={{ base: 2, md: 0 }} align={'center'} key={index}>
+                  <Text
+                    color={'white.100'}
+                    mr={'0.25rem'}
+                    fontSize={{ base: 'l', md: 'l', xl: '2xl' }}
+                    fontWeight={700}
+                    fontFamily='Clear Sans'
+                    cursor='pointer'>
+                    {title}
+                  </Text>
+                </Flex>
+              </Link>
+            </NextLink>
           )
         })}
       </Flex>
