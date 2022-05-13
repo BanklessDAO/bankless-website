@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { FiArrowUpRight } from 'react-icons/fi'
-import { boolean } from 'yup'
 
 const menus = [
   { title: 'GOVERNANCE', href: '/about-us/governance' },
@@ -36,67 +35,6 @@ const keyframeCircleMove = keyframes`
               rotate(-360deg);
   }
 `
-
-type TextRow = {
-  imageSrc: string
-  imageAlt: string
-  title: string
-  para: string
-  reversed?: boolean
-}
-
-const TextRow = ({
-  para,
-  title,
-  imageSrc,
-  imageAlt,
-  reversed = false,
-}: TextRow) => {
-  return (
-    <Flex
-      mt='10rem'
-      flexDirection={{ base: 'column', lg: reversed ? 'row-reverse' : 'row' }}
-      justifyContent='center'
-      alignItems='center'
-      pb='2rem'>
-      <Box
-        flex='0 0 40%'
-        pos={'relative'}
-        h={{base: '40vw', lg: '20vw'}}
-        w='100%'
-        pb={{ base: '2rem', lg: 0 }}
-        pr={{ base: 0, lg: !reversed ? '2rem' : 0 }}>
-        <Image
-          alt={imageAlt}
-          fit={'cover'}
-          align={'center'}
-          w={'100%'}
-          h={'100%'}
-          src={imageSrc}
-        />
-      </Box>
-      <Stack flex={1} pr={{ base: 0, lg: '1rem' }}>
-        <Text
-          color={'gray.100'}
-          lineHeight={1.2}
-          fontWeight={700}
-          fontFamily='Clear Sans'
-          fontSize='4xl'
-          pb='1rem'
-          w={{ base: '60%', lg: '' }}>
-          {title}
-        </Text>
-        <Text
-          color='grey'
-          fontSize='2xl'
-          fontFamily='Clear Sans'
-          lineHeight={1.2}>
-          {para}
-        </Text>
-      </Stack>
-    </Flex>
-  )
-}
 
 export default function IntroductionAboutUsComponent() {
   const animationTime = '5s'
@@ -226,20 +164,6 @@ export default function IntroductionAboutUsComponent() {
         mt='1rem !important'
         mb='4rem !important'
         backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
-      />
-      <TextRow
-        reversed={true}
-        imageSrc='/images/about-us/bankless-movement.png'
-        imageAlt='abstract image of ethereum'
-        title='Bankless is a movement for Web3 pioneers'
-        para='We seek new ways to build wealth, solve human coordination problems, create culture, and develop cutting-edge thought leadership in the crypto space. Going Bankless means taking control of your financial health by adopting decentralized and permissionless money systems. Bankless is the movement educating the world on how to do it.'
-      />
-      <TextRow
-        imageSrc='/images/about-us/bankless-dao.png'
-        imageAlt='abstract image of ethereum'
-        title='BanklessDAO is the homebase'
-        para="BanklessDAO is a community of passionate Web3 thought-leaders who aim to educate new users, produce written and audio media, build DAO tooling, provide consulting services, develop Web3 scholarship, and create a social and creative home base for anyone in Web3. We're so much more than a social DAO—we're a shipping, building, and
-      innovating DAO."
       />
     </VStack>
   )
