@@ -2,14 +2,12 @@ import {
   Box,
   Text,
   Stack,
-  HStack,
   Image,
   Flex,
   VStack,
   keyframes,
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
+import { CTALink } from 'components/_common/CTALink'
 
 const keyframeCircleMove = keyframes`
   0%{
@@ -103,20 +101,7 @@ export default function IntroductionAboutUsComponent() {
               fontSize={{ base: '4xl', md: '6xl' }}>
               What is BanklessDAO?
             </Text>
-            <NextLink
-              href={'https://discord.com/invite/bankless'}
-              passHref={true}>
-              <HStack
-                align={'center'}
-                color={'white.100'}
-                fontWeight={700}
-                fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
-                fontFamily='Clear Sans'
-                cursor='pointer'>
-                <Text>Join us</Text>
-                <FiArrowUpRight />
-              </HStack>
-            </NextLink>
+            <CTALink href='https://discord.com/invite/bankless' text='Join us' alt='Link to Bankless Discord'/>
           </VStack>
         </Box>
       </Stack>
