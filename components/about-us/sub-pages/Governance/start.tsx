@@ -9,7 +9,6 @@ export default function GovernanceStartComponent() {
         direction={'column'}
         mt='2rem'
         position={'relative'}
-        // bgColor='gray'
         alignItems='center'
       >
         <Box
@@ -41,7 +40,7 @@ export default function GovernanceStartComponent() {
                 fontWeight={600}
                 color={'white.100'}
                 w={{ md: '25rem' }}
-                fontSize={{ base: '5xl', lg: '5xl' }}
+                fontSize={{ base: '4xl', lg: '5xl' }}
               >
                 Get Started in
                 <br />
