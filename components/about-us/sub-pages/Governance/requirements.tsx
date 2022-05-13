@@ -85,6 +85,7 @@ export default function GovernanceRequirementComponent() {
                 _focus={{
                   border: 'none',
                 }}
+                cursor='default'
               >
                 Funding Requested
               </Button>
@@ -99,6 +100,7 @@ export default function GovernanceRequirementComponent() {
                 _focus={{
                   border: 'none',
                 }}
+                cursor='default'
               >
                 Number of voters required
               </Button>
@@ -118,6 +120,7 @@ export default function GovernanceRequirementComponent() {
                     _focus={{
                       border: 'none',
                     }}
+                    cursor='default'
                   >
                     {requirement.funding}
                   </Button>
@@ -132,6 +135,7 @@ export default function GovernanceRequirementComponent() {
                     _focus={{
                       border: 'none',
                     }}
+                    cursor='default'
                   >
                     {requirement.voters} voters
                   </Button>
