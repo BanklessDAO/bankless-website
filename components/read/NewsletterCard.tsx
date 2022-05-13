@@ -21,7 +21,7 @@ const keyframeSideToSide = keyframes`
   0% {transform: translateX(0rem)}
   50% {transform: translateX(2rem)}
   100% {transform: translateX(0rem)}
-`;
+`
 
 export const NewsletterCard = ({
   title,
@@ -31,15 +31,21 @@ export const NewsletterCard = ({
   rowSpan,
   image,
 }: NewsletterCardProps) => {
-  const animationSideToSide = `${keyframeSideToSide} infinite 4s ease-in-out forwards`;
+  const animationSideToSide = `${keyframeSideToSide} infinite 4s ease-in-out forwards`
   return (
     <GridItem
       as='li'
       alignItems='start'
       bgColor={'#101010'}
       borderRadius={6}
+      h={{
+        base: image ? '160vw' : 'auto',
+        sm: image ? '32rem' : 'auto',
+        md: image ? '32rem' : 'auto',
+        lg: 'auto',
+      }}
       m={0}
-      rowSpan={{ base: 1, xl: rowSpan || 1 }}
+      rowSpan={{ base: image ? 6 : 1, xl: rowSpan || 1 }}
       colSpan={{ base: 1, xl: colSpan || 1 }}
       listStyleType={'none'}
       pos='relative'
@@ -63,13 +69,13 @@ export const NewsletterCard = ({
               {title}
             </Text>
             <Text
-              fontSize='xl'
+              fontSize={{base:'xl', md: 'xl'}}
               textOverflow='wrap'
               fontFamily='Clear Sans'
               color='grey'
               lineHeight='1.2'
               m={0}
-              maxW='80%'>
+              maxW={{ base: '100%', md: '80%' }}>
               {text}
             </Text>
             <Box
@@ -91,19 +97,19 @@ export const NewsletterCard = ({
             </Box>
             {image && (
               <ChakraNextImage
-                d={{ base: 'none', xl: 'block' }}
+                d={'block'}
                 src={image.src}
                 alt={image.alt}
                 pos='absolute'
-                width='30rem'
-                height='28rem'
+                width={{ base: '80vw',sm:'30rem', md: '30rem' }}
+                height={{ base: '80vw',sm:'30rem', md: '28rem' }}
                 zIndex={2}
                 bottom={{ base: -10, xl: -20 }}
                 right={{ base: -5, xl: 10 }}
                 _hover={{
                   // transform: 'translateX(6rem)',
                   // transition: 'transform 250ms ease-in-out',
-                  animation: animationSideToSide
+                  animation: animationSideToSide,
                 }}
               />
             )}
