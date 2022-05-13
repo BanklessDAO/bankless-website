@@ -85,11 +85,10 @@ export default function GovernanceIntroComponent() {
         left={{ base: '0', sm: '0', md: '2%', lg: '5%', xl: '10%' }}
         bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
         filter='auto'
-        blur='179px'
+        blur='180px'
         h='55rem'
-        w={{ base: '70%' }}
+        w={{ base: '70%', lg: '50rem' }}
         borderRadius='full'
-        zIndices='hide'
       ></Box>
     </>
   )
