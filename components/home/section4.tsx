@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Flex, Text, Box, Image } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 import Link from 'next/link'
 
 const MULTI_SIG_OWNERS = [

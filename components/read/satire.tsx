@@ -12,7 +12,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { RugLink } from './RugLink'
-import { CTALink } from 'components/common/CTALink'
+import { CTALink } from 'components/_common/CTALink'
 
 class Satire extends React.Component {
   render() {
