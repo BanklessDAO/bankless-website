@@ -14,7 +14,6 @@ const keyframeCircleMove = keyframes`
     transform:rotate(0deg)
               translate(-24px)
               rotate(0deg);
-  
   }
   100%{
     transform:rotate(360deg)
@@ -23,26 +22,38 @@ const keyframeCircleMove = keyframes`
   }
 `
 
+const keyframeBeat = keyframes`
+	to { 
+    transform: scale(2) 
+              translateX(25%)
+              translateY(-25%);
+  }
+`
+
 export default function IntroductionAboutUsComponent() {
   const animationTime = '5s'
   const animationCircleClock = `${keyframeCircleMove} ${animationTime} linear infinite`
   const animationCircleAntiClock = `${keyframeCircleMove} ${animationTime} linear infinite reverse`
+  const animationBeat = `${keyframeBeat} ${animationTime} linear infinite alternate`
   return (
     <>
       <Stack
         align='center'
         justifyContent='center'
-        direction={{ base: 'column', md: 'row' }}>
+        direction={{ base: 'column', md: 'row' }}
+        pb={{base: '2rem', md: 0}}
+        pos='relative'>
         <Flex
           flex={{ base: '0 0 70%', xl: '0 0 60%' }}
           justify={'center'}
           align={'center'}
-          position={'relative'}>
+          position={'relative'}
+          zIndex={1}>
           <Box
             position={'relative'}
             overflow={'hidden'}
             w={'100%'}
-            h='40rem'
+            h={{base: '32rem', xl: '48rem'}}
             m={0}>
             <Image
               position={'absolute'}
@@ -90,20 +101,37 @@ export default function IntroductionAboutUsComponent() {
             />
           </Box>
         </Flex>
-
-        <Box flex={{ base: '0 0 30%', xl: '0 0 50%' }}>
+        <Box
+          h={{base: '24rem', xl: '32rem'}}
+          w={{base: '24rem', xl: '32rem'}}
+          bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
+          position='absolute'
+          left={{ base: '20%', lg: '24%' }}
+          bottom={{ base: '20%', lg: '4%' }}
+          zIndex='0'
+          filter='blur(6rem)'
+          opacity={0.3}
+          transform={'rotate(9.1deg)'}
+          animation={animationBeat}
+        />
+        <Box flex={{ base: '0 0 30%', md: '0 0 50%' }} zIndex={1}>
           <VStack alignItems='flex-start'>
             <Text
               color={'white.100'}
               lineHeight={1.1}
               fontWeight={700}
               fontFamily='Clear Sans'
-              fontSize={{ base: '4xl', md: '6xl' }}>
+              fontSize={{ base: '4xl', md:'4xl', lg: '6xl' }}>
               What is BanklessDAO?
             </Text>
-            <CTALink href='https://discord.com/invite/bankless' text='Join us' alt='Link to Bankless Discord'/>
+            <CTALink
+              href='https://discord.com/invite/bankless'
+              text='Join us'
+              alt='Link to Bankless Discord'
+            />
           </VStack>
         </Box>
+        
       </Stack>
     </>
   )
