@@ -2,6 +2,8 @@ import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 
 export default function JoinUsIntroComponent() {
+  const pxBase = 0
+  const pxLg = 40
   return (
     <>
       <Stack
@@ -16,7 +18,7 @@ export default function JoinUsIntroComponent() {
           fontSize={{ base: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          px={{ base: 18, md: 32 }}
+          px={{ base: pxBase, lg: pxLg }}
         >
           Join Us
           <Container
@@ -38,7 +40,7 @@ export default function JoinUsIntroComponent() {
         </Heading>
         <Text
           color={'grey'}
-          px={{ base: 18, md: 32 }}
+          px={{ base: pxBase, lg: pxLg }}
           fontSize={{ base: 'xl', md: '2xl' }}
         >
           This open and liberal financial system is just getting started. We’re
@@ -48,15 +50,15 @@ export default function JoinUsIntroComponent() {
 
         <Text
           color={'white.100'}
-          px={{ base: 18, md: 32 }}
+          px={{ base: pxBase, lg: pxLg }}
           fontSize={{ base: 'xl', md: '2xl' }}
         >
           Join us and embark on our mission :
         </Text>
         <Text
           color={'grey'}
-          lineHeight={'36px'}
-          px={{ base: 18, md: 32 }}
+          lineHeight={'2rem'}
+          px={{ base: pxBase, lg: pxLg }}
           marginTop='5px !important'
           fontSize={{ base: 'xl', md: '2xl' }}
         >
