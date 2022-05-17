@@ -15,7 +15,7 @@ class Section1 extends React.Component {
         <Box
           position='absolute'
           top='-10rem'
-          left='-40rem'
+          left={{ base: '-10rem', sm: '-40rem' }}
           bgGradient='linear(to-br, rgba(255, 16, 19, 0.4) 25%, rgba(0,0,0,0) 90%)'
           filter='auto'
           blur='150px'
@@ -57,7 +57,7 @@ class Section1 extends React.Component {
             Join Us
           </Text>
 
-          <video width='800' height='600' autoPlay loop muted playsInline>
+          <video width='100%' autoPlay loop muted playsInline>
             <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
           </video>
         </Flex>
