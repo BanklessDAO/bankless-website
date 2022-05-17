@@ -46,11 +46,12 @@ export default function GovernanceRequirementComponent() {
         as={Box}
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}
-        mt={'4rem'}
+        mt={{ base: '-2rem', md: '3rem' }}
         zIndex='docked'
       >
         <Heading
           fontWeight={600}
+          textAlign={{ base: 'center', md: 'left' }}
           fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
@@ -76,7 +77,7 @@ export default function GovernanceRequirementComponent() {
             <Stack direction={'row'} spacing={4}>
               <Button
                 flex={1}
-                fontSize={{ base: '0.6rem', sm: 'sm' }}
+                fontSize={{ base: '0.5rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
                 color={'white'}
                 _hover={{
@@ -91,7 +92,7 @@ export default function GovernanceRequirementComponent() {
               </Button>
               <Button
                 flex={1}
-                fontSize={{ base: '0.6rem', sm: 'sm' }}
+                fontSize={{ base: '0.5rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
                 color={'white'}
                 _hover={{
@@ -111,7 +112,7 @@ export default function GovernanceRequirementComponent() {
                 <Stack mt={4} direction={'row'} spacing={4} key={index}>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.6rem', sm: 'sm' }}
+                    fontSize={{ base: '0.5rem', sm: 'sm' }}
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
@@ -126,7 +127,7 @@ export default function GovernanceRequirementComponent() {
                   </Button>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.6rem', sm: 'sm' }}
+                    fontSize={{ base: '0.5rem', sm: 'sm' }}
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
@@ -156,7 +157,6 @@ export default function GovernanceRequirementComponent() {
         h='45rem'
         w={{ base: '70%', md: '50rem' }}
         borderRadius='full'
-        zIndices='hide'
       ></Box>
     </>
   )
