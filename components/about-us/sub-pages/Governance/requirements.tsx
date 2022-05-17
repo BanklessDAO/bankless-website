@@ -77,8 +77,9 @@ export default function GovernanceRequirementComponent() {
             <Stack direction={'row'} spacing={4}>
               <Button
                 flex={1}
-                fontSize={{ base: '0.5rem', sm: 'sm' }}
+                fontSize={{ base: '0.4rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
+                px='0.2rem'
                 color={'white'}
                 _hover={{
                   bg: '#0D0D0D',
@@ -92,8 +93,9 @@ export default function GovernanceRequirementComponent() {
               </Button>
               <Button
                 flex={1}
-                fontSize={{ base: '0.5rem', sm: 'sm' }}
+                fontSize={{ base: '0.4rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
+                px='0.2rem'
                 color={'white'}
                 _hover={{
                   bg: '#0D0D0D',
@@ -112,7 +114,8 @@ export default function GovernanceRequirementComponent() {
                 <Stack mt={4} direction={'row'} spacing={4} key={index}>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.5rem', sm: 'sm' }}
+                    fontSize={{ base: '0.4rem', sm: 'sm' }}
+                    px='0.2rem'
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
@@ -127,7 +130,8 @@ export default function GovernanceRequirementComponent() {
                   </Button>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.5rem', sm: 'sm' }}
+                    fontSize={{ base: '0.4rem', sm: 'sm' }}
+                    px='0.2rem'
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
