@@ -86,56 +86,66 @@ class Section3 extends React.Component {
           </Link>
         </Flex>
 
-        <Flex
-          height='fit-content'
-          mt={8}
-          flexDir='column'
-          justifyContent='center'
-          alignItems='center'
-          backgroundColor='white'
-          width='90%'
-          borderRadius='22px'
-          p={4}
-        >
-          <Box>
-            <Text
-              fontSize='3xl'
-              color={'black'}
-              fontWeight={700}
-              textAlign='center'
-            >
-              Onboarding 1 billion people, Minting 1 billion BANK tokens
-            </Text>
-          </Box>
-          <Flex flexDirection={{ base: 'column', lg: 'row' }}>
-            <Button
-              size='lg'
-              // width={{ base: '100%', md: '30%' }}
-              margin='8px'
-              onClick={() =>
-                window.open(
-                  'https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
-                )
-              }
-            >
-              Buy Bank
-            </Button>
-            <Button
-              size='lg'
-              // width={{ base: '100%', md: '70%' }}
-              margin='8px'
-              variant='bankless-white'
-              onClick={() =>
-                window.open(
-                  'https://drive.google.com/file/d/1WomKnCAaQTcNGh-VhPHKe-yUiyzXgSih/view'
-                )
-              }
-            >
-              BANK TOKEN LEGAL ASSESSMENT
-            </Button>
+        <Flex direction={'column'} alignItems='center'>
+          <Box
+            display={{ base: 'none', sm: 'none', md: 'block' }}
+            width={'100%'}
+            height={'3rem'}
+            bgColor='white'
+            filter='auto'
+            blur='5px'
+            bgGradient={'linear(to-t, rgba(255, 255, 255,10) 1%, rgba(0,0,0))'}
+            clipPath={'polygon(5% 0%, 95% 0%, 100% 110%, 0% 110%)'}
+          ></Box>
+          <Flex
+            height='fit-content'
+            flexDir='column'
+            justifyContent='center'
+            alignItems='center'
+            backgroundColor='white'
+            borderRadius='10px'
+            p={5}
+          >
+            <Box>
+              <Text
+                fontSize='3xl'
+                my='1rem'
+                px={{ base: '0rem', sm: '2rem', md: '5rem' }}
+                color={'black'}
+                fontWeight={700}
+                textAlign='center'
+              >
+                Onboarding 1 billion people, Minting 1 billion BANK tokens
+              </Text>
+            </Box>
+            <Flex flexDirection={{ base: 'column', lg: 'row' }}>
+              <Button
+                size='lg'
+                margin='8px'
+                onClick={() =>
+                  window.open(
+                    'https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
+                  )
+                }
+              >
+                Buy Bank
+              </Button>
+              <Button
+                size='lg'
+                // width={{ base: '100%', md: '70%' }}
+                margin='8px'
+                variant='bankless-white'
+                onClick={() =>
+                  window.open(
+                    'https://drive.google.com/file/d/1WomKnCAaQTcNGh-VhPHKe-yUiyzXgSih/view'
+                  )
+                }
+              >
+                BANK TOKEN LEGAL ASSESSMENT
+              </Button>
+            </Flex>
           </Flex>
         </Flex>
-
         <Flex
           flexDir={{ base: 'column', lg: 'row' }}
           justifyContent='center'
