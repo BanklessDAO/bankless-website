@@ -1,48 +1,58 @@
-import React from 'react';
-import { Flex, Text, Box, Button, Image, Link } from '@chakra-ui/react';
-import Underline from 'components/common/underline';
+import React from 'react'
+import { Flex, Text, Box, Button, Image, Link } from '@chakra-ui/react'
+import Underline from 'components/common/underline'
 
 class Section3 extends React.Component {
   render() {
     return (
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
         <Text
-          fontSize='4xl'
+          fontSize={{ base: 'xl', sm: '2xl', md: '4xl' }}
           wordBreak={'break-word'}
           textAlign='center'
           fontWeight={700}
-          marginTop={{ base: 39, lg: 25 }}
+          marginTop={{ base: 39, lg: 100 }}
           width={{ base: '80%', lg: '60%' }}
         >
           {'Community-owned and operated through the:'.toUpperCase()}
         </Text>
-
-        <Underline />
+        <Box w={'70%'}>
+          <Underline />
+        </Box>
 
         <Flex
-          flexDirection={{ base: 'column', lg: 'row' }}
+          flexDirection='row'
           justifyContent='space-evenly'
-          width='100%'
+          width='80%'
+          my='4rem'
         >
-          <Link href={'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198'}>
+          <Link
+            href={
+              'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198'
+            }
+          >
             <Flex
               height='fit-content'
               flexDirection='column'
               alignItems='center'
               margin={6}
             >
-
               <Box>
                 <Image
                   src='/icons/bankless-coin.png'
                   alt='bankless-coin'
                   height={200}
-                  width={200}
+                  width={250}
                   objectFit='contain'
                 />
               </Box>
               <Box>
-                <Text fontSize='4xl' fontWeight={700}>
+                <Text
+                  fontSize={{ base: 'xl', md: '4xl' }}
+                  mt='2rem'
+                  textAlign={'center'}
+                  fontWeight={700}
+                >
                   BANK Token
                 </Text>
               </Box>
@@ -55,16 +65,21 @@ class Section3 extends React.Component {
               alignItems='center'
               margin={6}
             >
-              <Box>
+              <Box height={200} pt={'2rem'}>
                 <Image
                   src='/icons/ethereum-icon.png'
                   alt='ethereum-icon'
-                  height={200}
+                  height={150}
                   width={200}
                   objectFit='contain'
                 />
               </Box>
-              <Text fontSize='4xl' fontWeight={700} textAlign='center'>
+              <Text
+                fontSize={{ base: 'xl', md: '4xl' }}
+                mt='2rem'
+                fontWeight={700}
+                textAlign='center'
+              >
                 Ethereum Blockchain
               </Text>
             </Flex>
@@ -97,7 +112,11 @@ class Section3 extends React.Component {
               size='lg'
               // width={{ base: '100%', md: '30%' }}
               margin='8px'
-              onClick={() => window.open('https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet')}
+              onClick={() =>
+                window.open(
+                  'https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
+                )
+              }
             >
               Buy Bank
             </Button>
@@ -106,7 +125,11 @@ class Section3 extends React.Component {
               // width={{ base: '100%', md: '70%' }}
               margin='8px'
               variant='bankless-white'
-              onClick={() => window.open('https://drive.google.com/file/d/1WomKnCAaQTcNGh-VhPHKe-yUiyzXgSih/view')}
+              onClick={() =>
+                window.open(
+                  'https://drive.google.com/file/d/1WomKnCAaQTcNGh-VhPHKe-yUiyzXgSih/view'
+                )
+              }
             >
               BANK TOKEN LEGAL ASSESSMENT
             </Button>
@@ -130,7 +153,7 @@ class Section3 extends React.Component {
                   src='/profile-pics/david-hoffman.jpg'
                   height={150}
                   width={150}
-                  borderRadius="100%"
+                  borderRadius='100%'
                   alt='david-hoffman'
                 />
               </Box>
@@ -145,7 +168,7 @@ class Section3 extends React.Component {
                   src='/profile-pics/ryan-sean-adams.jpg'
                   height={150}
                   width={150}
-                  borderRadius="100%"
+                  borderRadius='100%'
                   alt='ryan-sean-adams'
                 />
               </Box>
