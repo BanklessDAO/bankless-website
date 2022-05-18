@@ -108,7 +108,7 @@ class Section3 extends React.Component {
           >
             <Box>
               <Text
-                fontSize='3xl'
+                fontSize={{ base: 'xl', md: '3xl' }}
                 my='1rem'
                 px={{ base: '0rem', sm: '2rem', md: '5rem' }}
                 color={'black'}
@@ -147,10 +147,11 @@ class Section3 extends React.Component {
           </Flex>
         </Flex>
         <Flex
-          flexDir={{ base: 'column', lg: 'row' }}
+          flexDir={{ base: 'column', xl: 'row' }}
           justifyContent='center'
           alignItems='center'
           marginTop={{ base: 10, lg: 20 }}
+          // width={{base: '30rem', sm: '60rem'}}
         >
           <Flex flexDirection='row' marginRight={8}>
             <Box margin={5}>
@@ -161,8 +162,8 @@ class Section3 extends React.Component {
               >
                 <Image
                   src='/profile-pics/david-hoffman.jpg'
-                  height={150}
-                  width={150}
+                  height={{ base: 100, sm: 150 }}
+                  width={{ base: 100, sm: 150 }}
                   borderRadius='100%'
                   alt='david-hoffman'
                 />
@@ -176,8 +177,8 @@ class Section3 extends React.Component {
               >
                 <Image
                   src='/profile-pics/ryan-sean-adams.jpg'
-                  height={150}
-                  width={150}
+                  height={{ base: 100, sm: 150 }}
+                  width={{ base: 100, sm: 150 }}
                   borderRadius='100%'
                   alt='ryan-sean-adams'
                 />
@@ -186,10 +187,16 @@ class Section3 extends React.Component {
           </Flex>
 
           <Box
-            width={{ base: '100%', lg: '60%' }}
+            // width={{ base: '100%', lg: '20rem' }}
+            mt={{ base: '3rem', sm: '3rem' }}
             textAlign={{ base: 'center', lg: 'left' }}
           >
-            <Text fontSize='3xl' color='rgba(255, 255, 255, 0.61)'>
+            <Text
+              fontSize={{ base: 'xl', sm: '3xl' }}
+              color='rgba(255, 255, 255, 0.61)'
+              m={'0 auto'}
+              width={{ base: '20rem', sm: '26rem', md: '33rem' }}
+            >
               BanklessDAO was founded by{' '}
               <b style={{ color: 'white' }}>David Hoffman</b> and{' '}
               <b style={{ color: 'white' }}>Ryan Sean Adams</b> on May 4th,
@@ -199,7 +206,11 @@ class Section3 extends React.Component {
           </Box>
         </Flex>
 
-        <Box mt={16} maxW={{ base: 600, lg: 1000 }}>
+        <Box
+          mt={16}
+          maxW={{ base: 600, lg: 1000 }}
+          display={{ base: 'none', sm: 'block' }}
+        >
           <Text
             fontSize={{ base: 'md', lg: 'xl' }}
             color='rgba(255, 255, 255, 0.35)'
