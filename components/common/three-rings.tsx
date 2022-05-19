@@ -6,7 +6,7 @@ class ThreeRings extends React.Component {
   render() {
     return (
       <Flex
-        marginTop={20}
+        marginTop={{ base: '0', md: '20' }}
         flexWrap='wrap'
         flexDir='row'
         justifyContent='center'
@@ -14,8 +14,8 @@ class ThreeRings extends React.Component {
       >
         <Box
           borderRadius='100%'
-          height='80px'
-          width='80px'
+          height={{ base: '60px', sm: '80px' }}
+          width={{ base: '60px', sm: '80px' }}
           background='radial-gradient(
             circle,
             transparent 40%,
@@ -24,15 +24,20 @@ class ThreeRings extends React.Component {
         ></Box>
         <Box
           borderRadius='100%'
-          height='140px'
-          width='140px'
-          margin={{ base: '0px 30px', sm: '0px 40px', md: '0px 80px', lg: '0px 110px' }}
+          height={{ base: '100px', sm: '140px' }}
+          width={{ base: '100px', sm: '140px' }}
+          margin={{
+            base: '0px 30px',
+            sm: '0px 40px',
+            md: '0px 80px',
+            lg: '0px 110px',
+          }}
           background='radial-gradient(circle, transparent 40%, red 40%)'
         ></Box>
         <Box
           borderRadius='100%'
-          height='80px'
-          width='80px'
+          height={{ base: '60px', sm: '80px' }}
+          width={{ base: '60px', sm: '80px' }}
           background='radial-gradient(
             circle,
             transparent 40%,
