@@ -159,9 +159,8 @@ function Section3() {
         justifyContent='center'
         alignItems='center'
         marginTop={{ base: 10, lg: 20 }}
-        // width={{base: '30rem', sm: '60rem'}}
       >
-        <Flex flexDirection='row' marginRight={8}>
+        <Flex flexDirection='row' marginRight={{ base: 0, lg: 8 }}>
           <Box margin={5}>
             <Box
               borderRadius='100%'
