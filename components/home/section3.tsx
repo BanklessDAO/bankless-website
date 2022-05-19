@@ -21,7 +21,7 @@ function Section3() {
         textAlign='center'
         fontWeight={700}
         marginTop={{ base: 39, lg: 100 }}
-        width={{ base: '80%', lg: '60%' }}
+        width={{ base: '100%', xl: '60%' }}
       >
         {'Community-owned and operated through the:'.toUpperCase()}
       </Text>
@@ -46,18 +46,18 @@ function Section3() {
             alignItems='center'
             margin={6}
           >
-            <Box>
+            <Box height={200} width={150}>
               <Image
                 src='/icons/bankless-coin.png'
                 alt='bankless-coin'
-                height={200}
-                width={250}
+                height={{ base: 150, md: 200 }}
+                width={{ base: 200, md: 250 }}
                 objectFit='contain'
               />
             </Box>
             <Box>
               <Text
-                fontSize={{ base: 'xl', md: '4xl' }}
+                fontSize={{ base: 'xl', lg: '2xl', xl: '4xl' }}
                 mt='2rem'
                 textAlign={'center'}
                 fontWeight={700}
@@ -74,17 +74,17 @@ function Section3() {
             alignItems='center'
             margin={6}
           >
-            <Box height={200} pt={'2rem'}>
+            <Box height={200} width={150} pt={'2rem'}>
               <Image
                 src='/icons/ethereum-icon.png'
                 alt='ethereum-icon'
-                height={150}
-                width={200}
+                height={{ base: 100, md: 150 }}
+                width={{ base: 150, md: 200 }}
                 objectFit='contain'
               />
             </Box>
             <Text
-              fontSize={{ base: 'xl', md: '4xl' }}
+              fontSize={{ base: 'xl', lg: '2xl', xl: '4xl' }}
               mt='2rem'
               fontWeight={700}
               textAlign='center'
