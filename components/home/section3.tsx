@@ -102,9 +102,9 @@ function Section3() {
           height={'3rem'}
           bgColor='white'
           filter='auto'
-          blur='5px'
+          blur='2px'
           bgGradient={'linear(to-t, rgba(255, 255, 255,10) 1%, rgba(0,0,0))'}
-          clipPath={'polygon(5% 0%, 95% 0%, 100% 110%, 0% 110%)'}
+          clipPath={'polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)'}
         ></Box>
         <Flex
           height='fit-content'
@@ -112,7 +112,7 @@ function Section3() {
           justifyContent='center'
           alignItems='center'
           backgroundColor='white'
-          borderRadius='10px'
+          borderRadius='0px 0px 10px 10px'
           p={5}
         >
           <Box>
