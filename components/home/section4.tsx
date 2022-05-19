@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Text, Box, Image } from '@chakra-ui/react'
+import { Flex, Text, Box, Image, Container } from '@chakra-ui/react'
 import Underline from 'components/common/underline'
 import Link from 'next/link'
 
@@ -39,7 +39,7 @@ const MULTI_SIG_OWNERS = [
     img: '/profile-pics/links.jpg',
     name: 'Links',
     twitter: 'https://twitter.com/almithani',
-  }
+  },
 ]
 
 const GRANT_COMMITTEE_MEMBERS = [
@@ -77,30 +77,75 @@ const GRANT_COMMITTEE_MEMBERS = [
     img: '/profile-pics/redvan.jpg',
     name: 'RedVan',
     twitter: 'https://mobile.twitter.com/0xredvan',
-  }
+  },
 ]
 
 class Section4 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center'>
+      <Flex
+        flexDir='column'
+        justifyContent='center'
+        alignItems='center'
+        my='1rem'
+        w='100vw'
+      >
         <Text
-          fontSize='4xl'
+          fontSize={{ base: '1.5rem', md: '4xl' }}
           wordBreak={'break-word'}
           textAlign='center'
+          // bgColor={{
+          //   base: 'pink',
+          //   sm: 'red',
+          //   md: 'green',
+          //   lg: 'blue',
+          //   xl: 'violet',
+          // }}
           fontWeight={700}
           marginTop={{ base: 39, lg: 25 }}
-          width={{ base: '80%', lg: '60%' }}
+          width={{ base: '100%', lg: '60%' }}
         >
           {'Treasury multi-sig owners'.toUpperCase()}
         </Text>
-        <Underline />
+        <Box w='80vw'>
+          <Container
+            display={{ base: 'none', md: 'block' }}
+            filter='blur(2px)'
+            mt={4}
+            mb={{ base: 4, md: 12 }}
+            fontSize='16px'
+            lineHeight='6px'
+            background='linear-gradient(
+          91.88deg,
+          #ff1013 44.79%,
+          rgba(140, 29, 207, 0) 101.77%
+        )'
+          >
+            &nbsp;
+          </Container>
+          <Container
+            display={{ base: 'block', md: 'none' }}
+            filter='blur(6px)'
+            mt={6}
+            mb={{ base: 12, md: 12 }}
+            fontSize='8px'
+            lineHeight='10px'
+            background='linear-gradient(
+          91.88deg,
+          #ff1013 30.79%,
+          rgba(140, 29, 207, 0.5) 101.77%
+        )'
+          >
+            &nbsp;
+          </Container>
+        </Box>
 
         <Flex
           flexWrap='wrap'
           flexDir='row'
           justifyContent='center'
           alignItems='space-between'
+          my='1rem'
           rowGap={8}
         >
           {MULTI_SIG_OWNERS.map(_multiSigOwner => {
@@ -109,7 +154,7 @@ class Section4 extends React.Component {
                 flexDir='column'
                 justifyContent='center'
                 alignItems='center'
-                width={{ base: '50%', lg: '30%' }}
+                width={{ base: '30%' }}
                 key={_multiSigOwner.name}
                 rowGap='1.5vh'
               >
@@ -122,8 +167,8 @@ class Section4 extends React.Component {
                     borderRadius='100%'
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
-                    width={{ base: '150px', md: '200px' }}
-                    height={{ base: '150px', md: '200px' }}
+                    width={{ base: '90px', sm: '120px', md: '200px' }}
+                    height={{ base: '90px', sm: '120px', md: '200px' }}
                   />
                 </Box>
 
@@ -133,7 +178,10 @@ class Section4 extends React.Component {
                   alignItems='center'
                   pt={4}
                 >
-                  <Text fontSize={{ base: 'xl', md: '2xl' }} style={{ marginRight: 8 }}>
+                  <Text
+                    fontSize={{ base: 'sm', sm: 'xl', md: '2xl' }}
+                    style={{ marginRight: 8 }}
+                  >
                     {_multiSigOwner.name}
                   </Text>
                   <Flex
@@ -162,22 +210,65 @@ class Section4 extends React.Component {
         </Flex>
 
         <Text
-          fontSize='4xl'
+          fontSize={{ base: '1.5rem', md: '4xl' }}
           wordBreak={'break-word'}
           textAlign='center'
+          // bgColor={{
+          //   base: 'pink',
+          //   sm: 'red',
+          //   md: 'green',
+          //   lg: 'blue',
+          //   xl: 'violet',
+          // }}
+
+          display={{ base: 'none', md: 'block' }}
           fontWeight={700}
-          marginTop={{ base: 32, lg: 24 }}
-          width={{ base: '80%', lg: '60%' }}
+          marginTop={{ base: 39, lg: 25 }}
+          width={{ base: '100%', lg: '60%' }}
         >
           {'Grants committee members'.toUpperCase()}
         </Text>
-        <Underline />
+        <Box w='80vw'>
+          <Container
+            display={{ base: 'none', md: 'block' }}
+            filter='blur(2px)'
+            mt={4}
+            mb={{ base: 4, md: 12 }}
+            fontSize='16px'
+            lineHeight='6px'
+            background='linear-gradient(
+          91.88deg,
+          #ff1013 44.79%,
+          rgba(140, 29, 207, 0) 101.77%
+        )'
+          >
+            &nbsp;
+          </Container>
+          <Container
+            // display={{ base: 'block', md: 'none' }}
+            display={{ base: 'none' }}
+            filter='blur(6px)'
+            mt={6}
+            mb={{ base: 12, md: 12 }}
+            fontSize='8px'
+            lineHeight='10px'
+            background='linear-gradient(
+          91.88deg,
+          #ff1013 30.79%,
+          rgba(140, 29, 207, 0.5) 101.77%
+        )'
+          >
+            &nbsp;
+          </Container>
+        </Box>
 
         <Flex
           flexWrap='wrap'
           flexDir='row'
           justifyContent='center'
           alignItems='space-between'
+          my='1rem'
+          display={{ base: 'none', md: 'flex' }}
           rowGap={8}
         >
           {GRANT_COMMITTEE_MEMBERS.map(_multiSigOwner => {
@@ -186,7 +277,7 @@ class Section4 extends React.Component {
                 flexDir='column'
                 justifyContent='center'
                 alignItems='center'
-                width={{ base: '50%', lg: '30%' }}
+                width={{ base: '30%' }}
                 key={_multiSigOwner.name}
                 rowGap='1.5vh'
               >
@@ -199,8 +290,8 @@ class Section4 extends React.Component {
                     borderRadius='100%'
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
-                    width={{ base: '150px', md: '200px' }}
-                    height={{ base: '150px', md: '200px' }}
+                    width={{ base: '90px', sm: '120px', md: '200px' }}
+                    height={{ base: '90px', sm: '120px', md: '200px' }}
                   />
                 </Box>
 
@@ -210,7 +301,10 @@ class Section4 extends React.Component {
                   alignItems='center'
                   pt={4}
                 >
-                  <Text fontSize='2xl' style={{ marginRight: 8 }}>
+                  <Text
+                    fontSize={{ base: 'sm', sm: 'xl', md: '2xl' }}
+                    style={{ marginRight: 8 }}
+                  >
                     {_multiSigOwner.name}
                   </Text>
                   <Flex
