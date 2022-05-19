@@ -192,7 +192,7 @@ class Section3 extends React.Component {
             textAlign={{ base: 'center', lg: 'left' }}
           >
             <Text
-              fontSize={{ base: 'xl', sm: '3xl' }}
+              fontSize={{ base: 'md', sm: '3xl' }}
               color='rgba(255, 255, 255, 0.61)'
               m={'0 auto'}
               width={{ base: '20rem', sm: '26rem', md: '33rem' }}
