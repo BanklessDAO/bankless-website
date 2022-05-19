@@ -94,13 +94,6 @@ class Section4 extends React.Component {
           fontSize={{ base: '1.5rem', md: '4xl' }}
           wordBreak={'break-word'}
           textAlign='center'
-          // bgColor={{
-          //   base: 'pink',
-          //   sm: 'red',
-          //   md: 'green',
-          //   lg: 'blue',
-          //   xl: 'violet',
-          // }}
           fontWeight={700}
           marginTop={{ base: 39, lg: 25 }}
           width={{ base: '100%', lg: '60%' }}
@@ -213,14 +206,6 @@ class Section4 extends React.Component {
           fontSize={{ base: '1.5rem', md: '4xl' }}
           wordBreak={'break-word'}
           textAlign='center'
-          // bgColor={{
-          //   base: 'pink',
-          //   sm: 'red',
-          //   md: 'green',
-          //   lg: 'blue',
-          //   xl: 'violet',
-          // }}
-
           display={{ base: 'none', md: 'block' }}
           fontWeight={700}
           marginTop={{ base: 39, lg: 25 }}
