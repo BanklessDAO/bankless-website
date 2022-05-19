@@ -20,7 +20,7 @@ class Section1 extends React.Component {
           filter='auto'
           blur='150px'
           h={{ base: '40rem', md: '50rem' }}
-          w={{ base: '30rem', md: '80rem' }}
+          w={{ base: '30rem', sm: '70rem', md: '80rem' }}
           opacity={{ base: '70%', md: '100%' }}
           borderRadius='full'
         ></Box>
@@ -37,6 +37,7 @@ class Section1 extends React.Component {
             fontWeight={700}
             fontSize={{ base: '4xl', md: '6xl' }}
             minW={{ base: '300px' }}
+            w={{ base: '18rem', md: '60rem' }}
             textAlign='center'
             maxW={750}
           >
