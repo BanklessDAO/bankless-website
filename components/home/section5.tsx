@@ -29,7 +29,7 @@ class Section5 extends React.Component {
           justifyContent='space-between'
           alignItems='center'
           width={{ lg: '70vw', xl: '60vw' }}
-          marginTop={{ base: 8, lg: 32 }}
+          marginTop='8'
         >
           <Text
             fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}
