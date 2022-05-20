@@ -170,7 +170,10 @@ function Section3() {
             <Box
               borderRadius='100%'
               width='fit-content'
-              boxShadow='-18px 8px 35px red'
+              boxShadow={{
+                base: '-8px -1px 10px 2px red',
+                md: '-8px 0px 10px 5px red',
+              }}
             >
               <Image
                 src='/profile-pics/david-hoffman.jpg'
@@ -185,7 +188,10 @@ function Section3() {
             <Box
               borderRadius='100%'
               width='fit-content'
-              boxShadow='18px 8px 35px red'
+              boxShadow={{
+                base: '8px -1px 10px 2px red',
+                md: '8px 0px 10px 5px red',
+              }}
             >
               <Image
                 src='/profile-pics/ryan-sean-adams.jpg'
