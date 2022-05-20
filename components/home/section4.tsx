@@ -165,38 +165,38 @@ class Section4 extends React.Component {
                   />
                 </Box>
 
-                <Flex
-                  flexDir='row'
-                  justifyContent='space-between'
-                  alignItems='center'
-                  pt={4}
-                >
-                  <Text
-                    fontSize={{ base: 'sm', sm: 'xl', md: '2xl' }}
-                    style={{ marginRight: 8 }}
-                  >
-                    {_multiSigOwner.name}
-                  </Text>
+                <Link href={_multiSigOwner.twitter} passHref={true}>
                   <Flex
                     flexDir='row'
-                    justifyContent='center'
+                    justifyContent='space-between'
                     alignItems='center'
-                    backgroundColor='#1da1f2'
-                    borderRadius='100%'
-                    w='20px'
-                    h='20px'
-                    cursor='pointer'
+                    cursor={'pointer'}
+                    pt={4}
                   >
-                    <Link href={_multiSigOwner.twitter} passHref={true}>
+                    <Text
+                      fontSize={{ base: 'sm', sm: 'xl', md: '2xl' }}
+                      style={{ marginRight: 8 }}
+                    >
+                      {_multiSigOwner.name}
+                    </Text>
+                    <Flex
+                      flexDir='row'
+                      justifyContent='center'
+                      alignItems='center'
+                      backgroundColor='#1da1f2'
+                      borderRadius='100%'
+                      w='20px'
+                      h='20px'
+                    >
                       <Image
                         src='/icons/twitter.png'
                         alt='twitter'
                         width='10px'
                         height='10px'
                       />
-                    </Link>
+                    </Flex>
                   </Flex>
-                </Flex>
+                </Link>
               </Flex>
             )
           })}
