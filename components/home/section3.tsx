@@ -95,16 +95,20 @@ function Section3() {
         </Link>
       </Flex>
 
-      <Flex direction={'column'} alignItems='center'>
+      <Flex direction={'column'} alignItems='center' position={'relative'}>
         <Box
+          position={'absolute'}
+          top='-10'
           display={{ base: 'none', sm: 'none', md: 'block' }}
-          width={'100%'}
+          width={'100.3%'}
           height={'3rem'}
           bgColor='white'
           filter='auto'
           blur='2px'
-          bgGradient={'linear(to-t, rgba(255, 255, 255,10) 1%, rgba(0,0,0))'}
-          clipPath={'polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)'}
+          bgGradient={
+            'linear(to-t, rgba(255, 255, 255,10) 1%, rgba(0,0,0) 80%)'
+          }
+          clipPath={'polygon(5% -10%, 95% 0%, 100% 100%, 0% 100%)'}
         ></Box>
         <Flex
           height='fit-content'
@@ -112,12 +116,13 @@ function Section3() {
           justifyContent='center'
           alignItems='center'
           backgroundColor='white'
-          borderRadius='0px 0px 10px 10px'
+          borderRadius='10px'
           p={5}
         >
           <Box>
             <Text
               fontSize={{ base: 'xl', md: '3xl' }}
+              width={{ base: '20rem', sm: '32rem', md: '40rem', lg: '100%' }}
               my='1rem'
               px={{ base: '0rem', sm: '2rem', md: '5rem' }}
               color={'black'}
@@ -194,7 +199,6 @@ function Section3() {
         </Flex>
 
         <Box
-          // width={{ base: '100%', lg: '20rem' }}
           mt={{ base: '3rem', sm: '3rem' }}
           textAlign={{ base: 'center', lg: 'left' }}
         >
