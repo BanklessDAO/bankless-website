@@ -154,7 +154,7 @@ class Section4 extends React.Component {
                 <Box
                   borderRadius='100%'
                   width='fit-content'
-                  boxShadow='-4px 6px 20px red'
+                  boxShadow='-3px 1px 15px red'
                 >
                   <Image
                     borderRadius='100%'
@@ -269,7 +269,7 @@ class Section4 extends React.Component {
                 <Box
                   borderRadius='100%'
                   width='fit-content'
-                  boxShadow='-4px 6px 20px red'
+                  boxShadow='-3px 1px 15px red'
                 >
                   <Image
                     borderRadius='100%'
