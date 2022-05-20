@@ -122,7 +122,7 @@ function Section3() {
           <Box>
             <Text
               fontSize={{ base: 'xl', md: '3xl' }}
-              width={{ base: '20rem', sm: '32rem', md: '40rem', lg: '100%' }}
+              width={{ base: '20rem', sm: '26rem', md: '40rem', lg: '100%' }}
               my='1rem'
               px={{ base: '0rem', sm: '2rem', md: '5rem' }}
               color={'black'}
