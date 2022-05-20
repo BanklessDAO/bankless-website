@@ -43,21 +43,19 @@ class Section1 extends React.Component {
           >
             Media and Social DAO Onboarding 1 billion people to crypto
           </Text>
-
           <Underline />
 
-          <Text fontWeight={'700'} mb='4rem'>
+          <Text fontWeight={'700'} mb='4rem' fontSize='xl'>
             <chakra.span
               fontSize='xl'
-              fontWeight='500'
-              color='gray.500'
+              fontWeight='700'
+              color='gray'
               background='none'
             >
-              We’re Headed West...
+              We’re Headed West.
             </chakra.span>{' '}
             Join Us
           </Text>
-
           <Box w={{ base: '150vw', md: '100%' }}>
             <video width='100%' height={'auto'} autoPlay loop muted playsInline>
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
