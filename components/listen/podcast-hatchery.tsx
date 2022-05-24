@@ -20,18 +20,13 @@ class PodcastHatchery extends React.Component {
         >
           <Text
             fontWeight={700}
+            fontFamily={'clear sans'}
             fontSize={{ base: '1.4rem', sm: '2rem', lg: '3rem' }}
-            // bgColor={{
-            //   base: 'pink',
-            //   sm: 'red',
-            //   md: 'green',
-            //   lg: 'blue',
-            //   xl: 'violet',
-            // }}
           >
             The Podcast Hatchery
           </Text>
           <Text
+            fontFamily={'clear sans'}
             fontSize={{ base: '12px', md: '1rem', lg: '1.7rem' }}
             width={{ md: '25rem', lg: '32rem' }}
           >
@@ -54,6 +49,7 @@ class PodcastHatchery extends React.Component {
             <Text
               mt={{ base: '-5px', lg: '-8px' }}
               mr='5px'
+              fontFamily={'clear sans'}
               fontSize={{ base: '1.3rem', md: '0.9rem', lg: '1.3rem' }}
             >
               Podcast Hatchery
@@ -63,6 +59,7 @@ class PodcastHatchery extends React.Component {
           <Text
             width={{ base: '13rem', md: '20rem', lg: '350px' }}
             fontSize={{ base: '12px', md: '1rem', lg: '1.2rem' }}
+            fontFamily={'clear sans'}
             color='grey'
           >
             Check out these shows produced and hosted by members of BanklessDAO:

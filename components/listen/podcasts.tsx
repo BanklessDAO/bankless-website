@@ -33,16 +33,26 @@ class Podcasts extends React.Component {
             borderTopRightRadius={24}
             minHeight='380px'
           >
-            <Text fontWeight={700} fontSize='4xl'>
+            <Text
+              fontFamily={'clear sans'}
+              fontWeight={700}
+              fontSize='4xl'
+              textTransform={'uppercase'}
+            >
               Crypto Sapiens
             </Text>
-            <Text fontWeight={700} fontSize='xl'>
+            <Text fontFamily={'clear sans'} fontSize='xl'>
               Hosted By{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/humptycalderon'>
+              <Link
+                fontSize='2xl'
+                color='red.600'
+                textDecoration='none'
+                href='https://twitter.com/humptycalderon'
+              >
                 Humpty
               </Link>
             </Text>
-            <Text fontSize='md' color='grey'>
+            <Text fontSize='md' fontFamily={'clear sans'} color='grey'>
               Crypto Sapiens hosts discussions with innovative Web3 builders to
               help everyone learn about decentralized money systems including
               Ethereum, Bitcoin, and DeFi. It empowers people with information
@@ -52,26 +62,46 @@ class Podcasts extends React.Component {
             <UnorderedList width='95%' color='white' textAlign='start'>
               <ListItem>
                 Listen on{' '}
-                <Link color='red.600' textDecoration='none' href='https://open.spotify.com/show/3yS1Y61r0XkogChx12JQ2q'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://open.spotify.com/show/3yS1Y61r0XkogChx12JQ2q'
+                >
                   Spotify
                 </Link>{' '}
                 and{' '}
-                <Link color='red.600' textDecoration='none' href='https://podcasts.apple.com/us/podcast/crypto-sapiens/id1588346317'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://podcasts.apple.com/us/podcast/crypto-sapiens/id1588346317'
+                >
                   Apple Podcasts
                 </Link>
               </ListItem>
               <ListItem>
-                <Link color='red.600' textDecoration='none' href='https://gitcoin.co/grants/5187/crypto-sapiens-podcast-gitcoin-grants-proposal'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://gitcoin.co/grants/5187/crypto-sapiens-podcast-gitcoin-grants-proposal'
+                >
                   Sponsor the Show
                 </Link>
               </ListItem>
               <ListItem>
                 Follow on{' '}
-                <Link color='red.600' textDecoration='none' href='https://mobile.twitter.com/cryptosapiens_'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://mobile.twitter.com/cryptosapiens_'
+                >
                   Twitter
                 </Link>{' '}
                 and{' '}
-                <Link color='red.600' textDecoration='none' href='https://www.instagram.com/cryptosapiensofficial/'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://www.instagram.com/cryptosapiensofficial/'
+                >
                   Instagram
                 </Link>
               </ListItem>
@@ -110,17 +140,27 @@ class Podcasts extends React.Component {
             borderTopRightRadius={24}
             minHeight='380px'
           >
-            <Text fontWeight={700} fontSize='4xl'>
+            <Text fontFamily={'clear sans'} fontWeight={700} fontSize='4xl'>
               Making Bank
             </Text>
-            <Text fontWeight={700} fontSize='xl'>
+            <Text
+              fontFamily={'clear sans'}
+              fontSize='xl'
+              width='80%'
+              textAlign={'center'}
+            >
               Organized by{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/crypto_soundman'>
+              <Link
+                fontSize='2xl'
+                color='red.600'
+                textDecoration='none'
+                href='https://twitter.com/crypto_soundman'
+              >
                 Soundman
               </Link>{' '}
               and hosted by members of the BanklessDAO community
             </Text>
-            <Text fontSize='md' color='grey'>
+            <Text fontSize='md' fontFamily={'clear sans'} color='grey'>
               This show is focused primarily on highlighting various BanklessDAO
               members. Soundman helps give bDAO contributors a voice beyond
               their avatar by getting to know them on a more personal level and
@@ -129,7 +169,11 @@ class Podcasts extends React.Component {
             <UnorderedList width='95%' color='white' textAlign='start'>
               <ListItem>
                 Listen on{' '}
-                <Link color='red.600' textDecoration='none' href='https://www.podbean.com/podcast-detail/pnwdu-202cc2/Making-%24BANK-Podcast'>
+                <Link
+                  color='red.600'
+                  textDecoration='none'
+                  href='https://www.podbean.com/podcast-detail/pnwdu-202cc2/Making-%24BANK-Podcast'
+                >
                   BanklessDAO’s Podbean
                 </Link>
               </ListItem>
