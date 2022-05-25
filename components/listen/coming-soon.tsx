@@ -7,13 +7,16 @@ import Underline from 'components/common/underline'
 class ComingSoon extends React.Component {
   render() {
     return (
-      <Flex
-        flexDirection='column'
-        justifyContent='center'
-        alignItems='center'
-      >
+      <Flex flexDirection='column' justifyContent='center' alignItems='center'>
         <Box mb={'2.5rem'}>
-          <Text fontWeight={700} fontSize='5xl' textAlign='center' maxW={750}>
+          <Text
+            fontFamily={'clear sans'}
+            fontWeight={700}
+            mt='3rem'
+            fontSize={{ base: '3xl', sm: '5xl' }}
+            textAlign='center'
+            maxW={750}
+          >
             Coming Soon
           </Text>
           <Underline />
@@ -25,6 +28,7 @@ class ComingSoon extends React.Component {
           rowGap={8}
         >
           <VStack
+            height={{ base: '30rem', md: '30rem', xl: '25rem' }}
             justifyContent='center'
             alignItems='center'
             background='#191919'
@@ -32,21 +36,35 @@ class ComingSoon extends React.Component {
             padding={6}
             borderRadius={16}
           >
-            <Text fontWeight={700} fontSize='4xl' textAlign='center'>
+            <Text
+              fontFamily={'clear sans'}
+              fontWeight={700}
+              mt={{ base: '-3rem', sm: '0', xl: '-4rem' }}
+              fontSize={{ base: '3xl', sm: '4xl' }}
+              textAlign='center'
+            >
               AB INITIO: FROM THE BEGINNING
             </Text>
-            <Text fontWeight={700} fontSize='xl'>
+            <Text
+              fontFamily={'clear sans'}
+              textAlign='center'
+              fontSize={{ base: 'md', sm: 'xl' }}
+            >
               Hosted By{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none'>
+              <Link color='red.600' textDecoration='none'>
                 ComeBackKid
               </Link>{' '}
               and
-              <Link fontSize='2xl' color='red.600' textDecoration='none' href={'https://twitter.com/lion917_eth'}>
+              <Link
+                color='red.600'
+                textDecoration='none'
+                href={'https://twitter.com/lion917_eth'}
+              >
                 {' '}
                 Lion917
               </Link>
             </Text>
-            <Text fontSize='md' color='grey'>
+            <Text fontFamily={'clear sans'} fontSize='md' color='grey'>
               A Legal Guild podcast series with each episode focusing on
               addressing current DAO and crypto-related legal issues via an
               interview with a subject matter expert.
@@ -61,24 +79,46 @@ class ComingSoon extends React.Component {
             padding={6}
             borderRadius={16}
           >
-            <Text fontWeight={700} fontSize='4xl' textAlign='center'>
+            <Text
+              fontFamily={'clear sans'}
+              fontWeight={700}
+              mt={{ base: '0', xl: '-4rem' }}
+              fontSize={{ base: '3xl', sm: '4xl' }}
+              textAlign='center'
+            >
               BOUNTY HUNTER
             </Text>
-            <Text fontWeight={700} fontSize='xl'>
+            <Text
+              fontFamily={'clear sans'}
+              textAlign='center'
+              fontSize={{ base: 'md', sm: 'xl' }}
+            >
               Hosted By{' '}
-              <Link fontSize='2xl' color='red.600' textDecoration='none' href='https://twitter.com/brandoncnolte'>
+              <Link
+                color='red.600'
+                textDecoration='none'
+                href='https://twitter.com/brandoncnolte'
+              >
                 Brandon Nolte
               </Link>
             </Text>
-            <Text fontSize='md' color='grey'>
+            <Text fontFamily={'clear sans'} fontSize='md' color='grey'>
               Bounty Hunter is a show about how to find engaging and rewarding
               work in the new Web3 economy. Join serial entrepreneur{' '}
-              <Link color='red.600' textDecoration='none' href='https://twitter.com/brandoncnolte'>
+              <Link
+                color='red.600'
+                textDecoration='none'
+                href='https://twitter.com/brandoncnolte'
+              >
                 Brandon Nolte{' '}
               </Link>
               as he interviews community builders, DAO contributors, and the
               best innovators in Web3. Follow Bounty Hunter on &nbsp;
-              <Link color='red.600' textDecoration='none' href='https://twitter.com/BountyxHunterx'>
+              <Link
+                color='red.600'
+                textDecoration='none'
+                href='https://twitter.com/BountyxHunterx'
+              >
                 Twitter.
               </Link>
             </Text>
