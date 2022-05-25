@@ -36,7 +36,7 @@ class Podcasts extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              fontSize={{ base: '2xl', sm: '3xl', xl: '4xl' }}
+              fontSize={{ base: '3xl', xl: '4xl' }}
               textTransform={'uppercase'}
             >
               Crypto Sapiens
@@ -142,7 +142,7 @@ class Podcasts extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              fontSize={{ base: '2xl', sm: '3xl', xl: '4xl' }}
+              fontSize={{ base: '3xl', xl: '4xl' }}
             >
               Making Bank
             </Text>
