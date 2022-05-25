@@ -34,7 +34,7 @@ export default function GovernanceSeasonComponent() {
         </Text>
 
         <Flex
-          direction={{ base: 'column', md: 'row' }}
+          direction={{ base: 'column', xl: 'row' }}
           justify={{ base: 'center', md: 'space-between' }}
         >
           <Link
@@ -105,6 +105,24 @@ export default function GovernanceSeasonComponent() {
               }}
             >
               Season 3
+              <FiArrowUpRight size={20} />
+            </Button>
+          </Link>
+          <Link href={'https://season4.bankless.community/'} passHref>
+            <Button
+              minWidth={{ base: '8rem', md: '12rem' }}
+              mt={'1rem'}
+              fontSize={{ base: 'sm', md: 'md' }}
+              bg={'#2B2B2B'}
+              color={'white'}
+              _hover={{
+                bg: '#2B2B2B',
+              }}
+              _focus={{
+                border: 'none',
+              }}
+            >
+              Season 4
               <FiArrowUpRight size={20} />
             </Button>
           </Link>
