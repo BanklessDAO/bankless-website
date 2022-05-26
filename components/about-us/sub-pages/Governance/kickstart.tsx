@@ -25,13 +25,15 @@ export default function GovernanceKickstartComponent() {
       >
         <Heading
           fontWeight={600}
-          fontSize={{ base: '2xl', sm: '2xl', md: '3xl' }}
+          fontSize={{ base: '1.5rem', sm: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          textAlign={'center'}
+          textAlign={{ base: 'left', sm: 'center' }}
         >
           How to kickstart a project within the DAO
-          <Underline />
+          <Box mt='2rem' width={{ base: '90%', sm: '100%' }}>
+            <Underline />
+          </Box>
         </Heading>
 
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>

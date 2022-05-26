@@ -41,7 +41,7 @@ export default function GovernanceStartComponent() {
                 fontWeight={600}
                 color={'white.100'}
                 w={{ md: '25rem' }}
-                fontSize={{ base: '4xl', lg: '5xl' }}
+                fontSize={{ base: '3xl', lg: '5xl' }}
               >
                 Get Started in
                 <br />
@@ -55,12 +55,12 @@ export default function GovernanceStartComponent() {
               </Heading>
               <Text
                 color={'white.100'}
-                fontSize={{ base: '2xl', md: 'xl' }}
+                fontSize={{ base: 'xl', md: 'xl' }}
                 fontWeight={{ sm: '700', md: '400' }}
               >
                 Join the
                 <Text
-                  fontSize={{ base: '2xl', md: 'xl' }}
+                  fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={{ sm: '700', md: '400' }}
                   color={'red'}
                   display={'inline'}
@@ -75,7 +75,7 @@ export default function GovernanceStartComponent() {
                 >
                   <Text
                     mr={'0.25rem'}
-                    fontSize={{ base: '3xl', lg: 'md' }}
+                    fontSize={{ base: '2xl', lg: 'md' }}
                     fontWeight={'bold'}
                     cursor='pointer'
                     letterSpacing={'0px'}
@@ -93,7 +93,7 @@ export default function GovernanceStartComponent() {
             <Box
               position={{ base: 'relative', sm: 'absolute', md: 'static' }}
               top={{ base: '2rem', sm: '16rem' }}
-              left={{ base: '5rem', sm: '7rem' }}
+              left={{ base: '3rem', sm: '7rem' }}
               height={{ sm: '150px', md: '150px' }}
               rounded={'2xl'}
               width={'full'}
@@ -112,7 +112,7 @@ export default function GovernanceStartComponent() {
         </Flex>
 
         <Text
-          mt='2rem'
+          mt={{ sm: '5rem', md: '2rem' }}
           textAlign={'center'}
           fontSize={{ base: '1.5rem', md: '3xl' }}
         >

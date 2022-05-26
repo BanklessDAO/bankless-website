@@ -7,7 +7,7 @@ class Underline extends React.Component {
     return (
       <Container
         filter='blur(3px)'
-        width='30rem'
+        // width='30rem'
         mt={2}
         mb={{ base: 4, md: 6 }}
         fontSize='16px'
