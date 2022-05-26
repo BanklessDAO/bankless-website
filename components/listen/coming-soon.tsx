@@ -31,7 +31,7 @@ class ComingSoon extends React.Component {
             justifyContent='start'
             alignItems='center'
             background='#191919'
-            minHeight='320px'
+            minHeight={{ base: '320px', md: '380px' }}
             rowGap={4}
             padding={6}
             borderRadius={16}
@@ -39,7 +39,7 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              mt={{ base: '0', sm: '0rem', xl: '-4rem' }}
+              mt={{ base: '0', sm: '0rem', xl: '0rem' }}
               fontSize={{ base: '1.4rem', sm: '4xl' }}
               textAlign='center'
             >
@@ -75,6 +75,7 @@ class ComingSoon extends React.Component {
             justifyContent='center'
             alignItems='center'
             background='#191919'
+            minHeight={{ base: '320px', md: '380px' }}
             rowGap={4}
             padding={6}
             borderRadius={16}
@@ -82,7 +83,7 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              mt={{ base: '0', sm: '0rem', xl: '-4rem' }}
+              mt={{ base: '0', sm: '0rem', xl: '0rem' }}
               fontSize={{ base: '1.4rem', sm: '4xl' }}
               textAlign='center'
             >
