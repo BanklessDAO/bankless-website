@@ -16,12 +16,12 @@ function Section3() {
   return (
     <Flex flexDir='column' justifyContent='center' alignItems='center'>
       <Text
-        fontSize={{ base: 'xl', sm: '2xl', md: '4xl' }}
+        fontSize={{ base: 'md', sm: '2xl', md: '4xl' }}
         wordBreak={'break-word'}
         textAlign='center'
         fontWeight={700}
         marginTop={{ base: 39, lg: 100 }}
-        width={{ base: '100%', xl: '60%' }}
+        width={{ base: '70%', xl: '60%' }}
       >
         {'Community-owned and operated through the:'.toUpperCase()}
       </Text>
@@ -33,7 +33,7 @@ function Section3() {
         flexDirection='row'
         justifyContent='space-evenly'
         width='80%'
-        my='4rem'
+        m='2rem auto'
       >
         <Link
           href={
@@ -44,13 +44,14 @@ function Section3() {
             height='fit-content'
             flexDirection='column'
             alignItems='center'
-            margin={6}
+            m={6}
+            ml='1rem'
           >
-            <Box height={200} width={150}>
+            <Box height={200} width={150} pt='1rem'>
               <Image
                 src='/icons/bankless-coin.png'
                 alt='bankless-coin'
-                height={{ base: 150, md: 200 }}
+                height={{ base: 130, md: 200 }}
                 width={{ base: 200, md: 250 }}
                 objectFit='contain'
               />
@@ -58,7 +59,7 @@ function Section3() {
             <Box>
               <Text
                 fontSize={{ base: 'xl', lg: '2xl', xl: '4xl' }}
-                mt='2rem'
+                mt={{ base: '0', sm: '2rem' }}
                 textAlign={'center'}
                 fontWeight={700}
               >
@@ -72,7 +73,8 @@ function Section3() {
             height='fit-content'
             flexDirection='column'
             alignItems='center'
-            margin={6}
+            my={6}
+            mr='1rem'
           >
             <Box height={200} width={150} pt={'2rem'}>
               <Image
@@ -85,7 +87,7 @@ function Section3() {
             </Box>
             <Text
               fontSize={{ base: 'xl', lg: '2xl', xl: '4xl' }}
-              mt='2rem'
+              mt={{ base: '0', sm: '2rem' }}
               fontWeight={700}
               textAlign='center'
             >
@@ -117,12 +119,13 @@ function Section3() {
           alignItems='center'
           backgroundColor='white'
           borderRadius='10px'
-          p={5}
+          px={{ base: 2, sm: '5' }}
+          py={5}
         >
           <Box>
             <Text
               fontSize={{ base: 'xl', md: '3xl' }}
-              width={{ base: '20rem', sm: '26rem', md: '40rem', lg: '100%' }}
+              width={{ base: '16rem', sm: '26rem', md: '40rem', lg: '100%' }}
               my='1rem'
               px={{ base: '0rem', sm: '2rem', md: '5rem' }}
               color={'black'}
