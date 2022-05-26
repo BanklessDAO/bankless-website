@@ -38,7 +38,7 @@ export default function GovernanceContributorComponent() {
               ></Box>
               <Text
                 fontFamily={'heading'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 color={'white'}
                 fontWeight={'bold'}
                 zIndex='docked'
@@ -67,7 +67,7 @@ export default function GovernanceContributorComponent() {
               ></Box>
               <Text
                 fontFamily={'heading'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 color={'white'}
                 fontWeight={'bold'}
                 zIndex='docked'
@@ -95,12 +95,12 @@ export default function GovernanceContributorComponent() {
               ></Box>
               <Text
                 fontFamily={'heading'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 color={'white'}
                 fontWeight={'bold'}
                 zIndex='docked'
               >
-                CONTRIBUTOR level 2:
+                CONTRIBUTOR Level 2:
               </Text>
             </Flex>
 
@@ -124,7 +124,7 @@ export default function GovernanceContributorComponent() {
               ></Box>
               <Text
                 fontFamily={'heading'}
-                fontSize={'2xl'}
+                fontSize={'xl'}
                 color={'white'}
                 fontWeight={'bold'}
                 zIndex='docked'

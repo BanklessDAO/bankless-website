@@ -14,12 +14,19 @@ export default function GovernanceIntroComponent() {
       >
         <Heading
           fontWeight={700}
-          fontSize={{ base: '5xl', sm: '6xl', md: '7xl', lg: '7xl' }}
+          fontSize={{
+            base: '2.7rem',
+            sm: '6xl',
+            md: '7xl',
+            lg: '7xl',
+          }}
           lineHeight={'120%'}
           color={'white.100'}
         >
           Governance
-          <Underline />
+          <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
+            <Underline />
+          </Box>
         </Heading>
 
         <Flex flexDirection='column' alignItems='center'>
