@@ -39,7 +39,7 @@ class Section2 extends React.Component {
       <Flex flexDir='column' justifyContent='center' alignItems='center'>
         <Text
           fontWeight={700}
-          fontSize={{ base: '2xl', md: '4xl' }}
+          fontSize={{ base: '1.2rem', md: '3xl' }}
           mt='4rem'
           textAlign='center'
         >
@@ -50,6 +50,7 @@ class Section2 extends React.Component {
 
         <Grid
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
+          mt='3rem'
           gridColumnGap={{ base: 20 }}
           gridRowGap={{ base: 20, lg: 20 }}
         >

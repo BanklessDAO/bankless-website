@@ -35,7 +35,7 @@ class Section1 extends React.Component {
         >
           <Text
             fontWeight={700}
-            fontSize={{ base: '4xl', md: '6xl' }}
+            fontSize={{ base: '3xl', md: '6xl' }}
             minW={{ base: '300px' }}
             w={{ base: '18rem', md: '60rem' }}
             textAlign='center'
@@ -67,7 +67,7 @@ class Section1 extends React.Component {
               Join Us
             </chakra.span>
           </Flex>
-          <Box w={{ base: '150vw', md: '100%' }}>
+          <Box w={{ base: '150vw', md: '150%' }}>
             <video width='100%' height={'auto'} autoPlay loop muted playsInline>
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>

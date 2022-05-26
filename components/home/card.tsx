@@ -28,7 +28,7 @@ class Card extends React.PureComponent<I_Props> {
 
         <Flex flexDir='column' height='100%' padding={{ base: 6, lg: 6 }}>
           <Text
-            fontSize={{ base: '3xl', lg: '3xl' }}
+            fontSize={{ base: '1.3rem', lg: '3xl' }}
             fontWeight={700}
             marginBottom={{ base: 6, lg: 18 }}
           >

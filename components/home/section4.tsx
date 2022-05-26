@@ -160,8 +160,8 @@ class Section4 extends React.Component {
                     borderRadius='100%'
                     src={_multiSigOwner.img}
                     alt={_multiSigOwner.name}
-                    width={{ base: '90px', sm: '120px', md: '200px' }}
-                    height={{ base: '90px', sm: '120px', md: '200px' }}
+                    width={{ base: '80px', sm: '120px', md: '200px' }}
+                    height={{ base: '80px', sm: '120px', md: '200px' }}
                   />
                 </Box>
 
@@ -174,7 +174,7 @@ class Section4 extends React.Component {
                     pt={4}
                   >
                     <Text
-                      fontSize={{ base: 'sm', sm: 'xl', md: '2xl' }}
+                      fontSize={{ base: '0.8rem', sm: 'xl', md: '2xl' }}
                       style={{ marginRight: 8 }}
                     >
                       {_multiSigOwner.name}
@@ -185,14 +185,14 @@ class Section4 extends React.Component {
                       alignItems='center'
                       backgroundColor='#1da1f2'
                       borderRadius='100%'
-                      w='20px'
-                      h='20px'
+                      w={{ base: '15px', sm: '20px' }}
+                      h={{ base: '15px', sm: '20px' }}
                     >
                       <Image
                         src='/icons/twitter.png'
                         alt='twitter'
-                        width='10px'
-                        height='10px'
+                        w={{ base: '8px', sm: '10px' }}
+                        h={{ base: '8px', sm: '10px' }}
                       />
                     </Flex>
                   </Flex>
