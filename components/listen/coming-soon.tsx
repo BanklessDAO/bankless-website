@@ -28,10 +28,10 @@ class ComingSoon extends React.Component {
           rowGap={8}
         >
           <VStack
-            height={{ base: '30rem', md: '30rem', xl: '25rem' }}
-            justifyContent='center'
+            justifyContent='start'
             alignItems='center'
             background='#191919'
+            minHeight='320px'
             rowGap={4}
             padding={6}
             borderRadius={16}
@@ -39,8 +39,8 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              mt={{ base: '-3rem', sm: '0', xl: '-4rem' }}
-              fontSize={{ base: '3xl', sm: '4xl' }}
+              mt={{ base: '0', sm: '0rem', xl: '-4rem' }}
+              fontSize={{ base: '1.4rem', sm: '4xl' }}
               textAlign='center'
             >
               AB INITIO: FROM THE BEGINNING
@@ -48,7 +48,7 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               textAlign='center'
-              fontSize={{ base: 'md', sm: 'xl' }}
+              fontSize={{ base: 'sm', sm: 'xl' }}
             >
               Hosted By{' '}
               <Link color='red.600' textDecoration='none'>
@@ -82,8 +82,8 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              mt={{ base: '0', xl: '-4rem' }}
-              fontSize={{ base: '3xl', sm: '4xl' }}
+              mt={{ base: '0', sm: '0rem', xl: '-4rem' }}
+              fontSize={{ base: '1.4rem', sm: '4xl' }}
               textAlign='center'
             >
               BOUNTY HUNTER
@@ -91,7 +91,7 @@ class ComingSoon extends React.Component {
             <Text
               fontFamily={'clear sans'}
               textAlign='center'
-              fontSize={{ base: 'md', sm: 'xl' }}
+              fontSize={{ base: 'sm', sm: 'xl' }}
             >
               Hosted By{' '}
               <Link

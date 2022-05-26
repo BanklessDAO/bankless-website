@@ -36,12 +36,12 @@ class Podcasts extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              fontSize={{ base: '3xl', xl: '4xl' }}
+              fontSize={{ base: '1.4rem', sm: '3xl', xl: '4xl' }}
               textTransform={'uppercase'}
             >
               Crypto Sapiens
             </Text>
-            <Text fontFamily={'clear sans'} fontSize={{ base: 'md', md: 'xl' }}>
+            <Text fontFamily={'clear sans'} fontSize={{ base: 'sm', md: 'xl' }}>
               Hosted By{' '}
               <Link
                 color='red.600'
@@ -142,15 +142,14 @@ class Podcasts extends React.Component {
             <Text
               fontFamily={'clear sans'}
               fontWeight={700}
-              fontSize={{ base: '3xl', xl: '4xl' }}
+              fontSize={{ base: '1.4rem', sm: '3xl', xl: '4xl' }}
             >
               Making Bank
             </Text>
             <Text
               fontFamily={'clear sans'}
-              fontSize={{ base: 'md', md: 'xl' }}
+              fontSize={{ base: 'sm', md: 'xl' }}
               width={{ base: '90%', md: '80%' }}
-              my={'2rem'}
               textAlign={'center'}
             >
               Organized by{' '}
