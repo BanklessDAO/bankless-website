@@ -29,8 +29,8 @@ export const TextRow = ({
 }: TextRow) => {
   return (
     <Flex
-      mt='10rem'
-      flexDirection={{ base: 'column', lg: reversed ? 'row-reverse' : 'row' }}
+      mt={{ lg: '10rem' }}
+      flexDirection={{ base: 'column', md: reversed ? 'row-reverse' : 'row' }}
       justifyContent='center'
       alignItems='center'
       pb='2rem'>
@@ -48,24 +48,27 @@ export const TextRow = ({
           w={'100%'}
           h={'100%'}
           src={imageSrc}
+          borderRadius={'1rem'}
         />
       </Box>
-      <Stack flex={1} pr={{ base: 0, lg: '1rem' }}>
+      <Stack flex={1} pr={{ base: 0, lg: '1rem' }} m={0}>
         <Text
           color={'gray.100'}
           lineHeight={1.2}
           fontWeight={700}
           fontFamily='Clear Sans'
-          fontSize='4xl'
+          fontSize={{base: '3xl',lg:'4xl'}}
           pb='1rem'
-          w={{ base: '60%', lg: '' }}>
+          w={{ base: '100%', lg: '60%' }}>
           {title}
         </Text>
         <Text
           color='grey'
-          fontSize='2xl'
+          fontSize='xl'
           fontFamily='Clear Sans'
-          lineHeight={1.2}>
+          mt={0}
+          p={0}
+          textAlign={{base: "justify", lg: "left"}}>
           {para}
         </Text>
       </Stack>
