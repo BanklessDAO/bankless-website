@@ -33,13 +33,13 @@ export const TextRow = ({
       flexDirection={{ base: 'column', md: reversed ? 'row-reverse' : 'row' }}
       justifyContent='center'
       alignItems='center'
-      pb='2rem'>
+      pb='2rem'
+      gap={{base: 0, md: '2rem'}}>
       <Box
-        flex='0 0 40%'
-        pos={'relative'}
-        h={{ base: '40vw', lg: '20vw' }}
+        flex='0 0 33%'
+        h={'40vw'}
         w='100%'
-        pb={{ base: '2rem', lg: 0 }}
+        pb={{ base: '2rem', md: 0 }}
         pr={{ base: 0, lg: !reversed ? '2rem' : 0 }}>
         <Image
           alt={imageAlt}
@@ -64,11 +64,11 @@ export const TextRow = ({
         </Text>
         <Text
           color='grey'
-          fontSize='xl'
+          fontSize={{base:'xl', md: '2xl'}}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
-          textAlign={{base: "justify", lg: "left"}}>
+          textAlign={{base: "justify", md: "left"}}>
           {para}
         </Text>
       </Stack>
