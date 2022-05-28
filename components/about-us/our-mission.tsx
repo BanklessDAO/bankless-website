@@ -27,7 +27,7 @@ export default function OurMissionIntroComponent() {
         <Text
           color={'grey'}
           fontSize={{ base: 'xl', md: '2xl' }}
-          textAlign={{ base: 'justify', lg: 'center' }}
+          textAlign={'center'}
           w={'100%' }
           px={{ base: pxBase, lg: pxMd }}>
           Our mission is to onboard 1 billion people to crypto. The nodes in our

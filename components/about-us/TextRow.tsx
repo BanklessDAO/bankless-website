@@ -67,7 +67,7 @@ export const TextRow = ({
           fontFamily='Clear Sans'
           mt={0}
           p={0}
-          textAlign={{ base: 'justify', md: 'left' }}>
+          textAlign={'left' }>
           {para}
         </Text>
       </Stack>
