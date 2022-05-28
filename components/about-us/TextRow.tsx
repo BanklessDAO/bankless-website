@@ -33,7 +33,7 @@ export const TextRow = ({
       flexDirection={{ base: 'column', md: reversed ? 'row-reverse' : 'row' }}
       justifyContent='center'
       alignItems='center'
-      pb={{base: '2rem', lg: 0}}
+      pb={{base: '2rem', md:"4rem", lg: 0}}
       gap={{ base: 0, md: '2rem' }}>
       <Box
         flex='0 0 33%'
@@ -58,12 +58,12 @@ export const TextRow = ({
           fontFamily='Clear Sans'
           fontSize={{ base: '3xl', lg: '4xl' }}
           pb='1rem'
-          w={{ base: '100%', lg: '65%' }}>
+          w={{ base: '100%', xl: '65%' }}>
           {title}
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', md: '2xl' }}
+          fontSize={{ base: 'xl', lg: '2xl' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
