@@ -14,7 +14,7 @@ export default function JoinUsIntroComponent() {
         pb={{ base: '2rem', md: '2rem', lg: 0 }}
         mt={{ lg: '6rem' }}>
         <Heading
-          alignSelf={'center'}
+          alignSelf={{ base: 'center', md: 'flex-start' }}
           fontFamily='Clear Sans'
           fontWeight={{ base: 600, md: 800 }}
           fontSize={{ base: '3xl', md: '4xl' }}
@@ -36,7 +36,13 @@ export default function JoinUsIntroComponent() {
           building new economies, new ways to work, new thought leadership and
           scholarship, and new forms of art.`}
         </Text>
-
+      </Stack>
+      <Stack
+        as={Box}
+        textAlign={'left'}
+        spacing={{ base: 4, md: 2 }}
+        pb={{ base: '4rem', md: '4rem', lg: 0 }}
+        mt={{ md: '1rem' }}>
         <Text
           color={'white.100'}
           fontSize={{ base: 'xl', md: '2xl' }}
@@ -48,7 +54,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'xl', md: 'lg' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -56,15 +62,9 @@ export default function JoinUsIntroComponent() {
           To educate the masses in this new decentralized money system that
           anyone can use to build wealth and climb the economic ladder.
         </Text>
-      </Stack>
-      <Stack
-        as={Box}
-        textAlign={'left'}
-        spacing={{ base: 4, md: 7 }}
-        pb={{ base: '4rem', md: '4rem', lg: 0 }}>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'xl', md: 'lg' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -73,7 +73,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'xl', md: 'lg' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -82,7 +82,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', lg: '2xl' }}
+          fontSize={{ base: 'xl', md: 'lg' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
