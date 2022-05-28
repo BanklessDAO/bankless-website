@@ -11,7 +11,7 @@ export default function JoinUsIntroComponent() {
         as={Box}
         textAlign={'left'}
         spacing={{ base: 4, md: 7 }}
-        pb={{ base: '4rem', md: '4rem', lg: 0 }}
+        pb={{ base: '2rem', md: '2rem', lg: 0 }}
         mt={{ lg: '6rem' }}>
         <Heading
           alignSelf={'center'}
@@ -38,11 +38,12 @@ export default function JoinUsIntroComponent() {
         </Text>
 
         <Text
-          fontFamily='Clear Sans'
-          fontSize={{ base: 'xl', md: '2xl' }}
-          fontWeight='bold'
           color={'white.100'}
-          px={{ base: pxBase, lg: pxLg }}>
+          fontSize={{ base: 'xl', md: '2xl' }}
+          fontFamily='Clear Sans'
+          fontWeight='bold'
+          mt={0}
+          p={0}>
           Join us and embark on our mission:
         </Text>
         <Text
@@ -55,6 +56,12 @@ export default function JoinUsIntroComponent() {
           To educate the masses in this new decentralized money system that
           anyone can use to build wealth and climb the economic ladder.
         </Text>
+      </Stack>
+      <Stack
+        as={Box}
+        textAlign={'left'}
+        spacing={{ base: 4, md: 7 }}
+        pb={{ base: '4rem', md: '4rem', lg: 0 }}>
         <Text
           color='grey'
           fontSize={{ base: 'xl', lg: '2xl' }}
