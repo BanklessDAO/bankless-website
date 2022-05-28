@@ -1,12 +1,10 @@
-import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, VStack } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 export default function JoinUsIntroComponent() {
-  const pxBase = 0
-  const pxLg = 40
   return (
-    <>
+    <VStack px={{ base: 0, lg: 40 }}>
       <Stack
         as={Box}
         textAlign={'left'}
@@ -40,9 +38,10 @@ export default function JoinUsIntroComponent() {
       <Stack
         as={Box}
         textAlign={'left'}
-        spacing={{ base: 4, md: 2 }}
-        pb={{ base: '4rem', md: '4rem', lg: 0 }}
-        mt={{ md: '1rem' }}>
+        spacing={{ base: 4, md: 2, lg: 3 }}
+        pb={{ base: '4rem', md: '4rem'}}
+        pt={{ lg: '3rem' }}
+        mt={{ md: '1rem', lg: '6rem' }}>
         <Text
           color={'white.100'}
           fontSize={{ base: 'xl', md: '2xl' }}
@@ -54,7 +53,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: 'xl', md: 'lg', lg: 'xl' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -64,7 +63,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: 'xl', md: 'lg', lg: 'xl' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -73,7 +72,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: 'xl', md: 'lg', lg: 'xl' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -82,7 +81,7 @@ export default function JoinUsIntroComponent() {
         </Text>
         <Text
           color='grey'
-          fontSize={{ base: 'xl', md: 'lg' }}
+          fontSize={{ base: 'xl', md: 'lg', lg: 'xl' }}
           fontFamily='Clear Sans'
           mt={0}
           p={0}
@@ -101,6 +100,6 @@ export default function JoinUsIntroComponent() {
           </video>
         </Box>
       </Flex>
-    </>
+    </VStack>
   )
 }
