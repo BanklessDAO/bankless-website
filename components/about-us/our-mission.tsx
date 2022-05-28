@@ -10,14 +10,16 @@ export default function OurMissionIntroComponent() {
         as={Box}
         textAlign={'center'}
         spacing={{ base: 4, md: 7 }}
-        py={{ base: 10, md: 18 }}
-        mt='20'>
+        mt={{ base: '2rem', lg: '6rem' }}
+        pb={{ base: '2rem', md: '4rem', lg: 0 }}
+        >
         <Heading
           fontWeight={{ base: 600, md: 800 }}
           fontSize={{ base: '3xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          textTransform={'uppercase'}>
+          textTransform={'uppercase'}
+          pb={{base: '2rem'}}>
           Our mission
           <Underline />
         </Heading>
@@ -25,8 +27,8 @@ export default function OurMissionIntroComponent() {
         <Text
           color={'grey'}
           fontSize={{ base: 'xl', md: '2xl' }}
-          textAlign={{ base: 'left', lg: 'center' }}
-          w={{ base: '95%', lg: '100%' }}
+          textAlign={{ base: 'justify', lg: 'center' }}
+          w={'100%' }
           px={{ base: pxBase, lg: pxMd }}>
           Our mission is to onboard 1 billion people to crypto. The nodes in our
           growing ecosystem collaborate to create user-friendly onramps for

@@ -33,7 +33,7 @@ export const TextRow = ({
       flexDirection={{ base: 'column', md: reversed ? 'row-reverse' : 'row' }}
       justifyContent='center'
       alignItems='center'
-      pb={{base: '2rem', md:"4rem", lg: 0}}
+      pb={{ base: '2rem', md: '4rem', lg: 0 }}
       gap={{ base: 0, md: '2rem' }}>
       <Box
         flex='0 0 33%'
