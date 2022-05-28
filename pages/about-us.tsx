@@ -6,6 +6,7 @@ import NewsLetterAboutUs from 'components/_common/newsletter-section'
 import MiddleAboutUs from 'components/about-us/middle'
 import SubnavAboutUs from 'components/about-us/subnav'
 import CirclesAboutUs from 'components/about-us/circles'
+import CarouselSection from 'components/about-us/carousel'
 
 export default function AboutUsPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutUsPage() {
         <OurMissionAboutUs />
         <CirclesAboutUs/>
         <OurVisionAboutUs />
+        <CarouselSection/>
         <JoinUsAboutUs />
         <NewsLetterAboutUs />
       </>
