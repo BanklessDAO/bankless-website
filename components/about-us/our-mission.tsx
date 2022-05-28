@@ -12,7 +12,7 @@ export default function OurMissionIntroComponent() {
         alignItems={'center'}
         spacing={{ base: 4, md: 7 }}
         mt={{ base: '2rem', md: '1rem', lg: '6rem' }}
-        pb={{ base: '2rem', md: '4rem', lg: 0 }}>
+        pb={{ base: '2rem', md: '4rem', lg: '6rem' }}>
         <Heading
           fontFamily='Clear Sans'
           fontWeight={{ base: 600, md: 800 }}
@@ -26,7 +26,7 @@ export default function OurMissionIntroComponent() {
         </Heading>
 
         <Text
-          w={{ base: '100%', md: '75%' }}
+          w={{ base: '100%', md: '75%', lg: '100%' }}
           fontFamily='Clear Sans'
           fontSize={{ base: 'xl', lg: '2xl' }}
           color={'grey'}
