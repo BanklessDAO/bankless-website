@@ -1,5 +1,6 @@
 import { Text, Stack, Flex, Box, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { ulid } from 'ulid'
 
 const linksData = [
   {
@@ -45,7 +46,7 @@ const Subnav = () => (
         wrap='wrap'>
         {linksData.map(({ href, alt, title }: Link, index: number) => {
           return (
-            <NextLink href={href} passHref={true}>
+            <NextLink key={ulid()} href={href} passHref={true}>
               <Link alt={alt}>
                 <Flex p={{ base: 2, md: 0 }} align={'center'} key={index}>
                   <Text
