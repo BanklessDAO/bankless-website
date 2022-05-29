@@ -276,7 +276,7 @@ const Ring4 = ({ ringWidth }) => {
 }
 
 const CirclesV2 = () => (
-  <VStack>
+  <VStack d={{ base: 'none', md: 'flex' }} mb={{ base: 0, md: '4rem' }}>
     <Grid
       backgroundColor='black'
       w='53vw'
