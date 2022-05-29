@@ -13,7 +13,7 @@ const Center = () => (
   </GridItem>
 )
 
-const Ring1 = ({ ringWidth, border }) => {
+const Ring1 = ({ ringWidth }) => {
   const rings = [
     {
       rotation: '0',
@@ -37,7 +37,7 @@ const Ring1 = ({ ringWidth, border }) => {
       w={`${ringWidth}%`}
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
-      border={border || 'none'}
+      border='6px solid rgba(255, 16, 19, 0.15);'
       borderRadius='50%'>
       <Grid
         w='100%'
@@ -80,7 +80,7 @@ const Ring1 = ({ ringWidth, border }) => {
   )
 }
 
-const Ring2 = ({ ringWidth, border = null }) => {
+const Ring2 = ({ ringWidth }) => {
   const rings = [
     {
       color: '#FF1013',
@@ -98,7 +98,7 @@ const Ring2 = ({ ringWidth, border = null }) => {
       w={`${ringWidth}%`}
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
-      border={border || 'none'}
+      border='none'
       borderRadius='50%'>
       <Grid
         w='100%'
@@ -141,7 +141,7 @@ const Ring2 = ({ ringWidth, border = null }) => {
   )
 }
 
-const Ring3 = ({ ringWidth, border = null }) => {
+const Ring3 = ({ ringWidth }) => {
   const rings = [
     {
       rotation: '-45',
@@ -179,7 +179,7 @@ const Ring3 = ({ ringWidth, border = null }) => {
       w={`${ringWidth}%`}
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
-      border={border || 'none'}
+      border='none'
       borderRadius='50%'>
       <Grid
         w='100%'
@@ -287,7 +287,7 @@ const CirclesV2 = () => (
       alignItems='center'
       justifyItems='center'>
       <Center />
-      <Ring1 border='6px solid rgba(255, 16, 19, 0.15);' ringWidth='43' />
+      <Ring1 ringWidth='43' />
       <Ring2 ringWidth='53' />
       <Ring4 ringWidth='84' />
       <Ring3 ringWidth='66' />
