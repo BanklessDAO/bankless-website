@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Box, Heading, Text, Stack, Image, IconButton } from '@chakra-ui/react'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import Slider from 'react-slick'
+import { ulid } from 'ulid'
 
 export default function CarouselSection() {
   const [slider, setSlider] = useState<Slider | null>(null)
@@ -91,7 +92,7 @@ export default function CarouselSection() {
   const pxMd = 40
 
   return (
-    <Stack mt='20' width='100%'>
+    <Stack pb={{ base: '2rem', md: 0 }} width='100%'>
       <link
         rel='stylesheet'
         type='text/css'
@@ -104,22 +105,22 @@ export default function CarouselSection() {
         href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
       />
       <Heading
+        fontSize={{ base: '2xl', md: '3xl' }}
         color={'white.100'}
-        lineHeight={1.5}
         fontWeight={600}
-        fontSize={{ base: '2xl', md: '3xl' }}>
+        lineHeight={1.5}
+        fontFamily="Clear Sans">
         OUR VALUES
       </Heading>
-      <Box width={'100%'}>
+      <Box width={'100%'} pos='relative' h='16rem'>
         <Slider {...settings} ref={(slider: unknown) => setSlider(slider)}>
           {cards.map((card, index) => {
             return (
               <Box
-                alignItems={'center'}
+                key={ulid()}
                 textAlign='center'
-                justifyContent={'center'}
-                justifyItems='center'
-                key={index}
+                alignItems='center'
+                justifyContent='center'
                 onMouseEnter={() => {
                   const temp = popups
                   temp[index] = !popups[index]
@@ -130,24 +131,26 @@ export default function CarouselSection() {
                   temp[index] = !popups[index]
                   setPopups([...temp])
                 }}>
-                <Image alt='card' src={card.image} width='94%' mx='3%' />
+                <Image alt='card' src={card.image} width='94%' mr='3%' />
                 <br />
                 {popups[index] ? (
                   <Box
                     width={'94%'}
                     minHeight='200px'
-                    mt={{ base: '-400px', md: '-160px' }}>
+                    mt={{ base: '-400px', md: '-160px' }}
+                  >
                     <Text
+                      fontSize='xl'
+                      fontFamily='Clear Sans'
                       color={'white.100'}
-                      fontSize={{ base: '50px', md: '20px' }}
                       textTransform={'uppercase'}
                       whiteSpace='pre'>
                       {card.title}
                     </Text>
                     <Text
                       color={'white.100'}
-                      fontSize={{ base: '20px', md: '12px' }}
-                      px='5'>
+                      fontFamily='Clear Sans'
+                      fontSize='l'>
                       {card.text}
                     </Text>
                   </Box>
@@ -159,7 +162,8 @@ export default function CarouselSection() {
                     transitionDuration={'1s'}>
                     <Text
                       color={'white.100'}
-                      fontSize={{ base: '50px', md: '20px' }}
+                      fontFamily='Clear Sans'
+                      fontSize='xl'
                       textTransform={'uppercase'}
                       whiteSpace='pre'>
                       {card.title}
@@ -172,35 +176,35 @@ export default function CarouselSection() {
         </Slider>
         <IconButton
           aria-label='left-arrow'
-          zIndex={2}
           background='transparent'
           borderRadius={'50%'}
           color='white'
-          position='absolute'
-          mt='-230px'
-          ml={{ base: '100px', md: '0' }}
+          pos='absolute'
+          top='5rem'
+          left='-5rem'
+          h='auto'
           _hover={{
             background: 'transparent',
             color: 'white.400',
           }}
           onClick={() => slider?.slickPrev()}>
-          <BsArrowLeftCircle size='40px' />
+          <BsArrowLeftCircle size='4rem' />
         </IconButton>
         <IconButton
           aria-label='right-arrow'
-          zIndex={2}
           background='transparent'
           borderRadius={'50%'}
           color='white'
-          mt='-230px'
-          float={'right'}
-          mr={{ base: '100px', md: '0' }}
+          pos='absolute'
+          top='5rem'
+          right='-5rem'
+          h='auto'
           _hover={{
             background: 'transparent',
             color: 'white.400',
           }}
           onClick={() => slider?.slickNext()}>
-          <BsArrowRightCircle size='40px' />
+          <BsArrowRightCircle size='4rem' />
         </IconButton>
       </Box>
     </Stack>
