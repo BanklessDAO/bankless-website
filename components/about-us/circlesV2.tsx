@@ -1,7 +1,7 @@
-import { border, Box, Grid, GridItem, Image, VStack } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Image, VStack } from '@chakra-ui/react'
 import { ulid } from 'ulid'
 
-const Center = () => (
+const Center: React.FC = () => (
   <GridItem w={'21%'} h={'21%'} gridArea='1/1/1/1'>
     <Image
       alt='orbit'
@@ -13,7 +13,11 @@ const Center = () => (
   </GridItem>
 )
 
-const Ring1 = ({ ringWidth }) => {
+type RingProps = {
+  ringWidth: string
+}
+
+const Ring1 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
       rotation: '0',
@@ -80,7 +84,7 @@ const Ring1 = ({ ringWidth }) => {
   )
 }
 
-const Ring2 = ({ ringWidth }) => {
+const Ring2 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
       color: '#FF1013',
@@ -141,7 +145,7 @@ const Ring2 = ({ ringWidth }) => {
   )
 }
 
-const Ring3 = ({ ringWidth }) => {
+const Ring3 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
       rotation: '-45',
@@ -222,7 +226,7 @@ const Ring3 = ({ ringWidth }) => {
   )
 }
 
-const Ring4 = ({ ringWidth }) => {
+const Ring4 = ({ ringWidth }: RingProps) => {
   return (
     <GridItem w={`${ringWidth}%`} h={`${ringWidth}%`} gridArea='1/1/1/1'>
       <Grid
@@ -275,7 +279,7 @@ const Ring4 = ({ ringWidth }) => {
   )
 }
 
-const CirclesV2 = () => (
+const CirclesV2: React.FC = () => (
   <VStack d={{ base: 'none', md: 'flex' }} mb={{ base: 0, md: '4rem' }}>
     <Grid
       backgroundColor='black'
