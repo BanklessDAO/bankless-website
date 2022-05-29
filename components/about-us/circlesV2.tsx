@@ -30,7 +30,7 @@ const Ring1 = ({ ringWidth, border }) => {
       innerCircleSize: 20,
       imgSrc: '/images/about-image-orbit-mid-3.png',
     },
-    { color: '#606060', rotation: '48', innerCircleSize: 15 },
+    { color: '#606060', rotation: '52', innerCircleSize: 14 },
   ]
   return (
     <GridItem
@@ -82,7 +82,6 @@ const Ring1 = ({ ringWidth, border }) => {
 
 const Ring2 = ({ ringWidth, border = null }) => {
   const rings = [
-    
     {
       color: '#FF1013',
       rotation: '290',
@@ -93,7 +92,6 @@ const Ring2 = ({ ringWidth, border = null }) => {
       rotation: '175',
       innerCircleSize: 8,
     },
-    
   ]
   return (
     <GridItem
@@ -224,6 +222,59 @@ const Ring3 = ({ ringWidth, border = null }) => {
   )
 }
 
+const Ring4 = ({ ringWidth }) => {
+  return (
+    <GridItem w={`${ringWidth}%`} h={`${ringWidth}%`} gridArea='1/1/1/1'>
+      <Grid
+        w='100%'
+        h='100%'
+        templateColumns='1fr'
+        templateRows='1fr'
+        alignItems='center'
+        justifyItems='center'
+        border='rgba(255, 255, 255, 0.05) 1px solid'
+        pos='relative'
+        borderRadius='50%'>
+        <GridItem w='124%' h='124%' gridArea='1/1/1/1' pos='absolute'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 781 781'>
+            <g filter='url(#a)'>
+              <path
+                stroke='#131313'
+                stroke-width='63.4'
+                d='M702.6 390.5a311.9 311.9 0 1 1-311.8-312 311.9 311.9 0 0 1 311.8 312Z'
+              />
+            </g>
+            <defs>
+              <filter
+                id='a'
+                width='780.1'
+                height='780.6'
+                x='.8'
+                y='.2'
+                color-interpolation-filters='sRGB'
+                filterUnits='userSpaceOnUse'>
+                <feFlood flood-opacity='0' result='BackgroundImageFix' />
+                <feBlend
+                  in='SourceGraphic'
+                  in2='BackgroundImageFix'
+                  result='shape'
+                />
+                <feGaussianBlur
+                  result='effect1_foregroundBlur_741_854'
+                  stdDeviation='23.3'
+                />
+              </filter>
+            </defs>
+          </svg>
+        </GridItem>
+      </Grid>
+    </GridItem>
+  )
+}
+
 const CirclesV2 = () => (
   <VStack>
     <Grid
@@ -238,6 +289,7 @@ const CirclesV2 = () => (
       <Center />
       <Ring1 border='6px solid rgba(255, 16, 19, 0.15);' ringWidth='43' />
       <Ring2 ringWidth='53' />
+      <Ring4 ringWidth='84' />
       <Ring3 ringWidth='66' />
     </Grid>
   </VStack>
