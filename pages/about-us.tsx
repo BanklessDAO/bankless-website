@@ -16,7 +16,7 @@ export default function AboutUsPage() {
         <SubnavAboutUs/>
         <MiddleAboutUs/>
         <OurMissionAboutUs />
-        <CirclesAboutUs/>
+        {/* <CirclesAboutUs/> */}
         <CirclesV2/>
         <OurVisionAboutUs />
         <CarouselSection/>
