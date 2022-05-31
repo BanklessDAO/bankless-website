@@ -30,7 +30,7 @@ function DaoPunkSection() {
           src='/images/DAO-Punk-Invest.png'
           alt='bankToken'
           height={413}
-          width={405}
+          width={413}
         />
         <VStack justifyContent={'flex-end'} display='flex'>
           <Container flexDirection={{ base: 'column', md: 'row' }}>

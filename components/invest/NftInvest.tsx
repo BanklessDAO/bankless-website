@@ -6,8 +6,9 @@ function NftInvest() {
     <Container maxW={'6xl'} p={0}>
       <Flex
         justifyContent='space-between'
-        flexDirection={{ base: 'column', md: 'row' }}
-        py={10}>
+        flexDirection={{ base: 'column', sm: 'column', xl: 'row' }}
+        py={10}
+        >
         <VStack h='full' w='30%' p={10} spacing={10} align='flex-start'>
           <Text fontWeight={700} fontSize='4xl' lineHeight='43px'>
             Chippi
@@ -40,7 +41,7 @@ function NftInvest() {
             </Container>
           </Container>
         </VStack>
-        <VStack p={10} spacing={10}>
+        <VStack p={10} spacing={10} m={0}>
           <Text fontWeight={700} fontSize='3xl' lineHeight='43px'>
             BanklessDAO Weekly NFT Showcase
           </Text>
@@ -51,7 +52,9 @@ function NftInvest() {
             flexDirection='column'
             className='border-box'
             width='458px'
-            height='250px'>
+            height='250px'
+            margin={0}
+            >
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
               {`BanklessDAO is embedded in the creative space of NFTs and a
               champion for artists paving the way in digital art forms. Weekly
