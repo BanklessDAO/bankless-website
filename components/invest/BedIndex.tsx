@@ -64,11 +64,15 @@ function BedIndex() {
           </Stack>
           <VStack justifyContent={'flex-end'} display='flex'>
             <Container
+              padding={{base: 0, md: 0, lg: 0}}
               display='flex'
-              justifyContent='space-evenly'
+              justifyContent='space-between'
               alignItems={'center'}
-              flexDirection={{ base: 'column', md: 'row' }}>
-              <Link href='https://app.indexcoop.com/bed' isExternal>
+              flexDirection={{ base: 'column', md: 'row' }}
+              >
+              <Link href='https://app.indexcoop.com/bed' isExternal
+                mb={{base: '22px', md: 0}}
+              >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
                   <Container padding={0} paddingRight={2}>
                     <Image
@@ -83,7 +87,7 @@ function BedIndex() {
               </Link>
               <Link href='https://www.bankless.community/bed-index' isExternal>
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  <Container padding={0} paddingRight={2}></Container>
+                  {/* <Container padding={0} paddingRight={2}></Container> */}
                   Learn more about Bed Index
                 </Button>
               </Link>

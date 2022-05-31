@@ -76,7 +76,7 @@ function BankSection() {
             ) : null}
             <Flex
               alignItems={{ base: 'center', md: 'center' }}
-              flexDirection={{ base: 'column', md: 'row' }}>
+              flexDirection={{ base: 'column',  md: 'row' }}>
               <Text mr={[0, 3]}>Current market cap and price is</Text>
               <Box>
                 <Flex
@@ -86,6 +86,7 @@ function BankSection() {
                   w={[160, 180]}
                   border={'0.5px solid #D02128'}>
                   <Link
+                    py={'5px'}
                     fontWeight={800}
                     color='#D02128'
                     href='https://www.coingecko.com/en/coins/bankless-dao'
