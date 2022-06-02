@@ -24,7 +24,7 @@ function BedIndex() {
         direction={{ base: 'column', md: 'row' }}>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading lineHeight={0.7} fontWeight={600}>
-            <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+            <Container p={0} maxW={{ base: 'container.sm', md: 'container.xl' }}>
               {/* Mobile logo begins */}
               {isMobile ? (
                 <Flex mb={5} p={0}>
