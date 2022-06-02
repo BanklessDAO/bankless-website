@@ -16,7 +16,7 @@ function BedIndex() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW={'6xl'} p={0}>
+    <Container maxW={'100%'} p={0}>
       <Stack
         align={'center'}
         spacing={3}
@@ -106,7 +106,7 @@ function BedIndex() {
           position={'relative'}
           w={'full'}>
           {!isMobile ? (
-            <Box position={'relative'}>
+            <Box pt={30} position={'relative'}>
               <Image
                 alt='bed-token'
                 align={'center'}
