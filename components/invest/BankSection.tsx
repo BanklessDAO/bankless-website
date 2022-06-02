@@ -16,14 +16,14 @@ function BankSection() {
 
   return (
     <Container maxW={'6xl'} p={0}>
-      <Flex direction={{ base: 'column-reverse', md: 'row' }}>
+      <Flex direction={{ base: 'column-reverse', xl: 'row' }}>
         {!isMobile ? (
-          <VStack h='full' w='full' mt={20} align='flex-start'>
+          <VStack justifyItems={'center'} alignItems={'center'} h='full' w='full' mt={20} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
-              height={290}
-              width={290}
+              height={320}
+              width={320}
             />
           </VStack>
         ) : null}
