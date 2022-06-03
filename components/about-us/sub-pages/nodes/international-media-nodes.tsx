@@ -1,26 +1,34 @@
-import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, VStack } from '@chakra-ui/react'
+import { BaseLink } from 'components/common/BaseLink'
 import Underline from 'components/common/underline'
-import { FiArrowUpRight } from 'react-icons/fi'
-//TODO add URLS
+import { ulid } from 'ulid'
+
 const countries = [
-  'Adria',
-  'Africa',
-  'Australia',
-  'Brazil',
-  'Bulgaria',
-  'China',
-  'Czech',
-  'Farsi',
-  'France',
-  'Germany',
-  'Greece',
-  'Hindi',
-  'Italy',
-  'Spain',
-  'Sweden',
-  'Turkey',
-  'Ukraine',
-  'Vietnam',
+  { name: 'Adria', url: 'https://linktr.ee/banklessadria' },
+  { name: 'Arabic', url: 'https://linktr.ee/arbankless' },
+  // { name: 'Africa', url: '/' }, // link not found on https://linktr.ee/international_media_nodes
+  // { name: 'Australia', url: '/' }, // link not found on https://linktr.ee/international_media_nodes
+  { name: 'Bengali', url: 'https://linktr.ee/banklessbe' },
+  { name: 'Brazil', url: 'http://beacons.page/banklessbr' },
+  { name: 'Bulgaria', url: 'https://linktr.ee/banklessBG' },
+  { name: 'China', url: 'https://linktr.ee/BanklessCN' },
+  { name: 'Czech', url: 'https://bankl.es/cz/' },
+  { name: 'Deutsch', url: 'http://bankl.es/de' },
+  { name: 'Dutch', url: 'https://linktr.ee/banklessdutch' },
+  { name: 'Español', url: 'https://twitter.com/banklessdao_es' },
+  { name: 'Farsi', url: 'https://linktr.ee/BanklessFarsi' },
+  { name: 'France', url: 'https://linktr.ee/banklessfr' },
+  { name: 'Greece', url: 'https://linktr.ee/banklessgr' },
+  { name: 'Hindi', url: 'http://linktr.ee/banklesshi' },
+  { name: 'Italia', url: 'https://linktr.ee/ITbanklessDAO' },
+  { name: 'Magyar', url: 'https://linktr.ee/banklessmagyar' },
+  { name: 'Malayalam', url: 'https://linktr.ee/banklessmalayalam' },
+  { name: 'Mallu', url: 'https://linktr.ee/banklessmalayalam' },
+  { name: 'Romania', url: 'https://linktr.ee/banklessRo' },
+  { name: 'Sweden', url: 'https://linktr.ee/Bankless.se' },
+  { name: 'Turkey', url: 'https://linktr.ee/banklesstr' },
+  { name: 'Ukraine', url: 'https://linktr.ee/BanklessUA' },
+  // { name: 'Vietnam', url: '/' } // link not found on https://linktr.ee/international_media_nodes,
 ]
 
 export default function NodesInternationalMediaComponent() {
@@ -52,21 +60,11 @@ export default function NodesInternationalMediaComponent() {
           align={'center'}
           direction={{ md: 'row' }}
           wrap={'wrap'}>
-          {countries.map((country, index) => {
+          {countries.map(({ name, url }) => {
             return (
-              <Flex
-                align={'center'}
-                color={'white.100'}
-                key={index}
-                padding={{ base: '0.5rem', md: '1rem' }}>
-                <Text
-                  mr={'0.25rem'}
-                  fontSize={{ base: '1xl', md: 'md' }}
-                  fontWeight={'bold'}>
-                  Bankless {country}
-                </Text>
-                <FiArrowUpRight size={25} />
-              </Flex>
+              <VStack key={ulid()} flex='0 0 33%' pb='1rem'>
+                <BaseLink text={`Bankless ${name}`} href={url} typeSize='l' />
+              </VStack>
             )
           })}
         </Flex>
