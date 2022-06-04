@@ -5,11 +5,14 @@ function NftInvest() {
   return (
     <Container maxW={'6xl'} p={0}>
       <Flex
-        justifyContent='space-between'
-        flexDirection={{ base: 'column', sm: 'column', xl: 'row' }}
+        justifyContent={{base: 'center', sm: 'center', xl: 'space-between'}}
+        // justifyContent='space-between'
+        // flexDirection={{ base: 'column', sm: 'column', xl: 'row' }}
+        direction={{ base: 'column', xl: 'row' }}
+        alignItems={{base: 'center'}}
         py={10}
         >
-        <VStack h='full' w='30%' p={10} spacing={10} align='flex-start'>
+        <VStack h='full' pt={10} spacing={10} align='flex'>
           <Text fontWeight={700} fontSize='4xl' lineHeight='43px'>
             Chippi
           </Text>
@@ -41,7 +44,7 @@ function NftInvest() {
             </Container>
           </Container>
         </VStack>
-        <VStack p={10} spacing={10} m={0}>
+        <VStack pt={10} spacing={10} mt={10} align='flex'>
           <Text fontWeight={700} fontSize='3xl' lineHeight='43px'>
             BanklessDAO Weekly NFT Showcase
           </Text>
