@@ -10,8 +10,8 @@ export default function CommunityCallsIntroComponent() {
         spacing={{ base: 4, md: 7 }}
         py={{ base: 10, md: 18 }}>
         <Heading
-          fontWeight={600}
-          fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
+          fontWeight={700}
+          fontSize={{ base: '4xl', sm: '5xl', md: '7xl' }}
           lineHeight={'110%'}
           color={'white.100'}>
           Community Calls
@@ -20,15 +20,17 @@ export default function CommunityCallsIntroComponent() {
 
         <Text
           color={'grey'}
-          fontSize={{ base: 'md', md: 'lg' }}
-          textTransform={'uppercase'}>
+          fontSize={{ base: 'md', md: 'xl' }}
+          textTransform={'uppercase'}
+          noOfLines={[2, 1, 1]}>
           Join the entire Bankless community on Fridays at 4pm UTC
         </Text>
 
         <Text
           color={'white.200'}
-          fontSize={{ base: 'md', md: 'lg' }}
-          lineHeight={{ base: '1.5rem', md: '2rem' }}>
+          fontSize={{ base: 'xs', md: 'lg', lg: 'xl' }}
+          lineHeight={{ base: '1.5rem', md: '2rem' }}
+          noOfLines={[9, 7]}>
           Community Calls are the anchor of the BanklessDAO community. Every
           Friday at 4pm UTC we gather for one hour on the Community Call Voice
           Stage to hear key governance updates, share hype news, and have
@@ -111,16 +113,16 @@ export default function CommunityCallsIntroComponent() {
             <Heading
               color={'gray.100'}
               lineHeight={1.1}
-              fontWeight={600}
+              fontWeight={700}
               textAlign='center'
               textTransform={'uppercase'}
-              fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
+              fontSize={{ base: '1xl', sm: '2xl', md: '4xl', xl: '5xl' }}>
               Want Alpha?
             </Heading>
             <Text
               color={'gray.100'}
               textAlign='center'
-              fontSize={{ sm: 'sm', md: 'md' }}>
+              fontSize={{ sm: 'xs', md: 'md' }}>
               Join the weekly CCs!
             </Text>
           </Stack>
