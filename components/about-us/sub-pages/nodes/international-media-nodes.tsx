@@ -33,7 +33,7 @@ export default function NodesInternationalMediaComponent() {
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}>
         <Heading
-          fontWeight={600}
+          fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
           color={'white.100'}>
@@ -42,7 +42,7 @@ export default function NodesInternationalMediaComponent() {
         </Heading>
         <Text
           color={'grey'}
-          fontSize={{ sm: 'sm', md: 'md' }}
+          fontSize={{ base: 'md', md: 'lg' }}
           textTransform={'uppercase'}>
           Join the Bankless journey in your continent, country, or language!
         </Text>
@@ -61,7 +61,7 @@ export default function NodesInternationalMediaComponent() {
                 padding={{ base: '0.5rem', md: '1rem' }}>
                 <Text
                   mr={'0.25rem'}
-                  fontSize={{ base: '1xl', md: 'md' }}
+                  fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={'bold'}>
                   Bankless {country}
                 </Text>
