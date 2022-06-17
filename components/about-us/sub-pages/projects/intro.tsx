@@ -26,8 +26,8 @@ export default function IntroComponent() {
 
         <Text
           color={'white.200'}
-          lineHeight='20px'
-          fontSize={{ sm: 'sm', md: 'md' }}
+          lineHeight={{ base: '30px', md: '40px' }}
+          fontSize={{ base: '16px', md: '20px' }}
           width={{ base: '270px', sm: '400px', md: '600px', xl: '700px' }}
         >
           Projects enable Guilds and bDAO members to collaborate and scale the
