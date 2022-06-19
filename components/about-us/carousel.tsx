@@ -3,6 +3,9 @@ import { Box, Heading, Text, Stack, Image, IconButton } from '@chakra-ui/react'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import Slider from 'react-slick'
 import { ulid } from 'ulid'
+import styled from "@emotion/styled";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function CarouselSection() {
   const [slider, setSlider] = useState<Slider | null>(null)
