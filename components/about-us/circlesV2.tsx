@@ -247,7 +247,7 @@ const Ring4 = ({ ringWidth }: RingProps) => {
             <g filter='url(#a)'>
               <path
                 stroke='#131313'
-                stroke-width='63.4'
+                strokeWidth='63.4'
                 d='M702.6 390.5a311.9 311.9 0 1 1-311.8-312 311.9 311.9 0 0 1 311.8 312Z'
               />
             </g>
@@ -258,9 +258,9 @@ const Ring4 = ({ ringWidth }: RingProps) => {
                 height='780.6'
                 x='.8'
                 y='.2'
-                color-interpolation-filters='sRGB'
+                colorInterpolationFilters='sRGB'
                 filterUnits='userSpaceOnUse'>
-                <feFlood flood-opacity='0' result='BackgroundImageFix' />
+                <feFlood floodOpacity='0' result='BackgroundImageFix' />
                 <feBlend
                   in='SourceGraphic'
                   in2='BackgroundImageFix'
