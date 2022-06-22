@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import {
   Box,
+  Grid,
+  GridItem,
   Heading,
   Text,
   Stack,
   Image,
   IconButton,
   HStack,
+  VStack,
 } from '@chakra-ui/react'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import Slider from 'react-slick'
 import { ulid } from 'ulid'
 import styled from '@emotion/styled'
+import { keyframes } from '@emotion/react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+const slideIn = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+`
 
 const StyledSlider = styled(Slider)`
   height: 100%;
@@ -23,6 +36,7 @@ const StyledSlider = styled(Slider)`
       height: 100%;
       & > .slick-slide {
         height: 100%;
+        padding-right: 1rem;
         & > * {
           height: 100%;
           & > * {
@@ -41,41 +55,34 @@ export default function DesktopView() {
     arrows: false,
     fade: false,
     infinite: true,
+    initialSlide: 0,
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 500,
-  })
-  useEffect(() => {
-    const changeSettings = () => {
-      if (document.body.clientWidth < 768) {
-        setSettings({
-          dots: false,
-          arrows: false,
-          fade: false,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          speed: 500,
-        })
-      } else {
-        setSettings({
-          dots: false,
-          arrows: false,
-          fade: false,
-          infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          speed: 500,
-        })
-      }
-    }
-    window.addEventListener('resize', changeSettings)
-    changeSettings()
-
-    return () => {
-      window.removeEventListener('resize', changeSettings)
-    }
-  }, [])
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  })
 
   const cards = [
     {
@@ -118,11 +125,9 @@ export default function DesktopView() {
     false,
     false,
   ])
-  const pxBase = 0
-  const pxMd = 40
 
   return (
-    <Stack pb={{ base: '2rem', md: 0 }} width='100%'>
+    <Stack pb={{ base: '5rem' }} width='100%'>
       <link
         rel='stylesheet'
         type='text/css'
@@ -142,11 +147,14 @@ export default function DesktopView() {
         fontFamily='Clear Sans'>
         OUR VALUES
       </Heading>
-      <Box width={'100%'} pos='relative' h='16rem'>
-        <StyledSlider {...settings} ref={(slider: unknown) => setSlider(slider)}>
+      <Box width={'100%'} pos='relative' h='12rem'>
+        <StyledSlider
+          {...settings}
+          ref={(slider: unknown) => setSlider(slider)}>
           {cards.map((card, index) => {
             return (
               <Box
+                as='article'
                 key={ulid()}
                 textAlign='center'
                 alignItems='center'
@@ -161,81 +169,106 @@ export default function DesktopView() {
                   temp[index] = !popups[index]
                   setPopups([...temp])
                 }}>
-                <Image alt='card' src={card.image} width='94%' mr='3%' />
-                <br />
-                {popups[index] ? (
-                  <Box
-                    width={'94%'}
-                    minHeight='200px'
-                    mt={{ base: '-400px', md: '-160px' }}>
-                    <Text
-                      fontSize='xl'
-                      fontFamily='Clear Sans'
-                      color={'white.100'}
-                      textTransform={'uppercase'}
-                      whiteSpace='pre'>
-                      {card.title}
-                    </Text>
-                    <Text
-                      color={'white.100'}
-                      fontFamily='Clear Sans'
-                      fontSize='l'>
-                      {card.text}
-                    </Text>
-                  </Box>
-                ) : (
-                  <Box
-                    width={'94%'}
-                    minHeight='200px'
-                    mt={{ base: '-300px', md: '-100px' }}
-                    transitionDuration={'1s'}>
-                    <Text
-                      color={'white.100'}
-                      fontFamily='Clear Sans'
-                      fontSize='xl'
-                      textTransform={'uppercase'}
-                      whiteSpace='pre'>
-                      {card.title}
-                    </Text>
-                  </Box>
-                )}
+                <Grid
+                  gridTemplateColumns='1fr'
+                  gridTemplateRows='1fr'
+                  templateAreas={`"center"`}
+                  w='100%'
+                  h='100%'>
+                  <GridItem gridArea='center'>
+                    <Image
+                      w={{ base: '100%' }}
+                      h='100%'
+                      src={card.image}
+                      objectFit='cover'
+                      alt='card'
+                    />
+                  </GridItem>
+                  <GridItem gridArea='center'>
+                    <Box h='100%' gridArea='center'>
+                      {popups[index] ? (
+                        <VStack
+                          as='section'
+                          w='100%'
+                          h='100%'
+                          bgColor='blackAlpha.800'
+                          zIndex={2}
+                          py='0.25rem'
+                          px='0.5rem'
+                          animation={`${slideIn} 500ms ease-in forwards`}>
+                          <Text
+                            fontSize={'xl'}
+                            fontFamily='Clear Sans'
+                            color={'white.100'}
+                            textTransform={'uppercase'}
+                            mt={0}
+                            flex='0 0 auto'>
+                            {card.title}
+                          </Text>
+                          <Text
+                            color={'white.100'}
+                            fontFamily='Clear Sans'
+                            fontSize={{ base: '0.9rem', lg: '1rem' }}
+                            pb='2rem'>
+                            {card.text}
+                          </Text>
+                        </VStack>
+                      ) : (
+                        <VStack
+                          as='section'
+                          w='100%'
+                          h='100%'
+                          justifyContent='flex-end'
+                          pb='1rem'>
+                          <Text
+                            color={'white.100'}
+                            fontFamily='Clear Sans'
+                            fontSize='xl'
+                            textTransform={'uppercase'}
+                            whiteSpace='pre'>
+                            {card.title}
+                          </Text>
+                        </VStack>
+                      )}
+                    </Box>
+                  </GridItem>
+                </Grid>
               </Box>
             )
           })}
         </StyledSlider>
-        <HStack
-          top='15rem'
+        <IconButton
+          top={{ base: '80%', lg: '30%' }}
+          left={{ base: '-3%', lg: '-6' }}
           pos='absolute'
+          aria-label='left-arrow'
+          background='transparent'
+          borderRadius={'50%'}
+          color='white'
           h='auto'
-          w='100%'
-          justifyContent='space-between'>
-          <IconButton
-            aria-label='left-arrow'
-            background='transparent'
-            borderRadius={'50%'}
-            color='white'
-            h='auto'
-            _hover={{
-              background: 'transparent',
-              color: 'white.400',
-            }}
-            onClick={() => slider?.slickPrev()}>
-            <BsArrowLeftCircle size='4rem' />
-          </IconButton>
-          <IconButton
-            aria-label='right-arrow'
-            background='transparent'
-            borderRadius={'50%'}
-            color='white'
-            h='auto'
-            _hover={{
-              background: 'transparent',
-              color: 'white.400',
-            }}
-            onClick={() => slider?.slickNext()}>
-            <BsArrowRightCircle size='4rem' />
-          </IconButton>
-        </HStack>
+          _hover={{
+            background: 'transparent',
+            color: 'white.400',
+          }}
+          onClick={() => slider?.slickPrev()}>
+          <BsArrowLeftCircle size='4rem' />
+        </IconButton>
+        <IconButton
+          top={{ base: '80%', lg: '30%' }}
+          right={{ base: '-3%', lg: '-5' }}
+          pos='absolute'
+          aria-label='right-arrow'
+          background='transparent'
+          borderRadius={'50%'}
+          color='white'
+          h='auto'
+          _hover={{
+            background: 'transparent',
+            color: 'white.400',
+          }}
+          onClick={() => slider?.slickNext()}>
+          <BsArrowRightCircle size='4rem' />
+        </IconButton>
       </Box>
     </Stack>
   )
