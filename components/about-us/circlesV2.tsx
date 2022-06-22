@@ -112,7 +112,7 @@ const Ring2 = ({ ringWidth }: RingProps) => {
         templateRows='1fr'
         alignItems='center'
         justifyItems='center'>
-        {rings.map(({ color, rotation, innerCircleSize, imgSrc }) => {
+        {rings.map(({ color, rotation, innerCircleSize }) => {
           const CIRCLE_CONSTANT = 68 // Helps us maintain the innerCircles on a main axis
           const circleSize = CIRCLE_CONSTANT + innerCircleSize
           return (
@@ -127,16 +127,7 @@ const Ring2 = ({ ringWidth }: RingProps) => {
                 h={`${innerCircleSize}%`}
                 gridArea='1/1/1/1'
                 backgroundColor={color || 'transparent'}
-                borderRadius='50%'>
-                {imgSrc && (
-                  <Image
-                    w='100%'
-                    h='100%'
-                    src={imgSrc}
-                    transform={`rotate(${-rotation}deg)`}
-                  />
-                )}
-              </Box>
+                borderRadius='50%'></Box>
             </GridItem>
           )
         })}
