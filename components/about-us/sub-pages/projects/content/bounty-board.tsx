@@ -37,6 +37,7 @@ export default function ProjectBountyBoardComponent() {
       </Flex>
 
       <Stack
+        zIndex={99}
         width={{ base: '300px', sm: '350px', xl: '500px' }}
         spacing={{ base: 5, md: 4 }}
       >
@@ -88,6 +89,19 @@ export default function ProjectBountyBoardComponent() {
           </Link>
         </Stack>
       </Stack>
+      {/* bottom gradient circle */}
+      <Box
+        position='absolute'
+        top={{ md: '80rem' }}
+        right={{ md: '0%', lg: '10%', xl: '20%' }}
+        display={{ base: 'none', md: 'block' }}
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
+        filter='auto'
+        blur='100px'
+        h='25rem'
+        w={{ base: '70%', lg: '30rem' }}
+        borderRadius='full'
+      ></Box>
     </Stack>
   )
 }
