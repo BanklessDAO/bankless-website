@@ -4,14 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function DegenProjectComponent() {
   return (
     <Stack
-      // bgColor={{
-      //   base: 'pink',
-      //   sm: 'red',
-      //   md: 'green',
-      //   lg: 'blue',
-      //   xl: 'violet',
-      // }}
-      align={'flex-start'}
+      align={'center'}
       width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: 'row-reverse' }}
@@ -78,7 +71,13 @@ export default function DegenProjectComponent() {
             href='https://bankless.notion.site/DEGEN-f5e1c8e3e9b546ce83025a8359f98da8'
             isExternal
           >
-            <Flex align={'center'} color={'white.100'}>
+            <Flex
+              align={'center'}
+              color={'white.100'}
+              fontSize='20px'
+              lineHeight={'24px'}
+              fontWeight='700'
+            >
               Learn More <FiArrowUpRight />
             </Flex>
             <Box height={'1px'} width='100%' bgColor={'#999999'} mt='6px' />
