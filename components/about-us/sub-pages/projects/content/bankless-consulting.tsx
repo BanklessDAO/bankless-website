@@ -22,6 +22,7 @@ export default function ProjectBanklessConsultingComponent() {
           height={{ base: '300px', sm: '350px' }}
           width={{ base: '300px', sm: '350px' }}
           boxShadow={'2xl'}
+          zIndex={99}
           overflow={'hidden'}
         >
           <Image
@@ -86,6 +87,20 @@ export default function ProjectBanklessConsultingComponent() {
           </Link>
         </Stack>
       </Stack>
+
+      {/* top gradient circle */}
+      <Box
+        position='absolute'
+        top={{ md: '25rem' }}
+        left={{ md: '2%', lg: '5%', xl: '10%' }}
+        display={{ base: 'none', md: 'block' }}
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
+        filter='auto'
+        blur='140px'
+        h='30rem'
+        w={{ base: '70%', lg: '30rem' }}
+        borderRadius='full'
+      ></Box>
     </Stack>
   )
 }
