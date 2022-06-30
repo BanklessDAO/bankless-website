@@ -4,15 +4,8 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function ProjectBanklessConsultingComponent() {
   return (
     <Stack
-      // bgColor={{
-      //   base: 'pink',
-      //   sm: 'red',
-      //   md: 'green',
-      //   lg: 'blue',
-      //   xl: 'violet',
-      // }}
       justify='space-between'
-      align={'flex-start'}
+      align={'center'}
       width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: 'row' }}
@@ -25,7 +18,6 @@ export default function ProjectBanklessConsultingComponent() {
         w={'full'}
       >
         <Box
-          background={'red'}
           position={'relative'}
           height={{ base: '300px', sm: '350px' }}
           width={{ base: '300px', sm: '350px' }}
@@ -81,7 +73,13 @@ export default function ProjectBanklessConsultingComponent() {
           spacing={'12px'}
         >
           <Link href={'https://www.banklessconsulting.com'} isExternal>
-            <Flex align={'center'} color={'white.100'}>
+            <Flex
+              align={'center'}
+              color={'white.100'}
+              fontSize='20px'
+              lineHeight={'24px'}
+              fontWeight='700'
+            >
               Learn More <FiArrowUpRight />
             </Flex>
             <Box height={'1px'} width='100%' bgColor={'#999999'} mt='6px' />

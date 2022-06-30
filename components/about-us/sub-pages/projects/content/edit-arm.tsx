@@ -4,43 +4,63 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function EditArmProjectComponent() {
   return (
     <Stack
+      justify='space-between'
       align={'center'}
-      spacing={{ base: 8, md: 10 }}
+      width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row' }}>
+      direction={{ base: 'column', md: 'row' }}
+    >
       <Flex
         flex={1}
-        justify={'center'}
-        align={'center'}
+        justify={'flex-start'}
+        alignItems={'center'}
         position={'relative'}
-        w={'full'}>
+        w={'full'}
+      >
         <Box
           position={'relative'}
-          height={'300px'}
-          rounded={'2xl'}
+          height={{ base: '300px', sm: '350px' }}
+          width={{ base: '300px', sm: '350px' }}
           boxShadow={'2xl'}
-          width={'full'}
-          overflow={'hidden'}>
+          overflow={'hidden'}
+        >
           <Image
-            alt={'Photo by Matthew Kwong on Unsplash'}
+            alt={'Bankless logo'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/images/editing-publishing.jpg'}
+            src='/images/Rectangle 228.png'
           />
         </Box>
       </Flex>
 
-      <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+      <Stack
+        width={{ base: '300px', sm: '350px', xl: '500px' }}
+        spacing={{ base: 5, md: 4 }}
+      >
         <Heading
           color={'gray.100'}
-          lineHeight={1.1}
-          fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
+          fontWeight={700}
+          mt={{ base: '32px', md: '0' }}
+          fontSize={{ base: '20px' }}
+        >
           EDITING AND PUBLISHING ARM OF EPA
         </Heading>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'gray.100'}
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
+          lineHeight={{
+            base: '20px',
+            sm: '27px',
+            md: '30px',
+            lg: '30px',
+            xl: '45px',
+          }}
+          textAlign='justify'
+          fontSize={{ base: '16px', sm: '20px' }}
+        >
           The EPA is the center for longform writing in BanklessDAO. The skilled
           editors and writers in this group ship multiple pieces per week. Any
           writer can submit to the EPA and get paid in crypto. Read their
@@ -49,14 +69,23 @@ export default function EditArmProjectComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}>
-            {/* TODO confirm this link */}
+          spacing={'12px'}
+        >
+          {/* TODO confirm this link */}
           <Link
             href='https://bankless.notion.site/The-Editorial-Publishing-Arm-EPA-5218f8cbb6214fb7803c2d76553d23fa'
-            isExternal>
-            <Flex align={'center'} color={'white.100'}>
+            isExternal
+          >
+            <Flex
+              align={'center'}
+              color={'white.100'}
+              fontSize='20px'
+              lineHeight={'24px'}
+              fontWeight='700'
+            >
               Learn More <FiArrowUpRight />
             </Flex>
+            <Box height={'1px'} width='100%' bgColor={'#999999'} mt='6px' />
           </Link>
         </Stack>
       </Stack>
