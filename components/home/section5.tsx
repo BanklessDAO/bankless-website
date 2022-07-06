@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Flex, Text, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
-import ThreeRings from 'components/common/three-rings';
-import SubscribeWidget  from 'components/common/subscribe-widget';
+import ThreeRings from 'components/_common/three-rings';
+import SubscribeWidget  from 'components/_common/subscribe-widget';
 
 class Section5 extends React.Component {
   render() {

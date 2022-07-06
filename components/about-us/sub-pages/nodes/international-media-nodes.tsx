@@ -1,8 +1,7 @@
-import { Box, Heading, Text, Stack, Flex, VStack } from '@chakra-ui/react'
-import { BaseLink } from 'components/common/BaseLink'
-import Underline from 'components/common/underline'
-import { ulid } from 'ulid'
-
+import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
+import Underline from 'components/_common/underline'
+import { FiArrowUpRight } from 'react-icons/fi'
+//TODO add URLS
 const countries = [
   { name: 'Adria', url: 'https://linktr.ee/banklessadria' },
   { name: 'Arabic', url: 'https://linktr.ee/arbankless' },

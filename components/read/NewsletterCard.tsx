@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { Text, Box, GridItem, Link, keyframes, VStack } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/common/ChakraNextImage'
+import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 type NewsletterCardProps = {
   title: string
   text: string
