@@ -58,7 +58,7 @@ export const NewsletterCard = ({
       }}>
       <NextLink href={href} passHref={true}>
         <Link
-          alt={`Visit ${title}`}
+          // alt={`Visit ${title}`}
           textDecoration='none'
           _hover={{
             textDecoration: 'none',
