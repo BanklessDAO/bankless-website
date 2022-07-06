@@ -29,8 +29,7 @@
     "ulid": "^2.3.0",
     "yup": "^0.32.11"
   },
-  "devDependencies": {
-    "@babel/core": "^7.18.2",
+  "devDependencies": {x
     "@types/node": "17.0.14",
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
