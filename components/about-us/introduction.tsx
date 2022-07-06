@@ -1,48 +1,68 @@
-import { Box, Heading, Text, Stack, Image, Flex } from '@chakra-ui/react'
-import Link from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
+import {
+  Box,
+  Text,
+  Stack,
+  Image,
+  Flex,
+  VStack,
+  keyframes,
+} from '@chakra-ui/react'
+import { CTALink } from 'components/_common/CTALink'
 
-const menus = [
-  { title: 'GOVERNANCE', href: '/about-us/governance' },
-  { title: 'GUILDS', href: '/about-us/guilds' },
-  { title: 'PROJECTS', href: '/about-us/projects' },
-  // { title: 'COORDINATION', href: '#' },
-  { title: 'COMMUNITY CALLS', href: '/about-us/community-calls' },
-  { title: 'PORTAL NODES', href: '/about-us/nodes' },
-  // { title: 'MEDIA KIT', href: '#' },
-]
+const keyframeCircleMove = keyframes`
+  0%{
+    transform:rotate(0deg)
+              translate(-24px)
+              rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-24px)
+              rotate(-360deg);
+  }
+`
+
+const keyframeBeat = keyframes`
+	to { 
+    transform: scale(2) 
+              translateX(25%)
+              translateY(-25%);
+  }
+`
 
 export default function IntroductionAboutUsComponent() {
+  const animationTime = '5s'
+  const animationCircleClock = `${keyframeCircleMove} ${animationTime} linear infinite`
+  const animationCircleAntiClock = `${keyframeCircleMove} ${animationTime} linear infinite reverse`
+  const animationBeat = `${keyframeBeat} ${animationTime} linear infinite alternate`
   return (
-    <Flex paddingX={16} flexDirection='column' rowGap={8}>
+    <>
       <Stack
         align='center'
         justifyContent='center'
-        spacing={{ base: 8, md: 10 }}
-        mt={{ base: 5, md: 10 }}
         direction={{ base: 'column', md: 'row' }}
-      >
+        pb={{base: '2rem', md: 0}}
+        pos='relative'>
         <Flex
-          flex={1}
+          flex={{ base: '0 0 70%', xl: '0 0 60%' }}
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'full'}
-        >
+          zIndex={1}>
           <Box
             position={'relative'}
-            rounded={'2xl'}
             overflow={'hidden'}
             w={'100%'}
-            sx={{ height: { base: '400px', md: '450px' } }}
-          >
+            h={{base: '32rem', xl: '48rem'}}
+            m={0}>
             <Image
               position={'absolute'}
               alt={'Cryptocurrency Image'}
-              left='0'
+              left='2rem'
               top='40%'
               width={'3rem'}
               src={'/images/about-us/Cryptocurrency.png'}
+              animation={animationCircleAntiClock}
             />
             <Image
               position={'absolute'}
@@ -51,14 +71,16 @@ export default function IntroductionAboutUsComponent() {
               top='30%'
               width={'3rem'}
               src={'/images/about-us/Bnakless.png'}
+              animation={animationCircleClock}
             />
             <Image
               position={'absolute'}
               alt={'Aragon Image'}
-              right='0'
+              right='2rem'
               bottom='25%'
               width={'3rem'}
               src={'/images/about-us/Aragon.png'}
+              animation={animationCircleAntiClock}
             />
             <Image
               position={'absolute'}
@@ -67,6 +89,7 @@ export default function IntroductionAboutUsComponent() {
               bottom='5%'
               width={'3rem'}
               src={'/images/about-us/Cryptocurrency1.png'}
+              animation={`${keyframeCircleMove} 6s linear infinite`}
             />
             <Image
               alt={'Instructor Image'}
@@ -78,152 +101,38 @@ export default function IntroductionAboutUsComponent() {
             />
           </Box>
         </Flex>
-
-        <Box flex={1}>
-          <Stack spacing={{ base: 3, md: 4 }}>
+        <Box
+          h={{base: '24rem', xl: '32rem'}}
+          w={{base: '24rem', xl: '32rem'}}
+          bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
+          position='absolute'
+          left={{ base: '20%', lg: '24%' }}
+          bottom={{ base: '20%', lg: '4%' }}
+          zIndex='0'
+          filter='blur(6rem)'
+          opacity={0.3}
+          transform={'rotate(9.1deg)'}
+          animation={animationBeat}
+        />
+        <Box flex={{ base: '0 0 30%', md: '0 0 50%' }} zIndex={1}>
+          <VStack alignItems='flex-start'>
             <Text
               color={'white.100'}
               lineHeight={1.1}
-              fontWeight={800}
-              fontSize={{ base: '6xl', md: '5xl' }}
-              // textTransform={'uppercase'}
-            >
+              fontWeight={700}
+              fontFamily='Clear Sans'
+              fontSize={{ base: '4xl', md:'4xl', lg: '6xl' }}>
               What is BanklessDAO?
             </Text>
-            <Link href={'https://discord.com/invite/bankless'} passHref={true}>
-              <Flex
-                align={'center'}
-                color={'white.100'}
-                fontWeight={700}
-                fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
-                cursor='pointer'
-              >
-                Join us <FiArrowUpRight />
-              </Flex>
-            </Link>
-          </Stack>
+            <CTALink
+              href='https://discord.com/invite/bankless'
+              text='Join us'
+              alt='Link to Bankless Discord'
+            />
+          </VStack>
         </Box>
+        
       </Stack>
-
-      <Stack mt={6}>
-        <Flex
-          flex={1}
-          justify={{ base: 'center', md: 'space-around' }}
-          align={'center'}
-          wrap='wrap'
-          columnGap={{ base: 12, md: 12 }}
-        >
-          {menus.map((menu, index) => {
-            return (
-              <Flex
-                align={'center'}
-                color={'white.100'}
-                key={index}
-                padding={{ base: '0.25rem', md: '0.5rem' }}
-              >
-                <Link href={menu.href} passHref={true}>
-                  <Text
-                    mr={'0.25rem'}
-                    fontSize={{ base: '4xl', md: '2xl' }}
-                    fontWeight={'bold'}
-                    cursor='pointer'
-                  >
-                    {menu.title}
-                  </Text>
-                </Link>
-              </Flex>
-            )
-          })}
-        </Flex>
-      </Stack>
-
-      <Box
-        height='2px'
-        width='100%'
-        backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
-      ></Box>
-
-      <Flex
-        flexDirection={{ base: 'column', md: 'row-reverse' }}
-        justifyContent='center'
-        alignItems='center'
-        columnGap={16}
-        rowGap={8}
-      >
-        <Box
-          position={'relative'}
-          height={'auto'}
-          maxHeight={{ base: '800px', md: '300px' }}
-        >
-          <Image
-            alt={'Hero Image'}
-            fit={'contain'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={'/images/about-us/bankless-movement.png'}
-          />
-        </Box>
-        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
-          <Text
-            color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}
-          >
-            Bankless is a movement for Web3 pioneers
-          </Text>
-          <Text color='grey' fontSize={{ base: 'xl', md: '2xl' }}>
-            We seek new ways to build wealth, solve human coordination problems,
-            create culture, and develop cutting-edge thought leadership in the
-            crypto space. Going Bankless means taking control of your financial
-            health by adopting decentralized and permissionless money systems.
-            Bankless is the movement educating the world on how to do it.
-          </Text>
-        </Stack>
-      </Flex>
-
-      <Flex
-        flexDirection={{ base: 'column', md: 'row' }}
-        justifyContent='center'
-        alignItems='center'
-        columnGap={16}
-        rowGap={8}
-        mt={8}
-      >
-        <Box
-          position={'relative'}
-          height={'auto'}
-          maxHeight={{ base: '500px', md: '300px' }}
-        >
-          <Image
-            alt={'Hero Image'}
-            fit={'contain'}
-            align={'center'}
-            w={'100%'}
-            h={'100%'}
-            src={'/images/about-us/bankless-dao.png'}
-          />
-        </Box>
-        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
-          <Heading
-            color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', md: '3xl' }}
-          >
-            BanklessDAO is the homebase
-          </Heading>
-          <Text color={'gray'} fontSize={{ base: 'xl', md: '2xl' }}>
-            BanklessDAO is a community of passionate Web3 thought-leaders who
-            aim to educate new users, produce written and audio media, build DAO
-            tooling, provide consulting services, develop Web3 scholarship, and
-            create a social and creative home base for anyone in Web3. We’re so
-            much more than a social DAO—we’re a shipping, building, and
-            innovating DAO.
-          </Text>
-        </Stack>
-      </Flex>
-    </Flex>
+    </>
   )
 }
