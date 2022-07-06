@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Flex, Text, HStack, VStack } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/common/ChakraNextImage'
+import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 import { ArticleLink } from './ArticleLink'
 
 class Hero extends React.Component {

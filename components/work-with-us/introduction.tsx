@@ -1,5 +1,5 @@
 import { Box, Heading, Text, VStack } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/common/ChakraNextImage'
+import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 
 export default function IntroductionComponent() {
   return (

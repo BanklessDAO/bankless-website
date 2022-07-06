@@ -12,6 +12,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { RugLink } from './RugLink'
+import { CTALink } from 'components/_common/CTALink'
 
 class Satire extends React.Component {
   render() {
@@ -51,32 +52,7 @@ class Satire extends React.Component {
                 </Link>
               </NextLink>
             </Text>
-            <NextLink href='https://therug.mirror.xyz/' passHref={true}>
-              <Link
-                display='flex'
-                alignItems='baseline'
-                marginRight='2'
-                marginTop='4'
-                target='_blank'>
-                <HStack gap={2}>
-                  <Text
-                    fontWeight={700}
-                    fontSize='2xl'
-                    marginRight='2'
-                    textAlign='center'>
-                    The Rug
-                  </Text>
-                </HStack>
-                <Box marginLeft={2}>
-                  <Image
-                    src='/icons/arrow.png'
-                    alt='arrow'
-                    height={15}
-                    width={15}
-                  />
-                </Box>
-              </Link>
-            </NextLink>
+            <CTALink href='https://therug.mirror.xyz/' text='The Rug' alt='Link to The Rug newsletter'/>
           </Flex>
         </GridItem>
         <GridItem>

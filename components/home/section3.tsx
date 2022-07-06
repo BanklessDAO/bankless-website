@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Text, Box, Button, Image, Link } from '@chakra-ui/react';
-import Underline from 'components/common/underline';
+import Underline from 'components/_common/underline';
 
 class Section3 extends React.Component {
   render() {
