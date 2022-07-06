@@ -18,7 +18,8 @@ export const CTALink = ({ href, text, alt }: CTALink) => {
         marginRight='2'
         marginTop='4'
         target='_blank'
-        alt={alt}>
+        // alt={alt}
+        >
         <Text
           fontWeight={700}
           fontSize='2xl'

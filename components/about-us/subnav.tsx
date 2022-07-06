@@ -47,7 +47,7 @@ const Subnav = () => (
         {linksData.map(({ href, alt, title }: Link, index: number) => {
           return (
             <NextLink key={ulid()} href={href} passHref={true}>
-              <Link alt={alt}>
+              <Link>
                 <Flex p={{ base: 2, md: 0 }} align={'center'} key={index}>
                   <Text
                     color={'white.100'}
