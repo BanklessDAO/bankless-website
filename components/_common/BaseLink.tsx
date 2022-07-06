@@ -14,7 +14,7 @@ export const BaseLink = ({ href, text, alt, typeSize = '2xl' }: BaseLinkProps) =
   return (
     <NextLink href={href} passHref={true}>
       <Link
-        alt={alt}
+        // alt={alt}
         display='flex'
         alignItems='baseline'
         marginRight='2'
