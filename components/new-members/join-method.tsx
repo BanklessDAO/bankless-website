@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import Slider from 'react-slick'
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 // Settings for the slider
 const settings = {
   dots: true,

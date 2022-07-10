@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Stack, Flex, Link } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 import { FiArrowUpRight } from 'react-icons/fi'
 
 export default function NodesBanklessHQComponent() {

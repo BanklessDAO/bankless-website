@@ -11,7 +11,7 @@ import {
   // useColorModeValue,
 } from '@chakra-ui/react'
 
-import SubscribeWidget from 'components/common/subscribe-widget'
+import SubscribeWidget from 'components/_common/subscribe-widget'
 
 export default function CommunityCallsSubscribeComponent() {
   return (
