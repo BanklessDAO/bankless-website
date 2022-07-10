@@ -10,7 +10,7 @@ function Guild() {
         flexDir='column'
         justify='center'
         alignItems='center'
-        lineHeight={{ base: '27px', md: '40px' }}
+        lineHeight={{ base: '30px', md: '40px' }}
       >
         <Text fontWeight={700} fontSize='6xl' textAlign='center' maxW={750}>
           Guilds
@@ -19,15 +19,18 @@ function Guild() {
         <Text
           textAlign='center'
           mb={10}
-          fontSize={{ base: 'xl', md: '2xl' }}
+          fontSize={{ base: '18px', md: '28px' }}
           maxW={826}
+          lineHeight={{base: '40px', md: '46px'}}
+          fontWeight='400px'
+          zIndex={1}
         >
           Guilds are the way we organize our contributors. These talent pools
           serve as a way for individuals who share common interests,
           professional backgrounds, and skills to come together and incubate
           projects. There are 13 guilds within bDAO.
         </Text>
-        <VStack rowGap={8}>
+        <VStack mt={8} rowGap={8}>
           <Section
             title='Analytics Guild'
             text='The Analytics Guild builds data products and uses data analytics to equip
