@@ -44,12 +44,12 @@ export default function CommunityCallsWeekUpdateComponent() {
           </Box>
         </Flex>
 
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
           <Heading
             color={'gray.100'}
             lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+            fontWeight={700}
+            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl'}}
           >
             Weekly Updates
           </Heading>
