@@ -19,6 +19,8 @@ export default function CommunityCallsEvolutionComponent() {
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         pt={{ base: 10, md: 14 }}
+        mt={{base: 10, md: 14}}
+        mb={{base: 10, md: 14}}
         direction={{ base: 'column', md: 'row' }}
         borderRadius='10px'>
         <Flex
