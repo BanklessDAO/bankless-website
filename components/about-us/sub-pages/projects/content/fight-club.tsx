@@ -5,42 +5,57 @@ export default function FightClubComponent() {
   return (
     <Stack
       align={'center'}
-      spacing={{ base: 8, md: 10 }}
+      width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row-reverse' }}>
+      direction={{ base: 'column', md: 'row-reverse' }}
+    >
       <Flex
         flex={1}
-        justify={'center'}
-        align={'center'}
+        justify={'flex-end'}
+        alignItems={'center'}
         position={'relative'}
-        w={'full'}>
+        w={'full'}
+      >
         <Box
           position={'relative'}
-          height={'300px'}
-          rounded={'2xl'}
+          height={{ base: '300px', sm: '350px' }}
+          width={{ base: '300px', sm: '350px' }}
           boxShadow={'2xl'}
-          width={'full'}
-          overflow={'hidden'}>
+          overflow={'hidden'}
+        >
           <Image
-            alt={'Photo by Ivan Pergasi on Unsplash'}
+            alt={'Degen project image'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/images/fight-club.jpg'}
+            src={'/images/Rectangle 233.png'}
           />
         </Box>
       </Flex>
 
-      <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+      <Stack flex={1} spacing={{ base: 5, md: 4 }}>
         <Heading
           color={'gray.100'}
-          lineHeight={1.1}
-          fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
+          fontWeight={700}
+          mt={{ base: '32px', md: '0' }}
+          fontSize={{ base: '20px' }}
+        >
           FIGHT CLUB
         </Heading>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'gray.100'}
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
+          lineHeight={{
+            base: '20px',
+            sm: '27px',
+            md: '30px',
+            lg: '30px',
+            xl: '45px',
+          }}
+          textAlign='justify'
+          fontSize={{ base: '16px', sm: '20px' }}
+        >
           Fight Club aims to create opportunities for the bDAO community to pool
           capital, invest in projects, and share proceeds while offering venture
           investing education.
@@ -48,11 +63,19 @@ export default function FightClubComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}>
+          spacing={'12px'}
+        >
           <Link href='https://twitter.com/fight_club_vc' isExternal>
-            <Flex align={'center'} color={'white.100'}>
+            <Flex
+              align={'center'}
+              color={'white.100'}
+              fontSize='20px'
+              lineHeight={'24px'}
+              fontWeight='700'
+            >
               Learn More <FiArrowUpRight />
             </Flex>
+            <Box height={'1px'} width='100%' bgColor={'#999999'} mt='6px' />
           </Link>
         </Stack>
       </Stack>
