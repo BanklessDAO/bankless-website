@@ -1,10 +1,13 @@
 import React from 'react'
-import Image from 'next/image'
 
+<<<<<<< HEAD
 import '@fontsource/clear-sans/500.css'
 import '@fontsource/clear-sans/700.css'
 
 import { Flex, Box, Text, HStack, chakra, Link } from '@chakra-ui/react'
+=======
+import { Flex, Text, HStack, chakra, Link } from '@chakra-ui/react'
+>>>>>>> d5c5be6e051385cfdefb43518b3613970f0b8d9a
 
 import Underline from 'components/_common/underline'
 
