@@ -4,43 +4,63 @@ import { FiArrowUpRight } from 'react-icons/fi'
 export default function WebsiteProjectComponent() {
   return (
     <Stack
+      justify='space-between'
       align={'center'}
-      spacing={{ base: 8, md: 10 }}
+      width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row' }}>
+      direction={{ base: 'column', md: 'row' }}
+    >
       <Flex
         flex={1}
-        justify={'center'}
-        align={'center'}
+        justify={'flex-start'}
+        alignItems={'center'}
         position={'relative'}
-        w={'full'}>
+        w={'full'}
+      >
         <Box
           position={'relative'}
-          height={'300px'}
-          rounded={'2xl'}
+          height={{ base: '300px', sm: '350px' }}
+          width={{ base: '300px', sm: '350px' }}
           boxShadow={'2xl'}
-          width={'full'}
-          overflow={'hidden'}>
+          overflow={'hidden'}
+        >
           <Image
-            alt={'Photo by Ben Kolde on Unsplash'}
+            alt={'Bankless logo'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/images/website.jpg'}
+            src='/images/Rectangle 232.png'
           />
         </Box>
       </Flex>
 
-      <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+      <Stack
+        width={{ base: '300px', sm: '350px', xl: '500px' }}
+        spacing={{ base: 5, md: 4 }}
+      >
         <Heading
           color={'gray.100'}
-          lineHeight={1.1}
-          fontWeight={600}
-          fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
+          fontWeight={700}
+          mt={{ base: '32px', md: '0' }}
+          fontSize={{ base: '20px' }}
+        >
           WEBSITE PROJECT
         </Heading>
-        <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text
+          color={'gray.100'}
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
+          lineHeight={{
+            base: '20px',
+            sm: '27px',
+            md: '30px',
+            lg: '30px',
+            xl: '45px',
+          }}
+          textAlign='justify'
+          fontSize={{ base: '16px', sm: '20px' }}
+        >
           The Website project aims to constantly improve the code, content, and
           design of the current bDAO website to streamline the introduction and
           onboarding of new members to the Bankless movement.
@@ -48,13 +68,22 @@ export default function WebsiteProjectComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}>
+          spacing={'12px'}
+        >
           <Link
             href='https://www.notion.so/bankless/bDAO-Website-1320df854ac54cb3a65018173b9e5445'
-            isExternal>
-            <Flex align={'center'} color={'white.100'}>
+            isExternal
+          >
+            <Flex
+              align={'center'}
+              color={'white.100'}
+              fontSize='20px'
+              lineHeight={'24px'}
+              fontWeight='700'
+            >
               Learn More <FiArrowUpRight />
             </Flex>
+            <Box height={'1px'} width='100%' bgColor={'#999999'} mt='6px' />
           </Link>
         </Stack>
       </Stack>
