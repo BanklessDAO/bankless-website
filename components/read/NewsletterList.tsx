@@ -1,7 +1,8 @@
 import React from 'react'
 import { ulid } from 'ulid'
-import { HStack, Text, Grid, Box, List } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Link from 'next/link'
+import { HStack, Text, Grid, Box } from '@chakra-ui/react'
+import Underline from 'components/_common/underline'
 import { NewsletterCard } from './NewsletterCard'
 
 export const NewsletterList: React.FC = () => {
@@ -75,7 +76,7 @@ export const NewsletterList: React.FC = () => {
       <Grid
         as='ul'
         gridTemplateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
-        templateRows={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+        templateRows={{ base: 'auto', lg: 'repeat(3, 1fr)' }}
         gap={4}
         zIndex={1}
         m={0}
@@ -89,18 +90,18 @@ export const NewsletterList: React.FC = () => {
         ))}
       </Grid>
       <Box
-        // w={'1294px'}
-        w={{ base: '100vw', lg: '1294px' }}
-        h={{ base: '100vw', lg: '1044px' }}
+        w={{ base: '80%', lg: '60%' }}
+        h={{ base: '80%', lg: '60%' }}
         pos='absolute'
-        top={{ base: '50%', lg: 0 }}
+        top={{ base: '16%', lg: '32%' }}
+        left={{base: '0%', lg: '8%'}}
         bgColor='magenta'
         zIndex={0}
         borderRadius='50%'
         transform={'rotate(9.1deg)'}
         bgGradient='linear-gradient(121.75deg, rgba(255,16,19) 16.9%, rgba(140, 29, 207, 0) 88.02%)'
         filter={'blur(281.004px)'}
-        opacity={0.2}
+        opacity={0.8}
       />
     </HStack>
   )

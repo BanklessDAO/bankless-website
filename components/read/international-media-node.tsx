@@ -10,7 +10,7 @@ import {
   Flex,
   VStack,
 } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
   render() {
@@ -21,34 +21,25 @@ class Section1 extends React.Component {
           gap={4}
           justifyContent='center'
           alignItems='center'>
-          {/* <VStack>
-            <Heading
-              as='h2'
-              size='xl'
-              color='white'
-              textTransform='uppercase'
-              textAlign={{ base: 'center' }}
-              w={{ base: '80%', md: '100%' }}>
-              International Media Nodes
-            </Heading>
-            <Underline />
-          </VStack> */}
           <Box zIndex={1} m={0}>
             <Text
               fontWeight={700}
               fontSize={{ base: '4xl', md: '6xl' }}
               maxW={{base: 400, lg: 750}}
               fontFamily='Clear Sans'
-              textAlign={{ base: 'left', md: 'center' }}>
+              textAlign={{ base: 'left', md: 'center' }}
+              lineHeight={1.2}>
               International Media Nodes
             </Text>
             <Underline />
           </Box>
           <Text
-            fontSize='lg'
-            color='rgba(255, 255, 255, 0.57)'
+            fontSize='xl'
+            color='grey'
             px={{ base: 0, md: '6rem' }}
-            textAlign={{ base: 'left', md: 'center' }}>
+            textAlign={{ base: 'left', md: 'center' }}
+            fontFamily='Clear Sans'
+            lineHeight={1.2}>
             International Media Nodes (IMN) are Bankless channels that spread
             the message of the Bankless movement beyond North America.They
             translate BanklessDAO content, publish original pieces, run Twitter
