@@ -19,6 +19,7 @@ export default function CommunityCallsCCFormatComponent() {
         direction={{ base: 'column', md: 'row' }}
         borderRadius='10px'
         background='#222020'
+        bgGradient='linear(to-r, rgba(34, 0, 1, 1) 41.39%, rgba(0, 5, 114, 1) 190%)'
       >
         <Flex
           flex={1}
@@ -34,6 +35,8 @@ export default function CommunityCallsCCFormatComponent() {
             boxShadow={'2xl'}
             width={'100%'}
             overflow={'hidden'}
+            margin={0}
+            padding={0}
           >
             <Image
               alt={'Hero Image'}
@@ -49,9 +52,9 @@ export default function CommunityCallsCCFormatComponent() {
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             color={'gray.100'}
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+            lineHeight={1}
+            fontWeight={700}
+            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl'}}
           >
             The CC Format
           </Heading>
