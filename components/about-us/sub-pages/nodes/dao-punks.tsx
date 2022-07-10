@@ -22,23 +22,25 @@ export default function DaoPunksComponent() {
           rounded={'2xl'}
           boxShadow={'2xl'}
           width={'full'}
-          overflow={'hidden'}>
+          overflow={'hidden'}
+          p={0}>
           <Image
+            borderRadius={'10px'}
             alt={'Hero Image'}
             fit={'cover'}
             align={'center'}
             w={'90%'}
-            h={'90%'}
+            h={'100%'}
             src={'/images/DAO-Punk-Invest.png'}
           />
         </Box>
       </Flex>
 
-      <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+      <Stack flex={1} spacing={{ base: 5, md: 3 }}>
         <Heading
           color={'gray.100'}
           lineHeight={1.1}
-          fontWeight={600}
+          fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
           textTransform={'uppercase'}>
           dao punks
@@ -67,7 +69,7 @@ export default function DaoPunksComponent() {
             />
           </Box>
         </Flex>
-        <Text color={'grey'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text color={'grey'} fontSize={{base: 'sm', sm: 'lg', md: '2xl' }}>
           Is a node within the Bankless ecosystem that helps contributors
           transition to full-time DAO. DAOpunk NFTs designed by Crypto Bushi
           allow access to the Discord server. Join to connect with other punks
@@ -79,7 +81,7 @@ export default function DaoPunksComponent() {
           spacing={'12px'}>
           <Link href='https://opensea.io/collection/daopunksnft' isExternal>
             <Flex align={'center'} color={'white.100'}>
-              <Text mr={'0.5rem'} fontSize={{ sm: 'sm', md: 'md' }}>
+              <Text mr={'0.5rem'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
                 Invest in a DAOPunk NFT
               </Text>
               <FiArrowUpRight size={25} />
