@@ -26,7 +26,6 @@ export default function GovernanceStartComponent() {
         ></Box>
 
         <Flex
-          spacing={{ base: 8, md: 10 }}
           py={{ base: 10, md: 16 }}
           direction={{ base: 'column', md: 'row' }}
           w='80%'

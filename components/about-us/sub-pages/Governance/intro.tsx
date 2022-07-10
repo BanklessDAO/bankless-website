@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 export default function GovernanceIntroComponent() {
   return (
