@@ -28,7 +28,9 @@ function GmiIndex() {
               color={'#D02128'}
               lineHeight='43px'
               fontSize='36px'
-              fontWeight={700}>
+              fontWeight={700}
+              mt={7}
+              >
               Are you GMI?
             </Text>
           </Container>
