@@ -23,6 +23,7 @@ function Guild() {
           maxW={826}
           lineHeight={{base: '40px', md: '46px'}}
           fontWeight='400px'
+          zIndex={1}
         >
           Guilds are the way we organize our contributors. These talent pools
           serve as a way for individuals who share common interests,

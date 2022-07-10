@@ -30,9 +30,9 @@ function DaoPunkSection() {
           src='/images/DAO-Punk-Invest.png'
           alt='bankToken'
           height={413}
-          width={405}
+          width={413}
         />
-        <VStack justifyContent={'flex-end'} display='flex'>
+        <VStack justifyContent={'flex-start'} display='flex'>
           <Container flexDirection={{ base: 'column', md: 'row' }}>
             {!isMobile ? (
               <Text fontWeight={700} fontSize='5xl' lineHeight='58px' mb={7}>
@@ -53,7 +53,7 @@ function DaoPunkSection() {
                 pushing the boundaries of where technology meets on-chain voting
                 and automatic treasury triggers.
               </Text>
-              <Container mt={8}>
+              <Container p={0} mt={8}>
                 <Link
                   href='https://opensea.io/collection/daopunksnft'
                   isExternal>

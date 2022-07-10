@@ -16,14 +16,14 @@ function BankSection() {
 
   return (
     <Container maxW={'6xl'} p={0}>
-      <Flex direction={{ base: 'column-reverse', md: 'row' }}>
+      <Flex direction={{ base: 'column-reverse', xl: 'row' }}>
         {!isMobile ? (
-          <VStack h='full' w='full' mt={20} align='flex-start'>
+          <VStack justifyItems={'center'} alignItems={'center'} h='full' w='full' mt={20} align='flex-start'>
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
-              height={290}
-              width={290}
+              height={320}
+              width={320}
             />
           </VStack>
         ) : null}
@@ -31,7 +31,12 @@ function BankSection() {
           <Text fontWeight={700} fontSize='7xl'>
             BANK
           </Text>
-          <Text fontSize='3xl' fontWeight={700} color={'red.400'}>
+          <Text
+           bgGradient='linear(to-b, rgba(92,10,39,1) 30%, rgba(65,7,35,1) 100%, rgba(0, 0, 0, 0.3) 0%)'
+           bgColor='rgba(0, 0, 0, 0.2)'
+           bgClip='text'
+           fontSize='3xl' fontWeight={700} color={'red.400'}
+          >
             The Most widely-held Token{' '}
           </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
@@ -76,7 +81,7 @@ function BankSection() {
             ) : null}
             <Flex
               alignItems={{ base: 'center', md: 'center' }}
-              flexDirection={{ base: 'column', md: 'row' }}>
+              flexDirection={{ base: 'column',  md: 'row' }}>
               <Text mr={[0, 3]}>Current market cap and price is</Text>
               <Box>
                 <Flex
@@ -86,6 +91,7 @@ function BankSection() {
                   w={[160, 180]}
                   border={'0.5px solid #D02128'}>
                   <Link
+                    py={'5px'}
                     fontWeight={800}
                     color='#D02128'
                     href='https://www.coingecko.com/en/coins/bankless-dao'
