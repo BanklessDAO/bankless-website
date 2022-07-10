@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from './section'
 import { Container, Flex, Text, VStack } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 function Guild() {
   return (

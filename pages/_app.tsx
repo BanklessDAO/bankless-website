@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import theme from 'config/theme'
 
 import '../styles/index.css'
-import PageContainer from 'components/common/page-container'
+import PageContainer from 'components/_common/page-container'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

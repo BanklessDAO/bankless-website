@@ -6,7 +6,7 @@ import '@fontsource/clear-sans/700.css'
 
 import { Flex, Box, Text, HStack, chakra, Link } from '@chakra-ui/react'
 
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
   render() {

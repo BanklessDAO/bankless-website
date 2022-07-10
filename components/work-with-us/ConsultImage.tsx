@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/common/ChakraNextImage'
+import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 
 type ConsultImageProps = {
     alt: string

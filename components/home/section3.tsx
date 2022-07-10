@@ -8,7 +8,7 @@ import {
   Link,
   useMediaQuery,
 } from '@chakra-ui/react'
-import Underline from 'components/common/underline'
+import Underline from 'components/_common/underline'
 
 function Section3() {
   const [isMobileScreen] = useMediaQuery('(max-width: 500px)')
