@@ -16,7 +16,7 @@ function BedIndex() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW={'6xl'} p={0}>
+    <Container maxW={'100%'} p={0}>
       <Stack
         align={'center'}
         spacing={3}
@@ -24,7 +24,7 @@ function BedIndex() {
         direction={{ base: 'column', md: 'row' }}>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading lineHeight={0.7} fontWeight={600}>
-            <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+            <Container p={0} maxW={{ base: 'container.sm', md: 'container.xl' }}>
               {/* Mobile logo begins */}
               {isMobile ? (
                 <Flex mb={5} p={0}>
@@ -46,7 +46,11 @@ function BedIndex() {
               )}
             </Container>
             <br />
-            <Text as={'span'} color={'red.400'}>
+            <Text as={'span'} color={'red.400'}
+             bgGradient='linear(to-b, rgba(92,10,39,1) 30%, rgba(65,7,35,1) 100%, rgba(0, 0, 0, 0.3) 0%)'
+             bgColor='rgba(0, 0, 0, 0.2)'
+             bgClip='text'
+            >
               The only index that can get ETH and BTC maxis in BED together
             </Text>
           </Heading>
@@ -64,11 +68,15 @@ function BedIndex() {
           </Stack>
           <VStack justifyContent={'flex-end'} display='flex'>
             <Container
+              padding={{base: 0, md: 0, lg: 0}}
               display='flex'
-              justifyContent='space-evenly'
+              justifyContent='space-between'
               alignItems={'center'}
-              flexDirection={{ base: 'column', md: 'row' }}>
-              <Link href='https://app.indexcoop.com/bed' isExternal>
+              flexDirection={{ base: 'column', md: 'row' }}
+              >
+              <Link href='https://app.indexcoop.com/bed' isExternal
+                mb={{base: '22px', md: 0}}
+              >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
                   <Container padding={0} paddingRight={2}>
                     <Image
@@ -83,7 +91,7 @@ function BedIndex() {
               </Link>
               <Link href='https://www.bankless.community/bed-index' isExternal>
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  <Container padding={0} paddingRight={2}></Container>
+                  {/* <Container padding={0} paddingRight={2}></Container> */}
                   Learn more about Bed Index
                 </Button>
               </Link>
@@ -98,7 +106,7 @@ function BedIndex() {
           position={'relative'}
           w={'full'}>
           {!isMobile ? (
-            <Box position={'relative'}>
+            <Box pt={30} position={'relative'}>
               <Image
                 alt='bed-token'
                 align={'center'}

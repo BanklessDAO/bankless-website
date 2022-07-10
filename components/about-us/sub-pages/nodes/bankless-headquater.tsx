@@ -12,7 +12,7 @@ export default function NodesBanklessHQComponent() {
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}>
         <Heading
-          fontWeight={600}
+          fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
           color={'white.100'}
@@ -20,7 +20,7 @@ export default function NodesBanklessHQComponent() {
           BANKLESS HQ
           <Underline />
         </Heading>
-        <Text color={'white.200'} fontSize={{ sm: 'sm', md: 'md' }}>
+        <Text color={'white.200'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
           Is the founding node of the Bankless media ecosystem. Led by David
           Hoffman and Ryan Sean Adams, this node runs the original Bankless
           podcast and the Bankless newsletter. It’s often referred to as
@@ -36,7 +36,7 @@ export default function NodesBanklessHQComponent() {
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
-                  fontSize={{ base: '1xl', md: 'md' }}
+                  fontSize={{ base: '1xl', md: '3xl' }}
                   fontWeight={'bold'}>
                   Substack
                 </Text>
@@ -50,7 +50,7 @@ export default function NodesBanklessHQComponent() {
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
-                  fontSize={{ base: '1xl', md: 'md' }}
+                  fontSize={{ base: '1xl', md: '3xl' }}
                   fontWeight={'bold'}>
                   Podcast
                 </Text>
@@ -64,7 +64,7 @@ export default function NodesBanklessHQComponent() {
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
-                  fontSize={{ base: '1xl', md: 'md' }}
+                  fontSize={{ base: '1xl', md: '3xl' }}
                   fontWeight={'bold'}>
                   Youtube
                 </Text>
