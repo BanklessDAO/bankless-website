@@ -1,52 +1,70 @@
 import React from 'react'
 
-import { Flex, Text, Button, InputGroup, InputRightElement, Input } from '@chakra-ui/react'
-import ThreeRings from 'components/_common/three-rings';
-import SubscribeWidget  from 'components/_common/subscribe-widget';
+import {
+  Flex,
+  Text,
+  Button,
+  InputGroup,
+  InputRightElement,
+  Input,
+  Box,
+} from '@chakra-ui/react'
+import ThreeRings from 'components/_common/three-rings'
+// import SubscribeWidget  from 'components/common/subscribe-widget';
 
 class Section5 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center' rowGap={{ base: 8, md: 16 }}>
+      <Flex
+        flexDir='column'
+        justifyContent='center'
+        alignItems='center'
+        rowGap={{ base: 8, md: 16 }}
+      >
         <ThreeRings />
 
-        {/* <Flex
+        <Flex
           flexWrap='nowrap'
-          flexDir={{ base: 'column', lg: 'row'}}
-          justifyContent='center'
+          flexDir={{ base: 'column', lg: 'row' }}
+          justifyContent='space-between'
           alignItems='center'
-          rowGap={4}
-          marginTop={{ base: 8, lg: 32 }}>
+          width={{ lg: '70vw', xl: '60vw' }}
+          marginTop='8'
+        >
           <Text
-            fontSize={{base: '2xl', lg: '4xl' }}
+            fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}
+            mb={{ base: '2rem', lg: '0' }}
             fontWeight={700}
             whiteSpace='nowrap'
-            marginRight={{ base: 0, lg: 4}}>
+            marginRight={{ base: 0, lg: 4 }}
+          >
             Start Your Journey
           </Text>
-          <InputGroup>
+
+          <Flex>
             <Input
-              // pr='4.5rem'
-              width={{base: '350px', lg: '500px' }}
-              height='65px'
+              height={{ base: '3rem', lg: '4rem' }}
+              width={{ base: '200px', md: '300px', xl: '350px' }}
+              textAlign='center'
               type='text'
               placeholder={`Your email address`}
+              borderRadius='0'
             />
-            <InputRightElement height='100%' width={{base: '100px', lg: '130px' }}>
-              <Button
-                height='100%'
-                width='100%'
-                onClick={() => null}>
-                Subscribe
-              </Button>
-            </InputRightElement>
-          </InputGroup>
-        </Flex> */}
+            <Button
+              height={{ base: '3rem', lg: '4rem' }}
+              width={{ base: '6rem', md: '7rem' }}
+              onClick={() => null}
+              borderRadius='0'
+            >
+              Subscribe
+            </Button>
+          </Flex>
+        </Flex>
 
-        <SubscribeWidget />
+        {/* <SubscribeWidget /> */}
       </Flex>
     )
   }
 }
 
-export default Section5;
+export default Section5
