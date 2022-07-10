@@ -25,6 +25,14 @@ const variantFlushed = () => ({
   },
 })
 
+const breakpoints = {
+  sm: '320px',
+  md: '720px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+}
+
 const theme = extendTheme(
   {
     colors: {
@@ -40,7 +48,7 @@ const theme = extendTheme(
         800: '#6C6C6C',
         900: '#565656',
       },
-      black: '#101010',
+      black: '#000000',
       /* Color Scale generated using https://color-scheme-builder.vercel.app/ */
       red: {
         100: '#FF1013',
