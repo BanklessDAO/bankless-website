@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import BanklessAcademyComponent from './content/bankless-academy'
 import ProjectBanklessConsultingComponent from './content/bankless-consulting'
 import BanklessLoansComponent from './content/bankless-loans'
@@ -19,7 +20,7 @@ import WebsiteProjectComponent from './content/website-project'
 
 export default function ProjectsContentComponent() {
   return (
-    <>
+    <Box display={'flex'} flexDir='column' alignItems={'center'}>
       <ProjectBanklessConsultingComponent />
       <DegenProjectComponent />
       <ProjectBountyBoardComponent />
@@ -38,6 +39,6 @@ export default function ProjectsContentComponent() {
       <FirstQuestComponent />
       <InternationalMediaNodesComponent />
       <DecentralizeLawNewsletterComponent />
-    </>
+    </Box>
   )
 }
