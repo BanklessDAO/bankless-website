@@ -1,6 +1,8 @@
 import { Box, Heading, Text, Stack, Flex, Button } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
+import Link from 'next/link'
+
 export default function GovernanceSeasonComponent() {
   return (
     <>
@@ -32,59 +34,98 @@ export default function GovernanceSeasonComponent() {
         </Text>
 
         <Flex
-          direction={{ base: 'column', md: 'row' }}
+          direction={{ base: 'column', xl: 'row' }}
           justify={{ base: 'center', md: 'space-between' }}
         >
-          <Button
-            minWidth={{ base: '8rem', md: '12rem' }}
-            mt={'1rem'}
-            fontSize={{ base: 'sm', md: 'md' }}
-            bg={'#2B2B2B'}
-            color={'white'}
-            _hover={{
-              bg: '#2B2B2B',
-            }}
-            _focus={{
-              border: 'none',
-            }}
+          <Link
+            href={
+              'https://banklessdao.mirror.xyz/6i468DL59XhCAyfPoY3UA3h2uEDkkqWeiryuKkXOmBI'
+            }
+            passHref
           >
-            Season 1
-            <FiArrowUpRight size={20} />
-          </Button>
+            <Button
+              minWidth={{ base: '8rem', md: '12rem' }}
+              mt={'1rem'}
+              fontSize={{ base: 'sm', md: 'md' }}
+              bg={'#2B2B2B'}
+              color={'white'}
+              _hover={{
+                bg: '#2B2B2B',
+              }}
+              _focus={{
+                border: 'none',
+              }}
+            >
+              Season 1
+              <FiArrowUpRight size={20} />
+            </Button>
+          </Link>
 
-          <Button
-            minWidth={{ base: '8rem', md: '12rem' }}
-            mt={'1rem'}
-            fontSize={{ base: 'sm', md: 'md' }}
-            bg={'#2B2B2B'}
-            color={'white'}
-            _hover={{
-              bg: '#2B2B2B',
-            }}
-            _focus={{
-              border: 'none',
-            }}
+          <Link
+            href={
+              'https://banklessdao.mirror.xyz/Q3pMMBLblRHub5DW7wjsFhflqzlVLlBIhEjd9JwUjhk'
+            }
+            passHref
           >
-            Season 2
-            <FiArrowUpRight size={20} />
-          </Button>
+            <Button
+              minWidth={{ base: '8rem', md: '12rem' }}
+              mt={'1rem'}
+              fontSize={{ base: 'sm', md: 'md' }}
+              bg={'#2B2B2B'}
+              color={'white'}
+              _hover={{
+                bg: '#2B2B2B',
+              }}
+              _focus={{
+                border: 'none',
+              }}
+            >
+              Season 2
+              <FiArrowUpRight size={20} />
+            </Button>
+          </Link>
 
-          <Button
-            minWidth={{ base: '8rem', md: '12rem' }}
-            mt={'1rem'}
-            fontSize={{ base: 'sm', md: 'md' }}
-            bg={'#2B2B2B'}
-            color={'white'}
-            _hover={{
-              bg: '#2B2B2B',
-            }}
-            _focus={{
-              border: 'none',
-            }}
+          <Link
+            href={
+              'https://banklessdao.mirror.xyz/Ot8KDnNHZhN9-ZIp0hWUSblyPs83HfdMr7Kfp3HVoxw'
+            }
+            passHref
           >
-            Season 3
-            <FiArrowUpRight size={20} />
-          </Button>
+            <Button
+              minWidth={{ base: '8rem', md: '12rem' }}
+              mt={'1rem'}
+              fontSize={{ base: 'sm', md: 'md' }}
+              bg={'#2B2B2B'}
+              color={'white'}
+              _hover={{
+                bg: '#2B2B2B',
+              }}
+              _focus={{
+                border: 'none',
+              }}
+            >
+              Season 3
+              <FiArrowUpRight size={20} />
+            </Button>
+          </Link>
+          <Link href={'https://season4.bankless.community/'} passHref>
+            <Button
+              minWidth={{ base: '8rem', md: '12rem' }}
+              mt={'1rem'}
+              fontSize={{ base: 'sm', md: 'md' }}
+              bg={'#2B2B2B'}
+              color={'white'}
+              _hover={{
+                bg: '#2B2B2B',
+              }}
+              _focus={{
+                border: 'none',
+              }}
+            >
+              Season 4
+              <FiArrowUpRight size={20} />
+            </Button>
+          </Link>
         </Flex>
       </Stack>
     </>
