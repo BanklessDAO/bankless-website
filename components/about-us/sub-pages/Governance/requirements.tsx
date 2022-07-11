@@ -46,10 +46,12 @@ export default function GovernanceRequirementComponent() {
         as={Box}
         spacing={{ base: 4, md: 6 }}
         py={{ base: 10, md: 18 }}
-        mt={'4rem'}
+        mt={{ base: '-2rem', md: '3rem' }}
+        zIndex='docked'
       >
         <Heading
           fontWeight={600}
+          textAlign={{ base: 'center', md: 'left' }}
           fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
           lineHeight={'110%'}
           color={'white.100'}
@@ -70,12 +72,14 @@ export default function GovernanceRequirementComponent() {
             background={'#191919'}
             minWidth={{ base: '100%', md: '32rem' }}
             padding={'1rem'}
+            zIndex='docked'
           >
             <Stack direction={'row'} spacing={4}>
               <Button
                 flex={1}
-                fontSize={{ base: '0.6rem', sm: 'sm' }}
+                fontSize={{ base: '0.4rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
+                px='0.2rem'
                 color={'white'}
                 _hover={{
                   bg: '#0D0D0D',
@@ -83,13 +87,15 @@ export default function GovernanceRequirementComponent() {
                 _focus={{
                   border: 'none',
                 }}
+                cursor='default'
               >
                 Funding Requested
               </Button>
               <Button
                 flex={1}
-                fontSize={{ base: '0.6rem', sm: 'sm' }}
+                fontSize={{ base: '0.4rem', sm: 'sm' }}
                 bg={'#0D0D0D'}
+                px='0.2rem'
                 color={'white'}
                 _hover={{
                   bg: '#0D0D0D',
@@ -97,6 +103,7 @@ export default function GovernanceRequirementComponent() {
                 _focus={{
                   border: 'none',
                 }}
+                cursor='default'
               >
                 Number of voters required
               </Button>
@@ -107,7 +114,8 @@ export default function GovernanceRequirementComponent() {
                 <Stack mt={4} direction={'row'} spacing={4} key={index}>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.6rem', sm: 'sm' }}
+                    fontSize={{ base: '0.4rem', sm: 'sm' }}
+                    px='0.2rem'
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
@@ -116,12 +124,14 @@ export default function GovernanceRequirementComponent() {
                     _focus={{
                       border: 'none',
                     }}
+                    cursor='default'
                   >
                     {requirement.funding}
                   </Button>
                   <Button
                     flex={1}
-                    fontSize={{ base: '0.6rem', sm: 'sm' }}
+                    fontSize={{ base: '0.4rem', sm: 'sm' }}
+                    px='0.2rem'
                     bg={'#2B2B2B'}
                     color={'white'}
                     _hover={{
@@ -130,6 +140,7 @@ export default function GovernanceRequirementComponent() {
                     _focus={{
                       border: 'none',
                     }}
+                    cursor='default'
                   >
                     {requirement.voters} voters
                   </Button>
@@ -139,6 +150,18 @@ export default function GovernanceRequirementComponent() {
           </Flex>
         </Center>
       </Stack>
+      <Box
+        position='absolute'
+        display={{ base: 'block', sm: 'none' }}
+        top={{ base: '160rem' }}
+        right='0'
+        bgGradient='linear(to-br, rgba(255, 16, 19, 0.3) 16.9%, rgba(140, 29, 207, 0.1) 88.02%)'
+        filter='auto'
+        blur='179px'
+        h='45rem'
+        w={{ base: '70%', md: '50rem' }}
+        borderRadius='full'
+      ></Box>
     </>
   )
 }

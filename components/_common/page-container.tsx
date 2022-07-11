@@ -14,13 +14,15 @@ const PageContainer: React.FC = ({ children }) => {
       justifyContent={'center'}
       alignItems={'center'}
       flexDirection={'column'}
-      background={'black'}
-      overflow='hidden'>
+      background={'#000'}
+      overflow='hidden'
+    >
       <NavBar />
       <Container
         maxW={{ base: '100%', md: '700px', xl: '1232px' }}
         p={{ base: '2rem', md: 0 }}
-        pt={{ base: 0 }}>
+        pt={{ base: 0 }}
+      >
         {children}
       </Container>
       <Footer />
