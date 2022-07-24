@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, Stack, Flex } from '@chakra-ui/react'
 import { ConsultImage } from './ConsultImage'
-import { CTA } from './CTA'
 import { ulid } from 'ulid'
+import { CTAButton } from 'components/_common/CTAButton'
 
 export type CarouselSlideProps = {
   title: string
@@ -45,7 +45,7 @@ export function CarouselSlide({
             {para}
           </Text>
         ))}
-        <CTA url={cta.link} text={cta.text} />
+        <CTAButton url={cta.link} text={cta.text}/>
       </Stack>
 
       <Flex
