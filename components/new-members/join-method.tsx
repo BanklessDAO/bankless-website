@@ -104,6 +104,28 @@ export default function NewMemberJoinMethodComponent() {
               </defs>
             </svg>
           </Box>
+          <Box
+            h={'40rem'}
+            w={'40rem'}
+            pos='absolute'
+            zIndex='0'
+            left={{ base: '-60%', lg: '-60%' }}
+            bottom={{ base: '0%', lg: '0%' }}
+            opacity='0.2'
+            bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+            filter='blur(6rem)'
+          />
+          <Box
+            h={'50rem'}
+            w={'40rem'}
+            pos='absolute'
+            zIndex='0'
+            left={{ base: '80%', lg: '80%' }}
+            top={{ base: '-80%', lg: '-80%' }}
+            opacity='0.2'
+            bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+            filter='blur(6rem)'
+          />
         </Box>
       </VStack>
     </>
