@@ -18,6 +18,8 @@ import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import cards from './cardContent.json'
+import { desktopSliderSettings } from './sliderSettings'
 
 const slideIn = keyframes`
   0% {
@@ -50,72 +52,7 @@ const StyledSlider = styled(Slider)`
 
 export default function DesktopView() {
   const [slider, setSlider] = useState<Slider | null>(null)
-  const [settings, setSettings] = useState({
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    initialSlide: 0,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  })
-
-  const cards = [
-    {
-      title: '\nEDUCATION',
-      text: 'We learn from each other. We seek to become a trusted guide that empowers people all over the globe to adopt decentralized finance by sharing accurate, truthful, and objective information.',
-      image: '/images/about-us/our-values-education.png',
-    },
-    {
-      title: '\nCULTURE',
-      text: 'We reward action and embrace risk. We empower our community to continually drive new initiatives by providing a space to self-organize and quickly move from idea to action.',
-      image: '/images/about-us/our-values-culture.png',
-    },
-    {
-      title: 'DECENTRALIZED \n GOVERNANCE',
-      text: 'We put decision making into the hands of the collective. We create legitimacy through an environment where the best ideas win.',
-      image: '/images/about-us/our-values-decentralized-governance.png',
-    },
-    {
-      title: '\nEDUCATION',
-      text: 'We learn from each other. We seek to become a trusted guide that empowers people all over the globe to adopt decentralized finance by sharing accurate, truthful, and objective information.',
-      image: '/images/about-us/our-values-education.png',
-    },
-    {
-      title: '\nCULTURE',
-      text: 'We reward action and embrace risk. We empower our community to continually drive new initiatives by providing a space to self-organize and quickly move from idea to action.',
-      image: '/images/about-us/our-values-culture.png',
-    },
-    {
-      title: 'DECENTRALIZED \n GOVERNANCE',
-      text: 'We put decision making into the hands of the collective. We create legitimacy through an environment where the best ideas win.',
-      image: '/images/about-us/our-values-decentralized-governance.png',
-    },
-  ]
+  const [settings, setSettings] = useState(desktopSliderSettings)
 
   const [popups, setPopups] = useState([
     false,
@@ -181,7 +118,7 @@ export default function DesktopView() {
                       h='100%'
                       src={card.image}
                       objectFit='cover'
-                      alt='card'
+                      alt={card.imageAlt}
                     />
                   </GridItem>
                   <GridItem gridArea='center'>
