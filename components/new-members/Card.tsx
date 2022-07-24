@@ -30,7 +30,7 @@ export const Card = ({ card, index }: CardProps) => (
   <VStack
     flex='0 0 33%'
     key={ulid()}
-    minHeight='32vw'
+    minHeight='34vw'
     padding='1.5rem'
     alignItems='start'
     justifyContent='start'
