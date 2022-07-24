@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Text, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, VStack, Flex } from '@chakra-ui/react'
 import { ulid } from 'ulid'
 
 type ICard = {
@@ -13,53 +13,65 @@ type CardProps = {
   index: number
 }
 
-export const Card = ({ card, index }: CardProps) => (
-  <Box key={ulid()}>
-    <Box
-      boxShadow={'2xl'}
-      borderRadius='10px'
-      background='#222020'
-      maxWidth={'330px'}
-      minHeight={{ base: '450px', md: '500px' }}
-      padding='1.5rem'
-      display={'flex'}
-      flexDirection={'column'}
-      justifyContent={'space-between'}>
-      <Heading
-        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
-        color={'white'}
-        background={'red'}
-        textAlign={'center'}
-        borderRadius={'50%'}
-        padding={'0.3rem 0.9rem'}
-        width='min-content'>
-        {index + 1}
-      </Heading>
-      <Heading
-        fontSize={{ base: 'md', md: 'xl', lg: '2xl' }}
-        color={'white'}
-        mt={'1rem'}>
-        {card.title}
-      </Heading>
-      <Text fontSize={{ base: 'sm', lg: 'md' }} color={'white'} mt={'1rem'}>
-        {card.text}
-      </Text>
-      {card.badges && (
-        <Flex flexWrap={'wrap'} justifyContent={'flex-start'} mt={'1rem'}>
-          {card.badges.map(badge => {
-            return (
-              <Text
-                key={ulid()}
-                fontSize={{ base: 'sm' }}
-                whiteSpace={'nowrap'}
-                color={'red'}
-                paddingRight={'0.7rem'}>
-                {badge}
-              </Text>
-            )
-          })}
-        </Flex>
-      )}
-    </Box>
+const CardBadge = ({ number }: { number: number }) => (
+  <Box as='figure' bg='#D02128' borderRadius='50%' w='3rem' h='3rem'>
+    <Text
+      h='100%'
+      w='100%'
+      fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+      color={'white'}
+      textAlign={'center'}>
+      {number + 1}
+    </Text>
   </Box>
+)
+
+export const Card = ({ card, index }: CardProps) => (
+  <VStack
+    flex='0 0 33%'
+    key={ulid()}
+    minHeight='30vw'
+    padding='1.5rem'
+    alignItems='start'
+    justifyContent='start'
+    backgroundColor='rgba(100, 100, 100, 0.26)'
+    borderRadius={'1rem'}
+    boxShadow={'0 0.5% 1% rgba(0,0,0,.6)'}
+    backdropFilter='blur(4px)'
+    zIndex={1}>
+    <CardBadge number={index} />
+    <Heading
+      color={'gray.100'}
+      fontSize={'4xl'}
+      fontWeight={700}
+      fontFamily='Clear Sans'
+      pt='0.5rem'>
+      {card.title}
+    </Heading>
+    <Text
+      color={'gray.100'}
+      fontSize={{ base: 'xl', md: 'xl' }}
+      textOverflow='wrap'
+      fontFamily='Clear Sans'
+      lineHeight='1.4'>
+      {card.text}
+    </Text>
+    {card.badges && (
+      <Flex flexWrap={'wrap'} justifyContent={'flex-start'} mt={'1rem'}>
+        {card.badges.map(badge => {
+          return (
+            <Text
+              key={ulid()}
+              color={'gray.100'}
+              fontSize={{ base: 'xl', md: 'xl' }}
+              textOverflow='wrap'
+              fontFamily='Clear Sans'
+              lineHeight='1.4'>
+              {badge}
+            </Text>
+          )
+        })}
+      </Flex>
+    )}
+  </VStack>
 )
