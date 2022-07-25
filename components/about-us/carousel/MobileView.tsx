@@ -14,6 +14,8 @@ import { ulid } from 'ulid'
 import styled from '@emotion/styled'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import cards from './cardContent.json'
+import { mobileSliderSettings, tabletSliderSettings } from './sliderSettings'
 
 const StyledSlider = styled(Slider)`
   height: 100%;
@@ -36,38 +38,13 @@ const StyledSlider = styled(Slider)`
 
 export default function MobileView() {
   const [slider, setSlider] = useState<Slider | null>(null)
-  const [settings, setSettings] = useState({
-    dots: false,
-    arrows: false,
-    fade: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-  })
+  const [settings, setSettings] = useState(mobileSliderSettings)
   useEffect(() => {
     const changeSettings = () => {
-      if (document.body.clientWidth < 768) {
-        setSettings({
-          dots: false,
-          arrows: false,
-          fade: false,
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          speed: 500,
-        })
-      } else {
-        setSettings({
-          dots: false,
-          arrows: false,
-          fade: false,
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          speed: 500,
-        })
+      if (document.body.clientWidth >= 768) {
+        setSettings(tabletSliderSettings)
       }
+      return;
     }
     window.addEventListener('resize', changeSettings)
     changeSettings()
@@ -77,39 +54,6 @@ export default function MobileView() {
     }
   }, [])
 
-  const cards = [
-    {
-      title: '\nEDUCATION',
-      text: 'We learn from each other. We seek to become a trusted guide that empowers people all over the globe to adopt decentralized finance by sharing accurate, truthful, and objective information.',
-      image: '/images/about-us/our-values-education.png',
-    },
-    {
-      title: '\nCULTURE',
-      text: 'We reward action and embrace risk. We empower our community to continually drive new initiatives by providing a space to self-organize and quickly move from idea to action.',
-      image: '/images/about-us/our-values-culture.png',
-    },
-    {
-      title: 'DECENTRALIZED \n GOVERNANCE',
-      text: 'We put decision making into the hands of the collective. We create legitimacy through an environment where the best ideas win.',
-      image: '/images/about-us/our-values-decentralized-governance.png',
-    },
-    {
-      title: '\nEDUCATION',
-      text: 'We learn from each other. We seek to become a trusted guide that empowers people all over the globe to adopt decentralized finance by sharing accurate, truthful, and objective information.',
-      image: '/images/about-us/our-values-education.png',
-    },
-    {
-      title: '\nCULTURE',
-      text: 'We reward action and embrace risk. We empower our community to continually drive new initiatives by providing a space to self-organize and quickly move from idea to action.',
-      image: '/images/about-us/our-values-culture.png',
-    },
-    {
-      title: 'DECENTRALIZED \n GOVERNANCE',
-      text: 'We put decision making into the hands of the collective. We create legitimacy through an environment where the best ideas win.',
-      image: '/images/about-us/our-values-decentralized-governance.png',
-    },
-  ]
-
   const [popups, setPopups] = useState([
     false,
     false,
@@ -118,8 +62,6 @@ export default function MobileView() {
     false,
     false,
   ])
-  const pxBase = 0
-  const pxMd = 40
 
   return (
     <Stack pb={{ base: '8rem', md: 0 }} width='100%'>
