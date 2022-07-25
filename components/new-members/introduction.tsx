@@ -14,7 +14,7 @@ export default function IntroductionComponent() {
       <Stack
         spacing={{ base: 0 }}
         mt={{ base: 5, md: 10 }}
-        direction={{ base: 'column', md: 'row' }}>
+        direction={{ base: 'column', xl: 'row' }}>
         <VStack flex='1 0' alignItems='start'>
           <Heading
             color={'white.100'}

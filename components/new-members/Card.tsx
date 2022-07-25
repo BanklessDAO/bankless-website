@@ -1,5 +1,13 @@
 import React from 'react'
-import { Box, Heading, Text, VStack, Flex } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Text,
+  VStack,
+  Flex,
+  Grid,
+  GridItem,
+} from '@chakra-ui/react'
 import { ulid } from 'ulid'
 
 type ICard = {
@@ -14,16 +22,26 @@ type CardProps = {
 }
 
 const CardBadge = ({ number }: { number: number }) => (
-  <Box as='figure' bg='#D02128' borderRadius='50%' w='3rem' h='3rem'>
-    <Text
-      h='100%'
-      w='100%'
-      fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
-      color={'white'}
-      textAlign={'center'}>
-      {number + 1}
-    </Text>
-  </Box>
+  <Grid
+    as='figure'
+    templateColumns='1fr'
+    templateRows='1fr'
+    bg='#D02128'
+    borderRadius='50%'
+    w='3rem'
+    h='3rem'
+    alignItems='center'>
+    <GridItem rowSpan={1} colSpan={1}>
+      <Text
+        h='100%'
+        w='100%'
+        fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+        color={'white'}
+        textAlign={'center'}>
+        {number + 1}
+      </Text>
+    </GridItem>
+  </Grid>
 )
 
 export const Card = ({ card, index }: CardProps) => (
@@ -31,7 +49,7 @@ export const Card = ({ card, index }: CardProps) => (
     flex='0 0 33%'
     key={ulid()}
     minHeight='34vw'
-    padding='1.5rem'
+    padding={{ base: '1rem', md: '1.5rem' }}
     alignItems='start'
     justifyContent='start'
     backgroundColor='rgba(100, 100, 100, 0.26)'
@@ -42,7 +60,7 @@ export const Card = ({ card, index }: CardProps) => (
     <CardBadge number={index} />
     <Heading
       color={'gray.100'}
-      fontSize={'4xl'}
+      fontSize={{ base: '2xl', md: '4xl', lg: '4xl' }}
       fontWeight={700}
       fontFamily='Clear Sans'
       pt='0.5rem'>
