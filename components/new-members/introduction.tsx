@@ -39,10 +39,7 @@ export default function IntroductionComponent() {
             p={0}
             textAlign={'left'}>
             BanklessDAO’s ever-growing community of creatives, developers,
-            innovators, and leaders is open to all.
-            <br />
-            <br />
-            Always.
+            innovators, and leaders is open to all. Always.
           </Text>
         </VStack>
 
