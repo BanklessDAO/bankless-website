@@ -7,7 +7,9 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@babel/core": "^7.18.5",
@@ -16,6 +18,8 @@
     "@emotion/styled": "^11.6.0",
     "@fontsource/clear-sans": "^4.5.3",
     "@hookform/resolvers": "^2.8.8",
+    "cypress": "^10.3.1",
+    "cypress-image-snapshot": "^4.0.1",
     "framer-motion": "^5.6.0",
     "lodash": "^4.17.21",
     "next": "12.0.10",
