@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Flex, Text, HStack, VStack } from '@chakra-ui/react'
+import { Box, Flex, Text, HStack, VStack, Heading } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 import { ArticleLink } from './ArticleLink'
 
@@ -11,20 +11,28 @@ class Hero extends React.Component {
         flexDirection='column'
         justifyContent='start'
         alignItems='start'
-        rowGap={8}>
+        rowGap='1rem'>
         <HStack position='relative'>
           <VStack
             alignItems='start'
             width={{ base: '100%', md: '64%', xl: '60%' }}
-            rowGap={4}>
-            <Text
-              fontSize={'2xl'}
+            rowGap='1rem'
+            pt={{ base: 0, md: '8rem' }}
+            pb={{ base: 0, md: '2rem' }}>
+            <Heading
+              color={'white.100'}
+              lineHeight={1}
               fontWeight={700}
-              lineHeight={1.2}
-              w={{lg: '60%',xl: "100%"}}>
+              fontFamily='Clear Sans'
+              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+              zIndex='1'>
               Decentralizing media one article at a time
-            </Text>
-            <Text color='grey' fontFamily='Clear Sans' fontSize='2xl' lineHeight={1.2}>
+            </Heading>
+            <Text
+              color='grey'
+              fontFamily='Clear Sans'
+              fontSize='2xl'
+              lineHeight={1.2}>
               BanklessDAO is building the first decentralized publishing house
               ever. Our newsletters and articles are translated into a variety
               of languages to reach a global audience. Find your crypto reading
@@ -36,7 +44,7 @@ class Hero extends React.Component {
             display={{ base: 'none', md: 'flex' }}
             position='absolute'
             right={{ base: 0, xl: '8%' }}
-            top={{ base: 20, xl: 0 }}>
+            top={{ base: 28, xl: '-3rem' }}>
             <ChakraNextImage
               src='/read/pen-01.png'
               height={{ base: '22rem', xl: '22rem' }}
@@ -65,7 +73,7 @@ class Hero extends React.Component {
           pt={{ base: '3rem', md: '8rem' }}
           pl={{ base: 0, xl: '4rem' }}
           position='relative'
-          w={{base:'100%', lg:'70%'}}>
+          w={{ base: '100%', lg: '70%' }}>
           <ArticleLink
             type='medium'
             url='https://medium.com/bankless-dao'
