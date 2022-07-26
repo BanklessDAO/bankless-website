@@ -54,7 +54,7 @@ export default function IntroductionComponent() {
             w={'40rem'}
             pos='absolute'
             zIndex='0'
-            bottom='-40%'
+            bottom='-20%'
             right='-40%'
             opacity='0.4'
             bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
