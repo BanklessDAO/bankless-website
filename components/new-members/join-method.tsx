@@ -1,204 +1,144 @@
 import React from 'react'
-import {
-  Box,
-  Heading,
-  Text,
-  Stack,
-  IconButton,
-  Flex,
-  Progress,
-} from '@chakra-ui/react'
-import Slider from 'react-slick'
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
+import { Box, Heading, VStack, Stack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
-// Settings for the slider
-const settings = {
-  dots: true,
-  arrows: false,
-  fade: true,
-  infinite: false,
-  slidesToShow: 1,
-  speed: 500,
-}
+import { Card } from './Card'
+import cardsContent from './_cardsContent.json'
 
 export default function NewMemberJoinMethodComponent() {
-  const [slider, setSlider] = React.useState<Slider | null>(null)
-
-  const cards = [
-    {
-      title: 'JOIN THE SERVER',
-      text: 'Join the bDAO Discord server here. Following a brief verification and onboarding process, you can get a free guest pass from a Level 2 contributor, which will allow you to explore the server. Your guest pass expires in 14 days, but you can always reach out to an L2 to renew it while you earn your way to the 35,000 BANK membership threshold.',
-    },
-    {
-      title: 'READ, FOLLOW, LISTEN AND LEARN',
-      text: 'Subscribe, bookmark, and follow along to receive updates and news from the community:',
-      badges: [
-        'The Weekly Rollup',
-        'Gearing Up',
-        'Decentralized Law',
-        'Decentralized Art',
-        'State of the DAOs',
-        'Crypto Sapiens',
-        'Twitter',
-        'Instagram',
-        'Medium',
-        'Mirror',
-      ],
-    },
-    {
-      title: 'GET PLUGGED INTO A PROJECT',
-      text: 'Find a guild or project that interests you and begin joining meetings. The best ways to get to know contributors include joining synchronous meetings, introducing yourself in channels, and making a positive impression on the community by delivering on work. Yes, it’s really that easy to start working in bDAO.',
-    },
-  ]
-
   return (
     <>
-      <Stack
-        as={Box}
-        spacing={{ base: 4, md: 6 }}
-        py={{ base: 10, md: 18 }}
-        mt={'4rem'}
-      >
-        <link
-          rel='stylesheet'
-          type='text/css'
-          charSet='UTF-8'
-          href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'
-        />
-        <link
-          rel='stylesheet'
-          type='text/css'
-          href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
-        />
-
+      <VStack as={Box} mt={'4rem'} mb={'8rem'}>
         <Heading
-          fontWeight={600}
-          fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
+          fontFamily='Clear Sans'
+          fontWeight={{ base: 600, md: 800 }}
+          fontSize={{ base: '3xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          textAlign={'center'}
-        >
-          How to join BanklessDAO
+          textTransform={'uppercase'}
+          pb={{ base: '2rem', md: 0 }}>
+          How to join
           <Underline />
         </Heading>
-        <Flex
-          justifyContent={'center'}
-          flexDirection={'column'}
-          alignItems={'center'}
-          width={'100%'}
-        >
-          <Box width={{ base: '300px', md: '330px' }}>
-            <Slider {...settings} ref={(slider: unknown) => setSlider(slider)}>
-              {cards.map((card, index) => (
-                <Box key={index}>
-                  <Box
-                    boxShadow={'2xl'}
-                    borderRadius='10px'
-                    background='#222020'
-                    maxWidth={'330px'}
-                    minHeight={{ base: '450px', md: '500px' }}
-                    padding='1.5rem'
-                    display={'flex'}
-                    flexDirection={'column'}
-                    justifyContent={'space-between'}
-                  >
-                    <Heading
-                      fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
-                      color={'white'}
-                      background={'red'}
-                      textAlign={'center'}
-                      borderRadius={'50%'}
-                      padding={'0.3rem 0.9rem'}
-                      width='min-content'
-                    >
-                      {index + 1}
-                    </Heading>
-                    <Heading
-                      fontSize={{ base: 'md', md: 'xl', lg: '2xl' }}
-                      color={'white'}
-                      mt={'1rem'}
-                    >
-                      {card.title}
-                    </Heading>
-                    <Text
-                      fontSize={{ base: 'sm', lg: 'md' }}
-                      color={'white'}
-                      mt={'1rem'}
-                    >
-                      {card.text}
-                    </Text>
-                    {card.badges && (
-                      <Flex
-                        flexWrap={'wrap'}
-                        justifyContent={'flex-start'}
-                        mt={'1rem'}
-                      >
-                        {card.badges.map((badge, key) => {
-                          return (
-                            <Text
-                              key={key}
-                              fontSize={{ base: 'sm' }}
-                              whiteSpace={'nowrap'}
-                              color={'red'}
-                              paddingRight={'0.7rem'}
-                            >
-                              {badge}
-                            </Text>
-                          )
-                        })}
-                      </Flex>
-                    )}
-
-                    <Flex
-                      justifyContent={'space-between'}
-                      alignItems={'center'}
-                      mt={'2rem'}
-                    >
-                      <IconButton
-                        aria-label='left-arrow'
-                        variant='ghost'
-                        zIndex={2}
-                        background='#565656'
-                        borderRadius={'50%'}
-                        color='white'
-                        _hover={{
-                          background: 'white',
-                          color: 'black',
-                        }}
-                        onClick={() => slider?.slickPrev()}
-                      >
-                        <BiLeftArrowAlt size='40px' />
-                      </IconButton>
-                      <IconButton
-                        aria-label='right-arrow'
-                        variant='ghost'
-                        zIndex={2}
-                        background='#565656'
-                        borderRadius={'50%'}
-                        color='white'
-                        _hover={{
-                          background: 'white',
-                          color: 'black',
-                        }}
-                        onClick={() => slider?.slickNext()}
-                      >
-                        <BiRightArrowAlt size='40px' />
-                      </IconButton>
-                    </Flex>
-                  </Box>
-                  <Progress
-                    value={30 * (index + 1) + 10}
-                    size='sm'
-                    hasStripe
-                    isAnimated
-                    colorScheme='pink'
+        <Box w='100%' pos='relative'>
+          <Stack
+            w='100%'
+            spacing='1rem'
+            direction={{ base: 'column', xl: 'row' }}
+            justifyContent='center'
+            alignItems='center'>
+            {cardsContent.map((card, index) => (
+              <Card card={card} index={index} />
+            ))}
+          </Stack>
+          <Box
+            pos='absolute'
+            w='150vw'
+            top={{ base: '-20%', xl: '-80%' }}
+            right={'-100%'}
+            opacity={{ sm: 0, lg: 0.6 }}>
+            <Box
+              pos='relative'
+              w='100%'
+              h={{ base: '200vh', lg: '400px' }}
+              top={'-94%'}
+              left={0}
+              zIndex={0}
+              opacity={{ base: 0, sm: 1 }}
+              transform={{ base: 'rotate(124deg)', lg: 'rotate(16deg)' }}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 400 201'>
+                <g clipPath='url(#a)'>
+                  <path
+                    stroke='url(#linear)'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeMiterlimit='10'
+                    strokeWidth='1'
+                    d='m0 100.5 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.3 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.2 1-.2 1-.3 1-.1 1-.2 1-.2 1-.1 1-.1 1-.1h1l1-.1h1l1-.1h3l1 .1 1 .1 1 .1 1 .1 1 .2 1 .1 1 .2 1 .2 1 .2 1 .3 1 .2 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .3 1 .4 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .3 1 .2 1 .2 1 .2 1 .2 1 .2 1 .1 1 .1 1 .2h1l1 .1h2l1 .1h3l1-.2h1l1-.2h1l1-.2 1-.2 1-.2 1-.2 1-.2 1-.2 1-.3 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.4 1-.3 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.2 1-.3 1-.2 1-.2 1-.2 1-.1 1-.2h1l1-.2h1l1-.1h1l1-.1h3l1 .1h1l1 .2 1 .1 1 .1 1 .2 1 .2 1 .1 1 .3 1 .2 1 .2 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .3 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .3 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .2 1 .2 1 .3 1 .1 1 .2 1 .2 1 .1 1 .1 1 .1h1l1 .1h1l1 .1h3l1-.1 1-.1 1-.1 1-.1 1-.2 1-.1 1-.2 1-.2 1-.2 1-.3 1-.2 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.3 1-.4 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.3 1-.2 1-.2 1-.2 1-.2 1-.2 1-.1 1-.1 1-.2h1l1-.1h2l1-.1h3l1 .2h1l1 .2h1l1 .2 1 .2 1 .2 1 .2 1 .2 1 .2 1 .3 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .4 1 .3 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .2 1 .3 1 .2 1 .2 1 .2 1 .1 1 .2h1l1 .2h1l1 .1h1l1 .1h3l1-.1h1l1-.2 1-.1 1-.1 1-.2 1-.2 1-.1 1-.3 1-.2 1-.2 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.3 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4'
                   />
-                </Box>
-              ))}
-            </Slider>
+                </g>
+                <defs>
+                  <clipPath id='a'>
+                    <path
+                      fill='#fff'
+                      d='M0 0h400v200H0z'
+                      transform='translate(0 .5)'
+                    />
+                  </clipPath>
+                  <linearGradient id='linear' x1='0%' y1='0%' x2='100%' y2='0%'>
+                    <stop offset='25.24%' stopColor='#FF0000' />
+                    <stop offset='69.55%' stopColor='#0500FF' />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </Box>
+            <Box
+              pos='relative'
+              w='100%'
+              h={{ base: '200vh', lg: '400px' }}
+              top={'-104%'}
+              left={0}
+              zIndex={0}
+              opacity={{ base: 0, sm: 1 }}
+              transform={{ base: 'rotate(-132deg)', lg: 'rotate(-4deg)' }}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 400 201'>
+                <g clipPath='url(#a)'>
+                  <path
+                    stroke='url(#linear)'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeMiterlimit='10'
+                    strokeWidth='1'
+                    d='m0 100.5 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.3 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.2 1-.2 1-.3 1-.1 1-.2 1-.2 1-.1 1-.1 1-.1h1l1-.1h1l1-.1h3l1 .1 1 .1 1 .1 1 .1 1 .2 1 .1 1 .2 1 .2 1 .2 1 .3 1 .2 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .3 1 .4 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .3 1 .2 1 .2 1 .2 1 .2 1 .2 1 .1 1 .1 1 .2h1l1 .1h2l1 .1h3l1-.2h1l1-.2h1l1-.2 1-.2 1-.2 1-.2 1-.2 1-.2 1-.3 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.4 1-.3 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.2 1-.3 1-.2 1-.2 1-.2 1-.1 1-.2h1l1-.2h1l1-.1h1l1-.1h3l1 .1h1l1 .2 1 .1 1 .1 1 .2 1 .2 1 .1 1 .3 1 .2 1 .2 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .3 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .3 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .2 1 .2 1 .3 1 .1 1 .2 1 .2 1 .1 1 .1 1 .1h1l1 .1h1l1 .1h3l1-.1 1-.1 1-.1 1-.1 1-.2 1-.1 1-.2 1-.2 1-.2 1-.3 1-.2 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.3 1-.4 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.3 1-.4 1-.3 1-.4 1-.3 1-.3 1-.2 1-.3 1-.3 1-.2 1-.2 1-.2 1-.2 1-.2 1-.1 1-.1 1-.2h1l1-.1h2l1-.1h3l1 .2h1l1 .2h1l1 .2 1 .2 1 .2 1 .2 1 .2 1 .2 1 .3 1 .3 1 .2 1 .3 1 .3 1 .4 1 .3 1 .4 1 .3 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .5 1 .4 1 .4 1 .4 1 .4 1 .4 1 .3 1 .4 1 .4 1 .3 1 .3 1 .4 1 .3 1 .3 1 .2 1 .3 1 .2 1 .3 1 .2 1 .2 1 .2 1 .1 1 .2h1l1 .2h1l1 .1h1l1 .1h3l1-.1h1l1-.2 1-.1 1-.1 1-.2 1-.2 1-.1 1-.3 1-.2 1-.2 1-.3 1-.2 1-.3 1-.3 1-.4 1-.3 1-.3 1-.4 1-.3 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.4 1-.5 1-.4'
+                  />
+                </g>
+                <defs>
+                  <clipPath id='a'>
+                    <path
+                      fill='#fff'
+                      d='M0 0h400v200H0z'
+                      transform='translate(0 .5)'
+                    />
+                  </clipPath>
+                  <linearGradient id='linear' x1='0%' y1='0%' x2='100%' y2='0%'>
+                    <stop offset='25.24%' stopColor='#FF0000' />
+                    <stop offset='69.55%' stopColor='#0500FF' />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </Box>
           </Box>
-        </Flex>
-      </Stack>
+          <>
+            <Box
+              h={'40rem'}
+              w={'40rem'}
+              pos='absolute'
+              zIndex='0'
+              left={{ base: '-60%', lg: '-60%' }}
+              bottom={{ base: '-50%', lg: '0%' }}
+              opacity='0.2'
+              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+              filter='blur(6rem)'
+            />
+            <Box
+              h={'50rem'}
+              w={'40rem'}
+              pos='absolute'
+              zIndex='0'
+              left={{ base: '40%', lg: '80%' }}
+              top={{ base: '-40%', lg: '-80%' }}
+              opacity='0.2'
+              bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+              filter='blur(6rem)'
+            />
+          </>
+        </Box>
+      </VStack>
     </>
   )
 }
