@@ -22,7 +22,7 @@ export default function IntroductionComponent() {
           from crypto-native contributors
         </Heading>
         <Text
-          color='grey'
+          color={'white.300'}
           w={{ base: '100%', xl: '64%' }}
           mx={'auto'}
           fontSize={{ base: 'xl', lg: '2xl' }}
@@ -38,25 +38,27 @@ export default function IntroductionComponent() {
         </Text>
         <>
           <Box
+            as='span'
             h={'40rem'}
-            w={'40rem'}
+            w={'60rem'}
             pos='absolute'
             zIndex='0'
             top='0%'
-            left='-40%'
-            opacity='0.6'
+            left={{ lg: '-160%', xl: '-40%' }}
+            opacity={{ base: '0', lg: '0.6' }}
             bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
             filter='blur(6rem)'
             transform='rotate(90deg)'
           />
           <Box
+            as='span'
             h={'50rem'}
             w={'40rem'}
             pos='absolute'
             zIndex='0'
-            bottom='-20%'
-            right='-40%'
-            opacity='0.4'
+            bottom={{ base: '20%', lg: '-40%', xl: '-20%' }}
+            right={{ base: '-80%', md: '-120%', xl: '-40%' }}
+            opacity={{ base: '0.2', lg: '0.4' }}
             bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
             filter='blur(6rem)'
           />
