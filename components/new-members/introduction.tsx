@@ -1,70 +1,66 @@
-import { Box, Heading, Text, Stack, Image, Flex } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  VStack,
+  Image,
+  Flex,
+} from '@chakra-ui/react'
 
 export default function IntroductionComponent() {
   return (
     <>
       <Stack
-        align={{ base: 'flex-start', md: 'center' }}
-        spacing={{ base: 8, md: 10 }}
+        spacing={{ base: 0 }}
         mt={{ base: 5, md: 10 }}
-        direction={{ base: 'column', md: 'row' }}
-      >
-        <Box flex={1}>
-          <Stack spacing={{ base: 3, md: 4 }}>
-            <Heading
-              color={'white.100'}
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-            >
-              Join the most
-            </Heading>
-            <Heading
-              color={'white.100'}
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-            >
-              vibrant community-run
-            </Heading>
-            <Heading
-              color={'white.100'}
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-            >
-              Web3 organization
-            </Heading>
-          </Stack>
-
-          <Text color={'grey'} fontSize={{ sm: 'sm', md: 'md' }} mt={'1.5rem'}>
+        direction={{ base: 'column', xl: 'row' }}>
+        <VStack flex='1 0' alignItems='start'>
+          <Heading
+            color={'white.100'}
+            lineHeight={1.1}
+            fontWeight={700}
+            fontFamily='Clear Sans'
+            fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+            textAlign='left'>
+            Join
+            <br />
+            the most vibrant
+            <br />
+            community-run
+            <br />
+            Web3 organization
+          </Heading>
+          <Text
+            color='grey'
+            fontSize={{ base: 'xl', lg: '2xl' }}
+            fontFamily='Clear Sans'
+            mt={0}
+            p={0}
+            textAlign={'left'}>
             BanklessDAO’s ever-growing community of creatives, developers,
             innovators, and leaders is open to all. Always.
           </Text>
-        </Box>
+        </VStack>
 
         <Flex
-          flex={1}
+          flex='0 0 48%'
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'full'}
-        >
+          w={'full'}>
           <Box
-            position={'relative'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            overflow={'hidden'}
-            w={'100%'}
-            sx={{ height: { base: '250px', md: '300px' } }}
-          >
+            as='figure'
+            h={{ base: '40vw', lg: '26vw' }}
+            w='100%'
+            >
             <Image
+              src={'/images/members.png'}
               alt={'Member Image'}
-              fit={'cover'}
-              align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/images/members.png'}
+              fit={'contain'}
+              align={'center'}
             />
           </Box>
         </Flex>
