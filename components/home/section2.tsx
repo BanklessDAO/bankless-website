@@ -36,7 +36,7 @@ const CARDS = [
 class Section2 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center'>
+      <Flex flexDir='column' justifyContent='center' alignItems='center' w='100%'>
         <Text
           fontWeight={700}
           fontSize={{ base: '1.2rem', md: '3xl' }}
@@ -51,8 +51,8 @@ class Section2 extends React.Component {
         <Grid
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           mt='3rem'
-          gridColumnGap={{ base: 20 }}
-          gridRowGap={{ base: 20, lg: 20 }}
+          gridColumnGap={{ base: '2rem' }}
+          gridRowGap={{ base: '2rem', lg: '2rem' }}
         >
           {CARDS.map((_card, idx) => {
             return (
