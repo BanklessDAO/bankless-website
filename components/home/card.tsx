@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import { Text, Link, Divider, Box, Flex } from '@chakra-ui/react'
+import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 
 interface I_Props {
   img: string
@@ -16,29 +17,33 @@ class Card extends React.PureComponent<I_Props> {
     return (
       <Flex
         flexDirection='column'
-        borderRadius='2rem'
+        borderRadius='1rem'
         background='#101010'
-        height='100%'
+        height='40rem'
         overflow='hidden'
-        maxW={{ base: '300px', md: '400px' }}
+        // maxW={{ base: '300px', md: '400px' }}
       >
-        <Box>
-          <Image src={this.props.img} alt='image' width={600} height={400} />
+        <Box w='100%' h='50rem'>
+          <ChakraNextImage
+            src={this.props.img}
+            alt='image'
+            width='100%'
+            height='100%'
+          />
+          {/* <Image src={this.props.img} alt='image' w='100%' h='100%' /> */}
         </Box>
 
         <Flex flexDir='column' height='100%' padding={{ base: 6, lg: 6 }}>
           <Text
             fontSize={{ base: '1.3rem', lg: '3xl' }}
             fontWeight={700}
-            marginBottom={{ base: 6, lg: 18 }}
-          >
+            marginBottom={{ base: 6, lg: 18 }}>
             {this.props.title.toUpperCase()}
           </Text>
           <Text
             fontSize={{ base: 'md', lg: 'xl' }}
             color='rgba(255,255,255,0.57)'
-            marginBottom={{ base: 12, lg: 30 }}
-          >
+            marginBottom={{ base: 12, lg: 30 }}>
             {this.props.text}
           </Text>
 
@@ -49,8 +54,7 @@ class Card extends React.PureComponent<I_Props> {
               display='flex'
               alignItems='center'
               marginRight='2'
-              marginTop='8'
-            >
+              marginTop='8'>
               <Text fontSize='sm' marginRight={2}>
                 Coming Soon
               </Text>
@@ -61,8 +65,7 @@ class Card extends React.PureComponent<I_Props> {
               alignItems='center'
               marginRight='2'
               marginTop='8'
-              href={this.props.href}
-            >
+              href={this.props.href}>
               <Text fontSize='sm' marginRight={2}>
                 Start
               </Text>

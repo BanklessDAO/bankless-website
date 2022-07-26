@@ -3,7 +3,7 @@ import React from 'react'
 import '@fontsource/clear-sans/500.css'
 import '@fontsource/clear-sans/700.css'
 
-import { Flex, Box, Text, HStack, chakra, Link } from '@chakra-ui/react'
+import { Flex, Box, Text, Heading } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
 
@@ -19,54 +19,64 @@ class Section1 extends React.Component {
           filter='auto'
           blur='150px'
           h={{ base: '40rem', md: '50rem' }}
-          w={{ base: '30rem', sm: '70rem', md: '80rem' }}
+          w={{ base: '100%', sm: '70rem', md: '80rem' }}
           opacity={{ base: '70%', md: '100%' }}
           borderRadius='full'
-        ></Box>
+        />
 
         <Flex
           flexDir='column'
           justifyContent='center'
           alignItems='center'
           zIndex='docked'
-          paddingX={{ base: 8, md: 16 }}
-          rowGap={{ base: 4, md: 8 }}
-        >
-          <Text
-            fontWeight={700}
-            fontSize={{ base: '3xl', md: '6xl' }}
-            minW={{ base: '300px' }}
-            w={{ base: '18rem', md: '60rem' }}
+          pt={{ base: 0, md: '8rem' }}
+          pb={{ base: 0, md: '4rem' }}
+          rowGap={{ base: '4rem', md: '2rem' }}
+          w='100%'>
+          <Heading
             textAlign='center'
-            maxW={750}
-          >
-            Media and Social DAO Onboarding 1 billion people to crypto
-          </Text>
+            color={'white.100'}
+            lineHeight={1.2}
+            fontWeight={700}
+            fontFamily='Clear Sans'
+            fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+            zIndex='1'>
+            Media and Social DAO
+            <br />
+            Onboarding 1 billion people
+            <br /> to crypto
+          </Heading>
           <Box width={{ base: '50%', md: '100%' }}>
             <Underline />
           </Box>
 
-          <Flex>
-            <chakra.span
-              fontSize='xl'
-              fontWeight={{ base: '500', md: '700' }}
-              color={{ base: 'white', md: 'gray' }}
-              background='none'
-            >
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            justifyContent='center'
+            width='100%'>
+            <Text
+              color={'grey'}
+              flex='0 0 auto'
+              fontSize={{ base: 'xl', lg: '2xl' }}
+              fontFamily='Clear Sans'
+              marginTop={'2rem'}
+              textAlign={'center'}
+              pb={{ base: '0rem', md: '4rem' }}>
               We’re Headed West.
-            </chakra.span>{' '}
-            <chakra.span
-              display={{ base: 'none', md: 'block' }}
-              fontWeight={'700'}
-              mx='0.5rem'
-              mb='4rem'
-              color='white'
-              fontSize='xl'
-            >
-              Join Us
-            </chakra.span>
+            </Text>
+            <Text
+              color={'white.300'}
+              flex='0 0 auto'
+              fontSize={{ base: 'xl', lg: '2xl' }}
+              fontFamily='Clear Sans'
+              marginTop={{ base: '0rem', md: '2rem' }}
+              textAlign={'center'}
+              pl='1rem'
+              pb={{ base: '4rem', md: '4rem' }}>
+              {`Join Us`}
+            </Text>
           </Flex>
-          <Box w={{ base: '150vw', md: '150%' }}>
+          <Box w={{ base: '100%', md: '150%' }}>
             <video width='100%' height={'auto'} autoPlay loop muted playsInline>
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>
