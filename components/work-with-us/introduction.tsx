@@ -29,7 +29,7 @@ export default function IntroductionComponent() {
           fontFamily='Clear Sans'
           marginTop={'2rem'}
           textAlign={'center'}
-          pb={{ base: 0, md: '4rem' }}>
+          pb={{ base: '4rem', md: '4rem' }}>
           BanklessDAO has multiple consulting, media, and development arms
           within its arsenal.
           <br />
