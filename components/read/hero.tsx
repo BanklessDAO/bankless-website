@@ -43,8 +43,8 @@ class Hero extends React.Component {
           <Box
             display={{ base: 'none', md: 'flex' }}
             position='absolute'
-            right={{ base: 0, xl: '8%' }}
-            top={{ base: 28, xl: '-3rem' }}>
+            right={{ base: '-10%', lg: '-10%', xl: '8%' }}
+            top={{ base: '10rem', lg:'2rem', xl: '-3rem' }}>
             <ChakraNextImage
               src='/read/pen-01.png'
               height={{ base: '22rem', xl: '22rem' }}
