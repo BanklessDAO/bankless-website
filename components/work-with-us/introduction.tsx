@@ -5,16 +5,18 @@ export default function IntroductionComponent() {
   return (
     <>
       <Box
-        as={Box}
+        as='section'
         textAlign={'center'}
-        pt={{ base: 0, md: '4rem' }}
-        pb={{ base: '1rem', md: '6rem' }}>
+        pt={{ base: 0, md: '8rem' }}
+        pb={{ base: 0, md: '4rem' }}
+        pos='relative'>
         <Heading
           color={'white.100'}
           lineHeight={1}
           fontWeight={700}
           fontFamily='Clear Sans'
-          fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}>
+          fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+          zIndex='1'>
           Web3 products and services
           <br />
           from crypto-native contributors
@@ -26,22 +28,48 @@ export default function IntroductionComponent() {
           fontSize={{ base: 'xl', lg: '2xl' }}
           fontFamily='Clear Sans'
           marginTop={'2rem'}
-          textAlign={'center'}>
+          textAlign={'center'}
+          pb={{ base: 0, md: '4rem' }}>
           BanklessDAO has multiple consulting, media, and development arms
           within its arsenal.
           <br />
           <br />
           Commission BanklessDAO’s talent now.
         </Text>
+        <>
+          <Box
+            h={'40rem'}
+            w={'40rem'}
+            pos='absolute'
+            zIndex='0'
+            top='0%'
+            left='-40%'
+            opacity='0.6'
+            bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+            filter='blur(6rem)'
+            transform='rotate(90deg)'
+          />
+          <Box
+            h={'50rem'}
+            w={'40rem'}
+            pos='absolute'
+            zIndex='0'
+            bottom='-40%'
+            right='-40%'
+            opacity='0.4'
+            bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.6) 58%, rgba(140,29,207,0.6) 0%)'
+            filter='blur(6rem)'
+          />
+        </>
+        <ChakraNextImage
+          src='/images/work-with-us/work-with-us-1.jpg'
+          alt='Web3 products and services'
+          height={{ base: '224px', lg: '400px' }}
+          width={'full'}
+          objectFit='cover'
+          borderRadius='104px'
+        />
       </Box>
-      <ChakraNextImage
-        src='/images/work-with-us/work-with-us-1.jpg'
-        alt='Web3 products and services'
-        height={{ base: '224px', lg: '400px' }}
-        width={'full'}
-        objectFit='cover'
-        borderRadius='104px'
-      />
     </>
   )
 }
