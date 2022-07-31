@@ -9,8 +9,9 @@ import {
   Tab,
   TabPanel,
 } from '@chakra-ui/react'
-import {  CarouselSlide } from './CarouselSlide'
+import { CarouselSlide } from './CarouselSlide'
 import { ulid } from 'ulid'
+import Underline from 'components/_common/underline'
 
 type CarouselProps = {
   width: number
@@ -57,8 +58,8 @@ export default function Carousel({
           {title}
         </Heading>
         <Text
-          color={'white.200'}
-          fontSize={{ sm: 'sm', md: 'md' }}
+          color='grey'
+          fontSize={{ base: 'xl', lg: '2xl' }}
           fontFamily='Clear Sans'>
           {description}
         </Text>
