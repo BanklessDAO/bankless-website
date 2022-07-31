@@ -41,7 +41,8 @@ export default function IntroductionAboutUsComponent() {
         align='center'
         justifyContent='center'
         direction={{ base: 'column', md: 'row' }}
-        pb={{base: '2rem', md: 0}}
+        pb={{ base: '2rem', md: 0 }}
+        h={{ base: 'fit-content', lg: '32rem' }}
         pos='relative'>
         <Flex
           flex={{ base: '0 0 70%', xl: '0 0 60%' }}
@@ -53,7 +54,7 @@ export default function IntroductionAboutUsComponent() {
             position={'relative'}
             overflow={'hidden'}
             w={'100%'}
-            h={{base: '32rem', xl: '48rem'}}
+            h={{ base: '32rem', xl: '32rem' }}
             m={0}>
             <Image
               position={'absolute'}
@@ -102,8 +103,8 @@ export default function IntroductionAboutUsComponent() {
           </Box>
         </Flex>
         <Box
-          h={{base: '24rem', xl: '32rem'}}
-          w={{base: '24rem', xl: '32rem'}}
+          h={{ base: '24rem', xl: '32rem' }}
+          w={{ base: '24rem', xl: '32rem' }}
           bgGradient='linear-gradient(121.75deg, rgba(255, 16, 19, 0.4) 58%, rgba(140, 29, 207, 0.6) 0%)'
           position='absolute'
           left={{ base: '20%', lg: '24%' }}
@@ -121,7 +122,7 @@ export default function IntroductionAboutUsComponent() {
               lineHeight={1.1}
               fontWeight={700}
               fontFamily='Clear Sans'
-              fontSize={{ base: '4xl', md:'4xl', lg: '6xl' }}>
+              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}>
               What is BanklessDAO?
             </Text>
             <CTALink
@@ -131,7 +132,6 @@ export default function IntroductionAboutUsComponent() {
             />
           </VStack>
         </Box>
-        
       </Stack>
     </>
   )

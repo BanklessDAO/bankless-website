@@ -19,25 +19,20 @@ class Section5 extends React.Component {
         flexDir='column'
         justifyContent='center'
         alignItems='center'
-        rowGap={{ base: 8, md: 16 }}
-      >
-        <ThreeRings />
-
+        rowGap={{ base: 8, md: 16 }}>
         <Flex
           flexWrap='nowrap'
           flexDir={{ base: 'column', lg: 'row' }}
           justifyContent='space-between'
           alignItems='center'
           width={{ lg: '70vw', xl: '60vw' }}
-          marginTop='8'
-        >
+          marginTop='8'>
           <Text
             fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}
             mb={{ base: '2rem', lg: '0' }}
             fontWeight={700}
             whiteSpace='nowrap'
-            marginRight={{ base: 0, lg: 4 }}
-          >
+            marginRight={{ base: 0, lg: 4 }}>
             Start Your Journey
           </Text>
 
@@ -54,14 +49,11 @@ class Section5 extends React.Component {
               height={{ base: '3rem', lg: '4rem' }}
               width={{ base: '6rem', md: '7rem' }}
               onClick={() => null}
-              borderRadius='0'
-            >
+              borderRadius='0'>
               Subscribe
             </Button>
           </Flex>
         </Flex>
-
-        {/* <SubscribeWidget /> */}
       </Flex>
     )
   }
