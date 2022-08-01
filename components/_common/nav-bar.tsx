@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import NextLink from 'next/link'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 
@@ -39,8 +40,8 @@ const Logo = props => {
     <Box {...props}>
       <Image
         src='/icons/bankless-logo.png'
-        height={56}
-        width={56}
+        height={96}
+        width={96}
         alt='dao-logo'
       />
     </Box>
@@ -61,9 +62,6 @@ const NavBar = props => {
         color={['white', 'white', 'primary.500', 'primary.500']}
       />
       <MenuLinks isOpen={isOpen} />
-      {/* {!isOpen && (
-        <Button display={{ base: 'block', md: 'none' }}>Connect Wallet</Button>
-      )} */}
     </NavBarContainer>
   )
 }
@@ -83,8 +81,7 @@ const MenuIcon = () => (
     width='24px'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
-    fill='white'
-  >
+    fill='white'>
     <title>Menu</title>
     <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
   </svg>
@@ -100,8 +97,15 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
   return (
-    <Link href={to}>
-      <Text display='block' {...rest}>
+    <Link
+      as='a'
+      href={to}
+      textDecoration='none'
+      _hover={{
+        color: 'white',
+        borderBottom: 'solid 4px #D02128',
+      }}>
+      <Text display='block' fontWeight={600}>
         {children}
       </Text>
     </Link>
@@ -112,15 +116,15 @@ const MenuLinks = ({ isOpen }) => {
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
-      flexBasis={{ base: '100%', md: 'auto' }}
-    >
+      flexBasis={{ base: '100%', md: 'auto' }}>
       <Stack
         spacing={8}
+        className='linkStack'
         align='center'
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
-        direction={['column', 'row', 'row', 'row']}
+        direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 0, 0]}
-      >
+        mb='8px'>
         {NAV_LINKS.map((_navLink, idx) => {
           return (
             <MenuItem key={`link-${idx}`} to={_navLink.href}>
@@ -128,13 +132,6 @@ const MenuLinks = ({ isOpen }) => {
             </MenuItem>
           )
         })}
-
-        {/* This can be used later */}
-        {/* <MenuItem>
-          <Button display={{ base: 'none', md: 'block' }}>
-            Connect Wallet
-          </Button>
-        </MenuItem> */}
       </Stack>
     </Box>
   )
@@ -153,8 +150,7 @@ const NavBarContainer = ({ children, ...props }) => {
       bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
       color={['white', 'white', 'primary.700', 'primary.700']}
       zIndex={2}
-      {...props}
-    >
+      {...props}>
       {children}
     </Flex>
   )
