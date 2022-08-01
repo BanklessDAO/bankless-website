@@ -35,19 +35,6 @@ const NAV_LINKS = [
   },
 ]
 
-const Logo = props => {
-  return (
-    <Box {...props}>
-      <Image
-        src='/icons/bankless-logo.png'
-        height={96}
-        width={96}
-        alt='dao-logo'
-      />
-    </Box>
-  )
-}
-
 const NavBar = props => {
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -56,11 +43,30 @@ const NavBar = props => {
   return (
     <NavBarContainer {...props}>
       <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <Logo
-        display={{ base: 'none', md: 'block' }}
-        w='100px'
-        color={['white', 'white', 'primary.500', 'primary.500']}
-      />
+      <Flex
+        h='100%'
+        direction='column'
+        align='center'
+        justify='center'
+        display={{ base: 'none', md: 'flex' }}>
+        <Flex
+          p='10px 15px 15px 15px'
+          maxH='150px'
+          bg='#111111'
+          // border='2px solid white'
+          justify='center'
+          align='center'
+          borderRadius='7px'>
+          <Text
+            textDecoration='underline'
+            textDecorationColor='#D02128'
+            textDecorationThickness='5px'
+            fontWeight={800}
+            fontSize='32px'>
+            DAO
+          </Text>
+        </Flex>
+      </Flex>
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
   )
