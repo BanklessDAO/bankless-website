@@ -1,24 +1,20 @@
 import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+import Proposal from './Proposal'
 
-type ProposalListProps = {
-  listTitle: string
-  proposals: []
-}
-const ProposalList = ({ listTitle, proposals }) => {
+const ProposalList = ({ proposals }) => {
   const propList = proposals.map(proposal => {
-    return (
-      <Box>
-        <Text color='#FFFFFF'>{proposal.title}</Text>
-      </Box>
-    )
+    return <Proposal key={proposal.id} proposal={proposal} />
   })
   return (
-    <Flex direction='column' w='100%' mb='1em' align='center'>
-      <Heading as='h4' mb='.5em' color='white'>
-        {listTitle}
-      </Heading>
-      <VStack>{propList}</VStack>
+    <Flex
+      direction='column'
+      w='100%'
+      mb='1em'
+      align='flex-start'
+      textAlign='start'
+      className='voteSection'>
+      <VStack w='100%'>{propList}</VStack>
     </Flex>
   )
 }

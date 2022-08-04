@@ -1,6 +1,8 @@
-import { Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react'
 import { proposal, sortPropByState } from 'components/utils/snapshot'
+import Underline from 'components/_common/underline'
 import React, { useEffect, useState } from 'react'
+import Column from './Column'
 import ProposalList from './ProposalList'
 
 const snapshotURL = 'https://hub.snapshot.org/graphql'
@@ -56,7 +58,6 @@ const SnapshotSection = () => {
         setClosedProposals(closed)
       }
       setIsLoading(false)
-      console.log(sortedProps)
     }
 
     fetchSnapshot()
@@ -71,9 +72,43 @@ const SnapshotSection = () => {
     )
   }
   return (
-    <Flex as='section' direction='column' align='center'>
-      <ProposalList listTitle='Active Proposals' proposals={activeProposals} />
-      <ProposalList listTitle='Recent Proposals' proposals={closedProposals} />
+    <Flex as='section' direction='column' align='center' className='govCetner'>
+      <Flex
+        w='100%'
+        className='triangleRoof'
+        bg='#262626'
+        minH='50px'
+        display={{ base: 'none', sm: 'flex' }}
+        sx={{ clipPath: 'polygon(50% 0, 100% 100%, 0 100%)' }}
+      />
+      <Heading
+        as='h3'
+        color='white'
+        // borderBottom='5px solid #d02128'
+        w='100%'
+        textAlign='center'
+        // borderX='1px solid #d02128'
+        borderRadius='1em'>
+        DAO Governance
+      </Heading>
+      <Flex
+        w='100%'
+        h='5px'
+        mb='1em'
+        bg='linear-gradient(
+          91.88deg,
+          #d02128 44.79%,
+          rgba(140, 29, 207, 0) 101.77%
+        )'
+      />
+      <Flex direction='row' w='100%' className='govCenter' py='10px'>
+        <Column />
+        <Flex p='10px' direction='column'>
+          <ProposalList proposals={activeProposals} />
+          <ProposalList proposals={closedProposals} />
+        </Flex>
+        <Column />
+      </Flex>
     </Flex>
   )
 }
