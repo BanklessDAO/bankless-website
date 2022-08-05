@@ -7,7 +7,7 @@ import VoteInfo from './VoteInfo'
 const Proposal = ({ proposal }) => {
   const snapshotLink = snapshotBaseURL + proposal.id
 
-  const shadow = `.1em .1em .5em ${
+  const shadow = `.2em .2em .5em ${
     proposal.state == 'active' ? '#21b66e79' : '#7c3aed78'
   }`
 
@@ -23,7 +23,7 @@ const Proposal = ({ proposal }) => {
       wrap='wrap'
       minW='315px'
       _hover={{ boxShadow: shadow }}
-      boxShadow='.1em .1em .5em ##7c3aed78'>
+      boxShadow='inset -2px -2px 2px 2px #232323'>
       <Flex direction='column' w='40%' minW='300px'>
         <Flex grow={1}>
           <Text color='white' fontSize='24px' fontWeight={700}>
