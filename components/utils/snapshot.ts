@@ -15,9 +15,9 @@ export const snapshotBaseURL =
   'https://snapshot.org/#/banklessvault.eth/proposal/'
 
 export const sortPropByState = (proposals: proposalList) => {
-  let sortedProps = {}
-  let active: object[] = []
-  let closed: object[] = []
+  const sortedProps = {}
+  const active: object[] = []
+  const closed: object[] = []
 
   proposals.map((prop: proposal) => {
     if (prop.state == 'closed') {
@@ -57,11 +57,11 @@ export const organizeVoteInfo = (
   choices: number[],
   results: []
 ) => {
-  let voteInfo = {}
+  const voteInfo = {}
 
   // the snapshot api returns 2 arrays choices and scores, the index in scores
   // lines up to the index in choices.  This function brings them together to make them easier to read.
-  for (let i in choices) {
+  for (const i in choices) {
     const score = results[i]
     const percentVote = Math.round((score / total) * 100)
     voteInfo[choices[i]] = percentVote
