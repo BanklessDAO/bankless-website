@@ -4,15 +4,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
+    "@babel/core": "^7.18.5",
     "@chakra-ui/react": "^1.8.1",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fontsource/clear-sans": "^4.5.3",
     "@hookform/resolvers": "^2.8.8",
+    "cypress": "^10.3.1",
+    "cypress-image-snapshot": "^4.0.1",
     "framer-motion": "^5.6.0",
     "lodash": "^4.17.21",
     "next": "12.0.10",
@@ -20,12 +27,17 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.25.3",
     "react-icons": "^4.3.1",
+    "react-slick": "^0.29.0",
+    "rgt": "^1.0.7",
+    "slick-carousel": "^1.8.1",
+    "ulid": "^2.3.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "17.0.14",
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.28.0",
     "eslint": "8.8.0",
     "eslint-config-next": "12.0.10",
     "eslint-config-prettier": "^8.3.0",
