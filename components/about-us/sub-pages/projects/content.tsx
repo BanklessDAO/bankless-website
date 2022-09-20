@@ -17,6 +17,7 @@ import MobileAppComponent from './content/mobile-app'
 import NewsletterProjectComponent from './content/newsletter-project'
 import PodcastHatcheryComponent from './content/podcast-hatchery'
 import WebsiteProjectComponent from './content/website-project'
+import InfoSecTeamComponent from './content/infosec-team'
 
 export default function ProjectsContentComponent() {
   return (
@@ -39,6 +40,7 @@ export default function ProjectsContentComponent() {
       <FirstQuestComponent />
       <InternationalMediaNodesComponent />
       <DecentralizeLawNewsletterComponent />
+      <InfoSecTeamComponent />
     </Box>
   )
 }
