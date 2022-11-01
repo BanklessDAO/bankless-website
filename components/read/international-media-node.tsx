@@ -41,7 +41,7 @@ class Section1 extends React.Component {
             fontFamily='Clear Sans'
             lineHeight={1.2}>
             International Media Nodes (IMN) are Bankless channels that spread
-            the message of the Bankless movement beyond North America.They
+            the message of the Bankless movement beyond North America. They
             translate BanklessDAO content, publish original pieces, run Twitter
             pages and ship newsletters. Find their home pages below.
           </Text>
