@@ -20,7 +20,7 @@ const CARDS = [
   },
   {
     img: '/images/governance.jpg',
-    title: 'Governace',
+    title: 'Governance',
     text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
     href: '/about-us/governance',
   },
