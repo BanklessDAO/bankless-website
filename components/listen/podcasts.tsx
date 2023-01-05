@@ -190,8 +190,7 @@ class Podcasts extends React.Component {
                     target="_blank"
                   >
                     Spotify
-                  </Link>{' '}
-                  and{' '}
+                  </Link>,{' '}
                   <Link
                     color='red.600'
                     textDecoration='none'
@@ -199,6 +198,15 @@ class Podcasts extends React.Component {
                     target="_blank"
                   >
                     Apple Podcasts
+                  </Link>
+                  {' '}and{' '}
+                  <Link
+                    color='red.600'
+                    textDecoration='none'
+                    href='https://rss.com/podcasts/making-bank-banklessdao/'
+                    target="_blank"
+                  >
+                    RSS
                   </Link>
                 </ListItem>
               </UnorderedList>
