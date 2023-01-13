@@ -58,9 +58,9 @@ function Guild() {
           />
           <Section
             title='Design Guild'
-            text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
-          the guilds within BanklessDAO.
-          This guild helps us best represent our DAO to anyone outside bDAO.'
+            text='Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a
+                  narrative through visual aid, generate funding through art, always using integrity in our images and
+                  content, and as a culture, we reward action and embrace risk.'
             img='/images/design-guild.png'
             alt='design-guild'
             reverse={true}
