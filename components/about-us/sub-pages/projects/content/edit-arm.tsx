@@ -46,7 +46,7 @@ export default function EditArmProjectComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          EDITING AND PUBLISHING ARM OF EPA
+          EDITORIAL AND PUBLISHING ARM
         </Heading>
         <Text
           color={'gray.100'}
