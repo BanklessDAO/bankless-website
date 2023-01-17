@@ -15,7 +15,7 @@ export const NewsletterList: React.FC = () => {
       colSpan: 1,
     },
     {
-      title: 'Decentralized Art',
+      title: 'Decentralized Arts',
       text: 'Weekly Crypto Art and NFT newsletter.',
       href: 'https://banklessdao.substack.com/s/decentralized-art',
       rowSpan: 1,
