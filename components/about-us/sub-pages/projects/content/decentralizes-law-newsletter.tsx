@@ -41,7 +41,7 @@ export default function DecentralizeLawNewsletterComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          DECENTRALIZEd-LAW-NEWSLETTER
+          DECENTRALIZED-LAW-NEWSLETTER
         </Heading>
         <Text
           color={'gray.100'}
