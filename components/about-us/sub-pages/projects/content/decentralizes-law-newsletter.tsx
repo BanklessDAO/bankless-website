@@ -41,7 +41,7 @@ export default function DecentralizeLawNewsletterComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          DECENTRALIZES-LAW-NEWSLETTER
+          DECENTRALIZEd-LAW-NEWSLETTER
         </Heading>
         <Text
           color={'gray.100'}
@@ -58,7 +58,7 @@ export default function DecentralizeLawNewsletterComponent() {
         >
           The Legal Guild runs a legal newsletter that covers developments in
           the crypto-legal landscape. It is a premier newsletter in the crypto
-          space, publishing cutting-edge legal analysis twice a month.
+          space, publishing cutting-edge legal analysis monthly.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
