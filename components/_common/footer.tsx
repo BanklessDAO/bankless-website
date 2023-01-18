@@ -47,7 +47,7 @@ const SOCIALS = [
   {
     img: '/icons/instagram.png',
     alt: 'instagram',
-    href: 'https://www.instagram.com/banklessdao',
+    href: 'https://www.instagram.com/bankless_dao/',
   },
   {
     img: '/icons/dune.png',
