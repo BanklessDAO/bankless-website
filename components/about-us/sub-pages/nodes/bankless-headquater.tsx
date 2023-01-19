@@ -32,7 +32,7 @@ export default function NodesBanklessHQComponent() {
           align={'center'}
           direction={{ base: 'column', md: 'row' }}>
           <Flex align={'center'} color={'white.100'}>
-            <Link href='https://banklessdao.substack.com' isExternal>
+            <Link href='https://newsletter.banklesshq.com/' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
@@ -46,7 +46,7 @@ export default function NodesBanklessHQComponent() {
           </Flex>
           {/* TODO add url */}
           <Flex align={'center'} color={'white.100'}>
-            <Link href='/' isExternal>
+            <Link href='https://shows.banklesshq.com/' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
@@ -60,7 +60,7 @@ export default function NodesBanklessHQComponent() {
           </Flex>
           {/* TODO add url */}
           <Flex align={'center'} color={'white.100'}>
-            <Link href='/' isExternal>
+            <Link href='https://www.youtube.com/c/Bankless' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
