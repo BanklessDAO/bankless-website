@@ -31,14 +31,6 @@ function Guild() {
           projects. There are 13 guilds within bDAO.
         </Text>
         <VStack mt={8} rowGap={8}>
-<!--           <Section
-            title='Analytics Guild'
-            text='The Analytics Guild builds data products and uses data analytics to equip
-                    bDAO members to achieve our mission with data-driven intelligence.
-                    The Analytics Guild also incubated DAO DASH.'
-            img='/images/analytic-guild.png'
-            alt='analytics-guild'
-          /> -->
           <Section
             title='Audiovisual Guild'
             text='The AV Guild is the home of BanklessDAO video and audio content.
@@ -132,6 +124,14 @@ function Guild() {
            the Editing/Publishing Arm, and the Client Services project. '
             img='/images/writers-guild.png'
             alt='writers-guild'
+          />
+          <Section
+            title='Analytics Guild (INACTIVE)'
+            text='The Analytics Guild builds data products and uses data analytics to equip
+                    bDAO members to achieve our mission with data-driven intelligence.
+                    The Analytics Guild also incubated DAO DASH.'
+            img='/images/analytic-guild.png'
+            alt='analytics-guild'
           />
         </VStack>
       </Flex>
