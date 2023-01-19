@@ -58,9 +58,9 @@ function Guild() {
           />
           <Section
             title='Design Guild'
-            text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
-          the guilds within BanklessDAO.
-          This guild helps us best represent our DAO to anyone outside bDAO.'
+            text='Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a
+                  narrative through visual aid, and generate funding through art. We use integrity in our images and
+                  content. As a culture, we reward action and embrace risk.'
             img='/images/design-guild.png'
             alt='design-guild'
             reverse={true}
@@ -74,10 +74,11 @@ function Guild() {
             alt='dev-guild'
           />
           <Section
-            title='Education guild'
-            text='The Education Guild provides educational tools and resources to empower bDAO members with knowledge about Web3,
-          DeFi, NFTs and the greater crypto ecosystem.
-          They also incubated the Bankless Academy project.'
+            title='Education Department'
+            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners, 
+                  teaching DAO tooling need to succeed in the DAO space, 
+                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level. 
+                  The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
             img='/images/edu-guild.png'
             alt='education-guild'
             reverse={true}
