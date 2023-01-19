@@ -76,7 +76,7 @@ function Guild() {
           <Section
             title='Education Department'
             text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners, 
-                  teaching DAO tooling that members need to familiarize themselves with in order to succeed in the DAO space, 
+                  teaching DAO tooling need to succeed in the DAO space, 
                   and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level. 
                   The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
             img='/images/edu-guild.png'
