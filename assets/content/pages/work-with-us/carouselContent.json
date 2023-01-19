@@ -54,21 +54,6 @@
     "description": "Level up your organization with cutting-edge tooling",
     "slides": [
       {
-        "title": "DEGEN",
-        "paras": [
-          "Enter the next generation of DAO tooling with DEGEN.",
-          "This powerhouse bot integrates with Discord to seamlessly perform administrative tasks such as distributing POAP links. Inquire about integrating DEGEN into your Discord server by filling out."
-        ],
-        "cta": {
-          "text": "Bankless DEGEN",
-          "link": "https://docs.bankless.community/degen/introduction/welcome"
-        },
-        "image": {
-          "src": "/images/work-with-us/work-with-us-3.jpg",
-          "alt": "Photo by JESHOOTS.COM on Unsplash"
-        }
-      },
-      {
         "title": "Bounty Board",
         "paras": ["CHANGE ME"],
         "cta": {
