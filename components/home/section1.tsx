@@ -8,6 +8,21 @@ import { Flex, Box, Text, Heading } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
+  videoRef = React.createRef();
+
+  handlePlay = () => {
+    if (this.videoRef.current) {
+      this.videoRef.current.play();
+    }
+  }
+
+  handleEnded = () => {
+    if (this.videoRef.current) {
+      this.videoRef.current.currentTime = 0;
+      this.videoRef.current.play();
+    }
+  }
+  
   render() {
     return (
       <>
@@ -77,7 +92,14 @@ class Section1 extends React.Component {
             </Text>
           </Flex>
           <Box w={{ base: '100%', md: '150%' }}>
-            <video width='100%' height={'auto'} autoPlay loop muted playsInline>
+            <video width='100%' height={'auto'} 
+              loop
+              muted
+              ref={this.videoRef} 
+              onCanPlay={this.handlePlay}
+              onEnded={this.handleEnded}
+              playsInline
+              >
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>
           </Box>
