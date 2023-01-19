@@ -79,7 +79,7 @@ export default function DaoPunksComponent() {
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
           spacing={'12px'}>
-          <Link href='https://opensea.io/collection/daopunksnft' isExternal>
+          <Link href='https://daopunks.io/' isExternal>
             <Flex align={'center'} color={'white.100'}>
               <Text mr={'0.5rem'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
                 Invest in a DAOPunk NFT
