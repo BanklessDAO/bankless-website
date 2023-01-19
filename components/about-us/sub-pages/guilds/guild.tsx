@@ -60,7 +60,7 @@ function Guild() {
             title='Design Guild'
             text='Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a
                   narrative through visual aid, generate funding through art, always using integrity in our images and
-                  content, and as a culture, we reward action and embrace risk.'
+                  content. As a culture, we reward action and embrace risk.'
             img='/images/design-guild.png'
             alt='design-guild'
             reverse={true}
