@@ -40,9 +40,9 @@ export const NewsletterList: React.FC = () => {
       colSpan: 1,
     },
     {
-      title: 'Gearing Up',
-      text: 'Weekly bDAO project and guild highlights newsletter to help members stay up to speed on all internal bDAO updates.',
-      href: 'https://banklessdao.substack.com/s/gearing-up?utm_source=substack&utm_medium=menu',
+      title: 'DeFi Download',
+      text: 'Your one stop shop for  DeFi education, project announcements, and tokenomics tutorials.',
+      href: 'https://banklessdao.substack.com/s/defi-download',
       rowSpan: 1,
       colSpan: 2,
     },
