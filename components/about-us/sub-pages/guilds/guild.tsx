@@ -132,6 +132,7 @@ function Guild() {
                     The Analytics Guild also incubated DAO DASH.'
             img='/images/analytic-guild.png'
             alt='analytics-guild'
+            reverse={true}
           />
         </VStack>
       </Flex>
