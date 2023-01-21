@@ -9,8 +9,8 @@ import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
   videoRef = React.createRef();
-
-  handlePlay = () => {
+  
+  componentDidMount() {
     if (this.videoRef.current) {
       this.videoRef.current.play();
     }
@@ -96,7 +96,6 @@ class Section1 extends React.Component {
               loop
               muted
               ref={this.videoRef} 
-              onCanPlay={this.handlePlay}
               onEnded={this.handleEnded}
               playsInline
               >
