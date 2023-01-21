@@ -1,4 +1,4 @@
-import { Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react'
+import { Stack, Flex, Box, Heading, Text, Image, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import TokenImg from '../../../../assets/banklesscoin.png'
 import Link from 'next/link'
