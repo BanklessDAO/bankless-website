@@ -30,7 +30,7 @@ class PodcastIdea extends React.Component {
             width={{ base: '18rem', md: '30rem' }}
             fontSize={{ base: 'md', md: '2xl' }}
           >
-            Join{' '}
+            Join{'BanklessDAO'}
             <Link
               color='red.600'
               textDecoration='none'
