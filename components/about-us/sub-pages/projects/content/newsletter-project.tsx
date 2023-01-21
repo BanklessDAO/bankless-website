@@ -57,9 +57,9 @@ export default function NewsletterProjectComponent() {
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Newsletter project provides a written voice for the Bankless
-          movement through four newsletters that each have tens of thousands of
-          subscribers: Weekly Rollup, State of the DAOs, Decentralized Art and
-          Gearing Up.
+          movement through newsletters that each have tens of thousands of
+          subscribers: Weekly Rollup, State of the DAOs, Decentralized Arts and
+          DeFi Download.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
