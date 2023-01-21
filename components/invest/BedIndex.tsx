@@ -47,7 +47,7 @@ function BedIndex() {
             </Container>
             <br />
             <Text as={'span'} color={'red.400'}
-             bgGradient='linear(to-b, rgba(92,10,39,1) 30%, rgba(65,7,35,1) 100%, rgba(0, 0, 0, 0.3) 0%)'
+             bgGradient='linear-gradient(to bottom, #d02128 30%, #d02128 100%, rgba(0, 0, 0, 0.3) 0%)'
              bgColor='rgba(0, 0, 0, 0.2)'
              bgClip='text'
             >
