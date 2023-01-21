@@ -84,9 +84,9 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
 function setArticleType(type: string): string | undefined {
   switch (type) {
     case 'medium':
-      return 'Medium Article'
+      return 'Medium'
     case 'mirror':
-      return 'Mirror Article'
+      return 'Mirror'
     default:
       break
   }
