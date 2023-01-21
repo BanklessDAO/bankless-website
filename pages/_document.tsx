@@ -16,7 +16,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <title>BanklessDAO Community</title>
+          <meta name="title" content="BanklessDAO Community" />
+          <meta name="description" content="The BanklessDAO Community website" />
+          <link rel="shortcut icon" href="favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico" />
+          <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="favicon.ico" />
+        </Head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
