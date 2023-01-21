@@ -28,7 +28,7 @@ const PodcastHatchery = () => (
         </Heading>
 
         <Text
-          color={'grey'}
+          color={'#960B0B'}
           width={{ md: '25rem', lg: '32rem' }}
           mx={'auto'}
           fontSize={{ base: 'xl', lg: '2xl' }}
@@ -45,7 +45,7 @@ const PodcastHatchery = () => (
         />
 
         <Text
-          color={'grey'}
+          color={'#960B0B'}
           width={{ md: '25rem', lg: '32rem' }}
           mx={'auto'}
           fontSize={{ base: 'xl', lg: '2xl' }}
