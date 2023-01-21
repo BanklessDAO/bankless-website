@@ -64,7 +64,7 @@ export default function GovernanceStartComponent() {
                   color={'red'}
                   display={'inline'}
                 >
-                  &nbsp;Discussion on Forums
+                  <Link href={"https://forum.bankless.community/"} target='_blank'>Discussion on Forums</Link>
                 </Text>
               </Text>
               <Flex align={'center'} color={'white.100'}>
@@ -121,7 +121,7 @@ export default function GovernanceStartComponent() {
             color={'red'}
             display={'inline'}
           >
-            &nbsp;Discord Server
+            <Link href={"https://discord.com/invite/bankless"} target='_blank'>Discord Server</Link>
           </Text>
         </Text>
       </Flex>
