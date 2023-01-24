@@ -48,7 +48,7 @@ export default function GovernanceIntroComponent() {
             projects, and proposals are made through a democratic process. BANK
             holders ratify decisions on-chain through
             <Text
-              color={'red'}
+              color={'#D02128'}
               fontSize={{ sm: 'sm', md: 'lg' }}
               display={'inline'}
             >
@@ -58,7 +58,7 @@ export default function GovernanceIntroComponent() {
             hold, the more voting power you have. See our recent governance
             decisions
             <Text
-              color={'red'}
+              color={'#D02128'}
               fontSize={{ sm: 'sm', md: 'lg' }}
               display={'inline'}
               maxW={{ sm: '20rem', md: '30rem', lg: '50rem' }}
@@ -75,7 +75,7 @@ export default function GovernanceIntroComponent() {
               While decisions are formally ratified on-chain, decision-making
               happens informally in our Discord channels, our
               <Text
-                color={'red'}
+                color={'#D02128'}
                 fontSize={{ sm: 'sm', md: 'lg' }}
                 display={'inline-block'}
               >

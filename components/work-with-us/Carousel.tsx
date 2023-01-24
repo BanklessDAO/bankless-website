@@ -48,19 +48,22 @@ export default function Carousel({
         textAlign={'center'}
         spacing={{ base: 3, md: 5 }}
         py={{ sm: 10, md: 18 }}
-        mt={{ base: 10, sm: 10, md: 16 }}>
+        mt={{ base: 10, sm: 10, md: 16 }}
+      >
         <Heading
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          fontFamily='Clear Sans'>
+          fontFamily='Clear Sans'
+        >
           {title}
         </Heading>
         <Text
           color='grey'
           fontSize={{ base: 'xl', lg: '2xl' }}
-          fontFamily='Clear Sans'>
+          fontFamily='Clear Sans'
+        >
           {description}
         </Text>
       </Stack>
@@ -71,7 +74,8 @@ export default function Carousel({
         colorScheme='green'
         py={{ base: 8, sm: 10, md: 14 }}
         orientation={width < 576 ? 'vertical' : 'horizontal'}
-        flexDirection='column'>
+        flexDirection='column'
+      >
         <TabList>
           {slides.map(({ title }: CarouselSlide) => (
             <Tab
@@ -81,8 +85,9 @@ export default function Carousel({
               fontFamily='Clear Sans'
               textTransform='uppercase'
               p={{ base: 2, sm: 4 }}
-              _selected={{ borderBottom: '2px solid red' }}
-              _focus={{ boxShadow: 'none' }}>
+              _selected={{ borderBottom: '2px solid #D02128' }}
+              _focus={{ boxShadow: 'none' }}
+            >
               {title}
             </Tab>
           ))}

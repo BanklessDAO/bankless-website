@@ -174,8 +174,8 @@ function Section3() {
               borderRadius='100%'
               width='fit-content'
               boxShadow={{
-                base: '-8px -1px 10px 2px red',
-                md: '-8px 0px 10px 5px red',
+                base: '-8px -1px 10px 2px #d02128',
+                md: '-8px 0px 10px 5px #d02128',
               }}
             >
               <Image
@@ -192,8 +192,8 @@ function Section3() {
               borderRadius='100%'
               width='fit-content'
               boxShadow={{
-                base: '8px -1px 10px 2px red',
-                md: '8px 0px 10px 5px red',
+                base: '8px -1px 10px 2px #d02128',
+                md: '8px 0px 10px 5px #d02128',
               }}
             >
               <Image

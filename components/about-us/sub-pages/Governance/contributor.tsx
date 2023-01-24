@@ -33,7 +33,7 @@ export default function GovernanceContributorComponent() {
                 borderRadius={'full'}
                 filter='auto'
                 blur='20px'
-                bgColor='red'
+                bgColor='#D02128'
                 position={'absolute'}
               ></Box>
               <Text
