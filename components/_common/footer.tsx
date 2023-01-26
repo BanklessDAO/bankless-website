@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import { Image } from '@chakra-ui/react'
 
 import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
@@ -134,8 +134,8 @@ class Footer extends React.Component {
                     <Image
                       src={_social.img}
                       alt={_social.alt}
-                      width={30}
-                      height={30}
+                      width={['20px', '20px']}
+                      height={['20px', '20px']}
                     />
                   </Link>
                 )
