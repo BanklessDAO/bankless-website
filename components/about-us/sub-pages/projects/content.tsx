@@ -8,7 +8,6 @@ import CryptoSapiensComponent from './content/crypto-sapiens'
 import DaoHeatComponent from './content/dao-heat'
 import DaoversityComponent from './content/daoversity'
 import DecentralizeLawNewsletterComponent from './content/decentralizes-law-newsletter'
-import DegenProjectComponent from './content/degen-project'
 import EditArmProjectComponent from './content/edit-arm'
 import FightClubComponent from './content/fight-club'
 import FirstQuestComponent from './content/first-quest'
@@ -23,7 +22,6 @@ export default function ProjectsContentComponent() {
   return (
     <Box display={'flex'} flexDir='column' alignItems={'center'}>
       <ProjectBanklessConsultingComponent />
-      <DegenProjectComponent />
       <ProjectBountyBoardComponent />
       <NewsletterProjectComponent />
       <EditArmProjectComponent />

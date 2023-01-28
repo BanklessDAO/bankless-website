@@ -16,6 +16,7 @@ const PageContainer: React.FC = ({ children }) => {
       flexDirection={'column'}
       background={'#000'}
       overflow='hidden'
+      width={'100%'}
     >
       <NavBar />
       <Container

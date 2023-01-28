@@ -119,13 +119,13 @@ export default function CommunityCallsEvolutionComponent() {
             w={{ base: '40%', md: '40%' }}
             marginInlineStart='unset!important'
             mt={'1rem'}>
-            <Link href={'http://www.google.com/calendar/event?action=TEMPLATE'}>
+            <Link href={'https://www.notion.so/DAO-Meetings-Calendar-794ea323caad40e19a8a22bc2ec6edb6'}>
               <Button
                 colorScheme='red'
                 w='100%'
                 type='submit'
                 borderRadius={'none'}>
-                Add to Calendar
+                BanklessDAO Meetings Calendar
               </Button>
             </Link>
           </FormControl>

@@ -52,6 +52,7 @@ class Podcasts extends React.Component {
                   color='red.600'
                   textDecoration='none'
                   href='https://twitter.com/humptycalderon'
+                  target="_blank"
                 >
                   Humpty
                 </Link>
@@ -70,6 +71,7 @@ class Podcasts extends React.Component {
                     color='red.600'
                     textDecoration='none'
                     href='https://open.spotify.com/show/3yS1Y61r0XkogChx12JQ2q'
+                    target="_blank"
                   >
                     Spotify
                   </Link>{' '}
@@ -78,6 +80,7 @@ class Podcasts extends React.Component {
                     color='red.600'
                     textDecoration='none'
                     href='https://podcasts.apple.com/us/podcast/crypto-sapiens/id1588346317'
+                    target="_blank"
                   >
                     Apple Podcasts
                   </Link>
@@ -87,6 +90,7 @@ class Podcasts extends React.Component {
                     color='red.600'
                     textDecoration='none'
                     href='https://gitcoin.co/grants/5187/crypto-sapiens-podcast-gitcoin-grants-proposal'
+                    target="_blank"
                   >
                     Sponsor the Show
                   </Link>
@@ -97,6 +101,7 @@ class Podcasts extends React.Component {
                     color='red.600'
                     textDecoration='none'
                     href='https://mobile.twitter.com/cryptosapiens_'
+                    target="_blank"
                   >
                     Twitter
                   </Link>{' '}
@@ -105,6 +110,7 @@ class Podcasts extends React.Component {
                     color='red.600'
                     textDecoration='none'
                     href='https://www.instagram.com/cryptosapiensofficial/'
+                    target="_blank"
                   >
                     Instagram
                   </Link>
@@ -162,17 +168,17 @@ class Podcasts extends React.Component {
                   color='red.600'
                   textDecoration='none'
                   href='https://twitter.com/crypto_soundman'
+                  target="_blank"
                 >
                   Soundman
                 </Link>{' '}
                 and hosted by members of the BanklessDAO community
               </Text>
               <Text fontSize='md' fontFamily={'clear sans'} color='grey'>
-                This show is focused primarily on highlighting various
-                BanklessDAO members. Soundman helps give bDAO contributors a
-                voice beyond their avatar by getting to know them on a more
-                personal level and what they are doing in the Web3 space as a
-                whole.
+                Making Bank is a podcast made by BanklessDAO for BanklessDAO members
+                and like-minded Web3 pioneers. It offers an inside look into bDAO and
+                showcases the people, ideas, and projects that keep it at the forefront
+                of Web3 and DAOs.
               </Text>
               <UnorderedList width='95%' color='white' textAlign='start'>
                 <ListItem>
@@ -180,9 +186,27 @@ class Podcasts extends React.Component {
                   <Link
                     color='red.600'
                     textDecoration='none'
-                    href='https://www.podbean.com/podcast-detail/pnwdu-202cc2/Making-%24BANK-Podcast'
+                    href='https://open.spotify.com/show/1jLNOoJv77K733rZzL4c6b'
+                    target="_blank"
                   >
-                    BanklessDAO’s Podbean
+                    Spotify
+                  </Link>,{' '}
+                  <Link
+                    color='red.600'
+                    textDecoration='none'
+                    href='https://podcasts.apple.com/us/podcast/making-bank-a-banklessdao-podcast/id1610031915'
+                    target="_blank"
+                  >
+                    Apple Podcasts
+                  </Link>
+                  {' '}and{' '}
+                  <Link
+                    color='red.600'
+                    textDecoration='none'
+                    href='https://rss.com/podcasts/making-bank-banklessdao/'
+                    target="_blank"
+                  >
+                    RSS
                   </Link>
                 </ListItem>
               </UnorderedList>
@@ -217,7 +241,7 @@ class Podcasts extends React.Component {
           h={{ base: '30rem', sm: '50rem' }}
           w={{ base: '60%', lg: '50rem' }}
           borderRadius='full'
-        ></Box>
+        />
       </>
     )
   }
