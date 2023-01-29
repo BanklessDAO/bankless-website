@@ -1,7 +1,6 @@
-import { Stack, Flex, Box, Heading, Text, Image } from '@chakra-ui/react'
+import { Stack, Flex, Box, Heading, Text, Image, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import TokenImg from '../../../../assets/banklesscoin.png'
-import Link from 'next/link'
 
 export default function GovernanceStartComponent() {
   return (
@@ -57,20 +56,27 @@ export default function GovernanceStartComponent() {
                 fontSize={{ base: 'xl', md: 'xl' }}
                 fontWeight={{ sm: '700', md: '400' }}
               >
-                Join the
+                Join the{' '}
                 <Text
                   fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={{ sm: '700', md: '400' }}
                   color={'#D02128'}
                   display={'inline'}
                 >
-                  &nbsp;Discussion on Forums
+                  <Link
+                    href={"https://forum.bankless.community/"}
+                    isExternal
+                    color='#D02128'
+                  >
+                    Discussion on Forums
+                  </Link>
                 </Text>
               </Text>
               <Flex align={'center'} color={'white.100'}>
                 <Link
                   href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
-                  passHref
+                  isExternal
+                  color='#D02128'
                 >
                   <Text
                     mr={'0.25rem'}
@@ -115,13 +121,19 @@ export default function GovernanceStartComponent() {
           textAlign={'center'}
           fontSize={{ base: '1.5rem', md: '3xl' }}
         >
-          Join the
+          Join the{' '}
           <Text
             fontSize={{ base: '1.5rem', md: '3xl' }}
             color={'#D02128'}
             display={'inline'}
           >
-            &nbsp;Discord Server
+            <Link
+              href={"https://discord.com/invite/bankless"}
+              isExternal
+              color='#D02128'
+            >
+              Discord Server
+            </Link>
           </Text>
         </Text>
       </Flex>

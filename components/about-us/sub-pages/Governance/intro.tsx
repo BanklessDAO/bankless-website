@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, Link } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 export default function GovernanceIntroComponent() {
@@ -44,27 +44,28 @@ export default function GovernanceIntroComponent() {
             maxW={{ sm: '30rem', md: '35rem', lg: '50rem' }}
             my='1rem'
           >
-            At BanklessDAO, all decisions regarding governance, treasury,
-            projects, and proposals are made through a democratic process. BANK
-            holders ratify decisions on-chain through
-            <Text
-              color={'#D02128'}
-              fontSize={{ sm: 'sm', md: 'lg' }}
-              display={'inline'}
+            At BanklessDAO, decisions related to the governance process,
+            treasury allocation, and organizational structure are made using
+            {' '}
+            <Link
+              href={"https://docs.snapshot.org/"}
+              isExternal
+              color='#D02128'
             >
-              &nbsp;Snapshot&nbsp;
-            </Text>
-            votes. Any BANK holder can vote in a snapshot. The more tokens you
-            hold, the more voting power you have. See our recent governance
-            decisions
-            <Text
-              color={'#D02128'}
-              fontSize={{ sm: 'sm', md: 'lg' }}
-              display={'inline'}
-              maxW={{ sm: '20rem', md: '30rem', lg: '50rem' }}
+              Snapshot
+            </Link>
+            , an off-chain token-weighted voting platform. Any BANK token holder
+            can vote in a Snapshot poll. The more tokens they hold, the more
+            voting power they have. To see our recent governance decisions,
+            visit the{' '}
+            <Link
+              href={"https://snapshot.org/#/banklessvault.eth"}
+              isExternal
+              color='#D02128'
             >
-              &nbsp;here.&nbsp;
-            </Text>
+               BanklessDAO Snapshot
+            </Link>
+            {' '}space.
           </Text>
           <Box>
             <Text
@@ -72,16 +73,24 @@ export default function GovernanceIntroComponent() {
               fontSize={{ sm: 'sm', md: 'lg' }}
               maxW={{ sm: '30rem', md: '35rem', lg: '50rem' }}
             >
-              While decisions are formally ratified on-chain, decision-making
-              happens informally in our Discord channels, our
-              <Text
-                color={'#D02128'}
-                fontSize={{ sm: 'sm', md: 'lg' }}
-                display={'inline-block'}
+              Before a decision can be put on Snapshot, it must first be posted
+              to the{' '}
+              <Link
+                href={"https://forum.bankless.community/"}
+                isExternal
+                color='#D02128'
               >
-                &nbsp;forum posts
-              </Text>
-              , and our voice rooms.
+                 BanklessDAO Forum
+              </Link>
+              . And before that, it is common to discuss decisions in the{' '}
+              <Link
+                href={"https://discord.com/invite/bankless"}
+                isExternal
+                color='#D02128'
+              >
+                 BanklessDAO Discord
+              </Link>
+              .
             </Text>
           </Box>
         </Flex>
