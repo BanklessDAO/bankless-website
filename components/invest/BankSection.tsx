@@ -39,8 +39,6 @@ function BankSection() {
             BANK
           </Text>
           <Text
-            bgColor='rgba(0, 0, 0, 0.2)'
-            bgClip='text'
             fontSize='3xl'
             fontWeight={700}
             color={'#D02128'}

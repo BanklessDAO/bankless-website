@@ -53,8 +53,6 @@ function BedIndex() {
             <Text
               as={'span'}
               color={'#D02128'}
-              bgColor='rgba(0, 0, 0, 0.2)'
-              bgClip='text'
             >
               The only index that can get ETH and BTC maxis in BED together
             </Text>
