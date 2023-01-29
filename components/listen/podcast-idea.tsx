@@ -32,7 +32,7 @@ class PodcastIdea extends React.Component {
           >
             Join{' '}
             <Link
-              color='red.600'
+              color='#D02128'
               textDecoration='none'
               href='https://discord.com/invite/bankless'
             >
