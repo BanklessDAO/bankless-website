@@ -18,7 +18,7 @@ export default function ProjectBountyBoardComponent() {
         w={'full'}
       >
         <Box
-          background={'red'}
+          background={'#D02128'}
           position={'relative'}
           height={{ base: '300px', sm: '350px' }}
           width={{ base: '300px', sm: '350px' }}

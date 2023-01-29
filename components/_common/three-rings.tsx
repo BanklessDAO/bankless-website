@@ -32,7 +32,7 @@ class ThreeRings extends React.Component {
             md: '0px 80px',
             lg: '0px 110px',
           }}
-          background='radial-gradient(circle, transparent 40%, red 40%)'
+          background='radial-gradient(circle, transparent 40%, #D02128 40%)'
         ></Box>
         <Box
           borderRadius='100%'

@@ -32,14 +32,6 @@ function Guild() {
         </Text>
         <VStack mt={8} rowGap={8}>
           <Section
-            title='Analytics Guild'
-            text='The Analytics Guild builds data products and uses data analytics to equip
-                    bDAO members to achieve our mission with data-driven intelligence.
-                    The Analytics Guild also incubated DAO DASH.'
-            img='/images/analytic-guild.png'
-            alt='analytics-guild'
-          />
-          <Section
             title='Audiovisual Guild'
             text='The AV Guild is the home of BanklessDAO video and audio content.
           From broadcasting the Community Call to building the next version of our audio-recording bot,
@@ -58,9 +50,9 @@ function Guild() {
           />
           <Section
             title='Design Guild'
-            text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
-          the guilds within BanklessDAO.
-          This guild helps us best represent our DAO to anyone outside bDAO.'
+            text='Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a
+                  narrative through visual aid, and generate funding through art. We use integrity in our images and
+                  content. As a culture, we reward action and embrace risk.'
             img='/images/design-guild.png'
             alt='design-guild'
             reverse={true}
@@ -74,10 +66,11 @@ function Guild() {
             alt='dev-guild'
           />
           <Section
-            title='Education guild'
-            text='The Education Guild provides educational tools and resources to empower bDAO members with knowledge about Web3,
-          DeFi, NFTs and the greater crypto ecosystem.
-          They also incubated the Bankless Academy project.'
+            title='Education Department'
+            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners, 
+                  teaching DAO tooling need to succeed in the DAO space, 
+                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level. 
+                  The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
             img='/images/edu-guild.png'
             alt='education-guild'
             reverse={true}
@@ -132,6 +125,15 @@ function Guild() {
            the Editing/Publishing Arm, and the Client Services project. '
             img='/images/writers-guild.png'
             alt='writers-guild'
+          />
+          <Section
+            title='Analytics Guild (INACTIVE)'
+            text='The Analytics Guild builds data products and uses data analytics to equip
+                    bDAO members to achieve our mission with data-driven intelligence.
+                    The Analytics Guild also incubated DAO DASH.'
+            img='/images/analytic-guild.png'
+            alt='analytics-guild'
+            reverse={true}
           />
         </VStack>
       </Flex>
