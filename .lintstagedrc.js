@@ -1,5 +1,3 @@
-
-
 import { relative } from 'path'
 
 const buildEslintCommand = (filenames) =>
