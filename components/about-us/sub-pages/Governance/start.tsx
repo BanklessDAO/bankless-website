@@ -63,13 +63,20 @@ export default function GovernanceStartComponent() {
                   color={'#D02128'}
                   display={'inline'}
                 >
-                  <Link href={"https://forum.bankless.community/"} target='_blank'>Discussion on Forums</Link>
+                  <Link
+                    href={"https://forum.bankless.community/"}
+                    isExternal
+                    color='#D02128'
+                  >
+                    Discussion on Forums
+                  </Link>
                 </Text>
               </Text>
               <Flex align={'center'} color={'white.100'}>
                 <Link
                   href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
-                  target='_blank'
+                  isExternal
+                  color='#D02128'
                 >
                   <Text
                     mr={'0.25rem'}
@@ -120,7 +127,13 @@ export default function GovernanceStartComponent() {
             color={'#D02128'}
             display={'inline'}
           >
-            <Link href={"https://discord.com/invite/bankless"} target='_blank'>Discord Server</Link>
+            <Link
+              href={"https://discord.com/invite/bankless"}
+              isExternal
+              color='#D02128'
+            >
+              Discord Server
+            </Link>
           </Text>
         </Text>
       </Flex>

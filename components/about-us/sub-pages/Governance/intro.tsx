@@ -45,22 +45,25 @@ export default function GovernanceIntroComponent() {
             my='1rem'
           >
             At BanklessDAO, decisions related to the governance process,
-            treasury allocation, and organizational structure are made using 
-            <Link 
+            treasury allocation, and organizational structure are made using
+            {' '}
+            <Link
               href={"https://docs.snapshot.org/"}
-              target='_blank'
+              isExternal
+              color='#D02128'
             >
               Snapshot
             </Link>
             , an off-chain token-weighted voting platform. Any BANK token holder
-            can vote in a Snapshot poll. The more tokens they hold, the more 
-            voting power they have. To see our recent governance decisions, 
-            visit the 
-            <Link 
+            can vote in a Snapshot poll. The more tokens they hold, the more
+            voting power they have. To see our recent governance decisions,
+            visit the{' '}
+            <Link
               href={"https://snapshot.org/#/banklessvault.eth"}
-              target='_blank'
+              isExternal
+              color='#D02128'
             >
-              BanklessDAO Snapshot
+               BanklessDAO Snapshot
             </Link>
             space.
           </Text>
@@ -71,19 +74,21 @@ export default function GovernanceIntroComponent() {
               maxW={{ sm: '30rem', md: '35rem', lg: '50rem' }}
             >
               Before a decision can be put on Snapshot, it must first be posted
-              to the 
+              to the{' '}
               <Link
                 href={"https://forum.bankless.community/"}
-                target='_blank'
+                isExternal
+                color='#D02128'
               >
-                BanklessDAO Forum
+                 BanklessDAO Forum
               </Link>
-              . And before that, it is common to discuss decisions in the 
-              <Link 
+              . And before that, it is common to discuss decisions in the{' '}
+              <Link
                 href={"https://discord.com/invite/bankless"}
-                target='_blank'
+                isExternal
+                color='#D02128'
               >
-                BanklessDAO Discord
+                 BanklessDAO Discord
               </Link>
               .
             </Text>
