@@ -69,7 +69,7 @@ export default function GovernanceStartComponent() {
               <Flex align={'center'} color={'white.100'}>
                 <Link
                   href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
-                  passHref
+                  target='_blank'
                 >
                   <Text
                     mr={'0.25rem'}
