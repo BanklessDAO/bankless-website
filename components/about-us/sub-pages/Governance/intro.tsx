@@ -65,7 +65,7 @@ export default function GovernanceIntroComponent() {
             >
                BanklessDAO Snapshot
             </Link>
-            space.
+            {' '}space.
           </Text>
           <Box>
             <Text

@@ -56,7 +56,7 @@ export default function GovernanceStartComponent() {
                 fontSize={{ base: 'xl', md: 'xl' }}
                 fontWeight={{ sm: '700', md: '400' }}
               >
-                Join the
+                Join the{' '}
                 <Text
                   fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={{ sm: '700', md: '400' }}
@@ -121,7 +121,7 @@ export default function GovernanceStartComponent() {
           textAlign={'center'}
           fontSize={{ base: '1.5rem', md: '3xl' }}
         >
-          Join the
+          Join the{' '}
           <Text
             fontSize={{ base: '1.5rem', md: '3xl' }}
             color={'#D02128'}
