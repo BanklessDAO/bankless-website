@@ -13,7 +13,7 @@ export default function HowToJoin() {
           <Box
             w='100%'
             h='5px'
-            bgGradient='linear(to-r, #FF1013 44.79%, rgba(140, 29, 207, 0) 100%)'
+            bgGradient='linear(to-r, #D02128 44.79%, rgba(140, 29, 207, 0) 100%)'
             filter='blur(3px)'
             mt={3.5}
             px={3}

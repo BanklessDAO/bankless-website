@@ -8,21 +8,24 @@ export default function NodesIntroComponent() {
         as={Box}
         textAlign={'center'}
         spacing={{ base: 4, md: 6 }}
-        py={{ base: 10, md: 18 }}>
+        py={{ base: 10, md: 18 }}
+      >
         <Heading
           fontWeight={700}
           fontSize={{ base: '4xl', sm: '5xl', md: '6xl', xl: '8xl' }}
           lineHeight={'110%'}
-          color={'white.100'}>
+          color={'white.100'}
+        >
           Portal to Nodes
           <Underline />
         </Heading>
         <Text color={'white.200'} fontSize={{ base: 'xl', md: '3xl' }}>
           BanklessDAO is only a part of a larger
           <Text
-            color={'red'}
+            color={'#D02128'}
             fontSize={{ base: 'xl', md: '3xl' }}
-            display={'inline'}>
+            display={'inline'}
+          >
             {' '}
             &nbsp;ecosystem of nodes&nbsp;
           </Text>
@@ -30,7 +33,8 @@ export default function NodesIntroComponent() {
           <Text
             color={'white.200'}
             fontSize={{ base: 'xl', md: '3xl' }}
-            display={{ base: 'inline', xl: 'block' }}>
+            display={{ base: 'inline', xl: 'block' }}
+          >
             {' '}
             Bankless movement.
           </Text>

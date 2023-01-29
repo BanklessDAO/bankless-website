@@ -1,6 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
-import { Flex, Text, Container, VStack, Button, Box, Link } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Container,
+  VStack,
+  Button,
+  Box,
+  Link,
+} from '@chakra-ui/react'
 
 function GmiIndex() {
   return (
@@ -11,17 +19,19 @@ function GmiIndex() {
             display={'flex'}
             flexDirection={'column'}
             ml={['auto', 0]}
-            width={['80%', '100%']}>
+            width={['80%', '100%']}
+          >
             <Text
               textAlign={{ base: 'center', md: 'left' }}
               fontWeight={700}
-              fontSize='5xl'>
+              fontSize='5xl'
+            >
               GMI INDEX
             </Text>
             <Flex justify={{ base: 'center', md: 'flex-start' }}>
-              <Box ml={0} width={75} height={'12px'} background={'red'} />
-              <Box ml={2} width={75} height={'12px'} background={'red'} />
-              <Box ml={2} width={75} height={'12px'} background={'red'} />
+              <Box ml={0} width={75} height={'12px'} background={'#D02128'} />
+              <Box ml={2} width={75} height={'12px'} background={'#D02128'} />
+              <Box ml={2} width={75} height={'12px'} background={'#D02128'} />
             </Flex>
             <Text
               textAlign={{ base: 'center', md: 'left' }}
@@ -30,7 +40,7 @@ function GmiIndex() {
               fontSize='36px'
               fontWeight={700}
               mt={7}
-              >
+            >
               Are you GMI?
             </Text>
           </Container>
@@ -50,7 +60,8 @@ function GmiIndex() {
             display='flex'
             justifyContent='space-evenly'
             alignItems={'center'}
-            flexDirection={{ base: 'column', md: 'row' }}>
+            flexDirection={{ base: 'column', md: 'row' }}
+          >
             <Link href='https://app.indexcoop.com/gmi' isExternal>
               <Button as='a' textDecorationLine={'none'}>
                 <Container padding={0} paddingRight={2}>

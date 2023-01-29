@@ -9,7 +9,7 @@ import {
   Text,
   FormControl,
   Button,
-  Link
+  Link,
 } from '@chakra-ui/react'
 
 export default function CommunityCallsEvolutionComponent() {
@@ -19,10 +19,11 @@ export default function CommunityCallsEvolutionComponent() {
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         pt={{ base: 10, md: 14 }}
-        mt={{base: 10, md: 14}}
-        mb={{base: 10, md: 14}}
+        mt={{ base: 10, md: 14 }}
+        mb={{ base: 10, md: 14 }}
         direction={{ base: 'column', md: 'row' }}
-        borderRadius='10px'>
+        borderRadius='10px'
+      >
         <Flex
           flex={1}
           justify={'center'}
@@ -30,13 +31,15 @@ export default function CommunityCallsEvolutionComponent() {
           position={'relative'}
           w={'full'}
           flexDirection={'column'}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+        >
           <Box
             position={'relative'}
             height={'250px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
-            overflow={'hidden'}>
+            overflow={'hidden'}
+          >
             <Image
               alt={'Hero Image'}
               fit={'cover'}
@@ -53,7 +56,8 @@ export default function CommunityCallsEvolutionComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}>
+            fontSize={{ base: '1xl', sm: '2xl', md: '4xl' }}
+          >
             Evolution
           </Heading>
           <Text color={'grey'} fontSize={{ sm: 'sm', md: 'md' }}>
@@ -64,7 +68,8 @@ export default function CommunityCallsEvolutionComponent() {
               fontSize={{ sm: 'sm', md: 'md' }}
               display='inline-block'
               href='https://twitter.com/samanthajmarin'
-              isExternal>
+              isExternal
+            >
               Samanthaj
             </Link>{' '}
             and{' '}
@@ -73,7 +78,8 @@ export default function CommunityCallsEvolutionComponent() {
               fontSize={{ sm: 'sm', md: 'md' }}
               display='inline-block'
               href='https://twitter.com/frogmonkee'
-              isExternal>
+              isExternal
+            >
               frogmonkee
             </Link>{' '}
             led the effort in Season 3 and proposed several changes to revamp
@@ -95,14 +101,16 @@ export default function CommunityCallsEvolutionComponent() {
           align={'center'}
           position={'relative'}
           w={'full'}
-          flexDirection={'column'}>
+          flexDirection={'column'}
+        >
           <Box
             position={'relative'}
             height={'250px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             overflow={'hidden'}
-            display={{ base: 'none', md: 'flex' }}>
+            display={{ base: 'none', md: 'flex' }}
+          >
             <Image
               alt={'Hero Image'}
               fit={'cover'}
@@ -118,13 +126,19 @@ export default function CommunityCallsEvolutionComponent() {
           <FormControl
             w={{ base: '40%', md: '40%' }}
             marginInlineStart='unset!important'
-            mt={'1rem'}>
-            <Link href={'https://www.notion.so/DAO-Meetings-Calendar-794ea323caad40e19a8a22bc2ec6edb6'}>
+            mt={'1rem'}
+          >
+            <Link
+              href={
+                'https://www.notion.so/DAO-Meetings-Calendar-794ea323caad40e19a8a22bc2ec6edb6'
+              }
+            >
               <Button
-                colorScheme='red'
+                colorScheme='#D02128'
                 w='100%'
                 type='submit'
-                borderRadius={'none'}>
+                borderRadius={'none'}
+              >
                 BanklessDAO Meetings Calendar
               </Button>
             </Link>

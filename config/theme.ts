@@ -55,15 +55,15 @@ const theme = extendTheme(
       black: '#000000',
       /* Color Scale generated using https://color-scheme-builder.vercel.app/ */
       red: {
-        100: '#FF1013',
-        200: '#EA0F11',
-        300: '#D50E0F',
-        400: '#C00D0E',
-        500: '#AB0C0C',
-        600: '#960B0B',
-        700: '#810909',
-        800: '#6C0808',
-        900: '#560606',
+        100: '#F6D3D4',
+        200: '#EDA7A9',
+        300: '#E37A7E',
+        400: '#DA4E53',
+        500: '#D02128',
+        600: '#B61D23',
+        700: '#9C191E',
+        800: '#821519',
+        900: '#681114',
       },
     },
     fontSizes: {
@@ -84,17 +84,17 @@ const theme = extendTheme(
           // Make a variant, we'll call it `base` here and leave it empty
           base: {},
           bankless: {
-            bg: 'red.100',
+            bg: '#D02128',
             color: 'white.100',
             fontSize: 14,
             _hover: {
-              bg: 'red.500',
+              bg: '#d02128',
             },
           },
           'bankless-white': {
             bg: 'white.100',
-            border: '1px solid #FF1A1A',
-            color: '#FF1A1A',
+            border: '1px solid #D02128',
+            color: '#D02128',
             _hover: {
               bg: 'white.500',
             },
