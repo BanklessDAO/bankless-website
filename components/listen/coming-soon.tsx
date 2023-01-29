@@ -51,12 +51,12 @@ class ComingSoon extends React.Component {
               fontSize={{ base: 'sm', sm: 'xl' }}
             >
               Hosted By{' '}
-              <Link color='red.600' textDecoration='none'>
+              <Link color='#D02128' textDecoration='none'>
                 ComeBackKid
               </Link>{' '}
               and
               <Link
-                color='red.600'
+                color='#D02128'
                 textDecoration='none'
                 href={'https://twitter.com/lion917_eth'}
               >
@@ -96,7 +96,7 @@ class ComingSoon extends React.Component {
             >
               Hosted By{' '}
               <Link
-                color='red.600'
+                color='#D02128'
                 textDecoration='none'
                 href='https://twitter.com/brandoncnolte'
               >
@@ -107,7 +107,7 @@ class ComingSoon extends React.Component {
               Bounty Hunter is a show about how to find engaging and rewarding
               work in the new Web3 economy. Join serial entrepreneur{' '}
               <Link
-                color='red.600'
+                color='#D02128'
                 textDecoration='none'
                 href='https://twitter.com/brandoncnolte'
               >
@@ -116,7 +116,7 @@ class ComingSoon extends React.Component {
               as he interviews community builders, DAO contributors, and the
               best innovators in Web3. Follow Bounty Hunter on &nbsp;
               <Link
-                color='red.600'
+                color='#D02128'
                 textDecoration='none'
                 href='https://twitter.com/BountyxHunterx'
               >

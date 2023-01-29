@@ -60,7 +60,7 @@ export default function GovernanceStartComponent() {
                 <Text
                   fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={{ sm: '700', md: '400' }}
-                  color={'red'}
+                  color={'#D02128'}
                   display={'inline'}
                 >
                   <Link href={"https://forum.bankless.community/"} target='_blank'>Discussion on Forums</Link>
@@ -117,7 +117,7 @@ export default function GovernanceStartComponent() {
           Join the
           <Text
             fontSize={{ base: '1.5rem', md: '3xl' }}
-            color={'red'}
+            color={'#D02128'}
             display={'inline'}
           >
             <Link href={"https://discord.com/invite/bankless"} target='_blank'>Discord Server</Link>

@@ -42,7 +42,8 @@ const Ring1 = ({ ringWidth }: RingProps) => {
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
       border='6px solid rgba(255, 16, 19, 0.15);'
-      borderRadius='50%'>
+      borderRadius='50%'
+    >
       <Grid
         w='100%'
         h='100%'
@@ -50,7 +51,8 @@ const Ring1 = ({ ringWidth }: RingProps) => {
         templateColumns='1fr'
         templateRows='1fr'
         alignItems='center'
-        justifyItems='center'>
+        justifyItems='center'
+      >
         {rings.map(({ color, rotation, innerCircleSize, imgSrc }) => {
           const CIRCLE_CONSTANT = 68 // Helps us maintain the innerCircles on a main axis
           const circleSize = CIRCLE_CONSTANT + innerCircleSize
@@ -60,13 +62,15 @@ const Ring1 = ({ ringWidth }: RingProps) => {
               w={`${circleSize}%`}
               h={`${circleSize}%`}
               gridArea='1/1/1/1'
-              transform={`rotate(${rotation}deg)`}>
+              transform={`rotate(${rotation}deg)`}
+            >
               <Box
                 w={`${innerCircleSize}%`}
                 h={`${innerCircleSize}%`}
                 gridArea='1/1/1/1'
                 backgroundColor={color || 'transparent'}
-                borderRadius='50%'>
+                borderRadius='50%'
+              >
                 {imgSrc && (
                   <Image
                     w='100%'
@@ -87,12 +91,12 @@ const Ring1 = ({ ringWidth }: RingProps) => {
 const Ring2 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
-      color: '#FF1013',
+      color: '#D02128',
       rotation: '290',
       innerCircleSize: 8,
     },
     {
-      color: '#FF1013',
+      color: '#D02128',
       rotation: '175',
       innerCircleSize: 8,
     },
@@ -103,7 +107,8 @@ const Ring2 = ({ ringWidth }: RingProps) => {
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
       border='none'
-      borderRadius='50%'>
+      borderRadius='50%'
+    >
       <Grid
         w='100%'
         h='100%'
@@ -111,7 +116,8 @@ const Ring2 = ({ ringWidth }: RingProps) => {
         templateColumns='1fr'
         templateRows='1fr'
         alignItems='center'
-        justifyItems='center'>
+        justifyItems='center'
+      >
         {rings.map(({ color, rotation, innerCircleSize }) => {
           const CIRCLE_CONSTANT = 68 // Helps us maintain the innerCircles on a main axis
           const circleSize = CIRCLE_CONSTANT + innerCircleSize
@@ -121,13 +127,15 @@ const Ring2 = ({ ringWidth }: RingProps) => {
               w={`${circleSize}%`}
               h={`${circleSize}%`}
               gridArea='1/1/1/1'
-              transform={`rotate(${rotation}deg)`}>
+              transform={`rotate(${rotation}deg)`}
+            >
               <Box
                 w={`${innerCircleSize}%`}
                 h={`${innerCircleSize}%`}
                 gridArea='1/1/1/1'
                 backgroundColor={color || 'transparent'}
-                borderRadius='50%'></Box>
+                borderRadius='50%'
+              ></Box>
             </GridItem>
           )
         })}
@@ -154,12 +162,12 @@ const Ring3 = ({ ringWidth }: RingProps) => {
       innerCircleSize: 16,
     },
     {
-      color: '#FF1013',
+      color: '#D02128',
       rotation: '10',
       innerCircleSize: 10,
     },
     {
-      color: '#FF1013',
+      color: '#D02128',
       rotation: '120',
       innerCircleSize: 10,
     },
@@ -175,7 +183,8 @@ const Ring3 = ({ ringWidth }: RingProps) => {
       h={`${ringWidth}%`}
       gridArea='1/1/1/1'
       border='none'
-      borderRadius='50%'>
+      borderRadius='50%'
+    >
       <Grid
         w='100%'
         h='100%'
@@ -183,7 +192,8 @@ const Ring3 = ({ ringWidth }: RingProps) => {
         templateColumns='1fr'
         templateRows='1fr'
         alignItems='center'
-        justifyItems='center'>
+        justifyItems='center'
+      >
         {rings.map(({ color, rotation, innerCircleSize, imgSrc }) => {
           const CIRCLE_CONSTANT = 68 // Helps us maintain the innerCircles on a main axis
           const circleSize = CIRCLE_CONSTANT + innerCircleSize
@@ -193,13 +203,15 @@ const Ring3 = ({ ringWidth }: RingProps) => {
               w={`${circleSize}%`}
               h={`${circleSize}%`}
               gridArea='1/1/1/1'
-              transform={`rotate(${rotation}deg)`}>
+              transform={`rotate(${rotation}deg)`}
+            >
               <Box
                 w={`${innerCircleSize}%`}
                 h={`${innerCircleSize}%`}
                 gridArea='1/1/1/1'
                 backgroundColor={color || 'transparent'}
-                borderRadius='50%'>
+                borderRadius='50%'
+              >
                 {imgSrc && (
                   <Image
                     w='100%'
@@ -229,12 +241,14 @@ const Ring4 = ({ ringWidth }: RingProps) => {
         justifyItems='center'
         border='rgba(255, 255, 255, 0.05) 1px solid'
         pos='relative'
-        borderRadius='50%'>
+        borderRadius='50%'
+      >
         <GridItem w='124%' h='124%' gridArea='1/1/1/1' pos='absolute'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
-            viewBox='0 0 781 781'>
+            viewBox='0 0 781 781'
+          >
             <g filter='url(#a)'>
               <path
                 stroke='#131313'
@@ -250,7 +264,8 @@ const Ring4 = ({ ringWidth }: RingProps) => {
                 x='.8'
                 y='.2'
                 colorInterpolationFilters='sRGB'
-                filterUnits='userSpaceOnUse'>
+                filterUnits='userSpaceOnUse'
+              >
                 <feFlood floodOpacity='0' result='BackgroundImageFix' />
                 <feBlend
                   in='SourceGraphic'
@@ -280,7 +295,8 @@ const CirclesV2: React.FC = () => (
       templateColumns='1fr'
       templateRows='1fr'
       alignItems='center'
-      justifyItems='center'>
+      justifyItems='center'
+    >
       <Center />
       <Ring1 ringWidth='43' />
       <Ring2 ringWidth='53' />
