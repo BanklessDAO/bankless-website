@@ -9,7 +9,7 @@ import {
   Stack,
   Box,
   Heading,
-  Link
+  Link,
 } from '@chakra-ui/react'
 
 function BedIndex() {
@@ -21,10 +21,14 @@ function BedIndex() {
         align={'center'}
         spacing={3}
         py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}>
+        direction={{ base: 'column', md: 'row' }}
+      >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading lineHeight={0.7} fontWeight={600}>
-            <Container p={0} maxW={{ base: 'container.sm', md: 'container.xl' }}>
+            <Container
+              p={0}
+              maxW={{ base: 'container.sm', md: 'container.xl' }}
+            >
               {/* Mobile logo begins */}
               {isMobile ? (
                 <Flex mb={5} p={0}>
@@ -46,9 +50,11 @@ function BedIndex() {
               )}
             </Container>
             <br />
-            <Text as={'span'} color={'#d02128'}
-             bgColor='rgba(0, 0, 0, 0.2)'
-             bgClip='text'
+            <Text
+              as={'span'}
+              color={'#D02128'}
+              bgColor='rgba(0, 0, 0, 0.2)'
+              bgClip='text'
             >
               The only index that can get ETH and BTC maxis in BED together
             </Text>
@@ -67,14 +73,16 @@ function BedIndex() {
           </Stack>
           <VStack justifyContent={'flex-end'} display='flex'>
             <Container
-              padding={{base: 0, md: 0, lg: 0}}
+              padding={{ base: 0, md: 0, lg: 0 }}
               display='flex'
               justifyContent='space-between'
               alignItems={'center'}
               flexDirection={{ base: 'column', md: 'row' }}
-              >
-              <Link href='https://app.indexcoop.com/bed' isExternal
-                mb={{base: '22px', md: 0}}
+            >
+              <Link
+                href='https://app.indexcoop.com/bed'
+                isExternal
+                mb={{ base: '22px', md: 0 }}
               >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
                   <Container padding={0} paddingRight={2}>
@@ -103,7 +111,8 @@ function BedIndex() {
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'full'}>
+          w={'full'}
+        >
           {!isMobile ? (
             <Box pt={30} position={'relative'}>
               <Image

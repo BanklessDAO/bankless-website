@@ -10,8 +10,13 @@ type CTAButtonProps = {
 
 export const CTAButton = ({ text, url }: CTAButtonProps) => (
   <NextLink href={url} passHref={true}>
-    <Link target='_blank' display='flex' justifyContent='start' textDecoration='none'>
-      <Button colorScheme='red' w='fit-content' h='3rem'>
+    <Link
+      target='_blank'
+      display='flex'
+      justifyContent='start'
+      textDecoration='none'
+    >
+      <Button colorScheme='#D02128' w='fit-content' h='3rem'>
         <Text fontWeight={700} marginRight='2' textAlign='left'>
           Visit {text}
         </Text>

@@ -15,7 +15,8 @@ export default function NewMemberJoinMethodComponent() {
           lineHeight={'110%'}
           color={'white.100'}
           textTransform={'uppercase'}
-          pb={{ base: '2rem', md: 0 }}>
+          pb={{ base: '2rem', md: 0 }}
+        >
           How to join
           <Underline />
         </Heading>
@@ -25,7 +26,8 @@ export default function NewMemberJoinMethodComponent() {
             spacing='1rem'
             direction={{ base: 'column', xl: 'row' }}
             justifyContent='center'
-            alignItems='center'>
+            alignItems='center'
+          >
             {cardsContent.map((card, index) => (
               <Card card={card} index={index} />
             ))}
@@ -35,7 +37,8 @@ export default function NewMemberJoinMethodComponent() {
             w='150vw'
             top={{ base: '-20%', xl: '-80%' }}
             right={'-100%'}
-            opacity={{ sm: 0, lg: 0.6 }}>
+            opacity={{ sm: 0, lg: 0.6 }}
+          >
             <Box
               pos='relative'
               w='100%'
@@ -44,11 +47,13 @@ export default function NewMemberJoinMethodComponent() {
               left={0}
               zIndex={0}
               opacity={{ base: 0, sm: 1 }}
-              transform={{ base: 'rotate(124deg)', lg: 'rotate(16deg)' }}>
+              transform={{ base: 'rotate(124deg)', lg: 'rotate(16deg)' }}
+            >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
-                viewBox='0 0 400 201'>
+                viewBox='0 0 400 201'
+              >
                 <g clipPath='url(#a)'>
                   <path
                     stroke='url(#linear)'
@@ -68,7 +73,7 @@ export default function NewMemberJoinMethodComponent() {
                     />
                   </clipPath>
                   <linearGradient id='linear' x1='0%' y1='0%' x2='100%' y2='0%'>
-                    <stop offset='25.24%' stopColor='#FF0000' />
+                    <stop offset='25.24%' stopColor='#D02128' />
                     <stop offset='69.55%' stopColor='#0500FF' />
                   </linearGradient>
                 </defs>
@@ -82,11 +87,13 @@ export default function NewMemberJoinMethodComponent() {
               left={0}
               zIndex={0}
               opacity={{ base: 0, sm: 1 }}
-              transform={{ base: 'rotate(-132deg)', lg: 'rotate(-4deg)' }}>
+              transform={{ base: 'rotate(-132deg)', lg: 'rotate(-4deg)' }}
+            >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
-                viewBox='0 0 400 201'>
+                viewBox='0 0 400 201'
+              >
                 <g clipPath='url(#a)'>
                   <path
                     stroke='url(#linear)'
@@ -106,7 +113,7 @@ export default function NewMemberJoinMethodComponent() {
                     />
                   </clipPath>
                   <linearGradient id='linear' x1='0%' y1='0%' x2='100%' y2='0%'>
-                    <stop offset='25.24%' stopColor='#FF0000' />
+                    <stop offset='25.24%' stopColor='#D02128' />
                     <stop offset='69.55%' stopColor='#0500FF' />
                   </linearGradient>
                 </defs>

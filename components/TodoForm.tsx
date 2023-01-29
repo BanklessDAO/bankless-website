@@ -139,7 +139,7 @@ const TodoForm: React.FC = () => {
             color='gray.200'
             name='title'
           />
-          <Text as='span' display='block' color='red.400' fontSize='sm'>
+          <Text as='span' display='block' color='#D02128' fontSize='sm'>
             {errors?.title?.message}
           </Text>
           <Textarea

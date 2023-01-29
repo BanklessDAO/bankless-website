@@ -61,7 +61,7 @@ export default function GovernanceStartComponent() {
                 <Text
                   fontSize={{ base: 'xl', md: 'xl' }}
                   fontWeight={{ sm: '700', md: '400' }}
-                  color={'red'}
+                  color={'#D02128'}
                   display={'inline'}
                 >
                   &nbsp;Discussion on Forums
@@ -118,7 +118,7 @@ export default function GovernanceStartComponent() {
           Join the
           <Text
             fontSize={{ base: '1.5rem', md: '3xl' }}
-            color={'red'}
+            color={'#D02128'}
             display={'inline'}
           >
             &nbsp;Discord Server

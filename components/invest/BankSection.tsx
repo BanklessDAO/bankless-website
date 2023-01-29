@@ -18,7 +18,14 @@ function BankSection() {
     <Container maxW={'6xl'} p={0}>
       <Flex direction={{ base: 'column-reverse', xl: 'row' }}>
         {!isMobile ? (
-          <VStack justifyItems={'center'} alignItems={'center'} h='full' w='full' mt={20} align='flex-start'>
+          <VStack
+            justifyItems={'center'}
+            alignItems={'center'}
+            h='full'
+            w='full'
+            mt={20}
+            align='flex-start'
+          >
             <Image
               src='/images/bank-token.png'
               alt='bankToken'
@@ -32,9 +39,11 @@ function BankSection() {
             BANK
           </Text>
           <Text
-           bgColor='rgba(0, 0, 0, 0.2)'
-           bgClip='text'
-           fontSize='3xl' fontWeight={700} color={'#d02128'}
+            bgColor='rgba(0, 0, 0, 0.2)'
+            bgClip='text'
+            fontSize='3xl'
+            fontWeight={700}
+            color={'#D02128'}
           >
             The Most widely-held Token{' '}
           </Text>
@@ -50,19 +59,22 @@ function BankSection() {
               paddingTop={5}
               fontWeight={400}
               lineHeight='22px'
-              fontSize='lg'>
+              fontSize='lg'
+            >
               BANK is available on both{' '}
               <Link
                 color='#D02128'
                 href='https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
-                isExternal>
+                isExternal
+              >
                 Uniswap
               </Link>{' '}
               and{' '}
               <Link
                 color='#D02128'
                 href='https://app.sushi.com/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH'
-                isExternal>
+                isExternal
+              >
                 Sushiswap
               </Link>{' '}
               and can be earned by working in the DAO. Many guest pass holders
@@ -80,7 +92,8 @@ function BankSection() {
             ) : null}
             <Flex
               alignItems={{ base: 'center', md: 'center' }}
-              flexDirection={{ base: 'column',  md: 'row' }}>
+              flexDirection={{ base: 'column', md: 'row' }}
+            >
               <Text mr={[0, 3]}>Current market cap and price is</Text>
               <Box>
                 <Flex
@@ -88,13 +101,15 @@ function BankSection() {
                   justify={'center'}
                   align={'center'}
                   w={[160, 180]}
-                  border={'0.5px solid #D02128'}>
+                  border={'0.5px solid #D02128'}
+                >
                   <Link
                     py={'5px'}
                     fontWeight={800}
                     color='#D02128'
                     href='https://www.coingecko.com/en/coins/bankless-dao'
-                    isExternal>
+                    isExternal
+                  >
                     Available Here
                   </Link>
                 </Flex>

@@ -110,7 +110,7 @@ class Section4 extends React.Component {
             lineHeight='6px'
             background='linear-gradient(
           91.88deg,
-          #ff1013 44.79%,
+          #D02128 44.79%,
           rgba(140, 29, 207, 0) 101.77%
         )'
           >
@@ -125,7 +125,7 @@ class Section4 extends React.Component {
             lineHeight='10px'
             background='linear-gradient(
           91.88deg,
-          #ff1013 30.79%,
+          #D02128 30.79%,
           rgba(140, 29, 207, 0.5) 101.77%
         )'
           >
@@ -154,7 +154,7 @@ class Section4 extends React.Component {
                 <Box
                   borderRadius='100%'
                   width='fit-content'
-                  boxShadow='-3px 1px 15px red'
+                  boxShadow='-3px 1px 15px #D02128'
                 >
                   <Image
                     borderRadius='100%'
@@ -223,7 +223,7 @@ class Section4 extends React.Component {
             lineHeight='6px'
             background='linear-gradient(
           91.88deg,
-          #ff1013 44.79%,
+          #D02128 44.79%,
           rgba(140, 29, 207, 0) 101.77%
         )'
           >
@@ -239,7 +239,7 @@ class Section4 extends React.Component {
             lineHeight='10px'
             background='linear-gradient(
           91.88deg,
-          #ff1013 30.79%,
+          #D02128 30.79%,
           rgba(140, 29, 207, 0.5) 101.77%
         )'
           >
@@ -269,7 +269,7 @@ class Section4 extends React.Component {
                 <Box
                   borderRadius='100%'
                   width='fit-content'
-                  boxShadow='-3px 1px 15px red'
+                  boxShadow='-3px 1px 15px #D02128'
                 >
                   <Image
                     borderRadius='100%'
