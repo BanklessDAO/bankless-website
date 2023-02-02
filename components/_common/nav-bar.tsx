@@ -87,7 +87,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
       textDecoration='none'
       _hover={{
         color: 'white',
-        borderBottom: 'solid 4px #D02128',
+        borderBottom: 'solid 4px white',
       }}
       {...rest}>
       <Text display='block' fontWeight={600}>
