@@ -1,13 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-
 import { useRouter } from 'next/router'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
-
-
 
 const NAV_LINKS = [
   {
