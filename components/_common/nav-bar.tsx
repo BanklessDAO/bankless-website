@@ -2,8 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
+import { useRouter } from 'next/router'
+
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
+
+
 
 const NAV_LINKS = [
   {
@@ -80,6 +84,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 }
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
+  const router = useRouter()
   return (
     <Link
       as='a'
@@ -87,8 +92,9 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
       textDecoration='none'
       _hover={{
         color: 'white',
-        borderBottom: 'solid 4px white',
+        borderBottom:  'solid 4px white',
       }}
+      borderBottom= {router.pathname == to ? 'solid 4px red' : ""}
       {...rest}>
       <Text display='block' fontWeight={600}>
         {children}
