@@ -19,7 +19,7 @@ export const CTAButton = ({ text, url, isExternal }: CTAButtonProps) => (
     >
       <Button colorScheme='#D02128' w='fit-content' h='3rem'>
         <Text fontWeight={700} marginRight='2' textAlign='left'>
-          Visit {text}
+          {text}
         </Text>
       </Button>
     </Link>
