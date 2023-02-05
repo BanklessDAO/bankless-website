@@ -58,7 +58,7 @@
     "slides": [
       {
         "title": "Bounty Board",
-        "paras": ["CHANGE ME"],
+        "paras": ["The Bounty Board enables coordination between organizers and contributors through talent sourcing and microbounties."],
         "cta": {
           "text": "Visit Bounty Board",
           "link": "https://bountyboard.bankless.community/",
