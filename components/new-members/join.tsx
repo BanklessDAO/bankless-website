@@ -34,6 +34,7 @@ export default function NewMembersJoinComponent() {
           <CTAButton
             text='Join now'
             url='https://discord.com/invite/bankless'
+            isExternal
           />
         </Stack>
       </Box>

@@ -42,6 +42,7 @@ const PodcastHatchery = () => (
         <CTAButton
           url='https://open.spotify.com/show/1jLNOoJv77K733rZzL4c6b'
           text='Podcast Hatchery'
+          isExternal
         />
 
         <Text
