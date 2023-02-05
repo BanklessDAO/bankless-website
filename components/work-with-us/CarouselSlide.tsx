@@ -10,6 +10,7 @@ export type CarouselSlideProps = {
   cta: {
     text: string
     link: string
+    isExternal: boolean
   }
   image: {
     src: string
