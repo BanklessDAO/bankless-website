@@ -164,10 +164,13 @@
       },
       {
         "title": "Podcast Sponsorships",
-        "paras": ["CHANGE ME"],
+        "paras": ["The BanklessDAO native podcasts speak directly to niche audiences around the web3 ecosystem.",
+          "Reach builders through Crypto Sapiens, BanklessDAO contributors through Making Bank, or get in touch with the fast-growing African scene through the Bankless Africa podcast.",
+          "\n",
+          "Let us know what you are looking for and we'll sync you with the right team."],
         "cta": {
-          "text": "Bankless AV Guild",
-          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
+          "text": "BanklessDAO Podcasts",
+          "link": "https://www.bankless.community/listen"
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-4.jpg",
