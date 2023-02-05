@@ -37,7 +37,7 @@ export default function NodesInternationalMediaComponent() {
                   mr={'0.25rem'}
                   fontSize={{ base: '1xl', md: '3xl' }}
                   fontWeight={'bold'}>
-                  Visit International Media Nodes
+                  International Media Nodes
                 </Text>
                 <FiArrowUpRight size={25} />
               </Flex>
