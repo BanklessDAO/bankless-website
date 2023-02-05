@@ -61,7 +61,7 @@
         "paras": ["CHANGE ME"],
         "cta": {
           "text": "Visit Bounty Board",
-          "link": "https://www.bountyboard.xyz/",
+          "link": "https://bountyboard.bankless.community/",
           "isExternal": true
         },
         "image": {
