@@ -26,7 +26,6 @@ export default function ProjectsContentComponent() {
       <EditArmProjectComponent />
       <PodcastHatcheryComponent />
       <DaoversityComponent />
-      <WebsiteProjectComponent />
       <FightClubComponent />
       <BanklessLoansComponent />
       <BanklessAcademyComponent />
@@ -37,6 +36,7 @@ export default function ProjectsContentComponent() {
       <InternationalMediaNodesComponent />
       <DecentralizeLawNewsletterComponent />
       <InfoSecTeamComponent />
+      <WebsiteProjectComponent />
     </Box>
   )
 }
