@@ -10,6 +10,7 @@ export type CarouselSlideProps = {
   cta: {
     text: string
     link: string
+    isExternal: boolean
   }
   image: {
     src: string
@@ -45,7 +46,7 @@ export function CarouselSlide({
             {para}
           </Text>
         ))}
-        <CTAButton url={cta.link} text={cta.text}/>
+        <CTAButton url={cta.link} text={cta.text} isExternal={cta.isExternal}/>
       </Stack>
 
       <Flex
