@@ -12,7 +12,7 @@ export default function WebsiteProjectComponent() {
     >
       <Flex
         flex={1}
-        justify={'flex-start'}
+        justify={'flex-end'}
         alignItems={'center'}
         position={'relative'}
         w={'full'}
