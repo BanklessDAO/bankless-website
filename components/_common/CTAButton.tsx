@@ -6,12 +6,13 @@ import { Link, Text } from '@chakra-ui/react'
 type CTAButtonProps = {
   text: string
   url: string
+  isExternal: boolean
 }
 
-export const CTAButton = ({ text, url }: CTAButtonProps) => (
+export const CTAButton = ({ text, url, isExternal }: CTAButtonProps) => (
   <NextLink href={url} passHref={true}>
     <Link
-      target='_blank'
+      isExternal={isExternal}
       display='flex'
       justifyContent='start'
       textDecoration='none'

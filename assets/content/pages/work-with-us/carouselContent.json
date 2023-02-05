@@ -11,7 +11,8 @@
         ],
         "cta": {
           "text": "Bankless Consulting",
-          "link": "https://www.banklessconsulting.com/"
+          "link": "https://www.banklessconsulting.com/",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-2.jpg",
@@ -26,7 +27,8 @@
         ],
         "cta": {
           "text": "Bankless Academy",
-          "link": "https://app.banklessacademy.com/"
+          "link": "https://app.banklessacademy.com/",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-6.jpg",
@@ -40,7 +42,8 @@
         ],
         "cta": {
           "text": "the Ultimate Crypto Tax Guide",
-          "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r"
+          "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-13.jpg",
@@ -58,7 +61,8 @@
         "paras": ["CHANGE ME"],
         "cta": {
           "text": "Bounty Board",
-          "link": "https://www.bountyboard.xyz/"
+          "link": "https://www.bountyboard.xyz/",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-7.jpg",
@@ -73,7 +77,8 @@
         ],
         "cta": {
           "text": "DAO Dash",
-          "link": "https://bankless.notion.site/DAO-Dash-41a151ce8ef74fcd893cba3b47223828"
+          "link": "https://bankless.notion.site/DAO-Dash-41a151ce8ef74fcd893cba3b47223828",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-8.jpg",
@@ -94,7 +99,8 @@
         ],
         "cta": {
           "text": "Bankless AV Guild",
-          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
+          "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-4.jpg",
@@ -106,7 +112,8 @@
         "paras": ["CHANGE ME"],
         "cta": {
           "text": "the Writers Guild",
-          "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
+          "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-9.jpg",
@@ -120,7 +127,8 @@
         ],
         "cta": {
           "text": "State of the DAOs",
-          "link": "https://banklessdao.substack.com/s/state-of-the-daos?utm_source=substack&utm_medium=menu"
+          "link": "https://banklessdao.substack.com/s/state-of-the-daos?utm_source=substack&utm_medium=menu",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-10.jpg",
@@ -134,7 +142,8 @@
         ],
         "cta": {
           "text": "the Design Guild",
-          "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c"
+          "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-11.jpg",
@@ -155,7 +164,8 @@
         ],
         "cta": {
           "text": "Bankless Newsletters",
-          "link": "https://www.notion.so/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
+          "link": "https://www.notion.so/Writers-Guild-585a90523b9f4630bc04892931a11f7d",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-5.jpg",
@@ -170,7 +180,8 @@
           "Let us know what you are looking for and we'll sync you with the right team."],
         "cta": {
           "text": "BanklessDAO Podcasts",
-          "link": "https://www.bankless.community/listen"
+          "link": "https://www.bankless.community/listen",
+          "isExternal": false
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-4.jpg",
@@ -184,7 +195,8 @@
         ],
         "cta": {
           "text": "Bankless Consulting",
-          "link": "https://www.banklessconsulting.com/"
+          "link": "https://www.banklessconsulting.com/",
+          "isExternal": true
         },
         "image": {
           "src": "/images/work-with-us/work-with-us-12.jpg",

@@ -45,7 +45,7 @@ export function CarouselSlide({
             {para}
           </Text>
         ))}
-        <CTAButton url={cta.link} text={cta.text}/>
+        <CTAButton url={cta.link} text={cta.text} isExternal={cta.isExternal}/>
       </Stack>
 
       <Flex
