@@ -73,7 +73,7 @@ export default function DaoversityComponent() {
         >
           <Link
             href={
-              'https://bankless.notion.site/DAOversity-Project-39f3facbf2234fa5940e2180dc985522'
+              'https://discord.com/channels/834499078434979890/896079056427163679'
             }
             isExternal
           >
