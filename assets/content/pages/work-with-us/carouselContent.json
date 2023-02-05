@@ -58,7 +58,11 @@
     "slides": [
       {
         "title": "Bounty Board",
-        "paras": ["The Bounty Board enables coordination between organizers and contributors through talent sourcing and microbounties."],
+        "paras": ["Bounty Board eases coordination between work organizers and contributors.",
+          "It provides Discord-integrated bounty tooling.",
+          "New contributors find ways to contribute and organizers track bountied work via our Discord bot and web accounting view.",
+          "Organizers attract talent with evergreen intake bounties and ensure work quality with Discord role-gating or applications.",
+          "However you work, Bounty Board fits your workflow."],
         "cta": {
           "text": "Visit Bounty Board",
           "link": "https://bountyboard.bankless.community/",
