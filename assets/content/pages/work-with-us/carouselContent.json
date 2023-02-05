@@ -109,10 +109,10 @@
       },
       {
         "title": "Custom Articles",
-        "paras": ["CHANGE ME"],
+        "paras": ["Bankless Publishing (BP) is available to collaborate with value-aligned brands and protocols to generate educational articles that promote awareness, knowledge, and functionality of various integral aspects of the web3 ecosystem."],
         "cta": {
-          "text": "the Writers Guild",
-          "link": "https://www.notion.so/bankless/Writers-Guild-585a90523b9f4630bc04892931a11f7d",
+          "text": "Bankless Publishing",
+          "link": "https://banklesspublishing.com",
           "isExternal": true
         },
         "image": {
