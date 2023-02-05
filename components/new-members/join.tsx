@@ -8,9 +8,7 @@ import {
   Button,
   Link,
 } from '@chakra-ui/react'
-import { BaseLink } from 'components/_common/BaseLink'
 import { CTAButton } from 'components/_common/CTAButton'
-import { FiArrowRight } from 'react-icons/fi'
 
 export default function NewMembersJoinComponent() {
   return (
