@@ -46,7 +46,7 @@ export default function InfoSecTeamComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          InfoSec Team
+          INFOSEC TEAM
         </Heading>
         <Text
           color={'gray.100'}
