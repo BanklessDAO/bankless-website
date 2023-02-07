@@ -5,7 +5,6 @@ import BanklessLoansComponent from './content/bankless-loans'
 import ProjectBountyBoardComponent from './content/bounty-board'
 import ContentGatewayComponent from './content/content-gateway'
 import CryptoSapiensComponent from './content/crypto-sapiens'
-import DaoHeatComponent from './content/dao-heat'
 import DaoversityComponent from './content/daoversity'
 import DecentralizeLawNewsletterComponent from './content/decentralizes-law-newsletter'
 import EditArmProjectComponent from './content/edit-arm'
@@ -27,8 +26,6 @@ export default function ProjectsContentComponent() {
       <EditArmProjectComponent />
       <PodcastHatcheryComponent />
       <DaoversityComponent />
-      <DaoHeatComponent />
-      <WebsiteProjectComponent />
       <FightClubComponent />
       <BanklessLoansComponent />
       <BanklessAcademyComponent />
@@ -39,6 +36,7 @@ export default function ProjectsContentComponent() {
       <InternationalMediaNodesComponent />
       <DecentralizeLawNewsletterComponent />
       <InfoSecTeamComponent />
+      <WebsiteProjectComponent />
     </Box>
   )
 }

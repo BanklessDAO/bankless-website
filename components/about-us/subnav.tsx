@@ -21,7 +21,7 @@ const linksData = [
     alt: 'Link to Community Calls page',
   },
   {
-    title: 'PORTAL NODES',
+    title: 'MEDIA NODES',
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
