@@ -1,37 +1,6 @@
-import { Box, Heading, Text, Stack, VStack, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, VStack, Flex, Link } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import { FiArrowUpRight } from 'react-icons/fi'
-import { ulid } from 'ulid'
-import { BaseLink } from '../../../_common/BaseLink'
-
-//TODO add URLS
-const countries = [
-  { name: 'Adria', url: 'https://linktr.ee/banklessadria' },
-  { name: 'Arabic', url: 'https://linktr.ee/arbankless' },
-  // { name: 'Africa', url: '/' }, // link not found on https://linktr.ee/international_media_nodes
-  // { name: 'Australia', url: '/' }, // link not found on https://linktr.ee/international_media_nodes
-  { name: 'Bengali', url: 'https://linktr.ee/banklessbe' },
-  { name: 'Brazil', url: 'http://beacons.page/banklessbr' },
-  { name: 'Bulgaria', url: 'https://linktr.ee/banklessBG' },
-  { name: 'China', url: 'https://linktr.ee/BanklessCN' },
-  { name: 'Czech', url: 'https://bankl.es/cz/' },
-  { name: 'Deutsch', url: 'http://bankl.es/de' },
-  { name: 'Dutch', url: 'https://linktr.ee/banklessdutch' },
-  { name: 'Español', url: 'https://twitter.com/banklessdao_es' },
-  { name: 'Farsi', url: 'https://linktr.ee/BanklessFarsi' },
-  { name: 'France', url: 'https://linktr.ee/banklessfr' },
-  { name: 'Greece', url: 'https://linktr.ee/banklessgr' },
-  { name: 'Hindi', url: 'http://linktr.ee/banklesshi' },
-  { name: 'Italia', url: 'https://linktr.ee/ITbanklessDAO' },
-  { name: 'Magyar', url: 'https://linktr.ee/banklessmagyar' },
-  { name: 'Malayalam', url: 'https://linktr.ee/banklessmalayalam' },
-  { name: 'Mallu', url: 'https://linktr.ee/banklessmalayalam' },
-  { name: 'Romania', url: 'https://linktr.ee/banklessRo' },
-  { name: 'Sweden', url: 'https://linktr.ee/Bankless.se' },
-  { name: 'Turkey', url: 'https://linktr.ee/banklesstr' },
-  { name: 'Ukraine', url: 'https://linktr.ee/BanklessUA' },
-  // { name: 'Vietnam', url: '/' } // link not found on https://linktr.ee/international_media_nodes,
-]
 
 export default function NodesInternationalMediaComponent() {
   return (
@@ -51,24 +20,29 @@ export default function NodesInternationalMediaComponent() {
           <Underline />
         </Heading>
         <Text
-          color={'grey'}
-          fontSize={{ base: 'md', md: 'lg' }}
-          textTransform={'uppercase'}>
+          color={'white.200'}
+          fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}
+        >
           Join the Bankless journey in your continent, country, or language!
         </Text>
         <Flex
           flex={1}
           justify={{ base: 'center', md: 'space-around' }}
           align={'center'}
-          direction={{ md: 'row' }}
-          wrap={'wrap'}>
-          {countries.map(({ name, url }) => {
-            return (
-              <VStack key={ulid()} flex='0 0 33%' pb='1rem'>
-                <BaseLink text={`Bankless ${name}`} href={url} typeSize='l' />
-              </VStack>
-            )
-          })}
+          direction={{ base: 'column', md: 'row' }}>
+          <Flex align={'center'} color={'white.100'}>
+            <Link href='https://www.banklessimn.com/' isExternal>
+              <Flex align={'center'} color={'white.100'}>
+                <Text
+                  mr={'0.25rem'}
+                  fontSize={{ base: '1xl', md: '3xl' }}
+                  fontWeight={'bold'}>
+                  International Media Nodes
+                </Text>
+                <FiArrowUpRight size={25} />
+              </Flex>
+            </Link>
+          </Flex>
         </Flex>
       </Stack>
     </>
