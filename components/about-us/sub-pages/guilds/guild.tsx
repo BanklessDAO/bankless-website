@@ -135,6 +135,12 @@ function Guild() {
             alt='analytics-guild'
             reverse={true}
           />
+          <Section
+            title='PROJECT MANAGEMENT GUILD'
+            text=' A space for BanklessDAO creators to do their best work via project management best practices. We explore how PM best practices can be used within  the web3 space and DAOs. '
+            img='/images/project_management_guild.jpg'
+            alt='project management-guild'
+          />
         </VStack>
       </Flex>
     </Container>
