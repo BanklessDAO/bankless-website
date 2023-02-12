@@ -8,11 +8,11 @@ export default function WebsiteProjectComponent() {
       align={'center'}
       width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
-      direction={{ base: 'column', md: 'row' }}
+      direction={{ base: 'column', md: 'row-reverse' }}
     >
       <Flex
         flex={1}
-        justify={'flex-start'}
+        justify={'flex-end'}
         alignItems={'center'}
         position={'relative'}
         w={'full'}
