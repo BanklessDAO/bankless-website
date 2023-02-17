@@ -52,6 +52,13 @@ function Guild() {
         </Text>
         <VStack mt={8} rowGap={8}>
           <Section
+            title='Project Management Guild'
+            text='A space for BanklessDAO creators to do their best work via project management best practices.
+          We explore how PM best practices can be used within the web3 space and DAOs.'
+            img='/images/project_management_guild.jpg'
+            alt='project management guild'
+          />
+          <Section
             title='Audiovisual Guild'
             text='The AV Guild is the home of BanklessDAO video and audio content.
           From broadcasting the Community Call to building the next version of our audio-recording bot,
@@ -87,9 +94,9 @@ function Guild() {
           />
           <Section
             title='Education Department'
-            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners, 
-                  teaching DAO tooling need to succeed in the DAO space, 
-                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level. 
+            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners,
+                  teaching DAO tooling need to succeed in the DAO space,
+                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level.
                   The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
             img='/images/edu-guild.png'
             alt='education-guild'
@@ -105,7 +112,7 @@ function Guild() {
           />
           <Section
             title='marketing guild'
-            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering 
+            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering
            creative Web3 marketing solutions to place the stakeholders in front of the right people with the right message.'
             img='/images/marketing-guild.png'
             alt='marketing-guild'
