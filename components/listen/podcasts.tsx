@@ -154,6 +154,7 @@ class Podcasts extends React.Component {
                 fontFamily={'clear sans'}
                 fontWeight={700}
                 fontSize={{ base: '1.4rem', sm: '3xl', xl: '4xl' }}
+                textTransform={'uppercase'}
               >
                 Making Bank
               </Text>
@@ -163,22 +164,22 @@ class Podcasts extends React.Component {
                 width={{ base: '90%', md: '80%' }}
                 textAlign={'center'}
               >
-                Organized by{' '}
-                <Link
-                  color='#D02128'
-                  textDecoration='none'
-                  href='https://twitter.com/crypto_soundman'
-                  target='_blank'
-                >
-                  Soundman
-                </Link>{' '}
-                and hosted by members of the BanklessDAO community
+                Incubated by a BanklessDAO OG Team, over a Year in Flight
               </Text>
               <Text fontSize='md' fontFamily={'clear sans'} color='grey'>
                 Making Bank is a podcast made by BanklessDAO for BanklessDAO
                 members and like-minded Web3 pioneers. It offers an inside look
                 into bDAO and showcases the people, ideas, and projects that
                 keep it at the forefront of Web3 and DAOs.
+                <br />
+                <br />
+                For bDAO members, Making Bank is essential listening to stay on
+                top of the fast- moving projects and DAO alpha.
+                <br />
+                <br />
+                For the outside world, the podcast provides a window into the
+                ideas and activity happening inside one of the largest and most
+                active DAOs around.
               </Text>
               <UnorderedList width='95%' color='white' textAlign='start'>
                 <ListItem>
