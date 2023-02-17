@@ -154,6 +154,7 @@ class Podcasts extends React.Component {
                 fontFamily={'clear sans'}
                 fontWeight={700}
                 fontSize={{ base: '1.4rem', sm: '3xl', xl: '4xl' }}
+                textTransform={'uppercase'}
               >
                 Making Bank
               </Text>
