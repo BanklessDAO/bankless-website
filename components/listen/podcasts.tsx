@@ -171,8 +171,10 @@ class Podcasts extends React.Component {
                 into bDAO and showcases the people, ideas, and projects that
                 keep it at the forefront of Web3 and DAOs.
                 <br />
+                <br />
                 For bDAO members, Making Bank is essential listening to stay on
                 top of the fast- moving projects and DAO alpha.
+                <br />
                 <br />
                 For the outside world, the podcast provides a window into the
                 ideas and activity happening inside one of the largest and most
