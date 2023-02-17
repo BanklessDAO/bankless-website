@@ -21,7 +21,7 @@ const linksData = [
     alt: 'Link to Community Calls page',
   },
   {
-    title: 'PORTAL NODES',
+    title: 'MEDIA NODES',
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
@@ -43,7 +43,8 @@ const Subnav = () => (
         columnGap='2rem'
         justify={{ base: 'center', md: 'space-around' }}
         align={'center'}
-        wrap='wrap'>
+        wrap='wrap'
+      >
         {linksData.map(({ href, alt, title }: Link, index: number) => {
           return (
             <NextLink key={ulid()} href={href} passHref={true}>
@@ -55,7 +56,8 @@ const Subnav = () => (
                     fontSize={{ base: 'l', md: 'l', xl: '2xl' }}
                     fontWeight={700}
                     fontFamily='Clear Sans'
-                    cursor='pointer'>
+                    cursor='pointer'
+                  >
                     {title}
                   </Text>
                 </Flex>
@@ -70,7 +72,7 @@ const Subnav = () => (
       width='100%'
       mt='1rem !important'
       mb='4rem !important'
-      backgroundImage='linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1), rgba(255,0,0,0))'
+      backgroundImage='linear-gradient(to right, rgba(255,0,0,0), #d02128, rgba(255,0,0,0))'
     />
   </>
 )

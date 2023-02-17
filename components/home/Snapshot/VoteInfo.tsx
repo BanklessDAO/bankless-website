@@ -20,7 +20,7 @@ const VoteInfo = ({ total, choices, results }) => {
         <Text color='grey'>{`${result}%`}</Text>
         <Flex w='100px' direction='column'>
           <Box w='100px' h='5px' bg='grey' />
-          <Box w={barLen} h='5px' bg='red' position='relative' top='-5px' />
+          <Box w={barLen} h='5px' bg='#D02128' position='relative' top='-5px' />
         </Flex>
       </Flex>
     )

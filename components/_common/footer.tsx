@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import { Image } from '@chakra-ui/react'
 
 import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
@@ -99,15 +99,17 @@ class Footer extends React.Component {
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
           gap={{ base: 2, md: 6 }}
           width='80%'
-          borderTop='1px solid red'
+          borderTop='1px solid #D02128'
           marginTop={{ base: 8, lg: 16 }}
           paddingY={{ base: 8, lg: 8 }}
-          paddingX={{ base: 4, lg: 8 }}>
+          paddingX={{ base: 4, lg: 8 }}
+        >
           <Flex
             flexDirection='column'
             justifyContent='center'
             alignItems={{ base: 'center', md: 'start' }}
-            rowGap={4}>
+            rowGap={4}
+          >
             <Image
               src='/icons/bankless-square.jpg'
               objectFit='contain'
@@ -129,12 +131,13 @@ class Footer extends React.Component {
                     href={_social.href}
                     target='_blank'
                     key={`social-${idx}`}
-                    margin={2}>
+                    mx={1}
+                    my={2}>
                     <Image
                       src={_social.img}
                       alt={_social.alt}
-                      width={20}
-                      height={20}
+                      width={['20px', '20px']}
+                      height={['20px', '20px']}
                     />
                   </Link>
                 )
@@ -149,14 +152,16 @@ class Footer extends React.Component {
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}
               paddingTop={{ base: 4, lg: 12 }}
-              textAlign={{ base: 'center', lg: 'left' }}>
+              textAlign={{ base: 'center', lg: 'left' }}
+            >
               {LINKS.map((_link, idx) => {
                 return (
                   <Link
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                    fontSize={{ base: 'md', md: '2xl' }}>
+                    fontSize={{ base: 'md', md: '2xl' }}
+                  >
                     {_link.text}
                   </Link>
                 )

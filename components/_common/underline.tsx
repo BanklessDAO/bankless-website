@@ -13,10 +13,11 @@ class Underline extends React.Component {
         lineHeight='6px'
         background='linear-gradient(
           91.88deg,
-          #ff1013 44.79%,
+          #D02128 44.79%,
           rgba(140, 29, 207, 0) 101.77%
         )'
-        w='100%'>
+        w='100%'
+      >
         &nbsp;
       </Container>
     )

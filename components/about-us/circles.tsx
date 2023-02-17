@@ -7,7 +7,8 @@ const Circles = () => (
       textAlign={'center'}
       justify={'center'}
       align={'center'}
-      py={{ base: 0, sm: 30, md: 50 }}>
+      py={{ base: 0, sm: 30, md: 50 }}
+    >
       <Box
         width={{ base: 0, sm: '300px', md: '500px' }}
         height={{ base: 0, sm: '300px', md: '500px' }}
@@ -15,13 +16,15 @@ const Circles = () => (
         border='rgba(255, 255, 255, 0.05) 1px solid'
         boxShadow={
           'inset 0 0 30px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1)'
-        }>
+        }
+      >
         <Box
           width={{ base: 0, sm: '150px', md: '250px' }}
           height={{ base: 0, sm: '150px', md: '250px' }}
           borderRadius='50%'
           border='rgba(255, 0, 0, 0.2) 5px solid'
-          margin={{ base: '75px', md: '125px' }}>
+          margin={{ base: '75px', md: '125px' }}
+        >
           <Image
             alt='orbit'
             position={'absolute'}
@@ -91,7 +94,7 @@ const Circles = () => (
             height={{ base: 0, sm: '22px', md: '36px' }}
             margin={{ base: '-36px -6px', md: '-60px -10px' }}
             borderRadius='50%'
-            backgroundColor={'#FF1013'}
+            backgroundColor={'#D02128'}
           />
           <Box
             position={'absolute'}
@@ -99,7 +102,7 @@ const Circles = () => (
             height={{ base: 0, sm: '22px', md: '36px' }}
             margin={{ base: '36px 180px', md: '60px 300px' }}
             borderRadius='50%'
-            backgroundColor={'#FF1013'}
+            backgroundColor={'#D02128'}
           />
           <Box
             position={'absolute'}
@@ -123,7 +126,7 @@ const Circles = () => (
             height={{ base: 0, sm: '12px', md: '22px' }}
             margin={{ base: '116px -8px', md: '180px -16px' }}
             borderRadius='50%'
-            backgroundColor={'#FF1013'}
+            backgroundColor={'#D02128'}
           />
           <Box
             position={'absolute'}
@@ -131,7 +134,7 @@ const Circles = () => (
             height={{ base: 0, sm: '12px', md: '22px' }}
             margin={{ base: '120px 145px', md: '210px 242px' }}
             borderRadius='50%'
-            backgroundColor={'#FF1013'}
+            backgroundColor={'#D02128'}
           />
         </Box>
       </Box>
