@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
@@ -83,6 +83,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
   const router = useRouter()
+  const onPage = useMemo(() => router.pathname == to, [router.pathname, to])
   return (
     <Link
       as='a'
@@ -92,9 +93,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
         color: 'white',
         borderBottom: 'solid 4px white',
       }}
-      borderBottom={
-        router.pathname == to ? 'solid 4px red' : 'solid 4px transparent'
-      }
+      borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}
       {...rest}
     >
       <Text display='block' fontWeight={600}>
