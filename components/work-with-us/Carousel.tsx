@@ -74,7 +74,7 @@ export default function Carousel({
         variant='unstyled'
         colorScheme='green'
         py={{ base: 8, sm: 10, md: 14 }}
-        orientation={width < 576 ? 'vertical' : 'horizontal'}
+        orientation={'horizontal'}
         flexDirection='column'
       >
         <TabList>
@@ -82,7 +82,7 @@ export default function Carousel({
             <Tab
               key={ulid()}
               color={'white.100'}
-              fontSize={{ base: '2xl', sm: 'sm', md: 'md' }}
+              fontSize={{ sm: 'sm', md: 'md', lg: 'md' }}
               fontFamily='Clear Sans'
               textTransform='uppercase'
               p={{ base: 2, sm: 4 }}
