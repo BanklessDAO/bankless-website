@@ -82,7 +82,7 @@ export default function Carousel({
             <Tab
               key={ulid()}
               color={'white.100'}
-              fontSize={{ sm: 'sm', md: 'md', lg: 'md' }}
+              fontSize={{ base: 'sm', sm: 'sm', md: 'sm', lg: 'sm' }}
               fontFamily='Clear Sans'
               textTransform='uppercase'
               p={{ base: 2, sm: 4 }}
