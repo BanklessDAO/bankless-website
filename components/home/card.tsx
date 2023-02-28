@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Link, Divider, Box, Flex, useMediaQuery } from '@chakra-ui/react'
+import { Text, Box, Flex } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/_common/ChakraNextImage'
 import { useRouter } from 'next/router'
 
