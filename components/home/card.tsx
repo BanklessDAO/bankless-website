@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
-
-import { Text, Link, Divider, Box, Flex } from '@chakra-ui/react'
+import { Text, Link, Divider, Box, Flex, useMediaQuery } from '@chakra-ui/react'
 import { ChakraNextImage } from 'components/_common/ChakraNextImage'
+import { useRouter } from 'next/router'
 
-interface I_Props {
+interface Props {
   img: string
   title: string
   text: string
@@ -12,77 +11,57 @@ interface I_Props {
   pending?: boolean
 }
 
-class Card extends React.PureComponent<I_Props> {
-  render() {
-    return (
-      <Flex
-        flexDirection='column'
-        borderRadius='1rem'
-        background='#101010'
-        height='40rem'
-        overflow='hidden'
-        // maxW={{ base: '300px', md: '400px' }}
-      >
-        <Box w='100%' h='50rem'>
-          <ChakraNextImage
-            src={this.props.img}
-            alt='image'
-            width='100%'
-            height='100%'
-          />
-          {/* <Image src={this.props.img} alt='image' w='100%' h='100%' /> */}
-        </Box>
+const Card = ({ img, title, text, href, pending }: Props) => {
+  const router = useRouter()
+  const handleClick = () => router.push(href, undefined, { shallow: true })
+  return (
+    <Flex
+      onClick={!pending ? handleClick : undefined}
+      flexDirection='column'
+      borderRadius='1rem'
+      cursor={!pending ? 'pointer' : undefined}
+      background='#101010'
+      maxHeight={{
+        base: '32rem',
+        sm: '32rem',
+        md: '32rem',
+        lg: '40rem',
+        xl: '32rem',
+      }}
+      overflow='hidden'
+      // maxW={{ base: '300px', md: '400px' }}
+    >
+      <Box w='100%' h='50rem'>
+        <ChakraNextImage src={img} alt='image' width='100%' height='100%' />
+        {/* <Image src={this.props.img} alt='image' w='100%' h='100%' /> */}
+      </Box>
 
-        <Flex flexDir='column' height='100%' padding={{ base: 6, lg: 6 }}>
-          <Text
-            fontSize={{ base: '1.3rem', lg: '3xl' }}
-            fontWeight={700}
-            marginBottom={{ base: 6, lg: 18 }}>
-            {this.props.title.toUpperCase()}
-          </Text>
+      <Flex flexDir='column' height='100%' padding={{ base: 6, lg: 6 }}>
+        <Text fontSize={{ base: '1.3rem', lg: '3xl' }} fontWeight={700}>
+          {title.toUpperCase()}
+        </Text>
+        <Flex
+          direction={'column'}
+          justifyContent={'space-between'}
+          height={'100%'}
+        >
           <Text
             fontSize={{ base: 'md', lg: 'xl' }}
             color='rgba(255,255,255,0.57)'
-            marginBottom={{ base: 12, lg: 30 }}>
-            {this.props.text}
+          >
+            {text}
           </Text>
-
-          <Divider marginTop='auto' />
-
-          {this.props.pending ? (
-            <Box
-              display='flex'
-              alignItems='center'
-              marginRight='2'
-              marginTop='8'>
+          {pending && (
+            <Box display='flex' alignItems='center' marginRight='2'>
               <Text fontSize='sm' marginRight={2}>
                 Coming Soon
               </Text>
             </Box>
-          ) : (
-            <Link
-              display='flex'
-              alignItems='center'
-              marginRight='2'
-              marginTop='8'
-              href={this.props.href}>
-              <Text fontSize='sm' marginRight={2}>
-                Start
-              </Text>
-              <Box>
-                <Image
-                  src='/icons/arrow.png'
-                  alt='arrow'
-                  height={10}
-                  width={10}
-                />
-              </Box>
-            </Link>
           )}
         </Flex>
       </Flex>
-    )
-  }
+    </Flex>
+  )
 }
 
 export default Card
