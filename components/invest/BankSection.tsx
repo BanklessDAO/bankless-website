@@ -38,11 +38,7 @@ function BankSection() {
           <Text fontWeight={700} fontSize='7xl'>
             BANK
           </Text>
-          <Text
-            fontSize='3xl'
-            fontWeight={700}
-            color={'#D02128'}
-          >
+          <Text fontSize='3xl' fontWeight={700} color={'#D02128'}>
             The Most widely-held Token{' '}
           </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
@@ -95,16 +91,24 @@ function BankSection() {
               <Text mr={[0, 3]}>Current market cap and price is</Text>
               <Box>
                 <Flex
-                  mt={1.5}
                   justify={'center'}
                   align={'center'}
                   w={[160, 180]}
+                  cursor={'pointer'}
                   border={'0.5px solid #D02128'}
+                  _hover={{
+                    bgColor: '#D02128',
+                    '.available_here_text': {
+                      color: 'white',
+                    },
+                  }}
                 >
                   <Link
                     py={'5px'}
                     fontWeight={800}
+                    className={'available_here_text'}
                     color='#D02128'
+                    style={{ textDecoration: 'none' }}
                     href='https://www.coingecko.com/en/coins/bankless-dao'
                     isExternal
                   >
