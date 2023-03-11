@@ -1,9 +1,11 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, Link } from '@chakra-ui/react'
 import React from 'react'
 
 const Logo = () => {
   return (
-    <Flex
+    <Link
+      as={Flex}
+      href="/dao"
       h='100%'
       direction='column'
       align='center'
@@ -26,7 +28,7 @@ const Logo = () => {
           DAO
         </Text>
       </Flex>
-    </Flex>
+    </Link>
   )
 }
 
