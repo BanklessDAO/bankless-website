@@ -22,16 +22,17 @@ function GmiIndex() {
             width={['80%', '100%']}
           >
             <Text
+              variant={'span'}
               textAlign={{ base: 'center', md: 'left' }}
               fontWeight={700}
               fontSize='5xl'
             >
               GMI INDEX
             </Text>
-            <Flex justify={{ base: 'center', md: 'flex-start' }}>
-              <Box ml={0} width={75} height={'12px'} background={'#D02128'} />
-              <Box ml={2} width={75} height={'12px'} background={'#D02128'} />
-              <Box ml={2} width={75} height={'12px'} background={'#D02128'} />
+            <Flex justify={{ base: 'center', md: 'flex-start' }} ml={'2px'}>
+              <Box ml={0} width={77.5} height={'12px'} background={'#D02128'} />
+              <Box ml={2} width={77.5} height={'12px'} background={'#D02128'} />
+              <Box ml={2} width={77.5} height={'12px'} background={'#D02128'} />
             </Flex>
             <Text
               textAlign={{ base: 'center', md: 'left' }}
