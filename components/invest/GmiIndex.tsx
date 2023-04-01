@@ -63,8 +63,14 @@ function GmiIndex() {
             alignItems={'center'}
             flexDirection={{ base: 'column', md: 'row' }}
           >
-            <Link href='https://app.indexcoop.com/gmi' isExternal>
-              <Button as='a' textDecorationLine={'none'}>
+            <Link
+              href='https://app.indexcoop.com/gmi'
+              isExternal
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Button as='a'>
                 <Container padding={0} paddingRight={2}>
                   <Image
                     src='/images/bed-token.png'

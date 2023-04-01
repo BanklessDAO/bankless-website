@@ -64,7 +64,7 @@ export default function GovernanceStartComponent() {
                   display={'inline'}
                 >
                   <Link
-                    href={"https://forum.bankless.community/"}
+                    href={'https://forum.bankless.community/'}
                     isExternal
                     color='#D02128'
                   >
@@ -72,26 +72,40 @@ export default function GovernanceStartComponent() {
                   </Link>
                 </Text>
               </Text>
-              <Flex align={'center'} color={'white.100'}>
-                <Link
-                  href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
-                  isExternal
-                  color='#D02128'
+              <Link
+                width={'fit-content'}
+                href={'https://www.coinbase.com/how-to-buy/bankless-dao'}
+                isExternal
+                textDecoration={'none'}
+                _hover={{
+                  color: '#D02128',
+                }}
+              >
+                <Flex
+                  align={'center'}
+                  _hover={{
+                    color: '#D02128',
+                    borderColor: '#D02128',
+                    '.buy_bank_text': {
+                      color: '#D02128',
+                    },
+                  }}
+                  borderBottom={'2px solid white'}
                 >
                   <Text
                     mr={'0.25rem'}
+                    className={'buy_bank_text'}
                     fontSize={{ base: '2xl', lg: 'md' }}
                     fontWeight={'bold'}
                     cursor='pointer'
                     letterSpacing={'0px'}
                     pb='1px'
-                    borderBottom={'2px solid white'}
                   >
                     Buy Bank
                   </Text>
-                </Link>
-                <FiArrowUpRight size={20} />
-              </Flex>
+                  <FiArrowUpRight size={20} />
+                </Flex>
+              </Link>
             </Stack>
           </Box>
           <Box>
@@ -128,7 +142,7 @@ export default function GovernanceStartComponent() {
             display={'inline'}
           >
             <Link
-              href={"https://discord.com/invite/bankless"}
+              href={'https://discord.com/invite/bankless'}
               isExternal
               color='#D02128'
             >
