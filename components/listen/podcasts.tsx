@@ -49,10 +49,10 @@ class Podcasts extends React.Component {
               >
                 Hosted By{' '}
                 <Link
-                  color='red.600'
+                  color='#D02128'
                   textDecoration='none'
                   href='https://twitter.com/humptycalderon'
-                  target="_blank"
+                  target='_blank'
                 >
                   Humpty
                 </Link>
@@ -68,29 +68,29 @@ class Podcasts extends React.Component {
                 <ListItem>
                   Listen on{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://open.spotify.com/show/3yS1Y61r0XkogChx12JQ2q'
-                    target="_blank"
+                    target='_blank'
                   >
                     Spotify
                   </Link>{' '}
                   and{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://podcasts.apple.com/us/podcast/crypto-sapiens/id1588346317'
-                    target="_blank"
+                    target='_blank'
                   >
                     Apple Podcasts
                   </Link>
                 </ListItem>
                 <ListItem>
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://gitcoin.co/grants/5187/crypto-sapiens-podcast-gitcoin-grants-proposal'
-                    target="_blank"
+                    target='_blank'
                   >
                     Sponsor the Show
                   </Link>
@@ -98,19 +98,19 @@ class Podcasts extends React.Component {
                 <ListItem>
                   Follow on{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://mobile.twitter.com/cryptosapiens_'
-                    target="_blank"
+                    target='_blank'
                   >
                     Twitter
                   </Link>{' '}
                   and{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://www.instagram.com/cryptosapiensofficial/'
-                    target="_blank"
+                    target='_blank'
                   >
                     Instagram
                   </Link>
@@ -154,6 +154,7 @@ class Podcasts extends React.Component {
                 fontFamily={'clear sans'}
                 fontWeight={700}
                 fontSize={{ base: '1.4rem', sm: '3xl', xl: '4xl' }}
+                textTransform={'uppercase'}
               >
                 Making Bank
               </Text>
@@ -163,48 +164,49 @@ class Podcasts extends React.Component {
                 width={{ base: '90%', md: '80%' }}
                 textAlign={'center'}
               >
-                Organized by{' '}
-                <Link
-                  color='red.600'
-                  textDecoration='none'
-                  href='https://twitter.com/crypto_soundman'
-                  target="_blank"
-                >
-                  Soundman
-                </Link>{' '}
-                and hosted by members of the BanklessDAO community
+                Incubated by a BanklessDAO OG Team, over a Year in Flight
               </Text>
               <Text fontSize='md' fontFamily={'clear sans'} color='grey'>
-                Making Bank is a podcast made by BanklessDAO for BanklessDAO members
-                and like-minded Web3 pioneers. It offers an inside look into bDAO and
-                showcases the people, ideas, and projects that keep it at the forefront
-                of Web3 and DAOs.
+                Making Bank is a podcast made by BanklessDAO for BanklessDAO
+                members and like-minded Web3 pioneers. It offers an inside look
+                into bDAO and showcases the people, ideas, and projects that
+                keep it at the forefront of Web3 and DAOs.
+                <br />
+                <br />
+                For bDAO members, Making Bank is essential listening to stay on
+                top of the fast- moving projects and DAO alpha.
+                <br />
+                <br />
+                For the outside world, the podcast provides a window into the
+                ideas and activity happening inside one of the largest and most
+                active DAOs around.
               </Text>
               <UnorderedList width='95%' color='white' textAlign='start'>
                 <ListItem>
                   Listen on{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://open.spotify.com/show/1jLNOoJv77K733rZzL4c6b'
-                    target="_blank"
+                    target='_blank'
                   >
                     Spotify
-                  </Link>,{' '}
+                  </Link>
+                  ,{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://podcasts.apple.com/us/podcast/making-bank-a-banklessdao-podcast/id1610031915'
-                    target="_blank"
+                    target='_blank'
                   >
                     Apple Podcasts
-                  </Link>
-                  {' '}and{' '}
+                  </Link>{' '}
+                  and{' '}
                   <Link
-                    color='red.600'
+                    color='#D02128'
                     textDecoration='none'
                     href='https://rss.com/podcasts/making-bank-banklessdao/'
-                    target="_blank"
+                    target='_blank'
                   >
                     RSS
                   </Link>

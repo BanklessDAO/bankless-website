@@ -1,6 +1,10 @@
-module.exports = {
-  '**/*.ts?(x)': filenames =>
-    `next lint --fix --file ${filenames
-      .map(file => file.split(process.cwd())[1])
-      .join(' --file ')}`,
+import { relative } from 'path'
+
+const buildEslintCommand = (filenames) =>
+  `next lint --fix --file ${filenames
+    .map((f) => relative(process.cwd(), f))
+    .join(' --file ')}`
+
+export default {
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
 }

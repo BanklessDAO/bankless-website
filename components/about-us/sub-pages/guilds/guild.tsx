@@ -1,21 +1,41 @@
 import React from 'react'
 import Section from './section'
-import { Container, Flex, Text, VStack } from '@chakra-ui/react'
+import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 function Guild() {
   return (
-    <Container maxW={{ base: 'container.sm', md: 'container.xl' }}>
+    <Stack
+        as={Box}
+        textAlign={'center'}
+        spacing={{ base: 2, md: 6 }}
+        py={{ base: 10, md: 18 }}
+        position='relative'
+        zIndex='docked'
+      >
+        <Heading
+          fontWeight={700}
+          fontSize={{
+            base: '2.7rem',
+            sm: '6xl',
+            md: '7xl',
+            lg: '7xl',
+          }}
+          lineHeight={'120%'}
+          color={'white.100'}
+        >
+          Guilds
+          <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
+            <Underline />
+          </Box>
+        </Heading>
+    
       <Flex
         flexDir='column'
         justify='center'
         alignItems='center'
         lineHeight={{ base: '30px', md: '40px' }}
       >
-        <Text fontWeight={700} fontSize='6xl' textAlign='center' maxW={750}>
-          Guilds
-        </Text>
-        <Underline />
         <Text
           textAlign='center'
           mb={10}
@@ -32,12 +52,11 @@ function Guild() {
         </Text>
         <VStack mt={8} rowGap={8}>
           <Section
-            title='Analytics Guild'
-            text='The Analytics Guild builds data products and uses data analytics to equip
-                    bDAO members to achieve our mission with data-driven intelligence.
-                    The Analytics Guild also incubated DAO DASH.'
-            img='/images/analytic-guild.png'
-            alt='analytics-guild'
+            title='Project Management Guild'
+            text='A space for BanklessDAO creators to do their best work via project management best practices.
+          We explore how PM best practices can be used within the web3 space and DAOs.'
+            img='/images/project_management_guild.jpg'
+            alt='project management guild'
           />
           <Section
             title='Audiovisual Guild'
@@ -58,9 +77,9 @@ function Guild() {
           />
           <Section
             title='Design Guild'
-            text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
-          the guilds within BanklessDAO.
-          This guild helps us best represent our DAO to anyone outside bDAO.'
+            text='Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a
+                  narrative through visual aid, and generate funding through art. We use integrity in our images and
+                  content. As a culture, we reward action and embrace risk.'
             img='/images/design-guild.png'
             alt='design-guild'
             reverse={true}
@@ -74,10 +93,11 @@ function Guild() {
             alt='dev-guild'
           />
           <Section
-            title='Education guild'
-            text='The Education Guild provides educational tools and resources to empower bDAO members with knowledge about Web3,
-          DeFi, NFTs and the greater crypto ecosystem.
-          They also incubated the Bankless Academy project.'
+            title='Education Department'
+            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners,
+                  teaching DAO tooling need to succeed in the DAO space,
+                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level.
+                  The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
             img='/images/edu-guild.png'
             alt='education-guild'
             reverse={true}
@@ -92,7 +112,7 @@ function Guild() {
           />
           <Section
             title='marketing guild'
-            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering 
+            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering
            creative Web3 marketing solutions to place the stakeholders in front of the right people with the right message.'
             img='/images/marketing-guild.png'
             alt='marketing-guild'
@@ -133,9 +153,18 @@ function Guild() {
             img='/images/writers-guild.png'
             alt='writers-guild'
           />
+          <Section
+            title='Analytics Guild (INACTIVE)'
+            text='The Analytics Guild builds data products and uses data analytics to equip
+                    bDAO members to achieve our mission with data-driven intelligence.
+                    The Analytics Guild also incubated DAO DASH.'
+            img='/images/analytic-guild.png'
+            alt='analytics-guild'
+            reverse={true}
+          />
         </VStack>
       </Flex>
-    </Container>
+    </Stack>
   )
 }
 

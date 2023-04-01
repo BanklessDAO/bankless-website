@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
@@ -65,7 +66,8 @@ const MenuIcon = () => (
     width='24px'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
-    fill='white'>
+    fill='white'
+  >
     <title>Menu</title>
     <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
   </svg>
@@ -80,6 +82,8 @@ const MenuToggle = ({ toggle, isOpen }) => {
 }
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
+  const router = useRouter()
+  const onPage = useMemo(() => router.pathname == to, [router.pathname, to])
   return (
     <Link
       as='a'
@@ -87,9 +91,11 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
       textDecoration='none'
       _hover={{
         color: 'white',
-        borderBottom: 'solid 4px #D02128',
+        borderBottom: 'solid 4px white',
       }}
-      {...rest}>
+      borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}
+      {...rest}
+    >
       <Text display='block' fontWeight={600}>
         {children}
       </Text>
@@ -101,7 +107,8 @@ const MenuLinks = ({ isOpen }) => {
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
-      flexBasis={{ base: '100%', md: 'auto' }}>
+      flexBasis={{ base: '100%', md: 'auto' }}
+    >
       <Stack
         spacing={8}
         className='linkStack'
@@ -109,7 +116,8 @@ const MenuLinks = ({ isOpen }) => {
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
         direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 0, 0]}
-        mb='8px'>
+        mb='8px'
+      >
         {NAV_LINKS.map((_navLink, idx) => {
           return (
             <MenuItem key={`link-${idx}`} to={_navLink.href}>
@@ -135,7 +143,8 @@ const NavBarContainer = ({ children, ...props }) => {
       bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
       color={['white', 'white', 'primary.700', 'primary.700']}
       zIndex={2}
-      {...props}>
+      {...props}
+    >
       {children}
     </Flex>
   )
