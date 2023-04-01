@@ -10,7 +10,9 @@ import {
   Box,
   Heading,
   Link,
+  HStack,
 } from '@chakra-ui/react'
+import React from 'react'
 
 function BedIndex() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
@@ -50,10 +52,7 @@ function BedIndex() {
               )}
             </Container>
             <br />
-            <Text
-              as={'span'}
-              color={'#D02128'}
-            >
+            <Text as={'span'} color={'#D02128'}>
               The only index that can get ETH and BTC maxis in BED together
             </Text>
           </Heading>
@@ -69,7 +68,7 @@ function BedIndex() {
               investment products.
             </Text>
           </Stack>
-          <VStack justifyContent={'flex-end'} display='flex'>
+          <HStack justifyContent={'flex-end'} display='flex'>
             <Container
               padding={{ base: 0, md: 0, lg: 0 }}
               display='flex'
@@ -80,9 +79,10 @@ function BedIndex() {
               <Link
                 href='https://app.indexcoop.com/bed'
                 isExternal
+                style={{ textDecoration: 'none' }}
                 mb={{ base: '22px', md: 0 }}
               >
-                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
+                <Button fontWeight={800}>
                   <Container padding={0} paddingRight={2}>
                     <Image
                       src='/images/bed-token.png'
@@ -94,14 +94,17 @@ function BedIndex() {
                   Invest in BED index
                 </Button>
               </Link>
-              <Link href='https://www.bankless.community/bed-index' isExternal>
+              <Link
+                href='https://www.bankless.community/bed-index'
+                isExternal
+                style={{ textDecoration: 'none' }}
+              >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  {/* <Container padding={0} paddingRight={2}></Container> */}
                   Learn more about Bed Index
                 </Button>
               </Link>
             </Container>
-          </VStack>
+          </HStack>
         </Stack>
         {/* Desktop size Logo */}
         <Flex
