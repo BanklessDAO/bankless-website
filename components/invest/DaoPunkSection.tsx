@@ -27,12 +27,25 @@ function DaoPunkSection() {
             DAO Punks
           </Text>
         ) : null}
-        <Image
+        {isMobile ? (
+          <Container alignSelf={'center'}>
+          <Image
           src='/images/DAO-Punk-Invest.png'
           alt='bankToken'
           height={413}
           width={413}
         />
+      </Container>
+        ) : null}
+
+        {!isMobile ? (
+          <Image
+          src='/images/DAO-Punk-Invest.png'
+          alt='bankToken'
+          height={413}
+          width={413}
+        />
+        ) : null}
         <VStack justifyContent={'flex-start'} display='flex'>
           <Container flexDirection={{ base: 'column', md: 'row' }}>
             {!isMobile ? (
