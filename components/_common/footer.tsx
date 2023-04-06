@@ -94,22 +94,24 @@ const LINKS = [
 class Footer extends React.Component {
   render() {
     return (
-      <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+      <Flex
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        width='full'>
         <Grid
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
-          gap={{ base: 2, md: 6 }}
+          gap={{ base: 2, md: 6, safari: '2' }}
           width='80%'
           borderTop='1px solid #D02128'
           marginTop={{ base: 8, lg: 16 }}
           paddingY={{ base: 8, lg: 8 }}
-          paddingX={{ base: 4, lg: 8 }}
-        >
+          paddingX={{ base: 4, lg: 8 }}>
           <Flex
             flexDirection='column'
             justifyContent='center'
             alignItems={{ base: 'center', md: 'start' }}
-            rowGap={4}
-          >
+            rowGap={4}>
             <Image
               src='/icons/bankless-square.jpg'
               objectFit='contain'
@@ -152,16 +154,14 @@ class Footer extends React.Component {
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}
               paddingTop={{ base: 4, lg: 12 }}
-              textAlign={{ base: 'center', lg: 'left' }}
-            >
+              textAlign={{ base: 'center', lg: 'left' }}>
               {LINKS.map((_link, idx) => {
                 return (
                   <Link
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                    fontSize={{ base: 'md', md: '2xl' }}
-                  >
+                    fontSize={{ base: 'md', md: '2xl' }}>
                     {_link.text}
                   </Link>
                 )
