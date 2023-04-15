@@ -1,10 +1,8 @@
-import { useIsMobile } from 'components/_hooks/useIsMobile'
 import DesktopView from './DesktopView'
-import MobileView from './MobileView'
 
+// this was carousel before I changed it. that is why the name stlll remain the same
 const Carousel = () => {
-  const isMobile = useIsMobile()
-  return isMobile ? <MobileView /> : <DesktopView />
+  return <DesktopView />
 }
 
 export default Carousel
