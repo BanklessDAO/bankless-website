@@ -95,6 +95,11 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
       }}
       borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}
       {...rest}
+      sx={{
+        '@media (max-width: 1040px)': {
+          paddingTop: '16px',
+        },
+      }}
     >
       <Text display='block' fontWeight={600}>
         {children}
@@ -108,6 +113,12 @@ const MenuLinks = ({ isOpen }) => {
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
       flexBasis={{ base: '100%', md: 'auto' }}
+      sx={{
+        '@media (max-width: 1040px)': {
+          display: isOpen ? 'block' : 'none',
+          'flex-basis': '100%'
+        },
+      }}
     >
       <Stack
         spacing={8}
@@ -117,6 +128,13 @@ const MenuLinks = ({ isOpen }) => {
         direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 0, 0]}
         mb='8px'
+        sx={{
+          '@media (max-width: 1040px)': {
+            justifyContent: 'center',
+            flexDirection: 'column',
+            paddingTop: '16px',
+          },
+        }}
       >
         {NAV_LINKS.map((_navLink, idx) => {
           return (
@@ -144,6 +162,12 @@ const NavBarContainer = ({ children, ...props }) => {
       color={['white', 'white', 'primary.700', 'primary.700']}
       zIndex={2}
       {...props}
+      sx={{
+        '@media (max-width: 1040px)': {
+          background: 'primary.500',
+          color: 'white'
+        },
+      }}
     >
       {children}
     </Flex>
