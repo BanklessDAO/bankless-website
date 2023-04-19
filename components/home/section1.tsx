@@ -77,7 +77,7 @@ class Section1 extends React.Component {
             </Text>
           </Flex>
           <Box w={{ base: '100%', md: '150%' }}>
-            <video width='100%' height={'auto'} autoPlay loop muted playsInline>
+            <video width='100%' height={'500px'} autoPlay loop muted playsInline>
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>
           </Box>
