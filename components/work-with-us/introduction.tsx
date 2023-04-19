@@ -1,5 +1,4 @@
-import { Box, Heading, Text, VStack } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/_common/ChakraNextImage'
+import { Flex, Box, Heading, Text, VStack } from '@chakra-ui/react'
 
 export default function IntroductionComponent() {
   return (
