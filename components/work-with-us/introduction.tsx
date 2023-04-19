@@ -64,7 +64,7 @@ export default function IntroductionComponent() {
         </>
         <Flex alignItems='center' justifyContent='center'>
           <Box w={{ base: '100%', md: '100%' }}>
-            <video width='100%' height={'auto'} autoPlay loop muted playsInline>
+            <video width='100%'  height={'400px'} autoPlay loop muted playsInline>
               <source src='/videos/work-with-us/Welcome_to_DAO.mp4' type='video/mp4' />
             </video>
           </Box>
