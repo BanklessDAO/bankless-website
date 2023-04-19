@@ -63,14 +63,13 @@ export default function IntroductionComponent() {
             filter='blur(6rem)'
           />
         </>
-        <ChakraNextImage
-          src='/images/work-with-us/work-with-us-1.jpg'
-          alt='Web3 products and services'
-          height={{ base: '224px', lg: '400px' }}
-          width={'full'}
-          objectFit='cover'
-          borderRadius='104px'
-        />
+        <Flex alignItems='center' justifyContent='center'>
+          <Box w={{ base: '100%', md: '100%' }}>
+            <video width='100%' height={'auto'} autoPlay loop muted playsInline>
+              <source src='/videos/work-with-us/Welcome_to_DAO.mp4' type='video/mp4' />
+            </video>
+          </Box>
+        </Flex>
       </Box>
     </>
   )
