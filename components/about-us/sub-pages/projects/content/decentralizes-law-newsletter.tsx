@@ -53,7 +53,6 @@ export default function DecentralizeLawNewsletterComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Legal Guild runs a legal newsletter that covers developments in

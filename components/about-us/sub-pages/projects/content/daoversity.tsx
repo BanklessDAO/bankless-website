@@ -58,7 +58,6 @@ export default function DaoversityComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           DAOversity aims to understand and improve diversity within

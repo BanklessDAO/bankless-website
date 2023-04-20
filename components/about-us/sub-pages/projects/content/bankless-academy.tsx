@@ -53,7 +53,6 @@ export default function BanklessAcademyComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Bankless Academy is an app that will take someone with zero knowledge

@@ -53,7 +53,6 @@ export default function FirstQuestComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           First Quest is building our onboarding process, which has become
