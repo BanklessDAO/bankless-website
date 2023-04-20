@@ -8,7 +8,13 @@ const Logo = () => {
       direction='column'
       align='center'
       justify='center'
-      display={{ base: 'none', md: 'flex' }}>
+      display={{ base: 'none', md: 'flex' }}
+      sx={{
+        '@media (max-width: 1040px)': {
+          display: 'none',
+        },
+      }}
+     >
       <Flex
         p='10px 15px 15px 15px'
         maxH='150px'
