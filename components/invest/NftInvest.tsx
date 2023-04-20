@@ -22,8 +22,8 @@ function NftInvest() {
             justifyContent='center'
             flexDirection='column'
             className='border-box'
-            width='458px'
-            height='250px'
+            width={{ base: '100%', md: '458px' }}
+            height={{ base: '300px', md: '250px' }}
           >
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
               {`Chippi are hand-drawn 1-of-1s from BanklessDAO contributor Perchy.
@@ -60,8 +60,8 @@ function NftInvest() {
             justifyContent='center'
             flexDirection='column'
             className='border-box'
-            width='458px'
-            height='250px'
+            width={{ base: '100%', md: '458px' }}
+            height={{ base: '300px', md: '250px' }}
             margin={0}
           >
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
