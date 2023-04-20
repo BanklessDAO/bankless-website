@@ -81,14 +81,17 @@ class Section1 extends React.Component {
               {`Join Us`}
             </Text>
           </Flex>
-          <Box w={{ base: '100%', md: '150%' }}>
+          <Box h={'300px'}>
             <video
               width='100%'
-              height={'200px'}
+              height={'100%'}
               autoPlay
               loop
               muted
               playsInline
+              style={{
+                height: '300px',
+              }}
             >
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>
