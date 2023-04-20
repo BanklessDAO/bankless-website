@@ -84,7 +84,7 @@ class Section1 extends React.Component {
           <Box w={{ base: '100%', md: '150%' }}>
             <video
               width='100%'
-              height={'400px'}
+              height={'200px'}
               autoPlay
               loop
               muted
