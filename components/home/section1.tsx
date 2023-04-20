@@ -32,7 +32,8 @@ class Section1 extends React.Component {
           pt={{ base: 0, md: '8rem' }}
           pb={{ base: 0, md: '4rem' }}
           rowGap={{ base: '4rem', md: '2rem' }}
-          w='100%'>
+          w='100%'
+        >
           <Heading
             textAlign='center'
             color={'white.100'}
@@ -40,7 +41,8 @@ class Section1 extends React.Component {
             fontWeight={700}
             fontFamily='Clear Sans'
             fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-            zIndex='1'>
+            zIndex='1'
+          >
             Media and Social DAO
             <br />
             Onboarding 1 billion people
@@ -53,7 +55,8 @@ class Section1 extends React.Component {
           <Flex
             direction={{ base: 'column', md: 'row' }}
             justifyContent='center'
-            width='100%'>
+            width='100%'
+          >
             <Text
               color={'grey'}
               flex='0 0 auto'
@@ -61,7 +64,8 @@ class Section1 extends React.Component {
               fontFamily='Clear Sans'
               marginTop={'2rem'}
               textAlign={'center'}
-              pb={{ base: '0rem', md: '4rem' }}>
+              pb={{ base: '0rem', md: '4rem' }}
+            >
               We’re Headed West.
             </Text>
             <Text
@@ -72,12 +76,20 @@ class Section1 extends React.Component {
               marginTop={{ base: '0rem', md: '2rem' }}
               textAlign={'center'}
               pl='1rem'
-              pb={{ base: '4rem', md: '4rem' }}>
+              pb={{ base: '4rem', md: '4rem' }}
+            >
               {`Join Us`}
             </Text>
           </Flex>
           <Box w={{ base: '100%', md: '150%' }}>
-            <video width='100%' height={'500px'} autoPlay loop muted playsInline>
+            <video
+              width='100%'
+              height={'400px'}
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
             </video>
           </Box>
