@@ -60,7 +60,6 @@ export default function ProjectBountyBoardComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Bounty Board creates an efficient mechanism of coordination

@@ -53,7 +53,6 @@ export default function NewsletterProjectComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Newsletter project provides a written voice for the Bankless

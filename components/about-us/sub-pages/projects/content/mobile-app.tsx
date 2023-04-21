@@ -53,7 +53,6 @@ export default function MobileAppComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Mobile App project aims to build a mobile application for all

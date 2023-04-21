@@ -53,7 +53,6 @@ export default function PodcastHatcheryComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Podcast Hatchery empowers individual creators to develop their own

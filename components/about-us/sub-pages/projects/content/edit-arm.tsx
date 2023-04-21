@@ -58,7 +58,6 @@ export default function EditArmProjectComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The EPA is the center for longform writing in BanklessDAO. The skilled

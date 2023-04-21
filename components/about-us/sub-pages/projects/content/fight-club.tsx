@@ -53,7 +53,6 @@ export default function FightClubComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Fight Club aims to create opportunities for the bDAO community to pool

@@ -58,7 +58,6 @@ export default function WebsiteProjectComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Website project aims to constantly improve the code, content, and
