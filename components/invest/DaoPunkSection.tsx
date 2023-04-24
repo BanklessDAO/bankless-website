@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import {
   Text,
   Container,
@@ -9,13 +9,14 @@ import {
   Box,
   Stack,
   Link,
+  Image,
 } from '@chakra-ui/react'
 
 function DaoPunkSection() {
   const [isMobile] = useMediaQuery('(max-width: 768px)')
 
   return (
-    <Container maxW={'6xl'} p={0}>
+    <Container maxW={'6xl'} p={0} display={'flex'} justifyContent={'center'}>
       <Stack
         align={'right'}
         spacing={10}
@@ -23,16 +24,23 @@ function DaoPunkSection() {
         direction={{ base: 'column', md: 'row' }}
       >
         {isMobile ? (
-          <Text fontWeight={700} fontSize='5xl' lineHeight='58px'>
+          <Text
+            fontWeight={700}
+            fontSize='5xl'
+            lineHeight='58px'
+            paddingX={{ base: '15%', md: '0' }}
+          >
             DAO Punks
           </Text>
         ) : null}
-        <Container width={413} alignSelf={'center'}>
+        <Container width={'100%'} alignSelf={'center'}>
           <Image
             src='/images/DAO-Punk-Invest.png'
             alt='bankToken'
-            height={413}
-            width={413}
+            height={{ base: '100%', md: '300px' }}
+            width='450px'
+            maxW={'10000000px'}
+            paddingX={{ base: '15%', md: '0' }}
           />
         </Container>
         <VStack justifyContent={'flex-start'} display='flex'>
@@ -42,7 +50,10 @@ function DaoPunkSection() {
                 DAO Punks
               </Text>
             ) : null}
-            <Box>
+            <Box
+              boxSize={{ base: '100%', md: '400px' }}
+              paddingX={{ base: '15%', md: '0' }}
+            >
               <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
                 DAOpunks launched in 2021 with the mission of helping to free
                 all humans from the soul-sucking drudgery of default world work.
