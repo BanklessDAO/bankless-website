@@ -58,7 +58,6 @@ export default function BanklessLoansComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           The Bankless Loans Project Team is building a DeFi application for

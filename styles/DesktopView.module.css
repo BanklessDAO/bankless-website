@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     max-width: 40%;
-    min-height: 400px;
+    max-height: 400px;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
@@ -35,10 +35,6 @@
     margin-top: 0;
     line-height: 1.2;
     display: block;
-    margin-block-start: 1.67em;
-    margin-block-end: 1.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 .card-text{
     margin-top: 0;

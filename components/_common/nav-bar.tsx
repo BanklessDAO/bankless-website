@@ -75,7 +75,15 @@ const MenuIcon = () => (
 
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
+    <Box
+      display='none'
+      onClick={toggle}
+      sx={{
+        '@media (max-width: 1040px)': {
+          display: 'block',
+        },
+      }}
+    >
       {isOpen ? <CloseIcon /> : <MenuIcon />}
     </Box>
   )
@@ -116,7 +124,7 @@ const MenuLinks = ({ isOpen }) => {
       sx={{
         '@media (max-width: 1040px)': {
           display: isOpen ? 'block' : 'none',
-          'flex-basis': '100%'
+          'flex-basis': '100%',
         },
       }}
     >
@@ -165,7 +173,7 @@ const NavBarContainer = ({ children, ...props }) => {
       sx={{
         '@media (max-width: 1040px)': {
           background: 'primary.500',
-          color: 'white'
+          color: 'white',
         },
       }}
     >

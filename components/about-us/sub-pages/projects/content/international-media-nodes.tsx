@@ -58,7 +58,6 @@ export default function InternationalMediaNodesComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           International Media Nodes (IMN) are Bankless channels that spread the

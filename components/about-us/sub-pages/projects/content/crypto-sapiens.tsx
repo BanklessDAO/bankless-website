@@ -58,7 +58,6 @@ export default function CryptoSapiensComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Humpty, one of bDAO’s active contributors, hosts a weekly podcast

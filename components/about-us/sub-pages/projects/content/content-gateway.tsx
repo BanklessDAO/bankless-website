@@ -58,7 +58,6 @@ export default function ContentGatewayComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Content Gateway aims to build a web service layer that enables content

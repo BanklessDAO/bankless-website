@@ -59,7 +59,6 @@ export default function ProjectBanklessConsultingComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
           Bankless Consulting is the consulting services arm of BanklessDAO. It

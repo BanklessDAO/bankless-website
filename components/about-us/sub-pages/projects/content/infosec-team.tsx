@@ -58,22 +58,19 @@ export default function InfoSecTeamComponent() {
             lg: '30px',
             xl: '45px',
           }}
-          textAlign='justify'
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          BanklessDAO’s InfoSec Team are the protectors of the DAO. Composed of information security experts and enthusiasts, they work in a cross-functional manner to help educate and deliver best security practices within the DAO and wider crypto ecosystem.
+          BanklessDAO’s InfoSec Team are the protectors of the DAO. Composed of
+          information security experts and enthusiasts, they work in a
+          cross-functional manner to help educate and deliver best security
+          practices within the DAO and wider crypto ecosystem.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
           spacing={'12px'}
         >
-          <Link
-            href={
-              'https://infosec.bankless.community/'
-            }
-            isExternal
-          >
+          <Link href={'https://infosec.bankless.community/'} isExternal>
             <Flex
               align={'center'}
               color={'white.100'}

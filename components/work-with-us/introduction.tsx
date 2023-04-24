@@ -1,5 +1,4 @@
-import { Box, Heading, Text, VStack } from '@chakra-ui/react'
-import { ChakraNextImage } from 'components/_common/ChakraNextImage'
+import { Flex, Box, Heading, Text, VStack } from '@chakra-ui/react'
 
 export default function IntroductionComponent() {
   return (
@@ -9,14 +8,16 @@ export default function IntroductionComponent() {
         textAlign={'center'}
         pt={{ base: 0, md: '8rem' }}
         pb={{ base: 0, md: '4rem' }}
-        pos='relative'>
+        pos='relative'
+      >
         <Heading
           color={'white.100'}
           lineHeight={1}
           fontWeight={700}
           fontFamily='Clear Sans'
           fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-          zIndex='1'>
+          zIndex='1'
+        >
           Web3 products and services
           <br />
           from crypto-native contributors
@@ -29,7 +30,8 @@ export default function IntroductionComponent() {
           fontFamily='Clear Sans'
           marginTop={'2rem'}
           textAlign={'center'}
-          pb={{ base: '4rem', md: '4rem' }}>
+          pb={{ base: '4rem', md: '4rem' }}
+        >
           BanklessDAO has multiple consulting, media, and development arms
           within its arsenal.
           <br />
@@ -63,14 +65,26 @@ export default function IntroductionComponent() {
             filter='blur(6rem)'
           />
         </>
-        <ChakraNextImage
-          src='/images/work-with-us/work-with-us-1.jpg'
-          alt='Web3 products and services'
-          height={{ base: '224px', lg: '400px' }}
-          width={'full'}
-          objectFit='cover'
-          borderRadius='104px'
-        />
+        <Flex alignItems='center' justifyContent='center'>
+          <Box w={{ base: '100%', md: '100%' }} h={'300px'}>
+            <video
+              width='100%'
+              height={'100%'}
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                height: '300px',
+              }}
+            >
+              <source
+                src='/videos/work-with-us/Welcome_to_DAO.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </Box>
+        </Flex>
       </Box>
     </>
   )
