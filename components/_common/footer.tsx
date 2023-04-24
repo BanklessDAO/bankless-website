@@ -111,7 +111,7 @@ class Footer extends React.Component {
             rowGap={4}
           >
             <Image
-              src='/icons/bankless-square.jpg'
+              src='images/logo.png'
               objectFit='contain'
               height={150}
               width={150}
@@ -132,7 +132,8 @@ class Footer extends React.Component {
                     target='_blank'
                     key={`social-${idx}`}
                     mx={1}
-                    my={2}>
+                    my={2}
+                  >
                     <Image
                       src={_social.img}
                       alt={_social.alt}
