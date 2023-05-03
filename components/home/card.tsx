@@ -32,7 +32,12 @@ const Card = ({ img, title, text, href, pending }: Props) => {
       // maxW={{ base: '300px', md: '400px' }}
     >
       <Box w='100%' h='50rem'>
-        <ChakraNextImage src={img} alt='image' width='100%' height='100%' />
+        <ChakraNextImage
+          src={img}
+          alt='image'
+          width={{ base: 'auto', md: '100%' }}
+          height='100%'
+        />
         {/* <Image src={this.props.img} alt='image' w='100%' h='100%' /> */}
       </Box>
 
