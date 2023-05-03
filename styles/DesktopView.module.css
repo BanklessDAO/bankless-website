@@ -1,22 +1,21 @@
 .card-group{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
+    gap: 2.5rem;
     width: 100%;
 }
 .card-content{
     display: flex;
     flex-direction: column;
-    max-width: 40%;
-    max-height: 400px;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 100%;
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 .card-img{
     border-top-left-radius: calc(.25rem - 1px);
@@ -41,12 +40,19 @@
     margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1228px) {
+    .card-group{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 766px) {
     .card-group{
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     .card-content{
-        max-width: 90%;
+        max-width: 70%;
+        margin: auto;
     }
     .card-title{
         font-size: 1rem;
@@ -54,6 +60,24 @@
     .card-text{
         margin-top: 0;
         margin-bottom: 0.7rem;
-        font-size: 70%;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card-group{
+        grid-template-columns: 1fr;
+    }
+    .card-content{
+        max-width: 100%;
+        margin: auto;
+    }
+    .card-title{
+        font-size: 1rem;
+    }
+    .card-text{
+        margin-top: 0;
+        margin-bottom: 0.7rem;
+        font-size: 1rem;
     }
 }
