@@ -1,15 +1,26 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
-import Script from 'next/script'
+// import Script from 'next/script'
 import theme from 'config/theme'
 import 'tailwindcss/tailwind.css'
 import '../styles/index.css'
 import PageContainer from 'components/_common/page-container'
+import ReactGA from 'react-ga';
+import { useEffect } from 'react'
+
+
+const trackingId = 'G-PK78Y6EQDB';
+ReactGA.initialize(trackingId);
 
 function MyApp({ Component, pageProps }: AppProps) {
+    // Track pageview on route change
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <>
-      <Script
+      {/* <Script
         src='https://www.googletagmanager.com/gtag/js?id=G-PK78Y6EQDB'
         strategy='afterInteractive'
       />
@@ -21,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           gtag('config', 'G-PK78Y6EQDB');
         `}
-      </Script>
+      </Script> */}
 
       <ChakraProvider theme={theme}>
         <PageContainer>
