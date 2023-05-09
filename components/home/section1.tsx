@@ -6,6 +6,7 @@ import '@fontsource/clear-sans/700.css'
 import { Flex, Box, Text, Heading } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 class Section1 extends React.Component {
   render() {
@@ -33,6 +34,7 @@ class Section1 extends React.Component {
           pb={{ base: 0, md: '4rem' }}
           rowGap={{ base: '4rem', md: '2rem' }}
           w='100%'
+          className={`${styles['header-text']}`}
         >
           <Heading
             textAlign='center'

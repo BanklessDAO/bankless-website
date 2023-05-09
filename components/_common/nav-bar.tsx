@@ -1,7 +1,9 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
+import { ulid } from 'ulid'
+import styles from 'styles/NavBar.module.css'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
@@ -36,6 +38,38 @@ const NAV_LINKS = [
     href: '/new-members',
   },
 ]
+
+const linksData = [
+  {
+    title: 'GOVERNANCE',
+    href: '/about-us/governance',
+    alt: 'Link to Governance page',
+  },
+  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  {
+    title: 'PROJECTS',
+    href: '/about-us/projects',
+    alt: 'Link to Projects page',
+  },
+  // { title: 'COORDINATION', href: '#' },
+  {
+    title: 'COMMUNITY CALLS',
+    href: '/about-us/community-calls',
+    alt: 'Link to Community Calls page',
+  },
+  {
+    title: 'MEDIA NODES',
+    href: '/about-us/nodes',
+    alt: 'Link to Portal Nodes page',
+  },
+  // { title: 'MEDIA KIT', href: '#' },
+]
+
+type Link = {
+  title: string
+  href: string
+  alt: string
+}
 
 const NavBar = props => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -109,10 +143,84 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
         },
       }}
     >
-      <Text display='block' fontWeight={600}>
+      <Text
+        display='block'
+        fontWeight={600}
+        whiteSpace={'nowrap'}
+        _hover={{
+          color: 'white',
+          borderBottom: 'solid 4px white',
+        }}
+        borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}
+      >
         {children}
       </Text>
     </Link>
+  )
+}
+
+const DropDownItem = ({ children, to = '/', ...rest }) => {
+  const router = useRouter()
+  const onPage = useMemo(() => router.pathname == to, [router.pathname, to])
+  return (
+    <Link
+      as='a'
+      href={to}
+      textDecoration='none'
+      _hover={{
+        color: 'red',
+      }}
+      {...rest}
+      sx={{
+        '@media (max-width: 1040px)': {
+          paddingTop: '16px',
+        },
+      }}
+    >
+      <Text
+        display='block'
+        fontWeight={600}
+        whiteSpace={'nowrap'}
+        _hover={{
+          color: 'red',
+        }}
+        color={onPage ? 'red' : '#fff'}
+      >
+        {children}
+      </Text>
+    </Link>
+  )
+}
+
+const DropdownMenu = () => {
+  return (
+    <Box
+      position='absolute'
+      left='50%'
+      transform='translateX(-50%)'
+      top='100%'
+      bg='primary.500'
+      borderRadius='md'
+      paddingTop={'1rem'}
+      // opacity={isHover ? '1' : '0'}
+      // visibility={isHover ? 'visible' : 'hidden'}
+      display={'none'}
+      // display={isHover ? 'block' : 'none'}
+      className={`${styles['dropdown']}`}
+      textAlign={'center'}
+      transition='all .2s ease-in-out'
+      zIndex='dropdown'
+    >
+      <Stack spacing={2}>
+        {linksData.map(({ href, alt, title }: Link, index: number) => {
+          return (
+            <DropDownItem key={ulid()} to={href}>
+              {title}
+            </DropDownItem>
+          )
+        })}
+      </Stack>
+    </Box>
   )
 }
 
@@ -145,10 +253,17 @@ const MenuLinks = ({ isOpen }) => {
         }}
       >
         {NAV_LINKS.map((_navLink, idx) => {
+          const isAboutUs = _navLink.name === 'About Us'
+
           return (
-            <MenuItem key={`link-${idx}`} to={_navLink.href}>
-              {_navLink.name}
-            </MenuItem>
+            <Box
+              key={`link-${idx}`}
+              position='relative'
+              className={`${styles['navLink']}`}
+            >
+              <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
+              {isAboutUs && <DropdownMenu />}
+            </Box>
           )
         })}
       </Stack>

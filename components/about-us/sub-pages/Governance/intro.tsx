@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Stack, Flex, Link } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 export default function GovernanceIntroComponent() {
   return (
@@ -11,6 +12,7 @@ export default function GovernanceIntroComponent() {
         py={{ base: 10, md: 18 }}
         position='relative'
         zIndex='docked'
+        className={`${styles['header-text']}`}
       >
         <Heading
           fontWeight={700}
@@ -45,10 +47,9 @@ export default function GovernanceIntroComponent() {
             my='1rem'
           >
             At BanklessDAO, decisions related to the governance process,
-            treasury allocation, and organizational structure are made using
-            {' '}
+            treasury allocation, and organizational structure are made using{' '}
             <Link
-              href={"https://docs.snapshot.org/"}
+              href={'https://docs.snapshot.org/'}
               isExternal
               color='#D02128'
             >
@@ -59,13 +60,13 @@ export default function GovernanceIntroComponent() {
             voting power they have. To see our recent governance decisions,
             visit the{' '}
             <Link
-              href={"https://snapshot.org/#/banklessvault.eth"}
+              href={'https://snapshot.org/#/banklessvault.eth'}
               isExternal
               color='#D02128'
             >
-               BanklessDAO Snapshot
-            </Link>
-            {' '}space.
+              BanklessDAO Snapshot
+            </Link>{' '}
+            space.
           </Text>
           <Box>
             <Text
@@ -76,19 +77,19 @@ export default function GovernanceIntroComponent() {
               Before a decision can be put on Snapshot, it must first be posted
               to the{' '}
               <Link
-                href={"https://forum.bankless.community/"}
+                href={'https://forum.bankless.community/'}
                 isExternal
                 color='#D02128'
               >
-                 BanklessDAO Forum
+                BanklessDAO Forum
               </Link>
               . And before that, it is common to discuss decisions in the{' '}
               <Link
-                href={"https://discord.com/invite/bankless"}
+                href={'https://discord.com/invite/bankless'}
                 isExternal
                 color='#D02128'
               >
-                 BanklessDAO Discord
+                BanklessDAO Discord
               </Link>
               .
             </Text>

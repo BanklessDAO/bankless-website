@@ -6,7 +6,7 @@ const Logo = () => {
     <Link href='/'>
       <Image
         h='70px'
-        src='images/logo.png'
+        src='/images/logo.png'
         alt='Logo'
         display={{ base: 'none', md: 'flex' }}
         sx={{
