@@ -55,8 +55,9 @@ class Section1 extends React.Component {
           <Flex
             direction={{ base: 'column', md: 'row' }}
             gap='3rem'
-            justifyContent='center'
+            justifyContent={'center'}
             width='100%'
+            alignItems={'center'}
           >
             <Button
               as='a'
