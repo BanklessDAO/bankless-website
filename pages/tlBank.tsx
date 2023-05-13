@@ -131,8 +131,8 @@ init({
   }
 })
 
-const bankToken: string = '0x077154D2931eEC781f8F1a1D0a23Ce6Ef896a2ac'
-const TLBankToken: string ='0xD106E28bDcDF9052EC0845754A5a27303FC8095C'
+const bankToken = '0x077154D2931eEC781f8F1a1D0a23Ce6Ef896a2ac'
+const TLBankToken ='0xD106E28bDcDF9052EC0845754A5a27303FC8095C'
 
 const settings = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
@@ -299,9 +299,9 @@ function TlBank() {
         const response = await BankTokenContract.approve(TLBankToken, BigNumber.from(value));
         console.log('response: ', response)
         const transactionHash = response['hash']
-        const txReceipt = []
+        const txReceipt:any = []
         do {
-        let txr = await ethersProvider.getTransactionReceipt(transactionHash)
+        const txr = await ethersProvider.getTransactionReceipt(transactionHash)
         txReceipt[0]=txr
         console.log('confirming...')
         } while (txReceipt[0] == null) ;
@@ -319,9 +319,9 @@ function TlBank() {
         const response = await TLBankContract.createNFT(address, BigNumber.from(value), BigNumber.from(1688085000));
         console.log('response: ', response)
         const transactionHash = response['hash']
-        const txReceipt = []
+        const txReceipt: any = []
         do {
-        let txr = await ethersProvider.getTransactionReceipt(transactionHash)
+        const txr = await ethersProvider.getTransactionReceipt(transactionHash)
         txReceipt[0]=txr
         console.log('confirming...')
         } while (txReceipt[0] == null) ;
