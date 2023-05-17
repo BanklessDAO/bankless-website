@@ -1,7 +1,6 @@
 import { Network, Alchemy } from 'alchemy-sdk'
 import React, { useState, useEffect, useContext } from 'react'
 import Logo from '../tlUtils/tlBankLogo'
-import Onboard from '@web3-onboard/core'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
 import { getUnlockDate } from '../tlUtils/tlUtil'
@@ -36,6 +35,7 @@ import {
   Hide,
 } from '@chakra-ui/react'
 import { init, useConnectWallet } from '@web3-onboard/react'
+import { useSetChain } from '@web3-onboard/react'
 import injectedModule from '@web3-onboard/injected-wallets'
 import { BigNumber, ethers } from 'ethers'
 
@@ -69,8 +69,11 @@ const taho = tahoModule() // Previously named Tally Ho wallet
 const trust = trustModule()
 const frontier = frontierModule()
 
-const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/${infura}`
-const GOERLI_RPC_URL = `https://goerli.infura.io/v3/${infura}`
+const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/2a4ce5a57b024046b1f2d7ceb2bc0087`
+const GOERLI_RPC_URL = `https://goerli.infura.io/v3/2a4ce5a57b024046b1f2d7ceb2bc0087`
+
+// const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/${infura}`
+// const GOERLI_RPC_URL = `https://goerli.infura.io/v3/${infura}`
 
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
@@ -94,17 +97,17 @@ init({
   ],
   chains: [
     {
-      id: '0x5',
+      id: '0x1',
       token: 'ETH',
       label: 'Ethereum Mainnet',
-      rpcUrl: GOERLI_RPC_URL,
+      rpcUrl: MAINNET_RPC_URL,
     },
     {
-      id: '0x1', // chain ID must be in hexadecimel
+      id: '0x5', // chain ID must be in hexadecimel
       token: 'ETH',
       namespace: 'evm',
       label: 'Goerli Testnet',
-      rpcUrl: MAINNET_RPC_URL,
+      rpcUrl: GOERLI_RPC_URL,
     },
   ],
   appMetadata: {
@@ -150,6 +153,7 @@ function TlBank() {
   const [lockDate, setLockDate] = useState('')
   const [unlockDate, setUnlockDate] = useState<any | null>(null)
   const [unlockDateRaw, setUnlockDateRaw] = useState<any | null>(null)
+  const [chain, setConnectedChain] = useState<any | null>(null)
   const [endDate, setEndDate] = useState('')
   const [totalHolders, setTotalHolders] = useState(0)
   const [totalLock, setTotalLock] = useState('')
@@ -159,6 +163,36 @@ function TlBank() {
   //setAllowance() //setLockedBalance() //()
 
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
+
+  const [
+    {
+      chains, // the list of chains that web3-onboard was initialized with
+      connectedChain, // the current chain the user's wallet is connected to
+      settingChain // boolean indicating if the chain is in the process of being set
+    },
+    setChain // function to call to initiate user to switch chains in their wallet
+  ] = useSetChain()
+
+  const handleConnectWallet = async () => {
+    await connect()
+  }
+
+  const handleSetChain = async () => {
+    if (wallet && connectedChain) {
+      await setChain({
+        chainId: '0x5',
+      })
+    } else {
+      console.log('A wallet must be connected before a chain can be set')
+    }
+  }
+
+  React.useEffect(() => {
+    if (wallet && connectedChain) {
+      handleSetChain()
+    }
+  }, [wallet, connectedChain])
+
 
   // create an ethers provider
   let ethersProvider
@@ -171,6 +205,7 @@ function TlBank() {
     ethersSigner = ethersProvider.getSigner()
 
     address = wallet?.accounts[0].address
+
   }
 
   const bankTokenABI = [
@@ -246,8 +281,7 @@ function TlBank() {
     const endDate = getUnlockDate('-', startDate, duration)
     const endDateRaw = getUnlockDateRaw(startDate, duration)
     setUnlockDateRaw(endDateRaw)
-    setUnlockDate(endDate)
-    await setApproval()
+    setUnlockDate(endDate)  
   }
 
   useEffect(() => {
@@ -286,7 +320,8 @@ function TlBank() {
       setTotalHolders(owners.length)
     }
     getHoldersAlchemy()
-  }, [address, BankTokenContract, TLBankContract, TLBankToken, alchemy, ethers])
+
+  }, [address, BankTokenContract, TLBankContract, TLBankToken, alchemy, ethers, allowance])
 
   async function setApproval() {
     if (Number(allowance) < Number(ethers.utils.formatEther(value))) {
@@ -334,6 +369,8 @@ function TlBank() {
       } catch (err) {
         console.log('error', err)
       }
+    } else {
+      setApproval()
     }
   }
 
@@ -353,7 +390,7 @@ function TlBank() {
           {/* {!account ? ( */}
           <Button
             disabled={connecting}
-            onClick={() => (wallet ? disconnect(wallet) : connect())}
+            onClick={() => (wallet ? disconnect(wallet) : handleConnectWallet())}
             border='1px'
             borderColor='red.500'
             color={'white'}
@@ -361,7 +398,7 @@ function TlBank() {
             {connecting
               ? 'connecting'
               : wallet
-              ? 'disconnect'
+              ? 'Disconnect'
               : 'Connect a Wallet'}
           </Button>
           {/* ) : (
@@ -576,7 +613,7 @@ function TlBank() {
             bg='red.500'
             _hover={{ bg: 'red.500' }}
             w={'100%'}>
-            Confirm
+            {Number(allowance) >= Number(ethers.utils.formatEther(value))? 'Confirm': 'Approve'}
           </Button>
         </Box>
         <Hide below='lg'>
