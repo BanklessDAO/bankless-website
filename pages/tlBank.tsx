@@ -135,8 +135,8 @@ init({
 })
 
 
-const bankToken = '0x077154D2931eEC781f8F1a1D0a23Ce6Ef896a2ac'
-const TLBankToken = '0xD106E28bDcDF9052EC0845754A5a27303FC8095C'
+const bankToken = '0x077154D2931eEC781f8F1a1D0a23Ce6Ef896a2ac' //ERC-20 token
+const TLBankToken = '0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb' //NFT token
 
 const settings = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
@@ -350,6 +350,7 @@ function TlBank() {
   async function setLock() {
     if (Number(allowance) >= Number(ethers.utils.formatEther(value))) {
       try {
+        debugger;
         const response = await TLBankContract.createNFT(
           address,
           BigNumber.from(value),
