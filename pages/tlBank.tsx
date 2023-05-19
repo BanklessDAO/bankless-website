@@ -1,5 +1,6 @@
 import { Network, Alchemy } from 'alchemy-sdk'
 import React, { useState, useEffect, useContext } from 'react'
+import { Select } from "@chakra-ui/react";
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
@@ -436,7 +437,7 @@ function TlBank() {
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
               color='rgba(255, 255, 255, 0.7)'>
-              Total BANKs Locked
+              Total BANK Locked
             </Heading>
             <Heading
               color='white'
@@ -451,7 +452,7 @@ function TlBank() {
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
               color='rgba(255, 255, 255, 0.7)'>
-              Total BANKs Holders
+              Total BANK Holders
             </Heading>
             <Heading
               color='white'
