@@ -1,6 +1,6 @@
 import { Network, Alchemy } from 'alchemy-sdk'
 import React, { useState, useEffect, useContext } from 'react'
-import { Select } from "@chakra-ui/react";
+import { Select } from '@chakra-ui/react'
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
@@ -34,6 +34,10 @@ import {
   AccordionPanel,
   AccordionIcon,
   Hide,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react'
 import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
@@ -168,9 +172,9 @@ function TlBank() {
     {
       chains, // the list of chains that web3-onboard was initialized with
       connectedChain, // the current chain the user's wallet is connected to
-      settingChain // boolean indicating if the chain is in the process of being set
+      settingChain, // boolean indicating if the chain is in the process of being set
     },
-    setChain // function to call to initiate user to switch chains in their wallet
+    setChain, // function to call to initiate user to switch chains in their wallet
   ] = useSetChain()
 
   const handleConnectWallet = async () => {
@@ -193,7 +197,6 @@ function TlBank() {
     }
   }, [wallet, connectedChain])
 
-
   // create an ethers provider
   let ethersProvider
   let ethersSigner
@@ -205,7 +208,6 @@ function TlBank() {
     ethersSigner = ethersProvider.getSigner()
 
     address = wallet?.accounts[0].address
-
   }
 
   const bankTokenABI = [
@@ -281,7 +283,7 @@ function TlBank() {
     const endDate = getUnlockDate('-', startDate, duration)
     const endDateRaw = getUnlockDateRaw(startDate, duration)
     setUnlockDateRaw(endDateRaw)
-    setUnlockDate(endDate)  
+    setUnlockDate(endDate)
   }
 
   useEffect(() => {
@@ -320,8 +322,15 @@ function TlBank() {
       setTotalHolders(owners.length)
     }
     getHoldersAlchemy()
-
-  }, [address, BankTokenContract, TLBankContract, TLBankToken, alchemy, ethers, allowance])
+  }, [
+    address,
+    BankTokenContract,
+    TLBankContract,
+    TLBankToken,
+    alchemy,
+    ethers,
+    allowance,
+  ])
 
   async function setApproval() {
     if (Number(allowance) < Number(ethers.utils.formatEther(value))) {
@@ -380,17 +389,29 @@ function TlBank() {
         {/* <Logo /> */}
         <Spacer />
         <HStack>
-          <Button
+          <Menu>
+            <MenuButton as={Button} >
+              <Icon as={FaEthereum} /> {' '}Ethereum
+            </MenuButton>
+            <MenuList>
+              <MenuItem>Ethereum</MenuItem>
+              <MenuItem>Polygon</MenuItem>
+              <MenuItem>Arbitrum</MenuItem>
+            </MenuList>
+          </Menu>
+
+          {/* <Button
             border='1px'
             borderColor='red.500'
             color={'white'}
             bgColor={'black'}>
             <Icon as={FaEthereum} />
-          </Button>
-          {/* {!account ? ( */}
+          </Button> */}
           <Button
             disabled={connecting}
-            onClick={() => (wallet ? disconnect(wallet) : handleConnectWallet())}
+            onClick={() =>
+              wallet ? disconnect(wallet) : handleConnectWallet()
+            }
             border='1px'
             borderColor='red.500'
             color={'white'}
@@ -613,7 +634,9 @@ function TlBank() {
             bg='red.500'
             _hover={{ bg: 'red.500' }}
             w={'100%'}>
-            {Number(allowance) >= Number(ethers.utils.formatEther(value))? 'Confirm': 'Approve'}
+            {Number(allowance) >= Number(ethers.utils.formatEther(value))
+              ? 'Confirm'
+              : 'Approve'}
           </Button>
         </Box>
         <Hide below='lg'>
