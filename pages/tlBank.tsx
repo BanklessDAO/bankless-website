@@ -161,6 +161,7 @@ function TlBank() {
   const [endDate, setEndDate] = useState('')
   const [totalHolders, setTotalHolders] = useState(0)
   const [totalLock, setTotalLock] = useState('')
+  const [overallLocked, setOverallLocked] = useState('')
   const [walletBalance, setWalletBalance] = useState('')
   const [allowance, setAllowance] = useState('')
 
@@ -301,17 +302,22 @@ function TlBank() {
           TLBankToken
         )
         const lockBalance = await TLBankContract.lockedBalances(address)
+        const allLocked = await BankTokenContract.balanceOf(TLBankToken)
 
         console.log('balance: ', ethers.utils.formatUnits(balance, 18))
         console.log('allowance: ', ethers.utils.formatUnits(allowance, 18))
         console.log('lockBalance: ', ethers.utils.formatUnits(lockBalance, 18))
+        console.log(
+          'allLocked: ',
+          ethers.utils.formatUnits(allLocked, 18)
+        )
 
         setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
         setAllowance(ethers.utils.formatUnits(allowance, 18))
         setTotalLock(ethers.utils.formatUnits(lockBalance, 18).split('.')[0])
+        setOverallLocked(ethers.utils.formatUnits(allLocked, 18).split('.')[0])
       }
     }
-
     getBalanceAllowanceLockedBalance()
 
     async function getHoldersAlchemy() {
@@ -323,6 +329,15 @@ function TlBank() {
       setTotalHolders(owners.length)
     }
     getHoldersAlchemy()
+
+    // async function getAllTimeLocked() {
+    //   const allLocked = await BankTokenContract.balanceOf(TLBankToken)
+
+    //   console.log('all locked: ',allLocked)
+    // }
+    // getAllTimeLocked()
+
+    
   }, [
     address,
     BankTokenContract,
@@ -387,15 +402,17 @@ function TlBank() {
   return (
     <Container maxW={'6xl'} mx='auto' p={0}>
       <Flex as='nav' py={'10px'}>
-        {/* <Logo /> */} 
+        {/* <Logo /> */}
         <Spacer />
         <HStack>
           <Menu>
-            <MenuButton as={Button} >
-              <Icon as={FaEthereum} /> {' '}
+            <MenuButton as={Button}>
+              <Icon as={FaEthereum} />{' '}
             </MenuButton>
             <MenuList bgColor={'black'} borderColor='red.500' color={'white'}>
-              <MenuItem><Icon as={FaEthereum} /> {' '} Ethereum</MenuItem>
+              <MenuItem>
+                <Icon as={FaEthereum} /> Ethereum
+              </MenuItem>
               <MenuItem>Polygon</MenuItem>
               <MenuItem>Arbitrum</MenuItem>
             </MenuList>
@@ -466,7 +483,8 @@ function TlBank() {
               as='b'
               fontSize={{ base: '16px', md: '22px' }}>
               {/* {totalLock}K BANK */}
-              {totalLock ? `${totalLock} ` : '0 '} BANK
+              {/* {totalLock ? `${totalLock} ` : '0 '} BANK */}
+              {overallLocked ? `${overallLocked} ` : '0 '} BANK
             </Heading>
           </VStack>
           <Divider orientation='vertical' />
