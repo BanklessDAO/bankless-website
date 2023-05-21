@@ -319,6 +319,7 @@ function TlBank() {
         '0xD106E28bDcDF9052EC0845754A5a27303FC8095C'
       )
       console.log(owners)
+
       setTotalHolders(owners.length)
     }
     getHoldersAlchemy()
@@ -386,15 +387,15 @@ function TlBank() {
   return (
     <Container maxW={'6xl'} mx='auto' p={0}>
       <Flex as='nav' py={'10px'}>
-        {/* <Logo /> */}
+        {/* <Logo /> */} 
         <Spacer />
         <HStack>
           <Menu>
             <MenuButton as={Button} >
-              <Icon as={FaEthereum} /> {' '}Ethereum
+              <Icon as={FaEthereum} /> {' '}
             </MenuButton>
-            <MenuList>
-              <MenuItem>Ethereum</MenuItem>
+            <MenuList bgColor={'black'} borderColor='red.500' color={'white'}>
+              <MenuItem><Icon as={FaEthereum} /> {' '} Ethereum</MenuItem>
               <MenuItem>Polygon</MenuItem>
               <MenuItem>Arbitrum</MenuItem>
             </MenuList>
