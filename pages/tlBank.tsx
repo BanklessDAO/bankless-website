@@ -264,6 +264,9 @@ function TlBank() {
     },
   ]
 
+  const provider = new ethers.providers.JsonRpcProvider(GOERLI_RPC_URL)
+  const BankTokenConDef = new ethers.Contract(bankToken, bankTokenABI, provider)
+
   const BankTokenContract = new ethers.Contract(
     bankToken,
     bankTokenABI,
@@ -302,20 +305,14 @@ function TlBank() {
           TLBankToken
         )
         const lockBalance = await TLBankContract.lockedBalances(address)
-        const allLocked = await BankTokenContract.balanceOf(TLBankToken)
 
         console.log('balance: ', ethers.utils.formatUnits(balance, 18))
         console.log('allowance: ', ethers.utils.formatUnits(allowance, 18))
         console.log('lockBalance: ', ethers.utils.formatUnits(lockBalance, 18))
-        console.log(
-          'allLocked: ',
-          ethers.utils.formatUnits(allLocked, 18)
-        )
 
         setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
         setAllowance(ethers.utils.formatUnits(allowance, 18))
         setTotalLock(ethers.utils.formatUnits(lockBalance, 18).split('.')[0])
-        setOverallLocked(ethers.utils.formatUnits(allLocked, 18).split('.')[0])
       }
     }
     getBalanceAllowanceLockedBalance()
@@ -330,14 +327,14 @@ function TlBank() {
     }
     getHoldersAlchemy()
 
-    // async function getAllTimeLocked() {
-    //   const allLocked = await BankTokenContract.balanceOf(TLBankToken)
+    async function getAllTimeLocked() {
+      const allLocked = await BankTokenConDef.balanceOf(
+        '0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb'
+      )
 
-    //   console.log('all locked: ',allLocked)
-    // }
-    // getAllTimeLocked()
-
-    
+      setOverallLocked(ethers.utils.formatUnits(allLocked, 18).split('.')[0])
+    }
+    getAllTimeLocked()
   }, [
     address,
     BankTokenContract,
