@@ -408,10 +408,14 @@ function TlBank() {
             </MenuButton>
             <MenuList bgColor={'black'} borderColor='red.500' color={'white'}>
               <MenuItem>
-                <Icon as={FaEthereum} /> Ethereum
+                <Icon as={FaEthereum} /><Text fontSize={{ base: '10px', md: '14px' }}>Ethereum</Text> 
               </MenuItem>
-              <MenuItem>Polygon</MenuItem>
-              <MenuItem>Arbitrum</MenuItem>
+              <MenuItem>
+                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>Polygon</Text>
+              </MenuItem>
+              <MenuItem>
+                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>Optimism</Text>
+              </MenuItem>
             </MenuList>
           </Menu>
 
