@@ -2,34 +2,36 @@ import React from 'react'
 import Section from './section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 function Guild() {
   return (
     <Stack
-        as={Box}
-        textAlign={'center'}
-        spacing={{ base: 2, md: 6 }}
-        py={{ base: 10, md: 18 }}
-        position='relative'
-        zIndex='docked'
+      as={Box}
+      textAlign={'center'}
+      spacing={{ base: 2, md: 6 }}
+      py={{ base: 10, md: 18 }}
+      position='relative'
+      zIndex='docked'
+      className={`${styles['header-text']}`}
+    >
+      <Heading
+        fontWeight={700}
+        fontSize={{
+          base: '2.7rem',
+          sm: '6xl',
+          md: '7xl',
+          lg: '7xl',
+        }}
+        lineHeight={'120%'}
+        color={'white.100'}
       >
-        <Heading
-          fontWeight={700}
-          fontSize={{
-            base: '2.7rem',
-            sm: '6xl',
-            md: '7xl',
-            lg: '7xl',
-          }}
-          lineHeight={'120%'}
-          color={'white.100'}
-        >
-          Guilds
-          <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
-            <Underline />
-          </Box>
-        </Heading>
-    
+        Guilds
+        <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
+          <Underline />
+        </Box>
+      </Heading>
+
       <Flex
         flexDir='column'
         justify='center'
@@ -41,7 +43,7 @@ function Guild() {
           mb={10}
           fontSize={{ base: '18px', md: '28px' }}
           maxW={826}
-          lineHeight={{base: '40px', md: '46px'}}
+          lineHeight={{ base: '40px', md: '46px' }}
           fontWeight='400px'
           zIndex={1}
         >

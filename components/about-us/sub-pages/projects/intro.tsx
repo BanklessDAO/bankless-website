@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Stack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 export default function IntroComponent() {
   return (
@@ -10,6 +11,7 @@ export default function IntroComponent() {
         display='flex'
         flexDir='column'
         alignItems='center'
+        className={`${styles['header-text']}`}
       >
         <Heading
           fontWeight={700}
