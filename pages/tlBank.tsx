@@ -4,9 +4,10 @@ import { Select } from '@chakra-ui/react'
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
-import { getUnlockDate } from '../tlUtils/tlUtil'
+import { getUnlockDate, nFormatter } from '../tlUtils/tlUtil'
 import { getUnlockDateRaw } from '../tlUtils/tlUtil'
 import { IoWalletOutline } from 'react-icons/io5'
+import { IoLockClosedOutline } from 'react-icons/io5'
 import { IoMdRadioButtonOff, IoMdRadioButtonOn } from 'react-icons/io'
 import { FaEthereum } from 'react-icons/fa'
 import { BiInfoCircle } from 'react-icons/bi'
@@ -151,6 +152,7 @@ const settings = {
 const alchemy = new Alchemy(settings)
 
 function TlBank() {
+  const [tabUnlock, setTabUnlock] = useState(false)
   const [value, setValue] = useState('40000000000000000000000')
   const [active, setActive] = useState('40k')
   const [duration, setDuration] = useState('')
@@ -408,13 +410,18 @@ function TlBank() {
             </MenuButton>
             <MenuList bgColor={'black'} borderColor='red.500' color={'white'}>
               <MenuItem>
-                <Icon as={FaEthereum} /><Text fontSize={{ base: '10px', md: '14px' }}>Ethereum</Text> 
+                <Icon as={FaEthereum} />
+                <Text fontSize={{ base: '10px', md: '14px' }}>Ethereum</Text>
               </MenuItem>
               <MenuItem>
-                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>Polygon</Text>
+                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>
+                  Polygon
+                </Text>
               </MenuItem>
               <MenuItem>
-                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>Optimism</Text>
+                <Text fontSize={{ base: '10px', md: '14px' }} as='del'>
+                  Optimism
+                </Text>
               </MenuItem>
             </MenuList>
           </Menu>
@@ -483,9 +490,7 @@ function TlBank() {
               color='white'
               as='b'
               fontSize={{ base: '16px', md: '22px' }}>
-              {/* {totalLock}K BANK */}
-              {/* {totalLock ? `${totalLock} ` : '0 '} BANK */}
-              {overallLocked ? `${overallLocked} ` : '0 '} BANK
+              {overallLocked ? nFormatter(Number(overallLocked), 2) : '0 '} BANK
             </Heading>
           </VStack>
           <Divider orientation='vertical' />
@@ -499,166 +504,311 @@ function TlBank() {
               color='white'
               as='b'
               fontSize={{ base: '16px', md: '22px' }}>
-              {/* 300 Holders */}
               {totalHolders ? `${totalHolders} ` : '0 '}Holders
             </Heading>
           </VStack>
         </HStack>
       </Box>
 
-      {/* <SimpleGrid templateColumns={'repeat(2, 1fr)'} gap={10} mt={10}> */}
       <SimpleGrid
         bg='rgba(1, 1, 1, 100.0)'
         columns={{ base: 1, lg: 2 }}
         gap={10}
         mt={10}>
-        <Box
-          maxW={'100%'}
-          bgColor={'#111111'}
-          p={5}
-          border={'1px'}
-          borderRadius={'5px'}
-          borderColor={'gray.700'}>
-          <Flex>
-            <HStack>
-              <IoWalletOutline
-                fontSize={'24px'}
-                color='rgba(255, 255, 255, 0.7)'
-              />
+        <div>
+          <HStack
+            spacing={0}
+            border={'1px'}
+            borderRadius={'5px'}
+            borderColor={'gray.700'}
+            maxW='fit-content'
+            bgColor={'#111111'}
+            marginY={2}
+            p={'5px'}>
+            <Button
+              bgColor={!tabUnlock ? 'rgba(255, 255, 255, 0.3)' : '#111111'}
+              onClick={() => setTabUnlock(false)}
+              size='sm'
+              borderRadius='md'>
+              Lock
+            </Button>
+            <Button
+              onClick={() => setTabUnlock(true)}
+              bgColor={!tabUnlock ? '#111111' : 'rgba(255, 255, 255, 0.3)'}
+              size='sm'
+              borderRadius='md'>
+              Unlock
+            </Button>
+          </HStack>
+          {!tabUnlock ? (
+            <Box
+              maxW={'100%'}
+              bgColor={'#111111'}
+              p={5}
+              border={'1px'}
+              borderRadius={'5px'}
+              borderColor={'gray.700'}>
+              <Flex>
+                <HStack>
+                  <IoWalletOutline
+                    fontSize={'24px'}
+                    color='rgba(255, 255, 255, 0.7)'
+                  />
 
-              <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
-                Wallet Balance
-              </Text>
-            </HStack>
-            <Spacer />
-            <Text fontSize={'14px'} fontWeight='600'>
-              {walletBalance ? `${walletBalance} ` : '0.0 '}BANK
-            </Text>
-          </Flex>
-          <Divider m={2} />
+                  <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                    Wallet Balance
+                  </Text>
+                </HStack>
+                <Spacer />
+                <Text fontSize={'14px'} fontWeight='600'>
+                  {walletBalance ? `${walletBalance} ` : '0.0 '}BANK
+                </Text>
+              </Flex>
+              <Divider m={2} />
 
-          <FormControl my='5'>
-            <FormLabel fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
-              You lock
-            </FormLabel>
-            <Input
-              color='white'
-              value={ethers.utils.formatEther(value)}
-              readOnly
-              borderRadius={0}
-              bgColor={'#232323'}
-              type='email'
-              placeholder='Enter Amount'
-            />
-            <FormHelperText color='white' fontSize={'14px'}>
-              Minimum: <span>40,000 BANK</span>
-            </FormHelperText>
-          </FormControl>
-
-          <Box>
-            <FormControl as='fieldset' gap={2}>
-              <FormLabel
-                as='legend'
-                color='rgba(255, 255, 255, 0.7)'
-                fontSize={'14px'}
-                my='2'>
-                Vesting term <Icon as={BiInfoCircle} />
-              </FormLabel>
-              <Stack
-                spacing='24px'
-                direction={{ base: 'column', md: 'column', xl: 'row' }}>
-                <Button
-                  onClick={() =>
-                    handleButton('40000000000000000000000', '40k', 6)
-                  }
-                  colorScheme='gray'
-                  variant='outline'
+              <FormControl my='5'>
+                <FormLabel fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                  You lock
+                </FormLabel>
+                <Input
                   color='white'
-                  value='40k'
-                  // fontSize={{ base: '8px', md: '14px' }}
-                  fontSize={'14px'}
-                  fontWeight={700}
-                  w='full'
-                  _hover={{ bg: 'none', svg: { fill: 'white' } }}>
-                  {active === '40k' ? (
-                    <IoMdRadioButtonOn />
-                  ) : (
-                    <IoMdRadioButtonOff />
-                  )}{' '}
-                  6 Months @ 40K BANK
+                  value={ethers.utils.formatEther(value)}
+                  readOnly
+                  borderRadius={0}
+                  bgColor={'#232323'}
+                  type='email'
+                  placeholder='Enter Amount'
+                />
+                <FormHelperText color='white' fontSize={'14px'}>
+                  Minimum: <span>40,000 BANK</span>
+                </FormHelperText>
+              </FormControl>
+
+              <Box>
+                <FormControl as='fieldset' gap={2}>
+                  <FormLabel
+                    as='legend'
+                    color='rgba(255, 255, 255, 0.7)'
+                    fontSize={'14px'}
+                    my='2'>
+                    Vesting term <Icon as={BiInfoCircle} />
+                  </FormLabel>
+                  <Stack
+                    spacing='24px'
+                    direction={{ base: 'column', md: 'column', xl: 'row' }}>
+                    <Button
+                      onClick={() =>
+                        handleButton('40000000000000000000000', '40k', 6)
+                      }
+                      colorScheme='gray'
+                      variant='outline'
+                      color='white'
+                      value='40k'
+                      // fontSize={{ base: '8px', md: '14px' }}
+                      fontSize={'14px'}
+                      fontWeight={700}
+                      w='full'
+                      _hover={{ bg: 'none', svg: { fill: 'white' } }}>
+                      {active === '40k' ? (
+                        <IoMdRadioButtonOn />
+                      ) : (
+                        <IoMdRadioButtonOff />
+                      )}{' '}
+                      6 Months @ 40K BANK
+                    </Button>
+                    <Button
+                      onClick={() =>
+                        handleButton('80000000000000000000000', '80k', 12)
+                      }
+                      colorScheme='gray'
+                      variant='outline'
+                      color='white'
+                      value='80k'
+                      // fontSize={{ base: '8px', md: '12px' }}
+                      fontSize={'14px'}
+                      fontWeight={700}
+                      w='full'
+                      _hover={{ bg: 'none', svg: { fill: 'white' } }}>
+                      {active === '80k' ? (
+                        <IoMdRadioButtonOn />
+                      ) : (
+                        <IoMdRadioButtonOff />
+                      )}{' '}
+                      1 Year @ 80K BANK
+                    </Button>
+                  </Stack>
+                </FormControl>
+              </Box>
+              {/* <Divider my={10} /> */}
+
+              <Accordion allowToggle defaultIndex={0} py={10}>
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton border={'none'} outline='none'>
+                      <Box
+                        fontSize={'14px'}
+                        as='span'
+                        flex='1'
+                        textAlign='left'
+                        color='rgba(255, 255, 255, 0.7)'>
+                        Summary
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4} bg={'#232323'}>
+                    <Flex>
+                      <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                        Lock Date
+                      </Text>
+                      <Spacer />
+                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
+                      <Text fontSize={'14px'}>{lockDate}</Text>
+                    </Flex>
+                    <Flex>
+                      <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                        Unlock Date
+                      </Text>
+                      <Spacer />
+                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
+                      <Text fontSize={'14px'}>{unlockDate}</Text>
+                    </Flex>
+                  </AccordionPanel>
+                </AccordionItem>
+                <Divider />
+              </Accordion>
+              <Button
+                borderRadius={0}
+                onClick={setLock}
+                bg='red.500'
+                _hover={{ bg: 'red.500' }}
+                w={'100%'}>
+                {Number(allowance) >= Number(ethers.utils.formatEther(value))
+                  ? 'Confirm'
+                  : 'Approve'}
+                ≈{' '}
+              </Button>
+            </Box>
+          ) : (
+            <Box
+              maxW={'100%'}
+              bgColor={'#111111'}
+              p={5}
+              border={'1px'}
+              borderRadius={'5px'}
+              borderColor={'gray.700'}>
+              <Flex>
+                <HStack>
+                  <IoWalletOutline
+                    fontSize={'24px'}
+                    color='rgba(255, 255, 255, 0.7)'
+                  />
+
+                  <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                    Wallet Balance
+                  </Text>
+                </HStack>
+                <Spacer />
+                <Text fontSize={'14px'} fontWeight='600'>
+                  {walletBalance ? `${walletBalance} ` : '0 '}BANK
+                </Text>
+              </Flex>
+              <Divider m={2} />
+
+              <Flex>
+                <HStack>
+                  <IoLockClosedOutline
+                    fontSize={'24px'}
+                    color='rgba(255, 255, 255, 0.7)'
+                  />
+
+                  <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                    Locked Balance
+                  </Text>
+                </HStack>
+                <Spacer />
+                <Text fontSize={'14px'} fontWeight='600'>
+                  {totalLock ? `${totalLock} ` : '0 '} BANK
+                </Text>
+              </Flex>
+
+              <FormControl my='5'>
+                <FormLabel fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                  Unlock
+                </FormLabel>
+                <Input
+                  color='white'
+                  value={ethers.utils.formatEther(value)}
+                  readOnly
+                  borderRadius={0}
+                  bgColor={'#232323'}
+                  type='number'
+                  placeholder='Enter Amount'
+                />
+              </FormControl>
+              {/* <Divider my={10} /> */}
+
+              <Accordion allowToggle defaultIndex={0} py={10}>
+                <AccordionItem>
+                  <h2>
+                    <AccordionButton border={'none'} outline='none'>
+                      <Box
+                        fontSize={'14px'}
+                        as='span'
+                        flex='1'
+                        textAlign='left'
+                        color='rgba(255, 255, 255, 0.7)'>
+                        Summary
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel pb={4} bg={'#232323'}>
+                    <Flex>
+                      <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                        Lock Date
+                      </Text>
+                      <Spacer />
+                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
+                      <Text fontSize={'14px'}>{lockDate}</Text>
+                    </Flex>
+                    <Flex>
+                      <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
+                        Unlock Date
+                      </Text>
+                      <Spacer />
+                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
+                      <Text fontSize={'14px'}>{unlockDate}</Text>
+                    </Flex>
+                  </AccordionPanel>
+                </AccordionItem>
+                <Divider />
+              </Accordion>
+              <Stack>
+                <Button
+                  border={'1px'}
+                  borderRadius={0}
+                  _focus={{ _focus: 'none' }}
+                  bg='rgba(208, 33, 40, 0.1)'
+                  opacity={0.5}
+                  borderColor='#D02128'
+                  _hover={{ bg: 'red.500' }}
+                  w={'100%'}>
+                  Relock for another 6months
                 </Button>
+
                 <Button
-                  onClick={() =>
-                    handleButton('80000000000000000000000', '80k', 12)
-                  }
-                  colorScheme='gray'
-                  variant='outline'
-                  color='white'
-                  value='80k'
-                  // fontSize={{ base: '8px', md: '12px' }}
-                  fontSize={'14px'}
-                  fontWeight={700}
-                  w='full'
-                  _hover={{ bg: 'none', svg: { fill: 'white' } }}>
-                  {active === '80k' ? (
-                    <IoMdRadioButtonOn />
-                  ) : (
-                    <IoMdRadioButtonOff />
-                  )}{' '}
-                  1 Year @ 80K BANK
+                  borderRadius={0}
+                  variant='unstyled'
+                  bg='red.500'
+                  _hover={{ bg: 'red.500' }}
+                  w={'100%'}>
+                  Unlock
                 </Button>
               </Stack>
-            </FormControl>
-          </Box>
-          {/* <Divider my={10} /> */}
-
-          <Accordion allowToggle defaultIndex={0} py={10}>
-            <AccordionItem>
-              <h2>
-                <AccordionButton border={'none'} outline='none'>
-                  <Box
-                    fontSize={'14px'}
-                    as='span'
-                    flex='1'
-                    textAlign='left'
-                    color='rgba(255, 255, 255, 0.7)'>
-                    Summary
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4} bg={'#232323'}>
-                <Flex>
-                  <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
-                    Lock Date
-                  </Text>
-                  <Spacer />
-                  {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
-                  <Text fontSize={'14px'}>{lockDate}</Text>
-                </Flex>
-                <Flex>
-                  <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
-                    Unlock Date
-                  </Text>
-                  <Spacer />
-                  {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
-                  <Text fontSize={'14px'}>{unlockDate}</Text>
-                </Flex>
-              </AccordionPanel>
-            </AccordionItem>
-            <Divider />
-          </Accordion>
-          <Button
-            borderRadius={0}
-            onClick={setLock}
-            bg='red.500'
-            _hover={{ bg: 'red.500' }}
-            w={'100%'}>
-            {Number(allowance) >= Number(ethers.utils.formatEther(value))
-              ? 'Confirm'
-              : 'Approve'}
-          </Button>
-        </Box>
+            </Box>
+          )}
+        </div>
         <Hide below='lg'>
           <Box
             display='flex'
