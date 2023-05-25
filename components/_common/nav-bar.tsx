@@ -4,6 +4,7 @@ import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import { ulid } from 'ulid'
 import styles from 'styles/NavBar.module.css'
+import { useMediaQuery } from '@chakra-ui/react'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
@@ -40,6 +41,37 @@ const NAV_LINKS = [
 ]
 
 const linksData = [
+  {
+    title: 'GOVERNANCE',
+    href: '/about-us/governance',
+    alt: 'Link to Governance page',
+  },
+  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  {
+    title: 'PROJECTS',
+    href: '/about-us/projects',
+    alt: 'Link to Projects page',
+  },
+  // { title: 'COORDINATION', href: '#' },
+  {
+    title: 'COMMUNITY CALLS',
+    href: '/about-us/community-calls',
+    alt: 'Link to Community Calls page',
+  },
+  {
+    title: 'MEDIA NODES',
+    href: '/about-us/nodes',
+    alt: 'Link to Portal Nodes page',
+  },
+  // { title: 'MEDIA KIT', href: '#' },
+]
+
+const mobileLinksData = [
+  {
+    title: 'ABOUT US',
+    href: '/about-us',
+    alt: 'Link to About Us page',
+  },
   {
     title: 'GOVERNANCE',
     href: '/about-us/governance',
@@ -159,6 +191,22 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
   )
 }
 
+const AboutMenuItem = () => {
+  return (
+    <Text
+      display='block'
+      fontWeight={700}
+      fontSize='2xl'
+      marginRight='1'
+      whiteSpace={'nowrap'}
+      textAlign='center'
+    >
+      Discover
+      <Image src='/icons/arrowDown.svg' alt='arrow' height={25} width={25} />
+    </Text>
+  )
+}
+
 const DropDownItem = ({ children, to = '/', ...rest }) => {
   const router = useRouter()
   const onPage = useMemo(() => router.pathname == to, [router.pathname, to])
@@ -193,6 +241,10 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
 }
 
 const DropdownMenu = () => {
+  const [isMobile] = useMediaQuery('(max-width: 1040px)')
+
+  const linksToMap = isMobile ? mobileLinksData : linksData
+
   return (
     <Box
       position='absolute'
@@ -202,17 +254,14 @@ const DropdownMenu = () => {
       bg='primary.500'
       borderRadius='md'
       paddingTop={'1rem'}
-      // opacity={isHover ? '1' : '0'}
-      // visibility={isHover ? 'visible' : 'hidden'}
       display={'none'}
-      // display={isHover ? 'block' : 'none'}
       className={`${styles['dropdown']}`}
       textAlign={'center'}
-      transition='all .2s ease-in-out'
+      transition='all 1s ease-in-out'
       zIndex='dropdown'
     >
-      <Stack spacing={2}>
-        {linksData.map(({ href, alt, title }: Link, index: number) => {
+      <Stack spacing={1} marginBottom={'1rem'}>
+        {linksToMap.map(({ href, alt, title }: Link, index: number) => {
           return (
             <DropDownItem key={ulid()} to={href}>
               {title}
@@ -225,6 +274,8 @@ const DropdownMenu = () => {
 }
 
 const MenuLinks = ({ isOpen }) => {
+  const [isMobile] = useMediaQuery('(max-width: 1040px)')
+
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
@@ -261,7 +312,11 @@ const MenuLinks = ({ isOpen }) => {
               position='relative'
               className={`${styles['navLink']}`}
             >
-              <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
+              {isMobile && isAboutUs ? (
+                <AboutMenuItem />
+              ) : (
+                <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
+              )}
               {isAboutUs && <DropdownMenu />}
             </Box>
           )
