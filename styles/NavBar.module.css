@@ -1,0 +1,9 @@
+.navLink:hover .dropdown{
+    display: block;
+}
+
+@media (min-width: 1040px){
+    .header-text{
+        margin-top: 130px!important;
+    }
+}
