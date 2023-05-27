@@ -44,6 +44,7 @@ import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
 import injectedModule from '@web3-onboard/injected-wallets'
 import { BigNumber, ethers } from 'ethers'
+import axios from 'axios'
 
 //WALLETS
 import infinityWalletModule from '@web3-onboard/infinity-wallet'
@@ -166,6 +167,9 @@ function TlBank() {
   const [overallLocked, setOverallLocked] = useState('')
   const [walletBalance, setWalletBalance] = useState('')
   const [allowance, setAllowance] = useState('')
+  const [tokens, setToken] = useState([])
+  const [nftsUri, setNftsUri] = useState([])
+  const [data, setData] = useState([])
 
   //setAllowance() //setLockedBalance() //()
 
@@ -264,6 +268,47 @@ function TlBank() {
       stateMutability: 'view',
       type: 'function',
     },
+    {
+      inputs: [{ internalType: 'address', name: 'owner', type: 'address' }],
+      name: 'balanceOf',
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'address', name: 'owner', type: 'address' },
+        { internalType: 'uint256', name: 'index', type: 'uint256' },
+      ],
+      name: 'tokenOfOwnerByIndex',
+      outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
+      name: 'tokenURI',
+      outputs: [{ internalType: 'string', name: '', type: 'string' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [
+        { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
+        { internalType: 'uint256', name: 'relockDate', type: 'uint256' },
+      ],
+      name: 'relockNFT',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [{ internalType: 'uint256', name: 'tokenId', type: 'uint256' }],
+      name: 'redeemNFT',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
   ]
 
   const provider = new ethers.providers.JsonRpcProvider(GOERLI_RPC_URL)
@@ -290,6 +335,18 @@ function TlBank() {
     const endDateRaw = getUnlockDateRaw(startDate, duration)
     setUnlockDateRaw(endDateRaw)
     setUnlockDate(endDate)
+  }
+
+  const fetchData = async tokenId => {
+    try {
+      const response = await axios.get(
+        `https://d3lptqip2x2eaw.cloudfront.net/goerli/0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb/${tokenId}`
+      )
+      console.log(response)
+      return response
+    } catch (error) {
+      console.error('Error:', error)
+    }
   }
 
   useEffect(() => {
@@ -337,16 +394,37 @@ function TlBank() {
       setOverallLocked(ethers.utils.formatUnits(allLocked, 18).split('.')[0])
     }
     getAllTimeLocked()
+
+
+    const getUserTokens = async () => {
+      if (address) {
+        const userNFTBalance = await TLBankContract.balanceOf(address)
+        let tokens: any = []
+        let allData: any = []
+        for (let i = 0; i < userNFTBalance; i++) {
+          let tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
+          let data = await fetchData(tokenId)
+          if (data) {
+            allData.push(data)
+            tokens.push(tokenId._hex)
+          }
+        }
+        setToken(tokens)
+        setData(allData)
+        console.log('tokens:', tokens)
+      }
+    }
+    getUserTokens()
   }, [
     address,
-    BankTokenContract,
-    TLBankContract,
-    TLBankToken,
+    // BankTokenContract,
+    // TLBankContract,
+    // TLBankToken,
     alchemy,
     ethers,
     allowance,
   ])
-
+  console.log(data)
   async function setApproval() {
     if (Number(allowance) < Number(ethers.utils.formatEther(value))) {
       try {
@@ -395,6 +473,25 @@ function TlBank() {
       }
     } else {
       setApproval()
+    }
+  }
+
+  function renderNfts(data) {
+    if (data.length > 0) {
+      return (
+        <HStack >
+          {data.map((each, i) => (
+            <Box bg='rgba(255, 255, 255, 0.1)' w='30%' p={2} color='white' key={i} borderRadius={2} onClick={() => console.log('click click')}>
+              <img src={each.data.image} alt={each.title} />
+              <Text fontSize={{ base: '10px', md: '14px' }}>{each.data.assetCurrency.amount}</Text>
+            </Box>
+          ))}
+        </HStack>
+      );
+    } else {
+      return <div>
+        <Text fontSize={{ base: '10px', md: '14px' }}>You do not have any token Lock</Text>
+      </div>
     }
   }
 
@@ -747,6 +844,17 @@ function TlBank() {
                 />
               </FormControl>
               {/* <Divider my={10} /> */}
+
+              {/* NFT SECTION */}
+              {renderNfts(data)}
+              {/* {data ? (
+                <div>
+                  <img src={data[1].data.image} />
+                  <p>{data[1].data.description}</p>
+                </div>
+              ) : (
+                'you do not have an nft to unlock'
+              )} */}
 
               <Accordion allowToggle defaultIndex={0} py={10}>
                 <AccordionItem>
