@@ -1,7 +1,7 @@
 import { Network, Alchemy } from 'alchemy-sdk'
 import React, { useState, useEffect, useContext } from 'react'
 import { bankTokenABI, TLBankTokenABI, bankToken, TLBankToken } from '../tlUtils/abi'
-import { MAINNET_RPC_URL, GOERLI_RPC_URL } from '../tlUtils/config'
+import { MAINNET_RPC_URL, GOERLI_RPC_URL, wallets } from '../tlUtils/config'
 import { Select } from '@chakra-ui/react'
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
@@ -44,38 +44,8 @@ import {
 } from '@chakra-ui/react'
 import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
-import injectedModule from '@web3-onboard/injected-wallets'
 import { BigNumber, ethers } from 'ethers'
 import axios from 'axios'
-
-//WALLETS
-import infinityWalletModule from '@web3-onboard/infinity-wallet'
-import gnosisModule from '@web3-onboard/gnosis'
-import keepkeyModule from '@web3-onboard/keepkey'
-import keystoneModule from '@web3-onboard/keystone'
-import ledgerModule from '@web3-onboard/ledger'
-import sequenceModule from '@web3-onboard/sequence'
-import dcentModule from '@web3-onboard/dcent'
-import tahoModule from '@web3-onboard/sequence'
-import trustModule from '@web3-onboard/trust'
-import frontierModule from '@web3-onboard/frontier'
-import coinbaseWalletModule from '@web3-onboard/coinbase'
-import walletConnectModule from '@web3-onboard/walletconnect'
-
-
-const injected = injectedModule()
-const coinbaseWalletSdk = coinbaseWalletModule()
-const walletConnect = walletConnectModule()
-const dcent = dcentModule()
-const infinityWallet = infinityWalletModule()
-const ledger = ledgerModule()
-const keystone = keystoneModule()
-const keepkey = keepkeyModule()
-const gnosis = gnosisModule()
-const sequence = sequenceModule()
-const taho = tahoModule() // Previously named Tally Ho wallet
-const trust = trustModule()
-const frontier = frontierModule()
 
 
 
@@ -83,22 +53,7 @@ const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
 init({
   apiKey: API,
-  wallets: [
-    injected,
-    coinbaseWalletSdk,
-    walletConnect,
-    infinityWallet,
-    keepkey,
-    sequence,
-    injected,
-    trust,
-    frontier,
-    taho,
-    ledger,
-    dcent,
-    gnosis,
-    keystone,
-  ],
+  wallets: wallets,
   chains: [
     {
       id: '0x1',
@@ -828,7 +783,7 @@ function TlBank() {
                       </Text>
                       <Spacer />
                       <Text fontSize={'14px'}>
-                        {formatDateMm(selectToken?.lockDate)}
+                        {selectToken == null || undefined? '-': formatDateMm(selectToken?.lockDate)}
                       </Text>
                     </Flex>
                     <Flex>
@@ -838,7 +793,7 @@ function TlBank() {
                       <Spacer />
                       {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
                       <Text fontSize={'14px'}>
-                        {formatDateMm(selectToken?.unlockDate)}
+                        {selectToken == null || undefined? '-':formatDateMm(selectToken?.unlockDate)}
                       </Text>
                     </Flex>
                   </AccordionPanel>
