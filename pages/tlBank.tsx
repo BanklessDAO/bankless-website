@@ -4,7 +4,7 @@ import { Select } from '@chakra-ui/react'
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
-import { getUnlockDate, nFormatter } from '../tlUtils/tlUtil'
+import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
 import { getUnlockDateRaw } from '../tlUtils/tlUtil'
 import { IoWalletOutline } from 'react-icons/io5'
 import { IoLockClosedOutline } from 'react-icons/io5'
@@ -170,6 +170,7 @@ function TlBank() {
   const [tokens, setToken] = useState([])
   const [nftsUri, setNftsUri] = useState([])
   const [data, setData] = useState([])
+  const [selectToken, setSelectToken] = useState<any | null>(null);
 
   //setAllowance() //setLockedBalance() //()
 
@@ -337,6 +338,31 @@ function TlBank() {
     setUnlockDate(endDate)
   }
 
+  type SelectedToken = {
+    tokenId?: any
+    newUnlockDate?: any
+    unlockDate?: any
+    lockDate?: any
+    amount?: any
+  }
+
+  const handleTokenSelection = (
+    tokenId,
+    tokenNewUnlockDate,
+    tokenUnlockDate,
+    tokenLockDate,
+    tokenAmount
+  ) => {
+    const newValue = {
+      tokenId: tokenId,
+      newUnlockDate: tokenNewUnlockDate,
+      unlockDate: tokenUnlockDate,
+      lockDate: tokenLockDate,
+      amount: tokenAmount,
+    }
+    setSelectToken(newValue)
+  }
+
   const fetchData = async tokenId => {
     try {
       const response = await axios.get(
@@ -395,15 +421,14 @@ function TlBank() {
     }
     getAllTimeLocked()
 
-
     const getUserTokens = async () => {
       if (address) {
         const userNFTBalance = await TLBankContract.balanceOf(address)
-        let tokens: any = []
-        let allData: any = []
+        const tokens: any = []
+        const allData: any = []
         for (let i = 0; i < userNFTBalance; i++) {
-          let tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
-          let data = await fetchData(tokenId)
+          const tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
+          const data = await fetchData(tokenId)
           if (data) {
             allData.push(data)
             tokens.push(tokenId._hex)
@@ -476,22 +501,56 @@ function TlBank() {
     }
   }
 
+  const relockNFT = async (tokenId, newUnlockTime) => {
+    const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
+    return tx
+  }
+
+  const redeemNFT = async tokenId => {
+    const tx = await TLBankContract.redeemNFT(tokenId)
+    return tx
+  }
+
   function renderNfts(data) {
     if (data.length > 0) {
       return (
-        <HStack >
+        <HStack pt={10}>
           {data.map((each, i) => (
-            <Box bg='rgba(255, 255, 255, 0.1)' w='30%' p={2} color='white' key={i} borderRadius={2} onClick={() => console.log('click click')}>
+            <Box
+              bg='rgba(255, 255, 255, 0.1)'
+              w='30%'
+              p={2}
+              color='white'
+              key={i}
+              borderRadius={2}
+              // onClick={() => handleTokenSelection(33, tokenNewUnlockDate, each.data.unlockDate, each.date.date, each.data.assetCurrency.amount)}
+              onClick={() =>
+                handleTokenSelection(
+                  '0x21',
+                  each.data.unlockDate,
+                  each.data.unlockTimestamp,
+                  each.data.date,
+                  each.data.assetCurrency.amount
+                )
+              }>
               <img src={each.data.image} alt={each.title} />
-              <Text fontSize={{ base: '10px', md: '14px' }}>{each.data.assetCurrency.amount}</Text>
+              <Text fontSize={{ base: '10px', md: '14px' }}>
+                {each.data.assetCurrency.amount}
+              </Text>
+              <p>{each.data.unlockDate}</p>
+              <p>{each.data.unlockTimestamp}</p>
             </Box>
           ))}
         </HStack>
-      );
+      )
     } else {
-      return <div>
-        <Text fontSize={{ base: '10px', md: '14px' }}>You do not have any token Lock</Text>
-      </div>
+      return (
+        <div>
+          <Text fontSize={{ base: '10px', md: '14px' }}>
+            You do not have any token Lock
+          </Text>
+        </div>
+      )
     }
   }
 
@@ -828,6 +887,8 @@ function TlBank() {
                   {totalLock ? `${totalLock} ` : '0 '} BANK
                 </Text>
               </Flex>
+              {/* NFT SECTION */}
+              {renderNfts(data)}
 
               <FormControl my='5'>
                 <FormLabel fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
@@ -835,7 +896,7 @@ function TlBank() {
                 </FormLabel>
                 <Input
                   color='white'
-                  value={ethers.utils.formatEther(value)}
+                  value={selectToken?.amount}
                   readOnly
                   borderRadius={0}
                   bgColor={'#232323'}
@@ -843,18 +904,6 @@ function TlBank() {
                   placeholder='Enter Amount'
                 />
               </FormControl>
-              {/* <Divider my={10} /> */}
-
-              {/* NFT SECTION */}
-              {renderNfts(data)}
-              {/* {data ? (
-                <div>
-                  <img src={data[1].data.image} />
-                  <p>{data[1].data.description}</p>
-                </div>
-              ) : (
-                'you do not have an nft to unlock'
-              )} */}
 
               <Accordion allowToggle defaultIndex={0} py={10}>
                 <AccordionItem>
@@ -877,8 +926,9 @@ function TlBank() {
                         Lock Date
                       </Text>
                       <Spacer />
-                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
-                      <Text fontSize={'14px'}>{lockDate}</Text>
+                      <Text fontSize={'14px'}>
+                        {formatDateMm(selectToken?.lockDate)}
+                      </Text>
                     </Flex>
                     <Flex>
                       <Text fontSize={'14px'} color='rgba(255, 255, 255, 0.7)'>
@@ -886,7 +936,9 @@ function TlBank() {
                       </Text>
                       <Spacer />
                       {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
-                      <Text fontSize={'14px'}>{unlockDate}</Text>
+                      <Text fontSize={'14px'}>
+                        {formatDateMm(selectToken?.unlockDate)}
+                      </Text>
                     </Flex>
                   </AccordionPanel>
                 </AccordionItem>
@@ -910,7 +962,8 @@ function TlBank() {
                   variant='unstyled'
                   bg='red.500'
                   _hover={{ bg: 'red.500' }}
-                  w={'100%'}>
+                  w={'100%'}
+                  onClick={() => redeemNFT(0x21)}>
                   Unlock
                 </Button>
               </Stack>

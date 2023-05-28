@@ -79,3 +79,16 @@ export function nFormatter(num, digits) {
     ? (num / item.value).toFixed(digits).replace(rx, '$1') + item.symbol
     : '0'
 }
+
+export function formatDateMm(Ldate, separator = '-') {
+  let newDate = new Date(Ldate * 1000)
+  let date = newDate.getDate()
+  let month = newDate.getMonth() + 1
+  let year = newDate.getFullYear()
+  let hour = newDate.getHours()
+  let min = newDate.getMinutes()
+
+  return `${year}${separator}${
+    month < 10 ? `0${month}` : `${month}`
+  }${separator}${date} ${hour}:${min}`
+}
