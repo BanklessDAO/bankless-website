@@ -402,8 +402,8 @@ function TlBank() {
     } else {
       return (
         <div>
-          <Text fontSize={{ base: '10px', md: '14px' }}>
-            You do not have any token Lock
+          <Text py={5} fontSize={{ base: '10px', md: '14px' }}>
+            -You do not have any token Lock
           </Text>
         </div>
       )
