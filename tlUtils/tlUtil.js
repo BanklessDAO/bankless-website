@@ -92,3 +92,18 @@ export function formatDateMm(Ldate, separator = '-') {
     month < 10 ? `0${month}` : `${month}`
   }${separator}${date} ${hour}:${min}`
 }
+
+export function getNewUnlockDateRaw(startDate, durationMonths) {
+  const milliseconds = startDate * 1000;
+  const date = new Date(milliseconds);
+
+  const currentMonth = date.getMonth();
+  date.setMonth(currentMonth + durationMonths);
+
+  // Adjust the day if needed
+  if (date.getDate() < new Date(milliseconds).getDate()) {
+    date.setDate(0);
+  }
+
+  return date.getTime();
+}

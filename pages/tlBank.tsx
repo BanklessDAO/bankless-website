@@ -1,13 +1,18 @@
 import { Network, Alchemy } from 'alchemy-sdk'
 import React, { useState, useEffect, useContext } from 'react'
-import { bankTokenABI, TLBankTokenABI, bankToken, TLBankToken } from '../tlUtils/abi'
+import {
+  bankTokenABI,
+  TLBankTokenABI,
+  bankToken,
+  TLBankToken,
+} from '../tlUtils/abi'
 import { MAINNET_RPC_URL, GOERLI_RPC_URL, wallets } from '../tlUtils/config'
 import { Select } from '@chakra-ui/react'
 import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
-import { getUnlockDateRaw } from '../tlUtils/tlUtil'
+import { getUnlockDateRaw, getNewUnlockDateRaw } from '../tlUtils/tlUtil'
 import { IoWalletOutline } from 'react-icons/io5'
 import { IoLockClosedOutline } from 'react-icons/io5'
 import { IoMdRadioButtonOff, IoMdRadioButtonOn } from 'react-icons/io'
@@ -46,8 +51,6 @@ import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
 import { BigNumber, ethers } from 'ethers'
 import axios from 'axios'
-
-
 
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
@@ -92,7 +95,6 @@ init({
     },
   },
 })
-
 
 const settings = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
@@ -358,13 +360,21 @@ function TlBank() {
   }
 
   const relockNFT = async (tokenId, newUnlockTime) => {
-    const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
-    return tx
+    try {
+      const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
+      return tx
+    } catch(err){
+      alert("You can't relock this token just yet! ")
+    }
   }
 
   const redeemNFT = async tokenId => {
-    const tx = await TLBankContract.redeemNFT(tokenId)
-    return tx
+    try {
+      const tx = await TLBankContract.redeemNFT(tokenId)
+      return tx
+    } catch (err) {
+      alert('Unlock date not reached')
+    }
   }
 
   function renderNfts(data) {
@@ -382,7 +392,7 @@ function TlBank() {
               // onClick={() => handleTokenSelection(33, tokenNewUnlockDate, each.data.unlockDate, each.date.date, each.data.assetCurrency.amount)}
               onClick={() =>
                 handleTokenSelection(
-                  '0x21',
+                  tokens[i],
                   each.data.unlockDate,
                   each.data.unlockTimestamp,
                   each.data.date,
@@ -783,7 +793,9 @@ function TlBank() {
                       </Text>
                       <Spacer />
                       <Text fontSize={'14px'}>
-                        {selectToken == null || undefined? '-': formatDateMm(selectToken?.lockDate)}
+                        {selectToken == null || undefined
+                          ? '-'
+                          : formatDateMm(selectToken?.lockDate)}
                       </Text>
                     </Flex>
                     <Flex>
@@ -793,7 +805,9 @@ function TlBank() {
                       <Spacer />
                       {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
                       <Text fontSize={'14px'}>
-                        {selectToken == null || undefined? '-':formatDateMm(selectToken?.unlockDate)}
+                        {selectToken == null || undefined
+                          ? '-'
+                          : formatDateMm(selectToken?.unlockDate)}
                       </Text>
                     </Flex>
                   </AccordionPanel>
@@ -809,8 +823,14 @@ function TlBank() {
                   opacity={0.5}
                   borderColor='#D02128'
                   _hover={{ bg: 'red.500' }}
-                  w={'100%'}>
-                  Relock for another 6months
+                  w={'100%'}
+                  onClick={() =>
+                    relockNFT(
+                      selectToken?.tokenId,
+                      getNewUnlockDateRaw(selectToken?.unlockDate, 4)
+                    )
+                  }>
+                  Relock for another {selectToken?.amount == 40000? 4: 6}months
                 </Button>
 
                 <Button
@@ -819,7 +839,7 @@ function TlBank() {
                   bg='red.500'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
-                  onClick={() => redeemNFT(0x21)}>
+                  onClick={() => redeemNFT(selectToken?.tokenId)}>
                   Unlock
                 </Button>
               </Stack>
