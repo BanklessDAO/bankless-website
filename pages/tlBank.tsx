@@ -147,7 +147,7 @@ function TlBank() {
         chainId: '0x5',
       })
     } else {
-      console.log('A wallet must be connected before a chain can be set')
+      alert('A wallet must be connected before a chain can be set')
     }
   }
 
@@ -226,7 +226,7 @@ function TlBank() {
       const response = await axios.get(
         `https://d3lptqip2x2eaw.cloudfront.net/goerli/0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb/${tokenId}`
       )
-      console.log(response)
+      // console.log(response)
       return response
     } catch (error) {
       console.error('Error:', error)
@@ -249,9 +249,9 @@ function TlBank() {
         )
         const lockBalance = await TLBankContract.lockedBalances(address)
 
-        console.log('balance: ', ethers.utils.formatUnits(balance, 18))
-        console.log('allowance: ', ethers.utils.formatUnits(allowance, 18))
-        console.log('lockBalance: ', ethers.utils.formatUnits(lockBalance, 18))
+        // console.log('balance: ', ethers.utils.formatUnits(balance, 18))
+        // console.log('allowance: ', ethers.utils.formatUnits(allowance, 18))
+        // console.log('lockBalance: ', ethers.utils.formatUnits(lockBalance, 18))
 
         setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
         setAllowance(ethers.utils.formatUnits(allowance, 18))
@@ -294,7 +294,7 @@ function TlBank() {
         }
         setToken(tokens)
         setData(allData)
-        console.log('tokens:', tokens)
+        // console.log('tokens:', tokens)
       }
     }
     getUserTokens()
@@ -315,7 +315,7 @@ function TlBank() {
           TLBankToken,
           BigNumber.from(value)
         )
-        console.log('response: ', response)
+        // console.log('response: ', response)
         const transactionHash = response['hash']
         const txReceipt: any = []
         do {
@@ -323,7 +323,7 @@ function TlBank() {
             transactionHash
           )
           txReceipt[0] = txr
-          console.log('confirming...')
+          // console.log('confirming...')
         } while (txReceipt[0] == null)
         console.log(txReceipt[0])
       } catch (err) {
@@ -340,7 +340,7 @@ function TlBank() {
           BigNumber.from(value),
           BigNumber.from(unlockDateRaw)
         )
-        console.log('response: ', response)
+        // console.log('response: ', response)
         const transactionHash = response['hash']
         const txReceipt: any = []
         do {
@@ -348,9 +348,9 @@ function TlBank() {
             transactionHash
           )
           txReceipt[0] = txr
-          console.log('confirming...')
+          // console.log('confirming...')
         } while (txReceipt[0] == null)
-        console.log(txReceipt[0])
+        // console.log(txReceipt[0])
       } catch (err) {
         console.log('error', err)
       }
