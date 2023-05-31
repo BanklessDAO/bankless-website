@@ -303,8 +303,8 @@ function TlBank() {
     // BankTokenContract,
     // TLBankContract,
     // TLBankToken,
-    alchemy,
-    ethers,
+    // alchemy,
+    // ethers,
     allowance,
   ])
   console.log(data)
@@ -338,7 +338,7 @@ function TlBank() {
         const response = await TLBankContract.createNFT(
           address,
           BigNumber.from(value),
-          BigNumber.from(1688085000)
+          BigNumber.from(unlockDateRaw)
         )
         console.log('response: ', response)
         const transactionHash = response['hash']
@@ -363,7 +363,7 @@ function TlBank() {
     try {
       const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
       return tx
-    } catch(err){
+    } catch (err) {
       alert("You can't relock this token just yet! ")
     }
   }
@@ -385,11 +385,13 @@ function TlBank() {
             <Box
               bg='rgba(255, 255, 255, 0.1)'
               w='30%'
-              p={2}
+              // p={2}
               color='white'
               key={i}
               borderRadius={2}
-              // onClick={() => handleTokenSelection(33, tokenNewUnlockDate, each.data.unlockDate, each.date.date, each.data.assetCurrency.amount)}
+              borderColor='#D02128'
+              borderWidth={selectToken?.tokenId === tokens[i]? '5px':'0px'}
+                  _hover={{ bg: 'red.500' }}
               onClick={() =>
                 handleTokenSelection(
                   tokens[i],
@@ -400,11 +402,9 @@ function TlBank() {
                 )
               }>
               <img src={each.data.image} alt={each.title} />
-              <Text fontSize={{ base: '10px', md: '14px' }}>
+              {/* <Text fontSize={{ base: '10px', md: '14px' }}>
                 {each.data.assetCurrency.amount}
-              </Text>
-              <p>{each.data.unlockDate}</p>
-              <p>{each.data.unlockTimestamp}</p>
+              </Text> */}
             </Box>
           ))}
         </HStack>
@@ -707,8 +707,7 @@ function TlBank() {
                 w={'100%'}>
                 {Number(allowance) >= Number(ethers.utils.formatEther(value))
                   ? 'Confirm'
-                  : 'Approve'}
-                ≈{' '}
+                  : 'Approve'}{' '}
               </Button>
             </Box>
           ) : (
@@ -830,7 +829,8 @@ function TlBank() {
                       getNewUnlockDateRaw(selectToken?.unlockDate, 4)
                     )
                   }>
-                  Relock for another {selectToken?.amount == 40000? 4: 6}months
+                  Relock for another {selectToken?.amount == 40000 ? 4 : 6}
+                  months
                 </Button>
 
                 <Button
