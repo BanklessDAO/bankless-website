@@ -147,7 +147,7 @@ function TlBank() {
         chainId: '0x5',
       })
     } else {
-      alert('A wallet must be connected before a chain can be set')
+      console.log('A wallet must be connected before a chain can be set')
     }
   }
 
@@ -300,11 +300,11 @@ function TlBank() {
     getUserTokens()
   }, [
     address,
-    // BankTokenContract,
-    // TLBankContract,
-    // TLBankToken,
-    // alchemy,
-    // ethers,
+    BankTokenContract,
+    TLBankContract,
+    TLBankToken,
+    alchemy,
+    ethers,
     allowance,
   ])
   console.log(data)
