@@ -1,5 +1,5 @@
 import { Network, Alchemy } from 'alchemy-sdk'
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   bankTokenABI,
   TLBankTokenABI,
@@ -7,8 +7,6 @@ import {
   TLBankToken,
 } from '../tlUtils/abi'
 import { MAINNET_RPC_URL, GOERLI_RPC_URL, wallets } from '../tlUtils/config'
-import { Select } from '@chakra-ui/react'
-import Logo from '../tlUtils/tlBankLogo'
 import Image from 'next/image'
 import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
@@ -46,6 +44,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Spinner
 } from '@chakra-ui/react'
 import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
@@ -54,24 +53,28 @@ import axios from 'axios'
 
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
+const supportedChains = [
+  {
+    id: '0x5',
+    token: 'ETH',
+    label: 'Goerli Testnet',
+    rpcUrl: GOERLI_RPC_URL,
+  },
+  {
+    id: '0x1',
+    token: 'ETH',
+    label: 'Ethereum Mainnet',
+    rpcUrl: MAINNET_RPC_URL,
+  },
+]
+
 init({
   apiKey: API,
   wallets: wallets,
-  chains: [
-    {
-      id: '0x1',
-      token: 'ETH',
-      label: 'Ethereum Mainnet',
-      rpcUrl: MAINNET_RPC_URL,
-    },
-    {
-      id: '0x5', // chain ID must be in hexadecimel
-      token: 'ETH',
-      namespace: 'evm',
-      label: 'Goerli Testnet',
-      rpcUrl: GOERLI_RPC_URL,
-    },
-  ],
+  chains: supportedChains,
+  connect: {
+    autoConnectLastWallet: true,
+  },
   appMetadata: {
     name: 'TLBANK',
     icon: '/images/bank-token.png',
@@ -81,18 +84,6 @@ init({
       { name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
       { name: 'MetaMask', url: 'https://metamask.io' },
     ],
-  },
-  accountCenter: {
-    desktop: {
-      position: 'bottomLeft',
-      enabled: false,
-      minimal: false,
-    },
-    mobile: {
-      enabled: false,
-      minimal: false,
-      position: 'topRight',
-    },
   },
 })
 
@@ -106,56 +97,36 @@ const alchemy = new Alchemy(settings)
 
 function TlBank() {
   const [tabUnlock, setTabUnlock] = useState(false)
-  const [value, setValue] = useState('40000000000000000000000')
+  const [value, setValue] = useState(BigNumber.from('40000000000000000000000'))
   const [active, setActive] = useState('40k')
-  const [duration, setDuration] = useState('')
   const [lockDate, setLockDate] = useState('')
   const [unlockDate, setUnlockDate] = useState<any | null>(null)
   const [unlockDateRaw, setUnlockDateRaw] = useState<any | null>(null)
-  const [chain, setConnectedChain] = useState<any | null>(null)
-  const [endDate, setEndDate] = useState('')
   const [totalHolders, setTotalHolders] = useState(0)
   const [totalLock, setTotalLock] = useState('')
   const [overallLocked, setOverallLocked] = useState('')
   const [walletBalance, setWalletBalance] = useState('')
-  const [allowance, setAllowance] = useState('')
+  const [allowance, setAllowance] = useState(BigNumber.from(0))
   const [tokens, setToken] = useState([])
-  const [nftsUri, setNftsUri] = useState([])
   const [data, setData] = useState([])
   const [selectToken, setSelectToken] = useState<any | null>(null)
-
-  //setAllowance() //setLockedBalance() //()
+  const [loading, setLoading] = useState(false)
 
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
+  const [_, setChain] = useSetChain()
 
-  const [
-    {
-      chains, // the list of chains that web3-onboard was initialized with
-      connectedChain, // the current chain the user's wallet is connected to
-      settingChain, // boolean indicating if the chain is in the process of being set
-    },
-    setChain, // function to call to initiate user to switch chains in their wallet
-  ] = useSetChain()
+  const connectOrDisconnect = async () => {
+    if (wallet) {
+      disconnect(wallet)
+      return
+    }
 
-  const handleConnectWallet = async () => {
-    await connect()
-  }
-
-  const handleSetChain = async () => {
-    if (wallet && connectedChain) {
-      await setChain({
-        chainId: '0x5',
-      })
-    } else {
-      console.log('A wallet must be connected before a chain can be set')
+    const [connected] = await connect()
+    const [chain] = connected.chains
+    if (!supportedChains.find(c => c.id === chain.id)) {
+      await setChain({ chainId: supportedChains[0].id })
     }
   }
-
-  React.useEffect(() => {
-    if (wallet && connectedChain) {
-      handleSetChain()
-    }
-  }, [wallet, connectedChain])
 
   // create an ethers provider
   let ethersProvider
@@ -185,10 +156,9 @@ function TlBank() {
     ethersSigner
   )
 
-  const handleButton = async (bankVal, btn, duration) => {
+  const handleButton = (bankVal: BigNumber, btn: string, duration: number) => {
     setValue(bankVal)
     setActive(btn)
-    setDuration(duration)
     const startDate = new Date()
     const endDate = getUnlockDate('-', startDate, duration)
     const endDateRaw = getUnlockDateRaw(startDate, duration)
@@ -233,129 +203,71 @@ function TlBank() {
     }
   }
 
-  useEffect(() => {
-    const date = getCurrentDate()
-    const endDateRaw = getUnlockDateRaw(date, 6)
-    setLockDate(date)
-  }, [])
-
-  useEffect(() => {
-    async function getBalanceAllowanceLockedBalance() {
-      if (address) {
-        const balance = await BankTokenContract.balanceOf(address)
-        const allowance = await BankTokenContract.allowance(
-          address,
-          TLBankToken
-        )
-        const lockBalance = await TLBankContract.lockedBalances(address)
-
-        // console.log('balance: ', ethers.utils.formatUnits(balance, 18))
-        // console.log('allowance: ', ethers.utils.formatUnits(allowance, 18))
-        // console.log('lockBalance: ', ethers.utils.formatUnits(lockBalance, 18))
-
-        setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
-        setAllowance(ethers.utils.formatUnits(allowance, 18))
-        setTotalLock(ethers.utils.formatUnits(lockBalance, 18).split('.')[0])
-      }
-    }
-    getBalanceAllowanceLockedBalance()
-
-    async function getHoldersAlchemy() {
-      const { owners } = await alchemy.nft.getOwnersForContract(
-        '0xD106E28bDcDF9052EC0845754A5a27303FC8095C'
-      )
-      console.log(owners)
-
-      setTotalHolders(owners.length)
-    }
-    getHoldersAlchemy()
-
-    async function getAllTimeLocked() {
-      const allLocked = await BankTokenConDef.balanceOf(
-        '0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb'
-      )
-
-      setOverallLocked(ethers.utils.formatUnits(allLocked, 18).split('.')[0])
-    }
-    getAllTimeLocked()
-
-    const getUserTokens = async () => {
-      if (address) {
-        const userNFTBalance = await TLBankContract.balanceOf(address)
-        const tokens: any = []
-        const allData: any = []
-        for (let i = 0; i < userNFTBalance; i++) {
-          const tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
-          const data = await fetchData(tokenId)
-          if (data) {
-            allData.push(data)
-            tokens.push(tokenId._hex)
-          }
-        }
-        setToken(tokens)
-        setData(allData)
-        // console.log('tokens:', tokens)
-      }
-    }
-    getUserTokens()
-  }, [
-    address,
-    BankTokenContract,
-    TLBankContract,
-    TLBankToken,
-    alchemy,
-    ethers,
-    allowance,
-  ])
-  console.log(data)
-  async function setApproval() {
-    if (Number(allowance) < Number(ethers.utils.formatEther(value))) {
-      try {
-        const response = await BankTokenContract.approve(
-          TLBankToken,
-          BigNumber.from(value)
-        )
-        // console.log('response: ', response)
-        const transactionHash = response['hash']
-        const txReceipt: any = []
-        do {
-          const txr = await ethersProvider.getTransactionReceipt(
-            transactionHash
-          )
-          txReceipt[0] = txr
-          // console.log('confirming...')
-        } while (txReceipt[0] == null)
-        console.log(txReceipt[0])
-      } catch (err) {
-        console.log('error', err)
-      }
-    }
+  const checkAllowance = async (address: string): Promise<void> => {
+    const allowance = await BankTokenConDef.allowance(address, TLBankToken)
+    setAllowance(allowance)
   }
 
-  async function setLock() {
-    if (Number(allowance) >= Number(ethers.utils.formatEther(value))) {
-      try {
-        const response = await TLBankContract.createNFT(
+  const bootstrapWallet = async (address: string) => {
+    debugger
+    const balanceRequest = BankTokenConDef.balanceOf(address)
+    const lockBalanceRequest = TLBankContract.lockedBalances(address)
+    const checkAllowanceRequest = checkAllowance(address)
+
+    const [balance, lockBalance] = await Promise.all([
+      balanceRequest,
+      lockBalanceRequest,
+      checkAllowanceRequest,
+    ])
+
+    setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
+    setAllowance(allowance)
+    setTotalLock(ethers.utils.formatUnits(lockBalance, 18).split('.')[0])
+  }
+
+  const bootstrapNonWallet = async () => {
+    const ownersRequest = alchemy.nft.getOwnersForContract(TLBankToken)
+    const allTimeLockedRequest = BankTokenConDef.balanceOf(TLBankToken)
+
+    const [ownersResponse, allTimeLocked] = await Promise.all([
+      ownersRequest,
+      allTimeLockedRequest,
+    ])
+
+    setTotalHolders(ownersResponse.owners.length)
+    setOverallLocked(ethers.utils.formatUnits(allTimeLocked, 18).split('.')[0])
+  }
+
+  useEffect(() => {
+    const date = getCurrentDate()
+    setLockDate(date)
+    setUnlockDate(getUnlockDate('-', date, 6))
+    bootstrapNonWallet()
+    if (address) bootstrapWallet(address)
+  }, [address])
+
+  const setLock = async () => {
+    setLoading(true)
+    try {
+      if (allowance.lt(value)) {
+        const approvalTransaction = await BankTokenContract.approve(
+          TLBankToken,
+          value
+        )
+        await approvalTransaction.wait()
+      } else {
+        const creationTransaction = await TLBankContract.createNFT(
           address,
-          BigNumber.from(value),
+          value,
           BigNumber.from(unlockDateRaw)
         )
-        // console.log('response: ', response)
-        const transactionHash = response['hash']
-        const txReceipt: any = []
-        do {
-          const txr = await ethersProvider.getTransactionReceipt(
-            transactionHash
-          )
-          txReceipt[0] = txr
-          // console.log('confirming...')
-        } while (txReceipt[0] == null)
-        // console.log(txReceipt[0])
-      } catch (err) {
-        console.log('error', err)
+        await creationTransaction.wait()
       }
-    } else {
-      setApproval()
+      await checkAllowance(address)
+    } catch (err) {
+      console.log(err)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -390,8 +302,8 @@ function TlBank() {
               key={i}
               borderRadius={2}
               borderColor='#D02128'
-              borderWidth={selectToken?.tokenId === tokens[i]? '5px':'0px'}
-                  _hover={{ bg: 'red.500' }}
+              borderWidth={selectToken?.tokenId === tokens[i] ? '5px' : '0px'}
+              _hover={{ bg: 'red.500' }}
               onClick={() =>
                 handleTokenSelection(
                   tokens[i],
@@ -402,9 +314,6 @@ function TlBank() {
                 )
               }>
               <img src={each.data.image} alt={each.title} />
-              {/* <Text fontSize={{ base: '10px', md: '14px' }}>
-                {each.data.assetCurrency.amount}
-              </Text> */}
             </Box>
           ))}
         </HStack>
@@ -423,7 +332,6 @@ function TlBank() {
   return (
     <Container maxW={'6xl'} mx='auto' p={0}>
       <Flex as='nav' py={'10px'}>
-        {/* <Logo /> */}
         <Spacer />
         <HStack>
           <Menu>
@@ -447,25 +355,15 @@ function TlBank() {
               </MenuItem>
             </MenuList>
           </Menu>
-
-          {/* <Button
-            border='1px'
-            borderColor='red.500'
-            color={'white'}
-            bgColor={'black'}>
-            <Icon as={FaEthereum} />
-          </Button> */}
           <Button
             disabled={connecting}
-            onClick={() =>
-              wallet ? disconnect(wallet) : handleConnectWallet()
-            }
+            onClick={connectOrDisconnect}
             border='1px'
             borderColor='red.500'
             color={'white'}
             bgColor={'black'}>
             {connecting
-              ? 'connecting'
+              ? 'Connecting'
               : wallet
               ? 'Disconnect'
               : 'Connect a Wallet'}
@@ -620,7 +518,11 @@ function TlBank() {
                     direction={{ base: 'column', md: 'column', xl: 'row' }}>
                     <Button
                       onClick={() =>
-                        handleButton('40000000000000000000000', '40k', 6)
+                        handleButton(
+                          BigNumber.from('40000000000000000000000'),
+                          '40k',
+                          6
+                        )
                       }
                       colorScheme='gray'
                       variant='outline'
@@ -640,7 +542,11 @@ function TlBank() {
                     </Button>
                     <Button
                       onClick={() =>
-                        handleButton('80000000000000000000000', '80k', 12)
+                        handleButton(
+                          BigNumber.from('80000000000000000000000'),
+                          '80k',
+                          12
+                        )
                       }
                       colorScheme='gray'
                       variant='outline'
@@ -700,14 +606,17 @@ function TlBank() {
                 <Divider />
               </Accordion>
               <Button
+                disabled={loading}
                 borderRadius={0}
                 onClick={setLock}
                 bg='red.500'
                 _hover={{ bg: 'red.500' }}
                 w={'100%'}>
-                {Number(allowance) >= Number(ethers.utils.formatEther(value))
-                  ? 'Confirm'
-                  : 'Approve'}{' '}
+                {loading
+                  ? <Spinner />
+                  : allowance.lt(value)
+                  ? 'Approve'
+                  : 'Confirm'}
               </Button>
             </Box>
           ) : (
