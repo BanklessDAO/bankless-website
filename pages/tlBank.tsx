@@ -44,7 +44,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Spinner
+  Spinner,
 } from '@chakra-ui/react'
 import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
@@ -92,7 +92,6 @@ const settings = {
   network: Network.ETH_GOERLI,
 }
 
-// init with key and chain info
 const alchemy = new Alchemy(settings)
 
 function TlBank() {
@@ -166,14 +165,6 @@ function TlBank() {
     setUnlockDate(endDate)
   }
 
-  type SelectedToken = {
-    tokenId?: any
-    newUnlockDate?: any
-    unlockDate?: any
-    lockDate?: any
-    amount?: any
-  }
-
   const handleTokenSelection = (
     tokenId,
     tokenNewUnlockDate,
@@ -196,11 +187,26 @@ function TlBank() {
       const response = await axios.get(
         `https://d3lptqip2x2eaw.cloudfront.net/goerli/0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb/${tokenId}`
       )
-      // console.log(response)
       return response
     } catch (error) {
       console.error('Error:', error)
     }
+  }
+
+  const getUserTokens = async () => {
+    const userNFTBalance = await TLBankContract.balanceOf(address)
+    const tokens: any = []
+    const allData: any = []
+    for (let i = 0; i < userNFTBalance; i++) {
+      const tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
+      const data = await fetchData(tokenId)
+      if (data) {
+        allData.push(data)
+        tokens.push(tokenId._hex)
+      }
+    }
+    setToken(tokens)
+    setData(allData)
   }
 
   const checkAllowance = async (address: string): Promise<void> => {
@@ -209,7 +215,6 @@ function TlBank() {
   }
 
   const bootstrapWallet = async (address: string) => {
-    debugger
     const balanceRequest = BankTokenConDef.balanceOf(address)
     const lockBalanceRequest = TLBankContract.lockedBalances(address)
     const checkAllowanceRequest = checkAllowance(address)
@@ -243,7 +248,11 @@ function TlBank() {
     setLockDate(date)
     setUnlockDate(getUnlockDate('-', date, 6))
     bootstrapNonWallet()
-    if (address) bootstrapWallet(address)
+    if (address) {
+      bootstrapWallet(address).then(() => {
+        getUserTokens()
+      })
+    }
   }, [address])
 
   const setLock = async () => {
@@ -271,21 +280,31 @@ function TlBank() {
     }
   }
 
-  const relockNFT = async (tokenId, newUnlockTime) => {
+  const relock = async (tokenId, newUnlockTime) => {
+    setLoading(true)
     try {
       const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
-      return tx
+      await tx.wait()
+      await bootstrapWallet(address)
+      await getUserTokens()
     } catch (err) {
       alert("You can't relock this token just yet! ")
+    } finally {
+      setLoading(false)
     }
   }
 
-  const redeemNFT = async tokenId => {
+  const unlock = async () => {
+    setLoading(true)
     try {
-      const tx = await TLBankContract.redeemNFT(tokenId)
-      return tx
+      const tx = await TLBankContract.redeemNFT(selectToken.tokenId)
+      await tx.wait()
+      await bootstrapWallet(address)
+      await getUserTokens()
     } catch (err) {
       alert('Unlock date not reached')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -612,11 +631,13 @@ function TlBank() {
                 bg='red.500'
                 _hover={{ bg: 'red.500' }}
                 w={'100%'}>
-                {loading
-                  ? <Spinner />
-                  : allowance.lt(value)
-                  ? 'Approve'
-                  : 'Confirm'}
+                {loading ? (
+                  <Spinner />
+                ) : allowance.lt(value) ? (
+                  'Approve'
+                ) : (
+                  'Confirm'
+                )}
               </Button>
             </Box>
           ) : (
@@ -733,7 +754,7 @@ function TlBank() {
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
                   onClick={() =>
-                    relockNFT(
+                    relock(
                       selectToken?.tokenId,
                       getNewUnlockDateRaw(selectToken?.unlockDate, 4)
                     )
@@ -743,13 +764,14 @@ function TlBank() {
                 </Button>
 
                 <Button
+                  disabled={loading}
                   borderRadius={0}
                   variant='unstyled'
                   bg='red.500'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
-                  onClick={() => redeemNFT(selectToken?.tokenId)}>
-                  Unlock
+                  onClick={unlock}>
+                  {loading ? <Spinner /> : 'Unlock'}
                 </Button>
               </Stack>
             </Box>
