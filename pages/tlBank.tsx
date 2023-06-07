@@ -226,7 +226,6 @@ function TlBank() {
     ])
 
     setWalletBalance(ethers.utils.formatUnits(balance, 18).split('.')[0])
-    setAllowance(allowance)
     setTotalLock(ethers.utils.formatUnits(lockBalance, 18).split('.')[0])
   }
 
@@ -247,6 +246,8 @@ function TlBank() {
     const date = getCurrentDate()
     setLockDate(date)
     setUnlockDate(getUnlockDate('-', date, 6))
+    const endDateRaw = getUnlockDateRaw(date, 6)
+    setUnlockDateRaw(endDateRaw)
     bootstrapNonWallet()
     if (address) {
       bootstrapWallet(address).then(() => {
@@ -272,7 +273,8 @@ function TlBank() {
         )
         await creationTransaction.wait()
       }
-      await checkAllowance(address)
+      await bootstrapWallet(address)
+      await getUserTokens()
     } catch (err) {
       console.log(err)
     } finally {
@@ -745,6 +747,7 @@ function TlBank() {
               </Accordion>
               <Stack>
                 <Button
+                  disabled={loading}
                   border={'1px'}
                   borderRadius={0}
                   _focus={{ _focus: 'none' }}
