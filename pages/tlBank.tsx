@@ -54,7 +54,7 @@ import { providers } from '@0xsequence/multicall'
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
 const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
-const CHAIN_ID = '0x5';
+const CHAIN_ID = '0x5'
 
 const supportedChains = [
   {
@@ -259,8 +259,8 @@ function TlBank() {
     setLoading(true)
     try {
       if (!wallet) {
-        await connectOrDisconnect();
-        return;
+        await connectOrDisconnect()
+        return
       }
 
       if (wallet.chains[0]?.id !== CHAIN_ID) {
@@ -634,7 +634,9 @@ function TlBank() {
                 bg='red.500'
                 _hover={{ bg: 'red.500' }}
                 w={'100%'}>
-                {!wallet ? 'Connect' : wallet.chains[0]?.id !== CHAIN_ID ? (
+                {!wallet ? (
+                  'Connect'
+                ) : wallet.chains[0]?.id !== CHAIN_ID ? (
                   'Switch network'
                 ) : loading ? (
                   <Spinner />
