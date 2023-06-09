@@ -8,7 +8,7 @@ import {
 } from '../tlUtils/abi'
 import { MAINNET_RPC_URL, GOERLI_RPC_URL, wallets } from '../tlUtils/config'
 import Image from 'next/image'
-import { getCurrentDate, formatWalletAddress } from '../tlUtils/tlUtil'
+import { getCurrentDate } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
 import { getUnlockDateRaw, getNewUnlockDateRaw } from '../tlUtils/tlUtil'
 import { IoWalletOutline } from 'react-icons/io5'
@@ -49,22 +49,19 @@ import {
 import { init, useConnectWallet } from '@web3-onboard/react'
 import { useSetChain } from '@web3-onboard/react'
 import { BigNumber, ethers } from 'ethers'
-import axios from 'axios'
+import { providers } from '@0xsequence/multicall'
 
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
+const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
+const CHAIN_ID = '0x5';
+
 const supportedChains = [
   {
-    id: '0x5',
+    id: CHAIN_ID,
     token: 'ETH',
     label: 'Goerli Testnet',
     rpcUrl: GOERLI_RPC_URL,
-  },
-  {
-    id: '0x1',
-    token: 'ETH',
-    label: 'Ethereum Mainnet',
-    rpcUrl: MAINNET_RPC_URL,
   },
 ]
 
@@ -106,9 +103,9 @@ function TlBank() {
   const [overallLocked, setOverallLocked] = useState('')
   const [walletBalance, setWalletBalance] = useState('')
   const [allowance, setAllowance] = useState(BigNumber.from(0))
-  const [tokens, setToken] = useState([])
-  const [data, setData] = useState([])
-  const [selectToken, setSelectToken] = useState<any | null>(null)
+  const [tokens, setTokens] = useState<number[]>([])
+  const [data, setData] = useState<any[]>([])
+  const [selectedToken, setSelectedToken] = useState<any | null>(null)
   const [loading, setLoading] = useState(false)
 
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
@@ -121,6 +118,11 @@ function TlBank() {
     }
 
     const [connected] = await connect()
+    if (!connected) {
+      console.info('Connection did not happen')
+      return
+    }
+
     const [chain] = connected.chains
     if (!supportedChains.find(c => c.id === chain.id)) {
       await setChain({ chainId: supportedChains[0].id })
@@ -165,48 +167,40 @@ function TlBank() {
     setUnlockDate(endDate)
   }
 
-  const handleTokenSelection = (
-    tokenId,
-    tokenNewUnlockDate,
-    tokenUnlockDate,
-    tokenLockDate,
-    tokenAmount
-  ) => {
-    const newValue = {
-      tokenId: tokenId,
-      newUnlockDate: tokenNewUnlockDate,
-      unlockDate: tokenUnlockDate,
-      lockDate: tokenLockDate,
-      amount: tokenAmount,
-    }
-    setSelectToken(newValue)
-  }
-
-  const fetchData = async tokenId => {
-    try {
-      const response = await axios.get(
-        `https://d3lptqip2x2eaw.cloudfront.net/goerli/0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb/${tokenId}`
-      )
-      return response
-    } catch (error) {
-      console.error('Error:', error)
-    }
-  }
-
   const getUserTokens = async () => {
     const userNFTBalance = await TLBankContract.balanceOf(address)
-    const tokens: any = []
-    const allData: any = []
+    const multicallProvider = new providers.MulticallProvider(provider)
+    const contract = new ethers.Contract(
+      TLBankToken,
+      TLBankTokenABI,
+      multicallProvider
+    )
+
+    const tokenRequests: any[] = []
     for (let i = 0; i < userNFTBalance; i++) {
-      const tokenId = await TLBankContract.tokenOfOwnerByIndex(address, i)
-      const data = await fetchData(tokenId)
-      if (data) {
-        allData.push(data)
-        tokens.push(tokenId._hex)
-      }
+      const tokenIdRequest = contract.tokenOfOwnerByIndex(address, i)
+      tokenRequests.push(tokenIdRequest)
     }
-    setToken(tokens)
-    setData(allData)
+
+    const tokenIds = await Promise.all(tokenRequests)
+    const dataRequests = tokenIds.map(async tokenId => {
+      try {
+        const request = await fetch(
+          `${METADATA_BASE_URL}/goerli/${TLBankToken.toLowerCase()}/${tokenId}`
+        )
+        const response = await request.json()
+        response.tokenId = tokenId.toNumber()
+        return response
+      } catch (error) {
+        console.error('Error:', error)
+      }
+    })
+
+    const data = await Promise.all(dataRequests)
+    const tokenIdNumbers: number[] = tokenIds.map(tokenId => tokenId.toNumber())
+
+    setTokens(tokenIdNumbers)
+    setData(data)
   }
 
   const checkAllowance = async (address: string): Promise<void> => {
@@ -243,22 +237,37 @@ function TlBank() {
   }
 
   useEffect(() => {
+    setSelectedToken(null)
+    setTokens([])
+    setData([])
+    setWalletBalance('')
+    setTotalLock('')
     const date = getCurrentDate()
     setLockDate(date)
     setUnlockDate(getUnlockDate('-', date, 6))
     const endDateRaw = getUnlockDateRaw(date, 6)
     setUnlockDateRaw(endDateRaw)
     bootstrapNonWallet()
-    if (address) {
+    if (address && wallet?.chains[0]?.id === CHAIN_ID) {
       bootstrapWallet(address).then(() => {
         getUserTokens()
       })
     }
-  }, [address])
+  }, [address, wallet])
 
   const setLock = async () => {
     setLoading(true)
     try {
+      if (!wallet) {
+        await connectOrDisconnect();
+        return;
+      }
+
+      if (wallet.chains[0]?.id !== CHAIN_ID) {
+        await setChain({ chainId: CHAIN_ID })
+        return
+      }
+
       if (allowance.lt(value)) {
         const approvalTransaction = await BankTokenContract.approve(
           TLBankToken,
@@ -276,21 +285,24 @@ function TlBank() {
       await bootstrapWallet(address)
       await getUserTokens()
     } catch (err) {
-      console.log(err)
+      console.error(err)
     } finally {
       setLoading(false)
     }
   }
 
-  const relock = async (tokenId, newUnlockTime) => {
+  const relock = async (newUnlockTime: number): Promise<void> => {
     setLoading(true)
     try {
-      const tx = await TLBankContract.relockNFT(tokenId, newUnlockTime)
+      const tx = await TLBankContract.relockNFT(
+        selectedToken.tokenId,
+        newUnlockTime / 1000
+      )
       await tx.wait()
       await bootstrapWallet(address)
       await getUserTokens()
     } catch (err) {
-      alert("You can't relock this token just yet! ")
+      console.error(err)
     } finally {
       setLoading(false)
     }
@@ -299,12 +311,12 @@ function TlBank() {
   const unlock = async () => {
     setLoading(true)
     try {
-      const tx = await TLBankContract.redeemNFT(selectToken.tokenId)
+      const tx = await TLBankContract.redeemNFT(selectedToken.tokenId)
       await tx.wait()
       await bootstrapWallet(address)
       await getUserTokens()
     } catch (err) {
-      alert('Unlock date not reached')
+      console.error(err)
     } finally {
       setLoading(false)
     }
@@ -318,23 +330,24 @@ function TlBank() {
             <Box
               bg='rgba(255, 255, 255, 0.1)'
               w='30%'
-              // p={2}
               color='white'
               key={i}
               borderRadius={2}
               borderColor='#D02128'
-              borderWidth={selectToken?.tokenId === tokens[i] ? '5px' : '0px'}
+              borderWidth={selectedToken?.tokenId === tokens[i] ? '5px' : '0px'}
               _hover={{ bg: 'red.500' }}
               onClick={() =>
-                handleTokenSelection(
-                  tokens[i],
-                  each.data.unlockDate,
-                  each.data.unlockTimestamp,
-                  each.data.date,
-                  each.data.assetCurrency.amount
-                )
+                setSelectedToken({
+                  tokenId: tokens[i],
+                  newUnlockDate: each.unlockDate,
+                  unlockDate: each.unlockTimestamp,
+                  lockDate: each.date,
+                  amount: each.assetCurrency.amount,
+                  unlockable:
+                    new Date().getTime() / 1000 > each.unlockTimestamp,
+                })
               }>
-              <img src={each.data.image} alt={each.title} />
+              <img src={each?.image} alt={each?.title} />
             </Box>
           ))}
         </HStack>
@@ -343,7 +356,7 @@ function TlBank() {
       return (
         <div>
           <Text py={5} fontSize={{ base: '10px', md: '14px' }}>
-            -You do not have any token Lock
+            - You do not have any tokens locked
           </Text>
         </div>
       )
@@ -389,16 +402,6 @@ function TlBank() {
               ? 'Disconnect'
               : 'Connect a Wallet'}
           </Button>
-          {/* ) : (
-            <Button
-              border='1px'
-              borderColor='red.200'
-              color={'white'}
-              onClick={disconnect}
-              bgColor={'black'}>connected
-              {formatWalletAddress(account)}
-            </Button>
-           )} */}
         </HStack>
       </Flex>
       <Divider mb={10} />
@@ -611,7 +614,6 @@ function TlBank() {
                         Lock Date
                       </Text>
                       <Spacer />
-                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
                       <Text fontSize={'14px'}>{lockDate}</Text>
                     </Flex>
                     <Flex>
@@ -619,7 +621,6 @@ function TlBank() {
                         Unlock Date
                       </Text>
                       <Spacer />
-                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
                       <Text fontSize={'14px'}>{unlockDate}</Text>
                     </Flex>
                   </AccordionPanel>
@@ -633,7 +634,9 @@ function TlBank() {
                 bg='red.500'
                 _hover={{ bg: 'red.500' }}
                 w={'100%'}>
-                {loading ? (
+                {!wallet ? 'Connect' : wallet.chains[0]?.id !== CHAIN_ID ? (
+                  'Switch network'
+                ) : loading ? (
                   <Spinner />
                 ) : allowance.lt(value) ? (
                   'Approve'
@@ -693,7 +696,7 @@ function TlBank() {
                 </FormLabel>
                 <Input
                   color='white'
-                  value={selectToken?.amount}
+                  value={selectedToken?.amount}
                   readOnly
                   borderRadius={0}
                   bgColor={'#232323'}
@@ -724,9 +727,9 @@ function TlBank() {
                       </Text>
                       <Spacer />
                       <Text fontSize={'14px'}>
-                        {selectToken == null || undefined
+                        {selectedToken == null || undefined
                           ? '-'
-                          : formatDateMm(selectToken?.lockDate)}
+                          : formatDateMm(selectedToken?.lockDate)}
                       </Text>
                     </Flex>
                     <Flex>
@@ -734,11 +737,10 @@ function TlBank() {
                         Unlock Date
                       </Text>
                       <Spacer />
-                      {/* <Text fontSize={'14px'} >2023-04-01 09:49</Text> */}
                       <Text fontSize={'14px'}>
-                        {selectToken == null || undefined
+                        {selectedToken == null || undefined
                           ? '-'
-                          : formatDateMm(selectToken?.unlockDate)}
+                          : formatDateMm(selectedToken?.unlockDate)}
                       </Text>
                     </Flex>
                   </AccordionPanel>
@@ -747,29 +749,23 @@ function TlBank() {
               </Accordion>
               <Stack>
                 <Button
-                  disabled={loading}
+                  disabled={loading || !selectedToken}
                   border={'1px'}
                   borderRadius={0}
-                  _focus={{ _focus: 'none' }}
                   bg='rgba(208, 33, 40, 0.1)'
-                  opacity={0.5}
                   borderColor='#D02128'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
                   onClick={() =>
-                    relock(
-                      selectToken?.tokenId,
-                      getNewUnlockDateRaw(selectToken?.unlockDate, 4)
-                    )
+                    relock(getNewUnlockDateRaw(selectedToken?.unlockDate, 4))
                   }>
-                  Relock for another {selectToken?.amount == 40000 ? 4 : 6}
+                  Relock for another {selectedToken?.amount == 40000 ? 4 : 6}
                   months
                 </Button>
 
                 <Button
-                  disabled={loading}
+                  disabled={loading || !selectedToken?.unlockable}
                   borderRadius={0}
-                  variant='unstyled'
                   bg='red.500'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
