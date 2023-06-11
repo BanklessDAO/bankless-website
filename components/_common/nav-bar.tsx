@@ -66,37 +66,6 @@ const linksData = [
   // { title: 'MEDIA KIT', href: '#' },
 ]
 
-const mobileLinksData = [
-  {
-    title: 'ABOUT US',
-    href: '/about-us',
-    alt: 'Link to About Us page',
-  },
-  {
-    title: 'GOVERNANCE',
-    href: '/about-us/governance',
-    alt: 'Link to Governance page',
-  },
-  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
-  {
-    title: 'PROJECTS',
-    href: '/about-us/projects',
-    alt: 'Link to Projects page',
-  },
-  // { title: 'COORDINATION', href: '#' },
-  {
-    title: 'COMMUNITY CALLS',
-    href: '/about-us/community-calls',
-    alt: 'Link to Community Calls page',
-  },
-  {
-    title: 'MEDIA NODES',
-    href: '/about-us/nodes',
-    alt: 'Link to Portal Nodes page',
-  },
-  // { title: 'MEDIA KIT', href: '#' },
-]
-
 type Link = {
   title: string
   href: string
@@ -191,22 +160,6 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
   )
 }
 
-const AboutMenuItem = () => {
-  return (
-    <Text
-      display='block'
-      fontWeight={700}
-      fontSize='2xl'
-      marginRight='1'
-      whiteSpace={'nowrap'}
-      textAlign='center'
-    >
-      Discover
-      <Image src='/icons/arrowDown.svg' alt='arrow' height={25} width={25} />
-    </Text>
-  )
-}
-
 const DropDownItem = ({ children, to = '/', ...rest }) => {
   const router = useRouter()
   const onPage = useMemo(() => router.pathname == to, [router.pathname, to])
@@ -243,8 +196,6 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
 const DropdownMenu = () => {
   const [isMobile] = useMediaQuery('(max-width: 1040px)')
 
-  const linksToMap = isMobile ? mobileLinksData : linksData
-
   return (
     <Box
       position='absolute'
@@ -259,9 +210,22 @@ const DropdownMenu = () => {
       textAlign={'center'}
       transition='all 1s ease-in-out'
       zIndex='dropdown'
+      sx={{
+        '@media (max-width: 1040px)': {
+          textAlign: 'start',
+        },
+      }}
     >
-      <Stack spacing={1} marginBottom={'1rem'}>
-        {linksToMap.map(({ href, alt, title }: Link, index: number) => {
+      <Stack
+        spacing={1}
+        marginBottom={'1rem'}
+        sx={{
+          '@media (max-width: 1040px)': {
+            marginLeft: '20%',
+          },
+        }}
+      >
+        {linksData.map(({ href, alt, title }: Link, index: number) => {
           return (
             <DropDownItem key={ulid()} to={href}>
               {title}
@@ -288,7 +252,7 @@ const MenuLinks = ({ isOpen }) => {
       }}
     >
       <Stack
-        spacing={8}
+        // spacing={8}
         className='linkStack'
         align='center'
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
@@ -298,8 +262,10 @@ const MenuLinks = ({ isOpen }) => {
         sx={{
           '@media (max-width: 1040px)': {
             justifyContent: 'center',
+            alignItems: 'flex-start',
             flexDirection: 'column',
             paddingTop: '16px',
+            gap: '1.5rem',
           },
         }}
       >
@@ -311,12 +277,13 @@ const MenuLinks = ({ isOpen }) => {
               key={`link-${idx}`}
               position='relative'
               className={`${styles['navLink']}`}
+              sx={{
+                '@media (max-width: 1040px)': {
+                  marginInlineStart: '0px!important',
+                },
+              }}
             >
-              {isMobile && isAboutUs ? (
-                <AboutMenuItem />
-              ) : (
-                <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
-              )}
+              <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu />}
             </Box>
           )
