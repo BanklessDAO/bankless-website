@@ -121,6 +121,9 @@ class Section1 extends React.Component {
               }}
             >
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
+              <source src='/videos/DAOhandLogo.webm' type='video/webm' />
+              <source src='/videos/DAOhandLogo.ogv' type='video/ogg' />
+              {/* Add additional source formats as needed */}
             </video>
           </Box>
         </Flex>
