@@ -55,6 +55,7 @@ const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
 const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
 const CHAIN_ID = '0x5'
+const DEFAULT_TIMEOUT = 4000;
 
 const supportedChains = [
   {
@@ -281,6 +282,7 @@ function TlBank() {
           BigNumber.from(unlockDateRaw)
         )
         await creationTransaction.wait()
+        await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
       }
       await bootstrapWallet(address)
       await getUserTokens()
@@ -291,14 +293,19 @@ function TlBank() {
     }
   }
 
-  const relock = async (newUnlockTime: number): Promise<void> => {
+  const relock = async (): Promise<void> => {
     setLoading(true)
+    const unlockFor = selectedToken?.amount == 40000 ? 4 : 6
+    const newUnlockDate = Math.floor(
+      getNewUnlockDateRaw(selectedToken.unlockDate, unlockFor) / 1000
+    )
     try {
       const tx = await TLBankContract.relockNFT(
         selectedToken.tokenId,
-        newUnlockTime / 1000
+        newUnlockDate
       )
       await tx.wait()
+      await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
       await bootstrapWallet(address)
       await getUserTokens()
     } catch (err) {
@@ -313,6 +320,7 @@ function TlBank() {
     try {
       const tx = await TLBankContract.redeemNFT(selectedToken.tokenId)
       await tx.wait()
+      await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
       await bootstrapWallet(address)
       await getUserTokens()
     } catch (err) {
@@ -751,16 +759,14 @@ function TlBank() {
               </Accordion>
               <Stack>
                 <Button
-                  disabled={loading || !selectedToken}
+                  disabled={loading}
                   border={'1px'}
                   borderRadius={0}
                   bg='rgba(208, 33, 40, 0.1)'
                   borderColor='#D02128'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
-                  onClick={() =>
-                    relock(getNewUnlockDateRaw(selectedToken?.unlockDate, 4))
-                  }>
+                  onClick={relock}>
                   Relock for another {selectedToken?.amount == 40000 ? 4 : 6}
                   months
                 </Button>
