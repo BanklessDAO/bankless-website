@@ -759,7 +759,7 @@ function TlBank() {
               </Accordion>
               <Stack>
                 <Button
-                  disabled={loading}
+                  disabled={loading || !selectedToken}
                   border={'1px'}
                   borderRadius={0}
                   bg='rgba(208, 33, 40, 0.1)'
