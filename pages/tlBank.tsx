@@ -306,6 +306,7 @@ function TlBank() {
         newUnlockDate
       )
       await tx.wait()
+      await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
       setSelectedToken({ ...selectedToken, unlockDate: newUnlockDate })
       const updatedData = data.map(each => {
         if (each.tokenId === selectedToken.tokenId) {
