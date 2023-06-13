@@ -55,7 +55,7 @@ const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
 const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
 const CHAIN_ID = '0x5'
-const DEFAULT_TIMEOUT = 4000;
+const DEFAULT_TIMEOUT = 4000
 
 const supportedChains = [
   {
@@ -295,6 +295,7 @@ function TlBank() {
 
   const relock = async (): Promise<void> => {
     setLoading(true)
+    
     const unlockFor = selectedToken?.amount == 40000 ? 4 : 6
     const newUnlockDate = Math.floor(
       getNewUnlockDateRaw(selectedToken.unlockDate, unlockFor) / 1000
@@ -305,9 +306,14 @@ function TlBank() {
         newUnlockDate
       )
       await tx.wait()
-      await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
-      await bootstrapWallet(address)
-      await getUserTokens()
+      setSelectedToken({ ...selectedToken, unlockDate: newUnlockDate })
+      const updatedData = data.map(each => {
+        if (each.tokenId === selectedToken.tokenId) {
+          return { ...each, unlockDate: newUnlockDate }
+        }
+        return each
+      })
+      setData(updatedData)
     } catch (err) {
       console.error(err)
     } finally {
