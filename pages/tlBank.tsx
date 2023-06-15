@@ -295,7 +295,7 @@ function TlBank() {
 
   const relock = async (): Promise<void> => {
     setLoading(true)
-    
+
     const unlockFor = selectedToken?.amount == 40000 ? 4 : 6
     const newUnlockDate = Math.floor(
       getNewUnlockDateRaw(selectedToken.unlockDate, unlockFor) / 1000
@@ -419,7 +419,7 @@ function TlBank() {
           </Button>
         </HStack>
       </Flex>
-      <Divider mb={10} />
+      <Divider mb={10} border='1px' borderColor='#313131' />
 
       <Box as='section' display={'flex'} justifyContent={'space-between'}>
         <div>
@@ -479,7 +479,7 @@ function TlBank() {
             spacing={0}
             border={'1px'}
             borderRadius={'5px'}
-            borderColor={'gray.700'}
+            borderColor={'#313131'}
             maxW='fit-content'
             bgColor={'#111111'}
             marginY={2}
@@ -506,7 +506,7 @@ function TlBank() {
               p={5}
               border={'1px'}
               borderRadius={'5px'}
-              borderColor={'gray.700'}>
+              borderColor={'#313131'}>
               <Flex>
                 <HStack>
                   <IoWalletOutline
@@ -563,6 +563,7 @@ function TlBank() {
                           6
                         )
                       }
+                      _focus={{ outlineColor: '#313131', outlineWidth: '4px' }}
                       colorScheme='gray'
                       variant='outline'
                       color='white'
@@ -587,6 +588,7 @@ function TlBank() {
                           12
                         )
                       }
+                      _focus={{ outlineColor: '#313131', outlineWidth: '4px' }}
                       colorScheme='gray'
                       variant='outline'
                       color='white'
@@ -669,7 +671,7 @@ function TlBank() {
               p={5}
               border={'1px'}
               borderRadius={'5px'}
-              borderColor={'gray.700'}>
+              borderColor={'#313131'}>
               <Flex>
                 <HStack>
                   <IoWalletOutline
