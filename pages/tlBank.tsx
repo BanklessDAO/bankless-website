@@ -439,7 +439,7 @@ function TlBank() {
           </HStack>
         </div>
         <HStack>
-          <VStack>
+          <VStack pr={10}>
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
               color='rgba(255, 255, 255, 0.7)'>
@@ -452,8 +452,8 @@ function TlBank() {
               {overallLocked ? nFormatter(Number(overallLocked), 2) : '0 '} BANK
             </Heading>
           </VStack>
-          <Divider orientation='vertical' />
-          <VStack>
+          <Divider orientation='vertical' border='1px' borderColor='#313131'/>
+          <VStack pl={10}>
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
               color='rgba(255, 255, 255, 0.7)'>
