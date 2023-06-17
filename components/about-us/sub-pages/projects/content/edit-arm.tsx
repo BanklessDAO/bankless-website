@@ -46,7 +46,7 @@ export default function EditArmProjectComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          EDITORIAL AND PUBLISHING ARM
+          BANKLESS PUBLISHING
         </Heading>
         <Text
           color={'gray.100'}
@@ -60,10 +60,7 @@ export default function EditArmProjectComponent() {
           }}
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          The EPA is the center for longform writing in BanklessDAO. The skilled
-          editors and writers in this group ship multiple pieces per week. Any
-          writer can submit to the EPA and get paid in crypto. Read their
-          stories on Medium and Mirror.
+          Bankless Publishing creates and curates top-shelf educational Web3 content for a broad audience of crypto-interested readers. We also work with crypto’s leading protocols to help them get their message out to our audience. Whether you’re a writer or protocol team, we’re interested in talking with you.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
@@ -72,7 +69,7 @@ export default function EditArmProjectComponent() {
         >
           {/* TODO confirm this link */}
           <Link
-            href='https://bankless.notion.site/The-Editorial-Publishing-Arm-EPA-5218f8cbb6214fb7803c2d76553d23fa'
+            href='https://banklesspublishing.com/'
             isExternal
           >
             <Flex
