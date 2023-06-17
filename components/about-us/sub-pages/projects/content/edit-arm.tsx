@@ -30,7 +30,7 @@ export default function EditArmProjectComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/bpublishing_logo.png'
+            src='public/images/about-us/bpublishing_logo.png'
           />
         </Box>
       </Flex>
