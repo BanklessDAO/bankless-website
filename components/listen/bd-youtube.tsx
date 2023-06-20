@@ -10,9 +10,7 @@ const BdYoutube = () => (
             flexDirection={{ base: 'column', lg: 'row' }}
             justifyContent='start'
             alignItems='center'
-
             >
-
             <VStack
                 mb='4rem'
                 justifyContent='start'
@@ -37,7 +35,6 @@ const BdYoutube = () => (
                         width={34}
                         objectFit='contain'
                     />
-
                 </HStack>
                 <Text
                     color={'grey'}
@@ -50,16 +47,15 @@ const BdYoutube = () => (
                     The official BanklessDAO youtube channel
                     where you can find our:
                     <UnorderedList
-                        mt={{base: '0.5rem', md: '1rem'}}
-                        fontStyle={"italic"}
-                        fontSize={{ base: 'md', lg: 'lg'}}>
+                        mt={{ base: '0.5rem', md: '1rem' }}
+                        fontStyle={'italic'}
+                        fontSize={{ base: 'md', lg: 'lg' }}>
                         <ListItem>Community Calls</ListItem>
                         <ListItem>Weekly Rollups</ListItem>
                         <ListItem>BanklessDAO AMAs</ListItem>
                         <ListItem>Events Interviews</ListItem>
                     </UnorderedList>
                 </Text>
-
                 <CTAButton
                     url='https://www.youtube.com/@banklessdao'
                     text='Visit the Channel'
@@ -76,7 +72,7 @@ const BdYoutube = () => (
                     ml={{ base: '0', md: '0', lg: '2rem' }}
                     mb={{ base: '5rem', md: '0' }}
                     height={{ base: '16rem', md: '15rem', lg: '20rem' }}
-                    width={{ base: '16rem', md: '15rem', lg: '20rem' }}                >
+                    width={{ base: '16rem', md: '15rem', lg: '20rem' }}>
                     <ChakraNextImage
                         src='/images/bd-youtube.png'
                         alt='bdao youtube channel'
