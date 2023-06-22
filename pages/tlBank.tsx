@@ -6,7 +6,7 @@ import {
   bankToken,
   TLBankToken,
 } from '../tlUtils/abi'
-import { MAINNET_RPC_URL, GOERLI_RPC_URL, wallets } from '../tlUtils/config'
+import { MAINNET_RPC_URL, wallets } from '../tlUtils/config'
 import Image from 'next/image'
 import { getCurrentDate } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
@@ -54,15 +54,15 @@ import { providers } from '@0xsequence/multicall'
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
 const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
-const CHAIN_ID = '0x5'
+const CHAIN_ID = '0x1'
 const DEFAULT_TIMEOUT = 4000
 
 const supportedChains = [
   {
     id: CHAIN_ID,
     token: 'ETH',
-    label: 'Goerli Testnet',
-    rpcUrl: GOERLI_RPC_URL,
+    label: 'Mainnet',
+    rpcUrl: MAINNET_RPC_URL,
   },
 ]
 
@@ -87,7 +87,7 @@ init({
 
 const settings = {
   apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
-  network: Network.ETH_GOERLI,
+  network: Network.ETH_MAINNET,
 }
 
 const alchemy = new Alchemy(settings)
@@ -143,7 +143,7 @@ function TlBank() {
     address = wallet?.accounts[0].address
   }
 
-  const provider = new ethers.providers.JsonRpcProvider(GOERLI_RPC_URL)
+  const provider = new ethers.providers.JsonRpcProvider(MAINNET_RPC_URL)
   const BankTokenConDef = new ethers.Contract(bankToken, bankTokenABI, provider)
 
   const BankTokenContract = new ethers.Contract(
@@ -187,7 +187,7 @@ function TlBank() {
     const dataRequests = tokenIds.map(async tokenId => {
       try {
         const request = await fetch(
-          `${METADATA_BASE_URL}/goerli/${TLBankToken.toLowerCase()}/${tokenId}`
+          `${METADATA_BASE_URL}/ethereum/${TLBankToken.toLowerCase()}/${tokenId}`
         )
         const response = await request.json()
         response.tokenId = tokenId.toNumber()
