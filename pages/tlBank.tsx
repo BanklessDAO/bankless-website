@@ -53,7 +53,7 @@ import { providers } from '@0xsequence/multicall'
 
 const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
 
-const METADATA_BASE_URL = 'https://d3lptqip2x2eaw.cloudfront.net'
+const METADATA_BASE_URL = 'https://nft.hedgey.finance'
 const CHAIN_ID = '0x1'
 const DEFAULT_TIMEOUT = 4000
 

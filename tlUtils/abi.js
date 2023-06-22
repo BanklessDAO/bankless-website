@@ -92,5 +92,5 @@ export const TLBankTokenABI = [
   },
 ]
 
-export const bankToken = '0x077154D2931eEC781f8F1a1D0a23Ce6Ef896a2ac' // ERC-20 token
-export const TLBankToken = '0x8e6e3b92e4f1818bc7ceee6b7b7228952aa41acb' // NFT token
+export const bankToken = '0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198' // ERC-20 token
+export const TLBankToken = '0xeaeab9f1b25fa00fc01a3fce521b47e88527aa02' // NFT token
