@@ -42,24 +42,24 @@ const NAV_LINKS = [
 
 const linksData = [
   {
-    title: 'GOVERNANCE',
+    title: 'Governance',
     href: '/about-us/governance',
     alt: 'Link to Governance page',
   },
-  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  { title: 'Guilds', href: '/about-us/guilds', alt: 'Link to Guilds page' },
   {
-    title: 'PROJECTS',
+    title: 'Projects',
     href: '/about-us/projects',
     alt: 'Link to Projects page',
   },
   // { title: 'COORDINATION', href: '#' },
   {
-    title: 'COMMUNITY CALLS',
+    title: 'Community Calls',
     href: '/about-us/community-calls',
     alt: 'Link to Community Calls page',
   },
   {
-    title: 'MEDIA NODES',
+    title: 'Media Nodes',
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
@@ -174,7 +174,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
       {...rest}
       sx={{
         '@media (max-width: 1040px)': {
-          paddingTop: '16px',
+          paddingTop: '1px',
         },
       }}
     >
@@ -186,6 +186,12 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
           color: 'red',
         }}
         color={onPage ? 'red' : '#fff'}
+        textTransform={'capitalize'}
+        sx={{
+          '@media (max-width: 1040px)': {
+            fontSize: '100%',
+          },
+        }}
       >
         {children}
       </Text>
@@ -252,7 +258,7 @@ const MenuLinks = ({ isOpen }) => {
       }}
     >
       <Stack
-        // spacing={8}
+        spacing={8}
         className='linkStack'
         align='center'
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
@@ -265,7 +271,7 @@ const MenuLinks = ({ isOpen }) => {
             alignItems: 'flex-start',
             flexDirection: 'column',
             paddingTop: '16px',
-            gap: '1.5rem',
+            gap: '0.4rem',
           },
         }}
       >
@@ -280,6 +286,7 @@ const MenuLinks = ({ isOpen }) => {
               sx={{
                 '@media (max-width: 1040px)': {
                   marginInlineStart: '0px!important',
+                  marginTop: '0px!important',
                 },
               }}
             >
