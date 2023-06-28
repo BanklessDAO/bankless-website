@@ -268,7 +268,7 @@ function TlBank() {
         await setChain({ chainId: CHAIN_ID })
         return
       }
-
+      
       if (allowance.lt(value)) {
         const approvalTransaction = await BankTokenContract.approve(
           TLBankToken,
@@ -276,10 +276,12 @@ function TlBank() {
         )
         await approvalTransaction.wait()
       } else {
+        const startDate = new Date()
+        const endDateRaw = getUnlockDateRaw(startDate, BigNumber.from('40000000000000000000000').eq(value) ? 6 : 12)
         const creationTransaction = await TLBankContract.createNFT(
           address,
           value,
-          BigNumber.from(unlockDateRaw)
+          BigNumber.from(endDateRaw)
         )
         await creationTransaction.wait()
         await new Promise(resolve => setTimeout(resolve, DEFAULT_TIMEOUT))
