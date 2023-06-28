@@ -16,6 +16,7 @@ import NewsletterProjectComponent from './content/newsletter-project'
 import PodcastHatcheryComponent from './content/podcast-hatchery'
 import WebsiteProjectComponent from './content/website-project'
 import InfoSecTeamComponent from './content/infosec-team'
+import BanklessCardComponent from './content/bankless-card'
 
 export default function ProjectsContentComponent() {
   return (
@@ -37,6 +38,7 @@ export default function ProjectsContentComponent() {
       <DecentralizeLawNewsletterComponent />
       <InfoSecTeamComponent />
       <WebsiteProjectComponent />
+      <BanklessCardComponent />
     </Box>
   )
 }
