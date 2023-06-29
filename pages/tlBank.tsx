@@ -277,7 +277,7 @@ function TlBank() {
         await approvalTransaction.wait()
       } else {
         const startDate = new Date()
-        const endDateRaw = getUnlockDateRaw(startDate, BigNumber.from('40000000000000000000000').eq(value) ? 6 : 12)
+        const endDateRaw = getUnlockDateRaw(startDate, BigNumber.from('40000000000000000000000').eq(value) ? 6 : 12);
         const creationTransaction = await TLBankContract.createNFT(
           address,
           value,
@@ -778,7 +778,7 @@ function TlBank() {
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
                   onClick={relock}>
-                  Relock for another {selectedToken?.amount == 40000 ? 4 : 6}
+                  Relock for another {selectedToken?.amount == 40000 ? 6 : 12}
                   months
                 </Button>
 
