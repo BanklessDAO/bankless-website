@@ -23,7 +23,11 @@ import walletConnectModule from '@web3-onboard/walletconnect'
 import injectedModule from '@web3-onboard/injected-wallets'
 const injected = injectedModule()
 const coinbaseWalletSdk = coinbaseWalletModule()
-const walletConnect = walletConnectModule()
+const walletConnect = walletConnectModule({
+  version: 2,
+  projectId: 'e1726502f108ccc7845fc598e1a605f3',
+  requiredChains: 1,
+})
 const dcent = dcentModule()
 const infinityWallet = infinityWalletModule()
 const ledger = ledgerModule()
@@ -36,18 +40,18 @@ const trust = trustModule()
 const frontier = frontierModule()
 
 export const wallets = [
-    injected,
-    coinbaseWalletSdk,
-    walletConnect,
-    infinityWallet,
-    keepkey,
-    sequence,
-    injected,
-    trust,
-    frontier,
-    taho,
-    ledger,
-    dcent,
-    gnosis,
-    keystone,
-  ]
+  injected,
+  coinbaseWalletSdk,
+  walletConnect,
+  infinityWallet,
+  keepkey,
+  sequence,
+  injected,
+  trust,
+  frontier,
+  taho,
+  ledger,
+  dcent,
+  gnosis,
+  keystone,
+]
