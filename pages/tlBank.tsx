@@ -82,6 +82,7 @@ init({
       { name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
       { name: 'MetaMask', url: 'https://metamask.io' },
     ],
+    explore: "https://etherscan.io"
   },
 })
 
