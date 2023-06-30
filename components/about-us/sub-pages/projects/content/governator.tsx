@@ -46,7 +46,7 @@ export default function GovernatorComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          Token Voting in Discord
+          GOVERNATOR
         </Heading>
         <Text
           color={'gray.100'}
@@ -60,7 +60,8 @@ export default function GovernatorComponent() {
           }}
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          Easy to use, token-enabled, shielded polls right in your server.
+          Token Voting in Discord Easy to use, token-enabled, shielded polls
+          right in your server.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
