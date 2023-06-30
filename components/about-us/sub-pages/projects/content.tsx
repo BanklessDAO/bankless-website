@@ -21,6 +21,7 @@ import BanklessCardComponent from './content/bankless-card'
 export default function ProjectsContentComponent() {
   return (
     <Box display={'flex'} flexDir='column' alignItems={'center'}>
+      <BanklessCardComponent />
       <ProjectBanklessConsultingComponent />
       <ProjectBountyBoardComponent />
       <NewsletterProjectComponent />
@@ -38,7 +39,6 @@ export default function ProjectsContentComponent() {
       <DecentralizeLawNewsletterComponent />
       <InfoSecTeamComponent />
       <WebsiteProjectComponent />
-      <BanklessCardComponent />
     </Box>
   )
 }

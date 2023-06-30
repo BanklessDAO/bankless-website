@@ -71,7 +71,7 @@ export default function BanklessCardComponent() {
           as={'form'}
           spacing={'12px'}
         >
-          <Link href={'https://infosec.bankless.community/'} isExternal>
+          <Link href={'https://banklesscard.xyz/'} isExternal>
             <Flex
               align={'center'}
               color={'white.100'}
