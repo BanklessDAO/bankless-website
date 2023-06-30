@@ -11,28 +11,32 @@ class Hero extends React.Component {
         flexDirection='column'
         justifyContent='start'
         alignItems='start'
-        rowGap='1rem'>
+        rowGap='1rem'
+      >
         <HStack position='relative'>
           <VStack
             alignItems='start'
             width={{ base: '100%', md: '64%', xl: '60%' }}
             rowGap='1rem'
             pt={{ base: 0, md: '8rem' }}
-            pb={{ base: 0, md: '2rem' }}>
+            pb={{ base: 0, md: '2rem' }}
+          >
             <Heading
               color={'white.100'}
               lineHeight={1}
               fontWeight={700}
               fontFamily='Clear Sans'
               fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-              zIndex='1'>
+              zIndex='1'
+            >
               Decentralizing media one article at a time
             </Heading>
             <Text
               color='grey'
               fontFamily='Clear Sans'
               fontSize='2xl'
-              lineHeight={1.2}>
+              lineHeight={1.2}
+            >
               BanklessDAO is building the first decentralized publishing house
               ever. Our newsletters and articles are translated into a variety
               of languages to reach a global audience. Find your crypto reading
@@ -44,7 +48,8 @@ class Hero extends React.Component {
             display={{ base: 'none', md: 'flex' }}
             position='absolute'
             right={{ base: '-10%', lg: '-10%', xl: '8%' }}
-            top={{ base: '10rem', lg:'2rem', xl: '-3rem' }}>
+            top={{ base: '10rem', lg: '2rem', xl: '-3rem' }}
+          >
             <ChakraNextImage
               src='/read/pen-01.png'
               height={{ base: '22rem', xl: '22rem' }}
@@ -73,7 +78,8 @@ class Hero extends React.Component {
           pt={{ base: '3rem', md: '8rem' }}
           pl={{ base: 0, xl: '4rem' }}
           position='relative'
-          w={{ base: '100%', lg: '70%' }}>
+          w={{ base: '100%', lg: '70%' }}
+        >
           <ArticleLink
             type='medium'
             url='https://medium.com/bankless-dao'
@@ -84,6 +90,12 @@ class Hero extends React.Component {
             type='mirror'
             url='https://banklessdao.mirror.xyz/'
             desc='BanklessDAO history and season recaps posted publicly.'
+          />
+
+          <ArticleLink
+            type='publish'
+            url='https://banklesspublishing.com/'
+            desc="Bankless Publishing creates and curates top-shelf educational Web3 content for a broad audience of crypto-interested readers. We also work with crypto's leading protocols to help them get their message out to our audience. Whether you're a writer or protocol team, we're interested in talking with you."
           />
 
           <Box
