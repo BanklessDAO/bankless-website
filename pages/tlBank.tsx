@@ -299,7 +299,7 @@ function TlBank() {
   const relock = async (): Promise<void> => {
     setLoading(true)
 
-    const unlockFor = selectedToken?.amount == 40000 ? 4 : 6
+    const unlockFor = selectedToken?.amount == 40000 ? 6 : 12
     const newUnlockDate = Math.floor(
       getNewUnlockDateRaw(selectedToken.unlockDate, unlockFor) / 1000
     )
