@@ -16,6 +16,7 @@ import NewsletterProjectComponent from './content/newsletter-project'
 import PodcastHatcheryComponent from './content/podcast-hatchery'
 import WebsiteProjectComponent from './content/website-project'
 import InfoSecTeamComponent from './content/infosec-team'
+import GovernatorComponent from './content/governator'
 
 export default function ProjectsContentComponent() {
   return (
@@ -37,6 +38,7 @@ export default function ProjectsContentComponent() {
       <DecentralizeLawNewsletterComponent />
       <InfoSecTeamComponent />
       <WebsiteProjectComponent />
+      <GovernatorComponent />
     </Box>
   )
 }
