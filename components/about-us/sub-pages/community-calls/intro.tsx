@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Stack, Flex, Image, Link } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 export default function CommunityCallsIntroComponent() {
   return (
@@ -8,12 +9,15 @@ export default function CommunityCallsIntroComponent() {
         as={Box}
         textAlign={'center'}
         spacing={{ base: 4, md: 7 }}
-        py={{ base: 10, md: 18 }}>
+        py={{ base: 10, md: 18 }}
+        className={`${styles['header-text']}`}
+      >
         <Heading
           fontWeight={700}
           fontSize={{ base: '4xl', sm: '5xl', md: '7xl' }}
           lineHeight={'110%'}
-          color={'white.100'}>
+          color={'white.100'}
+        >
           Community Calls
           <Underline />
         </Heading>
@@ -22,7 +26,8 @@ export default function CommunityCallsIntroComponent() {
           color={'grey'}
           fontSize={{ base: 'md', md: 'xl' }}
           textTransform={'uppercase'}
-          noOfLines={[2, 1, 1]}>
+          noOfLines={[2, 1, 1]}
+        >
           Join the entire Bankless community on Fridays at 4pm UTC
         </Text>
 
@@ -30,7 +35,8 @@ export default function CommunityCallsIntroComponent() {
           color={'white.200'}
           fontSize={{ base: 'xs', md: 'lg', lg: 'xl' }}
           lineHeight={{ base: '1.5rem', md: '2rem' }}
-          noOfLines={[9, 7]}>
+          noOfLines={[9, 7]}
+        >
           Community Calls are the anchor of the BanklessDAO community. Every
           Friday at 4pm UTC we gather for one hour on the Community Call Voice
           Stage to hear key governance updates, share hype news, and have
@@ -39,7 +45,8 @@ export default function CommunityCallsIntroComponent() {
           <Link
             color='#D02128'
             href='https://www.twitch.tv/banklessdao'
-            isExternal>
+            isExternal
+          >
             BanklessDAO Twitch
           </Link>
           .
@@ -50,18 +57,21 @@ export default function CommunityCallsIntroComponent() {
         align='center'
         spacing={{ base: 8, md: 10 }}
         mt={{ base: 10, md: 15 }}
-        direction={{ base: 'column', md: 'row' }}>
+        direction={{ base: 'column', md: 'row' }}
+      >
         <Flex
           justify={'center'}
           align={'center'}
           position={'relative'}
-          flex={1}>
+          flex={1}
+        >
           <Box
             position={'relative'}
             rounded={'2xl'}
             overflow={'hidden'}
             width='100%'
-            sx={{ height: { base: '300px', md: '450px' } }}>
+            sx={{ height: { base: '300px', md: '450px' } }}
+          >
             <Image
               position={'absolute'}
               alt={'Cryptocurrency Image'}
@@ -109,20 +119,23 @@ export default function CommunityCallsIntroComponent() {
           <Stack
             flex={1}
             spacing={{ base: 5, md: 10 }}
-            width={{ base: '100%', md: 'inherit' }}>
+            width={{ base: '100%', md: 'inherit' }}
+          >
             <Heading
               color={'gray.100'}
               lineHeight={1.1}
               fontWeight={700}
               textAlign='center'
               textTransform={'uppercase'}
-              fontSize={{ base: '1xl', sm: '2xl', md: '4xl', xl: '5xl' }}>
+              fontSize={{ base: '1xl', sm: '2xl', md: '4xl', xl: '5xl' }}
+            >
               Want Alpha?
             </Heading>
             <Text
               color={'gray.100'}
               textAlign='center'
-              fontSize={{ sm: 'xs', md: 'md' }}>
+              fontSize={{ sm: 'xs', md: 'md' }}
+            >
               Join the weekly CCs!
             </Text>
           </Stack>

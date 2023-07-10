@@ -5,10 +5,15 @@ import GmiIndex from './GmiIndex'
 import DaoPunkSection from './DaoPunkSection'
 import NftInvest from './NftInvest'
 import { Container } from '@chakra-ui/react'
+import styles from 'styles/NavBar.module.css'
 
 function Invest() {
   return (
-    <Container maxW={{ base: 'container.md', md: 'container.xl' }} p={0}>
+    <Container
+      maxW={{ base: 'container.md', md: 'container.xl' }}
+      className={`${styles['header-text']}`}
+      p={0}
+    >
       <BankSection />
       <BedIndex />
       <GmiIndex />

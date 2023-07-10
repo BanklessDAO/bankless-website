@@ -5,11 +5,17 @@ import PodcastHatchery from './podcast-hatchery'
 import Podcasts from './podcasts'
 import ComingSoon from './coming-soon'
 import PodcastIdea from './podcast-idea'
+import styles from 'styles/NavBar.module.css'
+import BdYoutube from "./bd-youtube";
 
 class Listen extends React.Component {
   render() {
     return (
-      <VStack rowGap={{ base: '2rem', md: '2rem' }}>
+      <VStack
+        rowGap={{ base: '2rem', md: '2rem' }}
+        className={`${styles['header-text']}`}
+      >
+        <BdYoutube/>
         <PodcastHatchery />
         <Podcasts />
         <ComingSoon />

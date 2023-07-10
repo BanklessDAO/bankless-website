@@ -3,9 +3,10 @@ import React from 'react'
 import '@fontsource/clear-sans/500.css'
 import '@fontsource/clear-sans/700.css'
 
-import { Flex, Box, Text, Heading } from '@chakra-ui/react'
+import { Flex, Box, Text, Heading, Button } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
+import styles from 'styles/NavBar.module.css'
 
 class Section1 extends React.Component {
   render() {
@@ -33,6 +34,7 @@ class Section1 extends React.Component {
           pb={{ base: 0, md: '4rem' }}
           rowGap={{ base: '4rem', md: '2rem' }}
           w='100%'
+          className={`${styles['header-text']}`}
         >
           <Heading
             textAlign='center'
@@ -54,32 +56,57 @@ class Section1 extends React.Component {
 
           <Flex
             direction={{ base: 'column', md: 'row' }}
-            justifyContent='center'
+            gap='3rem'
+            justifyContent={'center'}
             width='100%'
+            alignItems={'center'}
           >
-            <Text
-              color={'grey'}
-              flex='0 0 auto'
-              fontSize={{ base: 'xl', lg: '2xl' }}
-              fontFamily='Clear Sans'
-              marginTop={'2rem'}
-              textAlign={'center'}
-              pb={{ base: '0rem', md: '4rem' }}
+            <Button
+              as='a'
+              href={'https://discord.com/invite/bankless'}
+              target='_blank'
+              color={'#ffff'}
+              variant='solid'
+              transition='1s'
+              fontSize='1.5rem'
+              height='4rem'
+              width='16rem'
+              bg='#ff1013'
+              borderRadius='1rem'
+              _hover={{
+                bg: '#ff1013',
+                color: '#ffff',
+                transform: 'scale(0.93)',
+              }}
+              _focus={{
+                outline: 'none',
+              }}
             >
-              We’re Headed West.
-            </Text>
-            <Text
-              color={'white.300'}
-              flex='0 0 auto'
-              fontSize={{ base: 'xl', lg: '2xl' }}
-              fontFamily='Clear Sans'
-              marginTop={{ base: '0rem', md: '2rem' }}
-              textAlign={'center'}
-              pl='1rem'
-              pb={{ base: '4rem', md: '4rem' }}
+              Join Us
+            </Button>
+            <Button
+              as='a'
+              href={'/about-us'}
+              color={'#ff1013'}
+              variant='outline'
+              transition='1s'
+              fontSize='1.5rem'
+              height='4rem'
+              width='16rem'
+              border='2px'
+              borderRadius='1rem'
+              borderColor={'#ff1013'}
+              _hover={{
+                bg: '#ff1013',
+                color: '#ffff',
+                transform: 'scale(0.93)',
+              }}
+              _focus={{
+                outline: 'none',
+              }}
             >
-              {`Join Us`}
-            </Text>
+              Learn More
+            </Button>
           </Flex>
           <Box h={'300px'}>
             <video
@@ -94,6 +121,9 @@ class Section1 extends React.Component {
               }}
             >
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
+              <source src='/videos/DAOhandLogo.webm' type='video/webm' />
+              <source src='/videos/DAOhandLogo.ogv' type='video/ogg' />
+              {/* Add additional source formats as needed */}
             </video>
           </Box>
         </Flex>

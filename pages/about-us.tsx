@@ -11,16 +11,16 @@ import CirclesV2 from 'components/about-us/circlesV2'
 
 export default function AboutUsPage() {
   return (
-      <>
-        <IntroductionAboutUs />
-        <SubnavAboutUs/>
-        <MiddleAboutUs/>
-        <OurMissionAboutUs />
-        <CirclesV2/>
-        <OurVisionAboutUs />
-        <CarouselSection/>
-        <JoinUsAboutUs />
-        <NewsLetterAboutUs />
-      </>
+    <>
+      <IntroductionAboutUs />
+      {/* {isMobile && <SubnavAboutUs />} */}
+      <MiddleAboutUs />
+      <OurMissionAboutUs />
+      <CirclesV2 />
+      <OurVisionAboutUs />
+      <CarouselSection />
+      <JoinUsAboutUs />
+      <NewsLetterAboutUs />
+    </>
   )
 }
