@@ -45,6 +45,7 @@ export default function BanklessCardComponent() {
           fontWeight={700}
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
+          textTransform={'uppercase'}
         >
           Bankless Card
         </Heading>
