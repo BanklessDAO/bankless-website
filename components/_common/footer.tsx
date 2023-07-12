@@ -108,19 +108,11 @@ class Footer extends React.Component {
             alignItems={{ base: 'center', md: 'start' }}
             rowGap={1}
           >
-            <HStack>
-              <Box fontSize={50} fontWeight={'extrabold'} borderBottom={'8px solid #D02128'} paddingBottom={-3} lineHeight={1} color={'white'}>DAO</Box>
-
-              {/*<Image*/}
-              {/*    src='/images/bdao_onBlack.png'*/}
-              {/*    objectFit='contain'*/}
-              {/*    height={25}*/}
-              {/*    width={50}*/}
-              {/*    alt='bankless-logo'*/}
-              {/*/>*/}
-
-            </HStack>
-
+            <Image
+                src={'images/logo.png'}
+                alt={'banklessDAO logo'}
+                height={['50px', '75px']}
+            />
             <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
               A decentralized autonomous organization that acts as a steward of
               the Bankless Movement progressing the world towards a future of

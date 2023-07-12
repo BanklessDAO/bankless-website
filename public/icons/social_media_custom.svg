@@ -61,7 +61,10 @@
       <g
          id="g1958"
          transform="matrix(0.95225157,0,0,0.95225157,5.1320766,116.06214)"
-         inkscape:label="youtube">
+         inkscape:label="youtube"
+         inkscape:export-filename="youtube.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <path
            id="path3430"
            style="fill:#ffffff"
@@ -84,7 +87,10 @@
       <g
          id="g1473"
          transform="matrix(0.95225157,0,0,0.95225157,110.80156,112.98836)"
-         inkscape:label="threads">
+         inkscape:label="threads"
+         inkscape:export-filename="threads.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect1453"
@@ -106,7 +112,10 @@
       <g
          id="g1499"
          transform="matrix(0.95225157,0,0,0.95225157,68.306639,64.392821)"
-         inkscape:label="facebook">
+         inkscape:label="facebook"
+         inkscape:export-filename="facebook.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <path
            style="fill:#ffffff;stroke-width:0.0558008"
            d="m -87.900794,14.055456 c -0.06138,-0.01068 -0.406648,-0.04946 -0.767261,-0.08618 l -0.65566,-0.06676 V 8.0500975 2.1976777 h -2.120432 -2.120432 V -0.22965832 -2.6569943 h 2.120432 2.120432 v -2.191647 c 0,-1.205406 0.02644,-2.404426 0.05875,-2.66449 0.299009,-2.406738 1.60577,-4.1799077 3.620028,-4.9120887 1.035698,-0.376475 1.321945,-0.415086 2.989426,-0.403232 1.21334,0.0086 1.69128,0.03564 2.45524,0.138759 l 0.94861,0.12805 0.0146,2.071874 0.0146,2.0718747 -1.40964,0.02687 c -1.21568,0.02317 -1.45736,0.0424 -1.7564,0.139736 -0.70477,0.229392 -1.1272,0.589565 -1.41568,1.207042 -0.22931,0.49082 -0.27195,0.920854 -0.27319,2.755076 l -0.001,1.632175 h 2.31573 c 2.16826,0 2.31574,0.0062 2.31575,0.09765 10e-6,0.104535 -0.65162,4.421075 -0.69917,4.63147 l -0.0284,0.125551 h -1.95197 -1.95196 v 5.8512098 5.8512085 l -0.571964,0.06999 c -0.529189,0.06476 -2.996458,0.129562 -3.250399,0.08537 z"
@@ -125,7 +134,10 @@
       <g
          id="g1987"
          transform="matrix(0.95225157,0,0,0.95225157,144.23662,112.98836)"
-         inkscape:label="tiktok">
+         inkscape:label="tiktok"
+         inkscape:export-filename="tiktok.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect1983"
@@ -144,7 +156,10 @@
       <g
          id="g2041"
          transform="matrix(0.95225157,0,0,0.95225157,177.67168,112.98836)"
-         inkscape:label="instagram">
+         inkscape:label="instagram"
+         inkscape:export-filename="instagram.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect2037"
@@ -163,7 +178,10 @@
       <g
          id="g2074"
          transform="matrix(0.95225157,0,0,0.95225157,211.10674,112.98836)"
-         inkscape:label="discord">
+         inkscape:label="discord"
+         inkscape:export-filename="discord.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect2070"
@@ -182,7 +200,10 @@
       <g
          id="g2125"
          transform="matrix(0.95225157,0,0,0.95225157,244.54179,113.28435)"
-         inkscape:label="twitter">
+         inkscape:label="twitter"
+         inkscape:export-filename="twitter.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect2121"
@@ -201,7 +222,10 @@
       <g
          id="g2180"
          transform="matrix(0.95225157,0,0,0.95225157,277.97685,113.28435)"
-         inkscape:label="telegram">
+         inkscape:label="telegram"
+         inkscape:export-filename="telegram.png"
+         inkscape:export-xdpi="30.264503"
+         inkscape:export-ydpi="30.264503">
         <rect
            style="fill:none;stroke:none;stroke-width:0.443525;stroke-linecap:round;paint-order:stroke fill markers"
            id="rect2176"
