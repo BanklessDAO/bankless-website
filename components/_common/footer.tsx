@@ -1,5 +1,5 @@
 import React from 'react'
-import {HStack, Image} from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 
 import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
@@ -110,7 +110,7 @@ class Footer extends React.Component {
           >
             <Image
                 src={'images/logo.png'}
-                alt={'banklessDAO logo'}
+                alt={'BanklessDAO logo'}
                 height={['50px', '75px']}
             />
             <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
@@ -118,7 +118,6 @@ class Footer extends React.Component {
               the Bankless Movement progressing the world towards a future of
               greater freedom.
             </Text>
-
             <Flex justifyContent='space-between' marginTop={{ base: 0, lg: 4 }}>
               {SOCIALS.map((_social, idx) => {
                 return (
@@ -132,7 +131,6 @@ class Footer extends React.Component {
                     <Image
                       src={_social.img}
                       alt={_social.alt}
-                      // width={['20px', '20px']}
                       height={['20px', '32px']}
                     />
                   </Link>
@@ -140,10 +138,8 @@ class Footer extends React.Component {
               })}
             </Flex>
           </Flex>
-
           <Box marginTop={{ base: 8, lg: 0 }}>
             <Grid
-
               gridTemplateColumns='1fr 1fr'
               rowGap='1rem'
               columnGap={12}
