@@ -1,7 +1,7 @@
 import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-export default function EditArmProjectComponent() {
+export default function GovernatorComponent() {
   return (
     <Stack
       justify='space-between'
@@ -30,7 +30,7 @@ export default function EditArmProjectComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/about-us/bpublishing_logo.png'
+            src='/images/gov-bot.jpeg'
           />
         </Box>
       </Flex>
@@ -46,7 +46,7 @@ export default function EditArmProjectComponent() {
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}
         >
-          BANKLESS PUBLISHING
+          GOVERNATOR
         </Heading>
         <Text
           color={'gray.100'}
@@ -60,18 +60,15 @@ export default function EditArmProjectComponent() {
           }}
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          Bankless Publishing creates and curates top-shelf educational Web3 content for a broad audience of crypto-interested readers. We also work with crypto’s leading protocols to help them get their message out to our audience. Whether you’re a writer or protocol team, we’re interested in talking with you.
+          Token Voting in Discord Easy to use, token-enabled, shielded polls
+          right in your server.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
           spacing={'12px'}
         >
-          {/* TODO confirm this link */}
-          <Link
-            href='https://banklesspublishing.com/'
-            isExternal
-          >
+          <Link href={'https://www.governator.xyz/'} isExternal>
             <Flex
               align={'center'}
               color={'white.100'}
