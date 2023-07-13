@@ -5,19 +5,29 @@ import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
 const SOCIALS = [
   {
-    img: '/icons/medium.png',
-    alt: 'medium',
-    href: 'https://medium.com/bankless-dao',
+    img: '/icons/facebook.png',
+    alt: 'facebook',
+    href: 'https://www.facebook.com/people/Bankless-DAO/100086325162724/',
   },
   {
-    img: '/icons/mirror.png',
-    alt: 'mirror',
-    href: 'https://banklessdao.mirror.xyz/',
+    img: '/icons/tiktok.png',
+    alt: 'tiktok',
+    href: 'https://vm.tiktok.com/ZMNSvBj2H/',
   },
   {
-    img: '/icons/union.png',
-    alt: 'union',
-    href: '#',
+    img: '/icons/telegram.png',
+    alt: 'telegram',
+    href: 'https://t.me/BanklessDAO',
+  },
+  {
+    img: '/icons/youtube.png',
+    alt: 'youtube',
+    href: 'https://www.youtube.com/channel/UCik2oWalCO3qpiGoMpl-c1g',
+  },
+  {
+    img: '/icons/threads.png',
+    alt: 'threads',
+    href: 'https://www.threads.net/@bankless_dao',
   },
   {
     img: '/icons/twitter.png',
@@ -30,48 +40,32 @@ const SOCIALS = [
     href: 'https://discord.com/invite/bankless',
   },
   {
-    img: '/icons/notion.png',
-    alt: 'notion',
-    href: 'https://bankless.notion.site/bankless/BanklessDAO-82ba81e7da1c42adb7c4ab67a4f22e8f',
-  },
-  {
-    img: '/icons/snapshot.png',
-    alt: 'snapshot',
-    href: 'https://snapshot.org/#/banklessvault.eth',
-  },
-  {
-    img: '/icons/etherscan-logo.png',
-    alt: 'etherscan',
-    href: 'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198',
-  },
-  {
     img: '/icons/instagram.png',
     alt: 'instagram',
     href: 'https://www.instagram.com/bankless_dao/',
-  },
-  {
-    img: '/icons/dune.png',
-    alt: 'alt',
-    href: 'https://dune.xyz/paulapivat/Bankless-DAO-Tipping-Economy',
-  },
+  }
 ]
 
 const LINKS = [
   {
-    text: 'Join Olympus Pro',
-    href: 'https://pro.olympusdao.finance/#/bond',
+    text: 'Dune',
+    href: 'https://dune.xyz/paulapivat/Bankless-DAO-Tipping-Economy',
   },
   {
-    text: 'BANK',
+    text: '$BANK',
     href: 'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198',
   },
   {
-    text: 'Wiki',
-    href: 'https://dyor-crypto.fandom.com/wiki/Bankless_DAO_(BANK)',
+    text: 'Notion',
+    href: 'https://bankless.notion.site/bankless/BanklessDAO-82ba81e7da1c42adb7c4ab67a4f22e8f',
   },
   {
-    text: 'Privacy',
-    href: 'https://forum.bankless.community/privacy',
+    text: 'Medium',
+    href: 'https://medium.com/bankless-dao',
+  },
+  {
+    text: 'Mirror',
+    href: 'https://banklessdao.mirror.xyz/',
   },
   {
     text: 'Forum',
@@ -89,6 +83,10 @@ const LINKS = [
     text: 'TwitchTV',
     href: 'https://www.twitch.tv/banklessdao',
   },
+  {
+    text: 'Privacy',
+    href: 'https://forum.bankless.community/privacy',
+  },
 ]
 
 class Footer extends React.Component {
@@ -99,7 +97,7 @@ class Footer extends React.Component {
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
           gap={{ base: 2, md: 6 }}
           width='80%'
-          borderTop='1px solid #D02128'
+          borderTop='1px solid white'
           marginTop={{ base: 8, lg: 16 }}
           paddingY={{ base: 8, lg: 8 }}
           paddingX={{ base: 4, lg: 8 }}
@@ -108,22 +106,18 @@ class Footer extends React.Component {
             flexDirection='column'
             justifyContent='center'
             alignItems={{ base: 'center', md: 'start' }}
-            rowGap={4}
+            rowGap={1}
           >
             <Image
-              src='/images/logo.png'
-              objectFit='contain'
-              height={150}
-              width={150}
-              alt='bankless-logo'
+                src={'images/logo.png'}
+                alt={'BanklessDAO logo'}
+                height={['50px', '75px']}
             />
-
-            <Text fontSize='xl'>
+            <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
               A decentralized autonomous organization that acts as a steward of
               the Bankless Movement progressing the world towards a future of
               greater freedom.
             </Text>
-
             <Flex justifyContent='space-between' marginTop={{ base: 0, lg: 4 }}>
               {SOCIALS.map((_social, idx) => {
                 return (
@@ -137,22 +131,20 @@ class Footer extends React.Component {
                     <Image
                       src={_social.img}
                       alt={_social.alt}
-                      width={['20px', '20px']}
-                      height={['20px', '20px']}
+                      height={['20px', '32px']}
                     />
                   </Link>
                 )
               })}
             </Flex>
           </Flex>
-
-          <Box marginTop={{ base: 8, lg: 24 }}>
+          <Box marginTop={{ base: 8, lg: 0 }}>
             <Grid
               gridTemplateColumns='1fr 1fr'
-              rowGap='2vh'
+              rowGap='1rem'
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}
-              paddingTop={{ base: 4, lg: 12 }}
+              paddingTop={{ base: 4, lg: 0 }}
               textAlign={{ base: 'center', lg: 'left' }}
             >
               {LINKS.map((_link, idx) => {
@@ -161,7 +153,8 @@ class Footer extends React.Component {
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                    fontSize={{ base: 'md', md: '2xl' }}
+                      fontWeight={'normal'}
+                    fontSize={{ base: 'md', md: 'lg' }}
                   >
                     {_link.text}
                   </Link>
