@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Button,
   HStack,
@@ -7,6 +7,7 @@ import {
   Flex,
   Image,
   WrapItem,
+  Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
@@ -33,7 +34,8 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
             alignItems='center'
             background='#222222'
             borderRadius='8px'
-            padding='10px'>
+            padding='10px'
+          >
             <Image
               src='/icons/medium.png'
               alt='medium'
@@ -54,10 +56,38 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
             alignItems='center'
             background='#222222'
             borderRadius='8px'
-            padding='10px'>
+            padding='10px'
+          >
             <Image
               src='/icons/mirror.png'
               alt='mirror'
+              height={30}
+              width={25}
+            />
+          </Flex>
+        )}
+      </>
+    )}
+    {type === 'publish' && (
+      <>
+        {noOutline ? (
+          <Image
+            src='/icons/publish.png'
+            alt='bankless publishing'
+            height={30}
+            width={30}
+          />
+        ) : (
+          <Flex
+            justify='center'
+            alignItems='center'
+            background='#222222'
+            borderRadius='8px'
+            padding='10px'
+          >
+            <Image
+              src='/icons/publish.png'
+              alt='bankless publishing'
               height={30}
               width={25}
             />
@@ -87,48 +117,96 @@ function setArticleType(type: string): string | undefined {
       return 'Medium'
     case 'mirror':
       return 'Mirror'
+    case 'publish':
+      return 'Bankless Publishing'
     default:
       break
   }
 }
 
-export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => (
-  <NextLink href={url} passHref={true}>
-    <WrapItem
-      as='a'
-      d='flex'
-      flexDirection='column'
-      alignItems='start'
-      target='_blank'
-      w='100%'
-      p={0}
-      height='100%'
-      bg='transparent'
-      zIndex={1}
-      _hover={{ cursor: 'pointer' }}>
-      <Flex
-        justify='center'
-        alignItems='center'
-        background='#222222'
-        borderRadius='8px'
-        padding='10px'>
-        <ArticleIcon type={type} />
-      </Flex>
-      <HStack justifyContent='center' alignItems='baseline' pt='1rem'>
-        <Text fontSize={'4xl'} fontWeight={700} fontFamily='Clear Sans'>
-          {setArticleType(type)}
-        </Text>
-        <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
-      </HStack>
-      <Text
-        w={{ base: '100%', md: '90%', xl: '100%' }}
-        fontSize='xl'
-        textOverflow='wrap'
-        fontFamily='Clear Sans'
-        color='grey'
-        lineHeight='1.2'>
-        {desc}
-      </Text>
-    </WrapItem>
-  </NextLink>
-)
+export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => {
+  const [showFullDesc, setShowFullDesc] = useState(false)
+
+  const toggleShowFullDesc = () => {
+    setShowFullDesc(!showFullDesc)
+  }
+
+  return (
+    <Box display={'flex'} flexDirection={'column'} w='100%' height='100%'>
+      <NextLink href={url} passHref={true}>
+        <WrapItem
+          as='a'
+          display='flex'
+          flexDirection='column'
+          alignItems='start'
+          target='_blank'
+          w='100%'
+          p={0}
+          height='100%'
+          bg='transparent'
+          zIndex={1}
+          _hover={{ cursor: 'pointer' }}
+        >
+          <Flex
+            justify='center'
+            alignItems='center'
+            background='#222222'
+            borderRadius='8px'
+            padding='10px'
+          >
+            <ArticleIcon type={type} />
+          </Flex>
+          <HStack justifyContent='center' alignItems='baseline' pt='1rem'>
+            <Text fontSize={'4xl'} fontWeight={700} fontFamily='Clear Sans'>
+              {setArticleType(type)}
+            </Text>
+            <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
+          </HStack>
+          <Text
+            w={{ base: '100%', md: '90%', xl: '100%' }}
+            fontSize='xl'
+            textOverflow='wrap'
+            fontFamily='Clear Sans'
+            color='grey'
+            lineHeight='1.2'
+          >
+            {desc.length > 75 ? (
+              showFullDesc ? (
+                <>{desc} </>
+              ) : (
+                <>{`${desc.substring(0, 75)}... `}</>
+              )
+            ) : (
+              desc
+            )}
+          </Text>
+        </WrapItem>
+      </NextLink>
+      {desc.length > 75 ? (
+        showFullDesc ? (
+          <Text
+            as='span'
+            color='blue.500'
+            textDecoration='underline'
+            onClick={toggleShowFullDesc}
+            cursor='pointer'
+          >
+            Read less
+          </Text>
+        ) : (
+          <Text
+            as='span'
+            color='blue.500'
+            textDecoration='underline'
+            onClick={toggleShowFullDesc}
+            cursor='pointer'
+          >
+            Read more
+          </Text>
+        )
+      ) : (
+        <></>
+      )}
+    </Box>
+  )
+}
