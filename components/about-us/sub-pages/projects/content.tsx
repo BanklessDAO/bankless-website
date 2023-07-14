@@ -16,11 +16,13 @@ import NewsletterProjectComponent from './content/newsletter-project'
 import PodcastHatcheryComponent from './content/podcast-hatchery'
 import WebsiteProjectComponent from './content/website-project'
 import InfoSecTeamComponent from './content/infosec-team'
+import BanklessCardComponent from './content/bankless-card'
 import GovernatorComponent from './content/governator'
 
 export default function ProjectsContentComponent() {
   return (
     <Box display={'flex'} flexDir='column' alignItems={'center'}>
+      <BanklessCardComponent />
       <ProjectBanklessConsultingComponent />
       <ProjectBountyBoardComponent />
       <NewsletterProjectComponent />
