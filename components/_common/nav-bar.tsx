@@ -40,7 +40,7 @@ const NAV_LINKS = [
   },
 ]
 
-const linksData = [
+const aboutUsLinksData = [
   {
     title: 'Governance',
     href: '/about-us/governance',
@@ -52,7 +52,6 @@ const linksData = [
     href: '/about-us/projects',
     alt: 'Link to Projects page',
   },
-  // { title: 'COORDINATION', href: '#' },
   {
     title: 'Community Calls',
     href: '/about-us/community-calls',
@@ -63,7 +62,14 @@ const linksData = [
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
-  // { title: 'MEDIA KIT', href: '#' },
+]
+
+const investLinksData = [
+  {
+    title: 'Lock BANK',
+    href: '/tlBank',
+    alt: 'Link to Lock BANK page',
+  },
 ]
 
 type Link = {
@@ -199,7 +205,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
   )
 }
 
-const DropdownMenu = () => {
+const DropdownMenu = ({linksData}) => {
   const [isMobile] = useMediaQuery('(max-width: 1040px)')
 
   return (
@@ -231,7 +237,7 @@ const DropdownMenu = () => {
           },
         }}
       >
-        {linksData.map(({ href, alt, title }: Link, index: number) => {
+        {linksData.map(({ href, title }: Link) => {
           return (
             <DropDownItem key={ulid()} to={href}>
               {title}
@@ -277,6 +283,7 @@ const MenuLinks = ({ isOpen }) => {
       >
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
+          const isInvest = _navLink.name === 'Invest'
 
           return (
             <Box
@@ -291,7 +298,8 @@ const MenuLinks = ({ isOpen }) => {
               }}
             >
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
-              {isAboutUs && <DropdownMenu />}
+              {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
+              {isInvest && <DropdownMenu linksData={investLinksData} />}
             </Box>
           )
         })}
