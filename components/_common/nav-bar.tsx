@@ -1,6 +1,4 @@
-import React, { useMemo, useState } from 'react'
-import Image from 'next/image'
-import NextLink from 'next/link'
+import React, { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { ulid } from 'ulid'
 import styles from 'styles/NavBar.module.css'
