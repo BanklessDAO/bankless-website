@@ -269,7 +269,7 @@ function TlBank() {
         await setChain({ chainId: CHAIN_ID })
         return
       }
-      
+
       if (allowance.lt(value)) {
         const approvalTransaction = await BankTokenContract.approve(
           TLBankToken,
@@ -399,10 +399,16 @@ function TlBank() {
                 <Text fontSize={{ base: '10px', md: '14px' }} as='del'>
                   Polygon
                 </Text>
+                <Text fontSize={{ base: '10px', md: '14px' }}>
+                &nbsp;(Coming soon)
+                </Text>
               </MenuItem>
               <MenuItem>
                 <Text fontSize={{ base: '10px', md: '14px' }} as='del'>
                   Optimism
+                </Text>
+                <Text fontSize={{ base: '10px', md: '14px' }}>
+                &nbsp;(Coming soon)
                 </Text>
               </MenuItem>
             </MenuList>
