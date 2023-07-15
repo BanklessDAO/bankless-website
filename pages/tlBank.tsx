@@ -443,7 +443,7 @@ function TlBank() {
               width={'70px'}
             />
             <Text as='b' fontSize={{ base: '16px', md: '36px' }}>
-              LOCK BANK
+              Lock BANK
             </Text>
           </HStack>
         </div>
