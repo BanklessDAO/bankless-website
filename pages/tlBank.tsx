@@ -51,7 +51,7 @@ import { useSetChain } from '@web3-onboard/react'
 import { BigNumber, ethers } from 'ethers'
 import { providers } from '@0xsequence/multicall'
 
-const API = '9176eee3-12fa-431c-93c5-27d1f40d4c91'
+const API = process.env.NEXT_PUBLIC_BLOCKNATIVE_API_KEY
 
 const METADATA_BASE_URL = 'https://nft.hedgey.finance'
 const CHAIN_ID = '0x1'

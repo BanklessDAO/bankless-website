@@ -1,10 +1,5 @@
-export const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/9344a875cace468ca6c8029147cda56a`
-export const GOERLI_RPC_URL = `https://goerli.infura.io/v3/9344a875cace468ca6c8029147cda56a`
-
-// export const infura = 'process.env.NEXT_PUBLIC_INFURA_API_KEY'
-
-// const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/${infura}`
-// const GOERLI_RPC_URL = `https://goerli.infura.io/v3/${infura}`
+export const MAINNET_RPC_URL = `https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_PROJECT_ID}`
+export const GOERLI_RPC_URL = `https://goerli.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_PROJECT_ID}`
 
 //WALLETS
 import infinityWalletModule from '@web3-onboard/infinity-wallet'
@@ -25,7 +20,7 @@ const injected = injectedModule()
 const coinbaseWalletSdk = coinbaseWalletModule()
 const walletConnect = walletConnectModule({
   version: 2,
-  projectId: 'e1726502f108ccc7845fc598e1a605f3',
+  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
   requiredChains: 1,
 })
 const dcent = dcentModule()
