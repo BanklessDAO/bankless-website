@@ -90,6 +90,9 @@ const theme = extendTheme(
             _hover: {
               bg: '#d02128',
             },
+            _focus: {
+              boxShadow: 'none !important',
+          }
           },
           'bankless-white': {
             bg: 'white.100',
