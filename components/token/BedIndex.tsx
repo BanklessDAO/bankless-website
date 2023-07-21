@@ -61,11 +61,9 @@ function BedIndex() {
               The Bankless BED Index is a passive investment vehicle weighted
               equally in Bitcoin, Ethereum, and the DeFi Pulse Index (DPI),
               which tracks high-usage DeFi assets. This index gives you exposure
-              to crypto without having to research DeFi projects or constantly
-              rebalance your portfolio. This is a great first crypto investment
-              for anyone just starting their crypto journey. The fund is a
-              cooperation between BanklessDAO and Index Coop, a provider of DeFi
-              investment products.
+              to crypto without having to constantly rebalance your portfolio.
+              The fund is a cooperation between BanklessDAO and Index Coop, a
+              provider of DeFi investment products.
             </Text>
           </Stack>
           <HStack justifyContent={'flex-end'} display='flex'>
@@ -91,7 +89,7 @@ function BedIndex() {
                       width={23}
                     />
                   </Container>
-                  Invest in BED index
+                  BED Index
                 </Button>
               </Link>
               <Link

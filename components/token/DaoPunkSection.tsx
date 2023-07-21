@@ -35,7 +35,7 @@ function DaoPunkSection() {
         ) : null}
         <Container width={'100%'} alignSelf={'center'}>
           <Image
-            src='/images/DAO-Punk-Invest.png'
+            src='/images/DAO-Punks.png'
             alt='bankToken'
             height={{ base: '100%', md: '300px' }}
             width='450px'
@@ -74,7 +74,7 @@ function DaoPunkSection() {
                   style={{ textDecoration: 'none' }}
                 >
                   <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                    Invest in DAO Punks
+                    Learn more about DAO Punks
                   </Button>
                 </Link>
               </Container>

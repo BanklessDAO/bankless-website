@@ -79,7 +79,7 @@ function GmiIndex() {
                     width={23}
                   />
                 </Container>
-                Invest in GMI index
+                Learn more about GMI index
               </Button>
             </Link>
           </Container>

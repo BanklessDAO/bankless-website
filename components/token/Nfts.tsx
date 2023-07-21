@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Text, Container, VStack, Button, Link } from '@chakra-ui/react'
 
-function NftInvest() {
+function Nfts() {
   return (
     <Container maxW={'6xl'} p={0}>
       <Flex
@@ -44,7 +44,7 @@ function NftInvest() {
                 style={{ textDecoration: 'none' }}
               >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  Invest in Chippi
+                  Learn more about Chippi
                 </Button>
               </Link>
             </Container>
@@ -84,7 +84,7 @@ function NftInvest() {
                 style={{ textDecoration: 'none' }}
               >
                 <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  {`Invest in NFT\'s`}
+                  Learn more
                 </Button>
               </Link>
             </Container>
@@ -95,4 +95,4 @@ function NftInvest() {
   )
 }
 
-export default NftInvest
+export default Nfts

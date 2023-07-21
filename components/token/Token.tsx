@@ -3,11 +3,11 @@ import BankSection from './BankSection'
 import BedIndex from './BedIndex'
 import GmiIndex from './GmiIndex'
 import DaoPunkSection from './DaoPunkSection'
-import NftInvest from './NftInvest'
+import Nfts from './Nfts'
 import { Container } from '@chakra-ui/react'
 import styles from 'styles/NavBar.module.css'
 
-function Invest() {
+function Token() {
   return (
     <Container
       maxW={{ base: 'container.md', md: 'container.xl' }}
@@ -18,9 +18,9 @@ function Invest() {
       <BedIndex />
       <GmiIndex />
       <DaoPunkSection />
-      <NftInvest />
+      <Nfts />
     </Container>
   )
 }
 
-export default Invest
+export default Token
