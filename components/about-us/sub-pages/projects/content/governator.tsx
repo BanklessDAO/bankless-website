@@ -60,7 +60,7 @@ export default function GovernatorComponent() {
           }}
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          Token Voting in Discord Easy to use, token-enabled, shielded polls
+          Token voting in Discord. Easy-to-use, token-enabled, shielded polls
           right in your server.
         </Text>
         <Stack
