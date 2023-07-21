@@ -22,7 +22,7 @@ function Disclaimer() {
             <li><strong>DAO</strong> (referred to as either &quot;the DAO&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Disclaimer) refers to BanklessDAO.</li>
             <li><strong>You</strong> means the individual accessing the Website, or the DAO, or other legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
             <li><strong>Website</strong> refers to the BanklessDAO Website , accessible from <a href="www.bankless.community" rel="external nofollow noopener" target="_blank">www.bankless.community</a></li>
-            <li><strong>Content</strong>strong> refers to content of the Website.</strong></li>
+            <li><strong>Content</strong> refers to content of the Website.</li>
           </ul>
           <h1>Disclaimer</h1>
           <p>The information contained on the Website is for general information purposes only.</p>
