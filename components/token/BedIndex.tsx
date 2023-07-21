@@ -75,7 +75,7 @@ function BedIndex() {
               flexDirection={{ base: 'column', md: 'row' }}
             >
               <Link
-                href='https://app.indexcoop.com/bed'
+                href='https://indexcoop.com/products/bankless-bed-index'
                 isExternal
                 style={{ textDecoration: 'none' }}
                 mb={{ base: '22px', md: 0 }}
@@ -89,7 +89,7 @@ function BedIndex() {
                       width={23}
                     />
                   </Container>
-                  BED Index
+                  Learn more about BED Index
                 </Button>
               </Link>
             </Container>
