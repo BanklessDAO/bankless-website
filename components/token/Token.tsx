@@ -4,6 +4,7 @@ import BedIndex from './BedIndex'
 import GmiIndex from './GmiIndex'
 import DaoPunkSection from './DaoPunkSection'
 import Nfts from './Nfts'
+import Disclaimer from './Disclaimer'
 import { Container } from '@chakra-ui/react'
 import styles from 'styles/NavBar.module.css'
 
@@ -19,6 +20,7 @@ function Token() {
       <GmiIndex />
       <DaoPunkSection />
       <Nfts />
+      <Disclaimer />
     </Container>
   )
 }
