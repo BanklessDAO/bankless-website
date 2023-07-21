@@ -92,15 +92,6 @@ function BedIndex() {
                   BED Index
                 </Button>
               </Link>
-              <Link
-                href='https://www.bankless.community/bed-index'
-                isExternal
-                style={{ textDecoration: 'none' }}
-              >
-                <Button as='a' textDecorationLine={'none'} fontWeight={800}>
-                  Learn more about Bed Index
-                </Button>
-              </Link>
             </Container>
           </HStack>
         </Stack>
