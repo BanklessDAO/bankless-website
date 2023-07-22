@@ -4,6 +4,7 @@ import BedIndex from './BedIndex'
 import GmiIndex from './GmiIndex'
 import DaoPunkSection from './DaoPunkSection'
 import Nfts from './Nfts'
+import Deprecated from './Deprecated'
 import Disclaimer from './Disclaimer'
 import { Container } from '@chakra-ui/react'
 import styles from 'styles/NavBar.module.css'
@@ -17,9 +18,10 @@ function Token() {
     >
       <BankSection />
       <BedIndex />
-      <GmiIndex />
       <DaoPunkSection />
       <Nfts />
+      <Deprecated />
+      <GmiIndex />
       <Disclaimer />
     </Container>
   )

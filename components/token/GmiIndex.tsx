@@ -1,19 +1,18 @@
 import React from 'react'
-import Image from 'next/image'
 import {
-  Flex,
+  Stack,
   Text,
   Container,
+  HStack,
   VStack,
   Button,
-  Box,
   Link,
 } from '@chakra-ui/react'
 
 function GmiIndex() {
   return (
-    <Container maxW={{ base: 'container.sm', md: 'container.lg' }} p={0}>
-      <Flex flexDirection={{ base: 'column', md: 'row' }} py={10}>
+    <Container>
+      <Stack spacing={{ base: 5, md: 10 }}>
         <VStack spacing={10}>
           <Container
             display={'flex'}
@@ -22,19 +21,6 @@ function GmiIndex() {
             width={['80%', '100%']}
           >
             <Text
-              variant={'span'}
-              textAlign={{ base: 'center', md: 'left' }}
-              fontWeight={700}
-              fontSize='5xl'
-            >
-              GMI INDEX
-            </Text>
-            <Flex justify={{ base: 'center', md: 'flex-start' }} ml={'2px'}>
-              <Box ml={0} width={77.5} height={'12px'} background={'#D02128'} />
-              <Box ml={2} width={77.5} height={'12px'} background={'#D02128'} />
-              <Box ml={2} width={77.5} height={'12px'} background={'#D02128'} />
-            </Flex>
-            <Text
               textAlign={{ base: 'center', md: 'left' }}
               color={'#D02128'}
               lineHeight='43px'
@@ -42,49 +28,43 @@ function GmiIndex() {
               fontWeight={700}
               mt={7}
             >
-              Are you GMI?
+              GMI Index
             </Text>
           </Container>
           <Container>
             <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
-              The Bankless DeFi Innovation Index, called the GMI Index for the
-              rally cry “we’re all gonna make it” is another investment vehicle
-              springing from the Index Coop/BanklessDAO partnership. Like the
-              BED Index, GMI captures a broad swath of DeFi exposure while also
-              tapping into gains from sophisticated products such as
-              yield-bearing tokens.
+              The Bankless DeFi Innovation Index, called the GMI Index was
+              another investment vehicle springing from the Index Coop/BanklessDAO
+              partnership. However, it did not find product-market fit and was
+              deprecated on October 27, 2022.
             </Text>
           </Container>
-        </VStack>
-        <VStack justifyContent={'flex-end'} display='flex' p={10} spacing={10}>
-          <Container
-            display='flex'
-            justifyContent='space-evenly'
-            alignItems={'center'}
-            flexDirection={{ base: 'column', md: 'row' }}
-          >
+          <HStack spacing='24px' justifyContent={'flex-start'} display='flex'>
             <Link
-              href='https://app.indexcoop.com/gmi'
+              href='https://indexcoop.com/blog/deprecation-of-data-gmi-mnye-and-polygon-flis'
               isExternal
               style={{
                 textDecoration: 'none',
               }}
             >
               <Button as='a'>
-                <Container padding={0} paddingRight={2}>
-                  <Image
-                    src='/images/bed-token.png'
-                    alt='bed-token'
-                    height={23}
-                    width={23}
-                  />
-                </Container>
-                Learn more about GMI index
+                GMI Deprecation Notice
               </Button>
             </Link>
-          </Container>
+            <Link
+              href='https://legacyproducts.indexcoop.com/'
+              isExternal
+              style={{
+                textDecoration: 'none',
+              }}
+              >
+              <Button as='a'>
+                Redeem GMI
+              </Button>
+            </Link>
+          </HStack>
         </VStack>
-      </Flex>
+      </Stack>
     </Container>
   )
 }
