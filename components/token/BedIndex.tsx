@@ -3,7 +3,6 @@ import {
   Text,
   Button,
   useMediaQuery,
-  VStack,
   Image,
   Container,
   Stack,
