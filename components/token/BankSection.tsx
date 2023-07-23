@@ -46,7 +46,7 @@ function BankSection() {
             community, it determines membership level and voting power in
             on-chain votes. To be a Level 1 member, which means you can access
             the Discord server without needing a guest pass, you must hold
-            35,000 BANK.
+            35,000 BANK OR a Time Locked BANK NFT.
           </Text>
           <Container className='border-box' height='131px'>
             <Text

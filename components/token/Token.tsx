@@ -1,5 +1,6 @@
 import React from 'react'
 import BankSection from './BankSection'
+import LockedBANKSection from './LockedBANKSection'
 import BedIndex from './BedIndex'
 import GmiIndex from './GmiIndex'
 import DaoPunkSection from './DaoPunkSection'
@@ -17,6 +18,7 @@ function Token() {
       p={0}
     >
       <BankSection />
+      <LockedBANKSection />
       <BedIndex />
       <DaoPunkSection />
       <Nfts />
