@@ -204,8 +204,6 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
 }
 
 const DropdownMenu = ({linksData}) => {
-  const [isMobile] = useMediaQuery('(max-width: 1040px)')
-
   return (
     <Box
       position='absolute'
@@ -248,8 +246,6 @@ const DropdownMenu = ({linksData}) => {
 }
 
 const MenuLinks = ({ isOpen }) => {
-  const [isMobile] = useMediaQuery('(max-width: 1040px)')
-
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}

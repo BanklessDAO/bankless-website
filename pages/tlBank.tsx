@@ -30,6 +30,7 @@ import {
   Heading,
   Divider,
   Input,
+  Image,
   SimpleGrid,
   FormControl,
   FormLabel,
@@ -178,7 +179,7 @@ function TlBank() {
       multicallProvider
     )
 
-    const tokenRequests: any[] = []
+    const tokenRequests = []
     for (let i = 0; i < userNFTBalance; i++) {
       const tokenIdRequest = contract.tokenOfOwnerByIndex(address, i)
       tokenRequests.push(tokenIdRequest)
@@ -365,7 +366,7 @@ function TlBank() {
                     new Date().getTime() / 1000 > each.unlockTimestamp,
                 })
               }>
-              <img src={each?.image} alt={each?.title} />
+              <Image src={each?.image} alt={each?.title} />
             </Box>
           ))}
         </HStack>
