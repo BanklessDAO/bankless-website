@@ -7,7 +7,6 @@ import {
   TLBankToken,
 } from '../tlUtils/abi'
 import { MAINNET_RPC_URL, wallets } from '../tlUtils/config'
-import Image from 'next/image'
 import { getCurrentDate } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
 import { getUnlockDateRaw, getNewUnlockDateRaw } from '../tlUtils/tlUtil'
