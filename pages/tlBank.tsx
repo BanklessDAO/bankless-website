@@ -178,7 +178,9 @@ function TlBank() {
       multicallProvider
     )
 
-    const tokenRequests = []
+    
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const tokenRequests: any[] = []
     for (let i = 0; i < userNFTBalance; i++) {
       const tokenIdRequest = contract.tokenOfOwnerByIndex(address, i)
       tokenRequests.push(tokenIdRequest)
