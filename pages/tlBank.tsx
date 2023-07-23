@@ -178,7 +178,7 @@ function TlBank() {
       multicallProvider
     )
 
-    
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tokenRequests: any[] = []
     for (let i = 0; i < userNFTBalance; i++) {
@@ -588,8 +588,8 @@ function TlBank() {
                         <IoMdRadioButtonOn />
                       ) : (
                         <IoMdRadioButtonOff />
-                      )}{' '}
-                      6 Months @ 40K BANK
+                      )}
+                      &nbsp;6 Months @ 40K BANK
                     </Button>
                     <Button
                       onClick={() =>
@@ -613,8 +613,8 @@ function TlBank() {
                         <IoMdRadioButtonOn />
                       ) : (
                         <IoMdRadioButtonOff />
-                      )}{' '}
-                      1 Year @ 80K BANK
+                      )}
+                      &nbsp;1 Year @ 80K BANK
                     </Button>
                   </Stack>
                 </FormControl>
