@@ -26,12 +26,12 @@ function LockedBANKSection() {
           </Text>
           <Text fontWeight={400} lineHeight='22px' fontSize='lg'>
             Locking up BANK creates Time Locked BANK (tlBANK) and signals
-            long-term alignment with BanklessDAO and it's mission. When you Lock
-            BANK you receive a non-transferable tlBANK NFT that grants Level 1
-            membership status for the duration of the lock period. You also
-            receive transferable tlBANK tokens, equivalent to the amount of BANK
-            locked. Only the address that mints the tlBANK is entitled to the
-            Level 1 membership status and other future perks.
+            long-term alignment with BanklessDAO and it&apos;s mission. When you
+            Lock BANK you receive a non-transferable tlBANK NFT that grants
+            Level 1 membership status for the duration of the lock period. You
+            also receive transferable tlBANK tokens, equivalent to the amount of
+            BANK locked. Only the address that mints the tlBANK is entitled to
+            the Level 1 membership status and other future perks.
           </Text>
           <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
