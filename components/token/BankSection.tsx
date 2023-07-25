@@ -55,21 +55,13 @@ function BankSection() {
               lineHeight='22px'
               fontSize='lg'
             >
-              BANK is available on both{' '}
+              BANK is available on{' '}
               <Link
                 color='#D02128'
                 href='https://app.uniswap.org/#/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH&chain=mainnet'
                 isExternal
               >
                 Uniswap
-              </Link>{' '}
-              and{' '}
-              <Link
-                color='#D02128'
-                href='https://app.sushi.com/swap?inputCurrency=0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198&outputCurrency=ETH'
-                isExternal
-              >
-                Sushiswap
               </Link>{' '}
               and can be earned by working in the DAO. Many guest pass holders
               earn their 35,000 BANK rather than buy it outright.
