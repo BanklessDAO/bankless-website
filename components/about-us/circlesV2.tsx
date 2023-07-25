@@ -77,6 +77,7 @@ const Ring1 = ({ ringWidth }: RingProps) => {
                     h='100%'
                     src={imgSrc}
                     transform={`rotate(${-rotation}deg)`}
+                    alt='orbit'
                   />
                 )}
               </Box>
@@ -218,6 +219,7 @@ const Ring3 = ({ ringWidth }: RingProps) => {
                     h='100%'
                     src={imgSrc}
                     transform={`rotate(${-rotation}deg)`}
+                    alt='orbit'
                   />
                 )}
               </Box>

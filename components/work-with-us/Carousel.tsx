@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react'
 import { CarouselSlide } from './CarouselSlide'
 import { ulid } from 'ulid'
-import Underline from 'components/_common/underline'
 
 type CarouselProps = {
   width: number
@@ -36,7 +35,6 @@ type CarouselSlide = {
 }
 
 export default function Carousel({
-  width,
   title,
   description,
   slides,

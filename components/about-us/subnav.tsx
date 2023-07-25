@@ -45,7 +45,7 @@ const Subnav = () => (
         align={'center'}
         wrap='wrap'
       >
-        {linksData.map(({ href, alt, title }: Link, index: number) => {
+        {linksData.map(({ href, title }: Link, index: number) => {
           return (
             <NextLink key={ulid()} href={href} passHref={true}>
               <Link>
