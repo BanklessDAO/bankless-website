@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import { Flex, Box, Text, Button, VStack, Grid, Link } from '@chakra-ui/react'
+import { Flex, Box, Text, VStack, Grid, Link } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
 
