@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { Text, Box, Link, HStack } from '@chakra-ui/react'
+import { Text, Box, Link } from '@chakra-ui/react'
 
 type CTALink = {
   href: string
@@ -9,7 +9,7 @@ type CTALink = {
   alt: string
 }
 
-export const CTALink = ({ href, text, alt }: CTALink) => {
+export const CTALink = ({ href, text }: CTALink) => {
   return (
     <NextLink href={href} passHref={true}>
       <Link

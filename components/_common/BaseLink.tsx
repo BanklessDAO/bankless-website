@@ -10,7 +10,7 @@ type BaseLinkProps = {
   typeSize?: string
 }
 
-export const BaseLink = ({ href, text, alt, typeSize = '2xl' }: BaseLinkProps) => {
+export const BaseLink = ({ href, text, typeSize = '2xl' }: BaseLinkProps) => {
   return (
     <NextLink href={href} passHref={true}>
       <Link

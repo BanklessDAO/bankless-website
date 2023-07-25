@@ -29,7 +29,7 @@ export default function NewMemberJoinMethodComponent() {
             alignItems='center'
           >
             {cardsContent.map((card, index) => (
-              <Card card={card} index={index} />
+              <Card key={index} card={card} index={index} />
             ))}
           </Stack>
           <Box

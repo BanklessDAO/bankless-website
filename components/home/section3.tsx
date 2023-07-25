@@ -36,9 +36,7 @@ function Section3() {
         m='2rem auto'
       >
         <Link
-          href={
-            'https://etherscan.io/token/0x2d94aa3e47d9d5024503ca8491fce9a2fb4da198'
-          }
+          href='https://bankless.community/token'
         >
           <Flex
             height='fit-content'
