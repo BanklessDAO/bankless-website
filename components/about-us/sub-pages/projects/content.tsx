@@ -19,6 +19,7 @@ import InfoSecTeamComponent from './content/infosec-team'
 import BanklessCardComponent from './content/bankless-card'
 import GovernatorComponent from './content/governator'
 import BanklessLabsComponent from './content/bankless-labs'
+import BanklessAfricaComponent from './content/bankless-africa'
 
 export default function ProjectsContentComponent() {
   return (
@@ -43,6 +44,7 @@ export default function ProjectsContentComponent() {
       <WebsiteProjectComponent />
       <GovernatorComponent />
       <BanklessLabsComponent />
+      <BanklessAfricaComponent />
     </Box>
   )
 }
