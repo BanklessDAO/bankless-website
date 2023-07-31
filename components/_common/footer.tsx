@@ -109,7 +109,7 @@ class Footer extends React.Component {
             rowGap={1}
           >
             <Image
-                src={'images/logo.png'}
+                src={'/images/logo.png'}
                 alt={'BanklessDAO logo'}
                 height={['50px', '75px']}
             />
