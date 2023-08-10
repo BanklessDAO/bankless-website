@@ -112,8 +112,7 @@ class Footer extends React.Component {
                 src={'/images/logo.png'}
                 alt={'BanklessDAO logo'}
                 objectFit='contain'
-                height={150}
-                width={150}
+                height={['50px','75px']}
             />
             <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
               A decentralized autonomous organization that acts as a steward of
