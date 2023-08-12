@@ -155,7 +155,7 @@ class Footer extends React.Component {
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                    fontSize={{ base: 'md', md: '1xl' }}
+                    fontSize={{ base: 'md', md: 'lg' }}
                   >
                     {_link.text}
                   </Link>
