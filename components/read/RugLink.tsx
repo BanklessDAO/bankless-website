@@ -2,14 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import {
-  Flex,
   Text,
   Grid,
   GridItem,
   Box,
   Link,
   HStack,
-  VStack,
 } from '@chakra-ui/react'
 import { ArticleIcon } from './ArticleLink'
 

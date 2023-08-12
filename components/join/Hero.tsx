@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Image, Text, Stack } from '@chakra-ui/react'
+import { Flex, Image, Text, Stack } from '@chakra-ui/react'
 
 export default function Hero() {
   return (

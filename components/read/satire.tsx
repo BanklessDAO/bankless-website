@@ -1,14 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
 import NextLink from 'next/link'
 import {
   Flex,
   Text,
   Grid,
   GridItem,
-  Box,
   Link,
-  HStack,
   Stack,
 } from '@chakra-ui/react'
 import { RugLink } from './RugLink'
