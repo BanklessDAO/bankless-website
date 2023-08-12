@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, VStack, Flex, Link } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, Link } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import { FiArrowUpRight } from 'react-icons/fi'
 

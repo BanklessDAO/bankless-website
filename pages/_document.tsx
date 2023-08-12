@@ -17,7 +17,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>BanklessDAO Community</title>
           <meta name='title' content='BanklessDAO Community' />
           <meta
             name='description'
