@@ -111,7 +111,8 @@ class Footer extends React.Component {
             <Image
                 src={'/images/logo.png'}
                 alt={'BanklessDAO logo'}
-                height={['50px', '75px']}
+                objectFit='contain'
+                height={['50px','75px']}
             />
             <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
               A decentralized autonomous organization that acts as a steward of
@@ -131,20 +132,21 @@ class Footer extends React.Component {
                     <Image
                       src={_social.img}
                       alt={_social.alt}
-                      height={['20px', '32px']}
+                      width={['20px', '20px']}
+                      height={['20px', '20px']}
                     />
                   </Link>
                 )
               })}
             </Flex>
           </Flex>
-          <Box marginTop={{ base: 8, lg: 0 }}>
+          <Box marginTop={{ base: 8, lg: 24 }}>
             <Grid
               gridTemplateColumns='1fr 1fr'
               rowGap='1rem'
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}
-              paddingTop={{ base: 4, lg: 0 }}
+              paddingTop={{ base: 4, lg: 14 }}
               textAlign={{ base: 'center', lg: 'left' }}
             >
               {LINKS.map((_link, idx) => {
@@ -153,7 +155,6 @@ class Footer extends React.Component {
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                      fontWeight={'normal'}
                     fontSize={{ base: 'md', md: 'lg' }}
                   >
                     {_link.text}
