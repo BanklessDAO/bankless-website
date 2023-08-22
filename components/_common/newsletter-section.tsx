@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Flex } from '@chakra-ui/react'
-import ThreeRings from './three-rings'
 import SubscribeWidget from './subscribe-widget'
 
 class NewsletterSection extends React.Component {

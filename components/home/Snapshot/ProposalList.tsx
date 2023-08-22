@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import { Flex, VStack } from '@chakra-ui/react'
 import React from 'react'
 import Proposal from './Proposal'
 

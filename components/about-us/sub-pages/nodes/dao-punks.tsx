@@ -31,7 +31,7 @@ export default function DaoPunksComponent() {
             align={'center'}
             w={'90%'}
             h={'100%'}
-            src={'/images/DAO-Punk-Invest.png'}
+            src={'/images/DAO-Punks.png'}
           />
         </Box>
       </Flex>
@@ -65,7 +65,7 @@ export default function DaoPunksComponent() {
               align={'center'}
               w={'90%'}
               h={'90%'}
-              src={'/images/DAO-Punk-Invest.png'}
+              src={'/images/DAO-Punks.png'}
             />
           </Box>
         </Flex>
@@ -82,7 +82,7 @@ export default function DaoPunksComponent() {
           <Link href='https://daopunks.io/' isExternal>
             <Flex align={'center'} color={'white.100'}>
               <Text mr={'0.5rem'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
-                Invest in a DAOPunk NFT
+                DAOPunks NFT
               </Text>
               <FiArrowUpRight size={25} />
             </Flex>

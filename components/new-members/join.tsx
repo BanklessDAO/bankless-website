@@ -4,9 +4,6 @@ import {
   Stack,
   Image,
   Flex,
-  FormControl,
-  Button,
-  Link,
 } from '@chakra-ui/react'
 import { CTAButton } from 'components/_common/CTAButton'
 
