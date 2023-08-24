@@ -1,7 +1,7 @@
 import { Stack, Circle, Text, Grid } from '@chakra-ui/react'
 import React from 'react'
 
-export default function Steps({ step, setStep }) {
+export default function Steps() {
   return (
     <Stack
       spacing={3}

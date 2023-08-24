@@ -1,7 +1,5 @@
-import { Box, Container, Flex, Heading, Text, VStack } from '@chakra-ui/react'
+import { Container, Flex, Heading, Text } from '@chakra-ui/react'
 import { proposal, sortPropByState } from 'components/utils/snapshot'
-import Logo from 'components/_common/Logo'
-import Underline from 'components/_common/underline'
 import React, { useEffect, useState } from 'react'
 import Column from './Column'
 import ProposalList from './ProposalList'

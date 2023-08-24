@@ -3,7 +3,7 @@ import React from 'react'
 import '@fontsource/clear-sans/500.css'
 import '@fontsource/clear-sans/700.css'
 
-import { Flex, Box, Text, Heading, Button } from '@chakra-ui/react'
+import { Flex, Box, Heading, Button } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'

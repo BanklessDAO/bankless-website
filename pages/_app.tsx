@@ -5,6 +5,7 @@ import theme from 'config/theme'
 import 'tailwindcss/tailwind.css'
 import '../styles/index.css'
 import PageContainer from 'components/_common/page-container'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -22,8 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', 'G-PK78Y6EQDB');
         `}
       </Script>
-
       <ChakraProvider theme={theme}>
+        <Head>
+          <title>BanklessDAO Community</title>
+        </Head>
         <PageContainer>
           <Component {...pageProps} />
         </PageContainer>

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import {
-  Button,
   HStack,
   Text,
-  Wrap,
   Flex,
   Image,
   WrapItem,
