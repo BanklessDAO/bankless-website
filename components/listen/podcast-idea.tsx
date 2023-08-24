@@ -29,8 +29,9 @@ class PodcastIdea extends React.Component {
           <Text
             width={{ base: '18rem', md: '30rem' }}
             fontSize={{ base: 'md', md: '2xl' }}
+            position="relative"
           >
-            Join{'BanklessDAO'}
+            Join{' '}
             <Link
               color='#D02128'
               textDecoration='none'
