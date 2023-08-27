@@ -30,7 +30,7 @@ export default function CryptoSapiensComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/Rectangle 234.png'
+            src='/images/cryptoSapiens.png'
           />
         </Box>
       </Flex>
