@@ -19,7 +19,7 @@ import InfoSecTeamComponent from './content/infosec-team'
 import BanklessCardComponent from './content/bankless-card'
 import GovernatorComponent from './content/governator'
 import  TheRugComponent  from './content/the-rug'
-
+import MakingBankComponent from './content/making-bank';
 export default function ProjectsContentComponent() {
   return (
     <Box display={'flex'} flexDir='column' alignItems={'center'}>
@@ -43,6 +43,7 @@ export default function ProjectsContentComponent() {
       <WebsiteProjectComponent />
       <GovernatorComponent />
       <TheRugComponent />
+      <MakingBankComponent />
     </Box>
   )
 }
