@@ -46,7 +46,7 @@ export default function TheRugComponent() {
             mt={{ base: '32px', md: '0' }}
             fontSize={{ base: '20px' }}
           >
-            The Rug
+            THE RUG
           </Heading>
           <Text
             color={'gray.100'}
