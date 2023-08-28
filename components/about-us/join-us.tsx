@@ -1,5 +1,4 @@
 import { Box, Heading, Text, Stack, Flex, VStack } from '@chakra-ui/react'
-import { Container } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 export default function JoinUsIntroComponent() {

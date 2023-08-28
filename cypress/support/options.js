@@ -27,7 +27,7 @@ export const pages = [
   'about-us/nodes',
   'work-with-us',
   'read',
-  'invest',
+  'token',
   'listen',
   'new-members',
 ]

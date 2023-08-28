@@ -7,7 +7,6 @@ import {
   TLBankToken,
 } from '../tlUtils/abi'
 import { MAINNET_RPC_URL, wallets } from '../tlUtils/config'
-import Image from 'next/image'
 import { getCurrentDate } from '../tlUtils/tlUtil'
 import { getUnlockDate, nFormatter, formatDateMm } from '../tlUtils/tlUtil'
 import { getUnlockDateRaw, getNewUnlockDateRaw } from '../tlUtils/tlUtil'
@@ -30,6 +29,7 @@ import {
   Heading,
   Divider,
   Input,
+  Image,
   SimpleGrid,
   FormControl,
   FormLabel,
@@ -178,6 +178,8 @@ function TlBank() {
       multicallProvider
     )
 
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tokenRequests: any[] = []
     for (let i = 0; i < userNFTBalance; i++) {
       const tokenIdRequest = contract.tokenOfOwnerByIndex(address, i)
@@ -365,7 +367,7 @@ function TlBank() {
                     new Date().getTime() / 1000 > each.unlockTimestamp,
                 })
               }>
-              <img src={each?.image} alt={each?.title} />
+              <Image src={each?.image} alt={each?.title} />
             </Box>
           ))}
         </HStack>
@@ -586,8 +588,8 @@ function TlBank() {
                         <IoMdRadioButtonOn />
                       ) : (
                         <IoMdRadioButtonOff />
-                      )}{' '}
-                      6 Months @ 40K BANK
+                      )}
+                      &nbsp;6 Months @ 40K BANK
                     </Button>
                     <Button
                       onClick={() =>
@@ -611,8 +613,8 @@ function TlBank() {
                         <IoMdRadioButtonOn />
                       ) : (
                         <IoMdRadioButtonOff />
-                      )}{' '}
-                      1 Year @ 80K BANK
+                      )}
+                      &nbsp;1 Year @ 80K BANK
                     </Button>
                   </Stack>
                 </FormControl>

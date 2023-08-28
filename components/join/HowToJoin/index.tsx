@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Flex, Stack, Text } from '@chakra-ui/react'
 import Steps from './Steps'
 
 export default function HowToJoin() {
-  const [step, setStep] = useState(1)
-
   return (
     <Stack>
       <Flex w='100%' justify='center'>
@@ -22,7 +20,7 @@ export default function HowToJoin() {
       </Flex>
 
       <Flex w='100%' justify='center' pt={10}>
-        <Steps step={step} setStep={setStep} />
+        <Steps />
       </Flex>
     </Stack>
   )

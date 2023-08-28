@@ -7,10 +7,11 @@ import Underline from 'components/_common/underline'
 
 const CARDS = [
   {
-    img: '/images/projects.png',
-    title: 'Projects',
-    text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
-    href: '/about-us/projects',
+    img: '/images/coming-home.jpg',
+    title: 'Departments',
+    text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
+    href: '#',
+    pending: true,
   },
   {
     img: '/images/guilds.png',
@@ -19,17 +20,16 @@ const CARDS = [
     href: '/about-us/guilds',
   },
   {
+    img: '/images/projects.png',
+    title: 'Projects',
+    text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
+    href: '/about-us/projects',
+  },
+  {
     img: '/images/governance.jpg',
     title: 'Governance',
     text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
     href: '/about-us/governance',
-  },
-  {
-    img: '/images/coming-home.jpg',
-    title: 'Coming Home',
-    text: 'Creating a social homebase for artists, thought-leaders, builders, scholars, and innovators in Web3.',
-    href: '#',
-    pending: true,
   },
 ]
 
