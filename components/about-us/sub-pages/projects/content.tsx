@@ -18,6 +18,7 @@ import WebsiteProjectComponent from './content/website-project'
 import InfoSecTeamComponent from './content/infosec-team'
 import BanklessCardComponent from './content/bankless-card'
 import GovernatorComponent from './content/governator'
+import  TheRugComponent  from './content/the-rug'
 
 export default function ProjectsContentComponent() {
   return (
@@ -41,6 +42,7 @@ export default function ProjectsContentComponent() {
       <InfoSecTeamComponent />
       <WebsiteProjectComponent />
       <GovernatorComponent />
+      <TheRugComponent />
     </Box>
   )
 }
