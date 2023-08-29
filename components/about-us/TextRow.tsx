@@ -1,16 +1,10 @@
 import {
   Box,
-  Heading,
   Text,
   Stack,
-  HStack,
   Image,
   Flex,
-  VStack,
-  keyframes,
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { FiArrowUpRight } from 'react-icons/fi'
 
 type TextRow = {
   imageSrc: string
