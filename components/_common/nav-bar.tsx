@@ -60,6 +60,11 @@ const aboutUsLinksData = [
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
+  {
+    title: 'Departments',
+    href: '/about-us/departments',
+    alt: 'Link to Departments page',
+  },
 ]
 
 const tokenLinksData = [
@@ -203,7 +208,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
   )
 }
 
-const DropdownMenu = ({linksData}) => {
+const DropdownMenu = ({ linksData }) => {
   return (
     <Box
       position='absolute'
