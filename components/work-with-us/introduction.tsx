@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Text, VStack } from '@chakra-ui/react'
+import { Flex, Box, Heading, Text } from '@chakra-ui/react'
 
 export default function IntroductionComponent() {
   return (

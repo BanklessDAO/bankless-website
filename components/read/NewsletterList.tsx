@@ -1,6 +1,5 @@
 import React from 'react'
 import { ulid } from 'ulid'
-import Link from 'next/link'
 import { HStack, Text, Grid, Box } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import { NewsletterCard } from './NewsletterCard'

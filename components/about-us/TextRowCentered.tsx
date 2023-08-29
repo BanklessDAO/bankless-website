@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Image } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 type TextRowCenteredProps = {

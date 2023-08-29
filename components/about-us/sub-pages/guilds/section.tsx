@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Text, Image, VStack, extendTheme } from '@chakra-ui/react'
+import { Box, Flex, Text, Image, VStack } from '@chakra-ui/react'
 
 interface I_SectionProps {
   alt: string

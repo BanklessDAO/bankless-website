@@ -25,8 +25,8 @@ const NAV_LINKS = [
     href: '/read',
   },
   {
-    name: 'Invest',
-    href: '/invest',
+    name: 'Token',
+    href: '/token',
   },
   {
     name: 'Listen',
@@ -62,7 +62,7 @@ const aboutUsLinksData = [
   },
 ]
 
-const investLinksData = [
+const tokenLinksData = [
   {
     title: 'Lock BANK',
     href: '/tlBank',
@@ -204,8 +204,6 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
 }
 
 const DropdownMenu = ({linksData}) => {
-  const [isMobile] = useMediaQuery('(max-width: 1040px)')
-
   return (
     <Box
       position='absolute'
@@ -248,8 +246,6 @@ const DropdownMenu = ({linksData}) => {
 }
 
 const MenuLinks = ({ isOpen }) => {
-  const [isMobile] = useMediaQuery('(max-width: 1040px)')
-
   return (
     <Box
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
@@ -281,7 +277,7 @@ const MenuLinks = ({ isOpen }) => {
       >
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
-          const isInvest = _navLink.name === 'Invest'
+          const isToken = _navLink.name === 'Token'
 
           return (
             <Box
@@ -297,7 +293,7 @@ const MenuLinks = ({ isOpen }) => {
             >
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
-              {isInvest && <DropdownMenu linksData={investLinksData} />}
+              {isToken && <DropdownMenu linksData={tokenLinksData} />}
             </Box>
           )
         })}
