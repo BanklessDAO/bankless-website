@@ -78,6 +78,14 @@ const tokenLinksData = [
   },
 ]
 
+const newMembersLinksData = [
+  {
+    title: 'Onboarding',
+    href: 'https://onboarding.bankless.community/',
+    alt: 'Link to Onboarding page',
+  },
+]
+
 type Link = {
   title: string
   href: string
@@ -287,6 +295,7 @@ const MenuLinks = ({ isOpen }) => {
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
           const isToken = _navLink.name === 'Token'
+          const isNewMembers = _navLink.name === 'New Members Start'
 
           return (
             <Box
@@ -303,6 +312,7 @@ const MenuLinks = ({ isOpen }) => {
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
               {isToken && <DropdownMenu linksData={tokenLinksData} />}
+              {isNewMembers && <DropdownMenu linksData={newMembersLinksData} />}
             </Box>
           )
         })}
