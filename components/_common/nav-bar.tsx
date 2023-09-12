@@ -41,8 +41,8 @@ const NAV_LINKS = [
     href: '/work-with-us',
   },
   {
-    name: 'New Members Start',
-    href: '/new-members',
+    name: 'Join Us',
+    href: '/join-us',
   },
 ]
 
@@ -78,7 +78,7 @@ const tokenLinksData = [
   },
 ]
 
-const newMembersLinksData = [
+const joinUsLinksData = [
   {
     title: 'Onboarding',
     href: 'https://onboarding.bankless.community/',
@@ -295,7 +295,7 @@ const MenuLinks = ({ isOpen }) => {
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
           const isToken = _navLink.name === 'Token'
-          const isNewMembers = _navLink.name === 'New Members Start'
+          const isJoinUs = _navLink.name === 'Join Us'
 
           return (
             <Box
@@ -312,7 +312,7 @@ const MenuLinks = ({ isOpen }) => {
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
               {isToken && <DropdownMenu linksData={tokenLinksData} />}
-              {isNewMembers && <DropdownMenu linksData={newMembersLinksData} />}
+              {isJoinUs && <DropdownMenu linksData={joinUsLinksData} />}
             </Box>
           )
         })}
