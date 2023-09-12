@@ -17,20 +17,24 @@ const NAV_LINKS = [
     href: '/about-us',
   },
   {
-    name: 'Work With Us',
-    href: '/work-with-us',
+    name: 'Token',
+    href: '/token',
+  },
+  {
+    name: 'Dashboard',
+    href: 'https://banklessdao.nodeblocks.io/',
   },
   {
     name: 'Read',
     href: '/read',
   },
   {
-    name: 'Token',
-    href: '/token',
-  },
-  {
     name: 'Listen',
     href: '/listen',
+  },
+  {
+    name: 'Work With Us',
+    href: '/work-with-us',
   },
   {
     name: 'New Members Start',
@@ -147,6 +151,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
           paddingTop: '16px',
         },
       }}
+      isExternal={to.includes('http')}
     >
       <Text
         display='block'
