@@ -25,6 +25,10 @@ const NAV_LINKS = [
     href: 'https://banklessdao.nodeblocks.io/',
   },
   {
+    name: 'Rewards',
+    href: 'https://rewards.bankless.community/'
+  },
+  {
     name: 'Read',
     href: '/read',
   },
