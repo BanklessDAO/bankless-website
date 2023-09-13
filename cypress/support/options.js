@@ -29,5 +29,5 @@ export const pages = [
   'read',
   'token',
   'listen',
-  'new-members',
+  'join-us',
 ]

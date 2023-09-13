@@ -4,7 +4,7 @@ import Underline from 'components/_common/underline'
 import { Card } from './Card'
 import cardsContent from './_cardsContent.json'
 
-export default function NewMemberJoinMethodComponent() {
+export default function JoinMethodComponent() {
   return (
     <>
       <VStack as={Box} mt={'4rem'} mb={'8rem'}>
