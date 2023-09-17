@@ -26,7 +26,6 @@ const nextConfig = {
    */
   images: {
     unoptimized: true,
-    domains: ['s3-alpha-sig.figma.com'],
   }
 }
 
