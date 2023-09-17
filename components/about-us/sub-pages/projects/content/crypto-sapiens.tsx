@@ -30,7 +30,7 @@ export default function CryptoSapiensComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/cryptoSapiens.png'
+            src='/bankless-website/public/images/cryptoSapiens.png'
           />
         </Box>
       </Flex>

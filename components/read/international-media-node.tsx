@@ -53,7 +53,7 @@ class Section1 extends React.Component {
             mt={{ base: '2rem', md: '4rem', lg: 0 }}>
             <Box>
               <Image
-                src='/read/imn-assets/bhutan.png'
+                src='/bankless-website/public/read/imn-assets/bhutan.png'
                 height={250}
                 width={250}
                 alt='Bhutan'
@@ -61,7 +61,7 @@ class Section1 extends React.Component {
             </Box>
             <Box>
               <Image
-                src='/read/imn-assets/sweden.png'
+                src='/bankless-website/public/read/imn-assets/sweden.png'
                 height={250}
                 width={250}
                 alt='Sweden'
@@ -69,7 +69,7 @@ class Section1 extends React.Component {
             </Box>
             <Box>
               <Image
-                src='/read/imn-assets/greece.png'
+                src='/bankless-website/public/read/imn-assets/greece.png'
                 height={250}
                 width={250}
                 alt='Greece'
@@ -77,7 +77,7 @@ class Section1 extends React.Component {
             </Box>
             <Box>
               <Image
-                src='/read/imn-assets/turkey.png'
+                src='/bankless-website/public/read/imn-assets/turkey.png'
                 height={250}
                 width={250}
                 alt='Turkey'
@@ -85,7 +85,7 @@ class Section1 extends React.Component {
             </Box>
             <Box>
               <Image
-                src='/read/imn-assets/bulgaria.png'
+                src='/bankless-website/public/read/imn-assets/bulgaria.png'
                 height={250}
                 width={250}
                 alt='Bulgaria'
@@ -93,7 +93,7 @@ class Section1 extends React.Component {
             </Box>
             <Box>
               <Image
-                src='/read/imn-assets/japan.png'
+                src='/bankless-website/public/read/imn-assets/japan.png'
                 height={250}
                 width={250}
                 alt='Japan'

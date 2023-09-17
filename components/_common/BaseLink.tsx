@@ -30,7 +30,7 @@ export const BaseLink = ({ href, text, typeSize = '2xl' }: BaseLinkProps) => {
           </Text>
         </HStack>
         <Box marginLeft={2}>
-          <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
+          <Image src='/bankless-website/public/icons/arrow.png' alt='arrow' height={15} width={15} />
         </Box>
       </Link>
     </NextLink>

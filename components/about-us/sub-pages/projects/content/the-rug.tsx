@@ -30,11 +30,11 @@ export default function TheRugComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src='/images/theRug.png'
+              src='/bankless-website/public/images/theRug.png'
             />
           </Box>
         </Flex>
-  
+
         <Stack
           width={{ base: '300px', sm: '350px', xl: '500px' }}
           spacing={{ base: 5, md: 4 }}
@@ -88,4 +88,3 @@ export default function TheRugComponent() {
       </Stack>
     )
   }
-  

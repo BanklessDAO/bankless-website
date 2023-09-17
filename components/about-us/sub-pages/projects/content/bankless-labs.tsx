@@ -30,7 +30,7 @@ export default function BanklessLabsComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/blabs.png'
+            src='/bankless-website/public/images/blabs.png'
           />
         </Box>
       </Flex>

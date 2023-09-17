@@ -14,7 +14,7 @@ export default function Hero() {
         </Text>
       </Stack>
       <Image
-        src='/images/join/hero.png'
+        src='/bankless-website/public/images/join/hero.png'
         alt='Join the most vibrant community-run Web3 organisation'
       />
     </Flex>

@@ -8,7 +8,7 @@ const Center: React.FC = () => (
       w='100%'
       h='100%'
       borderRadius='50%'
-      src={'/images/about-image-orbit-center.png'}
+      src={'/bankless-website/public/images/about-image-orbit-center.png'}
     />
   </GridItem>
 )
@@ -22,17 +22,17 @@ const Ring1 = ({ ringWidth }: RingProps) => {
     {
       rotation: '0',
       innerCircleSize: 20,
-      imgSrc: '/images/about-image-orbit-mid-1.png',
+      imgSrc: '/bankless-website/public/images/about-image-orbit-mid-1.png',
     },
     {
       rotation: '135',
       innerCircleSize: 20,
-      imgSrc: '/images/about-image-orbit-mid-2.png',
+      imgSrc: '/bankless-website/public/images/about-image-orbit-mid-2.png',
     },
     {
       rotation: '250',
       innerCircleSize: 20,
-      imgSrc: '/images/about-image-orbit-mid-3.png',
+      imgSrc: '/bankless-website/public/images/about-image-orbit-mid-3.png',
     },
     { color: '#606060', rotation: '52', innerCircleSize: 14 },
   ]

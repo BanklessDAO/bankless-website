@@ -31,7 +31,7 @@ export default function ProjectBountyBoardComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/bankless-africa.png'
+            src='/bankless-website/public/images/bankless-africa.png'
           />
         </Box>
       </Flex>

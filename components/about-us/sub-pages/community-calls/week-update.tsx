@@ -39,7 +39,7 @@ export default function CommunityCallsWeekUpdateComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/images/Group-15310.png'}
+              src={'/bankless-website/public/images/Group-15310.png'}
             />
           </Box>
         </Flex>

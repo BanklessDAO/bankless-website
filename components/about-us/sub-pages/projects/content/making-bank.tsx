@@ -30,11 +30,11 @@ export default function MakingBankComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src='/images/makingBank.png'
+              src='/bankless-website/public/images/makingBank.png'
             />
           </Box>
         </Flex>
-  
+
         <Stack
           width={{ base: '300px', sm: '350px', xl: '500px' }}
           spacing={{ base: 5, md: 4 }}
