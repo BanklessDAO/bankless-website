@@ -4,7 +4,7 @@ import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
 
-function Departments() {
+function departments() {
   return (
     <Stack
       as={Box}
@@ -53,36 +53,29 @@ function Departments() {
         </Text>
         <VStack mt={8} rowGap={8}>
           <Section
-            title='Treasuary'
-            text='The Treasury Department is responsible for preserving, enhancing and supporting the financial and economic infrastructure of the DAO.'
-            img='/images/project_management_guild.jpg'
-            alt='project management guild'
+            title='Marketing Department'
+            text='The Marketing Department is dedicated to amplifying the values of BanklessDAO, accomplishing this by delivering creative Web3 marketing solutions that effectively promote BanklessDAO initiatives, partners, and clients to their target audience with precision. Despite not yet adapting our own values, we remain aligned with those of the DAO.'
+            img='/images/marketing-guild.png'
+            alt='Marketing Department'
           />
           <Section
-            title='Operations'
-            text='Watch over daily activities of the DAO, so everyone is aligned with the general mission and vission of the DAO'
-            img='/images/eye-analytics.png'
-            alt='av-guild'
+            title='Operations Department'
+            text='The operations department is responsible for overseeing daily activities within the DAO, ensuring alignment with the general mission and vision, and facilitating core operations, budget management, and the seamless functioning of the community, all while upholding the values of inclusivity and cooperation.'
+            img='/images/operation-guild.png'
+            alt='Operations Department'
             reverse={true}
           />
           <Section
-            title='Marketing'
-            text='Our mission is to amplify the values of BanklessDAO, by delivering creative Web3 marketing solutions to help the BanklessDAO initiatives, partners, and clients get in front of the right people with the right message.
-          This guild helps us best represent our DAO to anyone outside bDAO.'
-            img='/images/happy-faces.png'
-            alt='daolationship-guild'
+            title='Education Department'
+            text='The Education Department serves as a cornerstone of empowerment within the DAO, taking an internal focus in its efforts to onboard new members, impart essential DAO tool knowledge, and offer informational sessions, all with the overarching goal of helping individuals become more effective participants in the BanklessDAO community.'
+            img='/images/edu-guild.png'
+            alt='Education Department'
           />
           <Section
-            title='Education'
-            text='The Education Department plays a key role in the empowerment of DAO members through:
-
-            - onboarding new joiners,
-            
-            - teaching DAO tooling that members need to familiarize themselves with in order to succeed in the DAO space, and
-           
-            - hosting informational sessions for those looking to further their crypto exploration beyond the introductory level.'
-            img='/images/design-guild.png'
-            alt='design-guild'
+            title='Treasury Department'
+            text='The Treasury Department`s mission is to safeguard and improve the DAO`s financial infrastructure, driven by values such as transparency, integrity, responsibility, and accountability. Under Treasury Department Accounting, it oversees financial matters, reports, assets, budgets, and meticulous records to ensure responsible financial management.'
+            img='/images/treasury-guild.png'
+            alt='Treasury Department'
             reverse={true}
           />
         </VStack>
@@ -91,4 +84,4 @@ function Departments() {
   )
 }
 
-export default Departments
+export default departments
