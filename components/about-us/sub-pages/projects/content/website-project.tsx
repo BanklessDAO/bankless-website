@@ -30,7 +30,7 @@ export default function WebsiteProjectComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/public/images/Rectangle 232.png'
+            src='/images/Rectangle 232.png'
           />
         </Box>
       </Flex>

@@ -29,7 +29,7 @@ export default function MobileAppComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/public/images/Mobile app 1.png'}
+            src={'/images/Mobile app 1.png'}
           />
         </Box>
       </Flex>

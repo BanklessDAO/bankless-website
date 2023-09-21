@@ -29,7 +29,7 @@ export default function NewsletterProjectComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={"/bankless-website/public/images/Punk'd DAOpunk - Medium 1.png"}
+            src={"/images/Punk'd DAOpunk - Medium 1.png"}
           />
         </Box>
       </Flex>

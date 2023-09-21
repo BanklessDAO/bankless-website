@@ -46,7 +46,7 @@ export default function NodesIntroComponent() {
         width={'full'}
         height={{ base: '13rem', sm: '17rem', lg: '24rem' }}
         objectFit='cover'
-        src='/bankless-website/public/images/ecosystem-nodes.jpg'
+        src='/images/ecosystem-nodes.jpg'
         alt='Photo by Go to Choong Deng Xiang on Unsplash'
       />
     </>

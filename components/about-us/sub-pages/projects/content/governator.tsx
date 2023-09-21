@@ -30,7 +30,7 @@ export default function GovernatorComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/public/images/gov-bot.jpeg'
+            src='/images/gov-bot.jpeg'
           />
         </Box>
       </Flex>

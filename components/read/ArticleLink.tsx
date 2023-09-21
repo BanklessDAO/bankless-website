@@ -35,7 +35,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
             padding='10px'
           >
             <Image
-              src='/bankless-website/public/icons/medium.png'
+              src='/icons/medium.png'
               alt='medium'
               height={30}
               width={45}
@@ -47,7 +47,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
     {type === 'mirror' && (
       <>
         {noOutline ? (
-          <Image src='/bankless-website/public/icons/mirror.png' alt='mirror' height={30} width={30} />
+          <Image src='/icons/mirror.png' alt='mirror' height={30} width={30} />
         ) : (
           <Flex
             justify='center'
@@ -57,7 +57,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
             padding='10px'
           >
             <Image
-              src='/bankless-website/public/icons/mirror.png'
+              src='/icons/mirror.png'
               alt='mirror'
               height={30}
               width={25}
@@ -70,7 +70,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
       <>
         {noOutline ? (
           <Image
-            src='/bankless-website/public/icons/publish.png'
+            src='/icons/publish.png'
             alt='bankless publishing'
             height={30}
             width={30}
@@ -84,7 +84,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
             padding='10px'
           >
             <Image
-              src='/bankless-website/public/icons/publish.png'
+              src='/icons/publish.png'
               alt='bankless publishing'
               height={30}
               width={25}
@@ -97,7 +97,7 @@ export const ArticleIcon = ({ type, noOutline }: ArticleIconProps) => (
       <>
         {
           <Image
-            src='/bankless-website/public/icons/twitter.png'
+            src='/icons/twitter.png'
             alt='twitter'
             height={30}
             width={35}
@@ -158,7 +158,7 @@ export const ArticleLink = ({ type, url, desc }: ArticleLinkProps) => {
             <Text fontSize={'4xl'} fontWeight={700} fontFamily='Clear Sans'>
               {setArticleType(type)}
             </Text>
-            <Image src='/bankless-website/public/icons/arrow.png' alt='arrow' height={15} width={15} />
+            <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
           </HStack>
           <Text
             w={{ base: '100%', md: '90%', xl: '100%' }}

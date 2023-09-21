@@ -47,7 +47,7 @@ function Section3() {
           >
             <Box height={200} width={150} pt='1rem'>
               <Image
-                src='/bankless-website/public/icons/bankless-coin.png'
+                src='/icons/bankless-coin.png'
                 alt='bankless-coin'
                 height={{ base: 130, md: 200 }}
                 width={{ base: 200, md: 250 }}
@@ -76,7 +76,7 @@ function Section3() {
           >
             <Box height={200} width={150} pt={'2rem'}>
               <Image
-                src='/bankless-website/public/icons/ethereum-icon.png'
+                src='/icons/ethereum-icon.png'
                 alt='ethereum-icon'
                 height={{ base: 100, md: 150 }}
                 width={{ base: 150, md: 200 }}
@@ -177,7 +177,7 @@ function Section3() {
               }}
             >
               <Image
-                src='/bankless-website/public/profile-pics/david-hoffman.jpg'
+                src='/profile-pics/david-hoffman.jpg'
                 height={{ base: 100, sm: 150 }}
                 width={{ base: 100, sm: 150 }}
                 borderRadius='100%'
@@ -195,7 +195,7 @@ function Section3() {
               }}
             >
               <Image
-                src='/bankless-website/public/profile-pics/ryan-sean-adams.jpg'
+                src='/profile-pics/ryan-sean-adams.jpg'
                 height={{ base: 100, sm: 150 }}
                 width={{ base: 100, sm: 150 }}
                 borderRadius='100%'

@@ -31,7 +31,7 @@ export default function DaoPunksComponent() {
             align={'center'}
             w={'90%'}
             h={'100%'}
-            src={'/bankless-website/public/images/DAO-Punks.png'}
+            src={'/images/DAO-Punks.png'}
           />
         </Box>
       </Flex>
@@ -65,7 +65,7 @@ export default function DaoPunksComponent() {
               align={'center'}
               w={'90%'}
               h={'90%'}
-              src={'/bankless-website/public/images/DAO-Punks.png'}
+              src={'/images/DAO-Punks.png'}
             />
           </Box>
         </Flex>

@@ -55,7 +55,7 @@ export default function IntroductionComponent() {
             w='100%'
             >
             <Image
-              src={'/bankless-website/public/images/members.png'}
+              src={'/images/members.png'}
               alt={'Member Image'}
               w={'100%'}
               h={'100%'}

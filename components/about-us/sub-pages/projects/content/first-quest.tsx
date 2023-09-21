@@ -29,7 +29,7 @@ export default function FirstQuestComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/public/images/Rectangle 242.png'}
+            src={'/images/Rectangle 242.png'}
           />
         </Box>
       </Flex>

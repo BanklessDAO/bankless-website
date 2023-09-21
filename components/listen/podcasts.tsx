@@ -126,7 +126,7 @@ class Podcasts extends React.Component {
             >
               <Box>
                 <Image
-                  src='/bankless-website/public/listen/crypto-sapiens.png'
+                  src='/listen/crypto-sapiens.png'
                   alt='crypto-sapiens'
                   height={440}
                   width={440}
@@ -222,7 +222,7 @@ class Podcasts extends React.Component {
             >
               <Box>
                 <Image
-                  src='/bankless-website/public/listen/making-bank.png'
+                  src='/listen/making-bank.png'
                   alt='making-bank'
                   height={440}
                   width={440}

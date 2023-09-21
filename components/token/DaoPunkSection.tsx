@@ -35,7 +35,7 @@ function DaoPunkSection() {
         ) : null}
         <Container width={'100%'} alignSelf={'center'}>
           <Image
-            src='/bankless-website/public/images/DAO-Punks.png'
+            src='/images/DAO-Punks.png'
             alt='bankToken'
             height={{ base: '100%', md: '300px' }}
             width='450px'

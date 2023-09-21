@@ -88,7 +88,7 @@ export const NewsletterCard = ({
               </Text>
               <Box>
                 <Image
-                  src='/bankless-website/public/icons/arrow.png'
+                  src='/icons/arrow.png'
                   alt='arrow'
                   height={10}
                   width={10}

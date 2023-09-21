@@ -29,7 +29,7 @@ export default function FightClubComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/public/images/Rectangle 233.png'}
+            src={'/images/Rectangle 233.png'}
           />
         </Box>
       </Flex>
