@@ -84,4 +84,4 @@ function Departments() {
   )
 }
 
-export default departments
+export default Departments
