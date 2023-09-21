@@ -17,24 +17,32 @@ const NAV_LINKS = [
     href: '/about-us',
   },
   {
-    name: 'Work With Us',
-    href: '/work-with-us',
+    name: 'Token',
+    href: '/token',
+  },
+  {
+    name: 'Dashboard',
+    href: 'https://banklessdao.nodeblocks.io/',
+  },
+  {
+    name: 'Rewards',
+    href: 'https://rewards.bankless.community/'
   },
   {
     name: 'Read',
     href: '/read',
   },
   {
-    name: 'Token',
-    href: '/token',
-  },
-  {
     name: 'Listen',
     href: '/listen',
   },
   {
-    name: 'New Members Start',
-    href: '/new-members',
+    name: 'Work With Us',
+    href: '/work-with-us',
+  },
+  {
+    name: 'Join Us',
+    href: '/join-us',
   },
 ]
 
@@ -72,6 +80,14 @@ const tokenLinksData = [
     title: 'Lock BANK',
     href: '/tlBank',
     alt: 'Link to Lock BANK page',
+  },
+]
+
+const joinUsLinksData = [
+  {
+    title: 'Onboarding',
+    href: 'https://onboarding.bankless.community/',
+    alt: 'Link to Onboarding page',
   },
 ]
 
@@ -152,6 +168,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
           paddingTop: '16px',
         },
       }}
+      isExternal={to.includes('http')}
     >
       <Text
         display='block'
@@ -283,6 +300,7 @@ const MenuLinks = ({ isOpen }) => {
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
           const isToken = _navLink.name === 'Token'
+          const isJoinUs = _navLink.name === 'Join Us'
 
           return (
             <Box
@@ -299,6 +317,7 @@ const MenuLinks = ({ isOpen }) => {
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
               {isToken && <DropdownMenu linksData={tokenLinksData} />}
+              {isJoinUs && <DropdownMenu linksData={joinUsLinksData} />}
             </Box>
           )
         })}

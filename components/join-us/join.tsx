@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react'
 import { CTAButton } from 'components/_common/CTAButton'
 
-export default function NewMembersJoinComponent() {
+export default function JoinComponent() {
   return (
     <Stack
       w='70%'
