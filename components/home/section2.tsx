@@ -11,7 +11,7 @@ const CARDS = [
     title: 'Departments',
     text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
     href: '/about-us/departments',
-    //pending: true,
+   
   },
   {
     img: '/images/guilds.png',
@@ -67,7 +67,7 @@ class Section2 extends React.Component {
                 title={_card.title}
                 text={_card.text}
                 href={_card.href}
-                //pending={_card.pending}
+      
               />
             )
           })}
