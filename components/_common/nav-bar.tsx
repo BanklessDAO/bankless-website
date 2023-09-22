@@ -52,6 +52,11 @@ const aboutUsLinksData = [
     href: '/about-us/governance',
     alt: 'Link to Governance page',
   },
+   {
+    title: 'Departments',
+    href: '/about-us/departments',
+    alt: 'Link to Departments page',
+  },
   { title: 'Guilds', href: '/about-us/guilds', alt: 'Link to Guilds page' },
   {
     title: 'Projects',
@@ -67,11 +72,6 @@ const aboutUsLinksData = [
     title: 'Media Nodes',
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',
-  },
-  {
-    title: 'Departments',
-    href: '/about-us/departments',
-    alt: 'Link to Departments page',
   },
 ]
 
