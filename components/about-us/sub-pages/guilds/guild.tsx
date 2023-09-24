@@ -102,6 +102,7 @@ function Guild() {
            They also incubated the Decentralized Law newsletter and legal podcast project.'
             img='/images/legal-guild.png'
             alt='legal-guild'
+            reverse={true}
           />
 
           <Section
@@ -109,7 +110,6 @@ function Guild() {
             text='The Research Guild operates as a support node for conducting, guiding, and funding research that aligns with BanklessDAO’s mission.'
             img='/images/research-guild.png'
             alt='research-guild'
-            reverse={true}
           />
 
           <Section
