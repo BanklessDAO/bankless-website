@@ -1,7 +1,6 @@
 {
   "name": "nextjs-template",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -37,10 +36,10 @@
     "alchemy-sdk": "^2.10.0",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
-    "crc": "^4.3.2",
     "cypress": "^10.3.1",
     "cypress-image-snapshot": "^4.0.1",
     "framer-motion": "^5.6.0",
+    "js-crc": "^0.2.0",
     "lodash": "^4.17.21",
     "next": "12.1.0",
     "postcss": "^8.4.23",
