@@ -31,12 +31,13 @@ const Card = ({ img, title, text, href, pending }: Props) => {
       overflow='hidden'
       // maxW={{ base: '300px', md: '400px' }}
     >
-      <Box w='100%' h='50rem'>
+      <Box w='100%' h='50rem' position='relative'>
         <ChakraNextImage
+          position='relative'
           src={img}
           alt='image'
           width={{ base: 'auto', md: '100%' }}
-          height='100%'
+          height='20rem'
         />
         {/* <Image src={this.props.img} alt='image' w='100%' h='100%' /> */}
       </Box>
@@ -48,12 +49,10 @@ const Card = ({ img, title, text, href, pending }: Props) => {
         <Flex
           direction={'column'}
           justifyContent={'space-between'}
-          height={'100%'}
-        >
+          height={'100%'}>
           <Text
             fontSize={{ base: 'md', lg: 'xl' }}
-            color='rgba(255,255,255,0.57)'
-          >
+            color='rgba(255,255,255,0.57)'>
             {text}
           </Text>
           {pending && (
