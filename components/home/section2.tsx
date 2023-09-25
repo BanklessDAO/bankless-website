@@ -46,8 +46,7 @@ class Section2 extends React.Component {
           fontWeight={700}
           fontSize={{ base: '1.2rem', md: '3xl' }}
           mt='4rem'
-          textAlign='center'
-        >
+          textAlign='center'>
           {'We take a decentralized approach to:'}
         </Text>
 
@@ -57,8 +56,7 @@ class Section2 extends React.Component {
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           mt='3rem'
           gridColumnGap={{ base: '2rem' }}
-          gridRowGap={{ base: '2rem', lg: '2rem' }}
-        >
+          gridRowGap={{ base: '2rem', lg: '2rem' }}>
           {CARDS.map((_card, idx) => {
             return (
               <Card
