@@ -13,8 +13,7 @@ function Guild() {
       py={{ base: 10, md: 18 }}
       position='relative'
       zIndex='docked'
-      className={`${styles['header-text']}`}
-    >
+      className={`${styles['header-text']}`}>
       <Heading
         fontWeight={700}
         fontSize={{
@@ -24,8 +23,7 @@ function Guild() {
           lg: '7xl',
         }}
         lineHeight={'120%'}
-        color={'white.100'}
-      >
+        color={'white.100'}>
         Guilds
         <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
           <Underline />
@@ -36,8 +34,7 @@ function Guild() {
         flexDir='column'
         justify='center'
         alignItems='center'
-        lineHeight={{ base: '30px', md: '40px' }}
-      >
+        lineHeight={{ base: '30px', md: '40px' }}>
         <Text
           textAlign='center'
           mb={10}
@@ -45,8 +42,7 @@ function Guild() {
           maxW={826}
           lineHeight={{ base: '40px', md: '46px' }}
           fontWeight='400px'
-          zIndex={1}
-        >
+          zIndex={1}>
           Guilds are the way we organize our contributors. These talent pools
           serve as a way for individuals who share common interests,
           professional backgrounds, and skills to come together and incubate
@@ -74,7 +70,7 @@ function Guild() {
             text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
           the guilds within BanklessDAO.
           This guild helps us best represent our DAO to anyone outside bDAO.'
-            img='/images/happy-faces.png'
+            img='/images/daoLationship.png'
             alt='daolationship-guild'
           />
           <Section
