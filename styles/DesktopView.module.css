@@ -1,7 +1,6 @@
 .card-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
     justify-content: center;
     gap: 2.5rem;
     width: 100%;
@@ -11,13 +10,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    align-self: flex-start;
+    align-items: center;
     background: #fff;
-    min-height: 412px;
     height: auto;
-    padding: .7rem 1rem;
-    border-radius: .5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
 
@@ -25,7 +22,6 @@
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
     width: 100%;
-    height: 213px;
 }
 
 .card-body {
