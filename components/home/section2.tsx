@@ -7,29 +7,29 @@ import Underline from 'components/_common/underline'
 
 const CARDS = [
   {
-    img: '/images/coming-home.jpg',
+    img: '/bankless-website/images/coming-home.jpg',
     title: 'Departments',
     text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
     href: '#',
     pending: true,
   },
   {
-    img: '/images/guilds.png',
+    img: '/bankless-website/images/guilds.png',
     title: 'Guilds',
     text: 'Guilds are the way we organize our contributors. There are 13 guilds within bDAO.',
-    href: '/about-us/guilds',
+    href: '/bankless-website/about-us/guilds',
   },
   {
-    img: '/images/projects.png',
+    img: '/bankless-website/images/projects.png',
     title: 'Projects',
     text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
-    href: '/about-us/projects',
+    href: '/bankless-website/about-us/projects',
   },
   {
-    img: '/images/governance.jpg',
+    img: '/bankless-website/images/governance.jpg',
     title: 'Governance',
     text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
-    href: '/about-us/governance',
+    href: '/bankless-website/about-us/governance',
   },
 ]
 

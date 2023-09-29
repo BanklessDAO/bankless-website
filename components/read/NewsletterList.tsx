@@ -27,7 +27,7 @@ export const NewsletterList: React.FC = () => {
       rowSpan: 3,
       colSpan: 1,
       image: {
-        src: '/images/read/token.png',
+        src: '/bankless-website/images/read/token.png',
         alt: 'token 3d graphic',
       },
     },

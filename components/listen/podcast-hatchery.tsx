@@ -64,7 +64,7 @@ const PodcastHatchery = () => (
         height={{ base: '16rem', md: '15rem', lg: '20rem' }}
         width={{ base: '16rem', md: '15rem', lg: '20rem' }}>
         <ChakraNextImage
-          src='/listen/podcast-hatchery.png'
+          src='/bankless-website/listen/podcast-hatchery.png'
           alt='podcast-hatchery'
           height={500}
           width={500}

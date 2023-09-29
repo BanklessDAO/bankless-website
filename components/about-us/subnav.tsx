@@ -5,24 +5,24 @@ import { ulid } from 'ulid'
 const linksData = [
   {
     title: 'GOVERNANCE',
-    href: '/about-us/governance',
+    href: '/bankless-website/about-us/governance',
     alt: 'Link to Governance page',
   },
-  { title: 'GUILDS', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  { title: 'GUILDS', href: '/bankless-website/about-us/guilds', alt: 'Link to Guilds page' },
   {
     title: 'PROJECTS',
-    href: '/about-us/projects',
+    href: '/bankless-website/about-us/projects',
     alt: 'Link to Projects page',
   },
   // { title: 'COORDINATION', href: '#' },
   {
     title: 'COMMUNITY CALLS',
-    href: '/about-us/community-calls',
+    href: '/bankless-website/about-us/community-calls',
     alt: 'Link to Community Calls page',
   },
   {
     title: 'MEDIA NODES',
-    href: '/about-us/nodes',
+    href: '/bankless-website/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
   // { title: 'MEDIA KIT', href: '#' },

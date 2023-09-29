@@ -74,7 +74,7 @@ const BdYoutube = () => (
                     height={{ base: '16rem', md: '15rem', lg: '20rem' }}
                     width={{ base: '16rem', md: '15rem', lg: '20rem' }}>
                     <ChakraNextImage
-                        src='/images/bd-youtube.png'
+                        src='/bankless-website/images/bd-youtube.png'
                         alt='bdao youtube channel'
                         width={384}
                         height={269}

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <Link href='/'>
+    <Link href='/bankless-website'>
       <Image
         h='70px'
         src='/bankless-website/images/logo.png'

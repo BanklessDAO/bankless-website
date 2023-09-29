@@ -10,15 +10,15 @@ import Logo from './Logo'
 const NAV_LINKS = [
   {
     name: 'Home',
-    href: '/',
+    href: '/bankless-website',
   },
   {
     name: 'About Us',
-    href: '/about-us',
+    href: '/bankless-website/about-us',
   },
   {
     name: 'Token',
-    href: '/token',
+    href: '/bankless-website/token',
   },
   {
     name: 'Dashboard',
@@ -30,42 +30,42 @@ const NAV_LINKS = [
   },
   {
     name: 'Read',
-    href: '/read',
+    href: '/bankless-website/read',
   },
   {
     name: 'Listen',
-    href: '/listen',
+    href: '/bankless-website/listen',
   },
   {
     name: 'Work With Us',
-    href: '/work-with-us',
+    href: '/bankless-website/work-with-us',
   },
   {
     name: 'Join Us',
-    href: '/join-us',
+    href: '/bankless-website/join-us',
   },
 ]
 
 const aboutUsLinksData = [
   {
     title: 'Governance',
-    href: '/about-us/governance',
+    href: '/bankless-website/about-us/governance',
     alt: 'Link to Governance page',
   },
-  { title: 'Guilds', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  { title: 'Guilds', href: '/bankless-website/about-us/guilds', alt: 'Link to Guilds page' },
   {
     title: 'Projects',
-    href: '/about-us/projects',
+    href: '/bankless-website/about-us/projects',
     alt: 'Link to Projects page',
   },
   {
     title: 'Community Calls',
-    href: '/about-us/community-calls',
+    href: '/bankless-website/about-us/community-calls',
     alt: 'Link to Community Calls page',
   },
   {
     title: 'Media Nodes',
-    href: '/about-us/nodes',
+    href: '/bankless-website/about-us/nodes',
     alt: 'Link to Portal Nodes page',
   },
 ]
@@ -73,7 +73,7 @@ const aboutUsLinksData = [
 const tokenLinksData = [
   {
     title: 'Lock BANK',
-    href: '/tlBank',
+    href: '/bankless-website/tlBank',
     alt: 'Link to Lock BANK page',
   },
 ]

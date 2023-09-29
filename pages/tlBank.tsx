@@ -75,8 +75,8 @@ init({
   },
   appMetadata: {
     name: 'TLBANK',
-    icon: '/images/bank-token.png',
-    logo: '/images/bank-token.png',
+    icon: '/bankless-website/images/bank-token.png',
+    logo: '/bankless-website/images/bank-token.png',
     description: 'BanklessDao',
     recommendedInjectedWallets: [
       { name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
