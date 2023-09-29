@@ -55,26 +55,26 @@ function Departments() {
           <Section
             title='Marketing Department'
             text='The Marketing Department is dedicated to amplifying the values of BanklessDAO, accomplishing this by delivering creative Web3 marketing solutions that effectively promote BanklessDAO initiatives, partners, and clients to their target audience with precision. Despite not yet adapting our own values, we remain aligned with those of the DAO.'
-            img='/images/marketing-guild.png'
+            img='/bankless-website/images/marketing-guild.png'
             alt='Marketing Department'
           />
           <Section
             title='Operations Department'
             text='The operations department is responsible for overseeing daily activities within the DAO, ensuring alignment with the general mission and vision, and facilitating core operations, budget management, and the seamless functioning of the community, all while upholding the values of inclusivity and cooperation.'
-            img='/images/operation-guild.png'
+            img='/bankless-website/images/operation-guild.png'
             alt='Operations Department'
             reverse={true}
           />
           <Section
             title='Education Department'
             text='The Education Department serves as a cornerstone of empowerment within the DAO, taking an internal focus in its efforts to onboard new members, impart essential DAO tool knowledge, and offer informational sessions, all with the overarching goal of helping individuals become more effective participants in the BanklessDAO community.'
-            img='/images/edu-guild.png'
+            img='/bankless-website/images/edu-guild.png'
             alt='Education Department'
           />
           <Section
             title='Treasury Department'
             text='The Treasury Department`s mission is to safeguard and improve the DAO`s financial infrastructure, driven by values such as transparency, integrity, responsibility, and accountability. Under Treasury Department Accounting, it oversees financial matters, reports, assets, budgets, and meticulous records to ensure responsible financial management.'
-            img='/images/treasury-guild.png'
+            img='/bankless-website/images/treasury-guild.png'
             alt='Treasury Department'
             reverse={true}
           />

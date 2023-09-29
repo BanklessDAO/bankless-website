@@ -149,17 +149,17 @@ const Ring3 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
       rotation: '-45',
-      imgSrc: '/images/about-image-orbit-outer-3.png',
+      imgSrc: '/bankless-website/images/about-image-orbit-outer-3.png',
       innerCircleSize: 16,
     },
     {
       rotation: '75',
       innerCircleSize: 16,
-      imgSrc: '/images/about-image-orbit-outer-1.png',
+      imgSrc: '/bankless-website/images/about-image-orbit-outer-1.png',
     },
     {
       rotation: '200',
-      imgSrc: '/images/about-image-orbit-outer-2.png',
+      imgSrc: '/bankless-website/images/about-image-orbit-outer-2.png',
       innerCircleSize: 16,
     },
     {
