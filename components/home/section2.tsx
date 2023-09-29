@@ -11,25 +11,24 @@ const CARDS = [
     title: 'Departments',
     text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
     href: '/about-us/departments',
-   
   },
   {
     img: '/bankless-website/images/guilds.png',
     title: 'Guilds',
     text: 'Guilds are the way we organize our contributors. There are 13 guilds within bDAO.',
-    href: '/bankless-website/about-us/guilds',
+    href: '/about-us/guilds',
   },
   {
     img: '/bankless-website/images/projects.png',
     title: 'Projects',
     text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
-    href: '/bankless-website/about-us/projects',
+    href: '/about-us/projects',
   },
   {
     img: '/bankless-website/images/governance.jpg',
     title: 'Governance',
     text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
-    href: '/bankless-website/about-us/governance',
+    href: '/about-us/governance',
   },
 ]
 
@@ -65,7 +64,6 @@ class Section2 extends React.Component {
                 title={_card.title}
                 text={_card.text}
                 href={_card.href}
-      
               />
             )
           })}
