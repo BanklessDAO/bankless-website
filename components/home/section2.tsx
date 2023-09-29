@@ -10,8 +10,8 @@ const CARDS = [
     img: '/bankless-website/images/coming-home.jpg',
     title: 'Departments',
     text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
-    href: '#',
-    pending: true,
+    href: '/about-us/departments',
+   
   },
   {
     img: '/bankless-website/images/guilds.png',
@@ -36,13 +36,17 @@ const CARDS = [
 class Section2 extends React.Component {
   render() {
     return (
-      <Flex flexDir='column' justifyContent='center' alignItems='center' w='100%'>
+      <Flex
+        flexDir='column'
+        justifyContent='center'
+        alignItems='center'
+        w='100%'
+      >
         <Text
           fontWeight={700}
           fontSize={{ base: '1.2rem', md: '3xl' }}
           mt='4rem'
-          textAlign='center'
-        >
+          textAlign='center'>
           {'We take a decentralized approach to:'}
         </Text>
 
@@ -52,8 +56,7 @@ class Section2 extends React.Component {
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           mt='3rem'
           gridColumnGap={{ base: '2rem' }}
-          gridRowGap={{ base: '2rem', lg: '2rem' }}
-        >
+          gridRowGap={{ base: '2rem', lg: '2rem' }}>
           {CARDS.map((_card, idx) => {
             return (
               <Card
@@ -62,7 +65,7 @@ class Section2 extends React.Component {
                 title={_card.title}
                 text={_card.text}
                 href={_card.href}
-                pending={_card.pending}
+      
               />
             )
           })}

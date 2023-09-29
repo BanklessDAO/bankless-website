@@ -32,7 +32,7 @@
     "@web3-onboard/sequence": "^2.0.7",
     "@web3-onboard/trust": "^2.0.3",
     "@web3-onboard/walletconnect": "^2.3.7",
-    "alchemy-sdk": "^2.8.3",
+    "alchemy-sdk": "^2.10.0",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
     "cypress": "^10.3.1",

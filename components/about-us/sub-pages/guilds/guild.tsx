@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from './section'
+import Section from 'components/about-us/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
@@ -13,8 +13,7 @@ function Guild() {
       py={{ base: 10, md: 18 }}
       position='relative'
       zIndex='docked'
-      className={`${styles['header-text']}`}
-    >
+      className={`${styles['header-text']}`}>
       <Heading
         fontWeight={700}
         fontSize={{
@@ -24,8 +23,7 @@ function Guild() {
           lg: '7xl',
         }}
         lineHeight={'120%'}
-        color={'white.100'}
-      >
+        color={'white.100'}>
         Guilds
         <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
           <Underline />
@@ -36,8 +34,7 @@ function Guild() {
         flexDir='column'
         justify='center'
         alignItems='center'
-        lineHeight={{ base: '30px', md: '40px' }}
-      >
+        lineHeight={{ base: '30px', md: '40px' }}>
         <Text
           textAlign='center'
           mb={10}
@@ -45,8 +42,7 @@ function Guild() {
           maxW={826}
           lineHeight={{ base: '40px', md: '46px' }}
           fontWeight='400px'
-          zIndex={1}
-        >
+          zIndex={1}>
           Guilds are the way we organize our contributors. These talent pools
           serve as a way for individuals who share common interests,
           professional backgrounds, and skills to come together and incubate
@@ -74,7 +70,7 @@ function Guild() {
             text='The DAOlationships Guild facilitates and coordinates relationships between external organizations and
           the guilds within BanklessDAO.
           This guild helps us best represent our DAO to anyone outside bDAO.'
-            img='/bankless-website/images/happy-faces.png'
+            img='/bankless-website/images/daoLationship.png'
             alt='daolationship-guild'
           />
           <Section
@@ -95,51 +91,21 @@ function Guild() {
             alt='dev-guild'
           />
           <Section
-            title='Education Department'
-            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners,
-                  teaching DAO tooling need to succeed in the DAO space,
-                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level.
-                  The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
-            img='/bankless-website/images/edu-guild.png'
-            alt='education-guild'
-            reverse={true}
-          />
-          <Section
             title='legal guild'
             text='The Legal Guild authored the BANK legal assessment and white paper.
            It also provides regular updates on the legal developments in crypto and DAO governance.
            They also incubated the Decentralized Law newsletter and legal podcast project.'
             img='/bankless-website/images/legal-guild.png'
             alt='legal-guild'
-          />
-          <Section
-            title='marketing guild'
-            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering
-           creative Web3 marketing solutions to place the stakeholders in front of the right people with the right message.'
-            img='/bankless-website/images/marketing-guild.png'
-            alt='marketing-guild'
             reverse={true}
-          />
-          <Section
-            title='Operations guild'
-            text='The Operations Guild administers the daily activities of BanklessDAO and facilitates core operations,
-           such as Community Calls and voting procedures.'
-            img='/bankless-website/images/operation-guild.png'
-            alt='operation-guild'
           />
           <Section
             title='Research guild'
             text='The Research Guild operates as a support node for conducting, guiding, and funding research that aligns with BanklessDAO’s mission.'
             img='/bankless-website/images/research-guild.png'
             alt='research-guild'
-            reverse={true}
           />
-          <Section
-            title='Treasury guild'
-            text="The Treasury Guild is responsible for preserving, enhancing, and supporting BanklessDAO's financial resources."
-            img='/bankless-website/images/treasury-guild.png'
-            alt='treasury-guild'
-          />
+
           <Section
             title='Translators guild'
             text='The Translators Guild spreads the Bankless mission across the world by translating our media into dozens of languages,

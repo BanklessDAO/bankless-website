@@ -52,6 +52,11 @@ const aboutUsLinksData = [
     href: '/bankless-website/about-us/governance',
     alt: 'Link to Governance page',
   },
+  {
+    title: 'Departments',
+    href: '/bankless-website/about-us/departments',
+    alt: 'Link to Departments page',
+  },
   { title: 'Guilds', href: '/bankless-website/about-us/guilds', alt: 'Link to Guilds page' },
   {
     title: 'Projects',
@@ -220,7 +225,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
   )
 }
 
-const DropdownMenu = ({linksData}) => {
+const DropdownMenu = ({ linksData }) => {
   return (
     <Box
       position='absolute'
