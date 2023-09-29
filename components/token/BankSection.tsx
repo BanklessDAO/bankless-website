@@ -27,7 +27,7 @@ function BankSection() {
             align='flex-start'
           >
             <Image
-              src='/bankless-website/public/images/bank-token.png'
+              src='/bankless-website/images/bank-token.png'
               alt='bankToken'
               height={320}
               width={320}
@@ -70,7 +70,7 @@ function BankSection() {
           <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
               <Image
-                src='/bankless-website/public/images/bank-token-mobile.png'
+                src='/bankless-website/images/bank-token-mobile.png'
                 alt='bankToken'
                 height={113}
                 width={180}

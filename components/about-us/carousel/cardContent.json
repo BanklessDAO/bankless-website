@@ -2,19 +2,19 @@
   {
     "title": "\nEDUCATION",
     "text": "We learn from each other. We seek to become a trusted guide that empowers people all over the globe to adopt decentralized finance by sharing accurate, truthful, and objective information.",
-    "image": "/bankless-website/public/images/about-us/our-values-education.png",
+    "image": "/bankless-website/images/about-us/our-values-education.png",
     "imageAlt": "Education image"
   },
   {
     "title": "\nCULTURE",
     "text": "We reward action and embrace risk. We empower our community to continually drive new initiatives by providing a space to self-organize and quickly move from idea to action.",
-    "image": "/bankless-website/public/images/about-us/our-values-culture.jpg",
+    "image": "/bankless-website/images/about-us/our-values-culture.jpg",
     "imageAlt": "Culture image ~ Photo by Adam Whitlock on Unsplash https://unsplash.com/photos/I9j8Rk-JYFM"
   },
   {
     "title": "DECENTRALIZED \n GOVERNANCE",
     "text": "We put decision making into the hands of the collective. We create legitimacy through an environment where the best ideas win.",
-    "image": "/bankless-website/public/images/about-us/our-values-decentralized-governance.jpg",
+    "image": "/bankless-website/images/about-us/our-values-decentralized-governance.jpg",
     "imageAlt": "Decentralised governance image ~ Photo by Duy Pham on Unsplash https://unsplash.com/photos/Cecb0_8Hx-o"
   }
 ]

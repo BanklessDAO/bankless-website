@@ -28,7 +28,7 @@ export const CTALink = ({ href, text }: CTALink) => {
           {text}
         </Text>
         <Box marginLeft={2}>
-          <Image src='/bankless-website/public/icons/arrow.png' alt='arrow' height={15} width={15} />
+          <Image src='/bankless-website/icons/arrow.png' alt='arrow' height={15} width={15} />
         </Box>
       </Link>
     </NextLink>

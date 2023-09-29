@@ -30,7 +30,7 @@ export default function ContentGatewayComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/public/images/Rectangle 237.png'
+            src='/bankless-website/images/Rectangle 237.png'
           />
         </Box>
       </Flex>

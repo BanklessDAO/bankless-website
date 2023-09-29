@@ -30,7 +30,7 @@ export default function InternationalMediaNodesComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/public/images/Media nodes.png'
+            src='/bankless-website/images/Media nodes.png'
           />
         </Box>
       </Flex>

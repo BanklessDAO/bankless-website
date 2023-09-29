@@ -6,7 +6,7 @@ const Logo = () => {
     <Link href='/'>
       <Image
         h='70px'
-        src='/bankless-website/public/images/logo.png'
+        src='/bankless-website/images/logo.png'
         alt='Logo'
         display={{ base: 'none', md: 'flex' }}
         sx={{

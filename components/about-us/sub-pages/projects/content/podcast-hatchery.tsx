@@ -29,7 +29,7 @@ export default function PodcastHatcheryComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/public/images/Rectangle 229.png'}
+            src={'/bankless-website/images/Rectangle 229.png'}
           />
         </Box>
       </Flex>

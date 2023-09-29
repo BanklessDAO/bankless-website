@@ -48,7 +48,7 @@ export const RugLink = ({ href, type, desc }: RugLinkProps) => {
               </Text>
               <Box marginLeft={2}>
                 <Image
-                  src='/bankless-website/public/icons/arrow.png'
+                  src='/bankless-website/icons/arrow.png'
                   alt='arrow'
                   height={15}
                   width={15}

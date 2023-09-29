@@ -30,7 +30,7 @@ export default function BanklessCardComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/public/images/Square V1.png'
+            src='/bankless-website/images/Square V1.png'
           />
         </Box>
       </Flex>

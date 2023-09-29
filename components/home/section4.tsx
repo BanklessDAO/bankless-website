@@ -5,37 +5,37 @@ import Link from 'next/link'
 
 const MULTI_SIG_OWNERS = [
   {
-    img: '/bankless-website/public/profile-pics/kouros.jpg',
+    img: '/bankless-website/profile-pics/kouros.jpg',
     name: 'Kouros',
     twitter: 'https://twitter.com/davidcoleto',
   },
   {
-    img: '/bankless-website/public/profile-pics/grendel.jpg',
+    img: '/bankless-website/profile-pics/grendel.jpg',
     name: 'Grendel',
     twitter: 'https://twitter.com/GrendelMarco',
   },
   {
-    img: '/bankless-website/public/profile-pics/icedcool.jpg',
+    img: '/bankless-website/profile-pics/icedcool.jpg',
     name: 'IcedCool',
     twitter: 'https://twitter.com/icedcool_eth',
   },
   {
-    img: '/bankless-website/public/profile-pics/chuck.jpg',
+    img: '/bankless-website/profile-pics/chuck.jpg',
     name: 'Chuck',
     twitter: 'https://twitter.com/mr_cgc',
   },
   {
-    img: '/bankless-website/public/profile-pics/montgomery.jpg',
+    img: '/bankless-website/profile-pics/montgomery.jpg',
     name: 'Montgomery',
     twitter: 'https://twitter.com/WPMonty',
   },
   {
-    img: '/bankless-website/public/profile-pics/lion917.jpg',
+    img: '/bankless-website/profile-pics/lion917.jpg',
     name: 'Lion917',
     twitter: 'https://twitter.com/lion917_eth',
   },
   {
-    img: '/bankless-website/public/profile-pics/links.jpg',
+    img: '/bankless-website/profile-pics/links.jpg',
     name: 'Links',
     twitter: 'https://twitter.com/almithani',
   },
@@ -43,37 +43,37 @@ const MULTI_SIG_OWNERS = [
 
 const GRANT_COMMITTEE_MEMBERS = [
   {
-    img: '/bankless-website/public/profile-pics/kouros.jpg',
+    img: '/bankless-website/profile-pics/kouros.jpg',
     name: 'Kouros',
     twitter: 'https://twitter.com/davidcoleto',
   },
   {
-    img: '/bankless-website/public/profile-pics/0xlucas.jpg',
+    img: '/bankless-website/profile-pics/0xlucas.jpg',
     name: '0xLucas',
     twitter: 'https://twitter.com/0x_Lucas',
   },
   {
-    img: '/bankless-website/public/profile-pics/aboveaveragejoe.jpg',
+    img: '/bankless-website/profile-pics/aboveaveragejoe.jpg',
     name: 'AboveAverageJoe',
     twitter: 'https://twitter.com/Abv_Avg_Joe',
   },
   {
-    img: '/bankless-website/public/profile-pics/grendel.jpg',
+    img: '/bankless-website/profile-pics/grendel.jpg',
     name: 'Grendel',
     twitter: 'https://twitter.com/GrendelMarco',
   },
   {
-    img: '/bankless-website/public/profile-pics/frogmonkee.jpg',
+    img: '/bankless-website/profile-pics/frogmonkee.jpg',
     name: 'FrogMonkee',
     twitter: 'https://twitter.com/frogmonkee',
   },
   {
-    img: '/bankless-website/public/profile-pics/icedcool.jpg',
+    img: '/bankless-website/profile-pics/icedcool.jpg',
     name: 'IcedCool',
     twitter: 'https://twitter.com/icedcool_eth',
   },
   {
-    img: '/bankless-website/public/profile-pics/redvan.jpg',
+    img: '/bankless-website/profile-pics/redvan.jpg',
     name: 'RedVan',
     twitter: 'https://mobile.twitter.com/0xredvan',
   },
@@ -188,7 +188,7 @@ class Section4 extends React.Component {
                       h={{ base: '15px', sm: '20px' }}
                     >
                       <Image
-                        src='/bankless-website/public/icons/twitter.png'
+                        src='/bankless-website/icons/twitter.png'
                         alt='twitter'
                         w={{ base: '8px', sm: '10px' }}
                         h={{ base: '8px', sm: '10px' }}
@@ -303,7 +303,7 @@ class Section4 extends React.Component {
                   >
                     <Link href={_multiSigOwner.twitter} passHref={true}>
                       <Image
-                        src='/bankless-website/public/icons/twitter.png'
+                        src='/bankless-website/icons/twitter.png'
                         alt='twitter'
                         width='10px'
                         height='10px'

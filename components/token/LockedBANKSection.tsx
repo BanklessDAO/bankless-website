@@ -35,7 +35,7 @@ function LockedBANKSection() {
           <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
               <Image
-                src='/bankless-website/public/images/Tlbank.png'
+                src='/bankless-website/images/Tlbank.png'
                 alt='bankToken'
                 height={113}
                 width={180}
@@ -86,7 +86,7 @@ function LockedBANKSection() {
             align='flex-start'
           >
             <Image
-              src='/bankless-website/public/images/Tlbank.png'
+              src='/bankless-website/images/Tlbank.png'
               alt='TlBank NFT'
               height={320}
               width={320}

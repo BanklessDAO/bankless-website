@@ -30,7 +30,7 @@ export default function TheRugComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src='/bankless-website/public/images/theRug.png'
+              src='/bankless-website/images/theRug.png'
             />
           </Box>
         </Flex>

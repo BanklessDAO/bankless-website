@@ -29,7 +29,7 @@ export default function BanklessAcademyComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/public/images/Academy_Banner_16x10 1.png'}
+            src={'/bankless-website/images/Academy_Banner_16x10 1.png'}
           />
         </Box>
       </Flex>

@@ -78,7 +78,7 @@ export default function CommunityCallsIntroComponent() {
               left='0'
               top='40%'
               width={'3rem'}
-              src={'/bankless-website/public/images/about-us/Cryptocurrency.png'}
+              src={'/bankless-website/images/about-us/Cryptocurrency.png'}
             />
             <Image
               position={'absolute'}
@@ -86,7 +86,7 @@ export default function CommunityCallsIntroComponent() {
               right='10%'
               top='30%'
               width={'3rem'}
-              src={'/bankless-website/public/images/about-us/Bnakless.png'}
+              src={'/bankless-website/images/about-us/Bnakless.png'}
             />
             <Image
               position={'absolute'}
@@ -94,7 +94,7 @@ export default function CommunityCallsIntroComponent() {
               right='0'
               bottom='25%'
               width={'3rem'}
-              src={'/bankless-website/public/images/about-us/Aragon.png'}
+              src={'/bankless-website/images/about-us/Aragon.png'}
             />
             <Image
               position={'absolute'}
@@ -102,7 +102,7 @@ export default function CommunityCallsIntroComponent() {
               right='30%'
               bottom='5%'
               width={'3rem'}
-              src={'/bankless-website/public/images/about-us/Cryptocurrency1.png'}
+              src={'/bankless-website/images/about-us/Cryptocurrency1.png'}
             />
             <Image
               alt={'Instructor Image'}
@@ -110,7 +110,7 @@ export default function CommunityCallsIntroComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/public/images/about-us/Instructor.png'}
+              src={'/bankless-website/images/about-us/Instructor.png'}
             />
           </Box>
         </Flex>
