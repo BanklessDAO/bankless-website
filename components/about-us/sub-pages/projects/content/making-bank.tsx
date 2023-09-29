@@ -30,7 +30,7 @@ export default function MakingBankComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src='/images/makingBank.png'
+              src='/bankless-website/public/images/makingBank.png'
             />
           </Box>
         </Flex>

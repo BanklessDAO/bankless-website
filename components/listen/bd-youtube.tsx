@@ -29,7 +29,7 @@ const BdYoutube = () => (
                         YouTube Channel
                     </Heading>
                     <Image
-                        src='/images/youtube-logo-sm.png'
+                        src='/bankless-website/public/images/youtube-logo-sm.png'
                         alt='bdao youtube channel'
                         height={24}
                         width={34}

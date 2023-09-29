@@ -62,7 +62,7 @@ export default function IntroductionAboutUsComponent() {
               left='2rem'
               top='40%'
               width={'3rem'}
-              src={'/images/about-us/Cryptocurrency.png'}
+              src={'/bankless-website/public/images/about-us/Cryptocurrency.png'}
               animation={animationCircleAntiClock}
             />
             <Image
@@ -71,7 +71,7 @@ export default function IntroductionAboutUsComponent() {
               right='10%'
               top='30%'
               width={'3rem'}
-              src={'/images/about-us/Bnakless.png'}
+              src={'/bankless-website/public/images/about-us/Bnakless.png'}
               animation={animationCircleClock}
             />
             <Image
@@ -80,7 +80,7 @@ export default function IntroductionAboutUsComponent() {
               right='2rem'
               bottom='25%'
               width={'3rem'}
-              src={'/images/about-us/Aragon.png'}
+              src={'/bankless-website/public/images/about-us/Aragon.png'}
               animation={animationCircleAntiClock}
             />
             <Image
@@ -89,7 +89,7 @@ export default function IntroductionAboutUsComponent() {
               right='30%'
               bottom='5%'
               width={'3rem'}
-              src={'/images/about-us/Cryptocurrency1.png'}
+              src={'/bankless-website/public/images/about-us/Cryptocurrency1.png'}
               animation={`${keyframeCircleMove} 6s linear infinite`}
             />
             <Image
@@ -98,7 +98,7 @@ export default function IntroductionAboutUsComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/images/about-us/Instructor.png'}
+              src={'/bankless-website/public/images/about-us/Instructor.png'}
             />
           </Box>
         </Flex>

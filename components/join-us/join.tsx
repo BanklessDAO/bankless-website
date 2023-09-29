@@ -51,7 +51,7 @@ export default function JoinComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/images/some3d.png'}
+            src={'/bankless-website/public/images/some3d.png'}
           />
         </Box>
       </Flex>

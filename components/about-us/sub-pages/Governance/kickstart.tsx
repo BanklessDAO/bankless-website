@@ -43,7 +43,7 @@ export default function GovernanceKickstartComponent() {
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
-                src={'/images/support.png'}
+                src={'/bankless-website/public/images/support.png'}
               />
               <Text
                 fontFamily={'heading'}
@@ -72,7 +72,7 @@ export default function GovernanceKickstartComponent() {
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
-                src={'/images/draft.png'}
+                src={'/bankless-website/public/images/draft.png'}
               />
               <Text
                 fontFamily={'heading'}
@@ -100,7 +100,7 @@ export default function GovernanceKickstartComponent() {
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
-                src={'/images/workshop.png'}
+                src={'/bankless-website/public/images/workshop.png'}
               />
               <Text
                 fontFamily={'heading'}
@@ -128,7 +128,7 @@ export default function GovernanceKickstartComponent() {
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
-                src={'/images/vote.png'}
+                src={'/bankless-website/public/images/vote.png'}
               />
               <Text
                 fontFamily={'heading'}
@@ -155,7 +155,7 @@ export default function GovernanceKickstartComponent() {
                 alt={'Hero Image'}
                 fit={'cover'}
                 align={'center'}
-                src={'/images/funding.png'}
+                src={'/bankless-website/public/images/funding.png'}
               />
               <Text
                 fontFamily={'heading'}

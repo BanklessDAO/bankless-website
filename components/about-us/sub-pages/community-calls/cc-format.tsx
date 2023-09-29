@@ -44,7 +44,7 @@ export default function CommunityCallsCCFormatComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/images/about-us/community-calls/Dev-Guild-banner.png'}
+              src={'/bankless-website/public/images/about-us/community-calls/Dev-Guild-banner.png'}
             />
           </Box>
         </Flex>

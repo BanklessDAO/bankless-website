@@ -31,7 +31,7 @@ export default function ProjectBanklessConsultingComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/images/bankless-dao-coffee-shop.png'
+            src='/bankless-website/public/images/bankless-dao-coffee-shop.png'
           />
         </Box>
       </Flex>

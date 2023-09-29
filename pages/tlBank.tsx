@@ -439,7 +439,7 @@ function TlBank() {
           </Text>
           <HStack>
             <Image
-              src='/images/bank-token-mobile.png'
+              src='/bankless-website/public/images/bank-token-mobile.png'
               alt='bankToken'
               height={'50px'}
               width={'70px'}
@@ -817,7 +817,7 @@ function TlBank() {
               pl={70}
               bg='radial-gradient(at center, rgba(255, 27, 1, 0.3),rgba(255, 27, 1, 0.2), rgba(1, 1, 1, 100.0), rgba(1, 1, 1, 100.0));'>
               <Image
-                src='/images/bank-token.png'
+                src='/bankless-website/public/images/bank-token.png'
                 alt='bankToken'
                 height={422}
                 width={402}
