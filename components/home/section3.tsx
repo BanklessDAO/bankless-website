@@ -35,9 +35,7 @@ function Section3() {
         width='80%'
         m='2rem auto'
       >
-        <Link
-          href='https://bankless.community/token'
-        >
+        <Link href='/bankless-website/token'>
           <Flex
             height='fit-content'
             flexDirection='column'
