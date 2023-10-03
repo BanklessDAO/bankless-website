@@ -288,7 +288,10 @@ const Ring4 = ({ ringWidth }: RingProps) => {
 }
 
 const CirclesV2: React.FC = () => (
-  <VStack d={{ base: 'none', md: 'flex' }} mb={{ base: 0, md: '4rem' }}>
+  <VStack
+    display={{ base: 'none', md: 'flex' }}
+    marginBottom={{ base: 0, md: '4rem' }}
+  >
     <Grid
       backgroundColor='black'
       w='53vw'
