@@ -1,9 +1,10 @@
 import { Box, Text, Stack, Flex, Image, Heading, Link } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 
-export default function PodcastHatcheryComponent() {
+export default function DaostewardsComponent() {
   return (
     <Stack
+      justify='space-between'
       align={'center'}
       width={{ md: '750px', lg: '800px', xl: '1000px' }}
       pt={{ base: 10, md: 14 }}
@@ -21,23 +22,26 @@ export default function PodcastHatcheryComponent() {
           boxShadow={'2xl'}
           overflow={'hidden'}>
           <Image
-            alt={'Degen project image'}
+            alt={'Bankless Labs logo'}
             fit={'cover'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/images//podcastHatchery.png'}
+            src='/images/Daostewards.png'
           />
         </Box>
       </Flex>
 
-      <Stack flex={1} spacing={{ base: 5, md: 4 }}>
+      <Stack
+        width={{ base: '300px', sm: '350px', xl: '500px' }}
+        spacing={{ base: 5, md: 4 }}>
         <Heading
           color={'gray.100'}
+          width={{ base: '300px', sm: '350px', xl: '500px' }}
           fontWeight={700}
           mt={{ base: '32px', md: '0' }}
           fontSize={{ base: '20px' }}>
-          PODCAST HATCHERY
+          DAOSTEWARDS
         </Heading>
         <Text
           color={'gray.100'}
@@ -50,18 +54,16 @@ export default function PodcastHatcheryComponent() {
             xl: '45px',
           }}
           fontSize={{ base: '16px', sm: '20px' }}>
-          Podcast Hatchery empowers individual creators to develop their own
-          podcasts, improve their production skills, grow an audience and
-          ultimately generate high-quality audio storytelling that will
-          represent the mission, ethos, and diversity of BanklessDAO.
+          DAOStewards is a meta-governance group from BanklessDAO. We aim to
+          encourage good governance in the DAO space by expressing Bankless
+          values and fostering a collaborative environment for the space to
+          grow.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
           spacing={'12px'}>
-          <Link
-            href='https://bankless.notion.site/Podcast-Hatchery-0c2676175267445180c8f5cb3d3f14bb'
-            isExternal>
+          <Link href='https://#' isExternal>
             <Flex
               align={'center'}
               color={'white.100'}
