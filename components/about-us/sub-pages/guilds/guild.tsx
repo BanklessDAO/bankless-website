@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from './section'
+import Section from 'components/about-us/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
@@ -90,16 +90,7 @@ function Guild() {
             img='/images/DevGuild.png'
             alt='dev-guild'
           />
-          <Section
-            title='Education Department'
-            text='The Education Department plays a key role in the empowerment of DAO members through onboarding new joiners,
-                  teaching DAO tooling need to succeed in the DAO space,
-                  and hosting informational sessions for those looking to further their crypto exploration beyond the introductory level.
-                  The Education Department is internally-focused and aims to help folks become more effective BanklessDAO participants.'
-            img='/images/edu-guild.png'
-            alt='education-guild'
-            reverse={true}
-          />
+
           <Section
             title='legal guild'
             text='The Legal Guild authored the BANK legal assessment and white paper.
@@ -107,35 +98,16 @@ function Guild() {
            They also incubated the Decentralized Law newsletter and legal podcast project.'
             img='/images/legal-guild.png'
             alt='legal-guild'
-          />
-          <Section
-            title='marketing guild'
-            text='The Marketing Guild amplifies the values and mission of BanklessDAO by delivering
-           creative Web3 marketing solutions to place the stakeholders in front of the right people with the right message.'
-            img='/images/marketing-guild.png'
-            alt='marketing-guild'
             reverse={true}
           />
-          <Section
-            title='Operations guild'
-            text='The Operations Guild administers the daily activities of BanklessDAO and facilitates core operations,
-           such as Community Calls and voting procedures.'
-            img='/images/operation-guild.png'
-            alt='operation-guild'
-          />
+
           <Section
             title='Research guild'
             text='The Research Guild operates as a support node for conducting, guiding, and funding research that aligns with BanklessDAO’s mission.'
             img='/images/research-guild.png'
             alt='research-guild'
-            reverse={true}
           />
-          <Section
-            title='Treasury guild'
-            text="The Treasury Guild is responsible for preserving, enhancing, and supporting BanklessDAO's financial resources."
-            img='/images/treasury-guild.png'
-            alt='treasury-guild'
-          />
+
           <Section
             title='Translators guild'
             text='The Translators Guild spreads the Bankless mission across the world by translating our media into dozens of languages,
