@@ -1,32 +1,35 @@
-.card-group{
+.card-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
     justify-content: center;
     gap: 2.5rem;
     width: 100%;
 }
-.card-content{
+
+.card-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #fff;
-    height: 100%;
-    padding: .7rem 1rem;
-    border-radius: .5rem;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    height: auto;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 }
-.card-img{
+
+.card-img {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
     width: 100%;
 }
-.card-body{
+
+.card-body {
     flex: 1 1 auto;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
 }
-.card-title{
+
+.card-title {
     color: #50a6d8;
     font-weight: bolder;
     margin-bottom: .5rem;
@@ -35,29 +38,33 @@
     line-height: 1.2;
     display: block;
 }
-.card-text{
+
+.card-text {
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1228px) {
-    .card-group{
+    .card-group {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 766px) {
-    .card-group{
+    .card-group {
         grid-template-columns: 1fr;
     }
-    .card-content{
+
+    .card-content {
         max-width: 70%;
         margin: auto;
     }
-    .card-title{
+
+    .card-title {
         font-size: 1rem;
     }
-    .card-text{
+
+    .card-text {
         margin-top: 0;
         margin-bottom: 0.7rem;
         font-size: 1rem;
@@ -65,17 +72,20 @@
 }
 
 @media screen and (max-width: 500px) {
-    .card-group{
+    .card-group {
         grid-template-columns: 1fr;
     }
-    .card-content{
+
+    .card-content {
         max-width: 100%;
         margin: auto;
     }
-    .card-title{
+
+    .card-title {
         font-size: 1rem;
     }
-    .card-text{
+
+    .card-text {
         margin-top: 0;
         margin-bottom: 0.7rem;
         font-size: 1rem;

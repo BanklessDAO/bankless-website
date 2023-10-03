@@ -87,7 +87,7 @@ function Guild() {
             text='The Developers Guild builds tooling, provides developer education, and helps developers do their best work in Web3.
           They also incubated the DEGEN,
           Gov-Bot, Mobile App and Bounty Board projects.'
-            img='/bankless-website/images/dev-guild.png'
+            img='/bankless-website/images/DevGuild.png'
             alt='dev-guild'
           />
           <Section
