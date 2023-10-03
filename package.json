@@ -53,8 +53,8 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/node": "20.8.2",
-    "@types/react": "18.2.24",
+    "@types/node": "^20.8.2",
+    "@types/react": "^18.2.24",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.50.0",
@@ -68,7 +68,7 @@
     "jest": "^27.5.1",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
-    "typescript": "5.2.2"
+    "typescript": "^5.2.2"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
