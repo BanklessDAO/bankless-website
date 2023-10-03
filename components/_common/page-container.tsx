@@ -8,7 +8,7 @@ type PageContainer = {
   children: React.ReactNode
 }
 
-const PageContainer: React.FC = ({ children }) => {
+const PageContainer: React.FC = children => {
   return (
     <Flex
       justifyContent={'center'}
