@@ -5,13 +5,15 @@ import styles from 'styles/DesktopView.module.css'
 
 export default function DesktopView() {
   return (
-    <Stack pb={{ base: '5rem' }} width='100%'>
+    <Stack pb={12} width='100%'>
       <Heading
         fontSize={{ base: '2xl', md: '3xl' }}
         color={'white.100'}
         fontWeight={600}
         lineHeight={1.5}
         fontFamily='Clear Sans'
+        alignSelf={'center'}
+        pb={12}
       >
         OUR VALUES
       </Heading>
