@@ -1,10 +1,8 @@
-import IntroComponent from 'components/about-us/sub-pages/projects/intro'
-import ProjectsContentComponent from 'components/about-us/sub-pages/projects/content'
+import ProjectsContentComponent from 'components/about-us/sub-pages/projects/projects'
 
 export default function ProjectsPage() {
   return (
     <>
-      <IntroComponent />
       <ProjectsContentComponent />
     </>
   )
