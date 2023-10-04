@@ -1,11 +1,13 @@
 import React from 'react'
-import { Box, Flex, Text, Image, VStack } from '@chakra-ui/react'
+import { Box, Flex, Text, Image, VStack, Link } from '@chakra-ui/react'
+import { FiArrowUpRight } from 'react-icons/fi'
 
 interface I_SectionProps {
   alt: string
   img: string
   title: string
   text: string
+  link?: string
   reverse?: boolean
 }
 
@@ -18,8 +20,7 @@ class Section extends React.Component<I_SectionProps> {
           sm: 'column',
           xl: this.props.reverse ? 'row-reverse' : 'row',
         }}
-        columnGap={16}
-      >
+        columnGap={16}>
         <Box width={{ base: '100%' }} zIndex='1'>
           <Image
             alt={this.props.alt}
@@ -63,12 +64,23 @@ class Section extends React.Component<I_SectionProps> {
           textAlign='start'
           justifyContent='center'
           alignItems='start'
-          zIndex='1'
-        >
+          zIndex='1'>
           <Text fontSize={{ base: '18px', md: '30px' }} fontWeight={700}>
             {this.props.title.toUpperCase()}
           </Text>
           <Text fontSize={{ base: '12px', md: '28px' }}>{this.props.text}</Text>
+          {this.props.link && (
+            <Link href={this.props.link} isExternal>
+              <Flex
+                align={'center'}
+                color={'white.100'}
+                fontSize='20px'
+                lineHeight={'24px'}
+                fontWeight='700'>
+                Learn More <FiArrowUpRight />
+              </Flex>
+            </Link>
+          )}
         </VStack>
       </Flex>
     )
