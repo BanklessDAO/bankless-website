@@ -5,14 +5,14 @@ import { PROJECTS } from 'constants/data'
 export default function ProjectsContentComponent() {
   return (
     <Box display={'flex'} flexDir='column' alignItems={'center'}>
-      {PROJECTS.map((guild, index) => (
+      {PROJECTS.map((project, index) => (
         <Section
-          title={guild.name}
-          text={guild.description}
-          img={guild.image}
-          alt={guild.name}
+          title={project.name}
+          text={project.description}
+          img={project.image}
+          alt={project.name}
           reverse={index % 2 === 1}
-          key={`guild-${index}`}
+          key={`project-${index}`}
         />
       ))}
     </Box>
