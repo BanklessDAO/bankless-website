@@ -1,5 +1,5 @@
-import Guild from 'components/about-us/sub-pages/guilds/guild'
+import Guilds from 'components/about-us/sub-pages/guilds/guilds'
 
 export default function GuildtPage() {
-  return <Guild />
+  return <Guilds />
 }
