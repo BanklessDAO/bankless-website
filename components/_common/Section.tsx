@@ -68,7 +68,7 @@ class Section extends React.Component<I_SectionProps> {
           <Text fontSize={{ base: '18px', md: '30px' }} fontWeight={700}>
             {this.props.title.toUpperCase()}
           </Text>
-          <Text fontSize={{ base: '12px', md: '28px' }}>{this.props.text}</Text>
+          <Text fontSize={{ base: '14px', md: '24px' }}>{this.props.text}</Text>
           {this.props.link && (
             <Link href={this.props.link} isExternal>
               <Flex
