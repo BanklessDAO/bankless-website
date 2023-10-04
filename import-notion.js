@@ -94,8 +94,11 @@ axios
     const projects = pages.filter(page => page.type === 'project')
     console.log('projects', projects)
     const fileContent = `import { ProjectType } from 'entities/project'
+
 export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)}
+
 export const GUILDS: ProjectType[] = ${JSON.stringify(guilds, null, 2)}
+
 export const PROJECTS: ProjectType[] = ${JSON.stringify(projects, null, 2)}
 `
     const filePath = `constants/data.ts`
