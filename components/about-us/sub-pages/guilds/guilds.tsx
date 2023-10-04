@@ -5,7 +5,7 @@ import styles from 'styles/NavBar.module.css'
 import { GUILDS } from 'constants/data'
 import Section from 'components/_common/Section'
 
-function Guild() {
+function Guilds() {
   return (
     <Stack
       as={Box}
@@ -66,4 +66,4 @@ function Guild() {
   )
 }
 
-export default Guild
+export default Guilds
