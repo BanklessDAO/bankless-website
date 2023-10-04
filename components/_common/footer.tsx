@@ -2,7 +2,6 @@ import React from 'react'
 import { Image } from '@chakra-ui/react'
 
 import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
-import { relative } from 'path'
 
 const SOCIALS = [
   {
@@ -44,7 +43,7 @@ const SOCIALS = [
     img: '/icons/instagram.png',
     alt: 'instagram',
     href: 'https://www.instagram.com/bankless_dao/',
-  }
+  },
 ]
 
 const LINKS = [
@@ -93,7 +92,12 @@ const LINKS = [
 class Footer extends React.Component {
   render() {
     return (
-      <Flex flexDirection='column' justifyContent='center' alignItems='center' position="relative">
+      <Flex
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        position='relative'
+      >
         <Grid
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
           gap={{ base: 2, md: 6 }}
@@ -110,12 +114,16 @@ class Footer extends React.Component {
             rowGap={1}
           >
             <Image
-                src={'/images/logo.png'}
-                alt={'BanklessDAO logo'}
-                objectFit='contain'
-                height={['50px','75px']}
+              src={'/images/logo.png'}
+              alt={'BanklessDAO logo'}
+              objectFit='contain'
+              height={['50px', '75px']}
             />
-            <Text fontSize='xl' textAlign={{ sm: 'center', md: 'left'}} color={'gray'}>
+            <Text
+              fontSize='xl'
+              textAlign={{ sm: 'center', md: 'left' }}
+              color={'gray'}
+            >
               A decentralized autonomous organization that acts as a steward of
               the Bankless Movement progressing the world towards a future of
               greater freedom.
@@ -144,7 +152,7 @@ class Footer extends React.Component {
           <Box marginTop={{ base: 8, lg: 24 }}>
             <Grid
               gridTemplateColumns='1fr 1fr'
-              position= "relative"
+              position='relative'
               rowGap='1rem'
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}

@@ -19,13 +19,15 @@ export const BaseLink = ({ href, text, typeSize = '2xl' }: BaseLinkProps) => {
         alignItems='baseline'
         marginRight='2'
         marginTop='4'
-        target='_blank'>
+        target='_blank'
+      >
         <HStack gap={2}>
           <Text
             fontWeight={700}
             fontSize={typeSize}
             marginRight='2'
-            textAlign='center'>
+            textAlign='center'
+          >
             {text}
           </Text>
         </HStack>

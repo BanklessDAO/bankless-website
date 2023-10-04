@@ -53,11 +53,7 @@ class MyDocument extends Document {
           />
         </Head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='true'
-        />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
         <body>
           <Main />
           <NextScript />

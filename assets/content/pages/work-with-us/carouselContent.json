@@ -182,7 +182,7 @@
           "Let us know what you are looking for and we'll sync you with the right team."],
         "cta": {
           "text": "Visit BanklessDAO Podcasts",
-          "link": "https://www.bankless.community/listen",
+          "link": "/listen",
           "isExternal": false
         },
         "image": {

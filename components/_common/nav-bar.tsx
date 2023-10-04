@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { ulid } from 'ulid'
 import styles from 'styles/NavBar.module.css'
-import { useMediaQuery } from '@chakra-ui/react'
 
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react'
 import Logo from './Logo'
@@ -26,7 +25,7 @@ const NAV_LINKS = [
   },
   {
     name: 'Rewards',
-    href: 'https://rewards.bankless.community/'
+    href: 'https://rewards.bankless.community/',
   },
   {
     name: 'Read',
@@ -52,12 +51,16 @@ const aboutUsLinksData = [
     href: '/about-us/governance',
     alt: 'Link to Governance page',
   },
-   {
+  {
     title: 'Departments',
     href: '/about-us/departments',
     alt: 'Link to Departments page',
   },
-  { title: 'Guilds', href: '/about-us/guilds', alt: 'Link to Guilds page' },
+  {
+    title: 'Guilds',
+    href: '/about-us/guilds',
+    alt: 'Link to Guilds page',
+  },
   {
     title: 'Projects',
     href: '/about-us/projects',

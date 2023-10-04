@@ -1,15 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import {
-  Container,
-  Box,
-  Heading,
-  Grid,
-  Text,
-  Flex,
-  VStack,
-} from '@chakra-ui/react'
+import { Container, Box, Grid, Text, Flex } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 
 class Section1 extends React.Component {
@@ -20,15 +12,17 @@ class Section1 extends React.Component {
           flexDir='column'
           gap={4}
           justifyContent='center'
-          alignItems='center'>
+          alignItems='center'
+        >
           <Box zIndex={1} m={0}>
             <Text
               fontWeight={700}
               fontSize={{ base: '4xl', md: '6xl' }}
-              maxW={{base: 400, lg: 750}}
+              maxW={{ base: 400, lg: 750 }}
               fontFamily='Clear Sans'
               textAlign={{ base: 'left', md: 'center' }}
-              lineHeight={1.2}>
+              lineHeight={1.2}
+            >
               International Media Nodes
             </Text>
             <Underline />
@@ -39,7 +33,8 @@ class Section1 extends React.Component {
             px={{ base: 0, md: '6rem' }}
             textAlign={{ base: 'left', md: 'center' }}
             fontFamily='Clear Sans'
-            lineHeight={1.2}>
+            lineHeight={1.2}
+          >
             International Media Nodes (IMN) are Bankless channels that spread
             the message of the Bankless movement beyond North America. They
             translate BanklessDAO content, publish original pieces, run Twitter
@@ -50,7 +45,8 @@ class Section1 extends React.Component {
             gridTemplateColumns={{ base: '1fr 1fr', md: '1fr 1fr 1fr' }}
             gap={{ base: 4, md: 8 }}
             mb={{ base: '2rem', md: '4rem' }}
-            mt={{ base: '2rem', md: '4rem', lg: 0 }}>
+            mt={{ base: '2rem', md: '4rem', lg: 0 }}
+          >
             <Box>
               <Image
                 src='/read/imn-assets/bhutan.png'

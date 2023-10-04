@@ -1,12 +1,5 @@
 import React, { useState } from 'react'
-import {
-  HStack,
-  Text,
-  Flex,
-  Image,
-  WrapItem,
-  Box,
-} from '@chakra-ui/react'
+import { HStack, Text, Flex, Image, WrapItem, Box } from '@chakra-ui/react'
 import NextLink from 'next/link'
 
 type ArticleLinkProps = {

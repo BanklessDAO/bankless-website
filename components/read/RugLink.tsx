@@ -1,14 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import {
-  Text,
-  Grid,
-  GridItem,
-  Box,
-  Link,
-  HStack,
-} from '@chakra-ui/react'
+import { Text, Grid, GridItem, Box, Link, HStack } from '@chakra-ui/react'
 import { ArticleIcon } from './ArticleLink'
 
 type RugLinkProps = {
@@ -37,7 +30,8 @@ export const RugLink = ({ href, type, desc }: RugLinkProps) => {
           justifyContent='flex-start'
           alignItems='flex-start'
           ml={{ base: 0, xl: '4rem' }}
-          mt={{ base: '2rem', md: 0 }}>
+          mt={{ base: '2rem', md: 0 }}
+        >
           <GridItem colSpan={1} rowSpan={1}>
             <ArticleIcon type={type} noOutline={true} />
           </GridItem>
@@ -60,7 +54,8 @@ export const RugLink = ({ href, type, desc }: RugLinkProps) => {
             <Text
               fontSize='lg'
               color='grey'
-              maxW={{ base: '80%', xl: '240px' }}>
+              maxW={{ base: '80%', xl: '240px' }}
+            >
               {desc}
             </Text>
           </GridItem>

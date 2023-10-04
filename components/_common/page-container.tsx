@@ -4,11 +4,11 @@ import { Flex, Container } from '@chakra-ui/react'
 import NavBar from './nav-bar'
 import Footer from './footer'
 
-type PageContainer = {
+type PageContainerProps = {
   children: React.ReactNode
 }
 
-const PageContainer: React.FC = ({ children }) => {
+const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
   return (
     <Flex
       justifyContent={'center'}
