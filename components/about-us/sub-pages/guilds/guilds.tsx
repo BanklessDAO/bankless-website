@@ -3,9 +3,9 @@ import Section from 'components/about-us/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
-import { DEPARTMENTS } from 'constants/data'
+import { GUILDS } from 'constants/data'
 
-function Departments() {
+function Guilds() {
   return (
     <Stack
       as={Box}
@@ -25,7 +25,7 @@ function Departments() {
         }}
         lineHeight={'120%'}
         color={'white.100'}>
-        Departments
+        Guilds
         <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
           <Underline />
         </Box>
@@ -44,19 +44,20 @@ function Departments() {
           lineHeight={{ base: '40px', md: '46px' }}
           fontWeight='400px'
           zIndex={1}>
-          Departments are operation-critical units of BanklessDAO. The
-          qualification test for a department is that if it does not exist, the
-          DAO cannot function properly or may cease to exist!
+          Guilds are the way we organize our contributors. These talent pools
+          serve as a way for individuals who share common interests,
+          professional backgrounds, and skills to come together and incubate
+          projects. There are 13 guilds within bDAO.
         </Text>
         <VStack mt={8} rowGap={8}>
-          {DEPARTMENTS.map((department, index) => (
+          {GUILDS.map((guild, index) => (
             <Section
-              title={department.name}
-              text={department.description}
-              img={department.image}
-              alt={department.name}
+              title={guild.name}
+              text={guild.description}
+              img={guild.image}
+              alt={guild.name}
               reverse={index % 2 === 1}
-              key={`department-${index}`}
+              key={`guild-${index}`}
             />
           ))}
         </VStack>
@@ -65,4 +66,4 @@ function Departments() {
   )
 }
 
-export default Departments
+export default Guilds

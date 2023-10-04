@@ -20,7 +20,9 @@ export default function NodesBanklessHQComponent() {
           BANKLESS HQ
           <Underline />
         </Heading>
-        <Text color={'white.200'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
           Is the founding node of the Bankless media ecosystem. Led by David
           Hoffman and Ryan Sean Adams, this node runs the original Bankless
           podcast and the Bankless newsletter. It’s often referred to as
@@ -32,7 +34,7 @@ export default function NodesBanklessHQComponent() {
           align={'center'}
           direction={{ base: 'column', md: 'row' }}>
           <Flex align={'center'} color={'white.100'}>
-            <Link href='https://newsletter.banklesshq.com/' isExternal>
+            <Link href='https://www.bankless.com/read' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
@@ -46,7 +48,7 @@ export default function NodesBanklessHQComponent() {
           </Flex>
           {/* TODO add url */}
           <Flex align={'center'} color={'white.100'}>
-            <Link href='https://shows.banklesshq.com/' isExternal>
+            <Link href='https://www.bankless.com/listen' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
