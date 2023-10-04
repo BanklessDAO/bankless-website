@@ -11202,6 +11202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-crc@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "js-crc@npm:0.2.0"
+  checksum: 3e307ae64236b745658e0df50d56809a810e67f39e45b7c1302433f10560819bea1d457841b2bac0eb42b72c96d60ae4c3232613275ea6c482b3cdb98a8bab09
+  languageName: node
+  linkType: hard
+
 "js-sha3@npm:0.8.0":
   version: 0.8.0
   resolution: "js-sha3@npm:0.8.0"
@@ -12357,6 +12364,7 @@ __metadata:
     framer-motion: ^5.6.0
     husky: ^7.0.4
     jest: ^27.5.1
+    js-crc: ^0.2.0
     lint-staged: ^12.3.3
     lodash: ^4.17.21
     next: ^13.5.4
