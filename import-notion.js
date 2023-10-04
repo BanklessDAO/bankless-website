@@ -87,11 +87,15 @@ axios
       }
     })
     // console.log(pages)
+    const departments = pages.filter(page => page.type === 'department')
+    console.log('departments', departments)
     const guilds = pages.filter(page => page.type === 'guild')
     console.log('guilds', guilds)
     const projects = pages.filter(page => page.type === 'project')
     console.log('projects', projects)
     const fileContent = `import { ProjectType } from 'entities/project'
+
+export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)}
 
 export const GUILDS: ProjectType[] = ${JSON.stringify(guilds, null, 2)}
 
