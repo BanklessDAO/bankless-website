@@ -44,7 +44,7 @@ export default function CommunityCallsCCFormatComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/images/about-us/community-calls/Dev-Guild-banner.png'}
+              src={'/images/about-us/community-calls/Dev-Guild-banner.png'}
             />
           </Box>
         </Flex>
@@ -54,7 +54,7 @@ export default function CommunityCallsCCFormatComponent() {
             color={'gray.100'}
             lineHeight={1}
             fontWeight={700}
-            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl'}}
+            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl' }}
           >
             The CC Format
           </Heading>

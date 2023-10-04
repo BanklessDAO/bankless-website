@@ -32,7 +32,7 @@ const Circles = () => (
             height={{ base: 0, sm: '80px', md: '120px' }}
             margin={{ base: '30px', md: '60px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-center.png'}
+            src={'/images/about-image-orbit-center.png'}
           />
           <Image
             alt='orbit outer'
@@ -41,7 +41,7 @@ const Circles = () => (
             height={{ base: 0, sm: '30px', md: '50px' }}
             margin={{ base: '70px -50px', md: '110px -80px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-outer-3.png'}
+            src={'/images/about-image-orbit-outer-3.png'}
           />
           <Image
             alt='orbit'
@@ -50,7 +50,7 @@ const Circles = () => (
             height={{ base: 0, sm: '30px', md: '50px' }}
             margin={{ base: '-40px 125px', md: '-70px 200px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-outer-1.png'}
+            src={'/images/about-image-orbit-outer-1.png'}
           />
           <Image
             alt='orbit'
@@ -59,7 +59,7 @@ const Circles = () => (
             height={{ base: 0, sm: '30px', md: '50px' }}
             margin={{ base: '160px 100px', md: '260px 170px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-outer-2.png'}
+            src={'/images/about-image-orbit-outer-2.png'}
           />
           <Image
             alt='orbit'
@@ -68,7 +68,7 @@ const Circles = () => (
             height={{ base: 0, sm: '26px', md: '44px' }}
             margin={{ base: '8px 8px', md: '15px 15px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-mid-1.png'}
+            src={'/images/about-image-orbit-mid-1.png'}
           />
           <Image
             alt='orbit'
@@ -77,7 +77,7 @@ const Circles = () => (
             height={{ base: 0, sm: '26px', md: '44px' }}
             margin={{ base: '60px 130px', md: '100px 220px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-mid-2.png'}
+            src={'/images/about-image-orbit-mid-2.png'}
           />
           <Image
             alt='orbit'
@@ -86,7 +86,7 @@ const Circles = () => (
             height={{ base: 0, sm: '26px', md: '44px' }}
             margin={{ base: '1pxBasepx 27px', md: '203px 50px' }}
             borderRadius='50%'
-            src={'/bankless-website/images/about-image-orbit-mid-3.png'}
+            src={'/images/about-image-orbit-mid-3.png'}
           />
           <Box
             position={'absolute'}

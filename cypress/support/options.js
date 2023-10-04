@@ -18,16 +18,16 @@ export const sizes = [
 ]
 
 export const pages = [
-  '/bankless-website',
-  '/bankless-website/about-us',
-  '/bankless-website/about-us/governance',
-  '/bankless-website/about-us/guilds',
-  '/bankless-website/about-us/projects',
-  '/bankless-website/about-us/community-calls',
-  '/bankless-website/about-us/nodes',
-  '/bankless-website/work-with-us',
-  '/bankless-website/read',
-  '/bankless-website/token',
-  '/bankless-website/listen',
-  '/bankless-website/join-us',
+  '/',
+  '/about-us',
+  '/about-us/governance',
+  '/about-us/guilds',
+  '/about-us/projects',
+  '/about-us/community-calls',
+  '/about-us/nodes',
+  '/work-with-us',
+  '/read',
+  '/token',
+  '/listen',
+  '/join-us',
 ]

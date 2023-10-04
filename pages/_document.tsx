@@ -29,10 +29,7 @@ class MyDocument extends Document {
             property='og:description'
             content='BanklessDAO is a decentralized community with one mission: Help the world gobankless.'
           />
-          <meta
-            property='og:image'
-            content='/bankless-website/icons/bankless-logo-2.png'
-          />
+          <meta property='og:image' content='/icons/bankless-logo-2.png' />
           <meta property='og:image:width' content='480' />
           <meta property='og:image:height' content='369' />
           <meta
@@ -45,22 +42,14 @@ class MyDocument extends Document {
             property='twitter:description'
             content='BanklessDAO is a decentralized community with one mission: Help the world gobankless.'
           />
-          <meta
-            property='twitter:image'
-            content='/bankless-website/icons/bankless-logo-2.png'
-          />
-          <link rel='shortcut icon' href='/bankless-website/favicon.ico' />
-          <link
-            rel='icon'
-            type='image/png'
-            sizes='32x32'
-            href='/bankless-website/favicon.ico'
-          />
+          <meta property='twitter:image' content='/icons/bankless-logo-2.png' />
+          <link rel='shortcut icon' href='/favicon.ico' />
+          <link rel='icon' type='image/png' sizes='32x32' href='/favicon.ico' />
           <link
             rel='apple-touch-icon'
             type='image/png'
             sizes='32x32'
-            href='/bankless-website/favicon.ico'
+            href='/favicon.ico'
           />
         </Head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />

@@ -8,14 +8,16 @@ export default function DaoPunksComponent() {
       spacing={{ base: 8, md: 10 }}
       pt={{ base: 10, md: 14 }}
       direction={{ base: 'column', md: 'row' }}
-      mt={'4rem'}>
+      mt={'4rem'}
+    >
       <Flex
         flex={1}
         justify={'center'}
         align={'center'}
         position={'relative'}
         w={'full'}
-        display={{ base: 'none', md: 'flex' }}>
+        display={{ base: 'none', md: 'flex' }}
+      >
         <Box
           position={'relative'}
           height={'300px'}
@@ -23,7 +25,8 @@ export default function DaoPunksComponent() {
           boxShadow={'2xl'}
           width={'full'}
           overflow={'hidden'}
-          p={0}>
+          p={0}
+        >
           <Image
             borderRadius={'10px'}
             alt={'Hero Image'}
@@ -31,7 +34,7 @@ export default function DaoPunksComponent() {
             align={'center'}
             w={'90%'}
             h={'100%'}
-            src={'/bankless-website/images/DAO-Punks.png'}
+            src={'/images/DAO-Punks.png'}
           />
         </Box>
       </Flex>
@@ -42,7 +45,8 @@ export default function DaoPunksComponent() {
           lineHeight={1.1}
           fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-          textTransform={'uppercase'}>
+          textTransform={'uppercase'}
+        >
           dao punks
         </Heading>
         <Flex
@@ -51,25 +55,27 @@ export default function DaoPunksComponent() {
           align={'center'}
           position={'relative'}
           w={'full'}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: 'flex', md: 'none' }}
+        >
           <Box
             position={'relative'}
             height={'300px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
-            overflow={'hidden'}>
+            overflow={'hidden'}
+          >
             <Image
               alt={'Hero Image'}
               fit={'cover'}
               align={'center'}
               w={'90%'}
               h={'90%'}
-              src={'/bankless-website/images/DAO-Punks.png'}
+              src={'/images/DAO-Punks.png'}
             />
           </Box>
         </Flex>
-        <Text color={'grey'} fontSize={{base: 'sm', sm: 'lg', md: '2xl' }}>
+        <Text color={'grey'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
           Is a node within the Bankless ecosystem that helps contributors
           transition to full-time DAO. DAOpunk NFTs designed by Crypto Bushi
           allow access to the Discord server. Join to connect with other punks
@@ -78,10 +84,14 @@ export default function DaoPunksComponent() {
         <Stack
           direction={{ base: 'row', md: 'row' }}
           as={'form'}
-          spacing={'12px'}>
+          spacing={'12px'}
+        >
           <Link href='https://daopunks.io/' isExternal>
             <Flex align={'center'} color={'white.100'}>
-              <Text mr={'0.5rem'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
+              <Text
+                mr={'0.5rem'}
+                fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}
+              >
                 DAOPunks NFT
               </Text>
               <FiArrowUpRight size={25} />

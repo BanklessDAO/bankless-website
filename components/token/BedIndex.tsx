@@ -34,7 +34,7 @@ function BedIndex() {
               {isMobile ? (
                 <Flex mb={5} p={0}>
                   <Image
-                    src='/bankless-website/images/bed-token.png'
+                    src='/images/bed-token.png'
                     alt='bed-token'
                     height={45}
                     width={45}
@@ -82,7 +82,7 @@ function BedIndex() {
                 <Button fontWeight={800}>
                   <Container padding={0} paddingRight={2}>
                     <Image
-                      src='/bankless-website/images/bed-token.png'
+                      src='/images/bed-token.png'
                       alt='bed-token'
                       height={23}
                       width={23}
@@ -109,7 +109,7 @@ function BedIndex() {
                 align={'center'}
                 height={310}
                 width={310}
-                src={'/bankless-website/images/bed-token.png'}
+                src={'/images/bed-token.png'}
               />
             </Box>
           ) : null}

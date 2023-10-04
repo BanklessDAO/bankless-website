@@ -30,7 +30,7 @@ export default function InfoSecTeamComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/images/Rectangle 230.png'
+            src='/images/Rectangle 230.png'
           />
         </Box>
       </Flex>

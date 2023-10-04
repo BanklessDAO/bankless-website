@@ -51,7 +51,7 @@ class Hero extends React.Component {
             top={{ base: '10rem', lg: '2rem', xl: '-3rem' }}
           >
             <ChakraNextImage
-              src='/bankless-website/read/pen-01.png'
+              src='/read/pen-01.png'
               height={{ base: '22rem', xl: '22rem' }}
               width={'22rem'}
               alt='Bhutan'

@@ -3,10 +3,10 @@ import React from 'react'
 
 const Logo = () => {
   return (
-    <Link href='/bankless-website'>
+    <Link href='/'>
       <Image
         h='70px'
-        src='/bankless-website/images/logo.png'
+        src='/images/logo.png'
         alt='Logo'
         display={{ base: 'none', md: 'flex' }}
         sx={{

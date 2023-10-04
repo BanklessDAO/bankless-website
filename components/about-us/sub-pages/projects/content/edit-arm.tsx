@@ -30,7 +30,7 @@ export default function EditArmProjectComponent() {
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src='/bankless-website/images/about-us/bpublishing_logo.png'
+            src='/images/about-us/bpublishing_logo.png'
           />
         </Box>
       </Flex>
@@ -60,7 +60,11 @@ export default function EditArmProjectComponent() {
           }}
           fontSize={{ base: '16px', sm: '20px' }}
         >
-          Bankless Publishing creates and curates top-shelf educational Web3 content for a broad audience of crypto-interested readers. We also work with crypto’s leading protocols to help them get their message out to our audience. Whether you’re a writer or protocol team, we’re interested in talking with you.
+          Bankless Publishing creates and curates top-shelf educational Web3
+          content for a broad audience of crypto-interested readers. We also
+          work with crypto’s leading protocols to help them get their message
+          out to our audience. Whether you’re a writer or protocol team, we’re
+          interested in talking with you.
         </Text>
         <Stack
           direction={{ base: 'row', md: 'row' }}
@@ -68,10 +72,7 @@ export default function EditArmProjectComponent() {
           spacing={'12px'}
         >
           {/* TODO confirm this link */}
-          <Link
-            href='https://banklesspublishing.com/'
-            isExternal
-          >
+          <Link href='https://banklesspublishing.com/' isExternal>
             <Flex
               align={'center'}
               color={'white.100'}

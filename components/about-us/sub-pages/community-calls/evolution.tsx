@@ -46,7 +46,7 @@ export default function CommunityCallsEvolutionComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/images/about-us/community-calls/bell-01.png'}
+              src={'/images/about-us/community-calls/bell-01.png'}
             />
           </Box>
         </Flex>
@@ -117,7 +117,7 @@ export default function CommunityCallsEvolutionComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/images/about-us/community-calls/bell-01.png'}
+              src={'/images/about-us/community-calls/bell-01.png'}
             />
           </Box>
           <Text color={'gray.100'} fontSize={{ sm: 'sm', md: 'md' }}>

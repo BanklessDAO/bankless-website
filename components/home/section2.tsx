@@ -7,25 +7,25 @@ import Underline from 'components/_common/underline'
 
 const CARDS = [
   {
-    img: '/bankless-website/images/coming-home.jpg',
+    img: '/images/coming-home.jpg',
     title: 'Departments',
     text: 'Departments are operation-critical units of BanklessDAO without which the DAO cannot function properly.',
     href: '/about-us/departments',
   },
   {
-    img: '/bankless-website/images/guilds.png',
+    img: '/images/guilds.png',
     title: 'Guilds',
     text: 'Guilds are the way we organize our contributors. There are 13 guilds within bDAO.',
     href: '/about-us/guilds',
   },
   {
-    img: '/bankless-website/images/projects.png',
+    img: '/images/projects.png',
     title: 'Projects',
     text: 'Projects enable Guilds and bDAO members to collaborate and scale the Bankless movement',
     href: '/about-us/projects',
   },
   {
-    img: '/bankless-website/images/governance.jpg',
+    img: '/images/governance.jpg',
     title: 'Governance',
     text: 'At BanklessDAO, all decisions regarding governance, treasury, projects, and proposals are made through a democratic process.',
     href: '/about-us/governance',
@@ -45,7 +45,8 @@ class Section2 extends React.Component {
           fontWeight={700}
           fontSize={{ base: '1.2rem', md: '3xl' }}
           mt='4rem'
-          textAlign='center'>
+          textAlign='center'
+        >
           {'We take a decentralized approach to:'}
         </Text>
 
@@ -55,7 +56,8 @@ class Section2 extends React.Component {
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           mt='3rem'
           gridColumnGap={{ base: '2rem' }}
-          gridRowGap={{ base: '2rem', lg: '2rem' }}>
+          gridRowGap={{ base: '2rem', lg: '2rem' }}
+        >
           {CARDS.map((_card, idx) => {
             return (
               <Card

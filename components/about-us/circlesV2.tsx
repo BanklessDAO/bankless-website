@@ -8,7 +8,7 @@ const Center: React.FC = () => (
       w='100%'
       h='100%'
       borderRadius='50%'
-      src={'/bankless-website/images/about-image-orbit-center.png'}
+      src={'/images/about-image-orbit-center.png'}
     />
   </GridItem>
 )
@@ -22,17 +22,17 @@ const Ring1 = ({ ringWidth }: RingProps) => {
     {
       rotation: '0',
       innerCircleSize: 20,
-      imgSrc: '/bankless-website/images/about-image-orbit-mid-1.png',
+      imgSrc: '/images/about-image-orbit-mid-1.png',
     },
     {
       rotation: '135',
       innerCircleSize: 20,
-      imgSrc: '/bankless-website/images/about-image-orbit-mid-2.png',
+      imgSrc: '/images/about-image-orbit-mid-2.png',
     },
     {
       rotation: '250',
       innerCircleSize: 20,
-      imgSrc: '/bankless-website/images/about-image-orbit-mid-3.png',
+      imgSrc: '/images/about-image-orbit-mid-3.png',
     },
     { color: '#606060', rotation: '52', innerCircleSize: 14 },
   ]
@@ -149,17 +149,17 @@ const Ring3 = ({ ringWidth }: RingProps) => {
   const rings = [
     {
       rotation: '-45',
-      imgSrc: '/bankless-website/images/about-image-orbit-outer-3.png',
+      imgSrc: '/images/about-image-orbit-outer-3.png',
       innerCircleSize: 16,
     },
     {
       rotation: '75',
       innerCircleSize: 16,
-      imgSrc: '/bankless-website/images/about-image-orbit-outer-1.png',
+      imgSrc: '/images/about-image-orbit-outer-1.png',
     },
     {
       rotation: '200',
-      imgSrc: '/bankless-website/images/about-image-orbit-outer-2.png',
+      imgSrc: '/images/about-image-orbit-outer-2.png',
       innerCircleSize: 16,
     },
     {

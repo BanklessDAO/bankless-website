@@ -79,7 +79,7 @@ export default function IntroductionComponent() {
               }}
             >
               <source
-                src='/bankless-website/videos/work-with-us/Welcome_to_DAO.mp4'
+                src='/videos/work-with-us/Welcome_to_DAO.mp4'
                 type='video/mp4'
               />
             </video>

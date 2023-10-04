@@ -39,7 +39,7 @@ export default function CommunityCallsWeekUpdateComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/images/Group-15310.png'}
+              src={'/images/Group-15310.png'}
             />
           </Box>
         </Flex>
@@ -49,7 +49,7 @@ export default function CommunityCallsWeekUpdateComponent() {
             color={'gray.100'}
             lineHeight={1.1}
             fontWeight={700}
-            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl'}}
+            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl' }}
           >
             Weekly Updates
           </Heading>

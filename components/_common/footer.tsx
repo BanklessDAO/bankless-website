@@ -5,42 +5,42 @@ import { Grid, Box, Flex, Text, Link } from '@chakra-ui/react'
 
 const SOCIALS = [
   {
-    img: '/bankless-website/icons/facebook.png',
+    img: '/icons/facebook.png',
     alt: 'facebook',
     href: 'https://www.facebook.com/people/Bankless-DAO/100086325162724/',
   },
   {
-    img: '/bankless-website/icons/tiktok.png',
+    img: '/icons/tiktok.png',
     alt: 'tiktok',
     href: 'https://vm.tiktok.com/ZMNSvBj2H/',
   },
   {
-    img: '/bankless-website/icons/telegram.png',
+    img: '/icons/telegram.png',
     alt: 'telegram',
     href: 'https://t.me/BanklessDAO',
   },
   {
-    img: '/bankless-website/icons/youtube.png',
+    img: '/icons/youtube.png',
     alt: 'youtube',
     href: 'https://www.youtube.com/channel/UCik2oWalCO3qpiGoMpl-c1g',
   },
   {
-    img: '/bankless-website/icons/threads.png',
+    img: '/icons/threads.png',
     alt: 'threads',
     href: 'https://www.threads.net/@bankless_dao',
   },
   {
-    img: '/bankless-website/icons/twitter.png',
+    img: '/icons/twitter.png',
     alt: 'twitter',
     href: 'https://twitter.com/banklessDAO',
   },
   {
-    img: '/bankless-website/icons/discord.png',
+    img: '/icons/discord.png',
     alt: 'discord',
     href: 'https://discord.com/invite/bankless',
   },
   {
-    img: '/bankless-website/icons/instagram.png',
+    img: '/icons/instagram.png',
     alt: 'instagram',
     href: 'https://www.instagram.com/bankless_dao/',
   },
@@ -114,7 +114,7 @@ class Footer extends React.Component {
             rowGap={1}
           >
             <Image
-              src={'/bankless-website/images/logo.png'}
+              src={'/images/logo.png'}
               alt={'BanklessDAO logo'}
               objectFit='contain'
               height={['50px', '75px']}

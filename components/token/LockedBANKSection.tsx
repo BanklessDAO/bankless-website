@@ -29,13 +29,13 @@ function LockedBANKSection() {
             long-term alignment with BanklessDAO and it&apos;s mission. When you
             Lock BANK you receive a tlBANK NFT that represents the amount of
             BANK locked and grants Level 1 membership status for the duration of
-            the lock period.  Only the address that mints the tlBANK is entitled
+            the lock period. Only the address that mints the tlBANK is entitled
             to the Level 1 membership status and other future perks.
           </Text>
           <Box display={'flex'} flexDirection={{ base: 'row', md: 'column' }}>
             {isMobile ? (
               <Image
-                src='/bankless-website/images/Tlbank.png'
+                src='/images/Tlbank.png'
                 alt='bankToken'
                 height={113}
                 width={180}
@@ -86,7 +86,7 @@ function LockedBANKSection() {
             align='flex-start'
           >
             <Image
-              src='/bankless-website/images/Tlbank.png'
+              src='/images/Tlbank.png'
               alt='TlBank NFT'
               height={320}
               width={320}
@@ -97,4 +97,4 @@ function LockedBANKSection() {
     </Container>
   )
 }
-  export default LockedBANKSection
+export default LockedBANKSection

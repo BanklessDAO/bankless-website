@@ -75,8 +75,8 @@ init({
   },
   appMetadata: {
     name: 'TLBANK',
-    icon: '/bankless-website/images/bank-token.png',
-    logo: '/bankless-website/images/bank-token.png',
+    icon: '/images/bank-token.png',
+    logo: '/images/bank-token.png',
     description: 'BanklessDao',
     recommendedInjectedWallets: [
       { name: 'Coinbase', url: 'https://wallet.coinbase.com/' },
@@ -447,7 +447,7 @@ function TlBank() {
           </Text>
           <HStack>
             <Image
-              src='/bankless-website/images/bank-token-mobile.png'
+              src='/images/bank-token-mobile.png'
               alt='bankToken'
               height={'50px'}
               width={'70px'}
@@ -846,7 +846,7 @@ function TlBank() {
               bg='radial-gradient(at center, rgba(255, 27, 1, 0.3),rgba(255, 27, 1, 0.2), rgba(1, 1, 1, 100.0), rgba(1, 1, 1, 100.0));'
             >
               <Image
-                src='/bankless-website/images/bank-token.png'
+                src='/images/bank-token.png'
                 alt='bankToken'
                 height={422}
                 width={402}

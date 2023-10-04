@@ -1,10 +1,4 @@
-import {
-  Box,
-  Heading,
-  Stack,
-  Image,
-  Flex,
-} from '@chakra-ui/react'
+import { Box, Heading, Stack, Image, Flex } from '@chakra-ui/react'
 import { CTAButton } from 'components/_common/CTAButton'
 
 export default function JoinComponent() {
@@ -16,14 +10,16 @@ export default function JoinComponent() {
       mt={{ base: 5, md: 10 }}
       mb={'4rem'}
       mx='auto'
-      direction={{ base: 'column', md: 'row' }}>
+      direction={{ base: 'column', md: 'row' }}
+    >
       <Box flex={1}>
-        <Stack spacing={{ base: '2rem'}}>
+        <Stack spacing={{ base: '2rem' }}>
           <Heading
             color={'white.100'}
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}>
+            fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}
+          >
             Dive in and build the future of work with us.
           </Heading>
           <CTAButton
@@ -39,19 +35,21 @@ export default function JoinComponent() {
         justify={'center'}
         align={'center'}
         position={'relative'}
-        w={'full'}>
+        w={'full'}
+      >
         <Box
           position={'relative'}
           overflow={'hidden'}
           w={'100%'}
-          sx={{ height: { base: '250px', md: '200px' } }}>
+          sx={{ height: { base: '250px', md: '200px' } }}
+        >
           <Image
             alt={'Member Image'}
             fit={'scale-down'}
             align={'center'}
             w={'100%'}
             h={'100%'}
-            src={'/bankless-website/images/some3d.png'}
+            src={'/images/some3d.png'}
           />
         </Box>
       </Flex>

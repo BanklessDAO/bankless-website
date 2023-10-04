@@ -19,16 +19,17 @@ export const CTALink = ({ href, text }: CTALink) => {
         marginTop='4'
         target='_blank'
         // alt={alt}
-        >
+      >
         <Text
           fontWeight={700}
           fontSize='2xl'
           marginRight='2'
-          textAlign='center'>
+          textAlign='center'
+        >
           {text}
         </Text>
         <Box marginLeft={2}>
-          <Image src='/bankless-website/icons/arrow.png' alt='arrow' height={15} width={15} />
+          <Image src='/icons/arrow.png' alt='arrow' height={15} width={15} />
         </Box>
       </Link>
     </NextLink>

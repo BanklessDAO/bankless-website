@@ -43,26 +43,29 @@ export default function IntroductionAboutUsComponent() {
         direction={{ base: 'column', md: 'row' }}
         pb={{ base: '2rem', md: 0 }}
         h={{ base: 'fit-content', lg: '32rem' }}
-        pos='relative'>
+        pos='relative'
+      >
         <Flex
           flex={{ base: '0 0 70%', xl: '0 0 60%' }}
           justify={'center'}
           align={'center'}
           position={'relative'}
-          zIndex={1}>
+          zIndex={1}
+        >
           <Box
             position={'relative'}
             overflow={'hidden'}
             w={'100%'}
             h={{ base: '32rem', xl: '32rem' }}
-            m={0}>
+            m={0}
+          >
             <Image
               position={'absolute'}
               alt={'Cryptocurrency Image'}
               left='2rem'
               top='40%'
               width={'3rem'}
-              src={'/bankless-website/images/about-us/Cryptocurrency.png'}
+              src={'/images/about-us/Cryptocurrency.png'}
               animation={animationCircleAntiClock}
             />
             <Image
@@ -71,7 +74,7 @@ export default function IntroductionAboutUsComponent() {
               right='10%'
               top='30%'
               width={'3rem'}
-              src={'/bankless-website/images/about-us/Bnakless.png'}
+              src={'/images/about-us/Bnakless.png'}
               animation={animationCircleClock}
             />
             <Image
@@ -80,7 +83,7 @@ export default function IntroductionAboutUsComponent() {
               right='2rem'
               bottom='25%'
               width={'3rem'}
-              src={'/bankless-website/images/about-us/Aragon.png'}
+              src={'/images/about-us/Aragon.png'}
               animation={animationCircleAntiClock}
             />
             <Image
@@ -89,7 +92,7 @@ export default function IntroductionAboutUsComponent() {
               right='30%'
               bottom='5%'
               width={'3rem'}
-              src={'/bankless-website/images/about-us/Cryptocurrency1.png'}
+              src={'/images/about-us/Cryptocurrency1.png'}
               animation={`${keyframeCircleMove} 6s linear infinite`}
             />
             <Image
@@ -98,7 +101,7 @@ export default function IntroductionAboutUsComponent() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={'/bankless-website/images/about-us/Instructor.png'}
+              src={'/images/about-us/Instructor.png'}
             />
           </Box>
         </Flex>
@@ -122,7 +125,8 @@ export default function IntroductionAboutUsComponent() {
               lineHeight={1.1}
               fontWeight={700}
               fontFamily='Clear Sans'
-              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}>
+              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+            >
               What is BanklessDAO?
             </Text>
             <CTALink

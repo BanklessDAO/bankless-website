@@ -86,7 +86,7 @@ class Section1 extends React.Component {
             </Button>
             <Button
               as='a'
-              href={'/bankless-website/about-us'}
+              href={'/about-us'}
               color={'#ff1013'}
               variant='outline'
               transition='1s'
@@ -120,9 +120,9 @@ class Section1 extends React.Component {
                 height: '300px',
               }}
             >
-              <source src='/bankless-website/videos/DAOhandLogo.mp4' type='video/mp4' />
-              <source src='/bankless-website/videos/DAOhandLogo.webm' type='video/webm' />
-              <source src='/bankless-website/videos/DAOhandLogo.ogv' type='video/ogg' />
+              <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
+              <source src='/videos/DAOhandLogo.webm' type='video/webm' />
+              <source src='/videos/DAOhandLogo.ogv' type='video/ogg' />
               {/* Add additional source formats as needed */}
             </video>
           </Box>
