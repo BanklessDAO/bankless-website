@@ -20,7 +20,7 @@ const Section = ({
     <Box width={{ base: '100%' }} zIndex='1'>
       <Image
         alt={project.name}
-        fit={'cover'}
+        fit={'contain'}
         align={'center'}
         w={'100%'}
         h={'100%'}
