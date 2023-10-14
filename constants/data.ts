@@ -44,7 +44,7 @@ export const GUILDS: ProjectType[] = [
     "name": "DAOlationships Guild",
     "page": "guild",
     "description": "The DAOlationships Guild facilitates and coordinates relationships between external organizations and the guilds within BanklessDAO. This guild helps us best represent our DAO to anyone outside bDAO.",
-    "image": "/images/guild/daolationships-guild-2dbd58be.png"
+    "image": "/images/guild/daolationships-guild-489406ee.png"
   },
   {
     "name": "Design Guild",
@@ -158,7 +158,7 @@ export const PROJECTS: ProjectType[] = [
     "name": "Bankless Academy",
     "page": "project",
     "description": "Bankless Academy is an app that will take someone with zero knowledge of crypto and smart contracts and lead them down the journey of becoming a competent crypto user. They provide lessons in interactive formats and have fun rewards along the way.",
-    "image": "/images/project/bankless-academy-8ca833f3.png",
+    "image": "/images/project/bankless-academy-1ae99c27.png",
     "link": "https://linktr.ee/BanklessAcademy"
   },
   {
@@ -242,7 +242,7 @@ export const PROJECTS: ProjectType[] = [
     "name": "DAOStewards",
     "page": "project",
     "description": "DAOStewards is a meta-governance group from BanklessDAO. We aim to encourage good governance in the DAO space by expressing Bankless values and fostering a collaborative environment for the space to grow.",
-    "image": "/images/project/daostewards-e3bdde04.png",
+    "image": "/images/project/daostewards-493f438e.png",
     "link": "https://twitter.com/DaoStewards"
   }
 ]
