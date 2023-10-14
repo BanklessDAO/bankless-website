@@ -52,13 +52,9 @@ function Projects() {
         <VStack mt={8} rowGap={8}>
           {PROJECTS.map((project, index) => (
             <Section
-              title={project.name}
-              text={project.description}
-              img={project.image}
-              alt={project.name}
+              project={project}
               reverse={index % 2 === 1}
               key={`project-${index}`}
-              link={project.link}
             />
           ))}
         </VStack>

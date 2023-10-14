@@ -52,10 +52,7 @@ function Guilds() {
         <VStack mt={8} rowGap={8}>
           {GUILDS.map((guild, index) => (
             <Section
-              title={guild.name}
-              text={guild.description}
-              img={guild.image}
-              alt={guild.name}
+              project={guild}
               reverse={index % 2 === 1}
               key={`guild-${index}`}
             />

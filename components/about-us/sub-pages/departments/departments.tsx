@@ -51,10 +51,7 @@ function Departments() {
         <VStack mt={8} rowGap={8}>
           {DEPARTMENTS.map((department, index) => (
             <Section
-              title={department.name}
-              text={department.description}
-              img={department.image}
-              alt={department.name}
+              project={department}
               reverse={index % 2 === 1}
               key={`department-${index}`}
             />
