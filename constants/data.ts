@@ -158,7 +158,7 @@ export const PROJECTS: ProjectType[] = [
     "name": "Bankless Academy",
     "page": "project",
     "description": "Bankless Academy is an app that will take someone with zero knowledge of crypto and smart contracts and lead them down the journey of becoming a competent crypto user. They provide lessons in interactive formats and have fun rewards along the way.",
-    "image": "/images/project/bankless-academy-1ae99c27.png",
+    "image": "/images/project/bankless-academy-f3fc04ba.png",
     "link": "https://linktr.ee/BanklessAcademy"
   },
   {
