@@ -246,3 +246,102 @@ export const PROJECTS: ProjectType[] = [
     "link": "https://twitter.com/DaoStewards"
   }
 ]
+
+export const WORK_WITH_US: ProjectType[] = [
+  {
+    "name": "Bankless Consulting",
+    "page": "work-with-us",
+    "category": "consulting-and-education",
+    "description": "Our Web3-native consulting service draws on the expertise of bDAO members to help DAOs launch and scale their presence.\nBankless Consultancy also helps traditional organizations take the first step into Web3.",
+    "image": "/images/work-with-us/bankless-consulting-f1469097.jpg",
+    "link": "https://www.banklessconsulting.com/"
+  },
+  {
+    "name": "Bankless Academy",
+    "page": "work-with-us",
+    "category": "consulting-and-education",
+    "description": "Bankless Academy is on a mission to introduce 1 billion people to the exciting possibilities of cryptocurrency, DeFi, and beyond.\nWhether you're curious about crypto, intrigued by NFTs, or want to get started the latest DeFi protocols, we're here to help guide and accelerate your journey to Web3 proficiency.",
+    "image": "/images/work-with-us/bankless-academy-6073734d.png",
+    "link": "https://linktr.ee/banklessacademy"
+  },
+  {
+    "name": "Global Tax Consultancy",
+    "page": "work-with-us",
+    "category": "consulting-and-education",
+    "description": "The Global Tax Guide will provide general introductory information regarding virtual-currency-related income tax laws from major jurisdictions throughout the world. Access to the Global Tax Guide will be granted by minting Form 69.",
+    "image": "/images/work-with-us/global-tax-consultancy-a8fbf44f.jpg",
+    "link": "https://newsletter.banklesshq.com/p/ultimate-crypto-tax-guide?s=r"
+  },
+  {
+    "name": "Newsletter Sponsorship",
+    "page": "work-with-us",
+    "category": "sponsorships-and-marketing",
+    "description": "Sponsor any of our newsletters and reach tens of thousands of readers every week.\nChoose from Weekly Rollup, State of the DAOs, Decentralized Art, Decentralized Law, and DeFi Download, as well as a variety of languages, to reach your perfect audience. Inquire about sponsoring a newsletter by filling out this form.",
+    "image": "/images/work-with-us/newsletter-sponsorship-dc73e820.jpg",
+    "link": "https://www.notion.so/Writers-Guild-585a90523b9f4630bc04892931a11f7d"
+  },
+  {
+    "name": "Podcast Sponsorship",
+    "page": "work-with-us",
+    "category": "sponsorships-and-marketing",
+    "description": "The BanklessDAO native podcasts speak directly to niche audiences around the web3 ecosystem.\nReach builders through Crypto Sapiens, BanklessDAO contributors through Making Bank, or get in touch with the fast-growing African scene through the Bankless Africa podcast.\nLet us know what you are looking for and we'll sync you with the right team.",
+    "image": "/images/work-with-us/podcast-sponsorship-2ab30384.jpg",
+    "link": "https://www.bankless.community/listen"
+  },
+  {
+    "name": "Marketing Services",
+    "page": "work-with-us",
+    "category": "sponsorships-and-marketing",
+    "description": "Bankless Consulting is the world's first web3-native consulting firm. Whether you're a DAO or a traditional enterprise, we'll help you capture the potential of the rapidly expanding decentralized economy.",
+    "image": "/images/work-with-us/marketing-services-36c53179.jpg",
+    "link": "https://www.banklessconsulting.com/"
+  },
+  {
+    "name": "Audio-Visual Services",
+    "page": "work-with-us",
+    "category": "creative-services",
+    "description": "Our AV Guild provides top-notch audio and visual services for Web3-native organizations.\nFrom audio production to voice-over talent to custom photography, bDAO's AV experts offer a service to level up your organization's audio and visual assets. Commission an AV expert by filling out this form.",
+    "image": "/images/work-with-us/audio-visual-services-5770419a.jpg",
+    "link": "https://www.notion.so/bankless/AudioVisual-Guild-64f9d5b6e62a45dc93391e4d075b40a9"
+  },
+  {
+    "name": "Custom Articles",
+    "page": "work-with-us",
+    "category": "creative-services",
+    "description": "Bankless Publishing (BP) is available to collaborate with value-aligned brands and protocols to generate educational articles that promote awareness, knowledge, and functionality of various integral aspects of the web3 ecosystem.",
+    "image": "/images/work-with-us/custom-articles-5f69ff1e.jpg",
+    "link": "https://banklesspublishing.com/"
+  },
+  {
+    "name": "State of the DAOs Newsletter Feature",
+    "page": "work-with-us",
+    "category": "creative-services",
+    "description": "State of the DAOs, the high-signal low-noise newsletter to understanding DAOs.",
+    "image": "/images/work-with-us/state-of-the-daos-newsletter-feature-5609ac88.jpg",
+    "link": "https://banklessdao.substack.com/s/state-of-the-daos"
+  },
+  {
+    "name": "Custom Designs",
+    "page": "work-with-us",
+    "category": "creative-services",
+    "description": "BanklessDAO Design Guild offers next-gen visual services for Web3-native organizations. We are a team of professional designers that offers website designs, mobile app designs, pitch deck designs, logo, and branding creation who are well equipped with theoretical knowledge and software materials and possess hands-on experience.",
+    "image": "/images/work-with-us/custom-designs-e00e0763.jpg",
+    "link": "https://www.notion.so/Design-Guild-6f59223e601a4e418151b3622aa6b81c"
+  },
+  {
+    "name": "Bounty Board",
+    "page": "work-with-us",
+    "category": "software-and-dao-tooling",
+    "description": "Bounty Board eases coordination between work organizers and contributors. It provides Discord-integrated bounty tooling.\nNew contributors find ways to contribute. Organizers track bountied work via our Discord bot and web accounting view. Organizers also attract talent with evergreen intake bounties and ensure work quality with Discord role-gating or applications.\nHowever you work, Bounty Board fits your workflow.",
+    "image": "/images/work-with-us/bounty-board-e9be8920.jpg",
+    "link": "https://bountyboard.bankless.community/"
+  },
+  {
+    "name": "DAO Dash",
+    "page": "work-with-us",
+    "category": "software-and-dao-tooling",
+    "description": "DAO Dash will be the Analytics Guild's data ecosystem that will enable collaboration between its members in order to support Bankless DAO's mission.\nDAO Dash will establish patterns for ingesting data pipelines from off-chain and on-chain data sources, establishing a collaborative query and analysis environment, and a front end dashboard to distribute visually appealing insights.",
+    "image": "/images/work-with-us/dao-dash-1c24102f.jpg",
+    "link": "https://bankless.notion.site/DAO-Dash-41a151ce8ef74fcd893cba3b47223828"
+  }
+]

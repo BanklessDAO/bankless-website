@@ -90,10 +90,16 @@ axios
     // console.log(pages)
     const departments = pages.filter(page => page.page === 'department')
     console.log('departments', departments)
+
     const guilds = pages.filter(page => page.page === 'guild')
     console.log('guilds', guilds)
+
     const projects = pages.filter(page => page.page === 'project')
     console.log('projects', projects)
+
+    const workWithUs = pages.filter(page => page.page === 'work-with-us')
+    console.log('work-with-us', workWithUs)
+
     const fileContent = `import { ProjectType } from 'entities/project'
 
 export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)}
@@ -101,6 +107,8 @@ export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)
 export const GUILDS: ProjectType[] = ${JSON.stringify(guilds, null, 2)}
 
 export const PROJECTS: ProjectType[] = ${JSON.stringify(projects, null, 2)}
+
+export const WORK_WITH_US: ProjectType[] = ${JSON.stringify(workWithUs, null, 2)}
 `
     const filePath = `constants/data.ts`
     fs.writeFile(
