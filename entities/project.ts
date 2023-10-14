@@ -1,6 +1,7 @@
 export interface ProjectType {
   name: string,
-  type: string,
+  page: string,
+  category?: string,
   description: string,
   image: string,
   link?: string,

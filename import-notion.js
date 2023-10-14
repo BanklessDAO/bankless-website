@@ -16,7 +16,8 @@ console.log('NOTION_ID', NOTION_ID)
 
 const KEY_MATCHING = {
   'Name': 'name',
-  'Type': 'type',
+  'Page': 'page',
+  'Category': 'category',
   'Description': 'description',
   'Image': 'image',
   'Link': 'link',
@@ -75,23 +76,23 @@ axios
           }),
         {}
       )
-      if (page.type.length > 0 && page.image !== undefined) {
-        page.type = page.type[0]
+      if (page.page.length > 0 && page.image !== undefined) {
+        page.page = page.page[0]
         if (page.link === null) {
           delete page.link
         }
-        page.image = get_img(page.image, page.type, slugify(page.name))
+        page.image = get_img(page.image, page.page, slugify(page.name))
         pages.push(page)
       } else {
         console.log('pb missing field', page)
       }
     })
     // console.log(pages)
-    const departments = pages.filter(page => page.type === 'department')
+    const departments = pages.filter(page => page.page === 'department')
     console.log('departments', departments)
-    const guilds = pages.filter(page => page.type === 'guild')
+    const guilds = pages.filter(page => page.page === 'guild')
     console.log('guilds', guilds)
-    const projects = pages.filter(page => page.type === 'project')
+    const projects = pages.filter(page => page.page === 'project')
     console.log('projects', projects)
     const fileContent = `import { ProjectType } from 'entities/project'
 
