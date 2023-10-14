@@ -24,6 +24,7 @@ const Section = ({
         align={'center'}
         w={'100%'}
         h={'100%'}
+        maxH='600px'
         src={project.image}
       />
     </Box>
