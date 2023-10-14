@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from 'components/about-us/section'
+import Section from 'components/_common/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'

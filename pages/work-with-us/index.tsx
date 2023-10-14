@@ -1,6 +1,6 @@
 import { Heading, Stack, Text, Box, VStack } from '@chakra-ui/react'
 import IntroductionComponent from 'components/work-with-us/introduction'
-import Section from 'components/about-us/section'
+import Section from 'components/_common/section'
 import { WORK_WITH_US } from 'constants/data'
 
 const SectionTitle = ({
