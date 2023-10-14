@@ -221,7 +221,7 @@ export const PROJECTS: ProjectType[] = [
     "name": "Making Bank",
     "page": "project",
     "description": "The Making Bank podcast offers an inside look into BanklessDAO and showcases the people, ideas, and projects that keep it at the forefront of web3. Each episode, we invite DAO members to join us for conversations about DAO life, the future of work, crypto, web3, and their journeys to becoming more bankless.",
-    "image": "/images/project/making-bank-b8ae8969.png",
+    "image": "/images/project/making-bank-5b77b553.png",
     "link": "https://rss.com/podcasts/making-bank-banklessdao/"
   },
   {
