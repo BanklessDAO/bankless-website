@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
+const path = require("path")
 const axios = require('axios')
 const fs = require('fs')
 const crc32 = require('js-crc').crc32
@@ -54,6 +55,16 @@ const get_img = (imageLink, slug, image_name) => {
   // console.log('image_path', image_path)
   const local_image_path = `public${image_path}`
   if (!fs.existsSync(local_image_path)) {
+    // remove eventual previous image
+    const dirname = path.dirname(local_image_path) + '/'
+    fs.readdirSync(dirname)
+      .filter(f => f.startsWith(slugify(image_name)))
+      .map(f => {
+        console.log('delete previous image:', dirname + f)
+        fs.unlinkSync(dirname + f)
+      })
+
+    // download new image
     download_image(imageLink, local_image_path)
     console.log('downloading image: ', local_image_path)
   }
