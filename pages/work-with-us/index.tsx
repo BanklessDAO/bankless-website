@@ -62,7 +62,7 @@ export default function WorkWithUsPage() {
       <IntroductionComponent />
       {WORK_WITH_US_CATEGORIES.map((category, index) => (
         <Box key={`category-${index}`}>
-          <SectionTitle title={category.title} description={category.title} />
+<SectionTitle title={category.title} description={category.description} />
           <VStack mt={8} rowGap={8}>
             {WORK_WITH_US.filter(
               project => project.category === category.categorySlug
