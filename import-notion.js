@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
+const path = require("path")
 const axios = require('axios')
 const fs = require('fs')
 const crc32 = require('js-crc').crc32
@@ -16,7 +17,8 @@ console.log('NOTION_ID', NOTION_ID)
 
 const KEY_MATCHING = {
   'Name': 'name',
-  'Type': 'type',
+  'Page': 'page',
+  'Category': 'category',
   'Description': 'description',
   'Image': 'image',
   'Link': 'link',
@@ -53,6 +55,16 @@ const get_img = (imageLink, slug, image_name) => {
   // console.log('image_path', image_path)
   const local_image_path = `public${image_path}`
   if (!fs.existsSync(local_image_path)) {
+    // remove eventual previous image
+    const dirname = path.dirname(local_image_path) + '/'
+    fs.readdirSync(dirname)
+      .filter(f => f.startsWith(slugify(image_name)))
+      .map(f => {
+        console.log('delete previous image:', dirname + f)
+        fs.unlinkSync(dirname + f)
+      })
+
+    // download new image
     download_image(imageLink, local_image_path)
     console.log('downloading image: ', local_image_path)
   }
@@ -75,24 +87,30 @@ axios
           }),
         {}
       )
-      if (page.type.length > 0 && page.image !== undefined) {
-        page.type = page.type[0]
+      if (page.page.length > 0 && page.image !== undefined) {
+        page.page = page.page[0]
         if (page.link === null) {
           delete page.link
         }
-        page.image = get_img(page.image, page.type, slugify(page.name))
+        page.image = get_img(page.image, page.page, slugify(page.name))
         pages.push(page)
       } else {
         console.log('pb missing field', page)
       }
     })
     // console.log(pages)
-    const departments = pages.filter(page => page.type === 'department')
+    const departments = pages.filter(page => page.page === 'department')
     console.log('departments', departments)
-    const guilds = pages.filter(page => page.type === 'guild')
+
+    const guilds = pages.filter(page => page.page === 'guild')
     console.log('guilds', guilds)
-    const projects = pages.filter(page => page.type === 'project')
+
+    const projects = pages.filter(page => page.page === 'project')
     console.log('projects', projects)
+
+    const workWithUs = pages.filter(page => page.page === 'work-with-us')
+    console.log('work-with-us', workWithUs)
+
     const fileContent = `import { ProjectType } from 'entities/project'
 
 export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)}
@@ -100,6 +118,8 @@ export const DEPARTMENTS: ProjectType[] = ${JSON.stringify(departments, null, 2)
 export const GUILDS: ProjectType[] = ${JSON.stringify(guilds, null, 2)}
 
 export const PROJECTS: ProjectType[] = ${JSON.stringify(projects, null, 2)}
+
+export const WORK_WITH_US: ProjectType[] = ${JSON.stringify(workWithUs, null, 2)}
 `
     const filePath = `constants/data.ts`
     fs.writeFile(

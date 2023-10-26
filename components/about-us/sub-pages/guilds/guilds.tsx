@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from 'components/about-us/section'
+import Section from 'components/_common/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
@@ -52,10 +52,7 @@ function Guilds() {
         <VStack mt={8} rowGap={8}>
           {GUILDS.map((guild, index) => (
             <Section
-              title={guild.name}
-              text={guild.description}
-              img={guild.image}
-              alt={guild.name}
+              project={guild}
               reverse={index % 2 === 1}
               key={`guild-${index}`}
             />

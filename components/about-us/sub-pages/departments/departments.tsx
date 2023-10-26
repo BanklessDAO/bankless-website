@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from 'components/about-us/section'
+import Section from 'components/_common/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
@@ -51,10 +51,7 @@ function Departments() {
         <VStack mt={8} rowGap={8}>
           {DEPARTMENTS.map((department, index) => (
             <Section
-              title={department.name}
-              text={department.description}
-              img={department.image}
-              alt={department.name}
+              project={department}
               reverse={index % 2 === 1}
               key={`department-${index}`}
             />
