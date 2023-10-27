@@ -16,50 +16,20 @@ const NAV_LINKS = [
     href: '/about-us',
   },
   {
-    name: 'Token',
-    href: '/token',
-  },
-  {
-    name: 'Dashboard',
-    href: 'https://banklessdao.nodeblocks.io/',
-  },
-  {
-    name: 'Rewards',
-    href: 'https://rewards.bankless.community/',
-  },
-  {
-    name: 'Read',
-    href: '/read',
-  },
-  {
-    name: 'Listen',
-    href: '/listen',
-  },
-  {
     name: 'Work With Us',
     href: '/work-with-us',
   },
   {
-    name: 'Join Us',
-    href: '/join-us',
+    name: 'Governance',
+    href: '/about-us/governance',
   },
 ]
 
 const aboutUsLinksData = [
   {
-    title: 'Governance',
-    href: '/about-us/governance',
-    alt: 'Link to Governance page',
-  },
-  {
     title: 'Departments',
     href: '/about-us/departments',
     alt: 'Link to Departments page',
-  },
-  {
-    title: 'Guilds',
-    href: '/about-us/guilds',
-    alt: 'Link to Guilds page',
   },
   {
     title: 'Projects',
@@ -67,9 +37,19 @@ const aboutUsLinksData = [
     alt: 'Link to Projects page',
   },
   {
-    title: 'Community Calls',
-    href: '/about-us/community-calls',
-    alt: 'Link to Community Calls page',
+    title: 'Guilds',
+    href: '/about-us/guilds',
+    alt: 'Link to Guilds page',
+  },
+  {
+    title: 'Read',
+    href: '/read',
+    alt: 'Link to Read Page',
+  },
+  {
+    title: 'Listen',
+    href: '/listen',
+    alt: 'Link to Listen Page',
   },
   {
     title: 'Media Nodes',
@@ -78,7 +58,40 @@ const aboutUsLinksData = [
   },
 ]
 
-const tokenLinksData = [
+const workWithUsLinksData = [
+  {
+    title: 'Join Us',
+    href: '/join-us',
+    alt: 'Link to Join Us page',
+  },
+  {
+    title: 'Community Calls',
+    href: '/about-us/community-calls',
+    alt: 'Link to Community Calls page',
+  },
+  {
+    title: 'Onboarding',
+    href: 'https://onboarding.bankless.community/',
+    alt: 'Link to Onboarding page',
+  },
+  {
+    title: 'Rewards',
+    href: 'https://rewards.bankless.community/',
+    alt: 'Link to Rewards page',
+  },
+]
+
+const governanceLinksData = [
+  {
+    title: 'Dashboard',
+    href: 'https://banklessdao.nodeblocks.io/',
+    alt: 'Link to Dashboard page',
+  },
+  {
+    title: 'Token',
+    href: '/token',
+    alt: 'Link to Token page',
+  },
   {
     title: 'Lock BANK',
     href: '/tlBank',
@@ -86,13 +99,9 @@ const tokenLinksData = [
   },
 ]
 
-const joinUsLinksData = [
-  {
-    title: 'Onboarding',
-    href: 'https://onboarding.bankless.community/',
-    alt: 'Link to Onboarding page',
-  },
-]
+const tokenLinksData = []
+
+const joinUsLinksData = []
 
 type Link = {
   title: string
@@ -304,6 +313,8 @@ const MenuLinks = ({ isOpen }) => {
           const isAboutUs = _navLink.name === 'About Us'
           const isToken = _navLink.name === 'Token'
           const isJoinUs = _navLink.name === 'Join Us'
+          const isWork = _navLink.name === 'Work With Us'
+          const isGovernance = _navLink.name === 'Governance'
 
           return (
             <Box
@@ -319,8 +330,10 @@ const MenuLinks = ({ isOpen }) => {
             >
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
+              {isWork && <DropdownMenu linksData={workWithUsLinksData} />}
               {isToken && <DropdownMenu linksData={tokenLinksData} />}
               {isJoinUs && <DropdownMenu linksData={joinUsLinksData} />}
+              {isGovernance && <DropdownMenu linksData={governanceLinksData} />}
             </Box>
           )
         })}
