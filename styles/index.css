@@ -8,29 +8,36 @@
 /**
 Global
 */
-[data-reactroot] { 
+[data-reactroot] {
   display: flex;
 }
 
-.border-box {
-  --b: 5px; /* thickness of the border */
-  --c: #d02128; /* color of the border */
-  --w: 15px; /* width of border */
+a {
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
 
-  border: var(--b) solid transparent; /* space for the border */
+.border-box {
+  --b: 5px;
+  /* thickness of the border */
+  --c: #d02128;
+  /* color of the border */
+  --w: 15px;
+  /* width of border */
+
+  border: var(--b) solid transparent;
+  /* space for the border */
   --g: #0000 90deg, var(--c) 0;
-  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g))
-      0 0,
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--g)) 0 0,
     conic-gradient(from 180deg at top var(--b) right var(--b), var(--g)) 100% 0,
     conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--g)) 0 100%,
-    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100%
-      100%;
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--g)) 100% 100%;
   background-size: var(--w) var(--w);
   background-origin: border-box;
   background-repeat: no-repeat;
 }
 
-button::focus { 
+button::focus {
   outline: none;
   box-shadow: none;
 }
