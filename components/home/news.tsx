@@ -41,6 +41,7 @@ const FeaturedNews = styled(Box)`
   }
   .mySwiper {
     border-radius: 12px;
+    border: 1px solid #333a40;
     overflow: hidden;
   }
   .swiper {
@@ -97,9 +98,18 @@ const formatDateDescription = targetDate => {
 
 const News = (): React.ReactElement => {
   const [latestNews, setLatestNews] = useState<NewsType>({
-    announcement: '',
+    announcement: '<p>&nbsp;</p>',
     feed: [],
-    featured: [],
+    featured: [
+      {
+        title: '',
+        link: '/',
+        pubDate: 'now',
+        website: '',
+        image:
+          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+      },
+    ],
   })
 
   useEffect(() => {
@@ -110,6 +120,9 @@ const News = (): React.ReactElement => {
           console.log(response)
           setLatestNews(response.data)
         })
+        .catch(rejected => {
+          console.log(rejected)
+        })
     } catch (error) {
       console.error(error)
     }
@@ -117,13 +130,15 @@ const News = (): React.ReactElement => {
 
   return (
     <Box zIndex={1} w='100%'>
-      <Announcement mb='6'>
+      <Announcement mb='6' minH='120px'>
         <Heading
+          color='white'
+          size={{ base: 'lg' }}
           dangerouslySetInnerHTML={{
             __html: latestNews.announcement,
           }}></Heading>
       </Announcement>
-      <Box display={{ base: 'block', xl: 'flex' }}>
+      <Box display={{ base: 'block', xl: 'flex' }} w='100%'>
         <Box
           display='block'
           width={{ base: '100%', xl: '70%' }}
@@ -145,52 +160,44 @@ const News = (): React.ReactElement => {
               className='mySwiper'>
               {latestNews.featured.map((news, index) => (
                 <SwiperSlide key={`news-${index}`}>
-                  <Link href={news.link} isExternal>
+                  <Link href={news.link} isExternal w='100%'>
+                    <Box
+                      textAlign='left'
+                      background='whiteAlpha.200'
+                      p='4'
+                      fontSize='md'
+                      minH='68px'>
+                      <Heading as='h2' size='lg' color='white'>
+                        {news.title}
+                      </Heading>
+                      {news.website}
+                    </Box>
                     <Image
                       src={news.image}
                       w='100%'
                       aspectRatio='1.9'
                       alt={`${news.website} - ${news.title}`}
                     />
-                    <Box
-                      position='absolute'
-                      backgroundColor='black'
-                      opacity='0.4'
-                      top='0'
-                      left='0'
-                      w='100%'
-                      height='100%'></Box>
-                    <Box
-                      position='absolute'
-                      left='12px'
-                      bottom='12px'
-                      textAlign='left'
-                      color='white'>
-                      <Heading as='h2' size='lg'>
-                        {news.title}
-                      </Heading>
-                      {news.website}
-                    </Box>
                   </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
           </FeaturedNews>
         </Box>
-        <Box>
-          <Card>
-            <Heading as='h2' size='lg'>
+        <Box w='100%'>
+          <Card minH='538px'>
+            <Heading as='h2' size='lg' color='white'>
               Latest News
             </Heading>
             {latestNews.feed.map((news, index) => (
-              <Box key={`news-${index}`} mt={2}>
-                <Link href={news.link} isExternal color='white'>
+              <Box key={`news-${index}`} mt={3}>
+                <Link href={news.link} isExternal color='white' fontSize='lg'>
                   {news.title}
+                  <br />
+                  <Box color='whiteAlpha.500'>
+                    {news.website} • {formatDateDescription(news.pubDate)}
+                  </Box>
                 </Link>
-                <br />
-                <Box color='whiteAlpha.500'>
-                  {news.website} • {formatDateDescription(news.pubDate)}
-                </Box>
               </Box>
             ))}
           </Card>
