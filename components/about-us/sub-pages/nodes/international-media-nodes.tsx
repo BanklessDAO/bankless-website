@@ -21,13 +21,12 @@ export default function NodesInternationalMediaComponent() {
         </Heading>
         <Text
           color={'white.200'}
-          fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}
-        >
+          fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
           Join the Bankless journey in your continent, country, or language!
         </Text>
         <Flex
           flex={1}
-          justify={{ base: 'center', md: 'space-around' }}
+          justify={{ base: 'space-between', md: 'space-around' }}
           align={'center'}
           direction={{ base: 'column', md: 'row' }}>
           <Flex align={'center'} color={'white.100'}>
@@ -40,6 +39,18 @@ export default function NodesInternationalMediaComponent() {
                   International Media Nodes
                 </Text>
                 <FiArrowUpRight size={25} />
+              </Flex>
+            </Link>
+          </Flex>
+          <Flex align={'center'} color={'white.100'}>
+            <Link href='https://banklessafrica.com' isExternal>
+              <Flex align={'center'} color={'white.100'}>
+                <Text
+                  mr={'0.25rem'}
+                  fontSize={{ base: '1xl', md: '3xl' }}
+                  fontWeight={'bold'}>
+                  Bankless Africa
+                </Text>
               </Flex>
             </Link>
           </Flex>
