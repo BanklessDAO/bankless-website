@@ -53,20 +53,22 @@ export const NewsletterList: React.FC = () => {
       justifyContent='start'
       alignItems='start'
       rowGap={{ base: 2, md: 4 }}
-      pt={{base: '4rem', md:'8rem'}}
+      pt={{ base: '4rem', md: '8rem' }}
       pos='relative'
       sx={{
         '& > ul': {
           margin: '0 !important',
         },
-      }}>
+      }}
+    >
       <Box zIndex={1} m={0}>
         <Text
           fontWeight={700}
-          fontSize={{base: '4xl', md:'6xl'}}
+          fontSize={{ base: '4xl', md: '6xl' }}
           textAlign='center'
           maxW={750}
-          fontFamily='Clear Sans'>
+          fontFamily='Clear Sans'
+        >
           Newsletters
         </Text>
         <Underline />
@@ -82,8 +84,9 @@ export const NewsletterList: React.FC = () => {
         p={0}
         w='100%'
         h='100%'
-        pt={{base: '3rem', md: 0}}
-        sx={{ margin: 0 }}>
+        pt={{ base: '3rem', md: 0 }}
+        sx={{ margin: 0 }}
+      >
         {newsletters.map(newsletter => (
           <NewsletterCard {...newsletter} key={ulid()} />
         ))}
@@ -93,7 +96,7 @@ export const NewsletterList: React.FC = () => {
         h={{ base: '80%', lg: '60%' }}
         pos='absolute'
         top={{ base: '16%', lg: '32%' }}
-        left={{base: '0%', lg: '8%'}}
+        left={{ base: '0%', lg: '8%' }}
         bgColor='magenta'
         zIndex={0}
         borderRadius='50%'

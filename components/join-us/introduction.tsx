@@ -14,7 +14,8 @@ export default function IntroductionComponent() {
       <Stack
         spacing={{ base: 0 }}
         mt={{ base: 5, md: 10 }}
-        direction={{ base: 'column', xl: 'row' }}>
+        direction={{ base: 'column', xl: 'row' }}
+      >
         <VStack flex='1 0' alignItems='start'>
           <Heading
             color={'white.100'}
@@ -22,7 +23,8 @@ export default function IntroductionComponent() {
             fontWeight={700}
             fontFamily='Clear Sans'
             fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-            textAlign='left'>
+            textAlign='left'
+          >
             Join
             <br />
             the most vibrant
@@ -37,7 +39,8 @@ export default function IntroductionComponent() {
             fontFamily='Clear Sans'
             mt={0}
             p={0}
-            textAlign={'left'}>
+            textAlign={'left'}
+          >
             BanklessDAO’s ever-growing community of creatives, developers,
             innovators, and leaders is open to all. Always.
           </Text>
@@ -48,12 +51,9 @@ export default function IntroductionComponent() {
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'full'}>
-          <Box
-            as='figure'
-            h={{ base: '40vw', lg: '26vw' }}
-            w='100%'
-            >
+          w={'full'}
+        >
+          <Box as='figure' h={{ base: '40vw', lg: '26vw' }} w='100%'>
             <Image
               src={'/images/members.png'}
               alt={'Member Image'}

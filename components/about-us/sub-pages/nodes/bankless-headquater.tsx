@@ -10,17 +10,22 @@ export default function NodesBanklessHQComponent() {
         textAlign={'center'}
         mt={'4rem'}
         spacing={{ base: 4, md: 6 }}
-        py={{ base: 10, md: 18 }}>
+        py={{ base: 10, md: 18 }}
+      >
         <Heading
           fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
           color={'white.100'}
-          textTransform={'uppercase'}>
+          textTransform={'uppercase'}
+        >
           BANKLESS HQ
           <Underline />
         </Heading>
-        <Text color={'white.200'} fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}>
+        <Text
+          color={'white.200'}
+          fontSize={{ base: 'sm', sm: 'lg', md: '2xl' }}
+        >
           Is the founding node of the Bankless media ecosystem. Led by David
           Hoffman and Ryan Sean Adams, this node runs the original Bankless
           podcast and the Bankless newsletter. It’s often referred to as
@@ -30,14 +35,16 @@ export default function NodesBanklessHQComponent() {
           flex={1}
           justify={{ base: 'center', md: 'space-around' }}
           align={'center'}
-          direction={{ base: 'column', md: 'row' }}>
+          direction={{ base: 'column', md: 'row' }}
+        >
           <Flex align={'center'} color={'white.100'}>
-            <Link href='https://newsletter.banklesshq.com/' isExternal>
+            <Link href='https://www.bankless.com/read' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
                   fontSize={{ base: '1xl', md: '3xl' }}
-                  fontWeight={'bold'}>
+                  fontWeight={'bold'}
+                >
                   Substack
                 </Text>
                 <FiArrowUpRight size={25} />
@@ -46,12 +53,13 @@ export default function NodesBanklessHQComponent() {
           </Flex>
           {/* TODO add url */}
           <Flex align={'center'} color={'white.100'}>
-            <Link href='https://shows.banklesshq.com/' isExternal>
+            <Link href='https://www.bankless.com/listen' isExternal>
               <Flex align={'center'} color={'white.100'}>
                 <Text
                   mr={'0.25rem'}
                   fontSize={{ base: '1xl', md: '3xl' }}
-                  fontWeight={'bold'}>
+                  fontWeight={'bold'}
+                >
                   Podcast
                 </Text>
                 <FiArrowUpRight size={25} />
@@ -65,7 +73,8 @@ export default function NodesBanklessHQComponent() {
                 <Text
                   mr={'0.25rem'}
                   fontSize={{ base: '1xl', md: '3xl' }}
-                  fontWeight={'bold'}>
+                  fontWeight={'bold'}
+                >
                   Youtube
                 </Text>
                 <FiArrowUpRight size={25} />

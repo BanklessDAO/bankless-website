@@ -54,7 +54,7 @@ export default function CommunityCallsCCFormatComponent() {
             color={'gray.100'}
             lineHeight={1}
             fontWeight={700}
-            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl'}}
+            fontSize={{ base: '3xl', sm: '4xl', md: '4xl', xl: '5xl' }}
           >
             The CC Format
           </Heading>

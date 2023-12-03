@@ -3,9 +3,9 @@ import Section from 'components/_common/section'
 import { Box, Heading, Stack, Flex, Text, VStack } from '@chakra-ui/react'
 import Underline from 'components/_common/underline'
 import styles from 'styles/NavBar.module.css'
-import { DEPARTMENTS } from 'constants/data'
+import { PROJECTS } from 'constants/data'
 
-function Departments() {
+function Projects() {
   return (
     <Stack
       as={Box}
@@ -27,7 +27,7 @@ function Departments() {
         lineHeight={'120%'}
         color={'white.100'}
       >
-        Departments
+        Projects
         <Box margin='1rem auto' width={{ base: '90%', sm: '100%' }}>
           <Underline />
         </Box>
@@ -48,16 +48,17 @@ function Departments() {
           fontWeight='400px'
           zIndex={1}
         >
-          Departments are operation-critical units of BanklessDAO. The
-          qualification test for a department is that if it does not exist, the
-          DAO cannot function properly or may cease to exist!
+          Projects enable Guilds and bDAO members to collaborate and scale the
+          Bankless movement. From consultancy services to bot integrations to
+          newsletters, we have multiple ongoing projects and more coming on the
+          docket. Here are our current projects:
         </Text>
         <VStack mt={8} rowGap={8}>
-          {DEPARTMENTS.map((department, index) => (
+          {PROJECTS.map((project, index) => (
             <Section
-              project={department}
+              project={project}
               reverse={index % 2 === 1}
-              key={`department-${index}`}
+              key={`project-${index}`}
             />
           ))}
         </VStack>
@@ -66,4 +67,4 @@ function Departments() {
   )
 }
 
-export default Departments
+export default Projects

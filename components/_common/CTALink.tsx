@@ -19,12 +19,13 @@ export const CTALink = ({ href, text }: CTALink) => {
         marginTop='4'
         target='_blank'
         // alt={alt}
-        >
+      >
         <Text
           fontWeight={700}
           fontSize='2xl'
           marginRight='2'
-          textAlign='center'>
+          textAlign='center'
+        >
           {text}
         </Text>
         <Box marginLeft={2}>

@@ -23,8 +23,8 @@ const keyframeCircleMove = keyframes`
 `
 
 const keyframeBeat = keyframes`
-	to { 
-    transform: scale(2) 
+	to {
+    transform: scale(2)
               translateX(25%)
               translateY(-25%);
   }
@@ -43,19 +43,22 @@ export default function IntroductionAboutUsComponent() {
         direction={{ base: 'column', md: 'row' }}
         pb={{ base: '2rem', md: 0 }}
         h={{ base: 'fit-content', lg: '32rem' }}
-        pos='relative'>
+        pos='relative'
+      >
         <Flex
           flex={{ base: '0 0 70%', xl: '0 0 60%' }}
           justify={'center'}
           align={'center'}
           position={'relative'}
-          zIndex={1}>
+          zIndex={1}
+        >
           <Box
             position={'relative'}
             overflow={'hidden'}
             w={'100%'}
             h={{ base: '32rem', xl: '32rem' }}
-            m={0}>
+            m={0}
+          >
             <Image
               position={'absolute'}
               alt={'Cryptocurrency Image'}
@@ -122,7 +125,8 @@ export default function IntroductionAboutUsComponent() {
               lineHeight={1.1}
               fontWeight={700}
               fontFamily='Clear Sans'
-              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}>
+              fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
+            >
               What is BanklessDAO?
             </Text>
             <CTALink

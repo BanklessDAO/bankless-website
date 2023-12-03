@@ -98,20 +98,24 @@ function TlBank() {
   const [value, setValue] = useState(BigNumber.from('40000000000000000000000'))
   const [active, setActive] = useState('40k')
   const [lockDate, setLockDate] = useState('')
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   const [unlockDate, setUnlockDate] = useState<any | null>(null)
-  const [unlockDateRaw, setUnlockDateRaw] = useState<any | null>(null)
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  const [, setUnlockDateRaw] = useState<any | null>(null)
   const [totalHolders, setTotalHolders] = useState(0)
   const [totalLock, setTotalLock] = useState('')
   const [overallLocked, setOverallLocked] = useState('')
   const [walletBalance, setWalletBalance] = useState('')
   const [allowance, setAllowance] = useState(BigNumber.from(0))
   const [tokens, setTokens] = useState<number[]>([])
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   const [data, setData] = useState<any[]>([])
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   const [selectedToken, setSelectedToken] = useState<any | null>(null)
   const [loading, setLoading] = useState(false)
 
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet()
-  const [_, setChain] = useSetChain()
+  const [, setChain] = useSetChain()
 
   const connectOrDisconnect = async () => {
     if (wallet) {
@@ -177,7 +181,6 @@ function TlBank() {
       TLBankTokenABI,
       multicallProvider
     )
-
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const tokenRequests: any[] = []
@@ -280,7 +283,10 @@ function TlBank() {
         await approvalTransaction.wait()
       } else {
         const startDate = new Date()
-        const endDateRaw = getUnlockDateRaw(startDate, BigNumber.from('40000000000000000000000').eq(value) ? 6 : 12);
+        const endDateRaw = getUnlockDateRaw(
+          startDate,
+          BigNumber.from('40000000000000000000000').eq(value) ? 6 : 12
+        )
         const creationTransaction = await TLBankContract.createNFT(
           address,
           value,
@@ -366,7 +372,8 @@ function TlBank() {
                   unlockable:
                     new Date().getTime() / 1000 > each.unlockTimestamp,
                 })
-              }>
+              }
+            >
               <Image src={each?.image} alt={each?.title} />
             </Box>
           ))}
@@ -402,7 +409,7 @@ function TlBank() {
                   Polygon
                 </Text>
                 <Text fontSize={{ base: '10px', md: '14px' }}>
-                &nbsp;(Coming soon)
+                  &nbsp;(Coming soon)
                 </Text>
               </MenuItem>
               <MenuItem>
@@ -410,7 +417,7 @@ function TlBank() {
                   Optimism
                 </Text>
                 <Text fontSize={{ base: '10px', md: '14px' }}>
-                &nbsp;(Coming soon)
+                  &nbsp;(Coming soon)
                 </Text>
               </MenuItem>
             </MenuList>
@@ -421,7 +428,8 @@ function TlBank() {
             border='1px'
             borderColor='red.500'
             color={'white'}
-            bgColor={'black'}>
+            bgColor={'black'}
+          >
             {connecting
               ? 'Connecting'
               : wallet
@@ -453,27 +461,31 @@ function TlBank() {
           <VStack pr={10}>
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
-              color='rgba(255, 255, 255, 0.7)'>
+              color='rgba(255, 255, 255, 0.7)'
+            >
               Total BANK Locked
             </Heading>
             <Heading
               color='white'
               as='b'
-              fontSize={{ base: '16px', md: '22px' }}>
+              fontSize={{ base: '16px', md: '22px' }}
+            >
               {overallLocked ? nFormatter(Number(overallLocked), 2) : '0 '} BANK
             </Heading>
           </VStack>
-          <Divider orientation='vertical' border='1px' borderColor='#313131'/>
+          <Divider orientation='vertical' border='1px' borderColor='#313131' />
           <VStack pl={10}>
             <Heading
               fontSize={{ base: '10px', md: '14px' }}
-              color='rgba(255, 255, 255, 0.7)'>
+              color='rgba(255, 255, 255, 0.7)'
+            >
               Total BANK Holders
             </Heading>
             <Heading
               color='white'
               as='b'
-              fontSize={{ base: '16px', md: '22px' }}>
+              fontSize={{ base: '16px', md: '22px' }}
+            >
               {totalHolders ? `${totalHolders} ` : '0 '}Holders
             </Heading>
           </VStack>
@@ -484,7 +496,8 @@ function TlBank() {
         bg='rgba(1, 1, 1, 100.0)'
         columns={{ base: 1, lg: 2 }}
         gap={10}
-        mt={10}>
+        mt={10}
+      >
         <div>
           <HStack
             spacing={0}
@@ -494,19 +507,22 @@ function TlBank() {
             maxW='fit-content'
             bgColor={'#111111'}
             marginY={2}
-            p={'5px'}>
+            p={'5px'}
+          >
             <Button
               bgColor={!tabUnlock ? 'rgba(255, 255, 255, 0.3)' : '#111111'}
               onClick={() => setTabUnlock(false)}
               size='sm'
-              borderRadius='md'>
+              borderRadius='md'
+            >
               Lock
             </Button>
             <Button
               onClick={() => setTabUnlock(true)}
               bgColor={!tabUnlock ? '#111111' : 'rgba(255, 255, 255, 0.3)'}
               size='sm'
-              borderRadius='md'>
+              borderRadius='md'
+            >
               Unlock
             </Button>
           </HStack>
@@ -517,7 +533,8 @@ function TlBank() {
               p={5}
               border={'1px'}
               borderRadius={'5px'}
-              borderColor={'#313131'}>
+              borderColor={'#313131'}
+            >
               <Flex>
                 <HStack>
                   <IoWalletOutline
@@ -560,12 +577,14 @@ function TlBank() {
                     as='legend'
                     color='rgba(255, 255, 255, 0.7)'
                     fontSize={'14px'}
-                    my='2'>
+                    my='2'
+                  >
                     Vesting term <Icon as={BiInfoCircle} />
                   </FormLabel>
                   <Stack
                     spacing='24px'
-                    direction={{ base: 'column', md: 'column', xl: 'row' }}>
+                    direction={{ base: 'column', md: 'column', xl: 'row' }}
+                  >
                     <Button
                       onClick={() =>
                         handleButton(
@@ -583,7 +602,8 @@ function TlBank() {
                       fontSize={'14px'}
                       fontWeight={700}
                       w='full'
-                      _hover={{ bg: 'none', svg: { fill: 'white' } }}>
+                      _hover={{ bg: 'none', svg: { fill: 'white' } }}
+                    >
                       {active === '40k' ? (
                         <IoMdRadioButtonOn />
                       ) : (
@@ -608,7 +628,8 @@ function TlBank() {
                       fontSize={'14px'}
                       fontWeight={700}
                       w='full'
-                      _hover={{ bg: 'none', svg: { fill: 'white' } }}>
+                      _hover={{ bg: 'none', svg: { fill: 'white' } }}
+                    >
                       {active === '80k' ? (
                         <IoMdRadioButtonOn />
                       ) : (
@@ -630,7 +651,8 @@ function TlBank() {
                         as='span'
                         flex='1'
                         textAlign='left'
-                        color='rgba(255, 255, 255, 0.7)'>
+                        color='rgba(255, 255, 255, 0.7)'
+                      >
                         Summary
                       </Box>
                       <AccordionIcon />
@@ -661,7 +683,8 @@ function TlBank() {
                 onClick={setLock}
                 bg='red.500'
                 _hover={{ bg: 'red.500' }}
-                w={'100%'}>
+                w={'100%'}
+              >
                 {!wallet ? (
                   'Connect'
                 ) : wallet.chains[0]?.id !== CHAIN_ID ? (
@@ -682,7 +705,8 @@ function TlBank() {
               p={5}
               border={'1px'}
               borderRadius={'5px'}
-              borderColor={'#313131'}>
+              borderColor={'#313131'}
+            >
               <Flex>
                 <HStack>
                   <IoWalletOutline
@@ -744,7 +768,8 @@ function TlBank() {
                         as='span'
                         flex='1'
                         textAlign='left'
-                        color='rgba(255, 255, 255, 0.7)'>
+                        color='rgba(255, 255, 255, 0.7)'
+                      >
                         Summary
                       </Box>
                       <AccordionIcon />
@@ -786,7 +811,8 @@ function TlBank() {
                   borderColor='#D02128'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
-                  onClick={relock}>
+                  onClick={relock}
+                >
                   Relock for another {selectedToken?.amount == 40000 ? 6 : 12}
                   months
                 </Button>
@@ -797,7 +823,8 @@ function TlBank() {
                   bg='red.500'
                   _hover={{ bg: 'red.500' }}
                   w={'100%'}
-                  onClick={unlock}>
+                  onClick={unlock}
+                >
                   {loading ? <Spinner /> : 'Unlock'}
                 </Button>
               </Stack>
@@ -809,13 +836,15 @@ function TlBank() {
             display='flex'
             justifyContent='center'
             bg='rgba(1, 1, 1, 100.0)'
-            alignItems='center'>
+            alignItems='center'
+          >
             <Box
               display='flex'
               justifyContent='center'
               alignItems='center'
               pl={70}
-              bg='radial-gradient(at center, rgba(255, 27, 1, 0.3),rgba(255, 27, 1, 0.2), rgba(1, 1, 1, 100.0), rgba(1, 1, 1, 100.0));'>
+              bg='radial-gradient(at center, rgba(255, 27, 1, 0.3),rgba(255, 27, 1, 0.2), rgba(1, 1, 1, 100.0), rgba(1, 1, 1, 100.0));'
+            >
               <Image
                 src='/images/bank-token.png'
                 alt='bankToken'
