@@ -15,19 +15,22 @@ const SectionTitle = ({
     textAlign={'center'}
     spacing={{ base: 3, md: 5 }}
     py={{ sm: 10, md: 18 }}
-    my={{ base: 10, sm: 10, md: 20 }}>
+    my={{ base: 10, sm: 10, md: 20 }}
+  >
     <Heading
       fontWeight={600}
       fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
       lineHeight={'110%'}
       color={'white.100'}
-      fontFamily='Clear Sans'>
+      fontFamily='Clear Sans'
+    >
       {title}
     </Heading>
     <Text
       color='grey'
       fontSize={{ base: 'xl', lg: '2xl' }}
-      fontFamily='Clear Sans'>
+      fontFamily='Clear Sans'
+    >
       {description}
     </Text>
   </Stack>
@@ -62,7 +65,10 @@ export default function WorkWithUsPage() {
       <IntroductionComponent />
       {WORK_WITH_US_CATEGORIES.map((category, index) => (
         <Box key={`category-${index}`}>
-<SectionTitle title={category.title} description={category.description} />
+          <SectionTitle
+            title={category.title}
+            description={category.description}
+          />
           <VStack mt={8} rowGap={8}>
             {WORK_WITH_US.filter(
               project => project.category === category.categorySlug

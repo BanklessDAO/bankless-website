@@ -16,7 +16,8 @@ const Section = ({
       sm: 'column',
       xl: reverse ? 'row-reverse' : 'row',
     }}
-    columnGap={16}>
+    columnGap={16}
+  >
     <Box width={{ base: '100%' }} zIndex='1'>
       <Image
         alt={project.name}
@@ -62,7 +63,8 @@ const Section = ({
       textAlign='start'
       justifyContent='center'
       alignItems='start'
-      zIndex='1'>
+      zIndex='1'
+    >
       <Text fontSize={{ base: '18px', md: '30px' }} fontWeight={700}>
         {project.name.toUpperCase()}
       </Text>
@@ -74,7 +76,8 @@ const Section = ({
             color={'white.100'}
             fontSize='20px'
             lineHeight={'24px'}
-            fontWeight='700'>
+            fontWeight='700'
+          >
             Learn More <FiArrowUpRight />
           </Flex>
         </Link>
