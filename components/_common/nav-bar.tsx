@@ -138,8 +138,7 @@ const MenuIcon = () => (
     width='24px'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
-    fill='white'
-  >
+    fill='white'>
     <title>Menu</title>
     <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
   </svg>
@@ -154,8 +153,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
         '@media (max-width: 1040px)': {
           display: 'block',
         },
-      }}
-    >
+      }}>
       {isOpen ? <CloseIcon /> : <MenuIcon />}
     </Box>
   )
@@ -180,8 +178,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
           paddingTop: '16px',
         },
       }}
-      isExternal={to.includes('http')}
-    >
+      isExternal={to.includes('http')}>
       <Text
         display='block'
         fontWeight={600}
@@ -190,8 +187,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
           color: 'white',
           borderBottom: 'solid 4px white',
         }}
-        borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}
-      >
+        borderBottom={onPage ? 'solid 4px red' : 'solid 4px transparent'}>
         {children}
       </Text>
     </Link>
@@ -214,8 +210,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
         '@media (max-width: 1040px)': {
           paddingTop: '1px',
         },
-      }}
-    >
+      }}>
       <Text
         display='block'
         fontWeight={600}
@@ -229,8 +224,7 @@ const DropDownItem = ({ children, to = '/', ...rest }) => {
           '@media (max-width: 1040px)': {
             fontSize: '100%',
           },
-        }}
-      >
+        }}>
         {children}
       </Text>
     </Link>
@@ -251,13 +245,15 @@ const DropdownMenu = ({ linksData }) => {
       className={`${styles['dropdown']}`}
       textAlign={'center'}
       transition='all 1s ease-in-out'
+      backgroundColor='black'
+      paddingX='20px'
+      borderBottomRadius='10px'
       zIndex='dropdown'
       sx={{
         '@media (max-width: 1040px)': {
           textAlign: 'start',
         },
-      }}
-    >
+      }}>
       <Stack
         spacing={1}
         marginBottom={'1rem'}
@@ -265,8 +261,7 @@ const DropdownMenu = ({ linksData }) => {
           '@media (max-width: 1040px)': {
             marginLeft: '20%',
           },
-        }}
-      >
+        }}>
         {linksData.map(({ href, title }: Link) => {
           return (
             <DropDownItem key={ulid()} to={href}>
@@ -289,8 +284,7 @@ const MenuLinks = ({ isOpen }) => {
           display: isOpen ? 'block' : 'none',
           'flex-basis': '100%',
         },
-      }}
-    >
+      }}>
       <Stack
         spacing={8}
         className='linkStack'
@@ -307,8 +301,7 @@ const MenuLinks = ({ isOpen }) => {
             paddingTop: '16px',
             gap: '0.4rem',
           },
-        }}
-      >
+        }}>
         {NAV_LINKS.map((_navLink, idx) => {
           const isAboutUs = _navLink.name === 'About Us'
           const isToken = _navLink.name === 'Token'
@@ -326,8 +319,7 @@ const MenuLinks = ({ isOpen }) => {
                   marginInlineStart: '0px!important',
                   marginTop: '0px!important',
                 },
-              }}
-            >
+              }}>
               <MenuItem to={_navLink.href}>{_navLink.name}</MenuItem>
               {isAboutUs && <DropdownMenu linksData={aboutUsLinksData} />}
               {isWork && <DropdownMenu linksData={workWithUsLinksData} />}
@@ -361,8 +353,7 @@ const NavBarContainer = ({ children, ...props }) => {
           background: 'primary.500',
           color: 'white',
         },
-      }}
-    >
+      }}>
       {children}
     </Flex>
   )
