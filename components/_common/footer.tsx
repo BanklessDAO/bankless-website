@@ -96,7 +96,8 @@ class Footer extends React.Component {
         flexDirection='column'
         justifyContent='center'
         alignItems='center'
-        position='relative'>
+        position='relative'
+      >
         <Grid
           templateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}
           gap={{ base: 2, md: 6 }}
@@ -104,12 +105,14 @@ class Footer extends React.Component {
           borderTop='1px solid white'
           marginTop={{ base: 8, lg: 16 }}
           paddingY={{ base: 8, lg: 8 }}
-          paddingX={{ base: 4, lg: 8 }}>
+          paddingX={{ base: 4, lg: 8 }}
+        >
           <Flex
             flexDirection='column'
             justifyContent='center'
             alignItems={{ base: 'center', md: 'start' }}
-            rowGap={1}>
+            rowGap={1}
+          >
             <Image
               src={'/images/logo.png'}
               alt={'BanklessDAO logo'}
@@ -119,7 +122,8 @@ class Footer extends React.Component {
             <Text
               fontSize='xl'
               textAlign={{ sm: 'center', md: 'left' }}
-              color={'gray'}>
+              color={'gray'}
+            >
               A decentralized autonomous organization that acts as a steward of
               the Bankless Movement progressing the world towards a future of
               greater freedom.
@@ -132,7 +136,8 @@ class Footer extends React.Component {
                     target='_blank'
                     key={`social-${idx}`}
                     mx={1}
-                    my={2}>
+                    my={2}
+                  >
                     <Image
                       src={_social.img}
                       alt={_social.alt}
@@ -152,14 +157,16 @@ class Footer extends React.Component {
               columnGap={12}
               paddingLeft={{ base: 0, lg: 8 }}
               paddingTop={{ base: 4, lg: 14 }}
-              textAlign={{ base: 'center', lg: 'left' }}>
+              textAlign={{ base: 'center', lg: 'left' }}
+            >
               {LINKS.map((_link, idx) => {
                 return (
                   <Link
                     href={_link.href}
                     target='_blank'
                     key={`link-${idx}`}
-                    fontSize={{ base: 'md', md: 'lg' }}>
+                    fontSize={{ base: 'md', md: 'lg' }}
+                  >
                     {_link.text}
                   </Link>
                 )

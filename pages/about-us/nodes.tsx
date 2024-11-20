@@ -8,8 +8,8 @@ export default function NodesPage() {
     <>
       <NodesIntroComponent />
       <DaoPunksComponent />
-      <NodesBanklessHQComponent />
       <NodesInternationalMediaComponent />
+      <NodesBanklessHQComponent />
     </>
   )
 }
