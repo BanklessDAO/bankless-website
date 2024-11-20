@@ -130,7 +130,7 @@ export default function IntroductionAboutUsComponent() {
               What is BanklessDAO?
             </Text>
             <CTALink
-              href='https://discord.com/invite/bankless'
+              href='https://discord.gg/blackflagdao'
               text='Join us'
               alt='Link to Bankless Discord'
             />

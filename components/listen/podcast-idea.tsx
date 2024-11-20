@@ -29,13 +29,13 @@ class PodcastIdea extends React.Component {
           <Text
             width={{ base: '18rem', md: '30rem' }}
             fontSize={{ base: 'md', md: '2xl' }}
-            position="relative"
+            position='relative'
           >
             Join{' '}
             <Link
               color='#D02128'
               textDecoration='none'
-              href='https://discord.com/invite/bankless'
+              href='https://discord.gg/blackflagdao'
             >
               BanklessDAO
             </Link>{' '}

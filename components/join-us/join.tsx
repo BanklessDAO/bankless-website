@@ -24,7 +24,7 @@ export default function JoinComponent() {
           </Heading>
           <CTAButton
             text='Join now'
-            url='https://discord.com/invite/bankless'
+            url='https://discord.gg/blackflagdao'
             isExternal
           />
         </Stack>
