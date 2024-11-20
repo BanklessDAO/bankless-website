@@ -85,7 +85,7 @@ export default function GovernanceIntroComponent() {
               </Link>
               . And before that, it is common to discuss decisions in the{' '}
               <Link
-                href={'https://discord.com/invite/bankless'}
+                href={'https://discord.gg/blackflagdao'}
                 isExternal
                 color='#D02128'
               >

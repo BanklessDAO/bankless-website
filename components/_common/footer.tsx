@@ -37,7 +37,7 @@ const SOCIALS = [
   {
     img: '/icons/discord.png',
     alt: 'discord',
-    href: 'https://discord.com/invite/bankless',
+    href: 'https://discord.gg/blackflagdao',
   },
   {
     img: '/icons/instagram.png',

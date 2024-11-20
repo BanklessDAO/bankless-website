@@ -63,7 +63,7 @@ class Section1 extends React.Component {
           >
             <Button
               as='a'
-              href={'https://discord.com/invite/bankless'}
+              href={'https://discord.gg/blackflagdao'}
               target='_blank'
               color={'#ffff'}
               variant='solid'

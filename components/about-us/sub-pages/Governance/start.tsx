@@ -142,7 +142,7 @@ export default function GovernanceStartComponent() {
             display={'inline'}
           >
             <Link
-              href={'https://discord.com/invite/bankless'}
+              href={'https://discord.gg/blackflagdao'}
               isExternal
               color='#D02128'
             >
