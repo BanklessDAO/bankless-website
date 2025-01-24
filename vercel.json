@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bankless.community"
+        }
+      ],
+      "destination": "https://blackflagdao.notion.site/",
+      "permanent": false
+    }
+  ]
+}
