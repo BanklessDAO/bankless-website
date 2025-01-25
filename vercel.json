@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bankless.community"
+        }
+      ],
+      "destination": "https://blackflagdao.notion.site/",
+      "permanent": false
+    },
+    {
+      "source": "/((?!tlBank).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "banklessdao-website.vercel.app"
+        }
+      ],
+      "destination": "https://blackflagdao.notion.site/",
+      "permanent": false
+    }
+  ]
+}
