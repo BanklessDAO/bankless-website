@@ -246,6 +246,9 @@ const DropdownMenu = ({ linksData }) => {
       className={`${styles['dropdown']}`}
       textAlign={'center'}
       transition='all 1s ease-in-out'
+      backgroundColor='black'
+      paddingX='20px'
+      borderBottomRadius='10px'
       zIndex='dropdown'
       sx={{
         '@media (max-width: 1040px)': {
