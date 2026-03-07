@@ -6,7 +6,6 @@ import '@fontsource/clear-sans/700.css'
 import { Flex, Box, Heading, Button } from '@chakra-ui/react'
 
 import Underline from 'components/_common/underline'
-import styles from 'styles/NavBar.module.css'
 
 class Section1 extends React.Component {
   render() {
@@ -33,9 +32,7 @@ class Section1 extends React.Component {
           pt={{ base: 0, md: '8rem' }}
           pb={{ base: 0, md: '4rem' }}
           rowGap={{ base: '4rem', md: '2rem' }}
-          w='100%'
-          className={`${styles['header-text']}`}
-        >
+          w='100%'>
           <Heading
             textAlign='center'
             color={'white.100'}
@@ -43,8 +40,7 @@ class Section1 extends React.Component {
             fontWeight={700}
             fontFamily='Clear Sans'
             fontSize={{ base: '4xl', md: '4xl', lg: '6xl' }}
-            zIndex='1'
-          >
+            zIndex='1'>
             Media and Social DAO
             <br />
             Onboarding 1 billion people
@@ -59,8 +55,7 @@ class Section1 extends React.Component {
             gap='3rem'
             justifyContent={'center'}
             width='100%'
-            alignItems={'center'}
-          >
+            alignItems={'center'}>
             <Button
               as='a'
               href={'https://discord.gg/blackflagdao'}
@@ -80,8 +75,7 @@ class Section1 extends React.Component {
               }}
               _focus={{
                 outline: 'none',
-              }}
-            >
+              }}>
               Join Us
             </Button>
             <Button
@@ -103,8 +97,7 @@ class Section1 extends React.Component {
               }}
               _focus={{
                 outline: 'none',
-              }}
-            >
+              }}>
               Learn More
             </Button>
           </Flex>
@@ -118,8 +111,7 @@ class Section1 extends React.Component {
               playsInline
               style={{
                 height: '300px',
-              }}
-            >
+              }}>
               <source src='/videos/DAOhandLogo.mp4' type='video/mp4' />
               <source src='/videos/DAOhandLogo.webm' type='video/webm' />
               <source src='/videos/DAOhandLogo.ogv' type='video/ogg' />

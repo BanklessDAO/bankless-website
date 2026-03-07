@@ -12827,7 +12827,7 @@ __metadata:
     react-icons: ^4.3.1
     react-slick: ^0.29.0
     rgt: ^1.0.7
-    slick-carousel: ^1.8.1
+    swiper: ^11.0.3
     tailwindcss: ^3.3.2
     typescript: 5.2.2
     ulid: ^2.3.0
@@ -14855,15 +14855,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slick-carousel@npm:^1.8.1":
-  version: 1.8.1
-  resolution: "slick-carousel@npm:1.8.1"
-  peerDependencies:
-    jquery: ">=1.8.0"
-  checksum: acaad391e4d8bc1c7fdb8d361faa1f1d60829b31d618b54bc38c0550a59b26de36537e0ab4bc0364176ec11d1a61d0cf11e99d8d5b1285d656673c9a1a719257
-  languageName: node
-  linkType: hard
-
 "smart-buffer@npm:^4.2.0":
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
@@ -15407,6 +15398,13 @@ __metadata:
   version: 3.59.2
   resolution: "svelte@npm:3.59.2"
   checksum: 3e9d770292ab5a0061ff2d3a6f77b323014399de7458371ab507465f9860d04d0c8c7a50239d15c78b920cd42065953e3c4a36abb69a2285c52c825017621444
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.0.3":
+  version: 11.0.3
+  resolution: "swiper@npm:11.0.3"
+  checksum: 3f61c113e8c38fef7c4907980a6bcd0b7df04a5db275264dbc9fdffe1ca9b7390b10870a0a622d0f00072984b4a565b0681cfad054f22d443a58e268663213f6
   languageName: node
   linkType: hard
 
