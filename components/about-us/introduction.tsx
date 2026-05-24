@@ -1,12 +1,5 @@
-import {
-  Box,
-  Text,
-  Stack,
-  Image,
-  Flex,
-  VStack,
-  keyframes,
-} from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
+import { Box, Text, Stack, Image, Flex, VStack } from '@chakra-ui/react'
 import { CTALink } from 'components/_common/CTALink'
 
 const keyframeCircleMove = keyframes`

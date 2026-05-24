@@ -15,35 +15,46 @@ import coinbaseWalletModule from '@web3-onboard/coinbase'
 import walletConnectModule from '@web3-onboard/walletconnect'
 
 import injectedModule from '@web3-onboard/injected-wallets'
-const injected = injectedModule()
-const coinbaseWalletSdk = coinbaseWalletModule()
-const walletConnect = walletConnectModule({
-  version: 2,
-  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
-  requiredChains: 1,
-})
-const dcent = dcentModule()
-const infinityWallet = infinityWalletModule()
-const ledger = ledgerModule()
-const keepkey = keepkeyModule()
-const gnosis = gnosisModule()
-const sequence = sequenceModule()
-const taho = tahoModule() // Previously named Tally Ho wallet
-const trust = trustModule()
-const frontier = frontierModule()
 
-export const wallets = [
-  injected,
-  coinbaseWalletSdk,
-  walletConnect,
-  infinityWallet,
-  keepkey,
-  sequence,
-  injected,
-  trust,
-  frontier,
-  taho,
-  ledger,
-  dcent,
-  gnosis,
-]
+function buildWallets() {
+  const injected = injectedModule()
+  const coinbaseWalletSdk = coinbaseWalletModule()
+  const wcProjectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
+  if (!wcProjectId) {
+    // Ledger / WalletConnect modules require a WC Cloud projectId at init time.
+    return [injected, coinbaseWalletSdk]
+  }
+
+  const walletConnect = walletConnectModule({
+    version: 2,
+    projectId: wcProjectId,
+    requiredChains: [1],
+  })
+  const dcent = dcentModule()
+  const infinityWallet = infinityWalletModule()
+  const ledger = ledgerModule()
+  const keepkey = keepkeyModule()
+  const gnosis = gnosisModule()
+  const sequence = sequenceModule()
+  const taho = tahoModule() // Previously named Tally Ho wallet
+  const trust = trustModule()
+  const frontier = frontierModule()
+
+  return [
+    injected,
+    coinbaseWalletSdk,
+    walletConnect,
+    infinityWallet,
+    keepkey,
+    sequence,
+    injected,
+    trust,
+    frontier,
+    taho,
+    ledger,
+    dcent,
+    gnosis,
+  ]
+}
+
+export const wallets = buildWallets()

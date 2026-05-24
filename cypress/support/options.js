@@ -17,6 +17,16 @@ export const sizes = [
   [2048, 1152],
 ]
 
+/**
+ * All currently-active routes in pages/.
+ * When routes are added or renamed, update this list and regenerate
+ * snapshots with:
+ *   cypress run --env updateSnapshots=true
+ *
+ * Route history:
+ *   /invest       → /token       (renamed; old snapshots are stale)
+ *   /new-members  → /join-us     (renamed; old snapshots are stale)
+ */
 export const pages = [
   '/',
   '/about-us',
@@ -25,9 +35,17 @@ export const pages = [
   '/about-us/projects',
   '/about-us/community-calls',
   '/about-us/nodes',
+  '/about-us/departments',
   '/work-with-us',
   '/read',
   '/token',
   '/listen',
   '/join-us',
 ]
+
+/**
+ * CSS selectors for dynamic/animated elements that should be blacked out
+ * during snapshot comparison to avoid false positives.
+ * Usage: cy.matchImageSnapshot({ blackout: scrubbedElements })
+ */
+export const scrubbedElements = []

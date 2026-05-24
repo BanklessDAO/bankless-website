@@ -52,6 +52,11 @@ const aboutUsLinksData = [
     alt: 'Link to Listen Page',
   },
   {
+    title: 'News',
+    href: '/news',
+    alt: 'Link to News Page',
+  },
+  {
     title: 'Media Nodes',
     href: '/about-us/nodes',
     alt: 'Link to Portal Nodes page',

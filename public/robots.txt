@@ -1,0 +1,4 @@
+# See https://www.cloudflare.com/robots-txt/ for more information on the Content-Signal directive.
+User-agent: *
+Content-Signal: search=yes, ai-input=no, ai-train=no
+Allow: /

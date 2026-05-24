@@ -1,0 +1,27 @@
+# Git / tooling
+.git
+.github
+.husky
+.cursor
+.claude
+.vscode
+.idea
+**/.DS_Store
+
+# Dependencies & build outputs (rebuilt in image)
+node_modules
+.next
+out
+build
+coverage
+
+# Tests & reports (not needed for production image)
+TEST/results
+cypress
+*.md
+!README.md
+
+# Misc
+*.log
+.env*
+!.env.example

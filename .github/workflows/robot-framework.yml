@@ -1,0 +1,81 @@
+name: Robot Framework Tests
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  robot-app:
+    name: Robot — HTTP, browser (Playwright), infra
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Enable Corepack (Yarn Berry)
+        run: corepack enable
+
+      - name: Install JS dependencies
+        run: yarn install --immutable
+
+      - name: Build Next.js
+        run: yarn build
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: TEST/requirements.txt
+
+      - name: Install Robot Framework + Playwright (Browser library)
+        run: |
+          pip install -r TEST/requirements.txt
+          rfbrowser init
+
+      - name: Start app and run Robot (exclude CONTAINER tag)
+        env:
+          BASE_URL: http://localhost:3000
+        run: |
+          yarn start &
+          npx wait-on http://localhost:3000 -t 120000
+          robot --exclude CONTAINER --outputdir TEST/results-app --consolecolors on TEST/tests
+
+      - name: Upload Robot results (app)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-results-app
+          path: TEST/results-app/
+
+  robot-container:
+    name: Robot — Docker CLI + image build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Robot Framework (minimal)
+        run: pip install "robotframework>=7"
+
+      - name: Run container-tagged Robot suites only
+        run: robot --include CONTAINER --outputdir TEST/results-container --consolecolors on TEST/tests
+
+      - name: Upload Robot results (container)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-results-container
+          path: TEST/results-container/

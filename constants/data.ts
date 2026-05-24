@@ -58,7 +58,7 @@ export const GUILDS: ProjectType[] = [
     page: 'guild',
     description:
       'Clear communication of the DAO mission through intelligent next-gen design. We establish powerful symbols, build a narrative through visual aid, and generate funding through art. We use integrity in our images and content. As a culture, we reward action and embrace risk.',
-    image: '/images/guild/design-guild-03f27641.png',
+    image: 'https://storage.googleapis.com/assets.dework.xyz/uploads/0c521d7f-4448-40dc-b202-ff0a628d7014/image.png',
   },
   {
     name: 'Developers Guild',

@@ -3,23 +3,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  /**
-   * Enable static exports for the App Router.
-   *
-   * @see https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
-   */
-  output: "export",
-
-  /**
-   * Disable server-based image optimization. Next.js does not support
-   * dynamic features with static exports.
-   *
-   * @see https://nextjs.org/docs/pages/api-reference/components/image#unoptimized
-   */
-  images: {
-    unoptimized: true,
-  }
+  // Enables `.next/standalone` for container images (`Dockerfile`).
+  output: 'standalone',
+  // Static export removed: site is now deployed on Cloudflare Pages with
+  // server-side features enabled (Pages Functions, API routes).
+  // To analyze bundle sizes: ANALYZE=true yarn build (requires @next/bundle-analyzer)
 }
 
 module.exports = nextConfig

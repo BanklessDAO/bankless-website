@@ -1,5 +1,8 @@
 #!/bin/sh
-echo "pre-commit"
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged --allow-empty
+# Git GUIs often run hooks with a minimal PATH so local bins (next, eslint, …) are not found (ENOENT).
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+export PATH="$ROOT/node_modules/.bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+
+exec node "$ROOT/node_modules/lint-staged/bin/lint-staged.js" --allow-empty

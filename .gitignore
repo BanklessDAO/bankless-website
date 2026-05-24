@@ -10,6 +10,15 @@
 
 # testing
 /coverage
+/TEST/results/
+/TEST/results-app/
+/TEST/results-container/
+/TEST/results-fe*/
+/TEST/results-all/
+.venv-robot/
+/log.html
+/report.html
+/output.xml
 /cypress/downloads
 /cypress/screenshots
 /cypress/videos
@@ -56,3 +65,9 @@ yarn-error.log*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+/.ignore
+/.claude
+
+# contribute-patch-and-update
+*.contribute-patch-and-update.md
+scripts/auto_commit.sh

@@ -1,0 +1,12 @@
+name: Daily News Fetch
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch:
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger News Fetch
+        run: curl -f --max-time 30 -X GET -H "X-Secret-Token: ${{ secrets.NEWS_FETCH_TOKEN }}" "https://bankless.community/api/fetch-news"

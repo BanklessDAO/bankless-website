@@ -1,0 +1,2 @@
+*** Settings ***
+Variables    settings.py

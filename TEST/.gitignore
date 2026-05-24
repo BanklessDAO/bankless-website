@@ -1,0 +1,6 @@
+results/
+output.xml
+log.html
+report.html
+*.png
+playwright-log.txt

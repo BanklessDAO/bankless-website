@@ -1,0 +1,5 @@
+# Robot Framework stack for API/HTTP + browser (Playwright) + container-driven CI.
+robotframework>=7.0.0
+robotframework-requests>=0.9.6
+# Playwright wrapper — run `rfbrowser init` after pip install (downloads browsers).
+robotframework-browser>=19.0.0
